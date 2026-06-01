@@ -2,6 +2,7 @@
 
 > Long-term home for ideas/work that's real but not now.
 > Ranked. Top of list = most likely to be promoted to `priorities.md` next.
+> Hi
 > Items reach this file in three ways:
 >   1. Demoted from weekly `priorities.md` parking lot
 >   2. Generated during weekly review as "not this week"
