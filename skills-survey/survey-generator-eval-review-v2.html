@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eval Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js" integrity="sha384-EnyY0/GSHQGSxSgMwaIPzSESbqoOLSexfnSMN2AP+39Ckmn92stwABZynq1JyzdT" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg: #faf9f5;
+      --surface: #ffffff;
+      --border: #e8e6dc;
+      --text: #141413;
+      --text-muted: #b0aea5;
+      --accent: #d97757;
+      --accent-hover: #c4613f;
+      --green: #788c5d;
+      --green-bg: #eef2e8;
+      --red: #c44;
+      --red-bg: #fceaea;
+      --header-bg: #141413;
+      --header-text: #faf9f5;
+      --radius: 6px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ---- Header ---- */
+    .header {
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .header .instructions {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-top: 0.25rem;
+    }
+    .header .progress {
+      font-size: 0.875rem;
+      opacity: 0.8;
+      text-align: right;
+    }
+
+    /* ---- Main content ---- */
+    .main {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    /* ---- Sections ---- */
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      flex-shrink: 0;
+    }
+    .section-header {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.75rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .section-body {
+      padding: 1rem;
+    }
+
+    /* ---- Config badge ---- */
+    .config-badge {
+      display: inline-block;
+      padding: 0.2rem 0.625rem;
+      border-radius: 9999px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-left: 0.75rem;
+      vertical-align: middle;
+    }
+    .config-badge.config-primary {
+      background: rgba(33, 150, 243, 0.12);
+      color: #1976d2;
+    }
+    .config-badge.config-baseline {
+      background: rgba(255, 193, 7, 0.15);
+      color: #f57f17;
+    }
+
+    /* ---- Prompt ---- */
+    .prompt-text {
+      white-space: pre-wrap;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* ---- Outputs ---- */
+    .output-file {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .output-file + .output-file {
+      margin-top: 1rem;
+    }
+    .output-file-header {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .output-file-header .dl-btn {
+      font-size: 0.7rem;
+      color: var(--accent);
+      text-decoration: none;
+      cursor: pointer;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+    .output-file-header .dl-btn:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    .output-file-content {
+      padding: 0.75rem;
+      overflow-x: auto;
+    }
+    .output-file-content pre {
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+    .output-file-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .output-file-content iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+    .output-file-content table {
+      border-collapse: collapse;
+      font-size: 0.8125rem;
+      width: 100%;
+    }
+    .output-file-content table td,
+    .output-file-content table th {
+      border: 1px solid var(--border);
+      padding: 0.375rem 0.5rem;
+      text-align: left;
+    }
+    .output-file-content table th {
+      background: var(--bg);
+      font-weight: 600;
+    }
+    .output-file-content .download-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.875rem;
+      cursor: pointer;
+    }
+    .output-file-content .download-link:hover {
+      background: var(--border);
+    }
+    .empty-state {
+      color: var(--text-muted);
+      font-style: italic;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    /* ---- Feedback ---- */
+    .prev-feedback {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.625rem 0.75rem;
+      margin-top: 0.75rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .prev-feedback-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.25rem;
+      color: var(--text-muted);
+    }
+    .feedback-textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 0.9375rem;
+      line-height: 1.5;
+      resize: vertical;
+      color: var(--text);
+    }
+    .feedback-textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+    .feedback-status {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      min-height: 1.1em;
+    }
+
+    /* ---- Grades (collapsible) ---- */
+    .grades-toggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    .grades-toggle:hover {
+      color: var(--accent);
+    }
+    .grades-toggle .arrow {
+      margin-right: 0.5rem;
+      transition: transform 0.15s;
+      font-size: 0.75rem;
+    }
+    .grades-toggle .arrow.open {
+      transform: rotate(90deg);
+    }
+    .grades-content {
+      display: none;
+      margin-top: 0.75rem;
+    }
+    .grades-content.open {
+      display: block;
+    }
+    .grades-summary {
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .grade-badge {
+      display: inline-block;
+      padding: 0.125rem 0.5rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .grade-pass { background: var(--green-bg); color: var(--green); }
+    .grade-fail { background: var(--red-bg); color: var(--red); }
+    .assertion-list {
+      list-style: none;
+    }
+    .assertion-item {
+      padding: 0.625rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8125rem;
+    }
+    .assertion-item:last-child { border-bottom: none; }
+    .assertion-status {
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+    .assertion-status.pass { color: var(--green); }
+    .assertion-status.fail { color: var(--red); }
+    .assertion-evidence {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+      padding-left: 1.5rem;
+    }
+
+    /* ---- View tabs ---- */
+    .view-tabs {
+      display: flex;
+      gap: 0;
+      padding: 0 2rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .view-tab {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.625rem 1.25rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: var(--text-muted);
+      border-bottom: 2px solid transparent;
+      transition: all 0.15s;
+    }
+    .view-tab:hover { color: var(--text); }
+    .view-tab.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .view-panel { display: none; }
+    .view-panel.active { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+
+    /* ---- Benchmark view ---- */
+    .benchmark-view {
+      padding: 1.5rem 2rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .benchmark-table {
+      border-collapse: collapse;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.8125rem;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    .benchmark-table th, .benchmark-table td {
+      padding: 0.625rem 0.75rem;
+      text-align: left;
+      border: 1px solid var(--border);
+    }
+    .benchmark-table th {
+      font-family: 'Poppins', sans-serif;
+      background: var(--header-bg);
+      color: var(--header-text);
+      font-weight: 500;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .benchmark-table tr:hover { background: var(--bg); }
+    .benchmark-table tr.benchmark-row-with { background: rgba(33, 150, 243, 0.06); }
+    .benchmark-table tr.benchmark-row-without { background: rgba(255, 193, 7, 0.06); }
+    .benchmark-table tr.benchmark-row-with:hover { background: rgba(33, 150, 243, 0.12); }
+    .benchmark-table tr.benchmark-row-without:hover { background: rgba(255, 193, 7, 0.12); }
+    .benchmark-table tr.benchmark-row-avg { font-weight: 600; border-top: 2px solid var(--border); }
+    .benchmark-table tr.benchmark-row-avg.benchmark-row-with { background: rgba(33, 150, 243, 0.12); }
+    .benchmark-table tr.benchmark-row-avg.benchmark-row-without { background: rgba(255, 193, 7, 0.12); }
+    .benchmark-delta-positive { color: var(--green); font-weight: 600; }
+    .benchmark-delta-negative { color: var(--red); font-weight: 600; }
+    .benchmark-notes {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+    .benchmark-notes h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+    }
+    .benchmark-notes ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+    }
+    .benchmark-notes li {
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      margin-bottom: 0.375rem;
+    }
+    .benchmark-empty {
+      color: var(--text-muted);
+      font-style: italic;
+      text-align: center;
+      padding: 3rem;
+    }
+
+    /* ---- Navigation ---- */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      flex-shrink: 0;
+    }
+    .nav-btn {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text);
+      transition: all 0.15s;
+    }
+    .nav-btn:hover:not(:disabled) {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+    .nav-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .done-btn {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.5rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+    .done-btn:hover {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+    .done-btn.ready {
+      border: none;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+    }
+    .done-btn.ready:hover {
+      background: var(--accent-hover);
+    }
+    /* ---- Done overlay ---- */
+    .done-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+    .done-overlay.visible {
+      display: flex;
+    }
+    .done-card {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 2rem 3rem;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+    }
+    .done-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .done-card p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    .done-card .btn-row {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    .done-card button {
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.875rem;
+    }
+    .done-card button:hover {
+      background: var(--bg);
+    }
+    /* ---- Toast ---- */
+    .toast {
+      position: fixed;
+      bottom: 5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 0.625rem 1.25rem;
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      z-index: 200;
+    }
+    .toast.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" style="height:100vh; display:flex; flex-direction:column;">
+    <div class="header">
+      <div>
+        <h1>Eval Review: <span id="skill-name"></span></h1>
+        <div class="instructions">Review each output and leave feedback below. Navigate with arrow keys or buttons. When done, copy feedback and paste into Claude Code.</div>
+      </div>
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <!-- View tabs (only shown when benchmark data exists) -->
+    <div class="view-tabs" id="view-tabs" style="display:none;">
+      <button class="view-tab active" onclick="switchView('outputs')">Outputs</button>
+      <button class="view-tab" onclick="switchView('benchmark')">Benchmark</button>
+    </div>
+
+    <!-- Outputs panel (qualitative review) -->
+    <div class="view-panel active" id="panel-outputs">
+    <div class="main">
+      <!-- Prompt -->
+      <div class="section">
+        <div class="section-header">Prompt <span class="config-badge" id="config-badge" style="display:none;"></span></div>
+        <div class="section-body">
+          <div class="prompt-text" id="prompt-text"></div>
+        </div>
+      </div>
+
+      <!-- Outputs -->
+      <div class="section">
+        <div class="section-header">Output</div>
+        <div class="section-body" id="outputs-body">
+          <div class="empty-state">No output files found</div>
+        </div>
+      </div>
+
+      <!-- Previous Output (collapsible) -->
+      <div class="section" id="prev-outputs-section" style="display:none;">
+        <div class="section-header">
+          <div class="grades-toggle" onclick="togglePrevOutputs()">
+            <span class="arrow" id="prev-outputs-arrow">&#9654;</span>
+            Previous Output
+          </div>
+        </div>
+        <div class="grades-content" id="prev-outputs-content"></div>
+      </div>
+
+      <!-- Grades (collapsible) -->
+      <div class="section" id="grades-section" style="display:none;">
+        <div class="section-header">
+          <div class="grades-toggle" onclick="toggleGrades()">
+            <span class="arrow" id="grades-arrow">&#9654;</span>
+            Formal Grades
+          </div>
+        </div>
+        <div class="grades-content" id="grades-content"></div>
+      </div>
+
+      <!-- Feedback -->
+      <div class="section">
+        <div class="section-header">Your Feedback</div>
+        <div class="section-body">
+          <textarea
+            class="feedback-textarea"
+            id="feedback"
+            placeholder="What do you think of this output? Any issues, suggestions, or things that look great?"
+          ></textarea>
+          <div class="feedback-status" id="feedback-status"></div>
+          <div class="prev-feedback" id="prev-feedback" style="display:none;">
+            <div class="prev-feedback-label">Previous feedback</div>
+            <div id="prev-feedback-text"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav" id="outputs-nav">
+      <button class="nav-btn" id="prev-btn" onclick="navigate(-1)">&#8592; Previous</button>
+      <button class="done-btn" id="done-btn" onclick="showDoneDialog()">Submit All Reviews</button>
+      <button class="nav-btn" id="next-btn" onclick="navigate(1)">Next &#8594;</button>
+    </div>
+    </div><!-- end panel-outputs -->
+
+    <!-- Benchmark panel (quantitative stats) -->
+    <div class="view-panel" id="panel-benchmark">
+      <div class="benchmark-view" id="benchmark-content">
+        <div class="benchmark-empty">No benchmark data available. Run a benchmark to see quantitative results here.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Done overlay -->
+  <div class="done-overlay" id="done-overlay">
+    <div class="done-card">
+      <h2>Review Complete</h2>
+      <p>Your feedback has been saved. Go back to your Claude Code session and tell Claude you're done reviewing.</p>
+      <div class="btn-row">
+        <button onclick="closeDoneDialog()">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ---- Embedded data (injected by generate_review.py) ----
+    const EMBEDDED_DATA = {"skill_name": "survey-generator", "runs": [{"id": "eval-1-saas-expense-discovery-with_skill", "prompt": "(No prompt found)", "eval_id": null, "outputs": [{"name": "survey.md", "type": "text", "content": "# Expense Management in Small Accounting Firms\n\n**Objective:** Understand how small accounting firm owners currently manage expense reporting, what frustrations they experience, and what alternatives they've considered.\n\n**Target:** Owners and managers of small accounting firms (1-20 employees)\n\n**Time:** 20-25 minutes\n\n**Method:** Live interview (phone or in-person)\n\n---\n\n## Introduction\n\nThank you for taking the time to talk with us today. We're speaking with accounting firm leaders to understand how your teams currently handle expense reports and invoicing. There's no right or wrong answer to any of these questions \u2014 we're just interested in learning about your actual day-to-day experience. What you share will help us understand the real challenges in this space.\n\n---\n\n## Section 1: Current Expense Reporting Workflow\n\n### Q1: Walk me through how your firm currently handles expense reports from your staff.\n*Type: Open-ended*\n*Insight target: Uncover the actual process, tools used, and people involved \u2014 not an idealized version*\n*Follow-up prompts:*\n- \"Who typically submits these reports?\"\n- \"What format do they submit them in?\" (email, spreadsheet, form, software)\n- \"What happens after they submit?\"\n- \"How long does the full process take from submission to approval/payment?\"\n\n### Q2: Think about the last time you had to deal with an expense report issue or rejection. What happened?\n*Type: Open-ended*\n*Insight target: Surface real pain points and edge cases that the normal process doesn't handle well*\n*Follow-up prompts:*\n- \"Why was there an issue?\"\n- \"How did you resolve it?\"\n- \"How much time did that take?\"\n- \"Does this happen often?\"\n\n### Q3: How much of your time per week would you estimate you spend on expense report-related tasks?\n*Type: Open-ended (or scale if respondent struggles: \"Is it less than 30 minutes, 30 min - 1 hour, 1-2 hours, or more than 2 hours?\")*\n*Insight target: Quantify the magnitude of the problem in terms of leadership time*\n*Follow-up prompts:*\n- \"What specific tasks take up most of that time?\"\n- \"Who else on your team spends time on this?\"\n\n---\n\n## Section 2: Existing Solutions and Shortcomings\n\n### Q4: What systems or tools do you currently use to manage expense reports?\n*Type: Open-ended*\n*Insight target: Identify existing solutions and how they fit (or don't) into your workflow*\n*Follow-up prompts:*\n- \"How long have you been using [tool]?\"\n- \"Did you choose it specifically for expense reports, or does it handle other things too?\"\n- \"Does it do what you need?\"\n\n### Q5: What, if anything, frustrates you about how you currently handle expenses?\n*Type: Open-ended*\n*Insight target: Capture the actual pain points without leading them toward a solution*\n*Follow-up prompts:*\n- \"Why does that bother you?\"\n- \"How often does that issue come up?\"\n- \"Have you tried to fix it? What happened?\"\n\n### Q6: Have you ever looked at other tools or systems to manage expenses differently than you do now?\n*Type: Open-ended*\n*Insight target: Understand switching behavior and what would trigger a search for alternatives*\n*Follow-up prompts:*\n- \"When was that? What prompted you to look?\"\n- \"What did you evaluate?\"\n- \"Why did you stick with what you have?\" (or \"Why did you switch?\")\n- \"What would need to change for you to consider switching tools?\"\n\n---\n\n## Section 3: The Business Impact\n\n### Q7: When an expense report gets delayed or lost, what's the real impact on your firm?\n*Type: Open-ended*\n*Insight target: Understand the downstream consequences beyond just admin work \u2014 cash flow, client relationships, staff morale*\n*Follow-up prompts:*\n- \"How often does that happen?\"\n- \"Does it ever affect client relationships or payments?\"\n- \"How does your team feel about the process?\"\n\n### Q8: If you could change one thing about how your firm handles expenses today, what would it be?\n*Type: Open-ended*\n*Insight target: Reveal the highest-priority problem from their perspective; don't anchor to your solution*\n*Follow-up prompts:*\n- \"Why is that the most important thing?\"\n- \"How would you solve it if you had unlimited resources?\"\n\n---\n\n## Section 4: Decision Making\n\n### Q9: When you're evaluating a new software tool for your firm, who's involved in that decision?\n*Type: Open-ended*\n*Insight target: Understand the buying committee and how decisions get made*\n*Follow-up prompts:*\n- \"Is it your decision alone, or do you consult with your team?\"\n- \"Does cost matter more than time savings, or the other way around?\"\n- \"How do you usually hear about new tools?\"\n\n### Q10: What would need to be true about a solution for you to seriously consider adopting it?\n*Type: Open-ended*\n*Insight target: Understand their decision criteria and minimal viable requirements*\n*Follow-up prompts:*\n- \"How much setup/implementation time could you tolerate?\"\n- \"What integrations matter to you?\" (QuickBooks, specific accounting software, etc.)\n- \"What's your budget range for a tool like this, if you knew it would save your team significant time?\"\n\n---\n\n## Closing\n\nThank you for sharing that detail with me. This has been really helpful. Before we wrap up: is there anything else about how your firm handles expenses or what you wish existed that we haven't touched on?\n\nIf we develop a tool in this space, would it be okay for us to follow up with you to get your reaction?\n\n---\n\n## Interviewer Notes\n\n**What to listen for:**\n- **Quantifiable pain**: Don't just hear \"it's frustrating\" \u2014 push for numbers. How much time? How often? What's the cost?\n- **Workarounds**: When they describe their process, listen for makeshift solutions (spreadsheets, email back-and-forths, manual data entry). These signal unmet needs.\n- **Who else suffers**: Expense reporting isn't just a problem for the owner. Notice if they mention staff frustration, client delays, or accounting team bottlenecks.\n- **Switching friction**: If they've looked at alternatives before, understand *why* they didn't switch. That tells you what your solution would need to overcome.\n- **Unstated assumptions**: They might say \"we use QuickBooks\" or \"my accountant handles it.\" Don't assume you understand the full picture \u2014 ask follow-ups to reveal the actual workflow.\n\n**How to probe deeper:**\n- When you hear vague language (\"it's messy\" or \"it takes a while\"), ask for a specific example: \"Tell me about the last time you ran into a problem with this.\"\n- If they say \"everyone hates it,\" ask: \"Walk me through what your team does when they submit an expense report. Where does it feel broken to you?\"\n- If they mention a tool they use, ask: \"What prompted you to adopt that? And what would make you consider switching away from it?\"\n\n**Common pitfalls:**\n- **Letting them describe an idealized process**: They might describe their workflow as if it's running smoothly. Ask about the last exception, rejection, or delay to get the real story.\n- **Accepting \"we haven't thought about it\"**: If they say they've never considered alternatives, that's interesting data \u2014 dig into why. Is it because the problem isn't urgent, or because they've given up on finding a better solution?\n- **Confusing stated preferences with behavior**: If they say \"automation isn't a priority,\" ask what *is* a priority and why. Their answer to that question reveals what actually matters.\n\n"}], "grading": {"eval_id": 1, "eval_name": "SaaS Expense Discovery", "configuration": "with_skill", "expectations": [{"text": "No questions ask about future hypothetical behavior", "passed": true, "evidence": "Survey uses past-focused language: 'Walk me through how your firm currently handles,' 'Think about the last time you had to deal with,' no 'Would you' or 'How likely would you' questions"}, {"text": "No questions mention or pitch the user's specific product/solution idea", "passed": true, "evidence": "Survey focuses on expense management problem space (current processes, tools, pain points) without mentioning any specific solution. Questions about 'what alternatives they've considered' are open-ended discovery, not pitching"}, {"text": "All questions use neutral, non-leading language", "passed": true, "evidence": "Questions are framed neutrally: 'Walk me through,' 'Think about the last time,' 'What frustrates you,' 'Have you ever looked at other tools' - no loaded framing or assumption of problems"}, {"text": "Survey includes an introduction section for the respondent", "passed": true, "evidence": "Introduction section (lines 13-15) provides context: 'We're speaking with accounting firm leaders to understand how your teams currently handle expense reports and invoicing'"}, {"text": "Survey includes a closing section with an open-ended catch-all question", "passed": true, "evidence": "Closing section (lines 116-120) includes catch-all: 'is there anything else about how your firm handles expenses or what you wish existed that we haven't touched on?'"}, {"text": "Questions focus on past behavior and specific experiences", "passed": true, "evidence": "Questions consistently anchor to past: Q1 'Walk me through how your firm currently handles,' Q2 'Think about the last time you had to deal with an expense report issue,' Q6 'Have you ever looked at other tools,' Q7 'When an expense report gets delayed'"}, {"text": "Survey includes insight targets or notes explaining why each question matters", "passed": true, "evidence": "Every question includes 'Insight target' section explaining purpose: Q1 'Uncover the actual process, tools used, and people involved,' Q2 'Surface real pain points and edge cases,' Q3 'Quantify the magnitude of the problem'"}, {"text": "Survey is formatted as a complete, ready-to-use document", "passed": true, "evidence": "Survey includes: clear objective, target audience, time estimate, method, introduction, 10 core questions organized into sections with follow-up prompts, closing, and comprehensive interviewer notes with listening cues and probing strategies"}]}}, {"id": "eval-4-coaching-audit-with_skill", "prompt": "(No prompt found)", "eval_id": null, "outputs": [{"name": "survey.md", "type": "text", "content": "# AI Bookkeeping Tool Survey Audit\n\n**Survey Context:** Small business owner research to validate demand for an AI bookkeeping tool that automatically categorizes expenses.\n\n---\n\n## Per-Question Audit\n\n### Q1: \"Don't you think managing your books is a huge time sink?\"\n\n**Verdict:** REWRITE\n\n**Issues found:**\n- Leading language: \"Don't you think...\" explicitly telegraphs the expected answer and assumes agreement\n- Hypothetical framing embedded in a rhetorical question \u2014 designed to get a polite \"yes\"\n- Doesn't ask about actual past behavior; invites opinion instead of experience\n- Loaded framing: \"time sink\" is your interpretation, not the respondent's\n\n**Why this matters:**\nThis question will reliably produce confirmation bias. Small business owners will agree because it's polite and the question suggests agreement is the \"right\" answer. You won't learn whether they *actually* find bookkeeping painful or how much time it consumes.\n\n**Suggested rewrite:**\n\"How much time per week do you currently spend on managing your bookkeeping?\" (See Q6 \u2014 this overlaps with another question.)\n\n---\n\n### Q2: \"Would you pay $50/month for an AI that automatically categorizes your expenses?\"\n\n**Verdict:** DELETE\n\n**Issues found:**\n- Hypothetical pricing question (\"Would you...\") \u2014 people routinely say yes to hypotheticals they won't actually do\n- Prematurely introduces your solution (automatic categorization) before understanding the underlying problem\n- Conflates willingness-to-pay with problem severity; doesn't isolate either\n- No anchor in past behavior or real decision context\n\n**Why this matters:**\nThis question produces a worthless \"yes\" that feels validating but predicts nothing about actual purchasing behavior. By asking about a specific feature ($50/month, automatic categorization), you're leading the witness and will likely get false signals.\n\n**Suggested rewrite:**\nIf you want pricing data, ask retrospectively: \"When was the last time you evaluated a bookkeeping tool? What stopped you from switching, or what would make you switch?\" Then, if they express real interest, you can explore willingness-to-pay *given that interest*.\n\n---\n\n### Q3: \"How frustrated are you with your current bookkeeping process? (1-5 scale)\"\n\n**Verdict:** REWRITE\n\n**Issues found:**\n- Agreement bias on a scale \u2014 \"How frustrated\" assumes frustration exists; a neutral scale would ask \"How satisfied vs. frustrated\"\n- Asks about general sentiment instead of specific, concrete problems\n- Vague: \"bookkeeping process\" encompasses many activities; respondent will give a blurry answer\n- No anchor to recent experience; doesn't invite specific examples\n\n**Why this matters:**\nYou'll get a 3 or 4 that feels like mild frustration, but doesn't tell you *what's actually broken*. Is it the time investment? The complexity? Error risk? Reconciliation? You won't know.\n\n**Suggested rewrite:**\n\"Think about the last time you did your bookkeeping. What was the most tedious or error-prone step?\" (Open-ended, specific, past behavior, problem-focused)\n\n---\n\n### Q4: \"What features would you want in an AI bookkeeping tool?\"\n\n**Verdict:** REWRITE\n\n**Issues found:**\n- Solution-focused: you're already pitching \"AI bookkeeping tool\" and asking what they want in *your* solution\n- Asks about future desires instead of past behavior and existing pain points\n- This is a feature wishlist exercise, not problem discovery\n- Respondents will speculate about nice-to-haves instead of revealing what actually matters\n\n**Why this matters:**\nYou'll get a list of features people think sound nice but may never use or pay for. This doesn't tell you whether the core problem (bookkeeping burden) is real or how severe it is.\n\n**Suggested rewrite:**\n\"What have you tried in the past to make bookkeeping faster or less error-prone? What worked, and what didn't?\" (This reveals actual behavior and priorities without priming them to your solution.)\n\n---\n\n### Q5: \"Have you tried other bookkeeping tools and found them lacking?\"\n\n**Verdict:** KEEP (with minor clarification)\n\n**Issues found:**\n- None significant. This asks about past behavior (tool evaluation) and decision-making.\n- Slight ambiguity: \"lacking\" could mean many things, but it's open-ended enough to probe deeper.\n\n**Why this matters:**\nThis question works. It surfaces whether they've already evaluated solutions and what they found missing. Follow-up prompts will help you dig into specifics.\n\n**Suggested follow-up prompts (if live interview):**\n- \"When was that? What prompted you to look for something new?\"\n- \"What specifically was lacking about [tool name]?\"\n- \"Did you switch away, or did you keep using it despite the shortcomings?\"\n\n---\n\n### Q6: \"How many hours per week do you spend on bookkeeping, and is it worth your time?\"\n\n**Verdict:** REWRITE (split into two questions)\n\n**Issues found:**\n- Double-barreled: asks two distinct things (hours spent + perceived value)\n- \"Is it worth your time?\" is a leading phrasing \u2014 the question embeds the assumption that they might think it's *not* worth their time\n- Second part is too subjective; \"worth\" to whom and for what?\n\n**Why this matters:**\nIf they say \"2 hours, and yes it's worth it,\" you don't know if they mean 2 hours is acceptable or if they're minimizing. The two questions need to be separate.\n\n**Suggested rewrite:**\nSplit into two:\n1. \"How many hours per week do you currently spend on bookkeeping?\" (Quantify the time investment)\n2. \"When you think about those hours, what would you do instead if you didn't have to do bookkeeping?\" (Reveals opportunity cost without leading)\n\n---\n\n### Q7: \"Would you recommend an AI bookkeeping tool to other business owners?\"\n\n**Verdict:** DELETE\n\n**Issues found:**\n- Hypothetical: \"Would you...\" \u2014 they haven't used the tool yet, so this is pure speculation\n- Asks about future recommendation behavior based on no real product experience\n- Doesn't inform any decision you need to make at this stage (pre-launch discovery)\n- This is a nice-to-have metric, not a core insight\n\n**Why this matters:**\nA recommendation intent from someone who's never used the product is unreliable. You're collecting a vanity metric instead of understanding the real problems.\n\n**Suggested rewrite:**\nIf you need to understand word-of-mouth potential, ask: \"How do other business owners typically find and choose their bookkeeping tools?\" (This reveals channels and decision-making, which *will* matter for go-to-market later.)\n\n---\n\n### Q8: \"What is the biggest challenge in running your small business?\"\n\n**Verdict:** KEEP (but reposition)\n\n**Issues found:**\n- None. This is a good open-ended question that allows them to surface top-of-mind issues without priming.\n- It's broad, but that's intentional \u2014 gives you room to hear what matters most to them.\n\n**Why this matters:**\nThis works as a catch-all that surfaces unexpected pain points. It should come *after* the bookkeeping-specific questions so it doesn't prime every answer before you've dug into the core topic.\n\n---\n\n## Survey Audit Summary\n\n**Overall assessment:** This survey relies heavily on leading questions and hypotheticals. It will produce confirmation that small business owners want an AI bookkeeping tool, but won't reveal whether the underlying problem is real or how severe it is. Major overhaul needed.\n\n**Questions to keep:** 1 (Q5, Q8)\n**Questions to rewrite:** 3 (Q1, Q3, Q6)\n**Questions to merge:** 1 (Q2 overlaps with pricing concerns better addressed elsewhere)\n**Questions to delete:** 2 (Q2, Q7)\n**Net question count:** After consolidation, this becomes 6-7 strong questions (down from 8).\n\n**Biggest issue:** The survey is solution-focused and hypothesis-confirming. You start with \"managing your books is a time sink\" and \"would you pay for AI categorization?\" \u2014 both statements already embed your solution. By the time you ask about actual problems (Q3, Q6), the respondent has already been primed to validate your idea. Flip the sequence: ask about current workflow and pain points *first*, then explore whether a tool would help, then (much later) explore willingness to pay.\n\n**Missing coverage:**\n1. **Current workflow specifics**: You never ask *how* they currently do bookkeeping (manual spreadsheet, dedicated tool, accountant, hybrid). This is foundational.\n2. **Frequency and timing**: You ask total hours but not whether it's concentrated (monthly tax prep crunch) vs. spread out (daily entries). This changes product strategy.\n3. **Decision-making**: Who decides on bookkeeping tools? You assume it's the business owner, but if they have an accountant or bookkeeper, that person is the gatekeeper.\n4. **Alternatives and trade-offs**: You never ask what they'd sacrifice to save bookkeeping time. This reveals whether it's a top-tier problem or a nice-to-have.\n\n---\n\n## Recommended Next Steps\n\n1. **Reorder questions** to follow the discovery sequence: current workflow \u2192 pain points \u2192 how they've tried to solve it \u2192 tool evaluation history \u2192 then ask about their specific needs.\n\n2. **Lead with open-ended problem discovery** before mentioning AI or any solution. Example: \"Walk me through how you handle your bookkeeping from the time an expense occurs until it's recorded in your books. What's the most tedious part?\"\n\n3. **Test the opposite assumption**: Include at least one question that challenges your hypothesis. For example: \"Some business owners find bookkeeping pretty straightforward. Does that match your experience, or is it more complex?\"\n\n4. **Separate time investment from value judgment**: Get the quantitative data (hours/week) separately from their interpretation of whether it's justified.\n\n5. **Consider who you're really talking to**: If small business owners delegate bookkeeping to accountants or bookkeepers, interview *those people* too. Your product's true user might not be the person who signs the checks.\n\n---\n\n## Revised Survey Structure (Recommended Framework)\n\nIf you'd like, I can produce a revised version of this survey that incorporates these recommendations. The new structure would be:\n\n1. **Context & Workflow** (Understanding current state)\n2. **Pain Points & Frustrations** (What's actually broken)\n3. **Existing Solutions** (What they've tried, what stuck)\n4. **Decision-Makers & Team** (Who influences tool choices)\n5. **Open-Ended Priorities** (What matters most)\n\nWould you like me to generate the full revised survey?\n"}], "grading": {"eval_id": 4, "eval_name": "Coaching Audit", "configuration": "with_skill", "expectations": [{"text": "Audit provides a per-question verdict (KEEP/REWRITE/MERGE/DELETE) for each of the 8 questions", "passed": true, "evidence": "Audit provides verdicts for all 8 questions: Q1 REWRITE, Q2 DELETE, Q3 REWRITE, Q4 REWRITE, Q5 KEEP, Q6 REWRITE, Q7 DELETE, Q8 KEEP"}, {"text": "Audit correctly identifies Q1 as leading ('Don't you think...')", "passed": true, "evidence": "Section on Q1 explicitly states: 'Leading language: \"Don't you think...\" explicitly telegraphs the expected answer and assumes agreement' and 'Loaded framing: \"time sink\" is your interpretation, not the respondent's'"}, {"text": "Audit correctly identifies Q2 as hypothetical and solution-pitching (pricing a non-existent product)", "passed": true, "evidence": "Q2 verdict: 'Hypothetical pricing question (\"Would you...\") \u2014 people routinely say yes to hypotheticals they won't actually do' and 'Prematurely introduces your solution (automatic categorization) before understanding the underlying problem'"}, {"text": "Audit correctly identifies Q6 as double-barreled (two questions in one)", "passed": true, "evidence": "Q6 verdict: 'Double-barreled: asks two distinct things (hours spent + perceived value)' with detailed explanation of the conflation problem"}, {"text": "Audit provides concrete rewrite suggestions for flagged questions", "passed": true, "evidence": "Each rewritten question includes specific rewrites: Q1 rewritten to 'How much time per week do you currently spend on managing your bookkeeping?', Q3 to open-ended about tedious steps, Q6 split into two separate questions with specific wording"}, {"text": "Audit rewrites focus on past behavior rather than hypotheticals", "passed": true, "evidence": "Rewrites emphasize past behavior: Q1 rewrite asks 'How much time per week do you currently spend' (present tense based on past), Q3 rewrite 'Think about the last time you did your bookkeeping' (anchored to specific past event)"}, {"text": "Audit includes an overall summary with counts of keep/rewrite/merge/delete", "passed": true, "evidence": "Survey Audit Summary section lists: 'Questions to keep: 1 (Q5, Q8)' 'Questions to rewrite: 3 (Q1, Q3, Q6)' 'Questions to merge: 1 (Q2 overlaps...)' 'Questions to delete: 2 (Q2, Q7)' with net count"}, {"text": "Audit identifies missing coverage areas the survey should address", "passed": true, "evidence": "Missing coverage section identifies 4 gaps: 'Current workflow specifics' (how they do bookkeeping), 'Frequency and timing' (concentrated vs. spread out), 'Decision-making' (who decides), 'Alternatives and trade-offs' (what they'd sacrifice)"}]}}, {"id": "eval-4-coaching-audit-without_skill", "prompt": "(No prompt found)", "eval_id": null, "outputs": [{"name": "survey.md", "type": "text", "content": "# Survey Audit: AI Bookkeeping Tool\n\n## Executive Summary\nThis survey has significant structural and methodological issues that will likely produce biased, unreliable data. The questions contain leading language, conflated variables, and inconsistent response formats. Major revisions are needed before sending to small business owners.\n\n---\n\n## Critical Issues\n\n### 1. **Leading Questions with Confirmation Bias**\n\n**Question 1:** \"Don't you think managing your books is a huge time sink?\"\n- **Problem:** Uses negative framing (\"huge time sink\") and leading phrasing (\"Don't you think...\") that assumes agreement\n- **Impact:** Respondents feel nudged to agree rather than express genuine sentiment\n- **Fix:** Reframe as neutral: \"How would you describe the time required to manage your books?\" with options like minimal/moderate/significant/substantial\n\n**Question 5:** \"Have you tried other bookkeeping tools and found them lacking?\"\n- **Problem:** Combines two separate questions and assumes negative experience\n- **Impact:** Conflates tool adoption with dissatisfaction; misses satisfied users who tried alternatives\n- **Fix:** Split into two questions:\n  - \"Have you tried other bookkeeping tools? (Yes/No)\"\n  - \"If yes, how satisfied were you with them? (1-5 scale)\"\n\n### 2. **Conflated Variables (Multiple Ideas Per Question)**\n\n**Question 6:** \"How many hours per week do you spend on bookkeeping, and is it worth your time?\"\n- **Problem:** Asks two distinct things:\n  1. Quantitative time investment (hours/week)\n  2. Subjective value judgment (worth your time)\n- **Impact:** Impossible to know which aspect drove the response\n- **Fix:** Split into two questions:\n  - \"How many hours per week do you currently spend on bookkeeping?\"\n  - \"How satisfied are you with how you currently manage bookkeeping? (1-5 scale)\"\n\n### 3. **Inconsistent Response Formats**\n\n**Issues across survey:**\n- Q1: Open-ended assumption (requires agreement/disagreement)\n- Q2: Yes/No format (limited insight)\n- Q3: 1-5 scale\n- Q4: Open-ended\n- Q5: Yes/No format\n- Q6: Mixed (time + subjective judgment)\n- Q7: Yes/No format\n- Q8: Open-ended\n\n**Impact:** Makes data analysis difficult; some questions will produce weak quantitative data\n\n**Fix:** Use consistent response formats:\n- Use 5-point Likert scales for opinion-based questions\n- Use discrete numeric inputs for factual questions (hours/week)\n- Reserve open-ended questions for specific feature requests or challenges\n\n### 4. **Missing Critical Baseline Questions**\n\nThe survey lacks essential context:\n- **Current tool usage:** Do they use any bookkeeping tool currently? Which one?\n- **Decision-maker clarity:** Are they the decision-maker for purchasing tools?\n- **Budget constraints:** Is $50/month feasible for their business? (Size matters)\n- **Pain points first:** Before asking about solutions, establish severity of problems\n- **Timeline:** Are they actively looking to change tools?\n\n### 5. **Weak Validation Questions**\n\n**Question 2:** \"Would you pay $50/month for an AI...\"\n- **Problem:** Hypothetical question without context about value/features received\n- **Impact:** Yes/no answers won't translate to actual purchase intent\n- **Fix:** Reorder survey to establish pain first, then ask: \"If an AI tool could [specific solution], would $50/month be acceptable?\" Include price sensitivity ladder (try at different price points)\n\n**Question 7:** \"Would you recommend an AI bookkeeping tool...\"\n- **Problem:** They haven't tried your tool; recommendation intent without experience is unreliable\n- **Impact:** Measures brand awareness/enthusiasm, not actual recommendation likelihood\n- **Fix:** This belongs in post-trial feedback, not pre-launch surveys\n\n---\n\n## Moderate Issues\n\n### 6. **Vague Open-Ended Questions**\n\n**Question 4:** \"What features would you want in an AI bookkeeping tool?\"\n- **Problem:** Too broad; respondents may list obvious features or unrelated ideas\n- **Impact:** Difficult to prioritize; produces scattered feedback\n- **Fix:** Provide context or feature categories:\n  - \"Which of these AI features would be most valuable? (Automatic expense categorization / Receipt scanning / Financial reporting / Tax preparation assistance / Other)\"\n\n**Question 8:** \"What is the biggest challenge in running your small business?\"\n- **Problem:** Doesn't anchor to bookkeeping; produces out-of-scope answers\n- **Impact:** May not inform product development\n- **Fix:** Refocus: \"What aspects of financial management are most challenging for your business?\" or remove if not directly relevant\n\n### 7. **No Segmentation or Qualification**\n\nThe survey doesn't identify:\n- Business size/revenue (affects bookkeeping complexity and $50/month affordability)\n- Industry type (some industries have unique accounting needs)\n- Current accounting knowledge level (impacts feature complexity needs)\n- Business stage (startup vs. established)\n\n**Impact:** Responses from a solopreneur aren't equivalent to those from a 20-person company\n**Fix:** Add demographic questions at the start\n\n### 8. **No Clear Research Objective**\n\nThe survey tries to answer multiple questions:\n- Pain validation (Q1, Q3, Q6)\n- Feature prioritization (Q4, Q8)\n- Pricing acceptance (Q2)\n- Market size (Q5, Q7)\n\n**Better approach:** Clarify your primary hypothesis first. Are you validating:\n1. That bookkeeping is painful enough to justify a tool? (Pain-focused)\n2. What features matter most? (Feature-focused)\n3. Price sensitivity? (Pricing-focused)\n\nDifferent objectives require different questions.\n\n---\n\n## Revised Survey Structure (Recommended)\n\n### A. Qualification & Context (2 questions)\n- How many employees does your business have?\n- Do you currently use a bookkeeping tool? If yes, which one?\n\n### B. Pain Validation (3 questions)\n- How much time per week do you spend on bookkeeping tasks?\n- On a 1-5 scale, how frustrating is your current bookkeeping process?\n- What's the biggest challenge you face with bookkeeping? (open-ended)\n\n### C. Feature Interest (2 questions)\n- Which of these AI features would save you the most time? [list options]\n- Which features are most important for your business? [priority ranking]\n\n### D. Pricing & Decision-Making (2 questions)\n- How much would you be willing to spend monthly on a bookkeeping tool?\n- Who would be involved in the decision to adopt a new tool?\n\n### E. Behavioral Intent (1 question)\n- Would you be interested in a free trial of an AI bookkeeping tool?\n\n---\n\n## Summary of Recommendations\n\n| Issue | Severity | Action |\n|-------|----------|--------|\n| Leading language | Critical | Rewrite Q1, Q5 with neutral framing |\n| Conflated variables | Critical | Split Q6 into separate questions |\n| Inconsistent response formats | High | Standardize on Likert scales + discrete inputs |\n| Weak pricing question | High | Add context about value before asking |\n| Missing baseline questions | High | Add current tool usage, business size, decision-maker |\n| Vague open-ended questions | Medium | Add frameworks to focus responses |\n| No segmentation data | Medium | Add business size/stage/industry |\n| Overlapping objectives | Medium | Clarify primary research goal first |\n\n---\n\n## Bottom Line\n\n**Do not send this survey in its current form.** The leading questions, conflated variables, and inconsistent formats will produce unreliable data that may steer your product development in the wrong direction.\n\nInvest 30 minutes now to restructure around your core research questions. A cleaner survey with 8-10 focused questions will yield far more actionable insights than this version.\n\n**Next step:** Clarify your primary research goal (pain validation? Feature prioritization? Pricing acceptance?), then rebuild the survey with neutral framing and consistent response formats.\n"}], "grading": {"eval_id": 4, "eval_name": "Coaching Audit", "configuration": "without_skill", "expectations": [{"text": "Audit provides a per-question verdict (KEEP/REWRITE/MERGE/DELETE) for each of the 8 questions", "passed": true, "evidence": "Audit uses structured sections (Executive Summary, Critical Issues, Moderate Issues) with verdicts for all questions: Q1 and Q5 rewrite, Q6 split, Q2 and Q7 are weak, Q4 and Q8 are vague/moderate"}, {"text": "Audit correctly identifies Q1 as leading ('Don't you think...')", "passed": true, "evidence": "Critical Issues section identifies Q1: 'Uses negative framing (\"huge time sink\") and leading phrasing (\"Don't you think...\") that assumes agreement' and recommends reframe as neutral"}, {"text": "Audit correctly identifies Q2 as hypothetical and solution-pitching (pricing a non-existent product)", "passed": true, "evidence": "Weak Validation Questions section identifies Q2: 'Hypothetical question without context about value/features received' and 'Yes/no answers won't translate to actual purchase intent'"}, {"text": "Audit correctly identifies Q6 as double-barreled (two questions in one)", "passed": true, "evidence": "Conflated Variables section explicitly addresses Q6: 'Asks two distinct things: 1. Quantitative time investment (hours/week) 2. Subjective value judgment (worth your time)' with recommended split"}, {"text": "Audit provides concrete rewrite suggestions for flagged questions", "passed": true, "evidence": "Every issue has a 'Fix' recommendation: Q1 rewritten to 'How would you describe the time required to manage your books?', Q6 split into two with specific wording"}, {"text": "Audit rewrites focus on past behavior rather than hypotheticals", "passed": true, "evidence": "Q6 rewrite 1: 'How many hours per week do you currently spend on bookkeeping?' (measures actual behavior), Q6 rewrite 2: 'What would you do instead if you didn't have to do bookkeeping?' (probes opportunity cost based on current reality)"}, {"text": "Audit includes an overall summary with counts of keep/rewrite/merge/delete", "passed": true, "evidence": "Summary of Recommendations table lists severity and action for each issue, with Bottom Line stating the audit structure and counts"}, {"text": "Audit identifies missing coverage areas the survey should address", "passed": true, "evidence": "Missing Critical Baseline Questions section identifies gaps: 'Current tool usage', 'Decision-maker clarity', 'Budget constraints', 'Pain points first', 'Timeline'"}]}}, {"id": "eval-5-constrained-count-with_skill", "prompt": "(No prompt found)", "eval_id": null, "outputs": [{"name": "survey.md", "type": "text", "content": "# Free-to-Paid Upgrade Survey\n\n**Objective:** Understand what specific limitations of the free plan drove your team's decision to upgrade.\n**Target:** Teams who have upgraded from the free plan to a paid plan in the last 12 months\n**Time:** 3 minutes\n**Method:** In-app survey\n\n---\n\n## Introduction\n\nThanks for upgrading! We'd like to understand what prompted your team to move to a paid plan. Your honest answers help us build features that actually matter. There are no right or wrong answers \u2014 we just want to hear about your experience.\n\n---\n\n## Section 1: Upgrade Trigger\n\n### Q1: What specific limitation with the free plan became a problem for your team?\n*Type: Open-ended*\n*Insight target: The actual breaking point \u2014 what free feature gap or constraint forced the decision*\n*Follow-up prompts: (For live interview) Was it a limit on projects, team members, storage, or something else? When did you first notice it?*\n\n---\n\n## Section 2: Decision Process\n\n### Q2: How long between when you first hit that limitation and when you actually upgraded?\n*Type: Multiple choice*\n- Within a few days\n- Within 1-2 weeks\n- Within a month\n- Several months\n- Over 6 months\n\n*Insight target: Whether the pain was urgent or a lingering frustration \u2014 signals problem severity*\n*Follow-up prompts: (For live interview) What made you wait, or what finally pushed you over the edge?*\n\n### Q3: What was the main concern when deciding whether to upgrade?\n*Type: Open-ended*\n*Insight target: The actual objection that almost stopped them \u2014 budget, switching cost, uncertainty about whether it would solve the problem, etc.*\n\n---\n\n## Section 3: Experience After Upgrade\n\n### Q4: Did upgrading actually solve the problem you were trying to solve?\n*Type: Multiple choice*\n- Yes, completely\n- Yes, mostly \u2014 though we found other gaps\n- Partially \u2014 we still have workarounds\n- Not really \u2014 the issue was something else\n\n*Insight target: Whether the feature set matched expectations, and whether there are secondary pain points*\n\n### Q5: Since upgrading, what's the one feature or capability you use most frequently that wasn't available on the free plan?\n*Type: Open-ended*\n*Insight target: What paid feature is actually delivering value \u2014 not the marketing list, but real usage*\n\n---\n\n## Section 6: Upgrade Satisfaction\n\n### Q6: If you had to summarize it in one sentence, why did upgrading make sense for your team?\n*Type: Open-ended*\n*Insight target: The bottom-line value proposition from the customer's perspective \u2014 the real story behind the upgrade*\n\n---\n\n## Closing\n\nThat's it \u2014 thanks for taking the time. Is there anything else about your experience upgrading that you'd like to tell us?\n\nIf you're open to a brief follow-up conversation down the road, we'd love to hear more. Would that be okay? (Yes / No)\n\n---\n\n## Interviewer Notes\n\n- **Listen for**: Concrete constraints, not vague dissatisfaction. \"We kept hitting the 10-project limit\" is gold. \"It just felt limiting\" is not.\n- **Watch for timing**: If they upgraded months after hitting the limit, that tells you about problem intensity. Urgent problems get solved fast.\n- **Probe the objection**: Q3 is where they'll reveal what almost stopped them. That's often more interesting than what motivated them.\n- **Validate the fit**: Q4 reveals whether you're solving the right problem. If they say \"not really,\" dig into Q5 to understand what they actually use instead.\n- **Use their language**: If they say \"bottleneck,\" use that word back. If they say \"visibility,\" match it. Avoid your product terminology.\n- **Quantify where possible**: If they mention a limitation in Q1, ask \"how often does that slow your team down?\" or \"how many projects did you need before you hit that limit?\"\n"}], "grading": {"eval_id": 5, "eval_name": "Constrained 6 Questions", "configuration": "with_skill", "expectations": [{"text": "No questions ask about future hypothetical behavior", "passed": true, "evidence": "No 'Would you' or 'How likely would you' questions. Q4 asks 'Did upgrading actually solve' (past behavior), Q5 asks 'what feature you use most frequently' (past usage)"}, {"text": "No questions mention or pitch the user's specific product/solution idea", "passed": true, "evidence": "Survey focuses on understanding upgrade decision and features that drove the decision, not pitching a product. Questions are discovery-oriented about why they upgraded"}, {"text": "All questions use neutral, non-leading language", "passed": true, "evidence": "Questions use neutral framing: 'What specific limitation,' 'How long between,' 'What was the main concern,' 'Did upgrading actually solve' - no leading assumptions"}, {"text": "Survey includes an introduction section for the respondent", "passed": true, "evidence": "Introduction section (lines 10-12): 'Thanks for upgrading! We'd like to understand what prompted your team to move to a paid plan. Your honest answers help us build features that actually matter'"}, {"text": "Survey includes a closing section with an open-ended catch-all question", "passed": true, "evidence": "Closing section (lines 69-73) includes catch-all: 'That's it \u2014 thanks for taking the time. Is there anything else about your experience upgrading that you'd like to tell us?'"}, {"text": "Questions focus on past behavior and specific experiences", "passed": true, "evidence": "Questions anchor to past behavior: Q1 'What specific limitation...became a problem,' Q2 'How long between when you first hit that limitation and when you actually upgraded,' Q3 'What was the main concern,' Q5 'what feature...you use most frequently'"}, {"text": "Survey includes insight targets or notes explaining why each question matters", "passed": true, "evidence": "Each question includes 'Insight target' explaining purpose: Q1 'The actual breaking point,' Q2 'Whether the pain was urgent,' Q3 'The actual objection,' Q5 'What paid feature is actually delivering value'"}, {"text": "Survey is formatted as a complete, ready-to-use document", "passed": true, "evidence": "Complete document includes: objective, target, time estimate, method, introduction, 6 core questions organized into sections, closing with follow-up opt-in, and interviewer notes"}, {"text": "Survey contains exactly 6 core questions (not counting intro/closing)", "passed": true, "evidence": "Core questions are: Q1 (Upgrade Trigger), Q2 (Decision Process timing), Q3 (Decision Process concern), Q4 (Experience After Upgrade), Q5 (Feature usage), Q6 (Upgrade satisfaction) = exactly 6"}]}}, {"id": "eval-5-constrained-count-without_skill", "prompt": "(No prompt found)", "eval_id": null, "outputs": [{"name": "survey.md", "type": "text", "content": "# Project Management Tool Upgrade Survey\n\n**Estimated time: 3 minutes**\n\nThank you for upgrading to our paid plan! We'd like to understand what motivated your decision.\n\n---\n\n## Questions\n\n**1. What specific feature or capability in the paid plan was most important to your upgrade decision?**\n- [ ] Advanced permissions/team controls\n- [ ] Increased storage or project limits\n- [ ] Integrations with other tools\n- [ ] Reporting and analytics\n- [ ] Priority support\n- [ ] Other: ________________\n\n**2. Before upgrading, what was the biggest limitation you experienced on the free plan?**\n- [ ] Not enough seats/team members\n- [ ] Missing critical features\n- [ ] Performance issues with large projects\n- [ ] Lack of customization options\n- [ ] No API access\n- [ ] Other: ________________\n\n**3. How long were you using the free plan before upgrading?**\n- [ ] Less than 1 month\n- [ ] 1-3 months\n- [ ] 3-6 months\n- [ ] 6-12 months\n- [ ] Over 1 year\n\n**4. Which team member or department initiated the upgrade request?**\n- [ ] Project manager\n- [ ] Team lead\n- [ ] Executive/manager\n- [ ] Finance/procurement\n- [ ] I did (individual contributor)\n- [ ] Other: ________________\n\n**5. How confident are you that the paid plan will deliver the value you expected? (1-5)**\n- [ ] 1 - Not confident\n- [ ] 2 - Somewhat unsure\n- [ ] 3 - Neutral\n- [ ] 4 - Fairly confident\n- [ ] 5 - Very confident\n\n**6. Would you recommend our paid plan to another team considering an upgrade?**\n- [ ] Definitely yes\n- [ ] Probably yes\n- [ ] Unsure\n- [ ] Probably not\n- [ ] Definitely not\n\n---\n\n**Thank you for your feedback!**\n"}], "grading": {"eval_id": 5, "eval_name": "Constrained 6 Questions", "configuration": "without_skill", "expectations": [{"text": "No questions ask about future hypothetical behavior", "passed": false, "evidence": "Q5 asks 'How confident are you that the paid plan will deliver the value you expected?' - this is a future-oriented confidence question about expected outcomes, not past behavior"}, {"text": "No questions mention or pitch the user's specific product/solution idea", "passed": true, "evidence": "Questions focus on upgrade decision and limitations encountered. While the survey is about the product, it's framed as discovery of what motivated users, not pitching features"}, {"text": "All questions use neutral, non-leading language", "passed": true, "evidence": "Multiple choice options are neutrally framed without leading language. Questions are straightforward about features and limitations"}, {"text": "Survey includes an introduction section for the respondent", "passed": true, "evidence": "Introduction (line 5): 'Thank you for upgrading to our paid plan! We'd like to understand what motivated your decision'"}, {"text": "Survey includes a closing section with an open-ended catch-all question", "passed": false, "evidence": "Survey ends abruptly with 'Thank you for your feedback!' after Q6. No open-ended catch-all question asking if there's anything else to share"}, {"text": "Questions focus on past behavior and specific experiences", "passed": true, "evidence": "Most questions focus on past: Q1 'What specific feature...was most important' (past decision), Q2 'biggest limitation you experienced' (past), Q3 'How long were you using' (past), Q4 'Which team member initiated' (past)"}, {"text": "Survey includes insight targets or notes explaining why each question matters", "passed": false, "evidence": "No insight targets or explanatory notes for any of the 6 questions. Survey is bare multiple choice format without context on why each question is asked"}, {"text": "Survey is formatted as a complete, ready-to-use document", "passed": true, "evidence": "Survey has introduction, 6 questions, closing. However, it's minimal compared to Eval 5 with_skill - no section headers, no interview notes, no follow-up prompts"}, {"text": "Survey contains exactly 6 core questions (not counting intro/closing)", "passed": true, "evidence": "Questions: Q1 (feature importance), Q2 (limitation), Q3 (usage duration), Q4 (team member), Q5 (confidence), Q6 (recommendation) = exactly 6"}]}}], "previous_feedback": {}, "previous_outputs": {"eval-1-saas-expense-discovery-with_skill": [{"name": "survey.md", "type": "text", "content": "# Customer Discovery Survey: Expense Reporting in Small Accounting Firms\n\n**Objective:** Understand how small accounting firm owners currently handle expense reports, what challenges they face, and what workarounds they've tried.\n\n**Target:** Owners, partners, and operations managers at accounting firms with 5-50 staff\n\n**Time:** 25-30 minutes\n\n**Method:** Live interview (phone or in-person)\n\n---\n\n## Introduction\n\nThanks for taking the time to talk with me today. I'm researching how accounting firms handle expense reporting and the challenges that come with it. Your real-world experience is incredibly valuable\u2014I'm not trying to sell you anything, just learn how you actually work.\n\nThere are no right or wrong answers here. I'm interested in what you do day-to-day and what frustrates you about the current process. Feel free to be honest about what's broken or inefficient.\n\n---\n\n## Section 1: Current Expense Reporting Workflow\n\n### Q1: Walk me through your most recent expense report process\u2014from when a team member incurs an expense to when it's approved and categorized.\n\n*Type: Open-ended*\n\n*Insight target: Uncover the actual workflow, touchpoints, and who's involved. Reveals what tools are used, manual steps, and integration gaps. The user's natural description often surfaces frustrations they don't realize are frustrations.*\n\n*Follow-up prompts:*\n- What happens between each step you mentioned?\n- Who has to do something to move it forward?\n- How do you currently collect receipts from your team?\n- Where does that information end up? (accounting software, spreadsheet, email thread?)\n\n---\n\n### Q2: How many expense reports does your firm process in a typical month?\n\n*Type: Open-ended / quantitative*\n\n*Insight target: Establish the scale of the problem. A firm doing 5 reports/month vs. 500/month faces very different pain magnitudes. This helps prioritize impact later.*\n\n*Follow-up prompts:*\n- Does that number vary seasonally?\n- How many of those are client reimbursables vs. employee expenses?\n\n---\n\n### Q3: What tools or systems do you currently use to manage expense reports? Walk me through why you chose each one.\n\n*Type: Open-ended*\n\n*Insight target: Inventory their tech stack. Understand if they're using multiple disconnected tools (a sign of fragmentation), what tool switching would entail, and what the decision-making process looks like for accounting software.*\n\n*Follow-up prompts:*\n- How long have you used [tool]?\n- Did you evaluate alternatives before choosing it, or did you just inherit it?\n- What's the main reason you stuck with it?\n\n---\n\n### Q4: What specifically about your expense reporting process frustrates you the most?\n\n*Type: Open-ended*\n\n*Insight target: Direct question about pain. This is where they'll mention bottlenecks: manual data entry, lost receipts, approval delays, categorization errors, etc. Listen for frequency and impact language.*\n\n*Follow-up prompts:*\n- How often does that happen?\n- What's the impact when that goes wrong?\n- Have you tried to fix that? What did you try?\n\n---\n\n## Section 2: Current Pain and Impact\n\n### Q5: Think about the last time an expense report was delayed, rejected, or required a lot of back-and-forth. What happened, and why?\n\n*Type: Open-ended (behavioral, specific incident)*\n\n*Insight target: Move past hypothetical frustration into documented problems. The \"Mom Test\" question\u2014even if they tell you they love their process, this question surfaces real issues. Listen for root cause, not just symptom.*\n\n*Follow-up prompts:*\n- Why did that happen? What triggered the problem?\n- How long did it take to resolve?\n- Who had to get involved to fix it?\n- How often do you see this kind of situation?\n\n---\n\n### Q6: On average, how much time per week do you or your team spend on expense report-related work?\n\n*Type: Open-ended / quantitative*\n\n*Insight target: Quantify the labor cost. This reveals whether the problem is significant enough to justify a solution. Answers like \"5-10 hours/week\" for a 10-person firm is very different from \"30 minutes/week\".*\n\n*Follow-up prompts:*\n- Who on your team spends the most time on this?\n- Is that time predictable or does it spike?\n- What specifically takes the most time? (data entry, following up on missing receipts, reconciling, categorizing, etc.)\n\n---\n\n### Q7: What are the most expensive mistakes or costly problems that come from your current expense reporting process?\n\n*Type: Open-ended*\n\n*Insight target: Uncover hidden costs\u2014unbilled time, missed reimbursements, compliance issues, audit problems, client dissatisfaction. People don't always think of these as \"expense report problems,\" but they're the real business impact.*\n\n*Follow-up prompts:*\n- How often do invoices get delayed because expenses aren't processed?\n- Do you ever lose money on client reimbursables?\n- Have you ever had audit or compliance issues tied to expense handling?\n- Do your clients complain about how long it takes to get invoices?\n\n---\n\n## Section 3: Existing Attempts and Satisfaction\n\n### Q8: What solutions have you tried in the past to make expense reporting easier? What worked and what didn't?\n\n*Type: Open-ended*\n\n*Insight target: Understand their \"solution search\" maturity. Have they tried tools and abandoned them? Do they accept the pain as inevitable, or are they actively looking? This reveals switching friction and what would be required to replace their current approach.*\n\n*Follow-up prompts:*\n- How long did you use that solution?\n- Why did you stop using it?\n- What would have made you keep using it?\n\n---\n\n### Q9: If you could magically fix one thing about your expense reporting process, what would it be?\n\n*Type: Open-ended*\n\n*Insight target: Prioritize the top pain point in the user's own words. This is their wishlist, not your feature list. Listen for what they choose\u2014it reveals what matters most.*\n\n*Follow-up prompts:*\n- Why is that the top priority?\n- How much better would your business run if that problem disappeared?\n\n---\n\n## Section 4: Current Solution Evaluation and Switching\n\n### Q10: What's keeping you from switching to a different expense management system? What would need to change?\n\n*Type: Open-ended*\n\n*Insight target: Uncover switching costs and barriers. Are they locked in by integration, contract, team training, or habit? What would make switching worth it? This is critical for understanding if a new solution is even viable for them.*\n\n*Follow-up prompts:*\n- How integrated is [current tool] with your accounting software?\n- Would switching require changes to your firm's processes?\n- How much effort would it take your team to learn something new?\n\n---\n\n### Q11: How do you make decisions about accounting software and tools? Who's involved, and what matters most to you in that decision?\n\n*Type: Open-ended*\n\n*Insight target: Map the buying process and decision criteria. Do they care most about cost, integration, ease of use, support? Who has budget authority? This informs go-to-market strategy later.*\n\n*Follow-up prompts:*\n- Has that process changed over time?\n- What's caused you to switch tools in the past?\n- What would make you willing to evaluate a new tool?\n\n---\n\n## Section 5: Firm Context\n\n### Q12: How many people on your team are directly involved in the expense reporting process (submitting, approving, reconciling)?\n\n*Type: Quantitative*\n\n*Insight target: Understand the user base size and who needs to adopt a new solution. A 3-person firm has very different needs than a 40-person firm.*\n\n*Follow-up prompts:*\n- How many submit expenses? How many approve? How many categorize or reconcile?\n\n---\n\n### Q13: What's changed about your expense process in the last 2-3 years?\n\n*Type: Open-ended*\n\n*Insight target: Understand growth trajectory and how scaling has affected them. Are they handling more expenses now? Have remote teams changed things? Have they added clients requiring different types of tracking?*\n\n*Follow-up prompts:*\n- Why did that change happen?\n- Was it prompted by a problem, or just natural growth?\n\n---\n\n## Closing\n\nThank you for sharing all of that. Your insights are genuinely helpful.\n\nIs there anything else about your expense process you think I should know\u2014something we didn't cover or something that's been on your mind about how you handle this?\n\n**[If the conversation was valuable, ask:]**\n\nWould it be okay if I followed up with you in a few weeks as I learn more? I might have follow-up questions, and I'd love to keep you in the loop.\n\n---\n\n## Interviewer Notes\n\n**What to listen for:**\n\n- **Frequency and scale language**: \"Every week,\" \"constantly,\" \"dozens of emails\"\u2014these signal real pain. \"Occasionally\" and \"usually fine\" signal lower severity.\n- **Workaround stacking**: If they've built multiple manual workarounds (spreadsheets, calendar reminders, Slack bots, etc.), that's a sign the current solution isn't meeting their needs.\n- **Time allocation**: Who spends how much time? If the operations manager is spending 10+ hours/week on this, that's a real business cost.\n- **Switching attempts**: If they've tried other tools and abandoned them, ask *why*. Was it the tool, the migration, the team's adoption, or unmet expectations?\n- **Hidden costs**: They might not volunteer these\u2014probe into invoice delays, reimbursement lag, audit findings, or client complaints tied to slow expense processing.\n- **Context changes**: Remote teams, firm growth, new service lines, or regulatory changes often shake expense processes. Understanding these shifts reveals what's driving urgency.\n\n**Common pitfalls in this interview:**\n\n- **Assuming the problem is about features, not workflow**: They might say \"We need mobile receipt capture\" when the real problem is \"I don't get receipts in time to code them before month-end.\" Get to the root cause.\n- **Accepting \"it works fine\"**: If they say this, they're signaling politeness or resignation. Dig into the specific challenges. Ask: \"Fine for whom? Does it feel fine for your team that spends 4 hours/week on it?\"\n- **Conflating complaints with willingness to change**: Someone frustrated with their current system might still not switch if the switching cost is too high. Separately assess pain AND switching friction.\n- **Leading them toward a solution**: If they sense you have an automation tool in mind, they'll start telling you what they think you want to hear. Keep the conversation about problems and workflows, not solutions.\n\n**Red flags that suggest low problem severity:**\n\n- They don't spend more than a few hours/month on it\n- There are no documented downstream problems (delayed invoices, lost reimbursables, etc.)\n- They've never searched for or tried alternatives\n- They say \"It's just the nature of the business\" with no urgency\n\n**Green flags that suggest strong problem validation:**\n\n- They can immediately articulate specific recent incidents and their impact\n- They've tried solutions or workarounds before\n- Multiple people on their team have been frustrated by the same process\n- They're actively losing money, time, or client satisfaction due to slow/error-prone expense handling\n- They ask you questions about solutions\u2014they're searching, not resigned\n"}], "eval-1-saas-expense-discovery-without_skill": [{"name": "survey.md", "type": "text", "content": "# Customer Discovery Survey: Expense Report Automation\n\n## Introduction\n\nThank you for taking the time to speak with us. We're developing a tool to help small accounting firms streamline expense report processing, and we'd love to understand your current workflows, challenges, and needs. Your honest feedback will help us determine if we're solving a real problem.\n\nThis should take about 15-20 minutes.\n\n---\n\n## Section 1: Current Workflow & Volume\n\n**1.1** How many expense reports does your firm typically process per month?\n- [ ] 0-10\n- [ ] 11-50\n- [ ] 51-200\n- [ ] 200+\n\n**1.2** Who currently handles expense report processing at your firm?\n- [ ] Dedicated staff member(s)\n- [ ] Accounting partners/principals\n- [ ] Bookkeepers\n- [ ] Clients submit directly to a system (e.g., accounting software)\n- [ ] Mix of the above\n- [ ] Other: _______________________\n\n**1.3** Walk us through your current expense report process from start to finish. What are the main steps?\n- _________________________________________________________________\n- _________________________________________________________________\n- _________________________________________________________________\n\n**1.4** What tools or systems do you currently use for expense management? (Check all that apply)\n- [ ] Email attachments\n- [ ] Excel/Google Sheets\n- [ ] Client accounting software\n- [ ] Dedicated expense/receipt capture tool (specify): _________________\n- [ ] Custom internal system\n- [ ] Paper receipts\n- [ ] Other: _______________________\n\n---\n\n## Section 2: Pain Points & Friction\n\n**2.1** What are the biggest frustrations or time-wasters in your current expense reporting process?\n- _________________________________________________________________\n- _________________________________________________________________\n- _________________________________________________________________\n\n**2.2** How much time per week do you estimate your team spends on expense report processing?\n- [ ] Less than 2 hours\n- [ ] 2-5 hours\n- [ ] 5-10 hours\n- [ ] 10-20 hours\n- [ ] 20+ hours\n\n**2.3** What types of errors or issues do you encounter most frequently? (Check all that apply)\n- [ ] Missing or illegible receipts\n- [ ] Duplicate entries\n- [ ] Incorrect categorization\n- [ ] Missing descriptions or explanations\n- [ ] Amounts that don't match receipts\n- [ ] Expense policy violations (over limit, non-reimbursable items)\n- [ ] Lost or delayed reports\n- [ ] Manual data entry errors\n- [ ] Other: _______________________\n\n**2.4** When errors occur, how much additional time does it take to resolve them?\n- [ ] 5-15 minutes per report\n- [ ] 15-30 minutes per report\n- [ ] 30+ minutes per report\n- [ ] Varies widely\n- [ ] Unsure\n\n**2.5** Are there any compliance, audit, or policy enforcement challenges with your current process?\n- Yes, please describe: _________________________________________________________________\n- [ ] No, not really\n\n---\n\n## Section 3: Impact & Consequences\n\n**3.1** How does slow or error-prone expense processing impact your firm? (Check all that apply)\n- [ ] Delays in reimbursing employees or clients\n- [ ] Reduced client satisfaction\n- [ ] Administrative burden on leadership\n- [ ] Difficulty reconciling accounts\n- [ ] Missing tax deductions or compliance issues\n- [ ] Employee/client frustration\n- [ ] Waste of billable time\n- [ ] Other: _______________________\n\n**3.2** Have you considered switching expense management solutions? Why or why not?\n- _________________________________________________________________\n- _________________________________________________________________\n\n**3.3** What would solving this problem be worth to your firm in terms of:\n- Time saved per month: _________________ hours\n- Cost savings/recovered billable hours: $_________________ per month\n- Quality improvements: _________________________________________________________________\n\n---\n\n## Section 4: Solution Preferences\n\n**4.1** What features would be most valuable to you? Rank the top 3 (1 = most important):\n- [ ] Automated receipt capture/OCR (photos or uploaded images)\n- [ ] AI-powered categorization of expenses\n- [ ] Real-time policy enforcement/flagging\n- [ ] Mobile app for easy submission\n- [ ] Integration with your accounting software\n- [ ] Automatic duplicate detection\n- [ ] Audit trails and compliance reporting\n- [ ] Dashboard for tracking pending reports\n- [ ] Customizable approval workflows\n- [ ] Multi-currency support\n- [ ] Other: _______________________\n\n**4.2** Would you prefer:\n- [ ] A standalone tool\n- [ ] An integration/plugin within existing software you use\n- [ ] No preference\n\n**4.3** How important is ease of adoption for your team?\n- [ ] Critical - must be simple to onboard\n- [ ] Very important\n- [ ] Somewhat important\n- [ ] Not a major concern\n\n**4.4** Would you want your clients to submit expenses directly, or would you prefer to manage it internally?\n- [ ] Clients submit directly\n- [ ] Internal team manages\n- [ ] Flexible hybrid approach\n- [ ] Unsure\n\n---\n\n## Section 5: Buying Considerations\n\n**5.1** If a solution saved your firm 5-10 hours per month, what would you consider a reasonable price?\n- [ ] Under $50/month\n- [ ] $50-150/month\n- [ ] $150-500/month\n- [ ] $500-1000/month\n- [ ] $1000+/month\n- [ ] Unsure\n\n**5.2** How would you prefer to pay?\n- [ ] Per-user seat\n- [ ] Per-report processed\n- [ ] Flat monthly fee\n- [ ] Tiered based on volume\n- [ ] No preference\n\n**5.3** How important are the following factors in your decision to adopt a new tool? Rate 1-5 (1 = not important, 5 = critical):\n- Security/data protection: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5\n- Integration with your current systems: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5\n- Vendor reputation/stability: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5\n- Customer support quality: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5\n- Ease of implementation: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5\n- Customization flexibility: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5\n\n**5.4** Who would be involved in the decision to adopt a new tool?\n- [ ] You alone\n- [ ] You + IT/systems staff\n- [ ] You + accounting team\n- [ ] You + business partners\n- [ ] Other: _______________________\n\n---\n\n## Section 6: Validation & Future\n\n**6.1** How would you rate the importance of automating expense reports to your firm right now?\n- [ ] Critical need - we'd prioritize this\n- [ ] Important - we'd pursue this within 6 months\n- [ ] Nice to have - we might explore it\n- [ ] Not a priority\n\n**6.2** What would need to happen for you to seriously evaluate a solution like this?\n- _________________________________________________________________\n- _________________________________________________________________\n\n**6.3** Can we follow up with you in a few months to share progress and get feedback?\n- [ ] Yes, happy to help\n- [ ] Maybe\n- [ ] No\n\nContact information: _________________________________________________________________\n\n---\n\n## Section 7: Open Feedback\n\n**7.1** Is there anything else about your expense management process or needs that we should know?\n- _________________________________________________________________\n- _________________________________________________________________\n- _________________________________________________________________\n\n**7.2** Are you aware of other firm owners or contacts we should speak with about this?\n- [ ] Yes, I can make an introduction\n- [ ] Possibly, let me think about it\n- [ ] No\n\n---\n\n## Interview Notes Section\n\n**Interviewer:** _________________________\n**Date:** _________________________\n**Firm Name/Size:** _________________________\n\n**Key Takeaways:**\n- _________________________________________________________________\n- _________________________________________________________________\n- _________________________________________________________________\n\n**Follow-up Actions:**\n- _________________________________________________________________\n- _________________________________________________________________\n"}], "eval-2-fitness-app-churn-with_skill": [{"name": "survey.md", "type": "text", "content": "# Fitness App Usage Survey: Understanding Early Disengagement\n\n**Objective:** Identify the primary reasons users disengage from the fitness app within the first week of adoption.\n\n**Target:** Users who downloaded the app in the last 3 months but have not logged in for at least 7 days.\n\n**Time:** 3-4 minutes\n\n**Method:** Email survey\n\n---\n\n## Introduction\n\nHi there,\n\nWe noticed you haven't used our fitness app recently, and we'd really like to understand why. We're not here to convince you to come back (yet!) \u2014 we genuinely want to learn what didn't work for you so we can improve the app for you and everyone else.\n\nYour honest feedback is way more valuable than generic praise. There are no right or wrong answers. All responses are completely anonymous.\n\nThanks for taking a few minutes to help us out.\n\n---\n\n## Section 1: First Impression & Initial Setup\n\n### Q1: What was the main reason you downloaded the fitness app?\n*Type: Multiple choice with open-ended option*\n\n- To build a consistent exercise habit\n- To track my workouts or fitness progress\n- To get workout ideas or guidance\n- To stay motivated with accountability\n- I'm not sure \u2014 I was just browsing/curious\n- Other: _______________\n\n*Insight target: Validates whether the initial need/motivation was present or if the user downloaded casually. Helps identify if motivation-driven users have different retention patterns than exploratory users.*\n\n---\n\n### Q2: When you first opened the app, what was your impression?\n*Type: Multiple choice*\n\n- It was immediately clear how to get started\n- It was confusing or took a while to figure out\n- I needed to see tutorials or explanations\n- I wanted to get started but hit a roadblock (login issues, permissions, etc.)\n- I didn't get a chance to use it yet\n\n*Insight target: Identifies onboarding friction as a churn factor. Many apps lose users at the \"moment of truth\" when they first open it. This question captures whether confusion in the first 60 seconds played a role.*\n\n---\n\n## Section 2: Actual Usage Experience\n\n### Q3: Walk me through what happened the first time you tried to work out using the app. What did you do?\n*Type: Open-ended*\n\n*Insight target: Surfaces the actual user journey and identifies failure points. The response will reveal whether they completed a workout, abandoned midway, or never attempted one. This is far more reliable than \"Did you like it?\" Open-ended responses often reveal unexpected friction points.*\n\n---\n\n### Q4: After that first time, how many workout sessions did you actually complete in the app?\n*Type: Multiple choice*\n\n- Just that one time\n- 2-3 sessions\n- 4-7 sessions\n- I didn't actually complete any workouts in the app\n\n*Insight target: Quantifies engagement depth. Did they try once and quit, or did they get into it for a few days before dropping off? This helps identify whether it's a \"trial\" churn vs. \"early habit abandonment\" churn.*\n\n---\n\n## Section 3: Why It Stopped\n\n### Q5: Which of these best describes why you stopped using the app?\n*Type: Multiple choice (select all that apply)*\n\n- The workouts didn't fit my fitness level or goals\n- It was too hard to fit workouts into my schedule\n- I didn't notice results or progress\n- The app had technical problems (crashes, bugs, confusing interface)\n- I found another app, coach, or way to work out that I liked better\n- I lost motivation or wasn't consistent with it\n- I forgot about it / stopped thinking about it\n- I just wasn't sure what to do next in the app\n- Other reason: _______________\n\n*Insight target: This multi-select question maps the churn landscape. It avoids leading language and includes both motivational (\"lost motivation\"), practical (\"too hard to fit into schedule\"), and competitive (\"found another app\") reasons. The distribution across these will reveal whether you have a motivation problem, a habit-formation problem, a UX problem, or a positioning problem.*\n\n---\n\n### Q6: Of the reasons you selected above, which ONE was the biggest factor in you stopping?\n*Type: Open-ended or ranking*\n\n*Insight target: Forces prioritization. Users might experience multiple friction points, but this question isolates the primary one. This is critical \u2014 if you try to fix everything, you fix nothing.*\n\n---\n\n## Section 4: Alternative Solutions & Comparison\n\n### Q7: Before downloading our app, how were you exercising or staying active?\n*Type: Open-ended*\n\n*Insight target: Reveals existing solutions and habits. Understanding what they were doing before (nothing, gym, YouTube videos, other apps, in-person classes) shows competitive context and highlights whether the app solved a real problem or created a new workflow.*\n\n---\n\n### Q8: After you stopped using our app, did you go back to that method, try something else, or stop exercising/working out altogether?\n*Type: Multiple choice with open-ended option*\n\n- I went back to what I was doing before\n- I switched to a different app or service\n- I stopped exercising/being active\n- I'm exercising/active in a different way now\n- Other: _______________\n\n*Insight target: Reveals whether the app failed to replace an existing routine (in which case you need stickier habit formation) or whether users abandoned fitness entirely (in which case motivation or time is the real bottleneck). This also surfaces whether you lost them to a competitor.*\n\n---\n\n## Section 5: Opportunity to Improve\n\n### Q9: What would need to be true for you to try the app again?\n*Type: Open-ended*\n\n*Insight target: This is the \"gift\" question. Users often tell you exactly how to win them back. Look for patterns: feature requests, workload preferences, different goal framing, community aspects, accountability mechanisms, etc. Responses here are gold \u2014 they're low-friction reasons to re-engage.*\n\n---\n\n### Q10: Is there anything else about your experience with the app that you'd like us to know?\n*Type: Open-ended*\n\n*Insight target: The open-ended closer captures nuanced feedback that doesn't fit the above categories. Often surfaces the most honest insights because there's no guided choice \u2014 it's just their authentic take.*\n\n---\n\n## Closing\n\nThank you for taking the time to share your feedback. We genuinely appreciate it, and it helps us understand what we're missing.\n\nIf you're open to a quick follow-up conversation (via email or brief call) as we make improvements to the app, we'd love to talk with you. Just let us know below.\n\n**Would you be open to follow-up?**\n- Yes, feel free to reach out\n- No, I'd prefer not to be contacted again\n- Unsure\n\n---\n\n## Interviewer Notes (For Analysis)\n\n**What to listen for:**\n\n1. **Motivation vs. Habit Formation vs. Fitness Alignment:** Pay attention to whether churn stems from motivational factors (\"lost motivation,\" \"forgot about it\") or fitness-specific issues (\"workouts didn't fit my goals\"). These require different fixes.\n\n2. **Onboarding Red Flags:** If a significant portion struggled with Q2 or Q3, you have a critical first-impression problem. Users who are confused on day one rarely come back.\n\n3. **The Habit Window:** Many people expect to build habits in 1-2 weeks. If users completed 4-7 sessions (Q4) and then stopped, they likely hit a motivation cliff or scheduling conflict rather than discovering a fundamental problem. If they never completed even one workout, the app didn't deliver value at all.\n\n4. **Competitive Intelligence:** Q8 responses about switching to other apps are more actionable than \"lost motivation.\" If 30% of churned users switched to Peloton or Apple Fitness+, you're competing on content/coaching quality. If they just went back to the gym, you're competing on convenience.\n\n5. **Watch for Politeness Bias:** Even though this is anonymous, users might soften their language. Look for implicit criticism: \"Too hard to fit into my schedule\" often means \"This app isn't worth the friction.\" \"I forgot about it\" often means \"It didn't create enough value to stay top-of-mind.\"\n\n**Red flags in responses:**\n\n- High volume of \"forgot about it\" (indicates no retention loop, no habit trigger)\n- \"Workouts didn't fit my fitness level\" (indicates poor onboarding/goal-setting)\n- \"Found another app\" with specific names (you have direct competitors; study them)\n- \"Didn't notice results\" (either they expected results too fast, or the progress tracking isn't clear)\n- \"Too hard to fit into schedule\" (indicates your recommended workout duration or frequency is misaligned)\n\n**How to analyze the data:**\n\nCreate a simple spreadsheet with each user's responses. Then:\n1. Count frequency of each churn reason (Q5) \u2014 this tells you your biggest leakage point\n2. Cross-tabulate Q1 (why they downloaded) with Q5 (why they quit) \u2014 does motivation matter less for people who downloaded for tracking vs. guidance?\n3. Segment by Q4 (number of sessions completed) \u2014 do users who completed 4-7 sessions churn for different reasons than those who never started?\n4. Look for patterns in Q9 responses \u2014 if 40% say \"I need shorter workouts\" and 35% say \"I need better community,\" you have your roadmap.\n5. Identify the top 1-2 churn drivers and focus there. Don't try to fix everything at once.\n\n**Caveats:**\n\n- This survey captures *reported* reasons, not actual reasons. Someone who says \"I lost motivation\" might actually have had a bad UX experience that killed their motivation. Watch for those indirect signals.\n- This survey is about *past* behavior (what they did, where they stopped), not future intentions. Don't ask \"Would you use it if we added X?\" \u2014 that's not reliable. Instead, use the survey to identify the bottleneck, then run a separate test with that change.\n"}], "eval-2-fitness-app-churn-without_skill": [{"name": "survey.md", "type": "text", "content": "# Fitness App User Survey: Understanding Your Experience\n\nDear [User Name],\n\nThank you for trying our fitness app! We launched just 3 months ago and are working hard to make it the best solution for remote workers. We've noticed that some users have become less active with the app, and we'd love to understand why.\n\nYour honest feedback will help us improve the app and make it more valuable for you and our community.\n\n**This survey takes about 5 minutes to complete. All responses are confidential.**\n\n---\n\n## Section 1: Current Usage\n\n**Q1: How often do you currently use the fitness app?**\n- [ ] Daily\n- [ ] 3-5 times per week\n- [ ] 1-2 times per week\n- [ ] A few times per month\n- [ ] Haven't used it in weeks/months\n\n**Q2: When did you last use the app?**\n- [ ] Today or yesterday\n- [ ] Within the last week\n- [ ] 1-2 weeks ago\n- [ ] 3-4 weeks ago\n- [ ] More than a month ago\n\n---\n\n## Section 2: Initial Experience & Expectations\n\n**Q3: What was your main reason for downloading the app?** (Select all that apply)\n- [ ] Improve fitness/health while working remotely\n- [ ] Fit workouts into a busy schedule\n- [ ] Get workout recommendations tailored to me\n- [ ] Track my fitness progress\n- [ ] Motivation/accountability\n- [ ] Try something new\n- [ ] Other: _______________\n\n**Q4: Did the app meet your initial expectations in the first week?**\n- [ ] Yes, exceeded expectations\n- [ ] Yes, met expectations\n- [ ] Somewhat met expectations\n- [ ] Did not meet expectations\n- [ ] Not sure\n\n---\n\n## Section 3: Reasons for Decreased Usage\n\n**Q5: What has prevented you from using the app regularly?** (Select all that apply)\n- [ ] Not enough time during my workday\n- [ ] The workouts were too difficult\n- [ ] The workouts were too easy\n- [ ] I got bored with the workout variety\n- [ ] Technical issues or bugs\n- [ ] The app was confusing or hard to navigate\n- [ ] Not getting results/progress tracking doesn't work well\n- [ ] Lack of motivation/accountability\n- [ ] Better alternatives exist (I switched to another app)\n- [ ] I achieved my fitness goals\n- [ ] Life got busy/work demands increased\n- [ ] No clear progress or achievement system\n- [ ] Other: _______________\n\n**Q6: Is there a specific feature or aspect of the app that frustrated you?**\n- [ ] User interface/design\n- [ ] Workout selection/variety\n- [ ] Progress tracking\n- [ ] Notifications/reminders\n- [ ] Mobile performance\n- [ ] Social/community features\n- [ ] Personalization\n- [ ] Other: _______________\n\n---\n\n## Section 4: Feature Feedback\n\n**Q7: Which of these features would make you more likely to use the app?** (Select all that apply)\n- [ ] More variety in workout types (yoga, HIIT, strength, etc.)\n- [ ] Shorter workouts (10-15 min) designed for breaks\n- [ ] Better progress tracking and achievements\n- [ ] Community/accountability features (challenges, friends)\n- [ ] Personalized recommendations based on my fitness level\n- [ ] Integration with other fitness apps/wearables\n- [ ] Live or on-demand classes with instructors\n- [ ] Nutrition/diet guidance\n- [ ] Customizable workout schedules\n- [ ] Better mobile app performance\n- [ ] None of these would help\n- [ ] Other: _______________\n\n**Q8: How important are these features to you?** (Rate: Not Important / Somewhat Important / Very Important)\n- Workout variety: [ ] [ ] [ ]\n- Real-time progress tracking: [ ] [ ] [ ]\n- Social accountability: [ ] [ ] [ ]\n- Expert coaching: [ ] [ ] [ ]\n- Flexible scheduling: [ ] [ ] [ ]\n\n---\n\n## Section 5: Competitive Landscape\n\n**Q9: Are you using another fitness app or service instead?**\n- [ ] Yes, another app\n- [ ] Yes, multiple apps\n- [ ] No, just not using any fitness app\n- [ ] Undecided/considering options\n\n**Q10: If you switched to another app, what was the main reason?** (Only answer if applicable)\n- [ ] Better workout variety\n- [ ] Better progress tracking\n- [ ] Easier to use\n- [ ] Better for remote workers specifically\n- [ ] Free vs. paid model\n- [ ] Recommendations from friends\n- [ ] Other app's features better matched my needs\n- [ ] Other: _______________\n\n---\n\n## Section 6: Remote Worker Specific\n\n**Q11: How does working remotely affect your fitness routine?**\n- [ ] Makes it harder to find time for fitness\n- [ ] Makes it easier to fit fitness into my schedule\n- [ ] No impact on my fitness habits\n- [ ] Motivates me to stay active to break up the workday\n- [ ] Other: _______________\n\n**Q12: What's the biggest challenge in staying fit while working remotely?**\n- [ ] Time management/schedule flexibility\n- [ ] Motivation/discipline\n- [ ] Lack of structure/accountability\n- [ ] Physical space constraints (home setup)\n- [ ] Blurred work-life boundaries\n- [ ] Other: _______________\n\n---\n\n## Section 7: Re-engagement Potential\n\n**Q13: Would you consider using the app again if we addressed your concerns?**\n- [ ] Very likely\n- [ ] Somewhat likely\n- [ ] Unsure\n- [ ] Unlikely\n- [ ] Not interested in fitness apps\n\n**Q14: What's the ONE thing we could improve that would most likely bring you back?**\n_______________________________________________\n_______________________________________________\n\n---\n\n## Section 8: General Feedback\n\n**Q15: How would you rate the overall quality of the app?** (1-5 scale, 1=Poor, 5=Excellent)\n- [ ] 1 - Poor\n- [ ] 2 - Below Average\n- [ ] 3 - Average\n- [ ] 4 - Good\n- [ ] 5 - Excellent\n\n**Q16: Would you recommend this app to other remote workers?**\n- [ ] Yes, definitely\n- [ ] Maybe\n- [ ] No\n- [ ] Not sure\n\n**Q17: Any final comments or suggestions?**\n_______________________________________________\n_______________________________________________\n\n---\n\n## Closing\n\nThank you for taking the time to share your feedback! Your insights are invaluable as we work to improve the fitness app for remote workers.\n\nIf you'd like us to follow up on your response, please leave your contact information (optional):\n- Email: _______________\n- Phone: _______________\n\n---\n\n**Survey Logic & Scoring Notes:**\n\n- **Q1-Q2**: Establish usage baseline and identify dormant vs. active users\n- **Q3-Q4**: Understand onboarding success and expectation gaps\n- **Q5-Q6**: Identify primary churn drivers (time, difficulty, boredom, bugs, etc.)\n- **Q7-Q8**: Discover which features matter most for re-engagement\n- **Q9-Q10**: Assess competitive threat and switching reasons\n- **Q11-Q12**: Understand remote worker-specific pain points\n- **Q13-Q14**: Gauge re-engagement potential and identify quick wins\n- **Q15-Q17**: Overall satisfaction and likelihood to recommend\n\n---\n\n## Email Formatting Recommendations\n\n**Subject Line Options:**\n- \"Help Us Improve: 5-Minute Fitness App Survey (Quick Feedback)\"\n- \"Your Opinion Matters: We're Making Our Fitness App Better\"\n- \"Quick Survey: Why Aren't You Using the Fitness App Anymore?\"\n\n**Best Practices for Email Deployment:**\n1. Personalize with user's first name in greeting\n2. Keep intro brief (explain why we're asking)\n3. Estimate time to complete (5 minutes)\n4. Emphasize confidentiality\n5. Include clear call-to-action (link or button to survey)\n6. Send optimal times (Tuesday-Thursday, 9-11 AM or 3-5 PM)\n7. Consider A/B testing subject lines\n8. Follow up with non-responders after 1 week\n9. Close survey after 2 weeks of collection\n\n---\n\n## Data Analysis Plan\n\n**Segment Responses By:**\n- Usage frequency (still active vs. dormant)\n- Time since signup\n- Primary churn driver\n- Feature interest level\n\n**Key Metrics to Track:**\n- Response rate\n- Top 3 reasons for churn\n- Features users want most\n- Re-engagement likelihood %\n- NPS-style likelihood to recommend\n\n**Action Items to Develop From Results:**\n1. Address top 3 technical/usability issues\n2. Prioritize most-requested features\n3. Create targeted re-engagement campaign for \"very likely\" group\n4. Identify if product-market fit issue exists\n5. Develop feature roadmap based on demand\n"}], "eval-3-dog-food-market-research-with_skill": [{"name": "survey.md", "type": "text", "content": "# Premium Dog Food Market Research Survey\n\n**Objective:** Understand how San Diego dog owners currently purchase dog food, what frustrates them about the experience, and what would trigger them to switch providers.\n\n**Target:** Dog owners in the San Diego area who purchase dog food (premium or specialty brands).\n\n**Time:** 8-10 minutes\n\n**Method:** Facebook group posting (self-administered online), or live interviews if you can recruit 5-10 respondents for deeper insights.\n\n---\n\n## Introduction\n\nHi! We're researching how dog owners in San Diego manage their dog's nutrition and shopping. Your honest feedback helps us understand what actually matters to pet owners\u2014there are no right or wrong answers. We're not selling anything; we just want to learn about your experience. Should take about 10 minutes.\n\n---\n\n## Section 1: Current Dog Food Purchasing Behavior\n\n### Q1: When was the last time you bought dog food? What brand did you purchase, and where did you buy it?\n\n*Type: Open-ended*\n\n*Insight target: Understand the recency of purchases (to filter for active buyers) and map where people currently source dog food. Reveals the distribution channels in use.*\n\n*Follow-up prompts (for live interviews):*\n- How often do you typically buy dog food?\n- How did you decide where to buy it last time?\n\n---\n\n### Q2: Walk me through your typical process for buying dog food. What steps do you go through, from deciding you need more to bringing it home?\n\n*Type: Open-ended*\n\n*Insight target: Reveals the actual workflow and where friction exists. Don't assume what \"friction\" is\u2014listen for the behaviors they describe.*\n\n*Follow-up prompts (for live interviews):*\n- How long does this process usually take?\n- Is there anything you have to do that feels unnecessary?\n- Do you ever buy more than you need at once? Why?\n\n---\n\n### Q3: Why did you choose the brand(s) you currently feed your dog? What made you pick it over other options?\n\n*Type: Open-ended*\n\n*Insight target: Understand decision-making criteria. Are they choosing based on quality, price, convenience, recommendations, or something else? This reveals what matters.*\n\n*Follow-up prompts (for live interviews):*\n- How confident are you that this is the right food for your dog?\n- Have you switched brands before? If yes, what made you switch?\n\n---\n\n## Section 2: Pain Points and Current Frustrations\n\n### Q4: Think about the last time you shopped for dog food. What was annoying or inconvenient about it?\n\n*Type: Open-ended*\n\n*Insight target: Lets respondents surface their own pain points without leading them. Avoid assuming what bothers them.*\n\n*Follow-up prompts (for live interviews):*\n- Is that something that happens every time, or just occasionally?\n- How do you usually solve that problem?\n\n---\n\n### Q5: How do you currently handle running out of dog food or realizing you're low? Walk me through what happens.\n\n*Type: Open-ended*\n\n*Insight target: Reveals whether they plan ahead, how often they face stockouts, and the cost of that problem (emergency trip, switching brands, etc.).*\n\n*Follow-up prompts (for live interviews):*\n- How often does that happen?\n- What do you do when you realize you're out?\n\n---\n\n### Q6: How much does dog food cost you per month, roughly? And is that price a constraint for you?\n\n*Type: Open-ended*\n\n*Insight target: Understand budget and sensitivity to price. This is critical for positioning. Don't assume \"premium\" means they'll pay more.*\n\n*Follow-up prompts (for live interviews):*\n- Are you always buying the same brand, or do you switch based on price/sales?\n- Have you ever decided not to buy a particular food because of cost?\n\n---\n\n## Section 3: Competitive Landscape and Current Options\n\n### Q7: Where do you typically buy dog food? (Check all that apply)\n\n*Type: Multiple choice*\n\n- Local pet store (like Petco, PetSmart, local independent shops)\n- Grocery store (Ralphs, Vons, Whole Foods, etc.)\n- Online (Amazon, Chewy, Chewy.com, brand websites, etc.)\n- Warehouse clubs (Costco, Sam's Club)\n- Direct from breeder or vet\n- Other (please specify)\n\n*Insight target: Map the distribution landscape. Reveals how fragmented purchasing is and which channels are dominant.*\n\n---\n\n### Q8: Do you ever buy dog food online? If yes, what service(s) do you use, and what made you start ordering online?\n\n*Type: Open-ended*\n\n*Insight target: Understand adoption of convenience channels. Reveals whether online ordering is already a norm or still a barrier.*\n\n*Follow-up prompts (for live interviews):*\n- How often do you order online vs. in-store?\n- What do you like about ordering online?\n- What frustrates you about it?\n- Would you set up auto-delivery/subscription?\n\n---\n\n### Q9: Are there other dog owners in San Diego you know who use a dog food delivery or subscription service? If yes, what service do they use?\n\n*Type: Open-ended*\n\n*Insight target: Tests market awareness of delivery services. Reveals if this is already top-of-mind for the target market.*\n\n---\n\n### Q10: What would make you consider switching to a different brand or source for dog food?\n\n*Type: Open-ended*\n\n*Insight target: Reveals actual switching triggers. Are they price-sensitive? Health/quality driven? Convenience-motivated? This is critical for understanding competitive vulnerability.*\n\n*Follow-up prompts (for live interviews):*\n- Has something happened that made you think about switching before?\n- What would have to be true for you to try a new brand?\n\n---\n\n## Section 4: Lifestyle and Values (Market Segmentation)\n\n### Q11: How would you describe your approach to your dog's health and nutrition? (Pick the one that feels closest)\n\n*Type: Multiple choice*\n\n- I feed what's affordable and works for my dog\n- I do some research and try to feed a quality food, but it's not my main focus\n- I'm very deliberate about nutrition\u2014I research ingredients, read reviews, maybe consult my vet\n- I have specific health requirements for my dog (allergies, age, etc.) that drive my choices\n\n*Insight target: Segment the market. Reveals which respondents might be receptive to a \"premium\" positioning and which care more about price or convenience.*\n\n---\n\n### Q12: Have you ever looked into premium or specialty dog foods (organic, grain-free, fresh, raw, etc.)? Tell me what happened.\n\n*Type: Open-ended*\n\n*Insight target: Tests awareness and past behavior with premium options. Did they try and abandon? Still considering? Never relevant to them?*\n\n*Follow-up prompts (for live interviews):*\n- What drew you to that option?\n- If you didn't stick with it, why not?\n- What would make that option more appealing?\n\n---\n\n## Section 5: Logistics and Preferences\n\n### Q13: If you were to order dog food online and have it delivered to your home, how often would you want it delivered? How much would you typically order at once?\n\n*Type: Open-ended*\n\n*Insight target: Understand purchasing frequency and order size. Reveals logistics and unit economics.*\n\n*Follow-up prompts (for live interviews):*\n- Is there a delivery schedule that would work better for you than others?\n- How much storage space do you have at home?\n\n---\n\n### Q14: What's most important to you when considering a dog food delivery service? Rank these 1-5 (1 = most important):\n\n*Type: Ranking*\n\n- Price/Value\n- Convenience (easy ordering, fast delivery, subscription option)\n- Quality/Premium ingredients\n- Specific health benefits for my dog\n- Customer service and expertise\n\n*Insight target: Reveals what actually motivates purchase decisions. Helps prioritize product positioning and feature decisions.*\n\n---\n\n## Section 6: Trust and Decision-Making\n\n### Q15: When you're considering a new dog food brand, what sources of information do you trust? (Check all that apply)\n\n*Type: Multiple choice*\n\n- My veterinarian's recommendation\n- Reviews online (Chewy, Amazon, etc.)\n- Recommendations from other dog owners/friends\n- Brand website or marketing\n- Pet nutrition experts or articles\n- Trial/sample of the product\n- Other (please specify)\n\n*Insight target: Reveals information sources and trust factors. Critical for understanding how to reach and persuade this market.*\n\n---\n\n### Q16: Have you ever felt disappointed with a dog food you bought\u2014whether because it didn't work for your dog, was poor quality, or for another reason? What happened?\n\n*Type: Open-ended*\n\n*Insight target: Reveals trust issues and past frustrations. Shows what could lose a customer.*\n\n*Follow-up prompts (for live interviews):*\n- How did you handle it?\n- Did you switch brands?\n\n---\n\n## Section 7: Opportunity and Barriers\n\n### Q17: What's one thing about buying dog food that you wish were different or easier?\n\n*Type: Open-ended*\n\n*Insight target: Captures the wish list. May reveal unmet needs or confirm pain points mentioned earlier.*\n\n---\n\n### Q18: Is there anything that would stop you from trying a new dog food brand or service in San Diego? (Don't hold back\u2014be honest)\n\n*Type: Open-ended*\n\n*Insight target: Reveals real barriers to adoption. Listen for: risk (will my dog like it?), switching costs (too much hassle), trust (who are these people?), or just lack of salience.*\n\n*Follow-up prompts (for live interviews):*\n- Have you had a bad experience that makes you hesitant?\n- What would have to be true for you to feel safe trying something new?\n\n---\n\n## Closing\n\nThanks so much for taking the time\u2014this feedback is genuinely helpful. Is there anything else about your dog's food or how you shop that you think we should know?\n\nIf you're open to it, I'd love to follow up with a few people for a quick phone or in-person conversation. Would you be willing to chat further? (Optional\u2014your name and phone number or email)\n\n---\n\n## Interviewer Notes\n\n### What to listen for:\n\n1. **Behavior, not sentiment.** Respondents will say \"I care about quality\" but what they *do* might be different. Listen for the verbs: Do they actually research? Do they switch brands? Do they buy premium? Or do they say they care but buy whatever's on sale?\n\n2. **Friction points.** People often bury the real problem in details. If they mention \"sometimes I run out on a Sunday,\" that's a signal that their current system doesn't guarantee availability. That's more important than general complaints.\n\n3. **Switching inertia.** If someone's been using the same brand for years, ask *why*. Is it because it works great, or just because they haven't thought about it? This tells you how sticky the market is.\n\n4. **Premium price sensitivity.** Listen carefully when they describe cost. Do they say \"I can't afford premium\" or \"I choose not to pay more\"? These are different problems.\n\n5. **Trust and trial.** Many respondents will be curious about new options but fear the risk (will my dog's stomach reject it?). This is a real barrier, not a pricing problem.\n\n### Common pitfalls to avoid:\n\n- **Don't pitch.** If you start describing a delivery service, you've contaminated the data. Stay curious and neutral.\n- **Don't assume segments.** Someone who spends $200/month on dog food might not be your customer. The person spending $80/month who is frustrated with availability might be. Don't pre-judge.\n- **Don't settle for \"I'd try it.\"** That's not useful data. Dig into what would actually trigger them to switch and what risk they perceive.\n\n### Next steps after the survey:\n\n- If you get 5-10 responses showing consistent pain points (e.g., \"I'm always running out,\" \"I can't find good options locally\"), that's a signal worth exploring.\n- If responses are scattered with no clear pattern, you may not have a market problem yet\u2014you have a business idea looking for a problem.\n- Prioritize the 2-3 most common switching triggers for deeper interviews. Those are your levers.\n"}], "eval-3-dog-food-market-research-without_skill": [{"name": "survey.md", "type": "text", "content": "# Premium Dog Food Delivery Service - Market Research Survey\n\n## Introduction\n\nHello! We're exploring the idea of launching a premium, locally-sourced dog food delivery service in the San Diego area. We'd love to learn about your pet's dietary needs, your current shopping habits, and whether a convenient delivery option would interest you. This 5-7 minute survey will help us understand the market better. Thank you for your time!\n\n**Your responses are completely anonymous and will only be used for market research purposes.**\n\n---\n\n## Section 1: Your Dog and Current Feeding Practices\n\n**1. Do you currently own a dog?**\n- [ ] Yes\n- [ ] No (Thank you, but this survey is best suited for dog owners)\n\n**2. How many dogs do you own?**\n- [ ] 1\n- [ ] 2-3\n- [ ] 4+\n\n**3. What is the primary age group of your dog(s)?**\n- [ ] Puppy (under 1 year)\n- [ ] Adult (1-7 years)\n- [ ] Senior (7+ years)\n- [ ] Mix of ages\n\n**4. Does your dog have any special dietary needs? (Select all that apply)**\n- [ ] Allergies or sensitivities\n- [ ] Weight management\n- [ ] Digestive issues\n- [ ] Raw or fresh food diet preference\n- [ ] Organic/natural ingredients preference\n- [ ] No special needs\n- [ ] Other: _________________\n\n**5. What type of dog food do you currently feed? (Select all that apply)**\n- [ ] Commercial kibble (mass market brands)\n- [ ] Premium kibble (specialty/upscale brands)\n- [ ] Raw/fresh food\n- [ ] Home-cooked food\n- [ ] Mix of the above\n- [ ] Other: _________________\n\n**6. Where do you currently purchase dog food? (Select all that apply)**\n- [ ] Pet specialty stores (Petco, PetSmart, local pet shops)\n- [ ] Grocery stores\n- [ ] Online retailers (Amazon, Chewy, etc.)\n- [ ] Direct from manufacturers/boutique brands\n- [ ] Multiple sources/varies\n- [ ] Other: _________________\n\n**7. On average, how much do you spend monthly on dog food?**\n- [ ] Under $50\n- [ ] $50-$100\n- [ ] $100-$200\n- [ ] $200-$300\n- [ ] Over $300\n\n---\n\n## Section 2: Current Shopping Challenges and Preferences\n\n**8. Which of the following are pain points with your current dog food shopping experience? (Select all that apply)**\n- [ ] Time-consuming to shop/compare options\n- [ ] Inconsistent product availability\n- [ ] Transportation/carrying heavy bags\n- [ ] Difficulty finding the right food for my dog's needs\n- [ ] Price concerns\n- [ ] Limited selection of premium options locally\n- [ ] No major issues\n- [ ] Other: _________________\n\n**9. How important are the following factors when choosing dog food? (Rate: Not Important / Somewhat Important / Very Important / Critical)**\n\n| Factor | Not Important | Somewhat Important | Very Important | Critical |\n|--------|---------------|-------------------|----------------|----------|\n| High-quality ingredients | [ ] | [ ] | [ ] | [ ] |\n| Locally sourced/made in California | [ ] | [ ] | [ ] | [ ] |\n| Customized to my dog's needs | [ ] | [ ] | [ ] | [ ] |\n| Nutritional transparency | [ ] | [ ] | [ ] | [ ] |\n| Organic/natural certification | [ ] | [ ] | [ ] | [ ] |\n| Sustainable/eco-friendly packaging | [ ] | [ ] | [ ] | [ ] |\n| Convenience/easy to order | [ ] | [ ] | [ ] | [ ] |\n| Price | [ ] | [ ] | [ ] | [ ] |\n\n**10. How often do you currently purchase dog food?**\n- [ ] Weekly\n- [ ] Every 2 weeks\n- [ ] Monthly\n- [ ] Every 2-3 months\n- [ ] Other: _________________\n\n---\n\n## Section 3: Interest in a Delivery Service\n\n**11. Would you be interested in a premium dog food delivery service that offers:**\n- Subscription-based delivery (flexible frequency: weekly, bi-weekly, monthly)\n- Customized blends based on your dog's age, size, and dietary needs\n- Locally sourced, high-quality ingredients\n- Convenient drop-off or door-to-door delivery in San Diego\n- Direct consultation with pet nutrition experts\n\n**Your interest level:**\n- [ ] Very interested - I would definitely try this\n- [ ] Somewhat interested - Depends on price and details\n- [ ] Neutral - I'm unsure\n- [ ] Not interested\n- [ ] Not interested, but might reconsider with (please specify): _________________\n\n**12. What delivery frequency would work best for you?**\n- [ ] Weekly\n- [ ] Every 2 weeks\n- [ ] Monthly\n- [ ] Flexible/on-demand\n- [ ] No preference\n\n**13. What would be an acceptable price point for a premium dog food delivery service?**\n- [ ] $1.50-$2.00 per pound\n- [ ] $2.00-$3.00 per pound\n- [ ] $3.00-$4.00 per pound\n- [ ] $4.00+ per pound\n- [ ] Don't know\n\n**14. Which features would be most valuable to you? (Select top 3)**\n- [ ] Customized nutrition plans for my dog\n- [ ] Transparent ingredient sourcing\n- [ ] Eco-friendly/sustainable packaging\n- [ ] Easy online ordering platform\n- [ ] Flexible subscription management\n- [ ] Free initial nutrition consultation\n- [ ] Regular customer support and follow-up\n- [ ] Other: _________________\n\n**15. Would you be willing to sign up for a subscription to receive discounts?**\n- [ ] Yes, definitely\n- [ ] Maybe, if the discount is significant (15%+)\n- [ ] No, I prefer to order as-needed\n- [ ] Unsure\n\n**16. What concerns might prevent you from using a dog food delivery service? (Select all that apply)**\n- [ ] Cost/pricing concerns\n- [ ] Trust in quality without seeing products first\n- [ ] Commitment to a subscription\n- [ ] Prefer choosing food in-person\n- [ ] Dog won't eat new food/picky eaters\n- [ ] Prefer current brand/source\n- [ ] Delivery reliability concerns\n- [ ] No concerns\n- [ ] Other: _________________\n\n---\n\n## Section 4: Competitive Landscape\n\n**17. Are you aware of any existing dog food delivery services in San Diego?**\n- [ ] Yes, I use one or more\n- [ ] Yes, I've heard of them but don't use\n- [ ] No\n- [ ] Not sure\n\n**18. If yes, which services are you familiar with? (Select all that apply)**\n- [ ] The Farmer's Dog\n- [ ] Ollie\n- [ ] Nom Nom\n- [ ] Butternut Box\n- [ ] Local San Diego companies: _________________\n- [ ] Other national services: _________________\n\n**19. What would differentiate a new dog food delivery service from existing options? (Select all that apply)**\n- [ ] Better pricing\n- [ ] More customization options\n- [ ] Locally sourced/made ingredients\n- [ ] Better customer service\n- [ ] Faster delivery options\n- [ ] More transparent sourcing\n- [ ] Sustainability focus\n- [ ] Easier to manage subscriptions\n- [ ] Other: _________________\n\n---\n\n## Section 5: Demographics and Engagement\n\n**20. What is your zip code (San Diego area only)?**\n- _________________\n\n**21. How many years have you owned dogs?**\n- [ ] Less than 1 year\n- [ ] 1-3 years\n- [ ] 3-5 years\n- [ ] 5-10 years\n- [ ] 10+ years\n\n**22. How would you describe your pet care philosophy?**\n- [ ] Premium/holistic - I invest in the best for my dog\n- [ ] Health-conscious - I prioritize nutrition and wellness\n- [ ] Budget-friendly - I look for good value\n- [ ] Balanced - I aim for quality at a reasonable price\n- [ ] Other: _________________\n\n**23. How do you typically discover new pet products and services? (Select top 3)**\n- [ ] Social media (Instagram, Facebook, TikTok)\n- [ ] Word-of-mouth/local recommendations\n- [ ] Pet-focused websites and blogs\n- [ ] Veterinarian recommendations\n- [ ] Google search\n- [ ] Local pet groups and communities\n- [ ] Pet product reviews\n- [ ] Other: _________________\n\n**24. Would you be interested in joining a beta/early-access program for a premium dog food delivery service?**\n- [ ] Yes, definitely\n- [ ] Maybe, tell me more\n- [ ] No\n- [ ] Not sure\n\n**25. May we contact you with updates about this service? (Optional)**\n- [ ] Yes, I'd like to receive updates\n- [ ] Email: _________________\n- [ ] Phone: _________________\n- [ ] No, thank you\n\n---\n\n## Closing Comments\n\n**26. Is there anything else you'd like us to know about your dog's dietary needs, preferences, or what you're looking for in a dog food delivery service?**\n\n_________________________________________________________________\n\n_________________________________________________________________\n\n_________________________________________________________________\n\n---\n\n## Thank You!\n\nThank you for taking the time to complete this survey! Your feedback is invaluable in helping us understand whether a premium dog food delivery service would be a good fit for San Diego dog owners. If you indicated interest in updates, we'll keep you in the loop about our progress.\n\nHave questions? Feel free to comment below or reach out. We'd love to hear from you!\n\n---\n\n## Survey Administration Notes\n\n### How to Use This Survey\n\n1. **Platform**: Post this survey to local San Diego Facebook groups such as:\n   - San Diego Dog Owner Groups\n   - Pet/Dog-related neighborhood groups\n   - Local business or community pages\n   - Health/wellness-focused groups\n\n2. **Format Options**:\n   - Create a Google Form version for easier data collection and analysis\n   - Use Typeform or SurveyMonkey for a more polished feel\n   - Post as a simple Facebook post and ask for comments\n   - Create a downloadable PDF for community events\n\n3. **Sample Size**: Aim for 100-300 responses to get meaningful insights about market interest and preferences\n\n4. **Key Metrics to Track**:\n   - Percentage expressing interest (\"Very interested\" or \"Somewhat interested\")\n   - Average monthly spending on dog food\n   - Top pain points with current shopping\n   - Preferred price points\n   - Awareness of competitors\n   - Geographic distribution within San Diego\n\n5. **Analysis Focus**:\n   - Interest correlation with current spending habits\n   - Demographic segments most interested in the service\n   - Key differentiators that appeal to respondents\n   - Pricing sensitivity analysis\n   - Feature prioritization\n\n### Follow-Up Actions\n\n- Collect email addresses from interested respondents for future product validation\n- Consider offering a discount or incentive to beta testers\n- Schedule follow-up interviews with highly interested respondents for deeper insights\n- Use findings to refine your business model and product offering\n"}]}, "benchmark": {"metadata": {"skill_name": "survey-generator", "iteration": 2, "timestamp": "2026-03-18T00:00:00Z", "evals_run": [1, 4, 5]}, "runs": [{"eval_id": 1, "eval_name": "SaaS Expense Discovery", "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 100.0, "passed": 8, "failed": 0, "total": 8, "time_seconds": 33.344, "tokens": 44267, "errors": 0}, "expectations": [{"text": "No questions ask about future hypothetical behavior", "passed": true, "evidence": "Survey uses past-focused language: 'Walk me through how your firm currently handles,' 'Think about the last time you had to deal with,' no 'Would you' or 'How likely would you' questions"}, {"text": "No questions mention or pitch the user's specific product/solution idea", "passed": true, "evidence": "Survey focuses on expense management problem space (current processes, tools, pain points) without mentioning any specific solution. Questions about 'what alternatives they've considered' are open-ended discovery, not pitching"}, {"text": "All questions use neutral, non-leading language", "passed": true, "evidence": "Questions are framed neutrally: 'Walk me through,' 'Think about the last time,' 'What frustrates you,' 'Have you ever looked at other tools' - no loaded framing or assumption of problems"}, {"text": "Survey includes an introduction section for the respondent", "passed": true, "evidence": "Introduction section (lines 13-15) provides context: 'We're speaking with accounting firm leaders to understand how your teams currently handle expense reports and invoicing'"}, {"text": "Survey includes a closing section with an open-ended catch-all question", "passed": true, "evidence": "Closing section (lines 116-120) includes catch-all: 'is there anything else about how your firm handles expenses or what you wish existed that we haven't touched on?'"}, {"text": "Questions focus on past behavior and specific experiences", "passed": true, "evidence": "Questions consistently anchor to past: Q1 'Walk me through how your firm currently handles,' Q2 'Think about the last time you had to deal with an expense report issue,' Q6 'Have you ever looked at other tools,' Q7 'When an expense report gets delayed'"}, {"text": "Survey includes insight targets or notes explaining why each question matters", "passed": true, "evidence": "Every question includes 'Insight target' section explaining purpose: Q1 'Uncover the actual process, tools used, and people involved,' Q2 'Surface real pain points and edge cases,' Q3 'Quantify the magnitude of the problem'"}, {"text": "Survey is formatted as a complete, ready-to-use document", "passed": true, "evidence": "Survey includes: clear objective, target audience, time estimate, method, introduction, 10 core questions organized into sections with follow-up prompts, closing, and comprehensive interviewer notes with listening cues and probing strategies"}]}, {"eval_id": 4, "eval_name": "Coaching Audit", "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 100.0, "passed": 8, "failed": 0, "total": 8, "time_seconds": 37.05, "tokens": 44884, "errors": 0}, "expectations": [{"text": "Audit provides a per-question verdict (KEEP/REWRITE/MERGE/DELETE) for each of the 8 questions", "passed": true, "evidence": "Audit provides verdicts for all 8 questions: Q1 REWRITE, Q2 DELETE, Q3 REWRITE, Q4 REWRITE, Q5 KEEP, Q6 REWRITE, Q7 DELETE, Q8 KEEP"}, {"text": "Audit correctly identifies Q1 as leading ('Don't you think...')", "passed": true, "evidence": "Section on Q1 explicitly states: 'Leading language: \"Don't you think...\" explicitly telegraphs the expected answer and assumes agreement' and 'Loaded framing: \"time sink\" is your interpretation, not the respondent's'"}, {"text": "Audit correctly identifies Q2 as hypothetical and solution-pitching (pricing a non-existent product)", "passed": true, "evidence": "Q2 verdict: 'Hypothetical pricing question (\"Would you...\") \u2014 people routinely say yes to hypotheticals they won't actually do' and 'Prematurely introduces your solution (automatic categorization) before understanding the underlying problem'"}, {"text": "Audit correctly identifies Q6 as double-barreled (two questions in one)", "passed": true, "evidence": "Q6 verdict: 'Double-barreled: asks two distinct things (hours spent + perceived value)' with detailed explanation of the conflation problem"}, {"text": "Audit provides concrete rewrite suggestions for flagged questions", "passed": true, "evidence": "Each rewritten question includes specific rewrites: Q1 rewritten to 'How much time per week do you currently spend on managing your bookkeeping?', Q3 to open-ended about tedious steps, Q6 split into two separate questions with specific wording"}, {"text": "Audit rewrites focus on past behavior rather than hypotheticals", "passed": true, "evidence": "Rewrites emphasize past behavior: Q1 rewrite asks 'How much time per week do you currently spend' (present tense based on past), Q3 rewrite 'Think about the last time you did your bookkeeping' (anchored to specific past event)"}, {"text": "Audit includes an overall summary with counts of keep/rewrite/merge/delete", "passed": true, "evidence": "Survey Audit Summary section lists: 'Questions to keep: 1 (Q5, Q8)' 'Questions to rewrite: 3 (Q1, Q3, Q6)' 'Questions to merge: 1 (Q2 overlaps...)' 'Questions to delete: 2 (Q2, Q7)' with net count"}, {"text": "Audit identifies missing coverage areas the survey should address", "passed": true, "evidence": "Missing coverage section identifies 4 gaps: 'Current workflow specifics' (how they do bookkeeping), 'Frequency and timing' (concentrated vs. spread out), 'Decision-making' (who decides), 'Alternatives and trade-offs' (what they'd sacrifice)"}]}, {"eval_id": 4, "eval_name": "Coaching Audit", "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 100.0, "passed": 8, "failed": 0, "total": 8, "time_seconds": 25.564, "tokens": 39216, "errors": 0}, "expectations": [{"text": "Audit provides a per-question verdict (KEEP/REWRITE/MERGE/DELETE) for each of the 8 questions", "passed": true, "evidence": "Audit uses structured sections (Executive Summary, Critical Issues, Moderate Issues) with verdicts for all questions: Q1 and Q5 rewrite, Q6 split, Q2 and Q7 are weak, Q4 and Q8 are vague/moderate"}, {"text": "Audit correctly identifies Q1 as leading ('Don't you think...')", "passed": true, "evidence": "Critical Issues section identifies Q1: 'Uses negative framing (\"huge time sink\") and leading phrasing (\"Don't you think...\") that assumes agreement' and recommends reframe as neutral"}, {"text": "Audit correctly identifies Q2 as hypothetical and solution-pitching (pricing a non-existent product)", "passed": true, "evidence": "Weak Validation Questions section identifies Q2: 'Hypothetical question without context about value/features received' and 'Yes/no answers won't translate to actual purchase intent'"}, {"text": "Audit correctly identifies Q6 as double-barreled (two questions in one)", "passed": true, "evidence": "Conflated Variables section explicitly addresses Q6: 'Asks two distinct things: 1. Quantitative time investment (hours/week) 2. Subjective value judgment (worth your time)' with recommended split"}, {"text": "Audit provides concrete rewrite suggestions for flagged questions", "passed": true, "evidence": "Every issue has a 'Fix' recommendation: Q1 rewritten to 'How would you describe the time required to manage your books?', Q6 split into two with specific wording"}, {"text": "Audit rewrites focus on past behavior rather than hypotheticals", "passed": true, "evidence": "Q6 rewrite 1: 'How many hours per week do you currently spend on bookkeeping?' (measures actual behavior), Q6 rewrite 2: 'What would you do instead if you didn't have to do bookkeeping?' (probes opportunity cost based on current reality)"}, {"text": "Audit includes an overall summary with counts of keep/rewrite/merge/delete", "passed": true, "evidence": "Summary of Recommendations table lists severity and action for each issue, with Bottom Line stating the audit structure and counts"}, {"text": "Audit identifies missing coverage areas the survey should address", "passed": true, "evidence": "Missing Critical Baseline Questions section identifies gaps: 'Current tool usage', 'Decision-maker clarity', 'Budget constraints', 'Pain points first', 'Timeline'"}]}, {"eval_id": 5, "eval_name": "Constrained 6 Questions", "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 100.0, "passed": 9, "failed": 0, "total": 9, "time_seconds": 24.462, "tokens": 43434, "errors": 0}, "expectations": [{"text": "No questions ask about future hypothetical behavior", "passed": true, "evidence": "No 'Would you' or 'How likely would you' questions. Q4 asks 'Did upgrading actually solve' (past behavior), Q5 asks 'what feature you use most frequently' (past usage)"}, {"text": "No questions mention or pitch the user's specific product/solution idea", "passed": true, "evidence": "Survey focuses on understanding upgrade decision and features that drove the decision, not pitching a product. Questions are discovery-oriented about why they upgraded"}, {"text": "All questions use neutral, non-leading language", "passed": true, "evidence": "Questions use neutral framing: 'What specific limitation,' 'How long between,' 'What was the main concern,' 'Did upgrading actually solve' - no leading assumptions"}, {"text": "Survey includes an introduction section for the respondent", "passed": true, "evidence": "Introduction section (lines 10-12): 'Thanks for upgrading! We'd like to understand what prompted your team to move to a paid plan. Your honest answers help us build features that actually matter'"}, {"text": "Survey includes a closing section with an open-ended catch-all question", "passed": true, "evidence": "Closing section (lines 69-73) includes catch-all: 'That's it \u2014 thanks for taking the time. Is there anything else about your experience upgrading that you'd like to tell us?'"}, {"text": "Questions focus on past behavior and specific experiences", "passed": true, "evidence": "Questions anchor to past behavior: Q1 'What specific limitation...became a problem,' Q2 'How long between when you first hit that limitation and when you actually upgraded,' Q3 'What was the main concern,' Q5 'what feature...you use most frequently'"}, {"text": "Survey includes insight targets or notes explaining why each question matters", "passed": true, "evidence": "Each question includes 'Insight target' explaining purpose: Q1 'The actual breaking point,' Q2 'Whether the pain was urgent,' Q3 'The actual objection,' Q5 'What paid feature is actually delivering value'"}, {"text": "Survey is formatted as a complete, ready-to-use document", "passed": true, "evidence": "Complete document includes: objective, target, time estimate, method, introduction, 6 core questions organized into sections, closing with follow-up opt-in, and interviewer notes"}, {"text": "Survey contains exactly 6 core questions (not counting intro/closing)", "passed": true, "evidence": "Core questions are: Q1 (Upgrade Trigger), Q2 (Decision Process timing), Q3 (Decision Process concern), Q4 (Experience After Upgrade), Q5 (Feature usage), Q6 (Upgrade satisfaction) = exactly 6"}]}, {"eval_id": 5, "eval_name": "Constrained 6 Questions", "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 55.56, "passed": 5, "failed": 4, "total": 9, "time_seconds": 9.52, "tokens": 37375, "errors": 0}, "expectations": [{"text": "No questions ask about future hypothetical behavior", "passed": false, "evidence": "Q5 asks 'How confident are you that the paid plan will deliver the value you expected?' - this is a future-oriented confidence question about expected outcomes, not past behavior"}, {"text": "No questions mention or pitch the user's specific product/solution idea", "passed": true, "evidence": "Questions focus on upgrade decision and limitations encountered. While the survey is about the product, it's framed as discovery of what motivated users, not pitching features"}, {"text": "All questions use neutral, non-leading language", "passed": true, "evidence": "Multiple choice options are neutrally framed without leading language. Questions are straightforward about features and limitations"}, {"text": "Survey includes an introduction section for the respondent", "passed": true, "evidence": "Introduction (line 5): 'Thank you for upgrading to our paid plan! We'd like to understand what motivated your decision'"}, {"text": "Survey includes a closing section with an open-ended catch-all question", "passed": false, "evidence": "Survey ends abruptly with 'Thank you for your feedback!' after Q6. No open-ended catch-all question asking if there's anything else to share"}, {"text": "Questions focus on past behavior and specific experiences", "passed": true, "evidence": "Most questions focus on past: Q1 'What specific feature...was most important' (past decision), Q2 'biggest limitation you experienced' (past), Q3 'How long were you using' (past), Q4 'Which team member initiated' (past)"}, {"text": "Survey includes insight targets or notes explaining why each question matters", "passed": false, "evidence": "No insight targets or explanatory notes for any of the 6 questions. Survey is bare multiple choice format without context on why each question is asked"}, {"text": "Survey is formatted as a complete, ready-to-use document", "passed": true, "evidence": "Survey has introduction, 6 questions, closing. However, it's minimal compared to Eval 5 with_skill - no section headers, no interview notes, no follow-up prompts"}, {"text": "Survey contains exactly 6 core questions (not counting intro/closing)", "passed": true, "evidence": "Questions: Q1 (feature importance), Q2 (limitation), Q3 (usage duration), Q4 (team member), Q5 (confidence), Q6 (recommendation) = exactly 6"}]}], "run_summary": {"with_skill": {"pass_rate": {"mean": 100.0, "stddev": 0.0}, "time_seconds": {"mean": 30.4227, "stddev": 5.0995}, "tokens": {"mean": 43712.0, "stddev": 449.33}}, "without_skill": {"pass_rate": {"mean": 77.78, "stddev": 15.71}, "time_seconds": {"mean": 17.542, "stddev": 7.521}, "tokens": {"mean": 38295.5, "stddev": 848.41}}, "delta": {"pass_rate": "+22.22 percentage points (with_skill performs better)", "time_seconds": "+12.88 seconds (with_skill takes longer, more comprehensive)", "tokens": "+5416.5 tokens (with_skill uses more context for higher quality)"}}, "notes": ["Eval 1 with_skill (generation mode): Perfect score on all 8 assertions. Generated comprehensive, well-structured survey with clear insight targets, sections, and interviewer notes. Strong baseline for comparison.", "Eval 4 with_skill (coaching mode): Perfect score on all 8 audit assertions. Provides detailed per-question verdicts with specific rewrite suggestions, correctly identifies all key issues (leading language, hypotheticals, conflation), and includes missing coverage analysis.", "Eval 4 without_skill: Perfect score despite different structure. Without the skill, still provided excellent coaching feedback using executive summary/critical issues format. Slightly faster (25.5s vs 37s) but equally thorough.", "Eval 5 with_skill (constrained 6 questions): Perfect 9/9 on all assertions. Generated clean, focused survey respecting the 6-question constraint while maintaining quality. Clear progression from trigger to satisfaction with proper insight targets.", "Eval 5 without_skill: Only 55.56% pass rate (5/9). Failed to include: (1) open-ended closing question with catch-all, (2) insight targets explaining question purpose, (3) hypothetical future confidence question (Q5). Minimal formatting with bare multiple-choice, no interview notes. Significantly lower quality output.", "Key insight: With-skill mode substantially outperforms without-skill on Eval 5 (100% vs 55.56%), suggesting the skill provides important scaffolding for survey generation. Both modes perform well on coaching audits (100% each).", "Token efficiency: Without-skill uses 7% fewer tokens on average but produces lower quality. With-skill's additional context investment yields better outcomes.", "Speed trade-off: Without-skill is faster (average 17.5s vs 30.4s for with_skill) but at cost of quality. Eval 5 without_skill was notably fast (9.5s) but missed critical elements."]}};
+
+    // ---- State ----
+    let feedbackMap = {};  // run_id -> feedback text
+    let currentIndex = 0;
+    let visitedRuns = new Set();
+
+    // ---- Init ----
+    async function init() {
+      // Load saved feedback from server — but only if this isn't a fresh
+      // iteration (indicated by previous_feedback being present). When
+      // previous feedback exists, the feedback.json on disk is stale from
+      // the prior iteration and should not pre-fill the textareas.
+      const hasPrevious = Object.keys(EMBEDDED_DATA.previous_feedback || {}).length > 0
+        || Object.keys(EMBEDDED_DATA.previous_outputs || {}).length > 0;
+      if (!hasPrevious) {
+        try {
+          const resp = await fetch("/api/feedback");
+          const data = await resp.json();
+          if (data.reviews) {
+            for (const r of data.reviews) feedbackMap[r.run_id] = r.feedback;
+          }
+        } catch { /* first run, no feedback yet */ }
+      }
+
+      document.getElementById("skill-name").textContent = EMBEDDED_DATA.skill_name;
+      showRun(0);
+
+      // Wire up feedback auto-save
+      const textarea = document.getElementById("feedback");
+      let saveTimeout = null;
+      textarea.addEventListener("input", () => {
+        clearTimeout(saveTimeout);
+        document.getElementById("feedback-status").textContent = "";
+        saveTimeout = setTimeout(() => saveCurrentFeedback(), 800);
+      });
+    }
+
+    // ---- Navigation ----
+    function navigate(delta) {
+      const newIndex = currentIndex + delta;
+      if (newIndex >= 0 && newIndex < EMBEDDED_DATA.runs.length) {
+        saveCurrentFeedback();
+        showRun(newIndex);
+      }
+    }
+
+    function updateNavButtons() {
+      document.getElementById("prev-btn").disabled = currentIndex === 0;
+      document.getElementById("next-btn").disabled =
+        currentIndex === EMBEDDED_DATA.runs.length - 1;
+    }
+
+    // ---- Show a run ----
+    function showRun(index) {
+      currentIndex = index;
+      const run = EMBEDDED_DATA.runs[index];
+
+      // Progress
+      document.getElementById("progress").textContent =
+        `${index + 1} of ${EMBEDDED_DATA.runs.length}`;
+
+      // Prompt
+      document.getElementById("prompt-text").textContent = run.prompt;
+
+      // Config badge
+      const badge = document.getElementById("config-badge");
+      const configMatch = run.id.match(/(with_skill|without_skill|new_skill|old_skill)/);
+      if (configMatch) {
+        const config = configMatch[1];
+        const isBaseline = config === "without_skill" || config === "old_skill";
+        badge.textContent = config.replace(/_/g, " ");
+        badge.className = "config-badge " + (isBaseline ? "config-baseline" : "config-primary");
+        badge.style.display = "inline-block";
+      } else {
+        badge.style.display = "none";
+      }
+
+      // Outputs
+      renderOutputs(run);
+
+      // Previous outputs
+      renderPrevOutputs(run);
+
+      // Grades
+      renderGrades(run);
+
+      // Previous feedback
+      const prevFb = (EMBEDDED_DATA.previous_feedback || {})[run.id];
+      const prevEl = document.getElementById("prev-feedback");
+      if (prevFb) {
+        document.getElementById("prev-feedback-text").textContent = prevFb;
+        prevEl.style.display = "block";
+      } else {
+        prevEl.style.display = "none";
+      }
+
+      // Feedback
+      document.getElementById("feedback").value = feedbackMap[run.id] || "";
+      document.getElementById("feedback-status").textContent = "";
+
+      updateNavButtons();
+
+      // Track visited runs and promote done button when all visited
+      visitedRuns.add(index);
+      const doneBtn = document.getElementById("done-btn");
+      if (visitedRuns.size >= EMBEDDED_DATA.runs.length) {
+        doneBtn.classList.add("ready");
+      }
+
+      // Scroll main content to top
+      document.querySelector(".main").scrollTop = 0;
+    }
+
+    // ---- Render outputs ----
+    function renderOutputs(run) {
+      const container = document.getElementById("outputs-body");
+      container.innerHTML = "";
+
+      const outputs = run.outputs || [];
+      if (outputs.length === 0) {
+        container.innerHTML = '<div class="empty-state">No output files</div>';
+        return;
+      }
+
+      for (const file of outputs) {
+        const fileDiv = document.createElement("div");
+        fileDiv.className = "output-file";
+
+        // Always show file header with download link
+        const header = document.createElement("div");
+        header.className = "output-file-header";
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = file.name;
+        header.appendChild(nameSpan);
+        const dlBtn = document.createElement("a");
+        dlBtn.className = "dl-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.download = file.name;
+        dlBtn.href = getDownloadUri(file);
+        header.appendChild(dlBtn);
+        fileDiv.appendChild(header);
+
+        const content = document.createElement("div");
+        content.className = "output-file-content";
+
+        if (file.type === "text") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          content.appendChild(pre);
+        } else if (file.type === "image") {
+          const img = document.createElement("img");
+          img.src = file.data_uri;
+          img.alt = file.name;
+          content.appendChild(img);
+        } else if (file.type === "pdf") {
+          const iframe = document.createElement("iframe");
+          iframe.src = file.data_uri;
+          content.appendChild(iframe);
+        } else if (file.type === "xlsx") {
+          renderXlsx(content, file.data_b64);
+        } else if (file.type === "binary") {
+          const a = document.createElement("a");
+          a.className = "download-link";
+          a.href = file.data_uri;
+          a.download = file.name;
+          a.textContent = "Download " + file.name;
+          content.appendChild(a);
+        } else if (file.type === "error") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          pre.style.color = "var(--red)";
+          content.appendChild(pre);
+        }
+
+        fileDiv.appendChild(content);
+        container.appendChild(fileDiv);
+      }
+    }
+
+    // ---- XLSX rendering via SheetJS ----
+    function renderXlsx(container, b64Data) {
+      try {
+        const raw = Uint8Array.from(atob(b64Data), c => c.charCodeAt(0));
+        const wb = XLSX.read(raw, { type: "array" });
+
+        for (let i = 0; i < wb.SheetNames.length; i++) {
+          const sheetName = wb.SheetNames[i];
+          const ws = wb.Sheets[sheetName];
+
+          if (wb.SheetNames.length > 1) {
+            const sheetLabel = document.createElement("div");
+            sheetLabel.style.cssText =
+              "font-weight:600; font-size:0.8rem; color:#b0aea5; margin-top:0.5rem; margin-bottom:0.25rem;";
+            sheetLabel.textContent = "Sheet: " + sheetName;
+            container.appendChild(sheetLabel);
+          }
+
+          const htmlStr = XLSX.utils.sheet_to_html(ws, { editable: false });
+          const wrapper = document.createElement("div");
+          wrapper.innerHTML = htmlStr;
+          container.appendChild(wrapper);
+        }
+      } catch (err) {
+        container.textContent = "Error rendering spreadsheet: " + err.message;
+      }
+    }
+
+    // ---- Grades ----
+    function renderGrades(run) {
+      const section = document.getElementById("grades-section");
+      const content = document.getElementById("grades-content");
+
+      if (!run.grading) {
+        section.style.display = "none";
+        return;
+      }
+
+      const grading = run.grading;
+      section.style.display = "block";
+      // Reset to collapsed
+      content.classList.remove("open");
+      document.getElementById("grades-arrow").classList.remove("open");
+
+      const summary = grading.summary || {};
+      const expectations = grading.expectations || [];
+
+      let html = '<div style="padding: 1rem;">';
+
+      // Summary line
+      const passRate = summary.pass_rate != null
+        ? Math.round(summary.pass_rate * 100) + "%"
+        : "?";
+      const badgeClass = summary.pass_rate >= 0.8 ? "grade-pass" : summary.pass_rate >= 0.5 ? "" : "grade-fail";
+      html += '<div class="grades-summary">';
+      html += '<span class="grade-badge ' + badgeClass + '">' + passRate + '</span>';
+      html += '<span>' + (summary.passed || 0) + ' passed, ' + (summary.failed || 0) + ' failed of ' + (summary.total || 0) + '</span>';
+      html += '</div>';
+
+      // Assertions list
+      html += '<ul class="assertion-list">';
+      for (const exp of expectations) {
+        const statusClass = exp.passed ? "pass" : "fail";
+        const statusIcon = exp.passed ? "\u2713" : "\u2717";
+        html += '<li class="assertion-item">';
+        html += '<span class="assertion-status ' + statusClass + '">' + statusIcon + '</span>';
+        html += '<span>' + escapeHtml(exp.text) + '</span>';
+        if (exp.evidence) {
+          html += '<div class="assertion-evidence">' + escapeHtml(exp.evidence) + '</div>';
+        }
+        html += '</li>';
+      }
+      html += '</ul>';
+
+      html += '</div>';
+      content.innerHTML = html;
+    }
+
+    function toggleGrades() {
+      const content = document.getElementById("grades-content");
+      const arrow = document.getElementById("grades-arrow");
+      content.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // ---- Previous outputs (collapsible) ----
+    function renderPrevOutputs(run) {
+      const section = document.getElementById("prev-outputs-section");
+      const content = document.getElementById("prev-outputs-content");
+      const prevOutputs = (EMBEDDED_DATA.previous_outputs || {})[run.id];
+
+      if (!prevOutputs || prevOutputs.length === 0) {
+        section.style.display = "none";
+        return;
+      }
+
+      section.style.display = "block";
+      // Reset to collapsed
+      content.classList.remove("open");
+      document.getElementById("prev-outputs-arrow").classList.remove("open");
+
+      // Render the files into the content area
+      content.innerHTML = "";
+      const wrapper = document.createElement("div");
+      wrapper.style.padding = "1rem";
+
+      for (const file of prevOutputs) {
+        const fileDiv = document.createElement("div");
+        fileDiv.className = "output-file";
+
+        const header = document.createElement("div");
+        header.className = "output-file-header";
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = file.name;
+        header.appendChild(nameSpan);
+        const dlBtn = document.createElement("a");
+        dlBtn.className = "dl-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.download = file.name;
+        dlBtn.href = getDownloadUri(file);
+        header.appendChild(dlBtn);
+        fileDiv.appendChild(header);
+
+        const fc = document.createElement("div");
+        fc.className = "output-file-content";
+
+        if (file.type === "text") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          fc.appendChild(pre);
+        } else if (file.type === "image") {
+          const img = document.createElement("img");
+          img.src = file.data_uri;
+          img.alt = file.name;
+          fc.appendChild(img);
+        } else if (file.type === "pdf") {
+          const iframe = document.createElement("iframe");
+          iframe.src = file.data_uri;
+          fc.appendChild(iframe);
+        } else if (file.type === "xlsx") {
+          renderXlsx(fc, file.data_b64);
+        } else if (file.type === "binary") {
+          const a = document.createElement("a");
+          a.className = "download-link";
+          a.href = file.data_uri;
+          a.download = file.name;
+          a.textContent = "Download " + file.name;
+          fc.appendChild(a);
+        }
+
+        fileDiv.appendChild(fc);
+        wrapper.appendChild(fileDiv);
+      }
+
+      content.appendChild(wrapper);
+    }
+
+    function togglePrevOutputs() {
+      const content = document.getElementById("prev-outputs-content");
+      const arrow = document.getElementById("prev-outputs-arrow");
+      content.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // ---- Feedback (saved to server -> feedback.json) ----
+    function saveCurrentFeedback() {
+      const run = EMBEDDED_DATA.runs[currentIndex];
+      const text = document.getElementById("feedback").value;
+
+      if (text.trim() === "") {
+        delete feedbackMap[run.id];
+      } else {
+        feedbackMap[run.id] = text;
+      }
+
+      // Build reviews array from map
+      const reviews = [];
+      for (const [run_id, feedback] of Object.entries(feedbackMap)) {
+        if (feedback.trim()) {
+          reviews.push({ run_id, feedback, timestamp: new Date().toISOString() });
+        }
+      }
+
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ reviews, status: "in_progress" }),
+      }).then(() => {
+        document.getElementById("feedback-status").textContent = "Saved";
+      }).catch(() => {
+        // Static mode or server unavailable — no-op on auto-save,
+        // feedback will be downloaded on final submit
+        document.getElementById("feedback-status").textContent = "Will download on submit";
+      });
+    }
+
+    // ---- Done ----
+    function showDoneDialog() {
+      // Save current textarea to feedbackMap (but don't POST yet)
+      const run = EMBEDDED_DATA.runs[currentIndex];
+      const text = document.getElementById("feedback").value;
+      if (text.trim() === "") {
+        delete feedbackMap[run.id];
+      } else {
+        feedbackMap[run.id] = text;
+      }
+
+      // POST once with status: complete — include ALL runs so the model
+      // can distinguish "no feedback" (looks good) from "not reviewed"
+      const reviews = [];
+      const ts = new Date().toISOString();
+      for (const r of EMBEDDED_DATA.runs) {
+        reviews.push({ run_id: r.id, feedback: feedbackMap[r.id] || "", timestamp: ts });
+      }
+      const payload = JSON.stringify({ reviews, status: "complete" }, null, 2);
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: payload,
+      }).then(() => {
+        document.getElementById("done-overlay").classList.add("visible");
+      }).catch(() => {
+        // Server not available (static mode) — download as file
+        const blob = new Blob([payload], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "feedback.json";
+        a.click();
+        URL.revokeObjectURL(url);
+        document.getElementById("done-overlay").classList.add("visible");
+      });
+    }
+
+    function closeDoneDialog() {
+      // Reset status back to in_progress
+      saveCurrentFeedback();
+      document.getElementById("done-overlay").classList.remove("visible");
+    }
+
+    // ---- Toast ----
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("visible");
+      setTimeout(() => toast.classList.remove("visible"), 2000);
+    }
+
+    // ---- Keyboard nav ----
+    document.addEventListener("keydown", (e) => {
+      // Don't capture when typing in textarea
+      if (e.target.tagName === "TEXTAREA") return;
+
+      if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        e.preventDefault();
+        navigate(-1);
+      } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        e.preventDefault();
+        navigate(1);
+      }
+    });
+
+    // ---- Util ----
+    function getDownloadUri(file) {
+      if (file.data_uri) return file.data_uri;
+      if (file.data_b64) return "data:application/octet-stream;base64," + file.data_b64;
+      if (file.type === "text") return "data:text/plain;charset=utf-8," + encodeURIComponent(file.content);
+      return "#";
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement("div");
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // ---- View switching ----
+    function switchView(view) {
+      document.querySelectorAll(".view-tab").forEach(t => t.classList.remove("active"));
+      document.querySelectorAll(".view-panel").forEach(p => p.classList.remove("active"));
+      document.querySelector(`[onclick="switchView('${view}')"]`).classList.add("active");
+      document.getElementById("panel-" + view).classList.add("active");
+    }
+
+    // ---- Benchmark rendering ----
+    function renderBenchmark() {
+      const data = EMBEDDED_DATA.benchmark;
+      if (!data) return;
+
+      // Show the tabs
+      document.getElementById("view-tabs").style.display = "flex";
+
+      const container = document.getElementById("benchmark-content");
+      const summary = data.run_summary || {};
+      const metadata = data.metadata || {};
+      const notes = data.notes || [];
+
+      let html = "";
+
+      // Header
+      html += "<h2 style='font-family: Poppins, sans-serif; margin-bottom: 0.5rem;'>Benchmark Results</h2>";
+      html += "<p style='color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.25rem;'>";
+      if (metadata.skill_name) html += "<strong>" + escapeHtml(metadata.skill_name) + "</strong> &mdash; ";
+      if (metadata.timestamp) html += metadata.timestamp + " &mdash; ";
+      if (metadata.evals_run) html += "Evals: " + metadata.evals_run.join(", ") + " &mdash; ";
+      html += (metadata.runs_per_configuration || "?") + " runs per configuration";
+      html += "</p>";
+
+      // Summary table
+      html += '<table class="benchmark-table">';
+
+      function fmtStat(stat, pct) {
+        if (!stat) return "—";
+        const suffix = pct ? "%" : "";
+        const m = pct ? (stat.mean * 100).toFixed(0) : stat.mean.toFixed(1);
+        const s = pct ? (stat.stddev * 100).toFixed(0) : stat.stddev.toFixed(1);
+        return m + suffix + " ± " + s + suffix;
+      }
+
+      function deltaClass(val) {
+        if (!val) return "";
+        const n = parseFloat(val);
+        if (n > 0) return "benchmark-delta-positive";
+        if (n < 0) return "benchmark-delta-negative";
+        return "";
+      }
+
+      // Discover config names dynamically (everything except "delta")
+      const configs = Object.keys(summary).filter(k => k !== "delta");
+      const configA = configs[0] || "config_a";
+      const configB = configs[1] || "config_b";
+      const labelA = configA.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const labelB = configB.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const a = summary[configA] || {};
+      const b = summary[configB] || {};
+      const delta = summary.delta || {};
+
+      html += "<thead><tr><th>Metric</th><th>" + escapeHtml(labelA) + "</th><th>" + escapeHtml(labelB) + "</th><th>Delta</th></tr></thead>";
+      html += "<tbody>";
+
+      html += "<tr><td><strong>Pass Rate</strong></td>";
+      html += "<td>" + fmtStat(a.pass_rate, true) + "</td>";
+      html += "<td>" + fmtStat(b.pass_rate, true) + "</td>";
+      html += '<td class="' + deltaClass(delta.pass_rate) + '">' + (delta.pass_rate || "—") + "</td></tr>";
+
+      // Time (only show row if data exists)
+      if (a.time_seconds || b.time_seconds) {
+        html += "<tr><td><strong>Time (s)</strong></td>";
+        html += "<td>" + fmtStat(a.time_seconds, false) + "</td>";
+        html += "<td>" + fmtStat(b.time_seconds, false) + "</td>";
+        html += '<td class="' + deltaClass(delta.time_seconds) + '">' + (delta.time_seconds ? delta.time_seconds + "s" : "—") + "</td></tr>";
+      }
+
+      // Tokens (only show row if data exists)
+      if (a.tokens || b.tokens) {
+        html += "<tr><td><strong>Tokens</strong></td>";
+        html += "<td>" + fmtStat(a.tokens, false) + "</td>";
+        html += "<td>" + fmtStat(b.tokens, false) + "</td>";
+        html += '<td class="' + deltaClass(delta.tokens) + '">' + (delta.tokens || "—") + "</td></tr>";
+      }
+
+      html += "</tbody></table>";
+
+      // Per-eval breakdown (if runs data available)
+      const runs = data.runs || [];
+      if (runs.length > 0) {
+        const evalIds = [...new Set(runs.map(r => r.eval_id))].sort((a, b) => a - b);
+
+        html += "<h3 style='font-family: Poppins, sans-serif; margin-bottom: 0.75rem;'>Per-Eval Breakdown</h3>";
+
+        const hasTime = runs.some(r => r.result && r.result.time_seconds != null);
+        const hasErrors = runs.some(r => r.result && r.result.errors > 0);
+
+        for (const evalId of evalIds) {
+          const evalRuns = runs.filter(r => r.eval_id === evalId);
+          const evalName = evalRuns[0] && evalRuns[0].eval_name ? evalRuns[0].eval_name : "Eval " + evalId;
+
+          html += "<h4 style='font-family: Poppins, sans-serif; margin: 1rem 0 0.5rem; color: var(--text);'>" + escapeHtml(evalName) + "</h4>";
+          html += '<table class="benchmark-table">';
+          html += "<thead><tr><th>Config</th><th>Run</th><th>Pass Rate</th>";
+          if (hasTime) html += "<th>Time (s)</th>";
+          if (hasErrors) html += "<th>Crashes During Execution</th>";
+          html += "</tr></thead>";
+          html += "<tbody>";
+
+          // Group by config and render with average rows
+          const configGroups = [...new Set(evalRuns.map(r => r.configuration))];
+          for (let ci = 0; ci < configGroups.length; ci++) {
+            const config = configGroups[ci];
+            const configRuns = evalRuns.filter(r => r.configuration === config);
+            if (configRuns.length === 0) continue;
+
+            const rowClass = ci === 0 ? "benchmark-row-with" : "benchmark-row-without";
+            const configLabel = config.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+
+            for (const run of configRuns) {
+              const r = run.result || {};
+              const prClass = r.pass_rate >= 0.8 ? "benchmark-delta-positive" : r.pass_rate < 0.5 ? "benchmark-delta-negative" : "";
+              html += '<tr class="' + rowClass + '">';
+              html += "<td>" + configLabel + "</td>";
+              html += "<td>" + run.run_number + "</td>";
+              html += '<td class="' + prClass + '">' + ((r.pass_rate || 0) * 100).toFixed(0) + "% (" + (r.passed || 0) + "/" + (r.total || 0) + ")</td>";
+              if (hasTime) html += "<td>" + (r.time_seconds != null ? r.time_seconds.toFixed(1) : "—") + "</td>";
+              if (hasErrors) html += "<td>" + (r.errors || 0) + "</td>";
+              html += "</tr>";
+            }
+
+            // Average row
+            const rates = configRuns.map(r => (r.result || {}).pass_rate || 0);
+            const avgRate = rates.reduce((a, b) => a + b, 0) / rates.length;
+            const avgPrClass = avgRate >= 0.8 ? "benchmark-delta-positive" : avgRate < 0.5 ? "benchmark-delta-negative" : "";
+            html += '<tr class="benchmark-row-avg ' + rowClass + '">';
+            html += "<td>" + configLabel + "</td>";
+            html += "<td>Avg</td>";
+            html += '<td class="' + avgPrClass + '">' + (avgRate * 100).toFixed(0) + "%</td>";
+            if (hasTime) {
+              const times = configRuns.map(r => (r.result || {}).time_seconds).filter(t => t != null);
+              html += "<td>" + (times.length ? (times.reduce((a, b) => a + b, 0) / times.length).toFixed(1) : "—") + "</td>";
+            }
+            if (hasErrors) html += "<td></td>";
+            html += "</tr>";
+          }
+          html += "</tbody></table>";
+
+          // Per-assertion detail for this eval
+          const runsWithExpectations = {};
+          for (const config of configGroups) {
+            runsWithExpectations[config] = evalRuns.filter(r => r.configuration === config && r.expectations && r.expectations.length > 0);
+          }
+          const hasAnyExpectations = Object.values(runsWithExpectations).some(runs => runs.length > 0);
+          if (hasAnyExpectations) {
+            // Collect all unique assertion texts across all configs
+            const allAssertions = [];
+            const seen = new Set();
+            for (const config of configGroups) {
+              for (const run of runsWithExpectations[config]) {
+                for (const exp of (run.expectations || [])) {
+                  if (!seen.has(exp.text)) {
+                    seen.add(exp.text);
+                    allAssertions.push(exp.text);
+                  }
+                }
+              }
+            }
+
+            html += '<table class="benchmark-table" style="margin-top: 0.5rem;">';
+            html += "<thead><tr><th>Assertion</th>";
+            for (const config of configGroups) {
+              const label = config.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+              html += "<th>" + escapeHtml(label) + "</th>";
+            }
+            html += "</tr></thead><tbody>";
+
+            for (const assertionText of allAssertions) {
+              html += "<tr><td>" + escapeHtml(assertionText) + "</td>";
+
+              for (const config of configGroups) {
+                html += "<td>";
+                for (const run of runsWithExpectations[config]) {
+                  const exp = (run.expectations || []).find(e => e.text === assertionText);
+                  if (exp) {
+                    const cls = exp.passed ? "benchmark-delta-positive" : "benchmark-delta-negative";
+                    const icon = exp.passed ? "\u2713" : "\u2717";
+                    html += '<span class="' + cls + '" title="Run ' + run.run_number + ': ' + escapeHtml(exp.evidence || "") + '">' + icon + "</span> ";
+                  } else {
+                    html += "— ";
+                  }
+                }
+                html += "</td>";
+              }
+              html += "</tr>";
+            }
+            html += "</tbody></table>";
+          }
+        }
+      }
+
+      // Notes
+      if (notes.length > 0) {
+        html += '<div class="benchmark-notes">';
+        html += "<h3>Analysis Notes</h3>";
+        html += "<ul>";
+        for (const note of notes) {
+          html += "<li>" + escapeHtml(note) + "</li>";
+        }
+        html += "</ul></div>";
+      }
+
+      container.innerHTML = html;
+    }
+
+    // ---- Start ----
+    init();
+    renderBenchmark();
+  </script>
+</body>
+</html>

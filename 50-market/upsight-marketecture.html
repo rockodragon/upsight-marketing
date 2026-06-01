@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UpSight — Customer Intelligence Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #02020a;
+      font-family: 'Inter', system-ui, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 32px 24px;
+      user-select: none;
+    }
+
+    /* ── SLIDE ── */
+    .slide {
+      width: 1280px;
+      background: #080810;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.07);
+      box-shadow: 0 40px 120px rgba(0,0,0,0.65);
+      position: relative;
+      cursor: pointer;
+    }
+    .slide::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.024) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none; z-index: 0;
+    }
+    .slide > * { position: relative; z-index: 1; }
+
+    /* ── HEADER ── */
+    .header {
+      text-align: center;
+      padding: 36px 52px 28px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .header-brand {
+      display: flex; align-items: center; justify-content: center;
+      gap: 14px; margin-bottom: 10px;
+    }
+    .brand-mark {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: linear-gradient(145deg, rgba(2,132,199,0.25), rgba(56,189,248,0.12));
+      border: 1px solid rgba(56,189,248,0.3);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .brand-mark svg { width: 23px; height: 23px; stroke: #38bdf8; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .header-title { font-size: 30px; font-weight: 800; color: #f0f0f5; letter-spacing: -0.03em; }
+    .header-title em { font-style: normal; color: #f59e0b; }
+    .header-sub { font-size: 14px; color: rgba(240,240,245,0.5); font-weight: 400; }
+
+    /* ── FLOW BAR ── */
+    .flow-bar {
+      display: flex; align-items: center; justify-content: center;
+      padding: 26px 52px 22px;
+    }
+    .flow-node { display: flex; align-items: center; gap: 10px; flex: 1; justify-content: center; }
+    .fn-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+      padding: 4px 10px; border-radius: 6px; flex-shrink: 0;
+      transition: background 0.35s, border-color 0.35s, color 0.35s;
+    }
+    .fn-label { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; transition: color 0.35s; }
+
+    /* Dimmed default */
+    .fn-capture .fn-num    { background: rgba(56,189,248,0.06);  color: rgba(56,189,248,0.4);  border: 1px solid rgba(56,189,248,0.1);  }
+    .fn-capture .fn-label  { color: rgba(56,189,248,0.4); }
+    .fn-understand .fn-num   { background: rgba(165,180,252,0.06); color: rgba(165,180,252,0.4); border: 1px solid rgba(165,180,252,0.1); }
+    .fn-understand .fn-label { color: rgba(165,180,252,0.4); }
+    .fn-act .fn-num    { background: rgba(245,158,11,0.06);  color: rgba(245,158,11,0.4);  border: 1px solid rgba(245,158,11,0.1);  }
+    .fn-act .fn-label  { color: rgba(245,158,11,0.4); }
+
+    /* Active when its step or beyond */
+    [data-step="1"] .fn-capture .fn-num, [data-step="2"] .fn-capture .fn-num,
+    [data-step="3"] .fn-capture .fn-num, [data-step="4"] .fn-capture .fn-num
+      { background: rgba(56,189,248,0.12); color: #38bdf8; border-color: rgba(56,189,248,0.22); }
+    [data-step="1"] .fn-capture .fn-label, [data-step="2"] .fn-capture .fn-label,
+    [data-step="3"] .fn-capture .fn-label, [data-step="4"] .fn-capture .fn-label
+      { color: #38bdf8; }
+
+    [data-step="2"] .fn-understand .fn-num, [data-step="3"] .fn-understand .fn-num,
+    [data-step="4"] .fn-understand .fn-num
+      { background: rgba(165,180,252,0.12); color: #a5b4fc; border-color: rgba(165,180,252,0.22); }
+    [data-step="2"] .fn-understand .fn-label, [data-step="3"] .fn-understand .fn-label,
+    [data-step="4"] .fn-understand .fn-label
+      { color: #a5b4fc; }
+
+    [data-step="3"] .fn-act .fn-num, [data-step="4"] .fn-act .fn-num
+      { background: rgba(245,158,11,0.12); color: #f59e0b; border-color: rgba(245,158,11,0.22); }
+    [data-step="3"] .fn-act .fn-label, [data-step="4"] .fn-act .fn-label
+      { color: #f59e0b; }
+
+    .flow-arrow { flex-shrink: 0; margin: 0 4px; opacity: 0.2; }
+
+    /* ── STAGES GRID ── */
+    .stages {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 18px;
+      padding: 0 52px 24px;
+      align-items: start;
+    }
+
+    .stage { display: flex; flex-direction: column; }
+
+    /* Tagline — centered, hidden until stage revealed */
+    .stage-tagline {
+      font-size: 12px;
+      color: rgba(240,240,245,0.45);
+      font-weight: 400;
+      margin-bottom: 12px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    /* Card — hidden until stage revealed */
+    .card {
+      border-radius: 14px;
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+    }
+
+    .s1 .card { background: rgba(56,189,248,0.04);  border: 1px solid rgba(56,189,248,0.18);  }
+    .s2 .card { background: rgba(165,180,252,0.04); border: 1px solid rgba(165,180,252,0.16); }
+    .s3 .card { background: rgba(245,158,11,0.04);  border: 1px solid rgba(245,158,11,0.16);  }
+
+    /* Reveal entire stage (tagline + card) per step */
+    [data-step="1"] .s1 .stage-tagline, [data-step="2"] .s1 .stage-tagline,
+    [data-step="3"] .s1 .stage-tagline, [data-step="4"] .s1 .stage-tagline,
+    [data-step="1"] .s1 .card, [data-step="2"] .s1 .card,
+    [data-step="3"] .s1 .card, [data-step="4"] .s1 .card
+      { opacity: 1; transform: translateY(0); }
+
+    [data-step="2"] .s2 .stage-tagline, [data-step="3"] .s2 .stage-tagline,
+    [data-step="4"] .s2 .stage-tagline,
+    [data-step="2"] .s2 .card, [data-step="3"] .s2 .card, [data-step="4"] .s2 .card
+      { opacity: 1; transform: translateY(0); }
+
+    [data-step="3"] .s3 .stage-tagline, [data-step="4"] .s3 .stage-tagline,
+    [data-step="3"] .s3 .card, [data-step="4"] .s3 .card
+      { opacity: 1; transform: translateY(0); }
+
+    .card-divider { height: 1px; margin: 14px 0; }
+    .s1 .card-divider { background: rgba(56,189,248,0.14); }
+    .s2 .card-divider { background: rgba(165,180,252,0.14); }
+    .s3 .card-divider { background: rgba(245,158,11,0.14); }
+
+    /* ── CAPTURE ── */
+    .channel-list { display: flex; flex-direction: column; gap: 10px; }
+    .channel-row  { display: flex; align-items: center; gap: 12px; }
+    .ch-icon {
+      width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(56,189,248,0.1); border: 1px solid rgba(56,189,248,0.18);
+    }
+    .ch-icon svg { width: 14px; height: 14px; stroke: #38bdf8; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .ch-label { font-size: 14px; font-weight: 600; color: #d8d8e8; }
+
+    .mode-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .mode-chip {
+      border-radius: 100px; padding: 4px 11px;
+      font-size: 11px; font-weight: 600; letter-spacing: 0.03em;
+      background: rgba(56,189,248,0.09); border: 1px solid rgba(56,189,248,0.2); color: rgba(56,189,248,0.9);
+    }
+
+    /* Meeting bot platforms (live recording integrations) */
+    .bot-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+      color: rgba(56,189,248,0.55); margin-bottom: 8px;
+    }
+    .bot-row { display: flex; gap: 6px; flex-wrap: wrap; }
+    .bot-chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      border-radius: 6px; padding: 5px 10px;
+      font-size: 11px; font-weight: 600;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09);
+      color: rgba(220,220,235,0.85);
+    }
+    .bot-chip svg { width: 12px; height: 12px; flex-shrink: 0; }
+
+    /* ── UNDERSTAND ── */
+    .benefit-list { display: flex; flex-direction: column; gap: 13px; }
+    .benefit-row  { display: flex; align-items: center; gap: 12px; }
+    .ben-icon {
+      width: 34px; height: 34px; border-radius: 8px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(165,180,252,0.1); border: 1px solid rgba(165,180,252,0.18);
+    }
+    .ben-icon svg { width: 14px; height: 14px; stroke: #a5b4fc; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .ben-label { font-size: 14px; font-weight: 600; color: #d8d8e8; }
+
+    .lenses-header {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+      color: rgba(165,180,252,0.6); margin-bottom: 8px;
+    }
+    .lenses-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .lens {
+      background: rgba(165,180,252,0.08); border: 1px solid rgba(165,180,252,0.18);
+      border-radius: 7px; padding: 8px 10px;
+      font-size: 12px; font-weight: 600; color: rgba(210,215,255,0.85); text-align: center;
+    }
+
+    /* ── ACT ── */
+    .surface-list { display: flex; flex-direction: column; gap: 8px; }
+    .surface-item {
+      display: flex; align-items: center; gap: 12px;
+      background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.13);
+      border-radius: 9px; padding: 12px 14px;
+    }
+    .surf-icon {
+      width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0;
+      background: rgba(245,158,11,0.13);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .surf-icon svg { width: 14px; height: 14px; stroke: #f59e0b; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .surf-body { flex: 1; min-width: 0; }
+    .surf-name { font-size: 14px; font-weight: 700; color: #e8e8f0; }
+    .icp-badge {
+      display: inline-flex;
+      background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.22);
+      border-radius: 4px; padding: 2px 7px; margin-top: 4px;
+      font-size: 10px; font-weight: 700; color: rgba(16,185,129,0.9); letter-spacing: 0.05em;
+    }
+    .surf-tag {
+      flex-shrink: 0; font-size: 10px; font-weight: 700; letter-spacing: 0.07em;
+      padding: 3px 8px; border-radius: 100px;
+      background: rgba(245,158,11,0.12); color: rgba(245,158,11,0.85);
+    }
+
+    /* ── PLATFORM CORE ── */
+    .foundation-wrap {
+      margin: 0 52px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 20px 0 30px;
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.5s ease 0.08s, transform 0.5s ease 0.08s;
+    }
+    [data-step="4"] .foundation-wrap { opacity: 1; transform: translateY(0); }
+
+    .found-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(240,240,245,0.32); text-align: center; margin-bottom: 14px;
+    }
+    .found-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; }
+    .found-pillar {
+      display: flex; align-items: center; gap: 14px;
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 12px; padding: 16px 20px;
+    }
+    .pillar-ico {
+      width: 38px; height: 38px; border-radius: 9px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .pillar-ico svg { width: 18px; height: 18px; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .p-crm .pillar-ico { background: rgba(245,158,11,0.12); }
+    .p-crm .pillar-ico svg { stroke: #f59e0b; }
+    .p-kb  .pillar-ico { background: rgba(56,189,248,0.12); }
+    .p-kb  .pillar-ico svg { stroke: #38bdf8; }
+    .p-pri .pillar-ico { background: rgba(16,185,129,0.12); }
+    .p-pri .pillar-ico svg { stroke: #10b981; }
+    .p-mcp .pillar-ico { background: rgba(168,85,247,0.12); }
+    .p-mcp .pillar-ico svg { stroke: #a855f7; }
+
+    /* MCP stack: agents connected + pillar */
+    .mcp-stack {
+      display: flex; flex-direction: column;
+      gap: 8px; justify-content: flex-end;
+    }
+    .agents-connected {
+      display: flex; flex-wrap: wrap; gap: 4px;
+      padding-bottom: 2px;
+    }
+    .agent-chip {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 4px 9px;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 10.5px; font-weight: 700; letter-spacing: -0.01em;
+      background: rgba(255,255,255,0.03);
+    }
+    .agent-chip svg { width: 10px; height: 10px; flex-shrink: 0; }
+    .agent-chip.claude    { color: #d4a27f; border: 1px solid rgba(212,162,127,0.32); background: rgba(212,162,127,0.06); }
+    .agent-chip.chatgpt   { color: #10a37f; border: 1px solid rgba(16,163,127,0.32);  background: rgba(16,163,127,0.06); }
+    .agent-chip.openclaw  { color: #f59e0b; border: 1px solid rgba(245,158,11,0.32);  background: rgba(245,158,11,0.06); }
+    .agents-connected-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+      color: rgba(168,85,247,0.55);
+      width: 100%;
+      margin-bottom: 2px;
+    }
+    .pillar-name { font-size: 15px; font-weight: 700; color: #e0e0ea; letter-spacing: -0.01em; }
+    .agents-tag {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.18);
+      border-radius: 4px; padding: 2px 7px; margin-left: 10px;
+      font-size: 10px; font-weight: 700; color: rgba(16,185,129,0.85);
+      letter-spacing: 0.05em; vertical-align: middle;
+    }
+    .agent-dot { width: 6px; height: 6px; border-radius: 50%; background: #10b981; }
+  </style>
+</head>
+<body>
+
+<div class="slide" id="slide" data-step="0" onclick="advance()">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24">
+          <path d="M3 9V5.5A1.5 1.5 0 014.5 4H8"/>
+          <path d="M21 9V5.5A1.5 1.5 0 0019.5 4H16"/>
+          <path d="M3 15v3.5A1.5 1.5 0 004.5 20H8"/>
+          <path d="M21 15v3.5a1.5 1.5 0 01-1.5 1.5H16"/>
+          <path d="M2.5 12c0 0 3.5-5.5 9.5-5.5S21.5 12 21.5 12s-3.5 5.5-9.5 5.5S2.5 12 2.5 12z"/>
+          <circle cx="12" cy="12" r="2.5"/>
+        </svg>
+      </div>
+      <div class="header-title">UpSight &nbsp;·&nbsp; Customer Intelligence <em>Platform</em></div>
+    </div>
+    <div class="header-sub">From any customer conversation to the next best action — automatically</div>
+  </div>
+
+  <!-- FLOW BAR (no decorative line below) -->
+  <div class="flow-bar">
+    <div class="flow-node fn-capture">
+      <span class="fn-num">01</span>
+      <span class="fn-label">Capture</span>
+    </div>
+    <svg class="flow-arrow" width="52" height="18" viewBox="0 0 52 18" fill="none">
+      <path d="M2 9h44" stroke="#eeeef2" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M38 3l8 6-8 6" stroke="#eeeef2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="flow-node fn-understand">
+      <span class="fn-num">02</span>
+      <span class="fn-label">Understand</span>
+    </div>
+    <svg class="flow-arrow" width="52" height="18" viewBox="0 0 52 18" fill="none">
+      <path d="M2 9h44" stroke="#eeeef2" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M38 3l8 6-8 6" stroke="#eeeef2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="flow-node fn-act">
+      <span class="fn-num">03</span>
+      <span class="fn-label">Act</span>
+    </div>
+  </div>
+
+  <!-- STAGES -->
+  <div class="stages">
+
+    <!-- CAPTURE -->
+    <div class="stage s1">
+      <div class="stage-tagline">Every customer touchpoint, ingested and attributed</div>
+      <div class="card">
+        <div class="channel-list">
+          <div class="channel-row">
+            <div class="ch-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div class="ch-label">Sales &amp; Demo Calls</div>
+          </div>
+          <div class="channel-row">
+            <div class="ch-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <div class="ch-label">Customer &amp; Stakeholder Interviews</div>
+          </div>
+          <div class="channel-row">
+            <div class="ch-icon"><svg viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><path d="M9 12h6M9 16h6"/></svg></div>
+            <div class="ch-label">Surveys &amp; Smart Forms</div>
+          </div>
+          <div class="channel-row">
+            <div class="ch-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <div class="ch-label">Notes, Docs &amp; Transcripts</div>
+          </div>
+          <div class="channel-row">
+            <div class="ch-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <div class="ch-label">Events</div>
+          </div>
+        </div>
+        <div class="card-divider"></div>
+        <div class="mode-chips">
+          <div class="mode-chip">Live Recording</div>
+          <div class="mode-chip">AI Voice Agent</div>
+          <div class="mode-chip">Upload</div>
+          <div class="mode-chip">Kiosk</div>
+        </div>
+        <div class="card-divider" style="margin-top:14px;"></div>
+        <div class="bot-label">// Live recording joins</div>
+        <div class="bot-row">
+          <div class="bot-chip">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="13" height="12" rx="2" fill="#2D8CFF"/><path d="M16 10l5-3v10l-5-3z" fill="#2D8CFF"/></svg>
+            Zoom
+          </div>
+          <div class="bot-chip">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="13" height="10" rx="2" fill="#00897B"/><path d="M16 10l5-3v10l-5-3z" fill="#FBBC04"/><circle cx="9.5" cy="12" r="2" fill="#fff"/></svg>
+            Google Meet
+          </div>
+          <div class="bot-chip">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="11" height="16" rx="1.5" fill="#5059C9"/><text x="8.5" y="15.5" font-family="Arial Black, sans-serif" font-size="10" font-weight="900" fill="#fff" text-anchor="middle">T</text><circle cx="18" cy="9" r="3" fill="#7B83EB"/></svg>
+            Microsoft Teams
+          </div>
+          <div class="bot-chip">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#00BCEB"/><path d="M7 12c0-2 1.6-3.2 3-3.2.7 0 1.3.3 2 1 .7-.7 1.3-1 2-1 1.4 0 3 1.2 3 3.2 0 2-1.6 3.2-3 3.2-.7 0-1.3-.3-2-1-.7.7-1.3 1-2 1-1.4 0-3-1.2-3-3.2z" fill="#fff"/></svg>
+            Webex
+          </div>
+          <div class="bot-chip">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#F68D2E"/><text x="12" y="16" font-family="Arial Black, sans-serif" font-size="11" font-weight="900" fill="#fff" text-anchor="middle">G</text></svg>
+            GoTo Meeting
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UNDERSTAND -->
+    <div class="stage s2">
+      <div class="stage-tagline">Surface what your customers are telling you — across every conversation</div>
+      <div class="card">
+        <div class="benefit-list">
+          <div class="benefit-row">
+            <div class="ben-icon"><svg viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></div>
+            <div class="ben-label">Role, company &amp; segment breakdown</div>
+          </div>
+          <div class="benefit-row">
+            <div class="ben-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+            <div class="ben-label">Grounded themes &amp; evidence</div>
+          </div>
+          <div class="benefit-row">
+            <div class="ben-icon"><svg viewBox="0 0 24 24"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 009 9"/></svg></div>
+            <div class="ben-label">Cross-channel pattern detection</div>
+          </div>
+        </div>
+        <div class="card-divider" style="margin-top:16px;"></div>
+        <div class="lenses-header">Configurable Lenses</div>
+        <div class="lenses-wrap">
+          <div class="lens">Sales &amp; BD</div>
+          <div class="lens">Product Discovery</div>
+          <div class="lens">Churn Risk</div>
+          <div class="lens">Consulting / SOW</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACT -->
+    <div class="stage s3">
+      <div class="stage-tagline">Take the next step — automatically, when you want it</div>
+      <div class="card">
+        <div class="surface-list">
+          <div class="surface-item">
+            <div class="surf-icon"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+            <div class="surf-body"><div class="surf-name">In-Call Guidance</div></div>
+          </div>
+          <div class="surface-item">
+            <div class="surf-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div class="surf-body"><div class="surf-name">Follow-Up Drafts</div></div>
+          </div>
+          <div class="surface-item">
+            <div class="surf-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+            <div class="surf-body"><div class="surf-name">Priorities</div></div>
+          </div>
+          <div class="surface-item">
+            <div class="surf-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+            <div class="surf-body"><div class="surf-name">People &amp; Deal Intelligence</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /stages -->
+
+  <!-- PLATFORM CORE -->
+  <div class="foundation-wrap">
+    <div class="found-label">Platform Core</div>
+    <div class="found-grid">
+
+      <div class="found-pillar p-crm">
+        <div class="pillar-ico">
+          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M9 11V7a3 3 0 016 0v4"/><circle cx="9" cy="16" r="1" fill="#f59e0b" stroke="none"/><circle cx="15" cy="16" r="1" fill="#f59e0b" stroke="none"/><path d="M12 3v2"/></svg>
+        </div>
+        <div class="pillar-name">
+          Agentic CRM
+          <span class="agents-tag"><span class="agent-dot"></span>Agents</span>
+        </div>
+      </div>
+
+      <div class="found-pillar p-kb">
+        <div class="pillar-ico">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="pillar-name">Knowledge Base</div>
+      </div>
+
+      <div class="found-pillar p-pri">
+        <div class="pillar-ico">
+          <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <div class="pillar-name">Prioritization Engine</div>
+      </div>
+
+      <div class="mcp-stack">
+        <div class="agents-connected">
+          <div class="agents-connected-label">// Connects with</div>
+          <div class="agent-chip claude">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M5.6 18.4l12.8-12.8"/></svg>
+            Claude
+          </div>
+          <div class="agent-chip chatgpt">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><circle cx="12" cy="12" r="3" fill="currentColor" stroke="none"/></svg>
+            ChatGPT
+          </div>
+          <div class="agent-chip openclaw">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 4c2 6 6 10 14 12M8 4c1 6 4 10 12 11M11 4c1 5 3 8 10 9"/></svg>
+            OpenClaw
+          </div>
+        </div>
+        <div class="found-pillar p-mcp">
+          <div class="pillar-ico">
+            <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.6 7.6l3 8.4M16.4 7.6l-3 8.4M8.5 6h7"/></svg>
+          </div>
+          <div class="pillar-name">Open via MCP</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- /slide -->
+
+<script>
+  const TOTAL = 4;
+  let step = 0;
+
+  function advance() {
+    if (step >= TOTAL) { step = 0; } else { step++; }
+    document.getElementById('slide').dataset.step = step;
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === ' ' || e.key === 'ArrowRight') { e.preventDefault(); if (step < TOTAL) { step++; document.getElementById('slide').dataset.step = step; } }
+    if (e.key === 'ArrowLeft' || e.key === 'Backspace') { if (step > 0) { step--; document.getElementById('slide').dataset.step = step; } }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PREVIEW: What is Customer Discovery? A Practical Guide for 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: #050508;
+    color: #eeeef2;
+    line-height: 1.7;
+    font-size: 17px;
+  }
+
+  /* Preview banner */
+  .preview-banner {
+    position: sticky; top: 0; z-index: 100;
+    background: #f59e0b; color: #050508;
+    padding: 8px 24px; font-size: 13px; font-weight: 600;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .preview-banner a { color: #050508; }
+
+  /* OG image preview */
+  .og-preview {
+    max-width: 800px; margin: 40px auto 0; padding: 0 24px;
+  }
+  .og-preview h3 {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px;
+    color: rgba(238,238,242,0.4); margin-bottom: 12px;
+  }
+  .og-preview svg { width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(238,238,242,0.1); }
+
+  /* Article container */
+  article {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 60px 24px 120px;
+  }
+
+  /* Meta */
+  .meta {
+    display: flex; gap: 16px; margin-bottom: 32px;
+    font-size: 14px; color: rgba(238,238,242,0.5);
+  }
+  .meta-tag {
+    background: rgba(2,132,199,0.15); border: 1px solid rgba(2,132,199,0.3);
+    border-radius: 20px; padding: 4px 14px; font-size: 12px;
+    color: #38bdf8; font-weight: 600; letter-spacing: 0.5px;
+  }
+
+  h1 {
+    font-size: 42px; font-weight: 800; line-height: 1.15;
+    margin-bottom: 24px; letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: 28px; font-weight: 700; line-height: 1.25;
+    margin-top: 56px; margin-bottom: 20px;
+    padding-top: 32px; border-top: 1px solid rgba(238,238,242,0.08);
+  }
+
+  h3 {
+    font-size: 20px; font-weight: 600; line-height: 1.3;
+    margin-top: 36px; margin-bottom: 12px;
+    color: #38bdf8;
+  }
+
+  p { margin-bottom: 18px; color: rgba(238,238,242,0.85); }
+
+  strong { color: #eeeef2; font-weight: 600; }
+
+  em { font-style: italic; color: rgba(238,238,242,0.7); }
+
+  a { color: #38bdf8; text-decoration: none; border-bottom: 1px solid rgba(56,189,248,0.3); }
+  a:hover { border-bottom-color: #38bdf8; }
+
+  ul, ol { margin-bottom: 18px; padding-left: 24px; }
+  li { margin-bottom: 8px; color: rgba(238,238,242,0.85); }
+  li strong { color: #eeeef2; }
+
+  /* Image containers */
+  .image-block {
+    margin: 40px -60px;
+    background: rgba(2,132,199,0.04);
+    border: 1px solid rgba(2,132,199,0.12);
+    border-radius: 16px;
+    padding: 24px;
+    overflow: hidden;
+  }
+  .image-block svg { width: 100%; height: auto; }
+  .image-caption {
+    text-align: center; font-size: 13px;
+    color: rgba(238,238,242,0.4); margin-top: 12px;
+    font-style: italic;
+  }
+  .image-label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px;
+    color: #f59e0b; font-weight: 600; margin-bottom: 12px;
+  }
+
+  @media (max-width: 860px) {
+    .image-block { margin: 32px 0; }
+  }
+
+  /* FAQ section */
+  .faq h3 { color: #eeeef2; }
+  .faq p { font-size: 15px; color: rgba(238,238,242,0.7); }
+
+  /* CTA block */
+  .cta-block {
+    margin: 48px 0;
+    padding: 32px;
+    background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(2,132,199,0.08));
+    border: 1px solid rgba(245,158,11,0.2);
+    border-radius: 16px;
+    text-align: center;
+  }
+  .cta-block p { color: rgba(238,238,242,0.7); }
+  .cta-button {
+    display: inline-block; margin-top: 16px;
+    padding: 14px 32px; background: #f59e0b; color: #050508;
+    border-radius: 10px; font-weight: 700; font-size: 16px;
+    text-decoration: none; border: none;
+  }
+  .cta-button:hover { background: #fbbf24; }
+
+  hr { border: none; border-top: 1px solid rgba(238,238,242,0.08); margin: 48px 0; }
+</style>
+</head>
+<body>
+
+<div class="preview-banner">
+  <span>DRAFT PREVIEW — Blog 01: What is Customer Discovery?</span>
+  <span>Week 1 | SEO target: "customer discovery" | Author: Rick Moy</span>
+</div>
+
+<!-- OG IMAGE PREVIEW -->
+<div class="og-preview">
+  <h3>Social Share / OG Image (1200x630)</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+    <defs><linearGradient id="ogBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#050508"/><stop offset="100%" stop-color="#0a0a10"/></linearGradient></defs>
+    <rect width="1200" height="630" fill="url(#ogBg)"/>
+    <line x1="0" y1="157" x2="1200" y2="157" stroke="rgba(238,238,242,0.04)" stroke-width="1"/>
+    <line x1="0" y1="315" x2="1200" y2="315" stroke="rgba(238,238,242,0.04)" stroke-width="1"/>
+    <line x1="0" y1="473" x2="1200" y2="473" stroke="rgba(238,238,242,0.04)" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="630" stroke="rgba(238,238,242,0.04)" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke="rgba(238,238,242,0.04)" stroke-width="1"/>
+    <line x1="900" y1="0" x2="900" y2="630" stroke="rgba(238,238,242,0.04)" stroke-width="1"/>
+    <rect x="0" y="0" width="1200" height="4" fill="#0284c7"/>
+    <rect x="80" y="120" width="160" height="30" rx="15" fill="rgba(2,132,199,0.15)" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="160" y="140" text-anchor="middle" fill="#38bdf8" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" letter-spacing="1">PRACTICAL GUIDE</text>
+    <text x="80" y="210" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="800">What is Customer</text>
+    <text x="80" y="275" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="800">Discovery?</text>
+    <text x="80" y="330" fill="rgba(238,238,242,0.6)" font-family="Inter, system-ui, sans-serif" font-size="22">Turn conversations into evidence you can defend.</text>
+    <circle cx="100" cy="400" r="6" fill="#f59e0b"/><text x="118" y="406" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="18">5-step framework</text>
+    <circle cx="370" cy="400" r="6" fill="#f59e0b"/><text x="388" y="406" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="18">Common mistakes</text>
+    <circle cx="640" cy="400" r="6" fill="#f59e0b"/><text x="658" y="406" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="18">AI-era tools</text>
+    <rect x="0" y="500" width="1200" height="130" fill="rgba(2,132,199,0.06)"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="rgba(2,132,199,0.2)" stroke-width="1"/>
+    <circle cx="120" cy="565" r="24" fill="#0284c7" fill-opacity="0.3" stroke="#0284c7" stroke-opacity="0.5" stroke-width="1.5"/>
+    <text x="120" y="572" text-anchor="middle" fill="#38bdf8" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="800">U</text>
+    <text x="160" y="560" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700">UpSight</text>
+    <text x="160" y="582" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="13">Get your customers. Build conviction.</text>
+    <text x="1120" y="572" text-anchor="end" fill="rgba(238,238,242,0.4)" font-family="Inter, system-ui, sans-serif" font-size="15">upsight.ai/blog</text>
+  </svg>
+</div>
+
+<article>
+
+<div class="meta">
+  <span class="meta-tag">PRACTICAL GUIDE</span>
+  <span>Rick Moy</span>
+  <span>Week 1 | ~2,200 words | 9 min read</span>
+</div>
+
+<h1>What is Customer Discovery? A Practical Guide for 2026</h1>
+
+<p>Most products don't fail because the team couldn't build them. They fail because the team built something nobody needed badly enough to pay for. Customer discovery is how you avoid that fate.</p>
+
+<p>It sounds obvious. Talk to customers. Understand their problems. Build accordingly. But the gap between "I talked to some customers" and "I have evidence I can defend my roadmap with" is enormous. That gap is where most teams get stuck.</p>
+
+<p>This guide covers the customer discovery process from start to finish — not the theory-class version, but the version that works when you're a founder with 40 other things on fire, a PM at a small team with no dedicated research org, or a consultant trying to give clients advice grounded in reality instead of opinion.</p>
+
+<h2>What is Customer Discovery?</h2>
+
+<p>Customer discovery is the process of systematically talking to potential customers to validate (or invalidate) your assumptions about their problems, behaviors, and willingness to pay. The term comes from Steve Blank's "Four Steps to the Epiphany," where it's the first phase of the customer development model.</p>
+
+<p>The key word there is <em>systematically</em>. Everyone talks to customers. Customer discovery is what happens when you do it with structure, track what you hear, and let the evidence change your mind.</p>
+
+<p>Here's the working definition: <strong>Customer discovery is turning conversations into evidence you can verify, so you can make decisions you can defend.</strong></p>
+
+<p>That means you're not just collecting opinions. You're identifying patterns. You're distinguishing between what people say they want and what their behavior tells you they actually need. And you're building a body of evidence strong enough that when someone on your team asks "why are we building this?" you have receipts — not hunches.</p>
+
+<h2>Why Customer Discovery Still Matters in 2026</h2>
+
+<p>You might think that with better analytics, AI-generated personas, and mountains of behavioral data, sitting down and talking to humans would be less important now. The opposite is true.</p>
+
+<p>Quantitative data tells you <em>what</em> is happening. Customer discovery tells you <em>why</em>. No amount of funnel analysis will explain the specific anxiety that makes someone abandon your checkout flow. No product usage dashboard reveals the workaround your best customers built because your feature almost-but-not-quite solves their problem.</p>
+
+<p>The teams that ship products people actually want are the ones that maintain a direct line to the humans using them. That hasn't changed. What has changed is how you capture, organize, and act on what you hear.</p>
+
+<!-- ========== IMAGE: Before vs After ========== -->
+<div class="image-block">
+  <div class="image-label">How customer intelligence changes your team</div>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+    <defs><linearGradient id="bgG" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#050508"/><stop offset="100%" stop-color="#0a0a10"/></linearGradient></defs>
+    <rect width="1200" height="600" fill="url(#bgG)" rx="16"/>
+    <text x="600" y="50" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="700">Before vs. After Customer Intelligence</text>
+    <line x1="600" y1="80" x2="600" y2="540" stroke="rgba(238,238,242,0.15)" stroke-width="1" stroke-dasharray="6,4"/>
+    <rect x="40" y="80" width="520" height="44" rx="8" fill="rgba(239,68,68,0.12)" stroke="rgba(239,68,68,0.3)" stroke-width="1"/>
+    <text x="300" y="108" text-anchor="middle" fill="#ef4444" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700" letter-spacing="1.5">THE OLD WAY</text>
+    <rect x="640" y="80" width="520" height="44" rx="8" fill="rgba(2,132,199,0.12)" stroke="rgba(2,132,199,0.3)" stroke-width="1"/>
+    <text x="900" y="108" text-anchor="middle" fill="#38bdf8" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700" letter-spacing="1.5">WITH UPSIGHT</text>
+    <text x="60" y="170" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="1">DECISIONS</text>
+    <text x="60" y="196" fill="rgba(238,238,242,0.85)" font-family="Inter, system-ui, sans-serif" font-size="16">"I think customers want..."</text>
+    <text x="660" y="170" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="1">DECISIONS</text>
+    <text x="660" y="196" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600">"Here's exactly what they said."</text>
+    <line x1="60" y1="220" x2="540" y2="220" stroke="rgba(238,238,242,0.08)"/><line x1="660" y1="220" x2="1140" y2="220" stroke="rgba(238,238,242,0.08)"/>
+    <text x="60" y="250" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="1">PROCESS</text>
+    <text x="60" y="276" fill="rgba(238,238,242,0.85)" font-family="Inter, system-ui, sans-serif" font-size="16">Debate what to build</text>
+    <text x="660" y="250" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="1">PROCESS</text>
+    <text x="660" y="276" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600">Decide what to build</text>
+    <line x1="60" y1="300" x2="540" y2="300" stroke="rgba(238,238,242,0.08)"/><line x1="660" y1="300" x2="1140" y2="300" stroke="rgba(238,238,242,0.08)"/>
+    <text x="60" y="330" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="1">RESEARCH</text>
+    <text x="60" y="356" fill="rgba(238,238,242,0.85)" font-family="Inter, system-ui, sans-serif" font-size="16">Research dies in decks</text>
+    <text x="660" y="330" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="1">RESEARCH</text>
+    <text x="660" y="356" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600">Research drives roadmaps</text>
+    <line x1="60" y1="380" x2="540" y2="380" stroke="rgba(238,238,242,0.08)"/><line x1="660" y1="380" x2="1140" y2="380" stroke="rgba(238,238,242,0.08)"/>
+    <text x="60" y="410" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="1">AUTHORITY</text>
+    <text x="60" y="436" fill="rgba(238,238,242,0.85)" font-family="Inter, system-ui, sans-serif" font-size="16">Loudest voice wins</text>
+    <text x="660" y="410" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="1">AUTHORITY</text>
+    <text x="660" y="436" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600">Customer voice wins</text>
+    <line x1="60" y1="460" x2="540" y2="460" stroke="rgba(238,238,242,0.08)"/><line x1="660" y1="460" x2="1140" y2="460" stroke="rgba(238,238,242,0.08)"/>
+    <text x="60" y="490" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="1">TOOLS</text>
+    <text x="60" y="516" fill="rgba(238,238,242,0.85)" font-family="Inter, system-ui, sans-serif" font-size="16">5 tools, zero integration</text>
+    <text x="660" y="490" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="1">TOOLS</text>
+    <text x="660" y="516" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600">One platform, complete picture</text>
+    <text x="600" y="570" text-anchor="middle" fill="rgba(238,238,242,0.4)" font-family="Inter, system-ui, sans-serif" font-size="13">upsight.ai — Get your customers. Build conviction.</text>
+  </svg>
+  <div class="image-caption">The shift from opinion-driven to evidence-driven teams</div>
+</div>
+
+<h2>The Customer Discovery Process: A Step-by-Step Framework</h2>
+
+<!-- ========== IMAGE: 5-Step Framework ========== -->
+<div class="image-block">
+  <div class="image-label">The 5-step framework</div>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+    <defs>
+      <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#050508"/><stop offset="100%" stop-color="#0a0a10"/></linearGradient>
+      <linearGradient id="stepGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0284c7" stop-opacity="0.25"/><stop offset="100%" stop-color="#0284c7" stop-opacity="0.08"/></linearGradient>
+      <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+    <rect width="1200" height="500" fill="url(#bgGrad)" rx="16"/>
+    <text x="600" y="52" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="700" letter-spacing="0.5">The Customer Discovery Process</text>
+    <text x="600" y="78" text-anchor="middle" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="14">From assumptions to evidence-backed decisions</text>
+    <!-- Step 1 -->
+    <rect x="30" y="110" width="200" height="280" rx="12" fill="url(#stepGrad)" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="130" cy="150" r="24" fill="#0284c7" filter="url(#glow)"/><text x="130" y="157" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700">1</text>
+    <text x="130" y="200" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Write Down</text>
+    <text x="130" y="220" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Assumptions</text>
+    <line x1="90" y1="238" x2="170" y2="238" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.6"/>
+    <text x="130" y="265" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Document what</text>
+    <text x="130" y="282" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">you believe about</text>
+    <text x="130" y="299" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">the problem, who</text>
+    <text x="130" y="316" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">has it, and how</text>
+    <text x="130" y="333" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">they solve it today</text>
+    <polygon points="235,244 247,250 235,256" fill="#38bdf8" opacity="0.8"/>
+    <!-- Step 2 -->
+    <rect x="252" y="110" width="200" height="280" rx="12" fill="url(#stepGrad)" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="352" cy="150" r="24" fill="#0284c7" filter="url(#glow)"/><text x="352" y="157" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700">2</text>
+    <text x="352" y="200" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Identify Who</text>
+    <text x="352" y="220" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">to Talk To</text>
+    <line x1="312" y1="238" x2="392" y2="238" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.6"/>
+    <text x="352" y="265" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Active solvers,</text>
+    <text x="352" y="282" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">those who gave up,</text>
+    <text x="352" y="299" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">and adjacent people.</text>
+    <text x="352" y="316" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">12-20 conversations</text>
+    <text x="352" y="333" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">for pattern recognition</text>
+    <polygon points="457,244 469,250 457,256" fill="#38bdf8" opacity="0.8"/>
+    <!-- Step 3 -->
+    <rect x="474" y="110" width="200" height="280" rx="12" fill="url(#stepGrad)" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="574" cy="150" r="24" fill="#0284c7" filter="url(#glow)"/><text x="574" y="157" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700">3</text>
+    <text x="574" y="200" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Conduct</text>
+    <text x="574" y="220" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Interviews</text>
+    <line x1="534" y1="238" x2="614" y2="238" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.6"/>
+    <text x="574" y="265" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Ask about the past.</text>
+    <text x="574" y="282" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Follow the energy.</text>
+    <text x="574" y="299" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Get specific details.</text>
+    <text x="574" y="316" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Listen more than</text>
+    <text x="574" y="333" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">you talk (70/30)</text>
+    <polygon points="679,244 691,250 679,256" fill="#38bdf8" opacity="0.8"/>
+    <!-- Step 4 (highlighted) -->
+    <rect x="696" y="110" width="200" height="280" rx="12" fill="url(#stepGrad)" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="796" cy="150" r="24" fill="#f59e0b" filter="url(#glow)"/><text x="796" y="157" text-anchor="middle" fill="#050508" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700">4</text>
+    <text x="796" y="200" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Capture</text>
+    <text x="796" y="220" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Evidence</text>
+    <line x1="756" y1="238" x2="836" y2="238" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.6"/>
+    <text x="796" y="265" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Record verbatim</text>
+    <text x="796" y="282" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">quotes. Attribute</text>
+    <text x="796" y="299" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">who, when, context.</text>
+    <text x="796" y="316" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Separate evidence</text>
+    <text x="796" y="333" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">from interpretation</text>
+    <polygon points="901,244 913,250 901,256" fill="#38bdf8" opacity="0.8"/>
+    <!-- Step 5 -->
+    <rect x="918" y="110" width="250" height="280" rx="12" fill="url(#stepGrad)" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="1043" cy="150" r="24" fill="#0284c7" filter="url(#glow)"/><text x="1043" y="157" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700">5</text>
+    <text x="1043" y="200" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Synthesize</text>
+    <text x="1043" y="220" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">&amp; Decide</text>
+    <line x1="1003" y1="238" x2="1083" y2="238" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.6"/>
+    <text x="1043" y="265" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Find patterns.</text>
+    <text x="1043" y="282" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Confirm or reject</text>
+    <text x="1043" y="299" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">assumptions.</text>
+    <text x="1043" y="316" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Answer: what to</text>
+    <text x="1043" y="333" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">build, for whom, why</text>
+    <text x="600" y="430" text-anchor="middle" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Step 4 is where most teams fail — and where the right tooling changes everything.</text>
+    <text x="600" y="460" text-anchor="middle" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="13">upsight.ai — Get your customers. Build conviction.</text>
+  </svg>
+  <div class="image-caption">The 5-step customer discovery process. Step 4 (evidence capture) is where most teams break down.</div>
+</div>
+
+<h3>Step 1: Write Down Your Assumptions</h3>
+
+<p>Before you talk to anyone, document what you believe to be true. This is the part most people skip, and it's the part that matters most.</p>
+
+<p>Write down your assumptions about:</p>
+<ul>
+  <li><strong>The problem</strong> you think exists</li>
+  <li><strong>Who has it</strong> (be specific — "small business owners" is too broad; "solo consultants billing under $200K/year who manage their own pipeline" is useful)</li>
+  <li><strong>How they currently solve it</strong> (or work around it)</li>
+  <li><strong>What they'd pay</strong> for a better solution</li>
+  <li><strong>What would make them switch</strong> from their current approach</li>
+</ul>
+
+<p>This isn't busywork. You need a baseline so you can tell whether your conversations confirmed or contradicted your starting point. Without it, every conversation just reinforces what you already believed.</p>
+
+<h3>Step 2: Identify Who to Talk To</h3>
+
+<p>You want people who match your target customer profile closely enough that their experiences are relevant, but you also want some variety. If you only talk to your five friendliest early users, you'll get a skewed picture.</p>
+
+<p>Aim for three categories:</p>
+<ul>
+  <li><strong>People who have the problem and are actively solving it</strong> (even with duct tape)</li>
+  <li><strong>People who have the problem and have given up solving it</strong> (they'll tell you why nothing worked)</li>
+  <li><strong>People adjacent to the problem</strong> (they might reveal angles you haven't considered)</li>
+</ul>
+
+<p>For early-stage discovery, 12 to 20 conversations usually gets you to pattern recognition. You'll know you're there when new conversations start confirming what you've already heard rather than surprising you.</p>
+
+<h3>Step 3: Conduct Interviews That Surface Truth</h3>
+
+<p>The most common failure mode in customer interviews is asking leading questions and getting polite, useless answers. Here are the principles that prevent that:</p>
+
+<p><strong>Ask about the past, not the future.</strong> "Tell me about the last time you dealt with [problem]" beats "Would you use a product that does X?" every time. People are bad at predicting their own behavior. They're much better at describing what actually happened.</p>
+
+<p><strong>Follow the energy.</strong> When someone leans in, gets animated, or starts telling you a long story — that's signal. When they give you a two-word answer and move on, that topic doesn't matter to them no matter how much it matters to you.</p>
+
+<p><strong>Get specific.</strong> "That's frustrating" is a feeling. "I spent six hours last month manually copying data between spreadsheets because nothing integrates" is evidence. Push for the concrete details.</p>
+
+<p><strong>Shut up more.</strong> Your job is to listen, not to pitch. If you're talking more than 30% of the time, you're doing it wrong.</p>
+
+<h3>Step 4: Capture Evidence, Not Just Notes</h3>
+
+<p>This is where the customer discovery process breaks down for most teams. You have a great conversation, scribble some notes, and then two weeks later you can't remember whether it was Sarah or Mike who said the thing about pricing that changed how you think about your model.</p>
+
+<p>What you need is a system for capturing the actual evidence: the specific quotes, the moments that matter, the patterns that emerge across conversations. Not a summary of how the call "went." The actual receipts.</p>
+
+<p>The principle is: separate the raw evidence from your interpretation of it. Your interpretation will shift as you learn more. The evidence stays the same.</p>
+
+<h3>Step 5: Synthesize and Decide</h3>
+
+<p>After 15 or 20 conversations, sit down with everything you've captured and look for patterns. Specifically:</p>
+<ul>
+  <li><strong>Which assumptions were confirmed?</strong> By how many people?</li>
+  <li><strong>Which assumptions were wrong?</strong> What replaced them?</li>
+  <li><strong>What surprised you?</strong> Surprises are usually the most valuable findings.</li>
+  <li><strong>Where do people cluster?</strong> Are there distinct segments with different needs?</li>
+</ul>
+
+<p>The output of this step should be a clear, defensible answer to: "What should we build (or change), for whom, and why?" If you can't answer that with specific evidence from specific conversations, you need more conversations.</p>
+
+<h2>Common Customer Discovery Mistakes</h2>
+
+<h3>Talking to the Wrong People</h3>
+<p>If you're building for CFOs at mid-market companies and you're interviewing startup founders because they're easier to reach, your findings are noise. Convenience sampling is the enemy of useful discovery.</p>
+
+<h3>Treating It as a One-Time Event</h3>
+<p>Customer discovery isn't a phase you complete and move past. It's a practice. The founders and PMs who stay close to their customers over time make better decisions than the ones who did a sprint of interviews eighteen months ago.</p>
+
+<h3>Confirmation Bias</h3>
+<p>You will be tempted to hear what you want to hear. The antidote is evidence. Not "customers liked the concept" but "seven out of fifteen participants described this specific pain point unprompted." Specificity and counting are your defenses against self-deception.</p>
+
+<h3>Not Capturing What Was Actually Said</h3>
+<p>Summaries are lossy. "The customer was frustrated with onboarding" doesn't carry the same weight as the exact quote about what specifically made onboarding frustrating. Without verbatim evidence, you can't go back and reanalyze when your understanding evolves.</p>
+
+<h3>Asking for Feature Requests</h3>
+<p>Customers are experts on their problems. They are not experts on your solution space. "What would you want us to build?" is a trap. "Walk me through the worst part of your week related to <em>your problem area here</em> — e.g., onboarding, hiring, reporting" is discovery.</p>
+
+<h3>Letting Evidence Rot</h3>
+<p>You captured great insights from twenty conversations. Then what? If those insights live in a Google Doc nobody opens, or scattered across Notion pages, you've done the hard work for nothing. Customer intelligence only has value if you can find it, share it, and act on it when decisions come up.</p>
+
+<h2>Customer Discovery Tools and Approaches</h2>
+
+<p>There's no single right toolset. What matters is that your system handles three jobs: capturing conversations, extracting evidence, and making that evidence findable when you need it.</p>
+
+<p><strong>For capturing conversations:</strong> Tools like Otter.ai, Grain, or even a simple voice memo app work. The key is recording (with permission) so you can go back to the source.</p>
+
+<p><strong>For note-taking and synthesis:</strong> Some teams use Notion, Dovetail, or dedicated research repositories. The challenge with general-purpose tools is that they require heavy manual work to tag, organize, and connect evidence across conversations.</p>
+
+<p><strong>For turning conversations into customer intelligence:</strong> This is where purpose-built tools earn their keep. <a href="https://upsight.ai">UpSight</a>, for example, takes recorded conversations and uses AI to extract evidence — specific quotes, pain points, and behavioral patterns — and connects them to themes across your entire body of research. Instead of rereading transcripts, you search across every conversation for evidence related to the decision you're making right now.</p>
+
+<p><strong>For lightweight discovery:</strong> Not every team needs specialized tooling. A spreadsheet with columns for "participant," "quote," "theme," and "assumption validated/invalidated" will outperform no system at all. Start there if you need to.</p>
+
+<h2>How AI is Changing Customer Discovery</h2>
+
+<p>AI is genuinely shifting the economics of customer discovery — not by replacing conversations, but by handling the work that comes after them.</p>
+
+<p>Transcription used to be expensive and slow. Now it's fast and nearly free. Evidence extraction — pulling the meaningful quotes and moments from an hour-long conversation — used to require a researcher spending 45 minutes per interview. AI can do a first pass in seconds.</p>
+
+<p>Pattern recognition across dozens of conversations used to require a dedicated research team. AI-powered tools can surface themes and connections that would take humans days to identify manually.</p>
+
+<p>But here's the thing that hasn't changed: you still need to talk to people. AI can help you process what you hear. It can help you organize and search your evidence. It can even suggest questions you haven't thought to ask. What it cannot do is build the trust and rapport that makes someone tell you what's really going on in their work.</p>
+
+<p>The best use of AI in customer discovery is as an intelligence layer: something that ensures nothing gets lost, everything stays searchable, and patterns surface before you've consciously noticed them. The worst use is as a replacement for showing up and listening.</p>
+
+<h2>Getting Started Today</h2>
+
+<p>If you're not currently doing structured customer discovery, start small:</p>
+<ol>
+  <li><strong>Pick one assumption</strong> about your customers that, if wrong, would change what you build next.</li>
+  <li><strong>Schedule five conversations</strong> this week with people who fit your target profile.</li>
+  <li><strong>Record them</strong> (with permission) and take notes focused on specific quotes and behaviors, not your interpretations.</li>
+  <li><strong>After all five,</strong> review your evidence and ask: did this confirm or challenge my assumption?</li>
+</ol>
+
+<p>That's it. Five conversations with a clear question will teach you more than months of guessing.</p>
+
+<div class="cta-block">
+  <p>Ready to turn conversations into evidence automatically?</p>
+  <p><strong>Upload a conversation and see your first insights in minutes.</strong></p>
+  <a href="https://upsight.ai" class="cta-button">Get Started Free</a>
+  <p style="margin-top: 12px; font-size: 13px; color: rgba(238,238,242,0.4);">No credit card. No onboarding call. No taxonomy setup.</p>
+</div>
+
+<p>The work of customer discovery is irreplaceable. The work of organizing what you learned shouldn't eat your whole week. Build conviction from evidence, not assumptions — and make sure that evidence is still there when you need it.</p>
+
+<hr>
+
+<div class="faq">
+<h2>Frequently Asked Questions</h2>
+
+<h3>What is customer discovery in simple terms?</h3>
+<p>Customer discovery is the process of talking to potential customers to test whether your assumptions about their problems, needs, and willingness to pay are actually true. The goal is to collect verifiable evidence — specific quotes, behaviors, and patterns — that you can use to make product and business decisions you can defend.</p>
+
+<h3>How many customer discovery interviews do I need?</h3>
+<p>For early-stage discovery, 12 to 20 interviews typically gets you to pattern recognition — the point where new conversations confirm what you have already heard rather than surprising you. Five interviews is the minimum to start seeing any signal.</p>
+
+<h3>What is the difference between customer discovery and customer development?</h3>
+<p>Customer discovery is the first phase of Steve Blank's customer development model. Customer development includes four stages: customer discovery (validating the problem), customer validation (validating the solution and business model), customer creation (scaling demand), and company building (scaling the organization).</p>
+
+<h3>What questions should I ask in customer discovery interviews?</h3>
+<p>Focus on past behavior, not future predictions. Strong questions include: "Tell me about the last time you dealt with this problem," "What did you do about it?," "How much time or money did that cost you?," and "What have you tried that didn't work?"</p>
+
+<h3>How is customer discovery different from market research?</h3>
+<p>Market research uses surveys, focus groups, and secondary data to understand broad market trends. Customer discovery uses direct one-on-one conversations to validate specific hypotheses about customer problems and willingness to pay.</p>
+
+<h3>What tools do I need for customer discovery?</h3>
+<p>At minimum, you need a way to record conversations and a system for tracking evidence — who said what, when, and in what context. Purpose-built tools like UpSight automate evidence extraction, theme clustering, and cross-conversation pattern recognition.</p>
+
+<h3>Can AI replace customer discovery interviews?</h3>
+<p>No. AI can dramatically reduce post-interview work — transcription, evidence extraction, and synthesis. But it cannot replace the trust and rapport that makes people share what is really going on. The best approach uses AI as an intelligence layer while you focus on having better conversations.</p>
+</div>
+
+</article>
+
+</body>
+</html>

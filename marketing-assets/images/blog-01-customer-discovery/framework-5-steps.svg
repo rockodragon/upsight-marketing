@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050508"/>
+      <stop offset="100%" stop-color="#0a0a10"/>
+    </linearGradient>
+    <linearGradient id="stepGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="arrowGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="500" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title -->
+  <text x="600" y="52" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="700" letter-spacing="0.5">The Customer Discovery Process</text>
+  <text x="600" y="78" text-anchor="middle" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="14">From assumptions to evidence-backed decisions</text>
+
+  <!-- Step 1 -->
+  <rect x="30" y="110" width="200" height="280" rx="12" fill="url(#stepGrad)" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1"/>
+  <circle cx="130" cy="150" r="24" fill="#0284c7" filter="url(#glow)"/>
+  <text x="130" y="157" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700">1</text>
+  <text x="130" y="200" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Write Down</text>
+  <text x="130" y="220" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Assumptions</text>
+  <line x1="90" y1="238" x2="170" y2="238" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.6"/>
+  <text x="130" y="265" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Document what</text>
+  <text x="130" y="282" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">you believe about</text>
+  <text x="130" y="299" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">the problem, who</text>
+  <text x="130" y="316" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">has it, and how</text>
+  <text x="130" y="333" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">they solve it today</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="235" y1="250" x2="265" y2="250" stroke="url(#arrowGrad)" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <polygon points="265,244 277,250 265,256" fill="#38bdf8" opacity="0.8"/>
+
+  <!-- Step 2 -->
+  <rect x="272" y="110" width="200" height="280" rx="12" fill="url(#stepGrad)" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1"/>
+  <circle cx="372" cy="150" r="24" fill="#0284c7" filter="url(#glow)"/>
+  <text x="372" y="157" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700">2</text>
+  <text x="372" y="200" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Identify Who</text>
+  <text x="372" y="220" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">to Talk To</text>
+  <line x1="332" y1="238" x2="412" y2="238" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.6"/>
+  <text x="372" y="265" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Active solvers,</text>
+  <text x="372" y="282" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">those who gave up,</text>
+  <text x="372" y="299" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">and adjacent people.</text>
+  <text x="372" y="316" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">12-20 conversations</text>
+  <text x="372" y="333" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">for pattern recognition</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="477" y1="250" x2="507" y2="250" stroke="url(#arrowGrad)" stroke-width="2"/>
+  <polygon points="507,244 519,250 507,256" fill="#38bdf8" opacity="0.8"/>
+
+  <!-- Step 3 -->
+  <rect x="514" y="110" width="200" height="280" rx="12" fill="url(#stepGrad)" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1"/>
+  <circle cx="614" cy="150" r="24" fill="#0284c7" filter="url(#glow)"/>
+  <text x="614" y="157" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700">3</text>
+  <text x="614" y="200" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Conduct</text>
+  <text x="614" y="220" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Interviews</text>
+  <line x1="574" y1="238" x2="654" y2="238" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.6"/>
+  <text x="614" y="265" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Ask about the past.</text>
+  <text x="614" y="282" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Follow the energy.</text>
+  <text x="614" y="299" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Get specific details.</text>
+  <text x="614" y="316" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Listen more than</text>
+  <text x="614" y="333" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">you talk (70/30)</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="719" y1="250" x2="749" y2="250" stroke="url(#arrowGrad)" stroke-width="2"/>
+  <polygon points="749,244 761,250 749,256" fill="#38bdf8" opacity="0.8"/>
+
+  <!-- Step 4 -->
+  <rect x="756" y="110" width="200" height="280" rx="12" fill="url(#stepGrad)" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1"/>
+  <circle cx="856" cy="150" r="24" fill="#f59e0b" filter="url(#glow)"/>
+  <text x="856" y="157" text-anchor="middle" fill="#050508" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700">4</text>
+  <text x="856" y="200" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Capture</text>
+  <text x="856" y="220" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Evidence</text>
+  <line x1="816" y1="238" x2="896" y2="238" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.6"/>
+  <text x="856" y="265" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Record verbatim</text>
+  <text x="856" y="282" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">quotes. Attribute</text>
+  <text x="856" y="299" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">who, when, context.</text>
+  <text x="856" y="316" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Separate evidence</text>
+  <text x="856" y="333" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">from interpretation</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="961" y1="250" x2="991" y2="250" stroke="url(#arrowGrad)" stroke-width="2"/>
+  <polygon points="991,244 1003,250 991,256" fill="#38bdf8" opacity="0.8"/>
+
+  <!-- Step 5 -->
+  <rect x="998" y="110" width="172" height="280" rx="12" fill="url(#stepGrad)" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1"/>
+  <circle cx="1084" cy="150" r="24" fill="#0284c7" filter="url(#glow)"/>
+  <text x="1084" y="157" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700">5</text>
+  <text x="1084" y="200" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Synthesize</text>
+  <text x="1084" y="220" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">&amp; Decide</text>
+  <line x1="1044" y1="238" x2="1124" y2="238" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.6"/>
+  <text x="1084" y="265" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Find patterns.</text>
+  <text x="1084" y="282" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Confirm or reject</text>
+  <text x="1084" y="299" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">assumptions.</text>
+  <text x="1084" y="316" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">Answer: what to</text>
+  <text x="1084" y="333" text-anchor="middle" fill="rgba(238,238,242,0.7)" font-family="Inter, system-ui, sans-serif" font-size="12">build, for whom, why</text>
+
+  <!-- Bottom tagline -->
+  <text x="600" y="430" text-anchor="middle" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="15" font-weight="600">Step 4 is where most teams fail — and where the right tooling changes everything.</text>
+  <text x="600" y="460" text-anchor="middle" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="13">getupsight.com — Get your customers. Build conviction.</text>
+</svg>

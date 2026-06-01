@@ -1,0 +1,165 @@
+{
+  "tickers": {
+    "SMN": {
+      "ticker": "SMN",
+      "chart_url": "https://stockcharts.com/c-sc/sc?s=SMN&p=D&yr=0&mn=9&dy=0&id=p25001825160&a=1142502213&r=31",
+      "signals": [],
+      "price_levels": {},
+      "money_wave": null,
+      "action": null
+    },
+    "EWZ": {
+      "ticker": "EWZ",
+      "chart_url": "https://stockcharts.com/c-sc/sc?s=EWZ&p=D&st=2016-01-01&en=2016-10-31&id=p63052034109&a=470651619&r=238",
+      "signals": [],
+      "price_levels": {},
+      "money_wave": null,
+      "action": null
+    },
+    "GDX": {
+      "ticker": "GDX",
+      "chart_url": "https://stockcharts.com/c-sc/sc?s=GDX&id=p0953331979c&p=D&yr=0&mn=6&dy=0&a=1135173920&r=924",
+      "signals": [
+        "Public ChartLists Back to All Public ChartLists First 1 2 3 4 Last 10 Per Page View ChartBook View Above the Green Line - Mar 5, 2026, Buy High, and Sell Higher: Momentum Investing Joanne\u00a0Klein Joanne",
+        "Back to All Public ChartLists First 1 2 3 4 Last 10 Per Page View ChartBook View Above the Green Line - Mar 5, 2026, Buy High, and Sell Higher: Momentum Investing Joanne\u00a0Klein Joanne\u00a0Klein The Green L",
+        "Above the Green Line - Mar 5, 2026, Buy High, and Sell Higher: Momentum Investing Joanne\u00a0Klein Joanne\u00a0Klein The Green Line System can help you make more Money in the Stock Market. Only put your money ",
+        "Joanne\u00a0Klein The Green Line System can help you make more Money in the Stock Market. Only put your money in investments that are Above the Green Line (250-day avg.) Rules are important! \"Real Time\" pr",
+        "Joanne\u00a0Klein The Green Line System can help you make more Money in the Stock Market. Only put your money in investments that are Above the Green Line (250-day avg.) Rules are important! \"Real Time\" pr",
+        "The Top Pick of the Week System results in 2026: 7 Trades = 32% GAIN, while the S&P 500 was up 1%. Latest Weekly Trades: S+8 UBER+.5 ZS -3 URA +4 AVAV -2 SBSW +2 HOOD +4 MSTR +1 ACHR +4 CRDO +4 SOFI +",
+        "02 Sample Chart for Learning the Green Line Rules. Follow the Green Line Rules: 1. Above the Green Line. 2. Above 90 Relative Strength (1 year RS is the best). 3. Money Wave is coming out of the Green",
+        "Follow the Green Line Rules: 1. Above the Green Line. 2. Above 90 Relative Strength (1 year RS is the best). 3. Money Wave is coming out of the Green Zone.",
+        "Follow the Green Line Rules: 1. Above the Green Line. 2. Above 90 Relative Strength (1 year RS is the best). 3. Money Wave is coming out of the Green Zone.",
+        "03 GDX Gold Mining Fund - Daily Caution! Money Wave is in the Red Zone. Nimble traders: When closes below the Pink Line, SELL it. Money Wave Buy. EXIT if it is going to Close below $92. Money Wave is ",
+        "Caution! Money Wave is in the Red Zone. Nimble traders: When closes below the Pink Line, SELL it. Money Wave Buy. EXIT if it is going to Close below $92. Money Wave is in the Green Buy Zone. Buy when ",
+        "Caution! Money Wave is in the Red Zone. Nimble traders: When closes below the Pink Line, SELL it. Money Wave Buy. EXIT if it is going to Close below $92. Money Wave is in the Green Buy Zone. Buy when "
+      ],
+      "price_levels": {
+        "exit": "92."
+      },
+      "money_wave": "RED",
+      "action": "CAUTION"
+    },
+    "SMH": {
+      "ticker": "SMH",
+      "chart_url": "https://stockcharts.com/c-sc/sc?s=SMH&id=p95969499047&p=D&yr=0&mn=6&dy=0&a=469395450&r=530",
+      "signals": [
+        "04 SMH - Semiconductor Fund Caution! Money Wave is in the Red Zone. Nimble traders: When closes below the Pink Line, SELL it. Money Wave Buy. EXIT if it is going to Close below $374. Caution! Money Wa",
+        "Caution! Money Wave is in the Red Zone. Nimble traders: When closes below the Pink Line, SELL it. Money Wave Buy. EXIT if it is going to Close below $374. Caution! Money Wave is in the Red Zone. Nimbl",
+        "Caution! Money Wave is in the Red Zone. Nimble traders: When closes below the Pink Line, SELL it. Money Wave Buy. EXIT if it is going to Close below $374. Caution! Money Wave is in the Red Zone. Nimbl"
+      ],
+      "price_levels": {
+        "exit": "374."
+      },
+      "money_wave": "RED",
+      "action": "CAUTION"
+    },
+    "COPX": {
+      "ticker": "COPX",
+      "chart_url": "https://stockcharts.com/c-sc/sc?s=COPX&id=p78044174814&p=D&yr=0&mn=6&dy=0&a=1682037238&r=691",
+      "signals": [
+        "05 COPX - Global X Copper Miners ETF Caution! Money Wave is in the Red Zone. Short Term Traders: Sell if it Closes below the Pink Line. Money Wave > 50. Do Not Take a Loss! Money Wave is in the Green ",
+        "Caution! Money Wave is in the Red Zone. Short Term Traders: Sell if it Closes below the Pink Line. Money Wave > 50. Do Not Take a Loss! Money Wave is in the Green Buy Zone. Buy when Money Wave closes ",
+        "Caution! Money Wave is in the Red Zone. Short Term Traders: Sell if it Closes below the Pink Line. Money Wave > 50. Do Not Take a Loss! Money Wave is in the Green Buy Zone. Buy when Money Wave closes "
+      ],
+      "price_levels": {},
+      "money_wave": "RED",
+      "action": "CAUTION"
+    },
+    "SLV": {
+      "ticker": "SLV",
+      "chart_url": "https://stockcharts.com/c-sc/sc?s=SLV&id=p48078012091&p=D&yr=0&mn=6&dy=0&a=787828497&r=740",
+      "signals": [
+        "06 SLV - Silver Fund - Daily 2 Caution! Money Wave is in the Red Zone. Short Term Traders: Sell if it Closes below the Pink Line. Money Wave > 50. Do Not Take a Loss! Money Wave is in the Green Buy Zo",
+        "Caution! Money Wave is in the Red Zone. Short Term Traders: Sell if it Closes below the Pink Line. Money Wave > 50. Do Not Take a Loss! Money Wave is in the Green Buy Zone. Buy when Money Wave closes ",
+        "Caution! Money Wave is in the Red Zone. Short Term Traders: Sell if it Closes below the Pink Line. Money Wave > 50. Do Not Take a Loss! Money Wave is in the Green Buy Zone. Buy when Money Wave closes "
+      ],
+      "price_levels": {},
+      "money_wave": "RED",
+      "action": "CAUTION"
+    },
+    "REMX": {
+      "ticker": "REMX",
+      "chart_url": "https://stockcharts.com/c-sc/sc?s=REMX&id=p49518187599&p=D&yr=0&mn=6&dy=0&a=543143253&r=794",
+      "signals": [
+        "07 Rare Earth Fund (REMX) - Daily Caution! Money Wave is in the Red Zone. Short Term Traders: Sell if it Closes below the Pink Line. Money Wave Buy. EXIT if it is going to Close below $81.40. Money Wa",
+        "Caution! Money Wave is in the Red Zone. Short Term Traders: Sell if it Closes below the Pink Line. Money Wave Buy. EXIT if it is going to Close below $81.40. Money Wave is in the Green Buy Zone. Buy w",
+        "Caution! Money Wave is in the Red Zone. Short Term Traders: Sell if it Closes below the Pink Line. Money Wave Buy. EXIT if it is going to Close below $81.40. Money Wave is in the Green Buy Zone. Buy w"
+      ],
+      "price_levels": {
+        "exit": "81.40"
+      },
+      "money_wave": "RED",
+      "action": "CAUTION"
+    },
+    "XLE": {
+      "ticker": "XLE",
+      "chart_url": "https://stockcharts.com/c-sc/sc?s=XLE&id=p95254023709&p=D&yr=0&mn=6&dy=0&a=2202071987&r=402",
+      "signals": [
+        "08 XLE - Energy Select Sector SPDR Fund Caution! Money Wave is in the Red Zone. Short Term Traders: Sell if it Closes below the Pink Line.",
+        "Caution! Money Wave is in the Red Zone. Short Term Traders: Sell if it Closes below the Pink Line.",
+        "Caution! Money Wave is in the Red Zone. Short Term Traders: Sell if it Closes below the Pink Line."
+      ],
+      "price_levels": {},
+      "money_wave": "RED",
+      "action": "CAUTION"
+    },
+    "EWY": {
+      "ticker": "EWY",
+      "chart_url": "https://stockcharts.com/c-sc/sc?s=EWY&id=p38628424834&p=D&yr=0&mn=6&dy=0&a=318954107&r=910",
+      "signals": [
+        "09 EWY - South Korea Fund Caution! Money Wave is in the Red Zone. Nimble traders: When closes below the Pink Line, SELL it. Money Wave Buy. EXIT if it is going to Close below $88.40. Money Wave is in ",
+        "Caution! Money Wave is in the Red Zone. Nimble traders: When closes below the Pink Line, SELL it. Money Wave Buy. EXIT if it is going to Close below $88.40. Money Wave is in the Green Buy Zone. Buy wh",
+        "Caution! Money Wave is in the Red Zone. Nimble traders: When closes below the Pink Line, SELL it. Money Wave Buy. EXIT if it is going to Close below $88.40. Money Wave is in the Green Buy Zone. Buy wh"
+      ],
+      "price_levels": {
+        "exit": "88.40"
+      },
+      "money_wave": "RED",
+      "action": "CAUTION"
+    },
+    "SPY": {
+      "ticker": "SPY",
+      "chart_url": "https://stockcharts.com/c-sc/sc?s=SPY&id=p52697755702&p=D&yr=0&mn=9&dy=0&a=308233753&r=489",
+      "signals": [
+        "10 S&P 500 Index (SPY) - Daily Relative Strength is below 80 required for Indices. AVOID. Caution! Money Wave is in the Red Zone. Nimble traders: When closes below the Pink Line, SELL it. Money Wave i",
+        "Relative Strength is below 80 required for Indices. AVOID. Caution! Money Wave is in the Red Zone. Nimble traders: When closes below the Pink Line, SELL it. Money Wave is in the Green Buy Zone. Buy wh",
+        "Relative Strength is below 80 required for Indices. AVOID. Caution! Money Wave is in the Red Zone. Nimble traders: When closes below the Pink Line, SELL it. Money Wave is in the Green Buy Zone. Buy wh"
+      ],
+      "price_levels": {},
+      "money_wave": "RED",
+      "action": "CAUTION"
+    }
+  },
+  "price_mentions": [
+    "$,",
+    "$25",
+    "$92.",
+    "$374.",
+    "$338.",
+    "$81.40",
+    "$73.50",
+    "$88.40"
+  ],
+  "raw_signals": [
+    " The Indices were stretched up Way Above the Green Lines, and the number of Stocks participating upward is narrowing (Caution)",
+    " Money Wave Buy Signals for BKD IRWD & INTC",
+    " Please wait for the Money Wave to Close up above 20",
+    " Money Wave is coming out of the Green Zone",
+    " 03 GDX Gold Mining Fund - Daily Caution! Money Wave is in the Red Zone",
+    " Money Wave Buy",
+    " EXIT if it is going to Close below $92",
+    " Money Wave is in the Green Buy Zone",
+    " Buy when Money Wave closes back above 20 for a bounce",
+    " 04 SMH - Semiconductor Fund Caution! Money Wave is in the Red Zone",
+    " Money Wave Buy",
+    " EXIT if it is going to Close below $374",
+    " Caution! Money Wave is in the Red Zone",
+    " Money Wave Buy",
+    " EXIT if it is going to Close below $338",
+    " Caution! Money Wave is in the Red Zone",
+    " 05 COPX - Global X Copper Miners ETF Caution! Money Wave is in the Red Zone",
+    " Money Wave > 50",
+    " Do Not Take a Loss! Money Wave is in the Green Buy Zone",
+    " Buy when Money Wave closes back above 20 for a bounce"
+  ]
+}

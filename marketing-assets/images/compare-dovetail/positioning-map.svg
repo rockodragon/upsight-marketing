@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" width="900" height="700">
+  <defs>
+    <linearGradient id="bgP" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050508"/>
+      <stop offset="100%" stop-color="#0a0a10"/>
+    </linearGradient>
+    <filter id="gP">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="900" height="700" fill="url(#bgP)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#eeeef2" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700">Customer Intelligence Landscape</text>
+  <text x="450" y="65" text-anchor="middle" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="13">Where UpSight fits vs. competitors</text>
+
+  <!-- Axes -->
+  <!-- Y axis: Team Size -->
+  <line x1="100" y1="100" x2="100" y2="600" stroke="rgba(238,238,242,0.2)" stroke-width="1"/>
+  <polygon points="100,95 95,110 105,110" fill="rgba(238,238,242,0.3)"/>
+  <text x="50" y="110" text-anchor="middle" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">ENTERPRISE</text>
+  <text x="50" y="125" text-anchor="middle" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">TEAMS</text>
+  <text x="50" y="585" text-anchor="middle" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">SOLO /</text>
+  <text x="50" y="600" text-anchor="middle" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">SMALL TEAM</text>
+
+  <!-- X axis: Focus -->
+  <line x1="100" y1="600" x2="850" y2="600" stroke="rgba(238,238,242,0.2)" stroke-width="1"/>
+  <polygon points="855,600 840,595 840,605" fill="rgba(238,238,242,0.3)"/>
+  <text x="200" y="645" text-anchor="middle" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">SALES</text>
+  <text x="200" y="660" text-anchor="middle" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">COACHING</text>
+  <text x="475" y="645" text-anchor="middle" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">CUSTOMER</text>
+  <text x="475" y="660" text-anchor="middle" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">INTELLIGENCE</text>
+  <text x="750" y="645" text-anchor="middle" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">RESEARCH</text>
+  <text x="750" y="660" text-anchor="middle" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">REPOSITORY</text>
+
+  <!-- Competitor dots -->
+
+  <!-- Gong: enterprise + sales coaching -->
+  <circle cx="220" cy="160" r="28" fill="rgba(239,68,68,0.15)" stroke="rgba(239,68,68,0.4)" stroke-width="1"/>
+  <text x="220" y="165" text-anchor="middle" fill="rgba(239,68,68,0.8)" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">Gong</text>
+
+  <!-- Listen Labs: enterprise + research -->
+  <circle cx="680" cy="180" r="28" fill="rgba(239,68,68,0.15)" stroke="rgba(239,68,68,0.4)" stroke-width="1"/>
+  <text x="680" y="175" text-anchor="middle" fill="rgba(239,68,68,0.8)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">Listen</text>
+  <text x="680" y="191" text-anchor="middle" fill="rgba(239,68,68,0.8)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">Labs</text>
+
+  <!-- Dovetail: mid-market + research repo -->
+  <circle cx="720" cy="290" r="32" fill="rgba(239,68,68,0.15)" stroke="rgba(239,68,68,0.5)" stroke-width="1.5"/>
+  <text x="720" y="295" text-anchor="middle" fill="rgba(239,68,68,0.9)" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600">Dovetail</text>
+
+  <!-- Attio: mid-market + CRM/sales-ish -->
+  <circle cx="280" cy="340" r="24" fill="rgba(168,85,247,0.15)" stroke="rgba(168,85,247,0.4)" stroke-width="1"/>
+  <text x="280" y="345" text-anchor="middle" fill="rgba(168,85,247,0.8)" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">Attio</text>
+
+  <!-- Day.AI: small-mid + sales CRM -->
+  <circle cx="240" cy="430" r="22" fill="rgba(168,85,247,0.15)" stroke="rgba(168,85,247,0.4)" stroke-width="1"/>
+  <text x="240" y="435" text-anchor="middle" fill="rgba(168,85,247,0.8)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">Day.AI</text>
+
+  <!-- VoicePanel: small team + research -->
+  <circle cx="620" cy="440" r="26" fill="rgba(239,68,68,0.2)" stroke="rgba(239,68,68,0.5)" stroke-width="1.5"/>
+  <text x="620" y="435" text-anchor="middle" fill="rgba(239,68,68,0.9)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">Voice</text>
+  <text x="620" y="451" text-anchor="middle" fill="rgba(239,68,68,0.9)" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">Panel</text>
+
+  <!-- Fathom: small + transcription/sales -->
+  <circle cx="180" cy="500" r="20" fill="rgba(238,238,242,0.08)" stroke="rgba(238,238,242,0.2)" stroke-width="1"/>
+  <text x="180" y="505" text-anchor="middle" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11">Fathom</text>
+
+  <!-- Granola: small + notes -->
+  <circle cx="340" cy="520" r="18" fill="rgba(238,238,242,0.08)" stroke="rgba(238,238,242,0.2)" stroke-width="1"/>
+  <text x="340" y="525" text-anchor="middle" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11">Granola</text>
+
+  <!-- Looppanel: small-mid + research -->
+  <circle cx="660" cy="370" r="22" fill="rgba(238,238,242,0.08)" stroke="rgba(238,238,242,0.25)" stroke-width="1"/>
+  <text x="660" y="368" text-anchor="middle" fill="rgba(238,238,242,0.6)" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="600">Loop</text>
+  <text x="660" y="382" text-anchor="middle" fill="rgba(238,238,242,0.6)" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="600">panel</text>
+
+  <!-- UPSIGHT: star position - small team, customer intelligence sweet spot -->
+  <circle cx="480" cy="460" r="40" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="2" filter="url(#gP)"/>
+  <text x="480" y="455" text-anchor="middle" fill="#f59e0b" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700">UpSight</text>
+  <text x="480" y="475" text-anchor="middle" fill="rgba(245,158,11,0.7)" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500">CUSTOMER INTELLIGENCE</text>
+
+  <!-- Legend -->
+  <rect x="110" y="93" width="12" height="12" rx="3" fill="rgba(239,68,68,0.3)" stroke="rgba(239,68,68,0.5)" stroke-width="1"/>
+  <text x="128" y="104" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11">Direct competitors</text>
+  <rect x="260" y="93" width="12" height="12" rx="3" fill="rgba(168,85,247,0.3)" stroke="rgba(168,85,247,0.5)" stroke-width="1"/>
+  <text x="278" y="104" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11">Adjacent (CRM)</text>
+  <rect x="390" y="93" width="12" height="12" rx="3" fill="rgba(238,238,242,0.1)" stroke="rgba(238,238,242,0.3)" stroke-width="1"/>
+  <text x="408" y="104" fill="rgba(238,238,242,0.5)" font-family="Inter, system-ui, sans-serif" font-size="11">Low threat</text>
+
+  <!-- Whitespace callout -->
+  <rect x="395" y="375" width="170" height="30" rx="6" fill="none" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4,3" stroke-opacity="0.4"/>
+  <text x="480" y="395" text-anchor="middle" fill="rgba(245,158,11,0.5)" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="600">WHITESPACE</text>
+</svg>

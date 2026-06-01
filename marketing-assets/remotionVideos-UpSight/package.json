@@ -1,0 +1,23 @@
+{
+  "name": "upsight-ads",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts",
+    "render:survey-ad": "remotion render src/index.ts SurveyKillerAd --output=out/survey-killer-ad.mp4",
+    "render:all": "node scripts/render-all.mjs",
+    "upgrade": "remotion upgrade"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.242",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "4.0.242"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config": "4.0.242",
+    "@types/react": "^19.0.0",
+    "typescript": "^5.7.0"
+  }
+}
