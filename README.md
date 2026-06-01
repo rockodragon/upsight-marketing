@@ -1,4 +1,5 @@
 # UpSight vault starter — README
+RICK IS HERE
 
 This is a starter Obsidian vault + repo `CLAUDE.md` for organizing UpSight work across two domains (code + GTM) with a unified priority layer.
 
