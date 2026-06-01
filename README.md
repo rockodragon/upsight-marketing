@@ -83,3 +83,4 @@ Paste relevant `00-control/` files, or use a Claude Project with the vault attac
 - Append-only logs (`status.md`, `decisions.md`) — no editing past entries
 - Stuck >4 hours = unstick, work around, or kill (no silent slippage)
 # upsight-marketing
+# upsight-marketing
