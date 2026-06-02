@@ -11,8 +11,8 @@
 
 ## High intent (promote next)
 
-- Pricing page refresh — present $15/$29/$35 tiers with reverse-trial framing
-	- [ ] slacking. did nothing yet.
+- Pricing page refresh — update to Free / $39 Starter / $99 Team + consultant workspace expansion
+	- [ ] replace stale $15/$29/$35 framing with current public pricing spec and app-gating implementation
 - AgentCRM skill — polish, document, publish publicly as marketing artifact
 	- doing now 5/5 - 5/10 ish
 - Electron app REVISED REACT Foundation and claude design. 

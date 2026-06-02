@@ -52,7 +52,7 @@ A distinct funnel that lands in the *same* UpSight subscription: ship UpSight as
 | **AI consultancies / dev shops** | Boutiques shipping agents for clients | Resellable memory layer + partner rev-share; 1 shop = 2–10 indirect customers | Channel, not a direct buyer — don't over-invest |
 | **Agent frameworks (Mastra, LangGraph, CrewAI…)** | Infra ecosystems | One reference integration each → distribution | Channel multiplier, not a buyer |
 
-> See `deep-dives/agent-builder-icp-deep-dive.md` and `../agentcrm-consolidated-strategy.md`. **Tension to resolve:** the human motion prices per-seat ($29/$79/$199); the agent motion prices per-query ($0.005). Same product, two pricing philosophies — pick deliberately per funnel.
+> See `deep-dives/agent-builder-icp-deep-dive.md` and `../agentcrm-consolidated-strategy.md`. **Tension to resolve:** the human motion now leans toward workspace pricing (`$39 Starter / $99 Team`) while the agent motion may still want per-query economics. Same product, two pricing philosophies — keep them deliberately separated by funnel.
 
 ### Differentiated play we're validating — in-event capture
 
@@ -123,7 +123,7 @@ Full versions in **`../../40-gtm/assets/collateral/battle-cards.md`**.
 ---
 
 ## Open questions (→ `../../00-control/open-questions.md`)
-- Pricing: does $79/seat (consultants) + $99 flat (teams) hold, or does A need a lower entry? Per-seat vs. per-query for the agent motion?
+- Pricing: do `$39` Starter and `$99` Team with included collaborators and metered usage convert better than lower-anchor pricing? How much included usage is enough to feel generous without creating abuse? Per-seat vs. per-query for the agent motion remains open.
 - Onboarding friction: how fast from "uploaded 50 conversations" → "saw something I didn't know"? (Possible paid onboarding.)
 - Defensibility once Gong/Apollo ship a cheaper SMB tier? Working answer: compounding memory layer.
 

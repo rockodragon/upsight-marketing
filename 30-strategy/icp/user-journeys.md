@@ -19,26 +19,26 @@ Every journey converges on **one wow moment: click an insight → see the verbat
 
 ### A — Founder-led B2B seller  *(beachhead)*
 - **Trigger:** lost a winnable deal / a pile of un-mined calls.
-- **Flow:** find via community/SEO/referral → sign up, voice-first goal capture → upload 2–3 recent recordings *or* import conversation DB → AI extracts buying-signal / churn-risk / unmet-need → **grid view: "ready to buy / at risk / expansion"** with the signal behind each → act on the list → invite teammate → upgrade.
-- **Aha:** "These 3 accounts show expansion signals and I'd have missed two." Decisions, not a dashboard.
+- **Flow:** find via community/SEO/referral → sign up, voice-first goal capture → upload 2–3 recent recordings *or* import conversation DB → land on **Today: Revenue signals** → AI extracts buying-signal / stall-risk / blocker signals → ranked cards for **Warm now / Slipping / Blocked** with the signal and receipts behind each → jump into pipeline or people detail → act on the list → invite teammate → upgrade.
+- **Aha:** "These 3 accounts are warm, these 2 are slipping, and this deal is blocked on pricing." Decisions, not a dashboard.
 - **Sub-variants** (same ICP, different entry):
   - *Product-direction:* trigger = a team debate about what to build → upload calls *or* run a smart survey → patterns + receipts → settle the debate with evidence.
   - *Post-launch urgency:* trigger = board meeting in ~2 weeks, runway pressure → **bulk-upload 5–10 recordings** → cross-conversation synthesis in hours → export for the board deck → pivot/persevere. (Fast first-week conversion; then becomes the standing A journey.)
 
 ### B — Boutique agency / consultant  *(expansion)*
 - **Trigger:** new client project; or a warm relationship went cold.
-- **Flow:** sign up → voice-first project setup → record/upload first client meeting → AI transcribes + extracts evidence + themes → upload 2–3 more → cross-stakeholder agreement/disagreement synthesis → export into a client deliverable → 2nd project → upgrade → refer.
+- **Flow:** sign up → voice-first project setup → record/upload first client meeting → AI transcribes + extracts evidence + themes → upload 2–3 more → cross-stakeholder agreement/disagreement synthesis → consultant workspace shows warm/slipping/blocker signals for each client workspace → export into a client deliverable → add 2nd workspace → upgrade → refer.
 - **Aha:** client challenges a recommendation → consultant clicks → shows the source quote. "3 days of synthesis → 30 minutes." Decision rule: 5+ convert & reuse within 60 days → invest.
 
 ### C — Apollo refugee  *(acquisition wedge)*  — NEW
 - **Trigger:** Apollo renewal in ~60 days, a deliverability disaster, a credit bill-shock, or a support failure.
-- **Flow:** arrives via "Apollo alternatives" SEO / comparison page / switch campaign → sign up → **import the Apollo conversation DB + contacts they already own** → UpSight runs signal extraction on data they *trust* (no new prospecting needed) → grid view of decisions (ready-to-buy / at-risk) → cost/support comparison surfaced ("no credits, real support, under $100") → migrate off Apollo.
+- **Flow:** arrives via "Apollo alternatives" SEO / comparison page / switch campaign → sign up → **import the Apollo conversation DB + contacts they already own** → UpSight runs signal extraction on data they *trust* (no new prospecting needed) → Today page shows **Warm / Slipping / Blocked** decisions on the imported data → cost/support comparison surfaced ("team-friendly, real support, no opaque credits") → migrate off Apollo.
 - **Aha:** "I got decisions out of the conversations I already had — without renting a database that's 1-in-3 wrong." Value = trust + cost relief, *not* deeper meeting summaries.
 - **⚠️ Note:** do NOT center this journey on CI depth — they churn over data/cost/support. Lead the onboarding on "works on data you own, no credits, real support."
 
 ### D — Pre-CRM / spreadsheet SMB  *(large adjacent demand pool)*  — NEW
 - **Trigger:** a deal/insight lost because nothing was tracked; a growth moment where the spreadsheet stops scaling (~past 50 contacts).
-- **Flow:** arrives via "Excel CRM" / "spreadsheet vs CRM" SEO or a comparison page → sign up, **skip heavy setup** → **import the spreadsheet + connect call recordings** → in ~10 minutes see the read: who's gone quiet, who's ready, what keeps coming up → set the one follow-up they were about to miss → invite a teammate → upgrade.
+- **Flow:** arrives via "Excel CRM" / "spreadsheet vs CRM" SEO or a comparison page → sign up, **skip heavy setup** → **import the spreadsheet + connect call recordings** → in ~10 minutes see the read on Today: who is warm, who is slipping, what is blocked → set the one follow-up they were about to miss → invite a teammate → upgrade.
 - **Aha:** "It told me who was about to drop off — my spreadsheet never did that." The upgrade *from* the spreadsheet, not a heavier CRM.
 - **⚠️ Note:** anchored at $0 and low-urgency — every step must be near-zero-friction, and the value moment must manufacture urgency ("here's the deal you'd have lost"). Don't say "CRM" first (it's why they avoided tools); say "upgrade from your spreadsheet."
 

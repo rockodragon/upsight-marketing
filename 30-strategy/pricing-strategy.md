@@ -1,7 +1,29 @@
 # UpSight / AgentCRM Pricing Strategy
 
-> **Status**: Draft v1 | **Author**: Mary (Business Analyst) | **Date**: 2026-03-20
+> **Status**: Draft v1, partially superseded by 2026-06-02 revenue memo | **Author**: Mary (Business Analyst) | **Date**: 2026-03-20
 > **Objective**: No-brainer pricing competitive with Gong, Attio, Day.ai — targeting 70% gross margins at scale, traction-first early on.
+
+---
+
+## 2026-06-02 Working Direction Update
+
+The current working recommendation is to price the core SMB product by **workspace value + included usage**, not by strict seats.
+
+Current direction:
+
+- **Free**: proof-of-value tier with a hard cap
+- **Starter**: **$39/mo**, 1 workspace, up to 3 members, included monthly usage
+- **Team**: **$99/mo**, 3 workspaces, up to 10 members, higher included usage
+- **Consultant / Agency expansion**: add extra client workspaces for **$19-29/workspace**
+- **Scale / API**: higher fixed tier and/or usage pricing for agent-heavy buyers
+
+Meter expensive work, not humans:
+
+- transcription hours
+- heavy analysis runs
+- costly workflow execution
+
+Do **not** lead with credits. Do **not** aggressively meter seats. Full rationale: `30-strategy/revenue-gtm-decision-memo-2026-06-02.md`.
 
 ---
 
@@ -53,9 +75,9 @@
 | Tier | Revenue/project/mo | COGS/project/mo | Gross Margin |
 |---|---|---|---|
 | **Free** (5 conversations) | $0 | ~$3 | -100% (acquisition cost) |
-| **Starter** ($29/mo) | $29 | ~$5 | **83%** |
-| **Pro** ($79/mo) | $79 | ~$12 | **85%** |
-| **Team** ($29/user × 5 users) | $145 | ~$15 | **90%** |
+| **Starter** ($39/mo) | $39 | ~$6-8 | **80%+** |
+| **Team** ($99/mo) | $99 | ~$12-18 | **80%+** |
+| **Consultant / Agency** (Team + extra workspaces) | $118-186 | ~$18-28 | **75%+** |
 | **Agent Builder** ($199/mo) | $199 | ~$20 | **90%** |
 | **Heavy usage** (100+ conversations/mo) | $199+ | ~$40 | **80%** |
 
@@ -69,7 +91,7 @@ Smart model routing (use GPT-4o-mini for 80% of operations, GPT-4o/Claude for co
 
 ### Design Principles
 
-1. **Project-based, not per-seat** — Differentiation vs. everyone else. Teams share one project. No "how many licenses do I need?" friction.
+1. **Workspace-based, not per-seat** — Differentiation vs. everyone else. Teams share one working space. No "how many licenses do I need?" friction.
 2. **Generous free tier** — Hook on the recording + evidence habit. Limit AI intelligence, not access.
 3. **Predictable base + transparent overages** — No opaque AI credits. Generous included usage with clear per-unit overages. Users always know what they'll pay.
 4. **Agent access included** — MCP/API access is not a premium feature. It's the product.
@@ -84,7 +106,7 @@ Smart model routing (use GPT-4o-mini for 80% of operations, GPT-4o/Claude for co
 
 | Included | Limit |
 |---|---|
-| 1 project | — |
+| 1 workspace | — |
 | 5 conversations/mo (interviews, notes, imports) | Rolling |
 | 50 AI queries/mo (theme, lens, analysis) | Rolling |
 | Unlimited semantic search (embedding lookups) | — |
@@ -102,35 +124,35 @@ Smart model routing (use GPT-4o-mini for 80% of operations, GPT-4o/Claude for co
 
 ---
 
-#### **STARTER** — $29/mo per project
+#### **STARTER** — $39/mo per workspace
 *"Your AI-powered customer intelligence system"*
 
 | Included | Limit |
 |---|---|
-| 1 project | — |
+| 1 workspace | — |
 | 25 conversations/mo | Rolling |
 | 500 AI queries/mo (theme, lens, analysis) | Rolling; $0.03/query overage |
 | Unlimited semantic search | — |
 | Unlimited survey responses | — |
 | Full evidence extraction + themes | — |
 | Persona & segment generation | — |
-| 5 team members | — |
+| 3 members | — |
 | MCP server (read + write) | — |
 | Email support | — |
 
-**Target buyer**: Solo founder, small PM team, consultant
-**Comparison**: Cheaper than Attio Plus ($29/seat), cheaper than Grain Business ($48/seat), **40x cheaper than Gong minimum**
+**Target buyer**: Founder-led seller, operator, solo consultant
+**Comparison**: Still self-serve and impulse-buy; cheaper than buying multiple seats elsewhere while avoiding the "cheap note tool" anchor
 **AI query COGS**: 500 queries × ~$0.005 avg = ~$2.50/mo. Overage at $0.03 = ~70% margin on overages.
-**Margin**: ~83%
+**Margin**: ~80%+
 
 ---
 
-#### **PRO** — $79/mo per project
-*"Cross-source intelligence for growing teams"*
+#### **TEAM** — $99/mo
+*"Cross-source intelligence for the whole small team"*
 
 | Included | Limit |
 |---|---|
-| 1 project | — |
+| 3 workspaces | — |
 | 100 conversations/mo | Rolling; $1.00/conversation overage |
 | 5,000 AI queries/mo | Rolling; $0.02/query overage |
 | Unlimited semantic search | — |
@@ -138,28 +160,30 @@ Smart model routing (use GPT-4o-mini for 80% of operations, GPT-4o/Claude for co
 | Lens analysis (BANT, JTBD, competitive) | — |
 | Advanced theme clustering | — |
 | ICP scoring | — |
-| Unlimited team members | — |
+| Up to 10 members | — |
 | MCP server (full access) | — |
 | Priority support | — |
 | Export & API access | — |
 
-**Target buyer**: Product team at Series A-C, sales enablement lead
-**Comparison**: Less than 1 Gong seat ($108/mo minimum). Less than 2 Attio Pro seats ($118/mo).
+**Target buyer**: Cofounder teams, small revenue teams, agencies running multiple clients
+**Comparison**: Designed to make team adoption sticky without forcing seat math at every turn
 **AI query COGS**: 5,000 queries × ~$0.005 avg = ~$25/mo. Overage at $0.02 = ~60% margin.
-**Margin**: ~85%
+**Margin**: ~80%+
+
+**Consultant / agency motion**: add extra client workspaces for $19-29 per workspace instead of forcing another full seat bundle. This makes the expansion path workspace-based, which better matches how consultants create value.
 
 ---
 
-#### **SCALE** — $199/mo per project (or $149/mo annual)
+#### **SCALE** — $199/mo per account (or $149/mo annual)
 *"Customer intelligence infrastructure for your agents and team"*
 
 | Included | Limit |
 |---|---|
-| 1 project | — |
+| 1 account | — |
 | 500 conversations/mo | Rolling; $0.75/conversation overage |
 | 25,000 AI queries/mo | Rolling; $0.015/query overage |
 | Unlimited semantic search | — |
-| Everything in Pro | — |
+| Everything in Team | — |
 | Agent builder API (bulk queries, webhooks) | — |
 | Programmatic theme subscriptions | — |
 | Confidence-scored evidence API | — |

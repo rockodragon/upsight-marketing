@@ -1,210 +1,276 @@
 # Honest Assessment: UpSight vs. Competition
 
 *Created: 2026-01-02*
+*Last refreshed: 2026-06-02*
 *Purpose: Internal reality check - no sugar coating*
-*Discussion*: includes Rick's thoughts and things to consider. AI should take this into consideration and potentially update the document. Make note of any changes in discussion section.
 
-## Our Positioning
+## Where we are now
 
-**Claim**: All-in-one customer intelligence platform for product AND sales teams.
+Our January framing was too broad. We were talking like a product that served product teams, sales teams, and researchers equally well. That was strategically muddy.
 
-**Reality Check**: We're early stage, trying to serve two audiences (product + sales). This is ambitious and potentially unfocused.
+The current working bet is narrower and better:
 
-**Discussion**: Agreed. However, for SMBs (and especially startups), I wonder if having a single tool is beneficial vs the higher cost of separate tools and integration and complexity.
+**UpSight should win first by helping founder-led B2B sellers and spreadsheet-run small teams turn existing calls, notes, surveys, and imports into revenue decisions with receipts: who is warm, who is slipping, and what is blocking the next step.**
 
----
-
-## Where We're Strong (Genuine Advantages)
-
-### 1. Voice-First Setup
-**Claim**: Natural language onboarding, not enterprise forms.
-**Reality**:
-- LiveKit agent is working with 30 tools
-- MCP tools is minimal work to add
-- **Nobody else has shipped this for research setup**
-- Competitors (Dovetail, Looppanel) are form-based
-
-**Verdict**: ✅ REAL ADVANTAGE
-
-### 2. Human + AI Hybrid
-**Claim**: AI assists, humans lead when needed.
-**Reality**:
-- VoicePanel is AI-only (no human option)
-- Discuss.io has human OR AI (not blended)
-- Our approach lets users choose
-- Some research needs human judgment
-
-**Verdict**: ✅ REAL ADVANTAGE (if we ship it well)
-
-### 3. Research Lenses/Frameworks
-**Claim**: Structured analysis, not just generic tagging.
-**Reality**:
-- Lenses exist in our codebase
-- Competitors use generic tagging (Dovetail, Looppanel, Notably)
-- Gong has sales-specific frameworks, but we have research ones
-
-**Discussion**: Fathom.ai has some kind of templates I think. We lack keyword search, and packaged features like "detect competitor" or "detect upsell".
-
-**Verdict**: ✅ REAL ADVANTAGE (execution matters)
+That does **not** mean the product stops being useful to product or marketing. It means the first buyer and first GTM promise get sharper.
 
 ---
 
-## Where We're Weak (Honest Problems)
+## What is genuinely strong
 
-### 1. Market Presence: Non-Existent
-| Competitor | ARR | Customers | Employees |
-|------------|-----|-----------|-----------|
-| Gong | $300M+ | 4,800+ | 1,000+ |
-| Dovetail | $4.9M | Unknown | 190 |
-| Fathom | Unknown | 8,500+ (HubSpot) | 10 |
-| VoicePanel | Pre-revenue | Early | 3 |
-| **UpSight** | **Pre-revenue** | **Pre-launch** | **Small** |
+### 1. Evidence and receipts
+This is still the clearest core strength.
 
-**Reality**: We have no brand recognition. Zero.
+- We can point from an insight back to the quote.
+- That matters more than generic AI summaries.
+- It is useful across revenue, product, and consulting workflows.
 
-### 2. Integration Ecosystem: Almost Nothing
-| Competitor | Integrations |
-|------------|--------------|
-| Gong | 250+ |
-| Dovetail | 50+ |
-| Nutshell | 5,000+ (via Zapier) |
-| **UpSight** | **Few** |
+**Verdict**: real advantage, if the UI makes it obvious.
 
-**Discussion**: We need a good integration story. Top of mind use cases include:
-1. meeting recordings (zoom, google meet, teams) which we can do via recall.ai - working alpha is in progress, eta Jan 15.
-2. Automated meeting join & transcription based on calendar invite (Nothing here yet)
-3. Inputs for user research
-	- a. import xls/csv, docs, pdfs - we do csv, docs partly
-	- b. linked & sync (docs, sheets) could do with picaos
-4. Write-back updates to existing CRM (Nothing here yet)
-5. Email workflow input to CRM, AI analysis (Nothing here yet)
+### 2. Multi-source model
+The combination of calls, notes, surveys, transcripts, and imports in one evidence layer is more strategically important than it looked in January.
 
-**Reality**: Teams need tools that work with what they have.
+- Day.ai is strong on call/email/calendar automation.
+- Attio is strong on CRM structure.
+- Dovetail is strong on research repository behavior.
+- UpSight's best wedge is the evidence layer across sources, not just one source.
 
-### 3. Enterprise Features: Not Ready
-- No SSO
-- No SOC2 compliance
-- No audit logs
-- No team management (discussion: we do orgs, basic permissions management, but no admin features)
-- No custom roles/permissions
+**Verdict**: real strategic wedge, but only if imports and ingestion are smooth.
 
-**Reality**: We can't sell to enterprise today.
+### 3. Structured lenses/frameworks
+Lenses matter, but not as the hero story.
 
-### 4. Repository Maturity: Early Stage
-- Dovetail has years of iteration on search, organization, sharing
-- Looppanel has question-grouped analysis nailed
-- We're building basics
+- They are not the thing most buyers wake up wanting.
+- They are the mechanism that makes the decision output feel trustworthy and repeatable.
+- The right move is to use lenses to power default decision surfaces, not make users configure everything from scratch.
 
-**Discussion**: agreed. what is quesiton-grouped analysis? how can we identify key research-needed features and nail them?
+**Verdict**: real advantage, but should sit under the hood more often.
 
-**Reality**: Our repository is functional but not differentiated.
+### 4. Team-friendly collaboration potential
+The product naturally wants multiple viewers and collaborators.
 
-### 5. Pricing: Not Defined
-| Competitor | Pricing |
-|------------|---------|
-| Looppanel | $27/mo |
-| Fathom | Free + $19/mo |
-| Clarify | Free + credit-based |
-| Nutshell | $13-79/mo |
-| **UpSight** | **TBD** |
+- Founders want a sales-oriented read.
+- Product and marketing want the same evidence from a different angle.
+- Consultants want to reuse the workflow across client workspaces.
 
-**Reality**: We can't even tell users what we cost.
-
-**Discussion**: agreed. What strategy makes sense here that doesn't have us losing money? processing and storing conversations is not free, and we are bootstrapped. We need a strategy that doesn't have us losing money. One that gets users to pay for the value they get. Maybe some number of free contacts and translations, but not too many? TBD. High importance.
-
-
-### 6. AI Interviewer: Not Shipped
-- VoicePanel has shipped AI-conducted interviews
-- We have LiveKit working, but not the full interview flow
-- They're ahead on this specific capability
-
-**Reality**: Our "differentiator" isn't shipped yet.
+**Verdict**: important retention lever, if packaging supports it.
 
 ---
 
-## Competitive Threats: Reality Check
+## What is weak or still unresolved
 
-### VoicePanel (HIGHEST THREAT)
-**Why dangerous**:
-- Same space (AI voice research)
-- YC W24 + strong angels (Dropbox, Instacart founders)
-- Already shipped AI interviewer
-- If they add human modes, our differentiation shrinks
+### 1. We still have no market power
 
-**Discussion**: agreed. But can we credibly make the claim that voice-first and human options work best for this early-stage, high-touch market?
+Nothing changed here.
 
-**Our actual advantage**: Human+AI hybrid (if we ship it)
+- no brand
+- no clear market category ownership
+- no paid traction to offset that
 
-### Dovetail (HIGH THREAT)
-**Why dangerous**:
-- Market leader, $700M+ valuation
-- $57M to execute
-- Could buy a voice startup
-- Direct competitor for product teams
+**Reality**: strategy quality is ahead of market proof.
 
-**Our actual advantage**: Voice-first (they might copy), simpler UX (subjective)
+### 2. Integration surface is still too weak
 
-### Clarify/Nutshell (MEDIUM THREAT)
-**Why dangerous**:
-- CRM + conversation intelligence
-- If we target sales teams, they're already there
-- Better pricing transparency than us
-- Simpler value prop (CRM that just works)
+This is still one of the biggest commercial risks.
 
-**Our actual advantage**: Depth of research analysis
+The important integrations are now clearer:
+
+- Apollo export / import
+- spreadsheet import
+- call recording / calendar capture
+- CRM write-back where needed
+
+If those are rough, the best wedge still loses to "good enough" incumbent tools.
+
+**Reality**: teams buy what works with what they already have.
+
+### 3. Pricing is now directionally defined, but not yet proven
+
+This changed from January.
+
+We are no longer in a "pricing TBD" state. We now have a direction:
+
+- public pricing
+- workspace value plus included usage
+- generous collaborators
+- metered expensive usage, not strict seats
+
+But we should be honest:
+
+- this is a strategy, not yet validated pricing truth
+- the exact included allowances are still a live experiment
+- the price architecture is more credible than the exact price points
+
+**Reality**: pricing is no longer undefined, but it is not yet battle-tested.
+
+### 4. We are still vulnerable to "good enough CRM plus AI"
+
+This is now the most important competition risk.
+
+- Day.ai is the closest threat from the CRM side.
+- Attio and Clarify can win buyers who prioritize auto-capture and CRM hygiene.
+- If we pitch "AI CRM" too broadly, we walk onto their field.
+
+**Reality**: we should not compete on completeness of CRM automation.
+
+### 5. The product still risks making users compose the answer themselves
+
+This is the product-shape risk.
+
+If the user has to browse themes, lenses, graphs, and people pages to infer:
+
+- who is warm
+- who is slipping
+- what is blocked
+
+then the product is smart but not commercially sharp.
+
+**Reality**: the answer has to be packaged plainly on the Today page first.
+
+### 6. Consultants are promising, but not the beachhead
+
+January and some older docs leaned harder into consultants.
+
+Current read:
+
+- consultants are a strong expansion path
+- consultants like proof and reusable synthesis
+- but founder-led sellers are still the faster route to early revenue because the pain is more immediate and the buyer is the decision-maker
+
+**Reality**: consultants matter, but they should not blur the beachhead.
 
 ---
 
-## The Hard Questions
+## Threats by segment
 
-### 1. Are we too broad?
-**Product teams** want: Research repository, interview analysis, insight sharing
-**Sales teams** want: CRM integration, deal intelligence, coaching
+### Day.ai — highest strategic threat for the founder/sales motion
 
-Can we serve both well? Or are we half-assing two things?
+Why dangerous:
 
-### 2. Is voice-first actually differentiated?
-- Granola: Native app, no bot, beautiful
-- Fathom: Free, simple, accurate
-- VoicePanel: AI conducts interviews
-- Clarify: Ask Meeting queries
+- strong AI-native CRM narrative
+- former HubSpot leadership
+- low-friction pricing story
+- auto-capture and agentic workflow momentum
 
-Voice is becoming table stakes. Is our implementation special enough?
+Why we can still win:
 
-### 3. Can we ship fast enough?
-- VoicePanel is live with AI interviewer
-- Dovetail has 190 people iterating
-- Gong has $300M ARR for R&D
+- receipts and evidence traceability
+- surveys + calls + notes together
+- structured lenses
+- non-CRM-first framing for small teams that hate heavyweight systems
 
-We need to move faster than well-funded competitors.
+**Bottom line**: do not fight Day.ai on full CRM automation. Fight on proof, multi-source evidence, and decision clarity.
 
-### 4. What's our actual wedge?
-Options:
-1. **Research + Sales in one** - Unique but complex
-2. **Voice-first setup** - Differentiating but copyable
-3. **Human + AI hybrid** - Unique if shipped well
-4. **Simplicity** - Dovetail has UX issues we can exploit
+### Dovetail — high threat for the research/product motion
 
-**Best bet**: Focus on Human + AI hybrid for customer research. It's defensible and neither VoicePanel (AI-only) nor Dovetail (no AI interviews) can copy easily.
+Why dangerous:
+
+- category leadership
+- years of iteration
+- enterprise credibility
+
+Why we can still win:
+
+- simpler value promise for non-researchers
+- decision output instead of repository browsing
+- better bridge into revenue workflows
+
+**Bottom line**: do not pitch head-on as "better Dovetail" for dedicated researchers.
+
+### VoicePanel / research-AI tools — real, but less central to the main bet now
+
+Why dangerous:
+
+- shipped AI interviewing
+- more direct overlap on pure research workflows
+
+Why less central now:
+
+- our main revenue motion is not "AI interviewer first"
+- the current wedge is decision-making on evidence already captured
+
+**Bottom line**: still watch closely, but they are not the main GTM reference point for the current beachhead.
+
+### Clarify / Nutshell / Attio — medium threat for SMB buyers who want CRM hygiene first
+
+Why dangerous:
+
+- simpler story for CRM buyers
+- better automation/completeness story
+- team-friendly adoption patterns
+
+Why we can still win:
+
+- cross-conversation synthesis
+- receipts
+- better support for product/marketing/consulting views of the same evidence
+
+**Bottom line**: if the buyer says "I want a CRM that runs itself," we are at risk. If they say "I need to know who is warm and why," we have a shot.
 
 ---
 
-## Recommended Actions
+## The hard questions now
 
-### Immediate (This Week)
-1. **Ship AI interviewer** - VoicePanel is ahead
-2. **Define pricing** - Can't sell without it
-3. **Focus positioning** - Pick product OR sales teams first
+### 1. Are we packaging the answer clearly enough?
 
-### Short-Term (This Month)
-1. **Nail the hybrid experience** - Our actual differentiation
-2. **Build basic integrations** - Slack, Zoom at minimum
-3. **Launch publicly** - Need market feedback
+The current strategic answer is good. The product packaging may still lag it.
 
-### Medium-Term (This Quarter)
-1. **Enterprise basics** - SSO, compliance for upmarket
-2. **Expand integrations** - CRM connections for sales angle
-3. **Build case studies** - Social proof matters
+The user should land on:
+
+- Warm
+- Slipping
+- Blocked
+
+not on an abstract pile of tools.
+
+### 2. Is the pricing architecture right enough to test live?
+
+My read: yes, directionally.
+
+But the experiment is not "is $39 perfect?" It is:
+
+- does workspace pricing plus included collaborators reduce friction?
+- do users understand what is included?
+- do overages feel fair or scary?
+- do consultants expand by workspace?
+
+### 3. Are we trying to do too much in one UI?
+
+The danger is not multiple hats. The danger is one surface trying to explain every hat at once.
+
+Best answer:
+
+- Today page = action layer
+- Pipeline / People = drill-down
+- Themes / Lenses / Graph = explanation layer
+
+### 4. Are we moving fast enough to get real proof?
+
+Still the main execution question.
+
+The vault is now strategically sharper than it was in January.
+The real gap is no longer "what should we be?" It is "can we convert this into paid usage quickly?"
+
+---
+
+## Current recommended actions
+
+### Immediate
+1. Put the pricing story in public-facing form.
+2. Ship the Today-page revenue signal module (`Warm / Slipping / Blocked`).
+3. Make imports and ingestion dead simple for the beachhead workflows.
+4. Run live conversion tests on real founder/small-team data.
+
+### Short-term
+1. Validate Starter / Team / consultant-workspace packaging.
+2. Turn the blocker graph into readable blocker summaries.
+3. Capture one proof case that ties insight to saved or won revenue.
+
+### Defer / avoid
+1. Enterprise-first work
+2. Broad "AI CRM" positioning
+3. Seat-heavy pricing for the SMB motion
+4. Leading with pure research-repository language
 
 ---
 
@@ -212,18 +278,14 @@ Options:
 
 | Area | Honest Assessment |
 |------|-------------------|
-| Voice-first setup | ✅ Real advantage, needs polish |
-| Human + AI hybrid | ✅ Real advantage, needs shipping |
-| Research lenses | ✅ Real advantage, needs usage |
-| Market presence | ❌ Non-existent |
-| Integrations | ❌ Almost none |
-| Enterprise features | ❌ Not ready |
-| Pricing | ❌ Not defined |
-| AI interviewer | ⚠️ Behind VoicePanel |
-| Repository | ⚠️ Functional but basic |
+| Evidence / receipts | ✅ Real differentiator |
+| Multi-source model | ✅ Strategic wedge |
+| Lenses / frameworks | ✅ Valuable, but better under the hood |
+| Market presence | ❌ Weak |
+| Integrations | ❌ Still a major gap |
+| Pricing clarity | 🟡 Directionally defined, not yet proven |
+| CRM automation story | ❌ We lose if we fight here head-on |
+| Product packaging | 🟡 Must get more explicit on Today |
+| Beachhead focus | ✅ Sharper than January |
 
-**Bottom Line**: We have real differentiators, but they're not shipped or proven. VoicePanel is our most dangerous competitor because they're in the same space and moving fast. We need to ship the hybrid experience and prove it works.
-
----
-
-*This is an internal document. Be honest, not optimistic.*
+**Bottom line**: the strategy is better than it was on January 2. The biggest risk is no longer pure positioning confusion; it is failing to turn the sharper strategy into a plainly packaged product and a live conversion result.

@@ -1,6 +1,6 @@
 # AgentCRM / UpSight MCP — Consolidated Strategy
 
-> **Status**: Active | **Last Updated**: 2026-03-21
+> **Status**: Active | **Last Updated**: 2026-06-02
 > **Purpose**: Single source of truth for the agent-distribution strategy. Supersedes fragments across `mcp-server-strategy.md`, `OPENCLAW-STRATEGY.md`, and prior session notes.
 
 ---
@@ -17,11 +17,13 @@ We explored three options during planning:
 | **B: Open-Source Standalone CRM** | Build a separate, self-hosted CRM for agents | Rejected — splits engineering focus, duplicates what UpSight already does |
 | **C: Hybrid (Skill + Open-Source SDK)** | MCP server + lightweight open-source client library | Partial — the MCP server IS the open-source component |
 
-**Why A wins**: UpSight already has the CRM (people, orgs, opportunities), the intelligence engine (evidence, themes, lenses, personas), and 88 Mastra tools. Building a second CRM is wasted effort. The MCP server is a distribution channel for the existing platform, not a new product.
+**Why A wins**: UpSight already has the people/org/opportunity model, the intelligence engine (evidence, themes, lenses, personas), and working MCP integrations. Building a second CRM is wasted effort. The MCP server is a distribution channel for the existing platform, not a new product.
 
 **The key reframe**: We initially pitched "CRM for agents." Research killed that positioning — Salesforce, HubSpot, Attio, and Gong all shipped MCP servers by early 2026. CRM CRUD is commodity. What they can't do is answer: *"What did enterprise customers say about our pricing vs. competitors, and what evidence backs it up?"*
 
 **Final position**: **Customer intelligence layer for agents, not agent CRM.**
+
+**2026-06-02 note:** `agentcrm.dev` can help as a developer-facing acquisition surface, docs site, and install surface. It should not become a second product strategy. See `agentcrm-dev-acquisition-surface-2026-06-02.md`.
 
 ### One-Liner
 
@@ -29,7 +31,7 @@ We explored three options during planning:
 
 ### The 30-Second Pitch
 
-Every AI agent — your sales copilot, your support bot, your product analyst — needs to know what customers actually said. Not CRM fields. Not pipeline stages. Real evidence: who said what, when, with confidence scores. UpSight gives any AI agent that memory, via MCP. Connect in 30 seconds. First 5 conversations free.
+Every AI agent — your sales copilot, your support bot, your product analyst — needs to know what customers actually said. Not CRM fields. Not pipeline stages. Real evidence: who said what, when, with confidence scores. UpSight gives any AI agent that memory, via MCP. Connect in 30 seconds and try it on real data with the free tier.
 
 ### Category
 
@@ -114,7 +116,7 @@ These companies are building the *mouth* (outreach, messaging, engagement) but n
 
 ### Three Wedges That Win
 
-1. **Price** — Gong costs $1,200+/user/yr. UpSight Pro is $948/yr for the whole team (per-project, not per-seat).
+1. **Price** — incumbents price by seat or enterprise contract. UpSight can price by workspace value and costly usage, which fits small teams and developer-led adoption better.
 2. **Multi-source** — Gong only does calls. The moment someone needs to search across calls AND research interviews AND survey responses, Gong can't help.
 3. **MCP-native architecture** — The data model (evidence + themes + lenses) was designed for machine reasoning, not human browsing.
 
@@ -164,8 +166,8 @@ Adjacent markets: Conversation Intelligence ($4.5-6B), Online Survey Software ($
 
 ### Design Principles
 
-1. **Per-project, not per-seat** — Everyone else charges per-seat. A 10-person team on Gong pays $14,000/yr. On UpSight Pro: $948/yr.
-2. **Generous free tier** — Hook on the evidence habit. Limit AI intelligence, not access.
+1. **Workspace value + included usage, not strict seats** — collaboration should be easy; costly work should be metered.
+2. **Generous free tier** — Hook on the evidence habit. Limit expensive usage, not access.
 3. **Predictable base + transparent overages** — No opaque AI credits.
 4. **Agent/MCP access included** — Not a premium feature. It IS the product.
 
@@ -174,8 +176,8 @@ Adjacent markets: Conversation Intelligence ($4.5-6B), Online Survey Software ($
 | Plan | Price | Target | Key Limits |
 |------|-------|--------|------------|
 | **Free** | $0/mo | Hook | 5 conversations/mo, 50 AI queries, read-only MCP |
-| **Starter** | $29/mo | Solo founders, consultants | 25 conversations, 500 AI queries, full MCP |
-| **Pro** | $79/mo | Product teams, sales enablement | 100 conversations, 5K AI queries, lens analysis |
+| **Starter** | $39/mo | Founder-led sellers, solo consultants | 1 workspace, up to 3 members, included usage, full MCP |
+| **Team** | $99/mo | Cofounder teams, small agencies | 3 workspaces, up to 10 members, higher included usage |
 | **Scale** | $199/mo | Agent builders, mid-market | 500 conversations, 25K AI queries, bulk API |
 | **Enterprise** | Custom | Compliance-heavy orgs | Volume pricing, HIPAA, data residency |
 
@@ -189,7 +191,7 @@ Adjacent markets: Conversation Intelligence ($4.5-6B), Online Survey Software ($
 
 ### Launch Tactics
 
-- **Founding Member**: $19/mo locked for life (first 100 projects)
+- **Founding Member**: optional limited-time founder offer if it helps early-cohort learning
 - **Agent Builder Program**: Free 6 months for 20 companies (11x.ai, Warmly, etc.)
 
 Full pricing analysis: [pricing-strategy.md](./pricing-strategy.md)
@@ -211,12 +213,12 @@ Sees evidence, themes, intelligence in the dashboard
         ↓
 Team discovers the human UI → broader adoption
         ↓
-Upgrades to paid ($29-79/mo)
+Upgrades to paid (`Starter` / `Team`)
         ↓
 Tells other developers → repeat
 ```
 
-This is the Twilio/Stripe playbook: developer discovers via API → team adopts the dashboard → enterprise expands.
+This is the Twilio/Stripe playbook: developer discovers via API → team adopts the workspace → account expands.
 
 ### Platform Compatibility
 
