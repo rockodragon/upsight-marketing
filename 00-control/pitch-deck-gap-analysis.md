@@ -2,9 +2,9 @@
 **Date:** 2026-05-07 | **Revised:** 2026-05-07
 **Perspective:** Simulated a16z / Accel partner review. Constrained to the few things that truly matter.
 **Round 1 sources:** north-star.md, messaging.md, icp.md, themes.md, evidence-log.md, decisions.md, status.md, pipeline.md, backlog.md, dogfooding-log.md, focus26-followup.md, linkedin-series.md, ssd-demo-script.md, karpathy-notes.md
-**Round 2 sources (added):** Insights/docs/50-market/brand-brief.md (v3.1), positioning-brief.md, gtm-plan-2026.md, pricing-strategy.md, competition/customers.md, competition/README.md, our-honest-assessment.md, 15 competitor profiles in market-research/Competitors/, app/features/marketing/pages/about.tsx (homepage + about page source)
+**Round 2 sources (added):** `30-strategy/brand-brief.md` (v3.1), positioning-brief.md, gtm-plan-2026.md, pricing-strategy.md, competition/customers.md, competition/README.md, our-honest-assessment.md, 15 competitor profiles in `20-research/market-intel/Competitors/`, app/features/marketing/pages/about.tsx (homepage + about page source)
 
-> **IMPORTANT CORRECTION:** The first draft of this analysis was written against the vault's `00-control/` and `20-gtm/` folders only. A second pass found substantial documentation already existing in `Insights/docs/50-market/` and `market-research/Competitors/`. Several "missing" gaps were actually written — just not connected to the vault or to each other. The revised assessment below corrects the record.
+> **IMPORTANT CORRECTION:** The first draft of this analysis was written against the vault's `00-control/` and `40-gtm/` folders only. A second pass found substantial documentation already existing in `30-strategy/` and `20-research/market-intel/Competitors/`. Several "missing" gaps were actually written — just not connected to the vault or to each other. The revised assessment below corrects the record.
 
 ---
 
@@ -17,13 +17,13 @@
 ## What's working (The Good)
 
 **1. Positioning is unusually clear.**
-"Receipts for every customer insight" is specific, memorable, and differentiated from both transcription tools and CRMs. It passes the billboard test. Most founders pitch "AI for X" — you've named a deliverable ("receipts"), not a category. Keep it. The brand brief (v3.1, `50-market/brand-brief.md`) is excellent — it has the full tagline hierarchy, campaign concepts, persona messaging, and category definition. This is more work than most seed-stage companies have done.
+"Receipts for every customer insight" is specific, memorable, and differentiated from both transcription tools and CRMs. It passes the billboard test. Most founders pitch "AI for X" — you've named a deliverable ("receipts"), not a category. Keep it. The brand brief (v3.1, `30-strategy/brand-brief.md`) is excellent — it has the full tagline hierarchy, campaign concepts, persona messaging, and category definition. This is more work than most seed-stage companies have done.
 
 **2. You defined who you're NOT.**
 Not a transcription tool. Not a generic CRM. Not single-call LLM analysis. That's rare self-discipline at this stage. Investors spend 30% of early meetings debunking what a founder *thinks* they are. You've pre-empted it. The "Upstream Bottleneck" narrative in brand-brief.md §7.2 is the investor version of this — "AI made coding cheap; the bottleneck moved upstream to deciding what to build" — and it connects to YC's own #1 RFS for 2026 ("Cursor for PMs"). That's a gift. Use it.
 
 **3. The dogfooding log is a genuine asset.**
-`40-ops/dogfooding-log.md` captures P0 failures in your own sales process in real time — fabricated task creation, cross-entity search gaps, broken `create_task` calls. That's intellectual honesty. In a pitch, "we use our own product on every deal; here's what we caught last week" is more compelling than any customer quote from a founder who doesn't eat their own cooking.
+`10-ops/dogfooding-log.md` captures P0 failures in your own sales process in real time — fabricated task creation, cross-entity search gaps, broken `create_task` calls. That's intellectual honesty. In a pitch, "we use our own product on every deal; here's what we caught last week" is more compelling than any customer quote from a founder who doesn't eat their own cooking.
 
 **4. The Apollo framing is a real wedge.**
 "Apollo finds emails. UpSight finds the conversation worth having." This is a switchable cohort with documented frustration. Cytodyme is an Apollo replacement play. That's a live experiment, not a hypothesis.
@@ -80,7 +80,7 @@ These are ordered by how fast they kill a pitch. Fix them in this sequence.
 ### GAP 6 — Founder story is absent (BAD)
 **What's there:** No founder bio, no "why Rick" document, no origin story.
 **Why it matters:** At this stage, investors are primarily betting on the founder. The product is too early to bet on the product alone. Who are you, why are you the person to solve this, what have you built before that makes you credible here?
-**What to write:** 3 sentences: (1) background and what you've built, (2) the personal moment that made this problem undeniable, (3) the unfair advantage (domain expertise, network, prior company). Put this in `00-control/` or `10-build/`.
+**What to write:** 3 sentences: (1) background and what you've built, (2) the personal moment that made this problem undeniable, (3) the unfair advantage (domain expertise, network, prior company). Put this in `00-control/`.
 
 ---
 
@@ -104,13 +104,13 @@ These are ordered by how fast they kill a pitch. Fix them in this sequence.
 |---|---|---|---|
 | Problem | Good | brand-brief.md §1 "listen, learn, lose it" | Add one real external customer quote |
 | Solution | Good | SSD demo script, brand-brief.md §3 | Make the "accumulation" vs. "single-call" diagram a visual, not prose |
-| Market size | **Exists, not in deck** | `market-research/Competitors/customers.md` — $2-5B SAM | Pull SAM + beachhead calc into one slide |
+| Market size | **Exists, not in deck** | `20-research/market-intel/Competitors/customers.md` — $2-5B SAM | Pull SAM + beachhead calc into one slide |
 | Product | Good | SSD demo script is pitch-ready | Record the demo video. Fix Rick dedup before any demo. |
 | Traction | **Ugly** | PostHog: 7 users, 0 paid | Close Cytodyme. Nothing else matters first. |
-| Business model | **Now in vault** | `50-market/pricing-strategy.md` | Reconcile $29/$79/$199 with backlog's $15/$29/$35 |
-| Competitive | **Exists, needs diagram** | `50-market/brand-brief.md` §4.4, `market-research/Competitors/` | Pull the 2x2 whitespace diagram into a slide |
-| GTM | **Exists on paper** | `50-market/gtm-plan-2026.md` | Compress to 1 slide: Phase 1 (founder-led) → Phase 2 (PLG), with trigger condition |
-| Team | **On About page, not in deck** | `50-market/founder-story-pitch.md` (just created) | Use the 3-sentence version; NSS Labs story as the anchor |
+| Business model | **Now in vault** | `30-strategy/pricing-strategy.md` | Reconcile $29/$79/$199 with backlog's $15/$29/$35 |
+| Competitive | **Exists, needs diagram** | `30-strategy/brand-brief.md` §4.4, `20-research/market-intel/Competitors/` | Pull the 2x2 whitespace diagram into a slide |
+| GTM | **Exists on paper** | `30-strategy/gtm-plan-2026.md` | Compress to 1 slide: Phase 1 (founder-led) → Phase 2 (PLG), with trigger condition |
+| Team | **On About page, not in deck** | `30-strategy/founder-story-pitch.md` (just created) | Use the 3-sentence version; NSS Labs story as the anchor |
 | Vision / Why Now | **Exists in brand brief** | brand-brief.md §7.2 "Upstream Bottleneck" | Extract YC RFS + bottleneck paragraph verbatim |
 | Ask | **Missing** | n/a | How much, what milestone it buys, who else is in |
 
@@ -120,11 +120,11 @@ These are ordered by how fast they kill a pitch. Fix them in this sequence.
 
 The strategy docs are good enough. The gap is traction and operational execution.
 
-**1. Close one paying customer.** Cytodyme. Everything else is secondary. See `50-market/traction-goals.md` for the full investor readiness breakdown by round type.
+**1. Close one paying customer.** Cytodyme. Everything else is secondary. See `00-control/traction-goals.md` for the full investor readiness breakdown by round type.
 
 **2. Fill in Q2 goals.** Three specific numbers in `north-star.md`. This week. A company that preaches evidence-based decisions should not have blank quarterly targets.
 
-**3. Write the founder slide.** Three sentences. Already drafted in `50-market/founder-story-pitch.md`. The NSS Labs origin story is the deck anchor — it earns trust in 20 seconds with investors who've heard 50 AI tools pitch this week.
+**3. Write the founder slide.** Three sentences. Already drafted in `30-strategy/founder-story-pitch.md`. The NSS Labs origin story is the deck anchor — it earns trust in 20 seconds with investors who've heard 50 AI tools pitch this week.
 
 ---
 
@@ -134,22 +134,22 @@ The following docs were missing from the vault but existed in Insights/docs. Now
 
 | File | Vault location |
 |---|---|
-| `pricing-strategy.md` (full unit economics + competitive pricing) | `50-market/pricing-strategy.md` |
-| `agentcrm-consolidated-strategy.md` | `50-market/agentcrm-consolidated-strategy.md` |
-| `agentcrm-keyword-research.md` | `50-market/agentcrm-keyword-research.md` |
-| `consultant-customer-discovery-seo-plan-2026-02.md` | `50-market/consultant-customer-discovery-seo-plan-2026-02.md` |
-| `customer-discovery-content-clusters-2026-02.md` | `50-market/customer-discovery-content-clusters-2026-02.md` |
-| `gtm-keyword-analysis.md` | `50-market/gtm-keyword-analysis.md` |
-| `marketing-assets/product-promo-script-90s.md` | `50-market/marketing-assets/product-promo-script-90s.md` |
-| `70-PLG/nurture/brevo-workflows-guide.md` | `70-PLG/nurture/brevo-workflows-guide.md` |
-| `70-PLG/nurture/re-engagement-templates.md` | `70-PLG/nurture/re-engagement-templates.md` |
+| `pricing-strategy.md` (full unit economics + competitive pricing) | `30-strategy/pricing-strategy.md` |
+| `agentcrm-consolidated-strategy.md` | `30-strategy/agentcrm-consolidated-strategy.md` |
+| `agentcrm-keyword-research.md` | `20-research/market-intel/Keyword-Research/agentcrm-keyword-research.md` |
+| `consultant-customer-discovery-seo-plan-2026-02.md` | `20-research/market-intel/Keyword-Research/consultant-customer-discovery-seo-plan-2026-02.md` |
+| `customer-discovery-content-clusters-2026-02.md` | `20-research/market-intel/Keyword-Research/customer-discovery-content-clusters-2026-02.md` |
+| `gtm-keyword-analysis.md` | `20-research/market-intel/Keyword-Research/gtm-keyword-analysis.md` |
+| `marketing-assets/product-promo-script-90s.md` | `40-gtm/assets/scripts/product-promo-script-90s.md` |
+| `brevo-workflows-guide.md` | `40-gtm/channels/lifecycle/brevo-workflows-guide.md` |
+| `re-engagement-templates.md` | `40-gtm/channels/lifecycle/re-engagement-templates.md` |
 
 New files created in vault (didn't exist anywhere):
 
 | File | Purpose |
 |---|---|
-| `50-market/founder-story-pitch.md` | Distilled founder story from About page for pitch deck use |
-| `50-market/traction-goals.md` | Investor readiness thresholds by round type |
+| `30-strategy/founder-story-pitch.md` | Distilled founder story from About page for pitch deck use |
+| `00-control/traction-goals.md` | Investor readiness thresholds by round type |
 
 ---
 

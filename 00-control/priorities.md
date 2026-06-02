@@ -14,7 +14,7 @@ Two-week review gap closed today. The chief-of-staff loop works — `Insights-a1
 
 ## What matters
 
-1. **Dogfood the brain icon — find prompt issues on real work.** Use it on Cytodyme prep + SSD demo + Patricia outreach this week. Capture surprises (wrong recommendations, missing context, slow renders, prompt-vs-output mismatch) into Beads as you hit them; log dogfooding friction in `40-ops/dogfooding-log.md`. The classifier shipped but is unproven on production state — the loop only matters if it's right.
+1. **Dogfood the brain icon — find prompt issues on real work.** Use it on Cytodyme prep + SSD demo + Patricia outreach this week. Capture surprises (wrong recommendations, missing context, slow renders, prompt-vs-output mismatch) into Beads as you hit them; log dogfooding friction in `10-ops/dogfooding-log.md`. The classifier shipped but is unproven on production state — the loop only matters if it's right.
 
 2. **v4 web migration: kick off /people.** New epic `Insights-skhq` (Direction-C v4 web). First domino in the codex spec phased plan. Build the generic TanStack DataTable (`app/components/data-table/DataTable.tsx`), register it + page-chrome widgets in the gen-ui registry, then migrate `PeopleDataTable`. Sets the pattern for /orgs and /opportunities. Sibling epic `Insights-9p5j` (gen-ui fixes) — every v4 page must follow gen-ui principles, treat them as paired.
 
@@ -56,7 +56,7 @@ Two-week review gap closed today. The chief-of-staff loop works — `Insights-a1
 - **Sales-first:** if a sales deal needs unblocking, it's #1.
 - **#gtm minimum:** at least 2 GTM items (counted across Beads `#gtm` p0 tasks).
 - **Time-box stuck items:** anything stuck >4 hours either gets unstuck, parked, or killed.
-- **Dogfood log:** every UpSight friction point captured in `40-ops/dogfooding-log.md`. Don't fix on the fly — log first, decide later.
+- **Dogfood log:** every UpSight friction point captured in `10-ops/dogfooding-log.md`. Don't fix on the fly — log first, decide later.
 - **Friday EOD status writes:** the 3-week status.md gap was the warning; close it weekly.
 
 ## Notes for next review

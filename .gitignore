@@ -1,0 +1,12 @@
+# OS / editor noise
+.DS_Store
+**/.DS_Store
+
+# Secrets — never commit
+.env
+.env.*
+*.env
+
+# Dependencies / build artifacts
+node_modules/
+**/node_modules/

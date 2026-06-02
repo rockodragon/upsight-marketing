@@ -5,6 +5,12 @@
 
 ---
 
+## 2026-06-01 — Vault numbering is flow-based (00→99), not arbitrary
+**Why:** The old numbers were starter-kit defaults. Reordered so folders read as a narrative — **how we run (00 control, 10 ops) → what we learn (20 research) → what we decide (30 strategy) → what we ship (40 gtm) → archive (99)**. Inputs precede outputs; ops sits by control; research (customer voice + market intel) is one place; PLG nests under gtm; email has one home (`channels/lifecycle/`); no funnel-stage folders. Renumbering again requires a new decision entry.
+
+## 2026-06-01 — ICP bet: founder-led B2B sellers beachhead; Apollo = wedge, not a market
+**Why:** Per the 2026-06-01 "between sheets and silos" thesis + market sizing + competitive analysis. Founder-led B2B sellers (on spreadsheets) = beachhead (lowest CAC, the wedge is the buying reason, Cytodyme proof). Pre-CRM/spreadsheet SMBs = largest adjacent $ market. **Apollo refugees = acquisition wedge into the above, not a standalone TAM** (they churn over data/cost/support, not CI depth — so don't lead with CI depth there). Boutique agencies = expansion. Agent-distribution = parallel higher-ceiling motion. NOT doing: enterprise, donor CRM, events-led. Full rationale: `30-strategy/icp/README.md`.
+
 ## 2026-04-25 — Tasks live in Beads, sales lives in UpSight, vault holds narrative
 **Why:** Markdown was carrying too much load — tasks (better in Beads, queryable + agent-friendly), sales pipeline (better in UpSight, since UpSight IS a CRM and we should dogfood). Vault keeps strategy, decisions, narrative content, and research notes. Single mental model: structured data → its proper system; narrative → markdown.
 

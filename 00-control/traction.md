@@ -113,7 +113,7 @@ Signups (all time)        ~30
 
 ## Investor Readiness
 
-Thresholds from `50-market/traction-goals.md`.
+Thresholds from `00-control/traction-goals.md`.
 
 | Round type | Paying customers needed | MRR needed | Current | Ready? |
 |---|---|---|---|---|

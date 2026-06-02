@@ -11,7 +11,7 @@ UpSight is the conversational intelligence and customer discovery platform that 
 **Receipts for every customer insight.** Chief-of-staff vibe for distributed teams.
 Not a transcription tool. Not single-call LLM analysis. A memory/accumulation layer.
 
-## ICP (current hypothesis — refresh from `30-research/icp.md`)
+## ICP (current hypothesis — refresh from `20-research/voice-of-customer/icp.md`)
 - Founders / heads of product running active customer discovery
 - Distributed teams that need shared customer-truth
 - Companies experiencing "Apollo fatigue" or generic-CRM frustration

@@ -5,6 +5,21 @@
 
 ---
 
+## 2026-06-01 — vault reorg + ICP/market consolidation
+
+**Shipped**
+- *Vault restructured to a flow-based numbering scheme* (`00-control → 10-ops → 20-research → 30-strategy → 40-gtm → 99-archive`). Folded the old parallel folders (`market-research/`, `gtm-ops/`, `marketing-assets/`, `UpSight Marketing/`, `UpSight Product/`, `skills-survey/`, old `50-market`/`70-PLG`) into the numbered spine. Competitor research consolidated from 3 folders → 1 (`20-research/market-intel/Competitors/`). `40-gtm/` now has `campaigns/ channels/ assets/ experiments/ plg/`. `CLAUDE.md`/`README.md` rewritten; added `open-questions.md`, `experiments/_index.md`, `40-gtm/_index.md`. **NOTE:** old entries in this log + other docs link to pre-reorg paths (`../50-market/...`) — those links are now stale (historical record left intact).
+- *Canonical ICP brief* at [30-strategy/icp/README.md](../30-strategy/icp/README.md) — consolidates all candidate ICPs with market sizing (#people, $ value, TAM/SAM/SOM), competitive chances, and wedge per segment.
+- *Apollo competitive teardown* incorporated (from `competitive-apollo.zip`) into `market-intel/Competitors/`. Analyzed **Apollo users vs spreadsheet users → two distinct ICPs** (post-tool vs pre-tool; different urgency/WTP/switching friction).
+- *Canonical user journeys* at [30-strategy/user-journeys.md](../30-strategy/user-journeys.md); *battle cards* at `40-gtm/assets/collateral/battle-cards.md`; *outreach* at `40-gtm/channels/outreach/sequences-by-icp.md`; *messaging matrix* at `30-strategy/icp/messaging-by-icp.md`.
+
+**Decided** (see decisions.md)
+- Beachhead = founder-led B2B sellers (on spreadsheets); Apollo refugees = acquisition wedge not standalone TAM; agencies = expansion; agent-distribution = parallel motion.
+
+**Surfaced / flagged**
+- `_UNSORTED-flagged/` holds misplaced investing/stock data (was `market-research/Raw-Data/`) and personal family photos (were in `UpSight Product/`) — pending your call.
+- Pending: reconcile 3 drifted files + delete duplicate GTM dirs from the code repo (`Insights/docs/50-market`, `70-PLG`, `competitive/`).
+
 ## 2026-05-25 (Mon) — market scan
 
 **Shipped**
