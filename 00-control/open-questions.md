@@ -7,6 +7,10 @@
 
 | Date opened | Q | Type | Owner | Status |
 |---|---|---|---|---|
+| 2026-06-02 | Can we win a defined sub-segment head-to-head vs Day.ai (surveys + receipts + price)? | [tactical] | Rick | open → exp `2026-06-day-ai-head-to-head` |
+| 2026-06-02 | Right packaging unit + entry number: workspace $39 (memo) vs live per-seat $0/$29/$39 — which converts, at what WTP? | [tactical] | Rick | open |
+| 2026-06-02 | What included monthly allowance (transcription + heavy analysis) makes a no-brainer trial without making free/cheap users unprofitable? | [tactical] | Rick | open |
+| 2026-06-02 | Is the lead message "who's warm / slipping / blocked" or "upgrade from your spreadsheet" or "the Day.ai alternative"? | [tactical] | Rick | open |
 | 2026-06-01 | Which candidate ICP do we lead with — agent-builders, consultants/firms, or event strategists? | [bet] | Rick | open |
 
 ---

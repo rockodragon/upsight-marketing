@@ -6,7 +6,7 @@
 
 | Status | Experiment | Hypothesis (1 line) | Metric | Started | Result |
 |---|---|---|---|---|---|
-| — | _(none yet)_ | | | | |
+| planned | [`2026-06-day-ai-head-to-head`](2026-06-day-ai-head-to-head.md) | Founder-sellers who run surveys will pick UpSight over Day.ai (multi-source + receipts + price) | demos→pilots committed; WTP | — | — |
 
 **Status key:** `planned` · `running` · `shipped` (won) · `killed` (lost/inconclusive)
 

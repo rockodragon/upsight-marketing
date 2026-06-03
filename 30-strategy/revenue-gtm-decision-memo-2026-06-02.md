@@ -386,3 +386,29 @@ Lead with a concrete promise:
 We should make money by selling a revenue decision workflow to small teams, not by presenting as a broad AI CRM or a generic research repository.
 
 The product should feel collaborative across multiple users, but the pricing should meter costly work, not people.
+
+---
+
+## Addendum — 2026-06-02 (PM): reconciliations from the Day.ai pressure-test
+
+> This memo IS our decision record — the GTM equivalent of an engineering **ADR**. Decision *index* = `00-control/decisions.md`; *hypothesis space* = `00-control/open-questions.md` + `40-gtm/experiments/`. This addendum folds in points from the Day.ai pricing/positioning pressure-test that refine (not reverse) the decisions above.
+
+### 1. "Draft" the AI-CRM category — without becoming a broad AI CRM
+The memo says *don't present as a broad AI CRM*. That stands **for the product fight** — we will not out-automate Day.ai/Attio/Clarify on CRM hygiene, capture, and pipeline automation. But we should **not cede the category *language***. The category is wide open (Day.ai is ~10 people, launched Feb 2026 — nobody owns it). So:
+- **Top-of-funnel / discovery:** use AI-CRM category language for drafting — "Day.ai alternative" pages, comparison content, "the AI CRM that shows you who's warm, slipping, and blocked." Ride the category they're spending to create.
+- **Product / the fight:** the revenue-decision workflow + receipts + multi-source. Differentiate inside the category; don't match their automation depth.
+- Net: **category language = drafting lane; product promise = decision workflow.** These are not in conflict.
+
+### 2. Pricing transparency — be PostHog-shaped
+Adopt PostHog's posture (not its product): **public pricing, a genuinely useful free tier, pay only as usage grows, no surprises, no sales call to start.** This matches "meter costly work, include people generously." Keep avoiding the word "credits" in primary copy — say **"included usage + transparent overages, with an optional spend cap."** That's PostHog's "you'll never get a surprise bill" energy without the hated-credits framing.
+
+### 3. The live page contradicts this decision — reconcile it
+`getupsight.com/pricing` currently shows **per-seat $0 / $29 / $39** ("Pro $29, Team $39/user"). That is the *old per-seat model this memo explicitly rejects* ("don't ship 29-for-1, 39-per-seat — it invites 'why not Attio/Day.ai?'"). **Action: update the live page to the workspace + included-usage shape** (Free / Starter $39 workspace / Team $99 / consultant add-on). 
+- **"Is $29/$39 right?"** — the *number* isn't the problem; the *per-seat model* is. We've priced at $15 and $29 before (see `pricing-strategy.md` founding-member $19, launch $29) — the flip-flopping is a symptom of pricing the wrong unit. Lock the **unit** (workspace + metered costly usage), then test the number.
+- **"How do we not lose money?"** — already answered in the Pricing section: cap free transcription (the real COGS at $0.37/hr), include a bounded monthly allowance of transcription + heavy analysis, bill overages above COGS, and route 80% of AI to mini/Haiku. Margins hold at 75-80%+ as long as we never give away unlimited transcription/analysis. The live "unlimited AI analysis" on Pro is a margin leak — replace with an included allowance.
+
+### 4. The multi-hat creative angle — yes, but as a *second* message
+"AI CRM your product/marketing team will love" is a good *expansion/stickiness* hook, not the lead. Buyer = **the founder / sales-oriented operator** (acute pain, holds budget, buys fast). The dual-cofounder reality (tech + commercial founder needing different views of the same data) is exactly the **Revenue view / Insight view** split above — that's the differentiator and the retention story (two cofounders both getting value = hard to churn). So: **lead to the founder on revenue; expand with "your product/marketing cofounder gets their view too."**
+
+### 5. Prove it head-to-head → `40-gtm/experiments/2026-06-day-ai-head-to-head.md`
+Rather than assert the wedge, run a head-to-head against Day.ai on a tight sub-segment (founder-sellers who also run surveys/feedback — Day.ai can't do surveys — and the $75-resisters). See the experiment for hypothesis, audience, offer, metric, and decision rule.
