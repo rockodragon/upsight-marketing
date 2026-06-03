@@ -8,6 +8,8 @@ tags: [icp, market-sizing, positioning, gtm]
 
 # Candidate ICPs — the one place
 
+> 📌 **Positioning + pricing source of truth:** [`../revenue-gtm-decision-memo-2026-06-02.md`](../revenue-gtm-decision-memo-2026-06-02.md). Lead promise = *"who's warm, who's slipping, what's blocking the next step — with receipts"* (outcomes, not "research"). Pricing = **workspace + metered usage**, public, PostHog-style (not per-seat, not "credits"). This brief is the market/sizing view; the memo governs positioning + pricing.
+
 > **What this is:** the single consolidated view of who we target, how big each market is, what it's worth, how many people are in it, our competitive chances, and the wedge/argument for going after it. Deep-dives live in `deep-dives/`. Battle cards: `../../40-gtm/assets/collateral/battle-cards.md`. Outreach: `../../40-gtm/channels/outreach/`. Messaging: `messaging-by-icp.md` (sibling).
 >
 > **Number convention:** `[S]` = sourced (URL in `deep-dives/` / market-sizing). `[E]` = estimate (directional, assumes ~$1,000 blended ACV). Confidence noted where it matters.
@@ -16,7 +18,7 @@ tags: [icp, market-sizing, positioning, gtm]
 
 ## TL;DR — the current bet
 
-We are a **conversation-intelligence + lightweight CRM** for small revenue teams, priced **under $100/seat**, that works **out of the box on conversation/survey data you already have** and outputs **decisions ("who's ready to buy / who's about to churn"), not dashboards.**
+We are a **conversation-intelligence + lightweight CRM** for small revenue teams, priced on **workspace value + metered usage** (public, PostHog-style — *not* per-seat), that works **out of the box on conversation/survey data you already have** and outputs **decisions ("who's warm, who's slipping, what's blocking the next step"), with receipts — not dashboards.**
 
 The positioning frame (from the 2026-06-01 hypothesis): **"Between sheets and silos."** There's a real, underserved segment stuck between spreadsheets (don't scale, no memory) and expensive siloed tools (Apollo, HubSpot, Gong — overkill, admin-heavy, $15K–40K).
 

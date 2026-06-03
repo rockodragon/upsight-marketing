@@ -5,6 +5,9 @@
 
 ---
 
+## 2026-06-02 — Draft the "AI CRM" category at top-of-funnel; fight on the decision workflow
+**Why:** Day.ai pressure-test. The category is wide open (Day.ai ~10 people, launched Feb 2026) — don't cede the *language*. Use AI-CRM framing for drafting/SEO/comparison ("Day.ai alternative," "the AI CRM that shows who's warm / slipping / blocked"), but keep the *product fight* on the revenue-decision workflow + multi-source + receipts (we won't out-automate them on CRM hygiene). This **refines, not reverses**, the "not a broad AI CRM" decision below. Reasoning: `30-strategy/revenue-gtm-decision-memo-2026-06-02.md` (Addendum §1). *Convention: long-form decision records (ADR-style) live as dated memos in `30-strategy/`; this log is their one-line index.*
+
 ## 2026-06-02 — Price on workspace value plus metered costly usage, not strict seats
 **Why:** For the SMB beachhead, teammate inclusion improves stickiness while transcription and heavy analysis drive the real variable cost. Decision: keep public pricing, include multiple members on paid workspace plans, and meter expensive usage with transparent included allowances plus overages or spend caps. Lead the product on revenue decisions ("who is warm, who is slipping, what is blocking the next step"), not broad AI CRM or generic research language. Full rationale: `30-strategy/revenue-gtm-decision-memo-2026-06-02.md`.
 
