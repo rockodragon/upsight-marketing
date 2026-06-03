@@ -15,16 +15,16 @@
 
 ### Cytodyme — DJ (CEO)
 - **Stage:** demo / eval
-- **Last touch:** 2026-04-27
+- **Last touch:** 2026-05-29
 - **Next action:** demo Wednesday Apr 29 — Recall.ai blockers resolved (cloudbot + Trigger.dev keys confirmed). Close target May 9.
 - **Blocker:** _(cleared)_ Recall.ai now using cloudbot; RECALL_API_KEY confirmed in Trigger.dev
 - **Switching from:** Apollo
 - **Why us:** reliable desktop recording, role-based views, deal dashboard, dogfooded by founder
 - **UpSight opp:** `b71c41a8-79a1-4a64-9e55-9bfaae8288f1`
 
-### Startup San Diego (SSD) — Erika Gastellum
+### Startup San Diego (SSD) — Lisa Barnhouse
 - **Stage:** discovery / outreach
-- **Last touch:** 2026-05-5 at first Mondays, along with Lisa & Eric, Kurling
+- **Last touch:** 2026-05-29 at SDAC. she said lets talk surveys etc soon
 - **Next action:** get 1-1 with them and show how they can use it. convince team and Erika to use it more purposefully, not like google forms. 1-1 with Lisa, convince her.
 - **Blocker:** Erika has security concerns, lack of time, about uploading and emailing people on their list. "Maybe they didnt give permission to email them"
 - **Why us:** cohort intelligence for nonprofit accelerators — track founders, surface themes, get to yes with sponsors
@@ -40,8 +40,8 @@
 ## Backburner Todos
 ### Patricia Sinay — nonprofit AI
 - **Stage:** discovery
-- **Last touch:** 2026-04-25
-- **Next action:** send personalized video demo, follow up early May
+- **Last touch:** 2026-06-2 sent her email in response to hers about political need for 'decision intelligence platform' for voter sensing, per carnegie mellon univ paper
+- **Next action:** send personalized video demo, follow up early May. 
 - **Why us:** UpSight as member intelligence + research tool for nonprofits
 - **UpSight opp:** `a280dbd0-d554-4218-a311-42add449a1aa`
 
