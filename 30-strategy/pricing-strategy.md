@@ -407,3 +407,23 @@ For each persona, does the pricing pass the "no-brainer" test?
 - [AI SaaS Gross Margins — SaaStr](https://www.saastr.com/have-ai-gross-margins-really-turned-the-corner-the-real-math-behind-openais-70-compute-margin-and-why-b2b-startups-are-still-running-on-a-treadmill/)
 - [Hidden AI Tax 2026 — Valere](https://www.valere.io/ai-infrastructure-costs-gross-margin-erosion/)
 - [How to Price AI Products 2026](https://www.news.aakashg.com/p/how-to-price-ai-products)
+
+---
+
+## ⚡ 2026-06-07 — DECISION NEEDED THIS WEEK: pricing confidence + Platform-plus-Agency
+
+**The question (Rick):** Low confidence in the current public pricing. Take it off the website, change it, or keep it — and how do we add the done-for-you service?
+
+**Encouragement first:** the current pricing isn't broken — it's well-reasoned (workspace-based, 70%+ margins, the no-brainer test passes). Low confidence here usually isn't "the numbers are wrong," it's **"I don't yet know which buyer I'm pricing for."** That's a positioning question, not a math question — and we just sharpened the positioning (small non-technical operator + platform-plus-agency). So don't panic on price; align price to the now-clearer buyer.
+
+**Concrete steps to get clear (this week):**
+1. **Decide the headline buyer for the site:** self-serve small operator (keep simple public pricing) vs. done-for-you buyer (lead with "Book a call," custom). **Recommendation:** show simple self-serve pricing (Free / Starter / Team) **AND** a "Done-for-you" card with "Talk to us" / custom — don't hide pricing; anchor low for self-serve, make the agency the high-touch upsell.
+2. **Don't take pricing fully off the site.** Hidden pricing reads as "expensive/enterprise" — the wrong signal for a non-technical SMB who fears being upsold. For this audience, **transparency is trust.** Exception: the agency tier is legitimately custom → "Let's scope it."
+3. **Pressure-test with 5 real conversations** (this doc's own advice): ask 5 target operators "what would you expect to pay — and would you rather we set it up for you?" Confidence comes from their answers, not a spreadsheet.
+4. **Pick a number and ship it for 30 days.** Pricing is reversible; ambiguity costs more than a slightly-wrong price.
+
+→ **Decision owner: Rick. Target: this week.** Log the call in `00-control/decisions.md`.
+
+## 9. Platform + Agency (Done-For-You) — NEW
+
+UpSight = **platform (software) + agency (done-for-you).** The agency layer is human-assisted AI-agent implementation / executive support for operators who want it done *with* them — **custom pricing**, scoped per engagement. Full offering in [`done-for-you-service-offering.md`](./done-for-you-service-offering.md). Rough shape to validate: a one-time setup/onboarding package + a monthly "fractional AI operator" retainer, on top of a software seat.

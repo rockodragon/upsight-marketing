@@ -328,3 +328,26 @@ With UpSight:
 ---
 
 *This is a living document. Update based on sales conversations and user feedback.*
+
+---
+
+## 2026-06-07 — Positioning Refresh: Voice-first Operator OS + Platform-plus-Agency
+
+> Supersedes the framing above where they conflict. Driven by (a) strong new voice capability, (b) an honest competitive read (`../20-research/market-intel/Competitors/instagram-ad-wave-agentic-crm-2026-06.md`), and (c) the product-repo north-star (`docs/00-foundation/flow-state-positioning.md`).
+
+### The refreshed one-liner
+> **Get in flow. Tell Uppy your rocks — it lines up the moves and frees you to fly.**
+
+UpSight is the **voice-first operating system for founders and small operators**: talk, and your customer work — sales, discovery, surveys — gets understood, prioritized, and started, with the **receipts** to back every move.
+
+### The moat is the AUDIENCE, not a feature
+Honest truth (see the IG ad teardown): every individual claim — voice CRM, "AI chief of staff," agentic execution, even citations/receipts — is *already* being made by someone (Chirp/Birdie, Dispatch, Reevo, Marvin…). No single feature is defensible. Our wedge is the **combination + the segment**:
+- **Breadth as one operating model** (discovery + sales + surveys + prioritization) vs. a pile of point tools a small operator can't stitch together.
+- **Receipts everywhere** as the default trust layer, in a world where everyone else says "it just does it."
+- **The small, non-technical operator** — never ran a CRM, no RevOps, wants to be brought "into the age." The entire agentic-CRM wave flies over this segment (they target sales teams, GTM orgs, ops-mature mid-market). **This is the open lane.**
+
+### Platform + Agency (the new shape)
+The honest pitch: **better software — but AI still won't do it alone.** A non-technical operator needs help steering it and figuring out what's right for their business. So UpSight becomes a **platform with a done-for-you agency add-on** (executive support / managed AI-agent implementation, custom pricing). Self-serve software for capability; human-assisted service for those who'd rather have it done *with* them. See [`done-for-you-service-offering.md`](./done-for-you-service-offering.md).
+
+### Language (blended)
+Nav stays plain and familiar (CRM, People, Tasks, Signals). The *voice* speaks operator: **Rocks** (goals), **Moves** (tasks), **Receipts** (evidence). "Crack your big rocks." Full rules in the product repo's `flow-state-positioning.md`.
