@@ -7,6 +7,7 @@
 
 | Date opened | Q | Type | Owner | Status |
 |---|---|---|---|---|
+| 2026-06-09 | Is event-organizer a real ICP, or off the founder-led-seller thesis? Run Nessa's research-led probe as the test. | [bet] | Rick | open → plan `40-gtm/channels/outreach/nessa-event-organizer-leadgen-2026-06-09.md` |
 | 2026-06-02 | Can we win a defined sub-segment head-to-head vs Day.ai (surveys + receipts + price)? | [tactical] | Rick | open → exp `2026-06-day-ai-head-to-head` |
 | 2026-06-02 | Right packaging unit + entry number: workspace $39 (memo) vs live per-seat $0/$29/$39 — which converts, at what WTP? | [tactical] | Rick | open |
 | 2026-06-02 | What included monthly allowance (transcription + heavy analysis) makes a no-brainer trial without making free/cheap users unprofitable? | [tactical] | Rick | open |
