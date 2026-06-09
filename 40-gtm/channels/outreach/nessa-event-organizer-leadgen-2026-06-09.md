@@ -202,6 +202,8 @@ Titles: Event Coordinator / Manager, Community Manager, Program Coordinator · S
 ## Decisions
 - ✅ **Identity:** edu angle — Nessa as SDSU marketing student; UpSight named only at handoff (2026-06-09).
 - ✅ **Sr-leader involvement:** handoff model — senior time is Segment-A-only, post-qualification (2026-06-09).
+- ✅ **Incentive:** NO cash. The aggregate **benchmark report** is the incentive — self-selects people
+  invested in the space; deliver via `40-gtm/assets/collateral/research-benchmark-report-template.md` (2026-06-09).
+- ✅ **Track split:** 60/40 primary-ICP / event-organizer for Nessa's time (2026-06-09).
 - ⬜ **Scope:** approve as fixed-time ICP probe + dogfood? (vs. a funded channel)
-- ⬜ **Incentive:** benchmark-report-back (recommended) vs. gift-card-to-completers — confirm (drop $20-for-call).
 - ⬜ **Seed list:** fill the table above (6–12 warm organizers).

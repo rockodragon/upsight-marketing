@@ -183,7 +183,9 @@ Per **100 community-warmed research touches** (warmer than pure cold → higher 
 
 ---
 
-## Open decisions for Rick
-1. **Seed list:** fill the table above (8–15 warm contacts) — the single biggest lever on this track.
-2. **Honest frame:** confirm the "early-stage team / study" wording (vs. naming UpSight up front).
-3. **Run both tracks in parallel?** Confirm Nessa's split between this (primary, on-thesis) and event-organizer (opportunistic probe).
+## Decisions
+- ✅ **Incentive:** NO cash. The aggregate **benchmark report** is the incentive — self-selects people
+  invested in the space; deliver via `40-gtm/assets/collateral/research-benchmark-report-template.md` (2026-06-09).
+- ✅ **Track split:** 60/40 primary-ICP / event-organizer for Nessa's time — this track gets the 60 (2026-06-09).
+- ⬜ **Seed list:** fill the table above (8–15 warm contacts) — the single biggest lever on this track.
+- ⬜ **Honest frame:** warm = Rick intro (names UpSight); cold/community can use the edu/student-research framing.
