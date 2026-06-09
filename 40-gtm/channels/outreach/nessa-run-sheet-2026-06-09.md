@@ -16,8 +16,15 @@ tags: [ops, outreach, onboarding, run-sheet, nessa]
 ---
 
 ## Your mission (in two sentences)
-You're running a **research-led outreach** program: talk to people about how they work, capture
-what they say, and flag the warm ones. The research is real and genuinely useful — leads are the byproduct.
+You're running a **research-led outreach** program: become part of the communities where founders and
+event organizers hang out, talk to people about how they work, capture what they say, and flag the warm ones.
+
+**The honest thing you're offering — your North Star:** we're doing research on how people track and
+follow up with customers (and how organizers handle attendee & sponsor feedback), so we can understand
+them better — and we'll **write a short research report and share it back with the community.** That
+shared report is the reason we're having these conversations, and it's the thing you can always offer
+people: *"I'll send you the findings."* The research is genuinely useful; leads are the byproduct.
+(Doc 5 shows exactly what that report looks like.)
 
 ## This week's focus: **60% founders / 40% event organizers**
 Two tracks. Spend more time on founders. Pick which track a given block is for and stick to it.
@@ -38,33 +45,39 @@ Two tracks. Spend more time on founders. Pick which track a given block is for a
 
 ---
 
-## Daily rhythm (repeat every work session)
+## Daily rhythm (basically the same every day)
 
 Work in this order, every session:
 
-1. **Warm seeds first (15 min).** Open the **Seed research list** in whichever track's doc. Work the
-   top unworked person — send the warm-intro message, or follow up on one you already messaged.
-   *Warm people convert best — always start here.*
-2. **Engage, don't pitch.** In your target communities (founders: StartupSD / r/SaaS / Lenny's;
-   events: #eventprofs / event groups), leave genuine comments. No links, no selling. You're earning
-   the right to DM later.
-3. **Personalized outreach.** Send a strong batch of fresh DMs/emails using the **Outreach copy** for
-   today's track. Personalize the first line (prove you looked). Stop on reply — move them to step 4.
+1. **Be in the communities — read, like, comment (do this first).** Before any names or messages,
+   spend real time in the forums and groups (founders: StartupSD / r/SaaS / Lenny's; events:
+   #eventprofs / event groups). Read posts, like, leave genuine comments, get a feel for how each
+   community talks. You're becoming a familiar face and **earning the right** to ask. This comes
+   before everything else — no links, no selling.
+2. **Work the warm seeds.** Once Rick has added names to the **Seed research list** (in each track's
+   doc), reach out to the top unworked person, or follow up on one you've already messaged.
+3. **Make the research offer.** When you've earned it, share what we're doing — honestly:
+   *"We're doing research on how people track and follow up with customers, to understand them better.
+   We'll write up a short research report and share it back. Could I get your take?"* Use the
+   **Outreach copy** for today's track; personalize the first line (prove you looked). Stop on reply.
 4. **Run / book chats (rolling).** Anyone who says yes → book or run the 15-min chat. Use the **Talk track**
-   doc. Tag them in UpSight after (see below).
+   doc. Always close by confirming you'll send them the findings. Tag them in UpSight after (see below).
 5. **Log it.** Fill today's row in your log (template at the bottom). Drop questions for Rick in there.
 
-**Daily goals:** ~20–30 personalized touches · 8–10 genuine community comments · work several warm seeds ·
-keep your chat calendar filling. Quality beats raw count — a day with 2 great chats and 15 touches beats
-30 rushed ones.
+**Daily goals:** keep growing your presence in the communities · work several warm seeds · make a
+healthy batch of genuine, personalized asks · keep your chat calendar filling. Quality beats raw count —
+a day with 2 great chats and a dozen real interactions beats 30 rushed messages.
 
 ---
 
 ## Weekly rhythm
-- **Monday:** pick your 60/40 split for the week; build/refresh a full week's worth of named prospects.
-- **Across the week:** run **5–8 research chats** and hand any **Segment A** to Rick same-day.
-- **Wed/Thu:** check what's getting replies — do more of that, drop what's silent.
-- **Friday:** send Rick a 5-line recap → *touches sent / replies / chats booked / best quote you heard / anything you're stuck on.*
+You do basically the same thing every day — no day-specific to-do list. Just keep the rhythm going,
+and we review at the end of the week.
+
+- **Touch base with Rick: Monday, Wednesday, Friday.** Quick check-ins — what's working, what's stuck,
+  any warm ones to hand off.
+- **End of week:** a short recap → *people reached / chats done / best quotes you heard / what's stuck.*
+  We'll look at it together and adjust for next week.
 
 ---
 
