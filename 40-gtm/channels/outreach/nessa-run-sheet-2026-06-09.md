@@ -40,28 +40,31 @@ Two tracks. Spend more time on founders. Pick which track a given block is for a
 
 ## Daily rhythm (repeat every work session)
 
-Work in this order. A normal ~2-hour block:
+Work in this order, every session:
 
 1. **Warm seeds first (15 min).** Open the **Seed research list** in whichever track's doc. Work the
    top unworked person — send the warm-intro message, or follow up on one you already messaged.
    *Warm people convert best — always start here.*
-2. **Engage, don't pitch (20 min).** In your target communities (founders: StartupSD / r/SaaS / Lenny's;
-   events: #eventprofs / event groups), leave 3–5 genuine comments. No links, no selling. You're earning
+2. **Engage, don't pitch.** In your target communities (founders: StartupSD / r/SaaS / Lenny's;
+   events: #eventprofs / event groups), leave genuine comments. No links, no selling. You're earning
    the right to DM later.
-3. **Personalized outreach (45 min).** Send 8–12 fresh DMs/emails using the **Outreach copy** for today's
-   track. Personalize the first line (prove you looked). Stop on reply — move them to step 4.
+3. **Personalized outreach.** Send a strong batch of fresh DMs/emails using the **Outreach copy** for
+   today's track. Personalize the first line (prove you looked). Stop on reply — move them to step 4.
 4. **Run / book chats (rolling).** Anyone who says yes → book or run the 15-min chat. Use the **Talk track**
    doc. Tag them in UpSight after (see below).
-5. **Log it (10 min).** Fill today's row in your log (template at the bottom). Drop questions for Rick in there.
+5. **Log it.** Fill today's row in your log (template at the bottom). Drop questions for Rick in there.
 
-**Daily target (rough, adjust with Rick):** ~10 new touches + 3–5 community comments + work 1–2 seeds.
+**Daily goals:** ~20–30 personalized touches · 8–10 genuine community comments · work several warm seeds ·
+keep your chat calendar filling. Quality beats raw count — a day with 2 great chats and 15 touches beats
+30 rushed ones.
 
 ---
 
 ## Weekly rhythm
-- **Monday:** pick your 60/40 split for the week; refresh your target lists.
+- **Monday:** pick your 60/40 split for the week; build/refresh a full week's worth of named prospects.
+- **Across the week:** run **5–8 research chats** and hand any **Segment A** to Rick same-day.
 - **Wed/Thu:** check what's getting replies — do more of that, drop what's silent.
-- **Friday (15 min):** send Rick a 5-line recap → *touches sent / replies / chats booked / best quote you heard / anything you're stuck on.*
+- **Friday:** send Rick a 5-line recap → *touches sent / replies / chats booked / best quote you heard / anything you're stuck on.*
 
 ---
 
@@ -93,10 +96,16 @@ Put the person in UpSight and tag their segment:
 
 ---
 
-## What good looks like (first 2 weeks)
-- You've talked to **8–12 people** total across both tracks.
-- A handful are tagged **Segment A** and handed to Rick.
-- You've collected **10+ real quotes** about how people actually work.
-- You feel like you understand the customer better than when you started.
+## What good looks like
 
-That's a win. It is **not** about volume of messages — it's about real conversations and real quotes.
+**Each week**
+- **5–8 real research chats** done.
+- Several people tagged **Segment A** and handed to Rick.
+- **12+ real quotes** about how people actually work, captured in your log.
+
+**By end of week 2**
+- **15–20 conversations** across both tracks.
+- A steady handful of Segment A leads in Rick's hands.
+- You understand the customer better than when you started — that's the real deliverable.
+
+It is **not** about volume of messages — it's about real conversations and real quotes.
