@@ -57,9 +57,10 @@ off-ICP leads will *look* like progress and quietly pull GTM off the founder-led
 - Rich-media replies → free VOC / testimonial content + a real feature dogfood.
 
 ### Broken (fix before launch)
-1. **Muddled identity** — "SDSU intern" *and* "deeplight, an AI company." Pick one, be transparent.
-   Avoid bait-and-switch: a "research" call that becomes a sr-leader pitch torches the trust the
-   framing bought. (Also: "deeplight" ≠ UpSight — confirm that's intentional, not a naming leak.)
+1. **Muddled identity → RESOLVED: go with the edu angle.** Frame Nessa as an **SDSU marketing
+   student** doing research, working with an early-stage team. Drop the "deeplight" name; UpSight
+   is named only at the **handoff** step (Segment A), never in the cold opener. Honest, disarming,
+   no bait-and-switch.
 2. **$20 incentive is inverted** — dangling cash for "a call with a sr leader" makes the senior
    person the prize and the respondent the buyer (backwards). $20 attracts farmers, tanks data
    quality, and is too small to move a real senior organizer. **Fix:** drop cash; offer the
@@ -115,6 +116,57 @@ off-ICP leads will *look* like progress and quietly pull GTM off the founder-led
 
 ---
 
+## ✍️ Seed research list — Rick adds people here
+
+> Warm seeds go FIRST — organizers you (or your network) can reach directly, so the study starts
+> warm and earns referrals before any cold outreach. Aim for **6–12 seeds.** Nessa works it top-down.
+
+| # | Name | Org / role | How you know them | Events/yr (screener) | Best channel (you intro / Nessa DM) | Status |
+|---|------|-----------|-------------------|---------------------|-------------------------------------|--------|
+| 1 |  |  |  |  |  | not started |
+| 2 |  |  |  |  |  | not started |
+| 3 |  |  |  |  |  | not started |
+| 4 |  |  |  |  |  | not started |
+| 5 |  |  |  |  |  | not started |
+| 6 |  |  |  |  |  | not started |
+
+> Sources to mine: SDSU event/marketing network · local org/DEI/community organizers Nessa knows ·
+> MPI/ILEA chapter contacts · anyone in the vault MCP tagged as an event organizer.
+
+---
+
+## Outreach copy (edu angle — DECIDED)
+
+> Nessa = SDSU marketing student doing research, working with an early-stage team. NO pitch in the
+> opener. UpSight named only at handoff. Incentive = aggregate findings back (not $20). Cold <90 words.
+
+### A. Warm-seed intro
+> Hi [name] — I'm a marketing student at SDSU researching how event organizers handle feedback
+> from attendees and sponsors (and prove value afterward). You run [event/org], so you're exactly
+> who I want to learn from — 15 min, no pitch. I'll share back what I hear across all the organizers. Open to it?
+
+### B. Community-warm DM (after Nessa engages with their post)
+> Hi [name] — I'm an SDSU marketing student doing a study on how event organizers collect attendee
+> & sponsor feedback and demonstrate ROI. Your post on [topic] is right in the middle of it. Could I
+> borrow 15 min — or 90 seconds for 4 questions? I'll send you the aggregate findings + how your
+> response rates compare to other organizers. Not selling anything.
+
+### C. Group / forum post (awareness layer — student study, NOT a link-drop)
+> Hi all — SDSU marketing student here. I'm researching how event organizers gather feedback from
+> attendees and sponsors and demonstrate value. If you run events, I'd love 90 seconds of your input
+> [survey link] — I'll publish the aggregate benchmark back to the group. Happy to chat 15 min if you're open.
+
+### Follow-ups (2 touches max, stop on reply)
+- **+3 days:** "No worries if buried — even the 4-question version helps (link). I'll send the findings either way."
+- **+5 days (breakup):** "Last nudge — happy to share the benchmark with you regardless. Thanks either way!"
+
+### The handoff line (Segment A only, after the research chat — DECIDED)
+> "This was super helpful, thank you. One thing — the team I'm working with, UpSight, is building a
+> tool for exactly the feedback/ROI problem you described. Would it be useful if [sr leader] showed
+> you what they've got? Totally separate from the research, no obligation."  *(→ sr leader follows up within 24h)*
+
+---
+
 ## Expected success rate (funnel math, best-practice grounded)
 
 Per **100 personalized, warmed research DMs:**
@@ -147,8 +199,9 @@ Titles: Event Coordinator / Manager, Community Manager, Program Coordinator · S
 
 ---
 
-## Open decisions for Rick
-1. **Scope:** approve as fixed-time ICP probe + dogfood? (vs. a funded channel)
-2. **Identity:** what's the honest one-line frame — and is "deeplight" intentional?
-3. **Incentive:** benchmark-report-back (recommended) vs. gift-card-to-completers vs. keep $20-for-call?
-4. **Sr-leader involvement:** confirm senior time is Segment-A-only, post-qualification.
+## Decisions
+- ✅ **Identity:** edu angle — Nessa as SDSU marketing student; UpSight named only at handoff (2026-06-09).
+- ✅ **Sr-leader involvement:** handoff model — senior time is Segment-A-only, post-qualification (2026-06-09).
+- ⬜ **Scope:** approve as fixed-time ICP probe + dogfood? (vs. a funded channel)
+- ⬜ **Incentive:** benchmark-report-back (recommended) vs. gift-card-to-completers — confirm (drop $20-for-call).
+- ⬜ **Seed list:** fill the table above (6–12 warm organizers).
