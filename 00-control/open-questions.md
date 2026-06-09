@@ -7,6 +7,7 @@
 
 | Date opened | Q | Type | Owner | Status |
 |---|---|---|---|---|
+| 2026-06-09 | Dynamic Groups: how should the app express segment exclusivity (precedence vs explicit exclude) + which criteria types (attributes / survey / engagement / AI-theme)? | [bet] | Rick | open → spec seeded 2026-06-09; needs a separate app-repo thread |
 | 2026-06-09 | Is event-organizer a real ICP, or off the founder-led-seller thesis? Run Nessa's research-led probe as the test. | [bet] | Rick | open → plan `40-gtm/channels/outreach/nessa-event-organizer-leadgen-2026-06-09.md` |
 | 2026-06-02 | Can we win a defined sub-segment head-to-head vs Day.ai (surveys + receipts + price)? | [tactical] | Rick | open → exp `2026-06-day-ai-head-to-head` |
 | 2026-06-02 | Right packaging unit + entry number: workspace $39 (memo) vs live per-seat $0/$29/$39 — which converts, at what WTP? | [tactical] | Rick | open |
