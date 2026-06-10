@@ -28,7 +28,7 @@ people: *"I'll send you the findings."* The research is genuinely useful; leads 
 
 ---
 
-## The funnel (the whole motion on one screen)
+## The motion (the whole play on one screen)
 
 ```mermaid
 flowchart TD
@@ -78,11 +78,13 @@ flowchart TD
 
 ---
 
-## Funnel #2 — the conversion math (the business view)
+## The funnels — three paths, one motion
 
-> Illustrative, primary-ICP, per **100 community-warmed touches.** Warm seeds convert higher; the
-> event-organizer track runs a bit lower. **Nessa owns the top** (the wide stages — real conversations
-> and quotes); the lower stages are Rick's to convert. Trial→paid is an industry estimate, not a promise.
+We run three funnels at once. **Cold is the floor; warm seeds are the engine; the report makes it
+compound.** And on the *research* goal, nearly every conversation is a win no matter who buys.
+All numbers illustrative; trial→paid is an industry estimate, not a promise.
+
+### Funnel A — the floor: cold / community path  ·  ~1 customer per 100
 
 ```mermaid
 flowchart TD
@@ -103,8 +105,53 @@ flowchart TD
     class S8 win;
 ```
 
-> Takeaway: it takes a healthy **top** to make one customer — which is why showing up in the communities
-> every day (the widest stage, yellow) is the whole game. Good conversations there feed everything below.
+> This is the **floor**, not the expected case — cold always converts low. It's still worth running
+> because the wide top (yellow) is where the research + quotes come from.
+
+### Funnel B — the engine: warm seeds + referrals  ·  ~1 customer per 20  ·  START HERE
+
+```mermaid
+flowchart TD
+    W1[20 warm seeds<br/>Rick intros + referrals]
+    W2[~10-12 research chats<br/>~55% - warm = high yes]
+    W3[~5 Segment A<br/>~45% of chats]
+    W4[~2-3 free-read demos]
+    W5[~1-2 trials]
+    W6[~1 paying customer<br/>1 per ~20 seeds]
+
+    W1 --> W2 --> W3 --> W4 --> W5 --> W6
+
+    classDef warm fill:#fff3bf,stroke:#f08c00,color:#000;
+    classDef win fill:#d3f9d8,stroke:#2f9e44,color:#000;
+    class W1,W2 warm;
+    class W6 win;
+```
+
+> Same motion, **~5× the conversion** — warm people say yes far more often. This is why Rick's seed
+> list is the single biggest lever, and why you always work seeds before cold.
+
+### Funnel C — the flywheel: the report makes it compound
+
+```mermaid
+flowchart LR
+    P1[Run research<br/>chats + surveys]
+    P2[Publish short<br/>benchmark report]
+    P3[Inbound: downloads,<br/>signups, replies]
+    P4[Warmer community<br/>+ credibility]
+    P5[Next batch<br/>converts higher]
+
+    P1 --> P2 --> P3 --> P4 --> P5 --> P1
+
+    classDef fly fill:#e7f5ff,stroke:#1971c2,color:#000;
+    class P1,P2,P3,P4,P5 fly;
+```
+
+> Cold and warm both *grind* — the report makes them **compound.** Each round produces a report; the
+> report pulls inbound and warms the community, so every following batch starts warmer.
+
+### The yield that doesn't depend on anyone buying
+> ~**100% of conversations** produce a usable quote or insight. Even a zero-customer week moves the real
+> near-term goal — understanding the customer — forward. **Conversations and quotes are the win you control.**
 
 ## This week's focus: **60% founders / 40% event organizers**
 Two tracks. Spend more time on founders. Pick which track a given block is for and stick to it.
