@@ -26,6 +26,51 @@ shared report is the reason we're having these conversations, and it's the thing
 people: *"I'll send you the findings."* The research is genuinely useful; leads are the byproduct.
 (Doc 5 shows exactly what that report looks like.)
 
+---
+
+## The funnel (the whole motion on one screen)
+
+```mermaid
+flowchart TD
+    A[Be in the communities<br/>read - like - comment - earn the right]
+    B[Make the research offer<br/>we will share a short report back]
+    C{They engage?}
+    D[Short survey - 90 sec]
+    E[15-min research chat]
+    F[Tag in UpSight]
+    G[A - Hot<br/>fits and wants more]
+    H[B - Nurture<br/>maybe or lukewarm]
+    I[C - Research<br/>not now]
+    J[Hand to Rick in 24h<br/>free-read offer - pipeline]
+    K[Nurture - re-offer in 2-3 weeks]
+    L[Mine best quotes for copy]
+    R[Short research report<br/>shared back to everyone]
+
+    A --> B --> C
+    C -->|prefers async| D
+    C -->|prefers to talk| E
+    D --> F
+    E --> F
+    F --> G
+    F --> H
+    F --> I
+    G --> J
+    H --> K
+    I --> L
+    D --> R
+    E --> R
+    R -.->|delivers the promise| A
+
+    classDef hot fill:#ffe3e3,stroke:#e03131,color:#000;
+    classDef report fill:#e7f5ff,stroke:#1971c2,color:#000;
+    class G,J hot;
+    class R report;
+```
+
+> In plain words: **show up in the community → offer the research → they fill a survey or take a chat →
+> you tag them A/B/C → hot ones go to Rick, everyone gets the report.** The report (blue) loops back —
+> it's what makes you welcome in the community next time. The hot path (red) is the goal.
+
 ## This week's focus: **60% founders / 40% event organizers**
 Two tracks. Spend more time on founders. Pick which track a given block is for and stick to it.
 
