@@ -158,6 +158,9 @@ Rich-media reply (audio/video) offered to no-call respondents who still want to 
 
 ## Expected success rate (funnel math)
 
+> 📊 **Visuals:** the full funnel set — the motion end-to-end, the cold *floor* (~1/100), the warm-seed
+> *engine* (~1/20), and the report *flywheel* — lives in `nessa-run-sheet-2026-06-09.md` ("The funnels").
+
 Per **100 community-warmed research touches** (warmer than pure cold → higher than the event-organizer track):
 
 | Stage | Rate | Count |
