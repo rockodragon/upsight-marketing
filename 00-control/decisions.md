@@ -5,6 +5,11 @@
 
 ---
 
+## 2026-06-06 — Sales lives in project `6dbcbb68` ("GTM Sales"), NOT the project named "GTM"
+**The model:** Account = client (the isolation boundary). Project = a line of inquiry. CRM (deals + people + orgs) currently lives in **one** project because the deal/people MCP tools hardwire to a single context project.
+**The fact to keep straight:** That project is **`6dbcbb68`** — currently mislabeled "UpSight Interviews", rename it to **"GTM Sales"**. The project literally named **"GTM"** (`3b800115`) is **research** — interviews/insights, *no deals*; rename it "GTM Research". **URL tell:** the segment right after `/a/<account>/` is the *project*; if it's not `6dbcbb68`, you're not in sales (that's why org links 404'd from `3b800115`).
+**Status:** interim. The real fix is account-level CRM so pipeline isn't trapped in one project — tracked in Beads `UpSight-vuw` (+ `x76`, `qf0`). Until then: do all sales work in `6dbcbb68`.
+
 ## 2026-06-02 — Draft the "AI CRM" category at top-of-funnel; fight on the decision workflow
 **Why:** Day.ai pressure-test. The category is wide open (Day.ai ~10 people, launched Feb 2026) — don't cede the *language*. Use AI-CRM framing for drafting/SEO/comparison ("Day.ai alternative," "the AI CRM that shows who's warm / slipping / blocked"), but keep the *product fight* on the revenue-decision workflow + multi-source + receipts (we won't out-automate them on CRM hygiene). This **refines, not reverses**, the "not a broad AI CRM" decision below. Reasoning: `30-strategy/revenue-gtm-decision-memo-2026-06-02.md` (Addendum §1). *Convention: long-form decision records (ADR-style) live as dated memos in `30-strategy/`; this log is their one-line index.*
 

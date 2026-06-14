@@ -15,7 +15,7 @@ Not just product research. Not just sales intelligence. Both.
 4. **Research Frameworks** - Lenses for structured analysis (not just generic tagging)
 5. **Consumer-Grade UX** - Typeform-style simplicity with professional features
 
-See [our-honest-assessment.md](./our-honest-assessment.md) for an unvarnished look at our strengths and weaknesses.
+See [our-honest-assessment.md](v%20Competition%20honestly%206-2.md) for an unvarnished look at our strengths and weaknesses.
 
 ---
 
@@ -193,7 +193,7 @@ When adding a new competitor analysis:
    - **Where they beat us** (honest assessment)
    - Threat assessment
 3. Update this README with the new entry
-4. Update [our-honest-assessment.md](./our-honest-assessment.md) if relevant
+4. Update [our-honest-assessment.md](v%20Competition%20honestly%206-2.md) if relevant
 
 ---
 

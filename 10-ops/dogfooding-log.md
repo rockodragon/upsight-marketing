@@ -8,6 +8,15 @@
 
 ## Open
 
+### 2026-06-04 — Organization delete is unreachable via MCP: guard demands a phrase the tool can't carry
+**Context:** Setting up the GTM pipeline, needed to delete two empty/orphaned orgs (Defense.com, created in error from a Events.com→Defense.com mix-up; Arts Society, orphaned after re-linking Haley to "The Table Arts Society").
+**Friction:** `manage_organizations action=delete` returns *"I can't delete this organization without seeing your explicit instruction. Please retry by typing something like 'delete Defense.com'."* and fails even when the user types that exact phrase. **Root cause (verified in code):** `deletion-guard.ts` reads the user's real last message from `requestContext.last_user_message`, which middleware fills from the client HTTP header `x-last-user-message`; if absent it fails closed. This Claude Code → MCP transport doesn't send that header, so the guard always sees an empty message — the typed phrase never reaches it. By design the guard is *not* LLM-satisfiable (added after the 2026-04-23 wrong-delete incident). So this is a **client/transport plumbing gap**, not undeployed code and not a missing param. In UpSight's own chat UI (which sets the header) the same phrase would pass. Failed 5× this session.
+**Workaround:** Delete in the web UI; orgs left in place.
+**Severity:** P1 — a core destructive action is unusable from any MCP surface that doesn't forward the header, and the "type delete X" error misleads the user into a no-op retry loop.
+**Status:** filed `UpSight-qf0` (P1, root cause corrected).
+**Story angle:** "A safety guard that's invisible to the surface calling it isn't safety — it's a locked door with no keyhole. Confirmation has to travel with the request."
+**Related:** Two org tools exist — `app/mastra` (header-guard, no param) vs `mcp-servers/agent-crm` (`confirm_name` param, machine-satisfiable); `delete_task` uses `confirmed:true`. Three patterns, one should win — `confirm_name` is the transport-independent one.
+
 ### 2026-04-26 — Project-status agent fabricated task creation, never called createTask, burned 72k tokens
 **Context:** Asked the agent to "add this to my tasks to read - <URL>". Got back: "Task added: 'Read: The Opposable Mind' (link provided)."
 **Friction:** Server logs show only `fetchTasks` was called (twice — once with typo, once corrected). NO `createTask`. NO delegation to `taskAgent`. The "Task added" message was fabricated. The user-facing response also returned a generic project-level link ("Quick links: Insights") instead of a task URL — because no task existed.

@@ -11,14 +11,14 @@
             "id": "5637891c0ed30b78",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "00-control/pipeline.md",
-                "mode": "source",
-                "source": false
+                "aFile": "20-research/market-intel/Competitors/our-honest-assessment.md",
+                "bFile": "20-research/market-intel/Competitors/our-honest-assessment.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "pipeline"
+              "icon": "diff",
+              "title": "Diff: our-honest-assessment  (Working Tree)"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "pipeline",
+                "query": "revenue-gtm",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00-control/pipeline.md",
+                "file": "2026-06-04.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for pipeline"
+              "title": "Backlinks for 2026-06-04"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00-control/pipeline.md",
+                "file": "2026-06-04.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from pipeline"
+              "title": "Outgoing links from 2026-06-04"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00-control/pipeline.md",
+                "file": "2026-06-04.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of pipeline"
+              "title": "Outline of 2026-06-04"
             }
           },
           {
@@ -196,13 +196,32 @@
   },
   "active": "5637891c0ed30b78",
   "lastOpenFiles": [
-    "99-archive/2026-04-25-pipeline.md",
-    "40-gtm/channels/content-seo/blog/01-what-is-customer-discovery.md",
-    "10-ops/agentcrm-tool-testing.md",
-    "10-ops/dogfooding-log.md",
-    "10-ops/repo-index.md",
-    "10-ops/worklog.md",
-    "10-ops/agents.md",
-    "30-strategy/agentcrm-consolidated-strategy.md"
+    "20-research/market-intel/deliberative-intelligence-market.md",
+    "2026-06-07.md",
+    "2026-06-13 Week.md",
+    "40-gtm/channels/outreach/research-led-leadgen-founder-spreadsheet-2026-06-09.md",
+    "40-gtm/channels/outreach/nessa-run-sheet-2026-06-09.md",
+    "40-gtm/channels/outreach/nessa-event-organizer-leadgen-2026-06-09.md",
+    "40-gtm/assets/collateral/research-benchmark-report-template.md",
+    "20-research/market-intel/Competitors/instagram-ad-wave-agentic-crm-2026-06.md",
+    "2026-06-07 week.md",
+    "2026-06-01 Week.md",
+    "30-strategy/done-for-you-service-offering.md",
+    "30-strategy/pricing-strategy.md.tmp.60600.23285e8bd8a7",
+    "2026-06-04.md",
+    "40-gtm/assets/scripts/icp-hook-video-playbook.md",
+    "20-research/market-intel/Competitors/nonprofit-fundraising-video.md",
+    "20-research/market-intel/Competitors/v Competition honestly 6-2.md",
+    "00-control/priorities.md",
+    "00-control/status.md",
+    "00-control/traction.md",
+    "00-control/traction-goals.md",
+    "2026-06-03.md",
+    "30-strategy/brand-positioning-analysis.md",
+    "30-strategy/messaging.md",
+    "30-strategy/marketing-plan-2026-q2.md",
+    "30-strategy/revenue-gtm-decision-memo-2026-06-02.md",
+    "30-strategy/agentcrm-dev-acquisition-surface-2026-06-02.md",
+    "40-gtm/experiments/2026-06-day-ai-head-to-head.md"
   ]
 }

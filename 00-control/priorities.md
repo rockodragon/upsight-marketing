@@ -6,6 +6,15 @@
 
 ---
 
+## Update for 6-1 week
+- onboard and make interns productive. primarily give nessa tasks
+- Nessa
+	- research event organizers and startups in apollo
+- Rick GTM
+	- demo script & record
+	- get cytodyme and TAS onboarded
+
+
 ## The thesis for this week
 
 **Weekend land is done. This week: dogfood the brain, kick off v4 page migrations, force decisions on every stale deal, and ship the data-loss fix.**

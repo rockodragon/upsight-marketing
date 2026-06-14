@@ -5,6 +5,31 @@
 
 ---
 
+## 2026-06-06 — GTM sales pipeline stood up in UpSight + CRM scoping architecture
+
+**Shipped**
+- *GTM sales pipeline live in the UpSight CRM* — project `6dbcbb68` ("UpSight Interviews"), which is the de-facto sales workspace, **not** the project literally named "GTM" (that one is research). 6 deals: **Table Arts Society** ($39/mo, Validate, close 6/14), **Cytodyme** (DJ), **Events.com** (Cheryl Goodman), **Christina Font** (evaluation), plus pre-existing acme / Startup San Diego.
+- *Contacts/orgs cleaned up* — added Christina Font + Cheryl Goodman; corrected Cheryl's company (Defense.com → **Events.com**); merged Haley Dall onto **The Table Arts Society**.
+- *First EOS Rock* — **"Land paying GTM customers (Q2)"** (due 6/30) with the 3 active-deal tasks laddered under it → surfaces as a Goal in the Portfolio view.
+
+**Stuck**
+- *Org delete unusable over MCP* — `deletion-guard` needs the `x-last-user-message` header this Claude Code transport doesn't send, so it fails closed even when the exact phrase is typed. Two empty orgs (Defense.com, Arts Society) must be deleted in the web UI. (Root cause verified in code; not "undeployed.")
+- *Project renames* (`6dbcbb68`→"GTM Sales", `3b800115`→"GTM Research") are in-app only — no rename tool over MCP.
+- *Junk-task triage* parked — no structured task list over MCP (see d30).
+
+**Decided** (architecture — tracked in Beads `UpSight-vuw`)
+- *CRM (deals/orgs) → account-level by default, project-optional.* Account = client (isolation, already RLS-enforced); project = line of inquiry; relationships live at the account; **participants get promoted into the CRM deliberately**; grouping/filtering moves to a view layer (dynamic groups as chips), decoupled from storage. Schema already leans this way (people are account-scoped; org `project_id` nullable; only `opportunities.project_id` is hard-pinned).
+
+**Surfaced / flagged** (filed as Beads in the UpSight repo)
+- `UpSight-d30` — structured `fetch_tasks` (filtered task reads); implementation chip spawned.
+- `UpSight-x76` — explicit `projectId` on deal/people MCP tools + account/project context switching.
+- `UpSight-vuw` (+ `.1/.2/.3`) — account-level CRM decision + build tickets (nullable opp.project_id + account pipeline view; org-create defaults account-level; participant→relationship promotion).
+- `UpSight-2ve` — dynamic groups (saved filters) as chips for views & analysis.
+- `UpSight-31y` — document the task/Rock/project model in public docs.
+- `UpSight-qf0` — org-delete header-guard bug (root cause corrected after initial mis-diagnosis).
+- Dogfooding: org-delete friction logged in `10-ops/dogfooding-log.md`.
+- Memory: recorded that the sales pipeline lives in `6dbcbb68`, not the "GTM"-named project.
+
 ## 2026-06-01 — vault reorg + ICP/market consolidation
 
 **Shipped**
