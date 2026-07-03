@@ -1,0 +1,86 @@
+{
+  "id": "ai-survey-hero",
+  "title": "AI Survey Hero — Beautiful, Interactive, Your Way",
+  "description": "Highlights rich AI survey capabilities: beautiful UI, easy to use, respond via voice, text, or chat.",
+  "format": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationSeconds": 16
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "name": "Hook",
+      "durationSeconds": 3,
+      "label": "// the old way",
+      "headlinePrefix": "Stop sending",
+      "headlineStrike": "boring",
+      "headlineSuffix": "surveys.",
+      "subhead": "Your customers deserve better than checkbox fatigue."
+    },
+    {
+      "id": "promise",
+      "name": "Promise",
+      "durationSeconds": 3,
+      "label": "// smart surveys",
+      "headline": "Surveys people actually",
+      "headlineAccent": "want to take.",
+      "qualities": ["Beautiful", "Easy", "Interactive"]
+    },
+    {
+      "id": "modes",
+      "name": "ResponseModes",
+      "durationSeconds": 5,
+      "label": "// respond your way",
+      "headline": "Voice, text, or chat.",
+      "subhead": "Same survey. Their preferred way to answer.",
+      "modes": [
+        {
+          "id": "voice",
+          "title": "Voice",
+          "description": "Talk naturally — AI listens and follows up",
+          "samplePrompt": "What's the hardest part of your workflow right now?",
+          "accent": "sky"
+        },
+        {
+          "id": "text",
+          "title": "Text",
+          "description": "Type at your own pace on any device",
+          "samplePrompt": "Onboarding took longer than expected because…",
+          "accent": "amber"
+        },
+        {
+          "id": "chat",
+          "title": "Chat",
+          "description": "Conversational back-and-forth that goes deeper",
+          "samplePrompt": "Tell me more about that — what would ideal look like?",
+          "accent": "green"
+        }
+      ]
+    },
+    {
+      "id": "product",
+      "name": "SurveyUI",
+      "durationSeconds": 3,
+      "label": "// live preview",
+      "surveyTitle": "Product feedback — Q2",
+      "question": "What's one thing we could improve this month?",
+      "followUp": "Got it. Would a shorter setup flow help most?",
+      "stats": {
+        "completion": "78% completion",
+        "avgTime": "2m 14s avg",
+        "depth": "3.2 follow-ups per response"
+      }
+    },
+    {
+      "id": "close",
+      "name": "Close",
+      "durationSeconds": 2,
+      "taglineLine1": "Beautiful surveys.",
+      "taglineLine2": "Richer answers.",
+      "supporting": "Voice · Text · Chat — respondents choose",
+      "cta": "Start your first smart survey →"
+    }
+  ]
+}

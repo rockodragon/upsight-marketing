@@ -79,16 +79,16 @@ Unlike the event-organizer track, **no ICP flag** — this is on-thesis. Run it 
 > research starts warm, generates testimonial language, and earns referrals before any cold work.
 > Aim for **8–15 seeds.** Fill the table; Nessa works it top-down.
 
-| # | Name | Org / role | How you know them | ICP fit (founder-led? spreadsheet? CRM pain?) | Best channel (you intro / Nessa DM / call) | Status |
-|---|------|-----------|-------------------|----------------------------------------------|--------------------------------------------|--------|
-| 1 |  |  |  |  |  | not started |
-| 2 |  |  |  |  |  | not started |
-| 3 |  |  |  |  |  | not started |
-| 4 |  |  |  |  |  | not started |
-| 5 |  |  |  |  |  | not started |
-| 6 |  |  |  |  |  | not started |
-| 7 |  |  |  |  |  | not started |
-| 8 |  |  |  |  |  | not started |
+| #   | Name           | Org / role | How you know them | ICP fit (founder-led? spreadsheet? CRM pain?) | Best channel (you intro / Nessa DM / call) | Status      |
+| --- | -------------- | ---------- | ----------------- | --------------------------------------------- | ------------------------------------------ | ----------- |
+| 1   | Dan Wege       |            | events            | sales                                         |                                            | not started |
+| 2   | Christina Font | 5D         | events            | Founder-led, spreadsheet                      |                                            | not started |
+| 3   |                |            |                   |                                               |                                            | not started |
+| 4   |                |            |                   |                                               |                                            | not started |
+| 5   |                |            |                   |                                               |                                            | not started |
+| 6   |                |            |                   |                                               |                                            | not started |
+| 7   |                |            |                   |                                               |                                            | not started |
+| 8   |                |            |                   |                                               |                                            | not started |
 
 > Sources to mine for seeds: StartupSD 1st Mondays attendees · Focus26 · NCCC · past UpSight
 > conversations in the MCP (`semantic_search_people`) · LinkedIn 1st-degree founders.

@@ -6,6 +6,7 @@ import { SceneProductDemo } from "./compositions/SceneProductDemo";
 import { KnowYourCommunityAd } from "./compositions/KnowYourCommunityAd";
 import { SmartSurveysAd } from "./compositions/SmartSurveysAd";
 import { TradeShowAd } from "./compositions/tradeshow/TradeShowAd";
+import { HomepageHero } from "./compositions/homepage/HomepageHero";
 import { presets } from "./lib/brand";
 
 /**
@@ -62,6 +63,16 @@ export const RemotionRoot: React.FC = () => {
         height={sq.height}
         fps={sq.fps}
         durationInFrames={24 * sq.fps}
+      />
+
+      {/* ─── Homepage Hero (14s, 1920×1080) ──────────── */}
+      <Composition
+        id="HomepageHero"
+        component={HomepageHero}
+        width={presets.homeHero.width}
+        height={presets.homeHero.height}
+        fps={presets.homeHero.fps}
+        durationInFrames={14 * presets.homeHero.fps}
       />
 
       {/* ─── Trade Show Ad (65s, 1920×1080) ───────────── */}

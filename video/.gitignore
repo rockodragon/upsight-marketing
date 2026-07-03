@@ -1,0 +1,4 @@
+# Ignore Remotion build artifacts in all video projects
+**/05-remotion/node_modules/
+**/05-remotion/out/
+**/05-remotion/dist/

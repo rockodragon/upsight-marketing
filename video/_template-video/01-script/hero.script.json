@@ -1,0 +1,39 @@
+{
+  "id": "VIDEO_SLUG",
+  "title": "Video Title — Short Description",
+  "description": "One sentence: what this video is for and who it's for.",
+  "format": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationSeconds": 12
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "name": "Hook",
+      "durationSeconds": 3,
+      "label": "// the problem",
+      "headline": "Your headline here.",
+      "subhead": "Supporting line."
+    },
+    {
+      "id": "promise",
+      "name": "Promise",
+      "durationSeconds": 4,
+      "label": "// the promise",
+      "headline": "What UpSight does,",
+      "headlineAccent": "in one line.",
+      "subhead": "Evidence or outcome subhead."
+    },
+    {
+      "id": "close",
+      "name": "Close",
+      "durationSeconds": 2,
+      "taglineLine1": "Primary tagline.",
+      "taglineLine2": "Accent line.",
+      "supporting": "Supporting · proof · line",
+      "cta": "Your CTA →"
+    }
+  ]
+}

@@ -1,7 +1,8 @@
 # UpSight Brand Brief
 
-> **Document Purpose**: Canonical strategic foundation for all marketing, sales, product communications, and GTM execution. This is the single source of truth for positioning.
-> We need to update it.
+> **Document Purpose**: Brand narrative, worldview, and deeper strategic context for marketing, sales, product communications, and GTM execution.
+> **Messaging hierarchy**: `../00-control/north-star.md` → `messaging-house.md` → `messaging.md` → this document.
+> Use this document for expanded brand thinking and narrative context, not as the homepage-first source of truth.
 > **Version**: 4.0 | **Date**: April 11, 2026
 > **Status**: Active
 

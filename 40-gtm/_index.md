@@ -1,6 +1,7 @@
 # GTM — execution
 
 > The "what we ship" layer. Strategy that governs this lives in `../30-strategy/`; results feed back to `../20-research/`.
+> Start messaging work from `../30-strategy/messaging-house.md`, then use `../30-strategy/messaging.md` for short approved phrasing.
 
 ## This quarter's focus
 _(Point to the live plan: `../30-strategy/marketing-plan-2026-q2.md` and `../30-strategy/gtm-plan-2026.md`.)_

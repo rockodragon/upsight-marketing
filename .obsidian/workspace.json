@@ -11,14 +11,14 @@
             "id": "5637891c0ed30b78",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "20-research/market-intel/Competitors/our-honest-assessment.md",
-                "bFile": "20-research/market-intel/Competitors/our-honest-assessment.md",
-                "aRef": ""
+                "file": "2026-06-15.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: our-honest-assessment  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "2026-06-15"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "revenue-gtm",
+                "query": "research-led-leadgen",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -196,15 +196,16 @@
   },
   "active": "5637891c0ed30b78",
   "lastOpenFiles": [
+    "2026-06-07 week.md",
+    "2026-06-15.md",
+    "40-gtm/channels/outreach/research-led-leadgen-founder-spreadsheet-2026-06-09.md",
     "20-research/market-intel/deliberative-intelligence-market.md",
     "2026-06-07.md",
     "2026-06-13 Week.md",
-    "40-gtm/channels/outreach/research-led-leadgen-founder-spreadsheet-2026-06-09.md",
     "40-gtm/channels/outreach/nessa-run-sheet-2026-06-09.md",
     "40-gtm/channels/outreach/nessa-event-organizer-leadgen-2026-06-09.md",
     "40-gtm/assets/collateral/research-benchmark-report-template.md",
     "20-research/market-intel/Competitors/instagram-ad-wave-agentic-crm-2026-06.md",
-    "2026-06-07 week.md",
     "2026-06-01 Week.md",
     "30-strategy/done-for-you-service-offering.md",
     "30-strategy/pricing-strategy.md.tmp.60600.23285e8bd8a7",
@@ -221,7 +222,6 @@
     "30-strategy/messaging.md",
     "30-strategy/marketing-plan-2026-q2.md",
     "30-strategy/revenue-gtm-decision-memo-2026-06-02.md",
-    "30-strategy/agentcrm-dev-acquisition-surface-2026-06-02.md",
-    "40-gtm/experiments/2026-06-day-ai-head-to-head.md"
+    "30-strategy/agentcrm-dev-acquisition-surface-2026-06-02.md"
   ]
 }

@@ -81,4 +81,6 @@ export const presets = {
   youtubeShort: { width: 1080, height: 1920, fps: 30 },
   twitterLandscape: { width: 1920, height: 1080, fps: 30 },
   tradeShow: { width: 1920, height: 1080, fps: 30 },
+  /** Homepage hero — widescreen loop for getupsight.com */
+  homeHero: { width: 1920, height: 1080, fps: 30 },
 } as const;

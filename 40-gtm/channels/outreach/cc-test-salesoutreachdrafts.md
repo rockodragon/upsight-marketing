@@ -14,7 +14,7 @@ You mentioned last time that if UpSight works, it could be really competitive �
 
 ---
 
-## 2. David Russo — Executive Director, The Viding Practice
+## 2. David Russo — Executive Director, Abiding Practice
 
 **Subject:** You said you're a customer — let's make it official
 

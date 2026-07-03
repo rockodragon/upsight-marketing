@@ -1,0 +1,59 @@
+{
+  "id": "homepage-hero",
+  "title": "Homepage Hero — Leadership Meeting Prep",
+  "description": "Homepage-level hero for getupsight.com. Edit copy here, then re-render.",
+  "format": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationSeconds": 14
+  },
+  "scenes": [
+    {
+      "id": "tension",
+      "name": "Tension",
+      "durationSeconds": 3,
+      "label": "// the gap",
+      "headline": "Your team has the conversations.",
+      "subhead": "The meeting still starts from scratch.",
+      "subheadAccent": "from scratch."
+    },
+    {
+      "id": "promise",
+      "name": "Promise",
+      "durationSeconds": 4,
+      "label": "// leadership meeting prep",
+      "headline": "Your weekly leadership meeting,",
+      "headlineAccent": "already prepared.",
+      "subhead": "Numbers, priorities, issues, and actions — with evidence behind every one.",
+      "subheadAccent": "with evidence behind every one."
+    },
+    {
+      "id": "meeting-prep",
+      "name": "MeetingPrep",
+      "durationSeconds": 5,
+      "proofLines": [
+        "Every issue has evidence.",
+        "Every action has an owner.",
+        "Every meeting starts ready."
+      ]
+    },
+    {
+      "id": "close",
+      "name": "Close",
+      "durationSeconds": 2,
+      "taglineLine1": "Get your customers.",
+      "taglineLine2": "Build conviction.",
+      "supporting": "Know them · Serve them · Win them",
+      "cta": "See a prepared meeting →"
+    }
+  ],
+  "fragments": [
+    "Sales call",
+    "Support ticket",
+    "Slack thread",
+    "Zoom recording",
+    "Notion doc",
+    "Interview notes"
+  ]
+}

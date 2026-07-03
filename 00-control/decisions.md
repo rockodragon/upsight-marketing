@@ -5,6 +5,9 @@
 
 ---
 
+## 2026-07-01 — Public wedge = weekly leadership meeting; `messaging-house.md` is the bridge doc
+**Why:** The vault had several strong but competing stories: customer evidence layer, revenue-decision workspace, agent-native memory, and weekly operating meeting prep. They can all be true at the product level, but public GTM needs one concrete promise that creates an immediate mental model. Decision: lead broad-market messaging with **"UpSight prepares your weekly leadership meeting from the conversations your team is already having."** Treat the weekly meeting as the **proof** of a broader operating-intelligence product, not the entire product category. EOS stays below the fold or on channel-specific pages; product/research, consultant, and agent-native stories remain valid as landing-page variants. `30-strategy/messaging-house.md` is now the canonical bridge between north-star and GTM execution, and `30-strategy/messaging.md` should stay short and derivative from it.
+
 ## 2026-06-06 — Sales lives in project `6dbcbb68` ("GTM Sales"), NOT the project named "GTM"
 **The model:** Account = client (the isolation boundary). Project = a line of inquiry. CRM (deals + people + orgs) currently lives in **one** project because the deal/people MCP tools hardwire to a single context project.
 **The fact to keep straight:** That project is **`6dbcbb68`** — currently mislabeled "UpSight Interviews", rename it to **"GTM Sales"**. The project literally named **"GTM"** (`3b800115`) is **research** — interviews/insights, *no deals*; rename it "GTM Research". **URL tell:** the segment right after `/a/<account>/` is the *project*; if it's not `6dbcbb68`, you're not in sales (that's why org links 404'd from `3b800115`).
