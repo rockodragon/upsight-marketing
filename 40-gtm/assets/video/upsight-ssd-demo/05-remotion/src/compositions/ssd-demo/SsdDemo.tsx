@@ -17,7 +17,7 @@ const sceneComponents: Record<string, React.FC> = {
   closer: SceneCloser,
 };
 
-/** SSD Demo — script-driven from 01-script/hero.script.json (150s) */
+/** SSD Demo — script-driven from 01-script/hero.script.json (42s, 7s per scene) */
 export const SsdDemo: React.FC = () => {
   const { fps } = useVideoConfig();
   let from = 0;

@@ -28,6 +28,8 @@ export type SsdScene = {
   subhead?: string;
   voiceover?: string;
   screenDirection?: string;
+  screenshot?: string;
+  screenshotWidth?: number;
   highlights?: Highlight[];
   themeTitle?: string;
   themeCount?: string;

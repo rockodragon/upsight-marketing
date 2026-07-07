@@ -21,9 +21,9 @@ export const SceneRecord: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
   const scene = getScene("record");
-  const fade = useSceneFade(durationInFrames, 15);
+  const fade = useSceneFade(durationInFrames, 8);
 
-  const shell = spring({ frame: frame - 12, fps, config: { damping: 28, stiffness: 100, mass: 0.9 } });
+  const shell = spring({ frame: frame - 8, fps, config: { damping: 28, stiffness: 120, mass: 0.8 } });
   const recPulse = Math.sin(frame * 0.12) * 0.3 + 0.7;
 
   return (
@@ -55,7 +55,7 @@ export const SceneRecord: React.FC = () => {
 
         <div style={{ padding: 24 }}>
           {TRANSCRIPT_LINES.map((line, i) => {
-            const o = spring({ frame: frame - 40 - i * 35, fps, config: { damping: 26, stiffness: 90, mass: 1 } });
+            const o = spring({ frame: frame - 18 - i * 10, fps, config: { damping: 26, stiffness: 110, mass: 0.85 } });
             const isThem = line.speaker !== "You";
             return (
               <div key={i} style={{ opacity: o, marginBottom: 16, display: "flex", gap: 14 }}>

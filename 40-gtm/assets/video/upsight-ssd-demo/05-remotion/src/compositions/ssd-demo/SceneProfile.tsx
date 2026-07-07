@@ -18,9 +18,9 @@ export const SceneProfile: React.FC = () => {
   const { fps, durationInFrames } = useVideoConfig();
   const scene = getScene("profile");
   const person = scene.person;
-  const fade = useSceneFade(durationInFrames, 12);
+  const fade = useSceneFade(durationInFrames, 8);
 
-  const card = spring({ frame: frame - 15, fps, config: { damping: 26, stiffness: 110, mass: 0.85 } });
+  const card = spring({ frame: frame - 8, fps, config: { damping: 26, stiffness: 130, mass: 0.75 } });
 
   if (!person) return null;
 
@@ -76,7 +76,7 @@ export const SceneProfile: React.FC = () => {
 
         <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
           {person.themes.map((t, i) => {
-            const o = spring({ frame: frame - 40 - i * 12, fps, config: { damping: 26, stiffness: 100, mass: 0.9 } });
+            const o = spring({ frame: frame - 22 - i * 6, fps, config: { damping: 26, stiffness: 120, mass: 0.85 } });
             return (
               <div
                 key={t}
@@ -105,10 +105,10 @@ export const SceneCloser: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
   const scene = getScene("closer");
-  const fade = useSceneFade(durationInFrames, 8);
+  const fade = useSceneFade(durationInFrames, 6);
 
-  const logo = spring({ frame: frame - 6, fps, config: { damping: 14, stiffness: 200, mass: 0.6 } });
-  const tag = spring({ frame: frame - 20, fps, config: { damping: 28, stiffness: 110, mass: 0.85 } });
+  const logo = spring({ frame: frame - 4, fps, config: { damping: 14, stiffness: 220, mass: 0.5 } });
+  const tag = spring({ frame: frame - 10, fps, config: { damping: 28, stiffness: 130, mass: 0.75 } });
 
   return (
     <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", opacity: fade, padding: 80 }}>

@@ -24,9 +24,9 @@ export const SceneProblem: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
   const scene = getScene("problem");
-  const fade = useSceneFade(durationInFrames, 15);
+  const fade = useSceneFade(durationInFrames, 8);
 
-  const headline = spring({ frame: frame - 10, fps, config: { damping: 28, stiffness: 110, mass: 0.85 } });
+  const headline = spring({ frame: frame - 6, fps, config: { damping: 28, stiffness: 140, mass: 0.7 } });
 
   return (
     <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", opacity: fade, padding: 60 }}>
@@ -59,7 +59,7 @@ export const SceneProblem: React.FC = () => {
             FOUNDER CALL NOTES — Untitled
           </div>
           {NOTES.map((line, i) => {
-            const o = spring({ frame: frame - 20 - i * 8, fps, config: { damping: 26, stiffness: 100, mass: 0.9 } });
+            const o = spring({ frame: frame - 12 - i * 4, fps, config: { damping: 26, stiffness: 120, mass: 0.8 } });
             return (
               <div key={i} style={{ opacity: o, transform: `translateX(${interpolate(o, [0, 1], [-12, 0])}px)`, marginBottom: 6 }}>
                 • {line}
