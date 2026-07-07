@@ -6,7 +6,7 @@ Folders are **numbered in production order** — work top to bottom.
 ## Folder order (read this first)
 
 ```text
-video/
+40-gtm/assets/video/
 ├── README.md                    ← you are here
 ├── scripts/
 │   └── new-video.sh             ← copy template → new project
@@ -19,6 +19,8 @@ video/
 │
 ├── upsight-homepage-hero/       ← live project
 ├── upsight-smart-surveys/       ← live project
+├── upsight-ssd-demo/            ← live project
+├── remotionVideos-UpSight/      ← legacy ad factory (deprecated)
 └── _shared/                     ← optional cross-video brand tokens
 ```
 
@@ -48,7 +50,7 @@ Reference in code as: `staticFile("logos/upsight-logo.png")` or `staticFile("ui/
 ## Start a new video
 
 ```bash
-cd /Users/rickmoy/code/upsight-marketing/video
+cd /Users/rickmoy/code/upsight-marketing/40-gtm/assets/video
 ./scripts/new-video.sh upsight-sales-followup
 ```
 
@@ -79,6 +81,7 @@ Open `01-script/hero.script.json`, change text or scene durations, then re-run `
 |------|---------|--------|--------|
 | `upsight-homepage-hero` | Leadership meeting prep homepage hero | `01-script/hero.script.json` | `05-remotion/out/hero.mp4` |
 | `upsight-smart-surveys` | AI survey — voice, text, chat | `01-script/hero.script.json` | `05-remotion/out/hero.mp4` |
+| `upsight-ssd-demo` | SSD board/founder demo (2:30) | `01-script/hero.script.json` | `05-remotion/out/ssd-demo.mp4` |
 
 ## Production workflow (typical)
 
@@ -106,7 +109,7 @@ Older work may still exist at:
 - `40-gtm/assets/video/remotionVideos-UpSight/` — original ad factory
 - `~/code/upsight-ai-survey-hero/` — one-off before this structure
 
-**Use `video/<slug>/` going forward.**
+**Use `40-gtm/assets/video/<slug>/` going forward.**
 
 ## Tips
 

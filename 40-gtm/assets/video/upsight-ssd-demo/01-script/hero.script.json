@@ -1,0 +1,101 @@
+{
+  "id": "upsight-ssd-demo",
+  "title": "SSD Demo — UpSight for Founders & Board Members",
+  "description": "Startup San Diego demo: record founder calls, extract receipts, surface themes across interviews.",
+  "sourceScript": "source-ssd-demo-script.md",
+  "format": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationSeconds": 150
+  },
+  "scenes": [
+    {
+      "id": "problem",
+      "name": "The Problem",
+      "durationSeconds": 20,
+      "label": "// the problem",
+      "headline": "Six founder calls in a week.",
+      "headlineAccent": "A month later — who said what?",
+      "voiceover": "You do 6 founder calls in a week. You take notes, maybe. A month later, you can't remember who said what — or what the pattern was.",
+      "screenDirection": "Blank notes app or messy Notion doc with bullet points from a meeting"
+    },
+    {
+      "id": "record",
+      "name": "Record",
+      "durationSeconds": 30,
+      "label": "// record",
+      "headline": "UpSight joins your meeting.",
+      "subhead": "The transcript appears in real time. You don't touch anything.",
+      "voiceover": "UpSight joins your meeting. The transcript appears in real time. You don't touch anything.",
+      "screenDirection": "Desktop app → join Zoom/Meet → Record → live transcript with speaker names"
+    },
+    {
+      "id": "evidence",
+      "name": "Interview Opens",
+      "durationSeconds": 30,
+      "label": "// receipts",
+      "headline": "Not a summary.",
+      "headlineAccent": "Specific claims — with the exact words.",
+      "voiceover": "When the call ends, UpSight has already read it. Not a summary — specific claims, with the exact words that back them up. These are your receipts.",
+      "highlights": [
+        {
+          "quote": "\"Enterprise deals stall at security review — every time.\"",
+          "speaker": "Maria Santos",
+          "source": "Interview #4"
+        },
+        {
+          "quote": "\"We'd pay 3× if onboarding took a day, not a month.\"",
+          "speaker": "James Park",
+          "source": "Interview #2"
+        },
+        {
+          "quote": "\"Board wants proof we're not guessing on ICP.\"",
+          "speaker": "Alex Chen",
+          "source": "Interview #6"
+        }
+      ]
+    },
+    {
+      "id": "themes",
+      "name": "Themes Across Calls",
+      "durationSeconds": 40,
+      "label": "// patterns",
+      "headline": "Patterns surface automatically.",
+      "subhead": "The synthesis memo you'd normally spend a Sunday writing.",
+      "voiceover": "After 6 calls, patterns surface automatically. 'Enterprise sales cycles' appeared in 4 of them — here's exactly who said what.",
+      "themeTitle": "Enterprise sales cycles",
+      "themeCount": "4 of 6 interviews",
+      "quotes": [
+        { "text": "\"Security review kills every deal over $50K.\"", "speaker": "Maria Santos" },
+        { "text": "\"Six-month cycles — we lose to inertia.\"", "speaker": "James Park" },
+        { "text": "\"Procurement wants a SOC 2 before they'll talk.\"", "speaker": "Alex Chen" }
+      ]
+    },
+    {
+      "id": "profile",
+      "name": "Person Profile",
+      "durationSeconds": 20,
+      "label": "// every person",
+      "headline": "Every founder has a profile.",
+      "subhead": "What they said, when, and which themes they're tied to.",
+      "voiceover": "Every person you've talked to has a profile. What they said, when, and which themes they're tied to.",
+      "person": {
+        "name": "Maria Santos",
+        "company": "Helix Analytics",
+        "interviews": 2,
+        "themes": ["Enterprise sales cycles", "Onboarding friction"]
+      }
+    },
+    {
+      "id": "closer",
+      "name": "The Closer",
+      "durationSeconds": 10,
+      "label": "// board members",
+      "taglineLine1": "Board members run on pattern recognition.",
+      "taglineLine2": "UpSight gives you receipts.",
+      "voiceover": "Board members run on pattern recognition. UpSight gives you receipts.",
+      "cta": "getupsight.com"
+    }
+  ]
+}
