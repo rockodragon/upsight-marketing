@@ -5,6 +5,16 @@
 
 ---
 
+## 2026-07-09 — Netted out advisor demo feedback (Ryan/Nate/Chris) into testable hypotheses
+
+**Surfaced**
+- Demo feedback from Ryan, Nate, Chris untangled into 4 distinct points: (1) pitch CEOs on sales-SOP conformance, not "AI notes"; (2) the analysis is a data-science exercise — actual behavior vs. documented SOP vs. what closed; (3) hard anti-CRM steer for larger orgs (validates existing 2026-06-02 decision, not new); (4) a "better Typeform" / conversational-video-intake concept Rick isn't familiar with. Full synthesis + 3 hypotheses (H1 concierge SOP-conformance offer, H2 ICP-calibration read, H3 intake-category research) in `20-research/voice-of-customer/2026-07-09-sop-analysis-demo-feedback.md`.
+- Key structural insight: SOP-conformance scoring is largely **already-built** — Lenses (2026-05-27 decision: "structured frameworks you bring to score against") do this mechanism; this is a packaging/GTM test, not a new product bet.
+- Two new open questions logged: org-level SOP-conformance as a second wedge; whether a real "better Typeform" category exists worth building toward.
+- Note: source notes referenced an image (`IMG_0625.jpeg`) not present in the repo — re-attach if it has content worth capturing.
+
+---
+
 ## 2026-06-06 — GTM sales pipeline stood up in UpSight + CRM scoping architecture
 
 **Shipped**
