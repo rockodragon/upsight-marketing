@@ -7,7 +7,25 @@ tags: [demo-feedback, icp, sop, intake-form, lenses, positioning]
 
 # Source
 
-Informal demo of UpSight to three people Rick respects (Ryan, Nate, Chris) — not a sales call, an advisor/pressure-test conversation. Raw notes were fragmented voice-to-text; this file is the netted-out read. One image (`IMG_0625.jpeg`) was referenced but isn't present as a file in this repo/vault — if it has a whiteboard sketch or diagram worth capturing, re-attach it and this doc should be updated.
+Informal demo of UpSight to three people Rick respects (Ryan, Nate, Chris) — not a sales call, an advisor/pressure-test conversation. Raw notes were fragmented voice-to-text; this file is the netted-out read, updated once the whiteboard photo (`IMG_0625.jpeg`) was supplied directly.
+
+## Whiteboard capture (IMG_0625)
+
+Two sketches from the same session:
+
+**Left page — an org/insights structure:**
+- `Lead` (single person) rolls up to `Manager + worker` (a team) — i.e., a role-based hierarchy: individual rep → team.
+- Candidate tagline: **"Perfect your conversion and onboarding at scale."** — distinct from the decided broad-market tagline in `messaging-house.md` ("prepares your weekly leadership meeting"); log as a candidate variant for this specific angle, not a replacement.
+- "Insights on your [offering]" with four categories: **offering, team performance, forecast, customer sentiment.** Reads as the proposed insight taxonomy for this pitch — broader than pure SOP-conformance, closer to a general sales-ops intelligence surface.
+
+**Right page — feature list for the "Lead" (rep) role:**
+- performance
+- improvement KPIs + automatic tracking
+- SOP deviations
+
+This is a rough feature spec, not just a slogan — it maps a rep-level dashboard (their performance, KPI trend with no manual reporting, and where they deviate from SOP) sitting under a manager/team rollup. Any concrete product spec work belongs in `../Insights/` per this vault's boundaries; this doc only carries the idea forward as a GTM-relevant sketch.
+
+**Ryan's follow-up (verbal, post-photo):** the survey/intake shouldn't be a separate tool — it could live **on the website or somewhere in the existing signup/onboarding funnel.** This resolves point #4 below from "unfamiliar category to research" into something concretely testable with UpSight's own survey engine.
 
 # What they actually said (untangled into 4 separate points)
 
@@ -26,7 +44,7 @@ Two things already true in the vault make this cheap to test rather than a rebui
 - **Lenses already do exactly this mechanism.** Per `decisions.md` (2026-05-27): *"Lenses = structured frameworks you bring to score against (operational, top-down)."* A sales SOP is a Lens. Scoring reps' calls against it, and correlating Lens scores with won/lost outcomes, is largely a packaging and GTM exercise on top of an existing surface — not a new product bet.
 - **The anti-CRM steer isn't new information** — it matches the existing decision (2026-06-02, "draft AI-CRM category at top-of-funnel; fight on the decision workflow, not CRM hygiene"). Treat this as independent validation from outside voices, not a pivot.
 
-The one genuinely new input is #4 (video/conversational intake) — flagged below as research, not yet a hypothesis, because Rick has no prior read on that market.
+Point #4 (intake) is no longer pure research — Ryan's follow-up ("put the survey on the website or in the funnel") turns it into something testable with UpSight's existing survey engine, no new competitive category needed (see H3, revised below).
 
 # Tension with the current ICP bet (surface, don't resolve here)
 
@@ -49,19 +67,23 @@ Current beachhead (`30-strategy/icp/README.md`) is **solo/founder-led sellers on
 - **Test:** run alongside H1 — track qualitative response speed/heat, not just conversion.
 - **Output:** either a documented second wedge (org-level, SOP-trigger) alongside the founder-led beachhead, or evidence it's not worth splitting focus — either way, close as a decision, not left open.
 
-## H3 (research, not yet a hypothesis) — video/conversational intake as UpSight's front door
-Rick isn't familiar with the "better Typeform" category Ryan/Nate/Chris referenced (they may mean tools like Typeform's video-answer mode, Tally, Arcade, Warmly, or similar — unconfirmed). **Before** turning this into a testable hypothesis:
-1. Research what exists in conversational/video-form intake, who's using it and why, and what "better than Typeform" would concretely mean for a sales-SOP buyer.
-2. If real, the natural version for UpSight: intake responses (whether text, voice, or video) become the *first* conversation in the corpus, auto-scored against the same Lens used for SOP-conformance — closing the loop from "how are my reps doing" to "capture better data going in."
-3. Only after that research does this become an experiment.
+## H3 — UpSight's own survey/ask, embedded in the website funnel (revised: now testable, not just research)
+**If** we put UpSight's existing survey/conversational-intake tool directly in a funnel spot on the marketing site (e.g., "book a demo" replaced or paired with a rich ask-flow, or a post-signup onboarding survey) **then** it captures higher-signal, richer lead data than a static form **and** seeds the corpus that later gets scored against a Lens — turning intake itself into the first "conversation" analyzed, **because** the same engine that powers SOP-conformance analysis can run at top-of-funnel instead of only after the fact.
+- **Test:** pick one funnel spot (demo-request form is the obvious first candidate — lowest traffic risk, clearest before/after) and swap it for a UpSight-survey-powered version for a defined period.
+- **Primary metric:** form completion rate + qualified-lead rate vs. the current static form; secondary: does the richer intake data visibly improve the first sales conversation (fewer redundant qualifying questions).
+- **Still open, lower priority:** whether a broader "better Typeform" competitive category (video-answer forms, Tally, Arcade, etc.) exists and is worth tracking — worth a light market-intel scan, but no longer a blocker to running this test, since the mechanism is UpSight's own survey tool, not a new build.
+
+## H4 — Broaden the insights taxonomy beyond conformance (from the whiteboard)
+The whiteboard's four insight categories — **offering, team performance, forecast, customer sentiment** — suggest the SOP-conformance pitch is one slice of a wider "insights on your sales org" surface, not the whole story. **If** the concierge test (H1) lands, the natural next question is whether leads want the narrow "did you follow the SOP" cut or the fuller sales-ops picture (forecast accuracy, sentiment trends, offering fit) — worth listening for in the same H1 conversations rather than testing separately up front. Treat as a listening flag for H1, not a standalone experiment yet.
 
 ---
 
 # Open questions this raises → logged in `00-control/open-questions.md`
 - Is org-level SOP-conformance (segment B-ish, or a new segment) a viable second wedge alongside the founder-led beachhead, or a distraction? [bet]
-- Is there a real "better Typeform" / video-ask intake category we should learn from or compete adjacent to? [bet] — needs research before it's tactical.
+- Does swapping a funnel form for a UpSight-survey-powered intake improve completion/qualified-lead rate? [tactical] — reclassified from [bet] now that Ryan's follow-up gave a concrete mechanism (own tool, funnel placement, no new category research required).
 
 # What to do next
 1. Run H1 as a concierge offer this week or next — cheapest test, no build required, uses Lenses as-is.
-2. Spin up a short market-intel pass on video/conversational intake tools (H3) before committing to anything there.
-3. Hold H2 (ICP calibration) as a read from the same H1 conversations rather than a separate motion — don't fragment attention.
+2. Pick one funnel spot (demo-request form first) and run H3 — swap in a UpSight-survey-powered intake, measure completion/qualified-lead rate.
+3. Hold H2 (ICP calibration) and H4 (broader insights taxonomy) as reads from the same H1 conversations rather than separate motions — don't fragment attention.
+4. Light market-intel scan on video/conversational-form competitors remains optional background reading, not a blocker to #2.

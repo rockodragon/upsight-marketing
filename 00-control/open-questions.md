@@ -8,7 +8,7 @@
 | Date opened | Q | Type | Owner | Status |
 |---|---|---|---|---|
 | 2026-07-09 | Is org-level "sales SOP conformance" (multi-rep team, CEO wants to know if reps follow process + what actually correlates with wins) a viable second wedge alongside the founder-led beachhead? | [bet] | Rick | open → concierge test proposed in `20-research/voice-of-customer/2026-07-09-sop-analysis-demo-feedback.md` (H1/H2) |
-| 2026-07-09 | Is there a real "better Typeform" / conversational-video-intake category worth learning from or building toward as UpSight's front door? | [bet] | Rick | open → needs market-intel research before it's tactical (H3 in same doc) |
+| 2026-07-09 | Does swapping a website/funnel form (e.g. demo-request) for UpSight's own survey-powered intake improve completion + qualified-lead rate vs. a static form? | [tactical] | Rick | open → ready to run, H3 in `2026-07-09-sop-analysis-demo-feedback.md` (whiteboard confirmed: own tool, funnel placement — not a new build) |
 | 2026-06-09 | Dynamic Groups: how should the app express segment exclusivity (precedence vs explicit exclude) + which criteria types (attributes / survey / engagement / AI-theme)? | [bet] | Rick | open → spec seeded 2026-06-09; needs a separate app-repo thread |
 | 2026-06-09 | Is event-organizer a real ICP, or off the founder-led-seller thesis? Run Nessa's research-led probe as the test. | [bet] | Rick | open → plan `40-gtm/channels/outreach/nessa-event-organizer-leadgen-2026-06-09.md` |
 | 2026-06-02 | Can we win a defined sub-segment head-to-head vs Day.ai (surveys + receipts + price)? | [tactical] | Rick | open → exp `2026-06-day-ai-head-to-head` |
