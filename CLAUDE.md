@@ -46,6 +46,10 @@ Folders are numbered so they read top-to-bottom as a flow: **how we run → what
 1. Read `00-control/priorities.md` — direction this week.
 2. Read `10-ops/agents.md` — your role.
 3. Read `00-control/decisions.md` + `00-control/open-questions.md` — settled vs. open.
+4. **Building or editing any visual asset** (video, deck, social image, landing page, one-pager,
+   collateral)? Read `30-strategy/brand-style-guide.md` **first** — it's the canonical design
+   token reference (colors, type, motion, radius). Don't invent new colors/fonts/easing; extend
+   that doc instead if something's genuinely missing.
 
 ## After finishing a session
 

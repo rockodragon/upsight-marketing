@@ -5,6 +5,48 @@ tags:
 ---
 # UpSight Brand Style Guide
 
+> **Canonical design tokens for UpSight.** Any agent or human building UI, marketing pages,
+> decks, video, or social assets reads this file first. Don't invent new colors, fonts, radii,
+> or easing curves — extend this doc instead, then use what's here.
+
+## Canonical tokens (copy-paste block)
+
+```css
+:root {
+  /* Brand — product */
+  --brand-blue-light: #0284c7;   /* product primary, light theme */
+  --brand-blue-dark:  #38bdf8;   /* product primary, dark theme (== marketing sky) */
+
+  /* Brand — marketing accent (never the product-UI primary) */
+  --brand-amber:      #f59e0b;   /* marketing CTA accent, key-word emphasis */
+  --brand-amber-glow: rgba(245, 158, 11, 0.3);
+  --brand-sky:        #38bdf8;   /* secondary marketing emphasis, same value as blue-dark */
+
+  /* Marketing dark surfaces */
+  --mkt-bg:            #050508;
+  --mkt-bg-alt:        #0a0a10;
+  --mkt-text:          #eeeef2;  /* never pure white on dark */
+  --mkt-text-dim:      rgba(238, 238, 242, 0.7);
+  --mkt-text-dim-alt:  rgba(238, 238, 242, 0.6);
+
+  /* Type */
+  --font-sans: "Inter", sans-serif;          /* marketing body/hero — weights 300–900 in use */
+  --font-mono: "JetBrains Mono", monospace;  /* labels / "operator" annotations — weights 300–500 */
+  /* Pricing page only (unresolved — see "Marketing Pricing" below): DM Sans, Instrument Serif */
+
+  /* Motion */
+  --ease-confident-glide: cubic-bezier(0.16, 1, 0.3, 1); /* the one easing curve — slow ease-out, minimal bounce */
+
+  /* Layout */
+  --radius: 0.625rem; /* global; marketing pages may opt sharper for an editorial feel */
+}
+```
+
+**Icon set**: `lucide-react`, `stroke="currentColor"`. **Logo mark**: `lucide-scan-eye-icon`.
+
+Full rationale, usage rules, and per-surface conventions below — the block above is the fast
+reference; read on when a decision isn't obvious from the tokens alone.
+
 ## Color Palette
 
 ### Brand Blue (Primary)

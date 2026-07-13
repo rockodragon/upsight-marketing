@@ -71,3 +71,12 @@ Code-domain gotchas live in the repo itself (so agents working on the repo auto-
 - **Typecheck discipline** — during coding use `pnpm run check:changed` or `pnpm run check:staged`; run `pnpm run typecheck:baseline` before commit; full `pnpm run typecheck` only when necessary.
 
 This vault file (`10-ops/agents.md`) covers cross-domain agent operating rules. Code-specific things stay on the code side.
+
+---
+
+## Building any visual asset
+
+Video, decks, social images, landing pages, one-pagers, collateral — read
+`30-strategy/brand-style-guide.md` **first**. It's the canonical design token reference (colors,
+type, motion, radius) with a copy-paste `:root` block at the top. Don't invent new colors, fonts,
+or easing curves; extend that doc instead if something's genuinely missing.
