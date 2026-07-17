@@ -5,6 +5,9 @@
 
 ---
 
+## 2026-07-17 — Build the caption system in-house instead of buying Remotion's $100 Animated Captions component
+**Why:** The paid component is copy-paste source for React rendering/animation over `@remotion/captions`' `Caption[]` format — three styles, no transcription pipeline. We needed transcription (OpenAI) → correction → timing/trim handling too, so the rendering layer alone wasn't the hard part. Built the full pipeline (`upsight-ssd-demo/05-remotion/src/captions/`, mirrored into `_template-video/05-remotion` for reuse across future videos) instead. Open follow-up: compare rendered output against the paid component's text-fitting/animation polish once a real video is captioned, and buy only if it'd save more than a few hours — see `00-control/open-questions.md`.
+
 ## 2026-07-01 — Public wedge = weekly leadership meeting; `messaging-house.md` is the bridge doc
 **Why:** The vault had several strong but competing stories: customer evidence layer, revenue-decision workspace, agent-native memory, and weekly operating meeting prep. They can all be true at the product level, but public GTM needs one concrete promise that creates an immediate mental model. Decision: lead broad-market messaging with **"UpSight prepares your weekly leadership meeting from the conversations your team is already having."** Treat the weekly meeting as the **proof** of a broader operating-intelligence product, not the entire product category. EOS stays below the fold or on channel-specific pages; product/research, consultant, and agent-native stories remain valid as landing-page variants. `30-strategy/messaging-house.md` is now the canonical bridge between north-star and GTM execution, and `30-strategy/messaging.md` should stay short and derivative from it.
 

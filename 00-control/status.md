@@ -5,6 +5,24 @@
 
 ---
 
+## 2026-07-17 — Automated caption pipeline for Remotion video projects
+
+**Shipped**
+- *Word-timed caption pipeline* in `40-gtm/assets/video/upsight-ssd-demo/05-remotion/src/captions/` — transcribe (OpenAI, word-level timestamps) → correct known product-name mistranscriptions (`data/vocabulary.json`, timing-preserving) → paginate into TikTok-style pages (`@remotion/captions`) → render with a deterministic, FPS-agnostic `CaptionRenderer` in one of three branded presets (**clean** / **emphasis** / **productDemo**). Handles clipped and edited (cuts-removed) timelines.
+- *CLI*: `npm run caption-video -- --input <video> --output <captions.json> --preset clean`. Exports caption JSON + SRT.
+- *Mirrored into `_template-video/05-remotion`* so every future video scaffolded via `new-video.sh` inherits it automatically (this repo's existing sharing mechanism for Remotion code, since each video project is its own npm package).
+- 39 unit tests (timing/corrections/pagination/schemas + fixture transcript); real-render smoke-tested in headless Chrome (all 3 presets, both vocabulary corrections, word-by-word highlight timing) — caught and fixed a real overlap bug in the emphasis preset's active-word scale animation.
+- Built the OpenAI call directly against `fetch`/`FormData` rather than the `openai` SDK — its `zod` peer dependency conflicts with the `zod@4.3.6` Remotion itself requires.
+- Branch `claude/remotion-caption-pipeline-bo5j5x`, pushed. No PR opened (not requested).
+
+**Stuck**
+- Full end-to-end verification (real video → real OpenAI transcription → rendered output) wasn't possible in this session: no `OPENAI_API_KEY`, no `ffmpeg`/`ffprobe`, and no real source video/audio exist in this environment/repo. The render pipeline itself *was* verified against a fixture transcript with real headless Chrome rendering (see above) — only the live transcription call and ffmpeg/ffprobe media-inspection path are unverified against real inputs.
+
+**Surfaced**
+- `_template-video/05-remotion/src/compositions/ScenePlaceholder.tsx` had a pre-existing (unrelated) broken import path — fixed in passing since it blocked a clean `npm run typecheck`.
+
+---
+
 ## 2026-06-06 — GTM sales pipeline stood up in UpSight + CRM scoping architecture
 
 **Shipped**
