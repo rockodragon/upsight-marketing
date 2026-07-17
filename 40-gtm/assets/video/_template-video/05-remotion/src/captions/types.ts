@@ -48,7 +48,7 @@ export type TimelineSegment = {
   outputStartMs: number;
 };
 
-export const CAPTION_PRESET_NAMES = ["clean", "emphasis", "productDemo", "highlight"] as const;
+export const CAPTION_PRESET_NAMES = ["clean", "emphasis", "productDemo", "highlight", "steady"] as const;
 export type CaptionPresetName = (typeof CAPTION_PRESET_NAMES)[number];
 
 export type CaptionPresetTokens = {
