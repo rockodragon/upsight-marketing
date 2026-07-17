@@ -37,3 +37,14 @@ Edit JSON in `01-script/`, re-render — no code change for text updates.
 ## After render
 
 Copy `out/hero.mp4` to wherever marketing needs it (site, ads, sales deck), or keep the canonical render here.
+
+## Captions
+
+Automated word-timed captions (transcribe → correct → paginate → render),
+inherited by every video scaffolded from this template. See
+`src/captions/README.md`. Quick start:
+
+```bash
+export OPENAI_API_KEY=sk-...
+npm run caption-video -- --input ./04-assets/video/source.mp4 --output ./public/captions/source.json --preset clean
+```

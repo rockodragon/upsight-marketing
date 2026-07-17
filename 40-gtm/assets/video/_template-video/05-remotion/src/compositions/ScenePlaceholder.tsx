@@ -1,8 +1,8 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { colors, fonts } from "../../lib/brand";
-import { getScene } from "../../lib/script";
-import { MonoLabel } from "../../components/MonoLabel";
+import { colors, fonts } from "../lib/brand";
+import { getScene } from "../lib/script";
+import { MonoLabel } from "../components/MonoLabel";
 
 /** Starter scene — swap for real animation; copy still comes from hero.script.json */
 export const ScenePlaceholder: React.FC<{ sceneId: string }> = ({ sceneId }) => {
