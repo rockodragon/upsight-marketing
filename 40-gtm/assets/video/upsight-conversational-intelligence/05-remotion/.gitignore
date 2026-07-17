@@ -1,0 +1,12 @@
+node_modules/
+out/
+dist/
+.DS_Store
+*.log
+
+# Canonical assets live in ../04-assets — ignore duplicated public copies
+public/video/
+public/audio/
+public/icons/
+public/logos/
+public/ui/

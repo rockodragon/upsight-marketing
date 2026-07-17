@@ -1,0 +1,26 @@
+{
+  "name": "upsight-conversational-intelligence-remotion",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "link-assets": "node -e \"const fs=require('fs');const p='public';for (const d of ['video','audio','icons','logos','ui']) {const t=`${p}/${d}`; if (!fs.existsSync(t)) fs.symlinkSync(`../04-assets/${d}`, t);}\"",
+    "postinstall": "npm run link-assets",
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts ConversationalIntelligence --output=out/conversational-intelligence.mp4",
+    "render:vsl": "remotion render src/index.ts ConversationalIntelligence --output=out/conversational-intelligence.mp4",
+    "render:marquee": "remotion render src/index.ts StreamingMarquee --output=out/streaming-marquee.mp4",
+    "render:all": "npm run render:vsl && npm run render:marquee",
+    "upgrade": "remotion upgrade"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.484",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "4.0.484"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config": "4.0.484",
+    "@types/react": "^19.0.0",
+    "typescript": "^5.7.0"
+  }
+}

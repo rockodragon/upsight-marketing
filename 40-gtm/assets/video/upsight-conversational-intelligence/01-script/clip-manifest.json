@@ -1,0 +1,32 @@
+{
+  "description": "Speaker clips for conversational intelligence hero. Use the dropped video clips directly in the marquee and featured tiles.",
+  "speakers": [
+    {
+      "id": "v1",
+      "file": "video/v1.mov",
+      "kind": "video",
+      "speaker": "Speaker 1",
+      "theme": "Customer signal",
+      "quote": "A real customer moment, pulled straight from the source",
+      "audioStartSec": 0
+    },
+    {
+      "id": "v2",
+      "file": "video/v2.mov",
+      "kind": "video",
+      "speaker": "Speaker 2",
+      "theme": "Theme extraction",
+      "quote": "UpSight turns open-ended conversations into patterns",
+      "audioStartSec": 0
+    },
+    {
+      "id": "v3",
+      "file": "video/v3.mov",
+      "kind": "video",
+      "speaker": "Speaker 3",
+      "theme": "Evidence-backed insight",
+      "quote": "Every takeaway links back to an actual conversation",
+      "audioStartSec": 0
+    }
+  ]
+}
