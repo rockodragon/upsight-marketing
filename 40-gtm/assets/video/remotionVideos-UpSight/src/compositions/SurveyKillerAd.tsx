@@ -30,22 +30,21 @@ export const SurveyKillerAd: React.FC = () => {
       <Sequence from={0} durationInFrames={4 * fps} name="Hook">
         <SceneHook />
       </Sequence>
-
       {/* Scene 2: Pain stats */}
-      <Sequence from={Math.round(3.3 * fps)} durationInFrames={Math.round(5.3 * fps)} name="Stats">
-        <SceneStats />
-      </Sequence>
-
-      {/* Scene 3: Solution chat */}
       <Sequence from={8 * fps} durationInFrames={6 * fps} name="Solution">
         <SceneSolution />
+      </Sequence><Sequence
+        from={Math.round(3.3 * fps)}
+        durationInFrames={Math.round(5.3 * fps)}
+        name="Stats">
+        <SceneStats />
       </Sequence>
+      {/* Scene 3: Solution chat */}
 
       {/* Scene 4: Comparison bars */}
       <Sequence from={Math.round(13.3 * fps)} durationInFrames={Math.round(5.7 * fps)} name="Comparison">
         <SceneComparison />
       </Sequence>
-
       {/* Scene 5: CTA */}
       <Sequence from={Math.round(18.3 * fps)} durationInFrames={Math.round(5.7 * fps)} name="CTA">
         <SceneCTA />

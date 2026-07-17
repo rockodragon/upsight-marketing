@@ -1,6 +1,6 @@
 {
   "id": "VIDEO_SLUG",
-  "title": "Video Title — Short Description",
+  "title": "Video Title - Short Description",
   "description": "One sentence: what this video is for and who it's for.",
   "format": {
     "width": 1920,
@@ -13,27 +13,246 @@
       "id": "hook",
       "name": "Hook",
       "durationSeconds": 3,
-      "label": "// the problem",
-      "headline": "Your headline here.",
-      "subhead": "Supporting line."
+      "backgroundColor": "#050508",
+      "enter": { "type": "fade", "frames": 10 },
+      "exit": { "type": "wipe-left", "frames": 12 },
+      "layers": [
+        {
+          "id": "hook-glow",
+          "kind": "shape",
+          "shape": "circle",
+          "x": 1540,
+          "y": 290,
+          "width": 420,
+          "height": 420,
+          "anchorX": "center",
+          "anchorY": "center",
+          "backgroundColor": "rgba(56, 189, 248, 0.18)",
+          "boxShadow": "0 0 140px rgba(56, 189, 248, 0.42)"
+        },
+        {
+          "id": "hook-label",
+          "kind": "text",
+          "text": "// the problem",
+          "x": 150,
+          "y": 136,
+          "fontSize": 22,
+          "fontFamily": "'JetBrains Mono', monospace",
+          "letterSpacing": "0.24em",
+          "color": "#f59e0b",
+          "enter": { "type": "fade", "frames": 12 }
+        },
+        {
+          "id": "hook-headline",
+          "kind": "text",
+          "text": "Put the right visual\nin the right place.",
+          "x": 150,
+          "y": 210,
+          "width": 980,
+          "fontSize": 108,
+          "fontWeight": 900,
+          "lineHeight": 0.98,
+          "color": "#eeeef2",
+          "enter": { "type": "slide-up", "frames": 16, "distance": 70 }
+        },
+        {
+          "id": "hook-subhead",
+          "kind": "text",
+          "text": "Treat AI footage as source material, then direct every overlay, image, and caption with exact coordinates and timing.",
+          "x": 150,
+          "y": 520,
+          "width": 860,
+          "fontSize": 30,
+          "fontWeight": 500,
+          "lineHeight": 1.35,
+          "color": "rgba(238, 238, 242, 0.78)",
+          "enter": { "type": "fade", "frames": 18 },
+          "fromFrames": 6
+        },
+        {
+          "id": "hook-logo",
+          "kind": "image",
+          "src": "logos/upsight-logo.png",
+          "x": 1760,
+          "y": 130,
+          "width": 180,
+          "height": 54,
+          "anchorX": "right",
+          "objectFit": "contain",
+          "enter": { "type": "slide-left", "frames": 14, "distance": 40 }
+        }
+      ]
     },
     {
       "id": "promise",
       "name": "Promise",
       "durationSeconds": 4,
-      "label": "// the promise",
-      "headline": "What UpSight does,",
-      "headlineAccent": "in one line.",
-      "subhead": "Evidence or outcome subhead."
+      "backgroundColor": "#050508",
+      "enter": { "type": "fade", "frames": 8 },
+      "exit": { "type": "fade", "frames": 12 },
+      "layers": [
+        {
+          "id": "promise-panel",
+          "kind": "shape",
+          "x": 1180,
+          "y": 150,
+          "width": 600,
+          "height": 760,
+          "backgroundColor": "rgba(10, 10, 16, 0.95)",
+          "borderRadius": 34,
+          "border": "1px solid rgba(56, 189, 248, 0.30)",
+          "boxShadow": "0 40px 100px rgba(0, 0, 0, 0.55)",
+          "enter": { "type": "slide-right", "frames": 16, "distance": 70 }
+        },
+        {
+          "id": "promise-headline",
+          "kind": "text",
+          "text": "Move from prompting\nto directing.",
+          "x": 150,
+          "y": 190,
+          "width": 860,
+          "fontSize": 96,
+          "fontWeight": 900,
+          "lineHeight": 1,
+          "enter": { "type": "slide-up", "frames": 16, "distance": 60 }
+        },
+        {
+          "id": "promise-copy",
+          "kind": "text",
+          "text": "Keep AI for ideation.\nUse Remotion for exact overlay placement, keyed entrances, and clean scene exits.",
+          "x": 150,
+          "y": 470,
+          "width": 760,
+          "fontSize": 34,
+          "fontWeight": 500,
+          "lineHeight": 1.35,
+          "color": "rgba(238, 238, 242, 0.78)",
+          "fromFrames": 8,
+          "enter": { "type": "fade", "frames": 18 }
+        },
+        {
+          "id": "promise-tag",
+          "kind": "shape",
+          "shape": "pill",
+          "x": 150,
+          "y": 760,
+          "width": 340,
+          "height": 58,
+          "backgroundColor": "rgba(245, 158, 11, 0.15)",
+          "border": "1px solid rgba(245, 158, 11, 0.45)",
+          "enter": { "type": "zoom-in", "frames": 12 },
+          "fromFrames": 16
+        },
+        {
+          "id": "promise-tag-text",
+          "kind": "text",
+          "text": "Precise canvas control",
+          "x": 320,
+          "y": 789,
+          "anchorX": "center",
+          "anchorY": "center",
+          "fontSize": 22,
+          "fontWeight": 700,
+          "color": "#f59e0b",
+          "fromFrames": 16,
+          "enter": { "type": "fade", "frames": 10 }
+        },
+        {
+          "id": "promise-image-back",
+          "kind": "shape",
+          "x": 1480,
+          "y": 430,
+          "width": 240,
+          "height": 240,
+          "anchorX": "center",
+          "anchorY": "center",
+          "backgroundColor": "rgba(56, 189, 248, 0.08)",
+          "borderRadius": 28,
+          "border": "1px solid rgba(56, 189, 248, 0.18)"
+        },
+        {
+          "id": "promise-image",
+          "kind": "image",
+          "src": "logos/upsight-logo.png",
+          "x": 1480,
+          "y": 430,
+          "width": 260,
+          "height": 120,
+          "anchorX": "center",
+          "anchorY": "center",
+          "objectFit": "contain",
+          "motion": { "type": "float", "amplitude": 12, "periodFrames": 72 },
+          "enter": { "type": "zoom-in", "frames": 16 }
+        }
+      ]
     },
     {
       "id": "close",
       "name": "Close",
-      "durationSeconds": 2,
-      "taglineLine1": "Primary tagline.",
-      "taglineLine2": "Accent line.",
-      "supporting": "Supporting · proof · line",
-      "cta": "Your CTA →"
+      "durationSeconds": 5,
+      "backgroundColor": "#050508",
+      "enter": { "type": "fade", "frames": 10 },
+      "layers": [
+        {
+          "id": "close-headline",
+          "kind": "text",
+          "text": "Place assets exactly.\nMake the edit feel intentional.",
+          "x": 960,
+          "y": 250,
+          "width": 1240,
+          "anchorX": "center",
+          "textAlign": "center",
+          "fontSize": 96,
+          "fontWeight": 900,
+          "lineHeight": 1,
+          "enter": { "type": "slide-up", "frames": 16, "distance": 48 }
+        },
+        {
+          "id": "close-supporting",
+          "kind": "text",
+          "text": "Add your screenshot or clip in 04-assets/ui or 04-assets/video, then position it with x, y, width, height, zIndex, and frame ranges.",
+          "x": 960,
+          "y": 520,
+          "width": 1100,
+          "anchorX": "center",
+          "textAlign": "center",
+          "fontSize": 30,
+          "fontWeight": 500,
+          "lineHeight": 1.35,
+          "color": "rgba(238, 238, 242, 0.78)",
+          "fromFrames": 8,
+          "enter": { "type": "fade", "frames": 20 }
+        },
+        {
+          "id": "close-cta-bg",
+          "kind": "shape",
+          "shape": "pill",
+          "x": 960,
+          "y": 790,
+          "width": 360,
+          "height": 74,
+          "anchorX": "center",
+          "anchorY": "center",
+          "backgroundColor": "#f59e0b",
+          "boxShadow": "0 22px 60px rgba(245, 158, 11, 0.35)",
+          "fromFrames": 18,
+          "enter": { "type": "zoom-in", "frames": 12 }
+        },
+        {
+          "id": "close-cta-text",
+          "kind": "text",
+          "text": "Render your first precise cut",
+          "x": 960,
+          "y": 790,
+          "anchorX": "center",
+          "anchorY": "center",
+          "fontSize": 24,
+          "fontWeight": 800,
+          "color": "#050508",
+          "fromFrames": 18,
+          "enter": { "type": "fade", "frames": 10 }
+        }
+      ]
     }
   ]
 }

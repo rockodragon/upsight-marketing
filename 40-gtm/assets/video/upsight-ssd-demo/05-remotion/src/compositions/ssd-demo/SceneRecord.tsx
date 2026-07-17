@@ -7,7 +7,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import { colors, fonts, layout } from "../../lib/brand";
-import { useSceneFade } from "../../lib/animations";
+import { useFadeIn } from "../../lib/animations";
 import { MonoLabel } from "../../components/MonoLabel";
 import { getScene } from "../../lib/script";
 
@@ -19,9 +19,9 @@ const TRANSCRIPT_LINES = [
 
 export const SceneRecord: React.FC = () => {
   const frame = useCurrentFrame();
-  const { fps, durationInFrames } = useVideoConfig();
+  const { fps } = useVideoConfig();
   const scene = getScene("record");
-  const fade = useSceneFade(durationInFrames, 8);
+  const fade = useFadeIn(0, 8);
 
   const shell = spring({ frame: frame - 8, fps, config: { damping: 28, stiffness: 120, mass: 0.8 } });
   const recPulse = Math.sin(frame * 0.12) * 0.3 + 0.7;

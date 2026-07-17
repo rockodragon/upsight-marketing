@@ -7,16 +7,16 @@ import {
   useVideoConfig,
 } from "remotion";
 import { colors, fonts } from "../../lib/brand";
-import { useSceneFade } from "../../lib/animations";
+import { useFadeIn } from "../../lib/animations";
 import { MonoLabel } from "../../components/MonoLabel";
 import { ScreenshotFrame } from "../../components/ScreenshotFrame";
 import { getScene } from "../../lib/script";
 
 export const SceneEvidence: React.FC = () => {
   const frame = useCurrentFrame();
-  const { fps, durationInFrames } = useVideoConfig();
+  const { fps } = useVideoConfig();
   const scene = getScene("evidence");
-  const fade = useSceneFade(durationInFrames, 8);
+  const fade = useFadeIn(0, 8);
 
   const headline = spring({
     frame: frame - 4,

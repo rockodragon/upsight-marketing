@@ -1,7 +1,7 @@
 import React from "react";
 import { Img, OffthreadVideo, staticFile } from "remotion";
 import { colors, layout } from "../lib/brand";
-import { useScalePop } from "../lib/animations";
+import { useImageReveal } from "../lib/animations";
 
 /** Product screenshot or clip from 04-assets/ (via public symlink). */
 export const ScreenshotFrame: React.FC<{
@@ -17,12 +17,13 @@ export const ScreenshotFrame: React.FC<{
   width = 800,
   borderColor = colors.sky,
 }) => {
-  const style = useScalePop(delay);
+  const { opacity, scale } = useImageReveal(delay);
 
   return (
     <div
       style={{
-        ...style,
+        opacity,
+        scale,
         width,
         borderRadius: layout.radius + 4,
         overflow: "hidden",

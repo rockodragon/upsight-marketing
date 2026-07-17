@@ -7,13 +7,13 @@
     "width": 1920,
     "height": 1080,
     "fps": 30,
-    "durationSeconds": 42
+    "durationSeconds": 36
   },
   "scenes": [
     {
       "id": "problem",
       "name": "The Problem",
-      "durationSeconds": 7,
+      "durationSeconds": 4,
       "label": "// the problem",
       "headline": "Six founder calls in a week.",
       "headlineAccent": "A month later — who said what?",
@@ -22,7 +22,7 @@
     {
       "id": "record",
       "name": "Record",
-      "durationSeconds": 7,
+      "durationSeconds": 4,
       "label": "// record",
       "headline": "UpSight joins your meeting.",
       "subhead": "Live transcript. Zero note-taking.",

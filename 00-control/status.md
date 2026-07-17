@@ -21,7 +21,17 @@
 **Surfaced**
 - `_template-video/05-remotion/src/compositions/ScenePlaceholder.tsx` had a pre-existing (unrelated) broken import path — fixed in passing since it blocked a clean `npm run typecheck`.
 
+
 ---
+
+## 2026-07-17 — Git LFS enabled for media assets
+
+**Shipped**
+- Installed Git LFS, initialized it for this repository, and added repository-wide tracking rules for video, audio, raster images, PDFs, and editable media project formats.
+- Renormalized existing tracked media into staged LFS pointers; unrelated working-tree edits remain unstaged.
+
+**Surfaced**
+- The previously pushed media blobs remain in Git history. Removing them would require a history rewrite and force-push, so no migration was attempted.
 
 ## 2026-06-06 — GTM sales pipeline stood up in UpSight + CRM scoping architecture
 
