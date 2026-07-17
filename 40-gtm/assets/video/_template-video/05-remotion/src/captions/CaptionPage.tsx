@@ -50,6 +50,11 @@ export const CaptionPage: React.FC<CaptionPageProps> = ({
   // per-word timing for the active-word highlight.
   let tokenCursor = 0;
 
+  const hasWordChip = Boolean(preset.wordBackgroundColor || preset.activeWordBackgroundColor);
+  const chipRadius = preset.wordBackgroundRadiusPx ?? 8;
+  const chipPaddingX = preset.wordBackgroundPaddingXPx ?? 8;
+  const chipPaddingY = preset.wordBackgroundPaddingYPx ?? 3;
+
   return (
     <div
       style={{
@@ -94,6 +99,9 @@ export const CaptionPage: React.FC<CaptionPageProps> = ({
               // word can visually overlap its neighbors — pad both sides in
               // proportion to how far past 1 the scale goes.
               const scaleOverflowEm = Math.max(0, scale - 1) * 4;
+              const wordBackgroundColor = isActive
+                ? preset.activeWordBackgroundColor ?? preset.wordBackgroundColor ?? undefined
+                : preset.wordBackgroundColor ?? undefined;
 
               return (
                 <span
@@ -101,8 +109,12 @@ export const CaptionPage: React.FC<CaptionPageProps> = ({
                   style={{
                     display: "inline-block",
                     marginLeft: `${scaleOverflowEm / 2}em`,
-                    marginRight: `${0.28 + scaleOverflowEm / 2}em`,
+                    marginRight: `${(hasWordChip ? 0.16 : 0.28) + scaleOverflowEm / 2}em`,
+                    marginBottom: hasWordChip ? "0.22em" : undefined,
                     color: isActive ? preset.activeWordColor : preset.textColor,
+                    backgroundColor: wordBackgroundColor,
+                    borderRadius: hasWordChip ? chipRadius : undefined,
+                    padding: hasWordChip ? `${chipPaddingY}px ${chipPaddingX}px` : undefined,
                     transform: `scale(${scale})`,
                   }}
                 >

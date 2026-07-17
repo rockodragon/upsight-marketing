@@ -48,7 +48,7 @@ export type TimelineSegment = {
   outputStartMs: number;
 };
 
-export const CAPTION_PRESET_NAMES = ["clean", "emphasis", "productDemo"] as const;
+export const CAPTION_PRESET_NAMES = ["clean", "emphasis", "productDemo", "highlight"] as const;
 export type CaptionPresetName = (typeof CAPTION_PRESET_NAMES)[number];
 
 export type CaptionPresetTokens = {
@@ -58,6 +58,7 @@ export type CaptionPresetTokens = {
   baseFontSizePx: number;
   textColor: string;
   activeWordColor: string;
+  /** Background box behind the whole caption page (productDemo-style). */
   backgroundColor: string | null;
   textShadow: string | null;
   letterSpacing: string;
@@ -66,6 +67,18 @@ export type CaptionPresetTokens = {
   uppercase: boolean;
   borderRadiusPx: number;
   paddingPx: number;
+  /**
+   * Per-word highlight chip — a background box behind each individual word,
+   * independent of `backgroundColor` (the whole-page box). Omit/null for no
+   * chip (clean/emphasis/productDemo). `activeWord*` swaps in while that
+   * word is being spoken; falls back to the base word color/background if
+   * unset (word stays highlighted throughout, no additional pop on speak).
+   */
+  wordBackgroundColor?: string | null;
+  activeWordBackgroundColor?: string | null;
+  wordBackgroundRadiusPx?: number;
+  wordBackgroundPaddingXPx?: number;
+  wordBackgroundPaddingYPx?: number;
 };
 
 export type CaptionRendererProps = {

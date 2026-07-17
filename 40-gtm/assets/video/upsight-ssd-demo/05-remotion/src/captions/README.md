@@ -2,7 +2,7 @@
 
 Automated word-timed captions: transcribe a source video, correct known
 product-name mistranscriptions, group words into TikTok-style pages, and
-render them over the video with one of three branded presets.
+render them over the video with one of four branded presets.
 
 Built on `@remotion/captions` (`Caption[]`, `createTikTokStyleCaptions()`)
 rather than the official $100 Animated Captions component — this gets you
@@ -29,7 +29,7 @@ npm run caption-video -- \
   --language en
 ```
 
-Options: `--preset clean|emphasis|productDemo`, `--language <code>`
+Options: `--preset clean|emphasis|productDemo|highlight`, `--language <code>`
 (omit to auto-detect), `--vocabulary <path>` (override `data/vocabulary.json`),
 `--no-srt` (skip the sibling `.srt` file).
 
@@ -71,7 +71,7 @@ pagination.ts                createTikTokStyleCaptions() wrapper + page-size/no-
 CaptionRenderer.tsx           frame-driven overlay: clip/timeline offset → paginate → active page
 CaptionPage.tsx                fitTextOnNLines() layout + per-word spring highlight
 CaptionComposition.tsx        example: OffthreadVideo + CaptionRenderer, loads captionsSrc JSON
-presets/{clean,emphasis,productDemo}.ts   design tokens per style, from ../lib/brand.ts
+presets/{clean,emphasis,productDemo,highlight}.ts   design tokens per style, from ../lib/brand.ts
 transcription/
   provider.ts                  TranscriptionProvider interface + typed errors
   openai.ts                    first backend (fetch, not the openai SDK — see below)
@@ -107,10 +107,16 @@ language}) => {captions, detectedLanguage}`.
 - **clean** — product/LinkedIn video. Minimal movement, amber emphasis on the active word.
 - **emphasis** — short-form social. Color highlight + scale pop, faster page turnover (500ms/4 words vs the 800ms/6 word default).
 - **productDemo** — screen recordings. Semi-opaque background box, restrained animation. Override placement per scene with `layout={{ position: "upper" }}`.
+- **highlight** — every word sits in its own background chip (a "marker highlighter" box), so captions stay readable over any footage, not just dark backgrounds. The active word's chip swaps color as it's spoken (karaoke-style). Colors/spacing are plain variables at the top of `presets/highlight.ts` — `TEXT_COLOR`, `WORD_BACKGROUND_COLOR`, `ACTIVE_WORD_TEXT_COLOR`, `ACTIVE_WORD_BACKGROUND_COLOR`, chip radius/padding — edit them directly, or copy the file for a second variant (e.g. `highlightDark`).
 
-All three pull colors/fonts from `../lib/brand.ts` — extend
+All four pull colors/fonts from `../lib/brand.ts` — extend
 `30-strategy/brand-style-guide.md` first if a token is missing, don't
 invent one here.
+
+Any preset can add per-word background chips via `CaptionPresetTokens`'
+`wordBackgroundColor` / `activeWordBackgroundColor` (+ `wordBackgroundRadiusPx`
+/ `wordBackgroundPaddingXPx` / `wordBackgroundPaddingYPx`) — `highlight` is
+just the preset that turns them on by default.
 
 ## Tests
 
