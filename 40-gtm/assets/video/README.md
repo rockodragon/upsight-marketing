@@ -75,6 +75,14 @@ npm run render    # → out/hero.mp4
 
 Open `01-script/hero.script.json`, change text or scene durations, then re-run `npm run render` in `05-remotion/`.
 
+## Captions
+
+Every `05-remotion/` (including the template) ships a caption pipeline —
+transcribe a source video, correct known product-name mistranscriptions,
+and render branded word-timed captions (`clean` / `emphasis` /
+`productDemo`). See `05-remotion/src/captions/README.md` in any project
+for setup and the `npm run caption-video` CLI.
+
 ## Active videos
 
 | Slug | Purpose | Script | Output |
