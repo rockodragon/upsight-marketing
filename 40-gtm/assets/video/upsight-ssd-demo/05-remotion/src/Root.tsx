@@ -2,10 +2,10 @@ import React from "react";
 import { Composition } from "remotion";
 import { CaptionComposition } from "./captions/CaptionComposition";
 import { SsdDemo } from "./compositions/ssd-demo/SsdDemo";
-import { ssdScript } from "./lib/script";
+import { ssdScript, totalDurationInFrames } from "./lib/script";
 
 export const RemotionRoot: React.FC = () => {
-  const { width, height, fps, durationSeconds } = ssdScript.format;
+  const { width, height, fps } = ssdScript.format;
 
   return (
     <>
@@ -15,7 +15,7 @@ export const RemotionRoot: React.FC = () => {
         width={width}
         height={height}
         fps={fps}
-        durationInFrames={durationSeconds * fps}
+        durationInFrames={totalDurationInFrames(fps)}
       />
       {/*
         Example caption integration — see src/captions/README.md.

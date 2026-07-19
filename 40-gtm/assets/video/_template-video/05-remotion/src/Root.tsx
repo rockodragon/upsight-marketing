@@ -2,10 +2,10 @@ import React from "react";
 import { Composition } from "remotion";
 import { CaptionComposition } from "./captions/CaptionComposition";
 import { VideoHero } from "./compositions/VideoHero";
-import { videoScript } from "./lib/script";
+import { getTotalDurationInFrames, videoScript } from "./lib/script";
 
 export const RemotionRoot: React.FC = () => {
-  const { width, height, fps, durationSeconds } = videoScript.format;
+  const { width, height, fps } = videoScript.format;
 
   return (
     <>
@@ -15,7 +15,7 @@ export const RemotionRoot: React.FC = () => {
         width={width}
         height={height}
         fps={fps}
-        durationInFrames={durationSeconds * fps}
+        durationInFrames={getTotalDurationInFrames(videoScript)}
       />
       {/*
         Example caption integration — see src/captions/README.md.

@@ -75,7 +75,6 @@ export const ScreenshotFrame: React.FC<{
           }}
         />
       </div>
-
       {/* Content */}
       {type === "video" ? (
         <OffthreadVideo
@@ -86,7 +85,7 @@ export const ScreenshotFrame: React.FC<{
         <Img
           src={staticFile(src)}
           style={{ width: "100%", display: "block" }}
-        />
+          from={13} />
       )}
     </div>
   );

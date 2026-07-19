@@ -9,16 +9,16 @@ import {
   useVideoConfig,
 } from "remotion";
 import { colors, fonts, layout } from "../../lib/brand";
-import { useSceneFade } from "../../lib/animations";
+import { useFadeIn, useSceneFade } from "../../lib/animations";
 import { MonoLabel } from "../../components/MonoLabel";
 import { getScene } from "../../lib/script";
 
 export const SceneProfile: React.FC = () => {
   const frame = useCurrentFrame();
-  const { fps, durationInFrames } = useVideoConfig();
+  const { fps } = useVideoConfig();
   const scene = getScene("profile");
   const person = scene.person;
-  const fade = useSceneFade(durationInFrames, 8);
+  const fade = useFadeIn(0, 8);
 
   const card = spring({ frame: frame - 8, fps, config: { damping: 26, stiffness: 130, mass: 0.75 } });
 

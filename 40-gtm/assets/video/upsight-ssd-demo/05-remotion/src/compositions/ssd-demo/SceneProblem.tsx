@@ -7,7 +7,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import { colors, fonts, layout } from "../../lib/brand";
-import { useSceneFade } from "../../lib/animations";
+import { useFadeIn } from "../../lib/animations";
 import { MonoLabel } from "../../components/MonoLabel";
 import { getScene } from "../../lib/script";
 
@@ -22,9 +22,9 @@ const NOTES = [
 
 export const SceneProblem: React.FC = () => {
   const frame = useCurrentFrame();
-  const { fps, durationInFrames } = useVideoConfig();
+  const { fps } = useVideoConfig();
   const scene = getScene("problem");
-  const fade = useSceneFade(durationInFrames, 8);
+  const fade = useFadeIn(0, 8);
 
   const headline = spring({ frame: frame - 6, fps, config: { damping: 28, stiffness: 140, mass: 0.7 } });
 

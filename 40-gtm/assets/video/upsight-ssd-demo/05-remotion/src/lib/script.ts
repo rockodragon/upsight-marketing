@@ -56,8 +56,25 @@ export type SsdScript = {
 
 export const ssdScript = script as SsdScript;
 
+/** Crossfade length between scenes, in frames. Shared by SsdDemo + Root. */
+export const TRANSITION_FRAMES = 18;
+
 export function getScene(id: string): SsdScene {
   const scene = ssdScript.scenes.find((s) => s.id === id);
   if (!scene) throw new Error(`Scene not found: ${id}`);
   return scene;
+}
+
+/**
+ * Total composition length in frames. Scenes are joined by crossfades that
+ * overlap `TRANSITION_FRAMES` each, so the render is shorter than the sum of
+ * scene durations by (scenes - 1) × TRANSITION_FRAMES.
+ */
+export function totalDurationInFrames(fps: number): number {
+  const scenesFrames = ssdScript.scenes.reduce(
+    (sum, s) => sum + Math.round(s.durationSeconds * fps),
+    0,
+  );
+  const transitions = Math.max(0, ssdScript.scenes.length - 1);
+  return scenesFrames - transitions * TRANSITION_FRAMES;
 }

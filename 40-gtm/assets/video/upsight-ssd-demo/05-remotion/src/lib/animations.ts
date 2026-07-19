@@ -1,4 +1,10 @@
-import { interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
+import {
+  Easing,
+  interpolate,
+  spring,
+  useCurrentFrame,
+  useVideoConfig,
+} from "remotion";
 import { springConfident, springPop } from "./brand";
 
 export function useFadeIn(delay = 0, durationFrames = 20) {
@@ -37,6 +43,30 @@ export function useScalePop(delay = 0) {
     }),
     transform: `scale(${interpolate(progress, [0, 1], [0.5, 1])})`,
   };
+}
+
+/**
+ * Slow, cinematic reveal for screenshots/product shots: the image grows in
+ * gently while dissolving from transparent — no bounce. Returns individual
+ * `scale` + `opacity` props (keep them separate so Studio can scrub them).
+ */
+export function useImageReveal(delay = 0, growFrames = 48, dissolveFrames = 30) {
+  const frame = useCurrentFrame();
+  const t = frame - delay;
+
+  const opacity = interpolate(t, [0, dissolveFrames], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: Easing.bezier(0.16, 1, 0.3, 1),
+  });
+
+  const scale = interpolate(t, [0, growFrames], [0.8, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: Easing.out(Easing.cubic),
+  });
+
+  return { opacity, scale };
 }
 
 export function useStrikethrough(delay = 0, durationFrames = 12) {
