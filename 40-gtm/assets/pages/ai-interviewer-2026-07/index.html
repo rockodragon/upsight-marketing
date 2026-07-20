@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=3" />
+    <link rel="stylesheet" href="./styles.css?v=4" />
   </head>
   <body>
     <a class="announcement" href="../../homepage/customer-intelligence-2026-07/#comparison">
@@ -23,23 +23,23 @@
       See the UpSight difference <span aria-hidden="true">&rarr;</span>
     </a>
 
-    <header>
-      <nav class="nav" aria-label="Main">
-        <a class="brand" href="../../homepage/customer-intelligence-2026-07/" aria-label="UpSight home">
-          <img src="../../brand/upsight-logo.png" alt="" width="26" height="26" />
-          <span>UpSight</span>
-        </a>
-        <div class="links">
-          <a href="https://getupsight.com/customer-discovery">For product teams</a>
-          <a class="current" href="./" aria-current="page">AI Interviewer</a>
-          <a href="https://getupsight.com/customer-discovery-for-consultants">Consultants</a>
-          <a href="https://getupsight.com/pricing">Pricing</a>
-          <a href="https://getupsight.com/blog">Blog</a>
-          <a href="https://getupsight.com/docs">Docs</a>
-          <a class="sign-in" href="https://getupsight.com/login">Sign in</a>
-          <a class="btn btn-primary" href="https://getupsight.com/sign-up?intent=analyze-3-conversations" data-placement="nav">Start free</a>
-        </div>
+    <header class="site-header">
+      <a class="brand" href="../../homepage/customer-intelligence-2026-07/" aria-label="UpSight home">
+        <img src="../../brand/upsight-logo.png" alt="" width="32" height="32" />
+        <span>UpSight</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="https://getupsight.com/customer-discovery">For product teams</a>
+        <a class="current" href="./" aria-current="page">AI Interviewer</a>
+        <a href="https://getupsight.com/customer-discovery-for-consultants">Consultants</a>
+        <a href="https://getupsight.com/pricing">Pricing</a>
+        <a href="https://getupsight.com/blog">Blog</a>
+        <a href="https://getupsight.com/docs">Docs</a>
       </nav>
+      <div class="header-actions">
+        <a class="sign-in" href="https://getupsight.com/login">Sign in</a>
+        <a class="button button-small button-dark" href="https://getupsight.com/sign-up?intent=analyze-3-conversations" data-placement="nav">Start free</a>
+      </div>
     </header>
 
     <main id="top">
@@ -87,7 +87,7 @@
       <section id="knows">
         <div class="wrap scene">
           <div class="tell">
-            <h2>Everyone you ask is already a living profile.</h2>
+            <h2>Living profiles come alive with nuanced details.</h2>
             <p class="lead">
               Their goals, their objections, the exact words they used last time &mdash; carried into
               the next conversation instead of forgotten in an export.
@@ -98,9 +98,14 @@
             </div>
           </div>
           <div class="stage">
-            <figure class="panel lav tall">
-              <div class="shot"><img src="../../brand/persondetail.jpg" alt="An UpSight living customer profile: key attributes grouped into value, pain, and behavior, with organizations and interview history attached." loading="lazy" /></div>
-              <figcaption class="cap">Living customer profile &middot; evidence attached</figcaption>
+            <figure class="panel lav">
+              <div class="shot vid">
+                <video autoplay muted loop playsinline preload="metadata" aria-label="Zooming into a customer's living profile of nuanced attributes">
+                  <source src="https://pub-0332ea3a4c2e45899d4c374547d95427.r2.dev/videos/attributes-zoom.mp4" type="video/mp4" />
+                  Your browser does not support embedded video.
+                </video>
+              </div>
+              <figcaption class="cap">Nuanced attributes, captured from every conversation</figcaption>
             </figure>
           </div>
         </div>
@@ -117,7 +122,7 @@
             </p>
             <div class="mini">
               <p class="m"><i aria-hidden="true"></i><span>Decision questions and research questions, structured for you</span></p>
-              <p class="m"><i aria-hidden="true"></i><span>Grounded in who they are, never a canned template</span></p>
+              <p class="m"><i aria-hidden="true"></i><span>From standardized surveys to personalized conversations</span></p>
             </div>
           </div>
           <div class="stage">

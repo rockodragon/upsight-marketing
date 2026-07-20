@@ -1150,9 +1150,9 @@ footer {
 
 .story-grid article {
   display: grid;
-  min-height: 11rem;
+  min-height: 9rem;
   align-content: start;
-  gap: 1.4rem;
+  gap: 0.65rem;
   padding: clamp(1.4rem, 2.5vw, 2.2rem);
   background: var(--paper);
 }
@@ -1160,6 +1160,10 @@ footer {
 .story-body {
   display: grid;
   gap: 0.65rem;
+}
+
+.story-grid .story-body h3 {
+  margin-top: 0;
 }
 
 .story-grid span {
