@@ -1,0 +1,139 @@
+{
+  "id": "upsight-ci-v2",
+  "title": "CI-v2 — Killer Loop Homepage Hero",
+  "description": "Fixed-spot movie: evidence cards deal → analysis → one composite story reel (send to customers / internal / leadership).",
+  "format": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationSeconds": 16
+  },
+  "movieDurationSeconds": 22,
+  "storyTitle": "Event Impact",
+  "takeaway": "Implementation confidence is blocking expansion.",
+  "snippets": [
+    {
+      "id": "s-video",
+      "kind": "video",
+      "source": "Customer video",
+      "quote": "",
+      "file": "video/testimonial-haley.mp4",
+      "meta": "Haley · Interview"
+    },
+    {
+      "id": "s-note",
+      "kind": "note",
+      "source": "Sales note",
+      "quote": "",
+      "meta": "Uploaded by Alex · CRM",
+      "author": "Alex Chen"
+    },
+    {
+      "id": "s-zoom",
+      "kind": "video",
+      "source": "Zoom meeting",
+      "quote": "",
+      "file": "video/meeting-panel-6.mp4",
+      "meta": "Acme · Discovery"
+    },
+    {
+      "id": "s-call",
+      "kind": "call",
+      "source": "Support call",
+      "quote": "",
+      "meta": "Customer support · 18 min",
+      "file": "video/03-finding-the-right-customers-and-advocates--30s.mp4"
+    }
+  ],
+  "reelSources": [
+    {
+      "id": "haley",
+      "name": "Haley",
+      "file": "video/testimonial-haley.mp4"
+    },
+    {
+      "id": "rylie",
+      "name": "Rylie",
+      "file": "video/testimonial-rylie.mp4"
+    },
+    {
+      "id": "survey",
+      "name": "Survey clip",
+      "file": "video/05-in-the-marketing-materials-having-somethin-12s.mp4"
+    },
+    {
+      "id": "meeting",
+      "name": "Discovery",
+      "file": "video/meeting-panel-6.mp4"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "customers",
+      "label": "Customer story",
+      "title": "Share with customers",
+      "detail": "Proof for the website and advocates",
+      "audience": "Customers"
+    },
+    {
+      "id": "internal",
+      "label": "Internal brief",
+      "title": "Share with product",
+      "detail": "Priority with source evidence",
+      "audience": "Internal"
+    },
+    {
+      "id": "leadership",
+      "label": "Website reel",
+      "title": "Share on the website",
+      "detail": "Pattern + clips in one brief",
+      "audience": "Website"
+    }
+  ],
+  "stackClips": [
+    {
+      "id": "CiV2Cards",
+      "title": "Cards",
+      "durationSeconds": 5,
+      "label": "Evidence deals in"
+    },
+    {
+      "id": "CiV2Intelligence",
+      "title": "Intelligence",
+      "durationSeconds": 5,
+      "label": "Analysis"
+    },
+    {
+      "id": "CiV2Stories",
+      "title": "Stories",
+      "durationSeconds": 6,
+      "label": "One story reel"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "ingest",
+      "name": "Ingest",
+      "durationSeconds": 3,
+      "label": "Messy customer voice"
+    },
+    {
+      "id": "pattern",
+      "name": "Pattern",
+      "durationSeconds": 4,
+      "label": "UpSight finds the pattern"
+    },
+    {
+      "id": "outputs",
+      "name": "Outputs",
+      "durationSeconds": 5,
+      "label": "Ready to act"
+    },
+    {
+      "id": "hold",
+      "name": "Hold",
+      "durationSeconds": 2,
+      "label": "UpSight"
+    }
+  ]
+}

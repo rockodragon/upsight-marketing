@@ -1,0 +1,31 @@
+{
+  "name": "upsight-ci-v2-remotion",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts CiV2 --output=out/ci-v2.mp4",
+    "render:funnel": "remotion render src/index.ts CiV2Funnel --codec=vp9 --image-format=png --pixel-format=yuva420p --output=out/ci-v2-funnel.webm",
+    "render:funnel-preview": "remotion render src/index.ts CiV2Funnel --output=out/ci-v2-funnel-preview.mp4",
+    "render:cards": "remotion render src/index.ts CiV2Cards --output=out/ci-v2-cards.mp4",
+    "render:intelligence": "remotion render src/index.ts CiV2Intelligence --output=out/ci-v2-intelligence.mp4",
+    "render:stories": "remotion render src/index.ts CiV2Stories --output=out/ci-v2-stories.mp4",
+    "render:movie": "remotion render src/index.ts CiV2Movie --output=out/ci-v2-movie.mp4",
+    "render:movie-portrait": "remotion render src/index.ts CiV2MoviePortrait --output=out/ci-v2-movie-portrait.mp4",
+    "render:movie-portrait-alpha": "remotion render src/index.ts CiV2MoviePortraitAlpha --codec=vp9 --image-format=png --pixel-format=yuva420p --output=out/ci-v2-movie-portrait.webm",
+    "render:stack": "npm run render:cards && npm run render:intelligence && npm run render:stories",
+    "upgrade": "remotion upgrade",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.484",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "4.0.484"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config": "4.0.484",
+    "@types/react": "^19.0.0",
+    "typescript": "^5.7.0"
+  }
+}

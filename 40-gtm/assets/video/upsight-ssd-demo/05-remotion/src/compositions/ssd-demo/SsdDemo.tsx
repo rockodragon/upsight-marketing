@@ -59,7 +59,7 @@ export const SsdDemo: React.FC = () => {
 
   return (
     <MarketingBackground>
-      <TransitionSeries>{children}</TransitionSeries>
+      <TransitionSeries from={-23}>{children}</TransitionSeries>
     </MarketingBackground>
   );
 };

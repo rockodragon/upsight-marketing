@@ -1,49 +1,105 @@
 # Messaging
 
-> Short-form approved messaging. For the full strategic bridge, see `messaging-house.md`.
+> Short-form approved messaging. For the current homepage strategy, see
+> `messaging-house-customer-intelligence.md`. For the future operating-cadence expansion, see
+> `messaging-house.md`.
 
 ---
 
+## Category
+
+**Customer intelligence platform**
+
+Do not make a cold visitor decode a novel category. UpSight enters the same customer-intelligence
+market as Dovetail and Enterpret, then distinguishes itself through living customer profiles,
+context-aware follow-up, and authentic customer voices.
+
 ## One-liner
-UpSight prepares your weekly leadership meeting from the conversations your team is already having.
 
-## Three-line version
-UpSight automatically prepares this week's priorities, issues, action items, and supporting evidence before leadership meets.
-Every recommendation links back to the original conversation, so the team trusts what it sees.
-The meeting is where customers feel the product; the broader product is a continuous operating-intelligence layer.
+UpSight brings calls, surveys, interviews, and notes together so product, leadership, and marketing
+can see what customers need, why it matters, and who said it.
 
-## Key concepts (use these phrases)
-- **Your weekly leadership meeting, already prepared**
-- **Every issue has evidence**
-- **The meeting is the proof, not the product**
-- **Gets smarter every week**
-- **Works with EOS, Ninety, Bloom, and your existing operating cadence**
+## Homepage champion
+
+**Customer intelligence for lean B2B teams**
+
+## Homepage headline
+
+**Know your customers. Not just their feedback.**
+
+## Supporting promise
+
+**Customer intelligence from every conversation.**
+
+## Primary CTA
+
+**Analyze 3 conversations**
+
+Support line:
+
+**Use conversations you already have. No blank survey, no generic demo.**
+
+Assisted path:
+
+**Analyze them with Rick**
+
+## Product story
+
+1. **Unify:** Every signal, attached to the person behind it.
+2. **Understand:** See what one customer needs and what many are telling you.
+3. **Act:** Ask a better question, make a decision, or share a customer story.
+
+## Key concepts
+
+- **Many voices. One clear signal.**
+- **Stop losing the customer between tools.**
+- **Notetakers remember the call. Survey tools remember the response. UpSight remembers the person.**
+- **Customer intelligence should not reset.**
+- **Put customer truth to work.**
+- **There is a better way to understand customers.**
+- **Customers should not have to repeat themselves.**
+- **Remember the customer. Not just the conversation.**
 
 ## What we're not
-- Not a generic AI knowledge platform
-- Not meeting notes or transcription software
-- Not a broad homepage story about "calls, emails, notes, surveys, and everything else"
-- Not an EOS-only product in above-the-fold messaging
+
+- Not a basic survey builder or a blank form that starts from zero
+- Not a meeting notetaker that ends with one transcript and summary
+- Not a passive research repository that depends on manual tagging
+- Not promising feature-for-feature replacement of five mature software categories
+- Not leading the homepage with EOS, task management, or operating-cadence language
+- Not asking visitors to learn “compounding customer knowledge” before naming the category
 
 ## Audience-specific framing
 
-### To CEOs / founders
-"Walk into Monday's leadership meeting already informed."
+### To founders and product leads
 
-### To operators / chiefs of staff / COOs
-"Stop spending Sunday night preparing the weekly leadership meeting."
+“See what customers need, what several conversations add up to, and the evidence behind the next
+product decision.”
 
-### To fractional leaders
-"Run more leadership teams without multiplying prep work."
+### To marketing teams
 
-### To product and research teams
-This is usually a landing-page story, not the homepage:
-"Turn customer conversations into evidence you can verify and decisions you can defend."
+“Find authentic customer language and story moments without running a separate testimonial chase.”
 
----
+### To leadership teams
+
+“Give every team customer intelligence they can inspect and act on.”
+
+### To programs and fundraising teams
+
+“Turn participant conversations into source-backed stories and impact evidence for sponsors and
+donors.”
+
+## Expansion framing
+
+Once customer intelligence is flowing and trusted, UpSight can bring the same evidence into
+guidance, next actions, and a weekly operating cadence. Keep EOS language out of the acquisition
+homepage.
 
 ## Voice
-- Calm, executive, and evidence-first
-- Specific, not abstract
-- Outcome-first before feature-first
-- No AI hype when a concrete workflow can do the job
+
+- Clear category language before differentiated product mechanics
+- Short, declarative claims instead of long platform explanations
+- Customer and relationship language before AI language
+- Product evidence before secondary CTAs
+- Action includes decisions, follow-up, sharing, and publishing
+- No claims without a product artifact, customer quote, or source
