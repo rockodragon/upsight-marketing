@@ -1,0 +1,92 @@
+{
+  "id": "upsight-ci-v2",
+  "title": "CI-v2 — Killer Loop Homepage Hero",
+  "description": "Homepage product visual: messy customer voice → one pattern → three decision outputs. Not a prettier survey.",
+  "format": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationSeconds": 14
+  },
+  "takeaway": "Implementation confidence is blocking expansion.",
+  "snippets": [
+    {
+      "id": "s1",
+      "kind": "video",
+      "source": "Zoom meeting",
+      "quote": "We're interested — but the rollout still feels risky.",
+      "file": "video/meeting-panel.mp4",
+      "meta": "Acme · Discovery"
+    },
+    {
+      "id": "s2",
+      "kind": "note",
+      "source": "Sales note",
+      "quote": "Buyer loves the product. Blocks on team adoption risk before expansion.",
+      "meta": "Uploaded by Alex · CRM",
+      "author": "Alex Chen"
+    },
+    {
+      "id": "s3",
+      "kind": "video",
+      "source": "Video response",
+      "quote": "Once it works, we expand. Until then, we wait.",
+      "file": "video/05-in-the-marketing-materials-having-somethin-12s.mp4",
+      "meta": "Survey · 0:42"
+    },
+    {
+      "id": "s4",
+      "kind": "call",
+      "source": "Customer call",
+      "quote": "Finding the right customers and advocates is hard without proof.",
+      "meta": "Support · 18 min",
+      "file": "video/03-finding-the-right-customers-and-advocates--30s.mp4"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "product",
+      "label": "Product priority",
+      "title": "Ship guided onboarding",
+      "detail": "Cut time-to-first-win before expansion asks"
+    },
+    {
+      "id": "reel",
+      "label": "Internal stakeholder reel",
+      "title": "Leadership brief clip",
+      "detail": "3 source clips that prove the pattern"
+    },
+    {
+      "id": "story",
+      "label": "Customer story reel",
+      "title": "From hesitant → expanded",
+      "detail": "Proof asset for GTM + website"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "ingest",
+      "name": "Ingest",
+      "durationSeconds": 3,
+      "label": "Messy customer voice"
+    },
+    {
+      "id": "pattern",
+      "name": "Pattern",
+      "durationSeconds": 4,
+      "label": "UpSight finds the pattern"
+    },
+    {
+      "id": "outputs",
+      "name": "Outputs",
+      "durationSeconds": 5,
+      "label": "Ready to act"
+    },
+    {
+      "id": "hold",
+      "name": "Hold",
+      "durationSeconds": 2,
+      "label": "UpSight"
+    }
+  ]
+}

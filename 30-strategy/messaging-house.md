@@ -1,6 +1,8 @@
-# UpSight Messaging House
+# UpSight Messaging House - Operating Cadence Expansion
 
-> The bridge between `../00-control/north-star.md` and GTM execution. Use this before writing homepage copy, decks, campaigns, landing pages, or feature launches.
+> **Status as of 2026-07-19:** this document owns the future operating-cadence and EOS expansion
+> story. It no longer owns the homepage lead. Use `messaging-house-customer-intelligence.md` for
+> current homepage copy, broad-market campaigns, and first-touch positioning.
 
 ---
 
@@ -12,7 +14,8 @@ Short variant:
 
 **Your weekly leadership meeting, already prepared.**
 
-This is the company-level promise people should be able to repeat after one read.
+This is the expansion promise people should be able to repeat once they understand and trust the
+customer-feedback layer.
 
 ## Strategic framing
 
@@ -82,7 +85,7 @@ These are sharper than generic "AI customer intelligence" language.
 
 ## Category
 
-For broad-market messaging, lead with:
+For dedicated operating-cadence messaging, lead with:
 
 **Leadership meeting preparation**
 
@@ -90,7 +93,7 @@ or
 
 **Operating meeting preparation**
 
-Do not lead the homepage with:
+Do not lead an operating-cadence page with:
 
 - AI interviews
 - survey software
@@ -102,7 +105,7 @@ Those are supporting contexts, not the first frame.
 
 ## Audience routing
 
-### Homepage audience
+### Expansion-page audience
 
 Lead with the operator / leadership-team use case:
 
@@ -110,7 +113,7 @@ Lead with the operator / leadership-team use case:
 - COO / chief of staff
 - fractional COO / operator
 
-### Landing-page audiences
+### Earlier customer-feedback audiences
 
 Keep these as secondary entry points:
 
@@ -121,7 +124,8 @@ Keep these as secondary entry points:
 
 Rule:
 
-If the story starts with "scale customer interviews," it is probably a landing page, not the homepage.
+If the story starts with customer calls, surveys, or feedback analysis, route it through the current
+homepage messaging house instead of this expansion story.
 
 ## Feature mapping
 
@@ -142,7 +146,7 @@ Every feature should map to a pillar.
 
 If a feature cannot clearly strengthen a pillar, do not lead with it in marketing.
 
-## Homepage rules
+## Dedicated page rules
 
 Above the fold, answer only these questions:
 

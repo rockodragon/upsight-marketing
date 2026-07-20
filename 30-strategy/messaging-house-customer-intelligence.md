@@ -1,197 +1,265 @@
-# UpSight Messaging House — Customer Intelligence Wedge
+# UpSight Messaging House - Customer Intelligence
 
-> A narrower companion to `messaging-house.md`, not a replacement. `messaging-house.md` owns the
-> primary GTM lead (weekly leadership meeting, already prepared). This document scopes a second,
-> simpler entry point: the **capture → understanding** capability on its own, without the
-> operating-cadence promise attached. Use this when the audience or channel calls for the simplest
-> possible version of "what does UpSight do" — before someone is ready for the weekly-meeting story.
+> **Current homepage owner as of 2026-07-19.** Use this document for broad-market first-touch
+> messaging. `messaging-house.md` owns the later operating-cadence and EOS expansion story.
 
 ---
 
-## Why this wedge exists
+## Core position
 
-The full product is close to an operating system: capture, understand, get guided, execute on a
-cadence, tell the story. That's real, and it's where the product goes. But it's not where someone
-should *start*. Asking a new user to adopt a weekly leadership rhythm on day one is a bigger ask
-than asking them to upload a few conversations and see what's in them.
+Category:
 
-This wedge is the first half of that loop — Interactions → Understanding — sold on its own:
+**Customer intelligence platform**
 
-**Capture every way you already talk to customers. Get understanding you can trust. Decide with
-confidence.**
+Homepage headline:
 
-Everything past that (guidance, execution cadence, story reels) is the expansion path once someone
-has real data in the system and has felt the value once. Don't lead with it here.
+**Know your customers. Not just their feedback.**
 
-## Core promise
+UpSight brings calls, surveys, interviews, and notes together so product, leadership, and marketing
+can see what customers need, why it matters, and who said it.
 
-**UpSight turns every customer conversation — calls, surveys, AI interviews, kiosk conversations —
-into structured understanding, grounded in evidence, so you can decide with confidence.**
+Supporting promise:
 
-Short variant:
+**Customer intelligence from every conversation.**
 
-**Every conversation, understood.**
+## Why this is the entry point
 
-(This is deliberately the first half of the approved "How It Works" headline in `brand-brief.md`
-— "Every conversation. Understood. Acted on." — with "Acted on" dropped. This wedge stops at
-understanding and decisions; action/execution is the next document, not this one.)
+Buyers already recognize the category **customer intelligence**. Dovetail, Enterpret, Chattermill,
+and others have taught the market to expect unified signals, AI analysis, evidence, and action. We
+should not make a visitor learn a smaller survey-analysis category or a more abstract compounding-
+knowledge category before understanding what UpSight is.
 
-## Strategic framing
+The homepage enters the category plainly, then exposes the larger problem: most customer-
+intelligence and feedback workflows still organize around signals and projects. UpSight organizes
+around the people and relationships behind them.
 
-- The **capability** is customer intelligence: capture, structure, evidence.
-- The **proof** is a theme or persona you can click into and see the exact quote behind it.
-- This is the entry point, not the whole product — the operating-system vision (guidance, weekly
-  execution, story reels) is the expansion, sold once someone already trusts the understanding
-  layer.
+UpSight's differentiated combination is:
 
-That distinction matters the same way it does in the main messaging house: it keeps this pitch
-concrete and fast to prove, and it keeps the roadmap conversation separate from the first-impression
-conversation.
+1. a persistent, evidence-backed profile for each person and relationship
+2. context that compounds across interactions
+3. prior knowledge that improves the next question, not only the next report
+4. patterns across people that remain linked to source evidence
+5. one evidence base for internal decisions and external customer stories
+
+This is the first value loop. Guidance, execution cadence, and EOS-adjacent workflows remain the
+expansion after the team trusts what UpSight knows.
+
+## Category strategy
+
+- Lead with **customer intelligence platform** in the hero.
+- Use **calls, surveys, interviews, and notes** immediately so the category is concrete.
+- Use **living customer profiles** and **customer intelligence should not reset** as differentiating
+  proof lower on the page.
+- Use **unify, understand, act** because buyers already understand that workflow.
+- Never rely on “AI-powered insights” as the reason to choose UpSight.
+
+The category is the doorway. Person-level continuity is the differentiation.
+
+## Customer problem
+
+The customer has one history. The toolchain remembers fragments:
+
+- the notetaker remembers one meeting
+- the survey tool remembers one response
+- the research repository remembers what someone tagged
+- the CRM or spreadsheet remembers what fit into fields
+- the testimonial tool asks marketing to collect the story again
+
+Teams pay for those gaps with extra subscriptions, manual reconciliation, lost context, and repeated
+questions to customers.
 
 ## Value proposition
 
-UpSight meets you in whatever channel you already use to talk to customers — a call, a survey, an
-AI-run interview, a kiosk at your event, even a pile of your own notes — and turns all of it into
-one structured picture: who these people are, what they actually said, and what patterns show up
-across all of it. No new workflow to adopt. No manual tagging. Every claim traces back to a real
-quote.
+UpSight keeps the person, the pattern, the proof, and the next question together. Each new call,
+survey, interview, or note enriches what the team knows about a customer. That context produces a
+better follow-up, strengthens or challenges patterns across the market, and surfaces authentic
+moments that product, leadership, marketing, and fundraising can use.
 
-The outcome is simple:
+The economic claim is not that UpSight reproduces every feature of five mature tools. It reduces the
+customer-learning workflow and handoffs across them.
 
-- less time hunting for what someone said
-- more confidence in what you decide to do about it
+## Three product jobs
 
-## Three pillars
+### 1. Unify: every signal, attached to the person
 
-### 1. Capture, everywhere you already talk to customers
+Build a living profile of goals, needs, challenges, preferences, behaviors, relationships, and
+interaction history, with the evidence attached.
 
-Not one new workflow — every channel you already use.
+Proof signals:
 
-Signals:
-- calls and meetings
-- surveys
-- AI Interviewer sessions
-- Event Kiosk conversations
-- uploads, notes, existing recordings
+- one record across calls, surveys, interviews, and notes
+- person and organization context
+- source-linked attributes, pains, and behaviors
+- history that becomes richer over time
 
-### 2. Structured, not just summarized
+### 2. Understand: one customer and the market pattern
 
-People, themes, and patterns — not a wall of AI-generated text.
+Connect individual evidence into recurring needs, disagreements, segments, and weak signals across
+the customer base.
 
-Signals:
-- personas and segments that emerge from what people actually said and did, not a label assigned
-  up front
-- themes clustered from real evidence, with a minimum bar before something counts as a pattern
-- rich detail on individual people, not just aggregate summaries
+Proof signals:
 
-### 3. Grounded in evidence
+- several real voices becoming one takeaway
+- themes with breadth and evidence counts
+- weak signals marked for validation
+- click-through from pattern to person and source
 
-Every claim traces back to who said it, when, and in what context.
+### 3. Act: put customer truth to work
 
-Signals:
-- click any theme → see the exact quotes
-- click any persona trait → see who exhibited it and where
-- decide from proof, not from a vibe an AI summarized for you
+Use what is already known to ask the next useful question. Customers repeat less, generic branching
+shrinks, and the team learns what changed or remains unresolved.
 
-## The memorable proof lines
+Proof signals:
 
-- **Every theme has a quote.**
-- **Every persona is earned, not assumed.**
-- **Understanding you can click into.**
+- prior-context summary before the question
+- adaptive follow-up based on known goals or blockers
+- text, audio, and video response options
+- question rationale that can be inspected
 
-## Category
+Act inside and outside the organization from the same evidence base.
 
-Lead with:
+Internal outcomes:
 
-**Customer Intelligence**
+- product and service priorities
+- pricing and positioning decisions
+- customer follow-up and next actions
+- leadership briefs with source evidence
 
-This is already the locked category definition in `brand-brief.md` — this wedge doesn't invent a
-new category, it just leads with the half of it that's fastest to prove.
+External outcomes:
 
-## What we're not / don't lead with here
+- testimonials and case-study candidates
+- customer clips for campaigns and social
+- sponsor updates and impact reports
+- donor evidence linked to the original voice
 
-- Not the full operating-system pitch — no weekly meeting, no Rocks, no execution cadence. That's
-  the next conversation, not this one.
-- Not an AI notetaker or transcription tool — the value is the structure and the evidence trail,
-  not the transcript itself.
-- Not asking anyone to change how they talk to customers — meet them in the channel they already
-  use.
-- Not EOS language of any kind in this wedge's messaging — see the EOS rule in `messaging.md`;
-  it applies here too, even more so, since this wedge is explicitly pre-operating-system.
+## Memorable lines
 
-## Audience routing
+- **Know your customers. Not just their feedback.**
+- **Customer intelligence from every conversation.**
+- **Many voices. One clear signal.**
+- **Stop losing the customer between tools.**
+- **Notetakers remember the call. Survey tools remember the response. UpSight remembers the person.**
+- **Customer intelligence should not reset.**
+- **Put customer truth to work.**
 
-Best fit for this narrower wedge — audiences who get real value from understanding and decisions
-alone, before they need a run-the-business layer on top:
+## Conversion
 
-- **Product / research leads** validating what to build — the decision is the outcome, not a
-  meeting rhythm.
-- **Consultants and fractional leaders** who need defensible findings fast, for a SOW or a
-  recommendation, not an ongoing operating cadence.
-- **Founders sitting on unsynthesized conversations** — post-launch, need the signal that's
-  already in their data.
+Primary CTA:
 
-These map to existing personas in `brand-brief.md` §5.3 — this document doesn't add new personas,
-it picks the entry message for the ones already defined there.
+**Analyze 3 conversations**
 
-## Feature mapping
+Support:
 
-| Capture surface | Pillar |
-|---|---|
-| Calls / meetings | Capture, everywhere |
-| Surveys | Capture, everywhere |
-| AI Interviewer | Capture, everywhere |
-| Event Kiosk | Capture, everywhere |
-| Uploads / AI Notes | Capture, everywhere |
-| Evidence extraction | Grounded in evidence |
-| Theme clustering | Structured, not summarized |
-| Persona / segment derivation | Structured, not summarized |
+**Start with conversations you already have. No blank survey required.**
 
-## Landing rules
+The number is part of the positioning. One upload demonstrates a summary; three begin to demonstrate
+cross-conversation customer intelligence.
 
-Above the fold, answer only:
+Assisted path:
 
-1. What is it? (turns conversations into understanding)
-2. Why trust it? (every claim links to a real quote)
-3. How fast? (same day, not weeks)
-4. Can I see it? (a theme, clicked open to the evidence behind it)
+**Analyze them with Rick**
 
-Recommended CTA direction:
+Do not default to “book a demo.” Make the session a concrete working experience with the prospect's
+existing conversations.
 
-- **Upload your first conversation**
-- **See what your customers are really saying**
+## Competitive boundaries
 
-Less concrete (avoid):
-- generic "learn more"
-- anything that requires explaining the weekly-meeting or agent-execution story to make sense
+Do not lead with these claims alone; they are market parity:
 
-## Sequencing: how this connects to the fuller vision
+- analyze feedback with AI
+- combine calls and surveys
+- find themes automatically
+- cite exact quotes
+- collect audio and video responses
+- create testimonials
+- share insights across teams
+- turn feedback into action
 
-Once a team has real conversations flowing through UpSight and trusts the understanding layer, the
-natural next step is turning that understanding into a run rhythm — guidance on what matters,
-execution on a weekly cadence, and story reels for the team, board, and market. That's the fuller
-operating-system vision. It's the expansion, not the entry point — don't pull it forward into this
-wedge's messaging.
+Use them to substantiate the compounding-profile loop. The strongest claim is not that UpSight stores
+person context. It is that person context actively changes collection, follow-up, synthesis, and
+story creation.
+
+## ICP routing
+
+Primary homepage champion:
+
+**Founder or head of product at a lean B2B company that already has recurring customer
+conversations but lacks a dedicated research-operations team.**
+
+Best-fit conditions:
+
+- 10 or more meaningful customer conversations per month
+- insight is scattered across three or more tools
+- product, leadership, and marketing all reuse customer evidence
+- the buyer can upload existing material and reach value without procurement
+- the cost of manual synthesis or a wrong priority exceeds the subscription
+
+Secondary routes:
+
+- consultants and fractional product leaders producing defensible recommendations
+- event and program operators producing sponsor or impact evidence
+- marketing teams that need authentic story candidates from ongoing customer learning
+
+Do not make donor/nonprofit the primary commercial ICP until willingness to pay and retention are
+proven. Keep it as a use case and design-partner route.
+
+## Homepage rules
+
+Above the fold, answer:
+
+1. Who is it for? Lean B2B teams that already talk to customers.
+2. What is it? A customer intelligence platform.
+3. What goes in? Calls, surveys, interviews, and notes.
+4. What comes out? Customer profiles, patterns, decisions, and stories.
+5. Why believe it? Persistent profiles, cross-conversation patterns, and source evidence.
+6. How can I test it? Analyze three existing conversations, alone or with Rick.
+
+Show three concrete reasons to believe before the hero CTAs. Place the multi-conversation proof
+beside the claim so visitors immediately see several voices becoming one source-backed takeaway.
+
+The homepage conversion sequence is:
+
+1. category, champion, outcome, reasons to believe, and dual CTA
+2. old fragmented workflow versus the UpSight way
+3. three product jobs: unify, understand, and act
+4. persistent customer context as the differentiating mechanism
+5. a concrete three-step path to first value
+6. founder conviction and a final low-friction ask
+
+Use the persuasion discipline of strong product-marketing templates, but do not import generic
+sections that UpSight cannot substantiate. No logo wall, integrations grid, migration-time promise,
+or quantified result without real proof.
+
+## What we do not lead with
+
+- a generic survey builder
+- a generic AI research repository
+- recording, transcription, or one-call summaries
+- testimonial collection as a standalone workflow
+- EOS, Rocks, weekly meetings, or task management
+- “compounding customer knowledge” as a category the visitor must decode
+- broad “single source of truth” language without showing the person and evidence model
+
+## Sequencing to the fuller vision
+
+Once a team has conversations flowing through UpSight and trusts the customer-understanding layer,
+the natural expansion is guidance: what matters now, what to do next, and how to carry customer truth
+into a weekly operating cadence. EOS is an expansion lens, not the homepage acquisition story.
 
 ## Tone
 
-Same as the rest of the brand system — see `brand-brief.md` §8 and `messaging-house.md`:
+- clear category language before differentiated product mechanics
+- short, declarative claims instead of dense platform explanations
+- customer and relationship language before AI language
+- action includes product decisions, follow-up, communication, and publishing, not only internal tasks
+- no claim without a product artifact, customer quote, or source
 
-- calm, confident, evidence-first
-- direct, no jargon
-- action-first once inside the product; here, understanding-first, since decisions are the outcome
-  this wedge sells
-- no AI hype — "grounded in what your customers actually said," not "revolutionary AI intelligence"
+## Canonical document roles
 
-## Canonical doc roles (this document's place in the hierarchy)
-
-- `../00-control/north-star.md` — why the company exists
-- `messaging-house.md` — the primary GTM lead (weekly leadership meeting, already prepared)
-- **this document** — a narrower, sequenced wedge (customer intelligence: capture → understanding)
-  for contexts where the weekly-meeting story is too big an ask for a first impression
-- `messaging.md` — approved short copy for the primary lead
-- `brand-brief.md` — full strategic and narrative context; category, ICP, and voice definitions
-  this document inherits from rather than redefines
-
-*This is a working companion document, not yet reviewed against `messaging-house.md`'s ownership
-of the primary GTM lead. Treat as draft until confirmed.*
+- `../00-control/north-star.md` - why the company exists
+- **this document** - current broad-market homepage and acquisition story
+- `messaging.md` - approved short-form copy
+- `homepage-wireframe-customer-feedback-2026-07.md` - production copy and page sequence
+- `homepage-outside-critical-analysis-2026-07-19.md` - competitive rationale and caveats
+- `messaging-house.md` - later operating-cadence and EOS expansion
+- `brand-brief.md` - broader strategic and voice context

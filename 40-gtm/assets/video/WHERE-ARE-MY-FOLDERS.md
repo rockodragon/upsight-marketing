@@ -37,6 +37,7 @@ upsight-smart-surveys/
 |---------|--------------------------|
 | Smart surveys | `40-gtm/assets/video/upsight-smart-surveys/04-assets/` |
 | Homepage hero | `40-gtm/assets/video/upsight-homepage-hero/04-assets/` |
+| CI-v2 killer loop | `40-gtm/assets/video/upsight-ci-v2/04-assets/` |
 | SSD demo | `40-gtm/assets/video/upsight-ssd-demo/04-assets/` |
 | Template (blank) | `40-gtm/assets/video/_template-video/04-assets/` |
 

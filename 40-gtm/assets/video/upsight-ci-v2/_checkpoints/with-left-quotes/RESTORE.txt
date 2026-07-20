@@ -1,0 +1,1 @@
+Restore: cp _checkpoints/with-left-quotes/SnippetFeed.tsx 05-remotion/src/components/ && cp _checkpoints/with-left-quotes/hero.script.json 01-script/
