@@ -5,6 +5,52 @@
 
 ---
 
+## 2026-07-19 - Homepage V4 uses a disciplined proof-and-conversion sequence
+**Why:** V3 established the right category and differentiator but still read more like a product
+essay than a lead-generation page. V4 applies Fletch PMM discipline and the persuasion order of the
+Standard Issue template: one champion, recognizable category, outcome, three reasons to believe,
+dual CTA, old-way/new-way contrast, product proof, a concrete three-step path, founder conviction,
+and a final ask. UpSight keeps its own visual identity and person-level continuity story. We are
+explicitly excluding unsupported logo walls, integrations, migration promises, testimonials, and
+metrics rather than copying template filler. The primary CTA remains **"Analyze 3 conversations"**
+and the assisted path is **"Analyze them with Rick."**
+
+## 2026-07-19 - Homepage V3 enters the customer-intelligence category plainly
+**Why:** V2 found the right product mechanism but made visitors decode “compounding customer
+knowledge” before naming the category. Current Dovetail, Enterpret, and Listen Labs messaging shows
+the stronger pattern: recognizable category, short point of view, familiar product jobs, and one
+dominant proof experience. The homepage now says **customer intelligence platform**, leads with
+**“Know your customers. Not just their feedback.”**, and organizes the product around **unify,
+understand, act**. Person-level continuity remains the differentiator, expressed lower as
+**“Customer intelligence should not reset.”** The CTA is **“Analyze 3 conversations”** because the
+value is the analysis, not the upload mechanic. The multi-person Remotion marquee remains the first
+major proof, and the five-tool problem is one compact visual interruption instead of a long
+comparison section.
+
+## 2026-07-19 - Homepage V2 differentiation = compounding customer context
+**Why:** External review showed that calls-and-surveys analysis, automated themes, citations,
+multimodal responses, and testimonial collection are already claimed by Dovetail, Enterpret,
+Listen Labs, Typeform, Fathom, and Senja. Customer feedback analysis remains the familiar doorway,
+but it is not the reason to switch. The homepage now leads with **“Every customer conversation
+should build on the last.”** UpSight's differentiated combination is a living customer profile,
+context that improves the next question, patterns across people, and one evidence base for internal
+decisions and external stories. The page explicitly contrasts the fragmented notetaker + survey +
+research repo + CRM/sheet + testimonial workflow, then asks visitors to **upload 3 conversations**
+to **see what they add up to**. The multi-conversation Remotion marquee replaces the single-person
+video. EOS remains expansion.
+
+## 2026-07-19 - Homepage lead = customer feedback analysis; upload is the acquisition wedge
+**Why:** This reverses the 2026-07-01 homepage choice while preserving weekly operating cadence as
+an expansion story. Cold visitors already understand the activity of reviewing customer calls and
+surveys; they do not yet shop for an operating-intelligence system. Homepage V1 now speaks to a
+founder or product lead with unsynthesized feedback, promises recurring needs, missed signals, and
+customer stories with source evidence attached, and asks them to **upload a call or survey** to see
+what they have been missing. Customer intelligence remains the broader capability, while EOS and
+weekly meeting preparation move out of homepage V1. Product, marketing, leadership, and
+program/fundraising outputs can appear lower on the page, but donor/nonprofit is not the primary
+commercial ICP. Production copy and prototype:
+`30-strategy/homepage-wireframe-customer-feedback-2026-07.md`.
+
 ## 2026-07-17 — Build the caption system in-house instead of buying Remotion's $100 Animated Captions component
 **Why:** The paid component is copy-paste source for React rendering/animation over `@remotion/captions`' `Caption[]` format — three styles, no transcription pipeline. We needed transcription (OpenAI) → correction → timing/trim handling too, so the rendering layer alone wasn't the hard part. Built the full pipeline (`upsight-ssd-demo/05-remotion/src/captions/`, mirrored into `_template-video/05-remotion` for reuse across future videos) instead. Open follow-up: compare rendered output against the paid component's text-fitting/animation polish once a real video is captioned, and buy only if it'd save more than a few hours — see `00-control/open-questions.md`.
 

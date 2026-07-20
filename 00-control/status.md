@@ -5,6 +5,196 @@
 
 ---
 
+## 2026-07-19 — CI-v2 portrait hero (4:5)
+
+**Shipped**
+- `CiV2MoviePortrait` — 1080×1350, paper bg, 90px edge / 85%×82% safe area, centered smaller stack + slide + send-to below. `npm run render:movie-portrait` → `out/ci-v2-movie-portrait.mp4`.
+
+## 2026-07-19 — CI-v2 movie: light paper + produced story end
+
+**Shipped**
+- `CiV2Movie` now uses homepage paper (`#eeeef2`) / ink; narrow ~760px center column.
+- Kept poker card deal; end is a calm produced asset: **Event Impact** title page → one trimmed clip → bar chart → send chips (no multi-cut flicker). ~22s. `out/ci-v2-movie.mp4`.
+
+## 2026-07-19 — CI-v2 movie rebuilt: cards → analysis → one story
+
+**Shipped**
+- Rewrote `CiV2Movie` as one fixed stage (dropped Series of cramped sections): playing-card deal (video → note → Zoom → support) → dissolves to analysis finding → replaced by **one** composite reel titled with the finding; send-to chips for Customers / Internal / Leadership.
+- `npm run render:movie` → `out/ci-v2-movie.mp4` (~16s).
+
+**Decided**
+- Homepage embed uses the single movie, not three side-by-side story destinations.
+
+## 2026-07-19 — CI-v2 movie: fixed-spot sequential acts
+
+**Shipped**
+- New `CiV2Movie`: Cards → Intelligence → Stories replace in one viewport (`Series`).
+- `CiV2Stories` no longer shows three destination reels side-by-side; Product → Leadership → GTM swap in the same stage with audience dots.
+- Render: `npm run render:movie` → `out/ci-v2-movie.mp4` (~20s). Brief updated in `STACK-BRIEF.md`.
+
+## 2026-07-19 — CI-v2 stack: Cards → Intelligence → Stories
+
+**Shipped**
+- Copied Haley + Rylie testimonials into `upsight-ci-v2/04-assets/video/` (`testimonial-haley.mp4`, `testimonial-rylie.mp4`).
+- Three stackable compositions for vertical web assembly:
+  - `CiV2Cards` — faces + Zoom + note deal in
+  - `CiV2Intelligence` — pattern lock
+  - `CiV2Stories` — composite reel (Haley/Rylie/discovery) routes to Product / Leadership / GTM as video destinations (not text-only)
+- Renders: `05-remotion/out/ci-v2-{cards,intelligence,stories}.mp4`. Brief: `01-script/STACK-BRIEF.md`. `npm run render:stack`.
+
+**Surfaced**
+- Stories frame is dense (master reel + three destination reels); may want taller panel or sequential reveal if homepage whitespace is still tight.
+
+## 2026-07-19 — CI-v2 funnel checkpoint + fluid variant
+
+**Shipped**
+- Checkpointed media-first scroll at `upsight-ci-v2/_checkpoints/media-first-fast-scroll-2026-07-19/` (source + mp4 + RESTORE.md).
+- New composition `CiV2Funnel`: transparent stage, poker-dealt evidence stack → pattern card → outputs; title “Stop starting from zero.”
+- Brief: `upsight-ci-v2/01-script/FUNNEL-BRIEF.md`. Studio: select `CiV2Funnel`. Preview render: `npm run render:funnel-preview`; alpha: `npm run render:funnel`.
+
+**Decided**
+- Prefer stronger homepage line (“Stop starting from zero”) over soft “feedback that remembers who it’s talking to.”
+- Homepage embed should avoid heavy dark wrapper / boxes-in-boxes; media first-class over page background.
+
+**Surfaced**
+- Funnel motion still needs eye-pass vs page whitespace; may need larger zoom / fewer chrome borders after first studio look.
+
+## 2026-07-19 — CI-v2 killer-loop homepage hero scaffolded
+
+**Shipped**
+- New Remotion project `40-gtm/assets/video/upsight-ci-v2/` — 14s composition `CiV2`: left customer-voice feed → center takeaway → right outputs (product priority / stakeholder reel / story candidate).
+- Copy + timing in `01-script/hero.script.json`. Preview stills in `05-remotion/out/preview-*.png`.
+
+**Surfaced**
+- Feed clips reuse conversational-intelligence evidence MP4s; swap fresher talking-head cuts when ready.
+
+## 2026-07-19 - homepage V4 conversion-led redesign
+
+**Shipped**
+- Rebuilt the hero for one champion, three concrete reasons to believe, a self-serve CTA, an
+  assisted founder CTA, and the multi-conversation Remotion proof in the same first experience.
+- Replaced the compact tool strip with a direct old-way/new-way comparison: five fragmented tools
+  versus one customer-intelligence layer that remembers the person over time.
+- Added a three-step first-value path and a founder manifesto without adding unsupported logos,
+  testimonials, integrations, migration claims, or metrics.
+- Reconciled the short-form messaging, customer-intelligence messaging house, wireframe, README,
+  decision log, and prototype around the V4 conversion sequence.
+- Verified the page at desktop and mobile widths with no horizontal overflow and real local media
+  playing in the browser.
+
+**Decided**
+- Borrow the reference template's persuasion order and Fletch's positioning discipline, not its
+  visual identity or generic section inventory.
+- Keep customer intelligence as the familiar category and person-level continuity as the reason to
+  choose UpSight.
+- Make the assisted CTA a working session with the prospect's conversations, never a generic demo.
+
+**Surfaced**
+- The page now has a credible conversion trail, but named customer outcomes, retention evidence,
+  willingness to pay, and activation economics remain the most important proof gaps.
+
+## 2026-07-19 - homepage V3 category-first and visceral redesign
+
+**Shipped**
+- Reframed the homepage around the established **customer intelligence platform** category and the
+  direct point of view **“Know your customers. Not just their feedback.”**
+- Rebuilt the prototype with a light, high-whitespace hero; a dark cinematic multi-conversation
+  proof stage; one amber five-tool interruption; and three large product chapters: unify,
+  understand, and act.
+- Kept the person-level memory mechanism but moved it below the category and product story as
+  **“Customer intelligence should not reset.”**
+- Changed the primary CTA from **“Upload 3 conversations”** to **“Analyze 3 conversations.”** The
+  activation threshold remains concrete while the copy leads with value rather than file transfer.
+- Reconciled the short-form messaging, customer-intelligence messaging house, wireframe, competitive
+  analysis, prototype README, and decision log to the V3 position.
+- Restarted the local preview server and visually verified the refreshed page on desktop and mobile.
+  All local assets load, the Remotion video plays in view, semantic checks pass, and horizontal
+  overflow is suppressed at the mobile breakpoint.
+
+**Decided**
+- Category credibility comes before differentiation: say what market UpSight is in, then show why
+  its person-level continuity matters.
+- Borrow the market's clear jobs and vocabulary, not competitors' exact claims or visual identity.
+- Keep the site visceral through real voices, large product artifacts, contrast, and whitespace,
+  not gradients, decorative AI diagrams, or more feature cards.
+
+**Surfaced**
+- Dovetail also uses compounding-value language, so “compounding” is a useful product mechanism but
+  not ownable homepage territory by itself.
+- The next proof gap is commercial rather than visual: a named outcome, measurable time savings, or
+  a quantified tool/workflow reduction would make the page more credible against mature competitors.
+
+## 2026-07-19 - homepage V2 competitive reset and compounding-profile prototype
+
+**Shipped**
+- Audited Dovetail, Enterpret, Listen Labs, Typeform, Fathom, and Senja. Documented why multi-source
+  analysis, themes, citations, multimedia survey responses, and testimonial capture are supporting
+  proof rather than defensible homepage differentiation.
+- Rebuilt `40-gtm/assets/homepage/customer-intelligence-2026-07/` around compounding customer
+  knowledge. V2 uses the existing multi-person Remotion marquee, exposes the five-tool fragmented
+  workflow, shows a living customer profile and context-aware follow-up, and moves from individual
+  profiles to market patterns and internal/external outcomes.
+- Changed the primary in-page CTA to **“Upload 3 conversations”** with **“See what they add up to.”**
+  The CTA appears after proof; a compact nav action remains for high-intent visitors.
+- Reconciled the wireframe, messaging house, short-form messaging, prototype README, and decision
+  log around the V2 position.
+- Rendered V2 at 1440px desktop and 390px mobile. Confirmed the Remotion video autoplays, all local
+  assets load, and the page has no horizontal overflow.
+
+**Decided**
+- **Customer feedback analysis** is a category doorway, not the homepage differentiator.
+- The differentiated combination is persistent person context that compounds, improves the next
+  interaction, produces patterns across people, and serves both decisions and customer stories.
+- “Collapses 5+ tools” means collapsing handoffs and the customer-learning workflow, not claiming
+  complete feature parity with five mature software categories.
+- One upload proves summarization; three inputs better demonstrate UpSight's differentiated value.
+
+**Surfaced**
+- The central claim now creates product-proof obligations: activation must visibly enrich a profile,
+  use prior context in a follow-up, and generate an inspectable cross-conversation pattern.
+- Unit economics still need validation with an ICP-specific model for media/transcription cost,
+  assisted onboarding time, activation, retention, and realistic willingness to pay.
+
+## 2026-07-19 - customer-feedback homepage prototype and GTM message reset
+
+**Shipped**
+- Added `30-strategy/homepage-wireframe-customer-feedback-2026-07.md`, a Fletch-style positioning
+  map and production-copy wireframe centered on one champion: a founder or head of product already
+  conducting customer interviews and surveys.
+- Added a responsive coded homepage prototype at
+  `40-gtm/assets/homepage/customer-intelligence-2026-07/`. It uses the primary CTA **"Upload a call
+  or survey"**, the support promise **"See what you've been missing"**, real product evidence, and
+  a real customer-video source moment. No invented logos, metrics, or testimonials.
+- Reconciled the canonical messaging docs. `messaging-house-customer-intelligence.md` now owns the
+  homepage; `messaging-house.md` now owns the later operating-cadence/EOS expansion; `messaging.md`
+  contains the current short-form language.
+- Rendered and visually checked the prototype at 1440px desktop and 390px mobile. Confirmed no
+  horizontal overflow, all local images and video load, headings are ordered correctly, every link
+  has a destination, and the browser reported no console warnings or errors.
+
+**Decided**
+- Homepage V1 leads with the existing category **customer feedback analysis**, not a new customer
+  intelligence category or the weekly leadership meeting.
+- EOS and weekly operating cadence are excluded from homepage V1 and reserved for expansion.
+- Primary conversion is self-serve upload; secondary conversion is a founder-assisted working
+  session using one real customer conversation.
+
+**Surfaced**
+- The deployed site source is not present in this workspace. The prototype is ready to port, but
+  production implementation must happen in the app/deployment repository.
+- Launch proof debt remains: one named customer quote, one before/after source-to-finding artifact,
+  one measured activation result, and a verified privacy statement for uploaded customer data.
+
+## 2026-07-19 — homepage messaging reconciliation for customer-intelligence-first repositioning
+
+**Shipped**
+- Added [30-strategy/homepage-messaging-reconciliation-2026-07-19.md](/Users/rickmoy/code/upsight-marketing/30-strategy/homepage-messaging-reconciliation-2026-07-19.md), a working recommendation that reconciles the current **weekly leadership meeting** messaging house with the newer **customer intelligence / receipts** story and recommends the next homepage lead with **"Know your customers better. Share their stories with confidence."**
+- Pressure-tested the live `getupsight.com` homepage metadata as of **2026-07-19** against the vault docs. Result: the live site is already closer to the customer-intelligence wedge ("Customer Intelligence with Receipts") than the canonical weekly-meeting messaging house, so the recommendation is to promote that wedge instead of inventing a third story.
+- Captured explicit homepage message hierarchy, keep/cut/park guidance, section-by-section homepage structure, ICP recommendation, and unit-economics warnings (especially: donor/nonprofit should stay proof/use-case, not primary ICP; low-price + generous media/transcription usage looks dangerous).
+
+**Surfaced**
+- The strategy layer still has a live ownership conflict: `30-strategy/messaging-house.md` owns the public lead as **weekly leadership meeting**, while `30-strategy/messaging-house-customer-intelligence.md` argues the simpler **capture -> understanding** wedge. The new memo recommends resolving this by making customer intelligence the homepage lead and moving EOS/weekly-cadence lower on the page or to a dedicated route.
+
 ## 2026-07-17 — Automated caption pipeline for Remotion video projects
 
 **Shipped**
