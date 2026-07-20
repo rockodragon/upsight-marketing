@@ -58,7 +58,7 @@ const scenes = [
     caption: "AI Interviewer → follow-ups automatically",
     headline: "The AI listens — and asks the next question.",
     vo: "It listens to their answers and asks the right follow-ups on its own.",
-    media: "video/s3-interviewer.mp4",
+    media: "video/s3-interviewer-render.mp4",
     layout: "product" as const,
   },
   {

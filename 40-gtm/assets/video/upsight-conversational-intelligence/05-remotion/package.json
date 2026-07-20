@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "link-assets": "node -e \"const fs=require('fs');const p='public';for (const d of ['video','audio','icons','logos','ui']) {const t=`${p}/${d}`; if (!fs.existsSync(t)) fs.symlinkSync(`../04-assets/${d}`, t);}\"",
+    "link-assets": "node scripts/link-assets.mjs",
     "postinstall": "npm run link-assets",
     "studio": "remotion studio src/index.ts",
     "render": "remotion render src/index.ts ConversationalIntelligence --output=out/conversational-intelligence.mp4",

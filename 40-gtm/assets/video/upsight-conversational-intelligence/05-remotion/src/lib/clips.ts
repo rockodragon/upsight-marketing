@@ -12,7 +12,17 @@ export type SpeakerClip = {
   audioStartSec: number;
 };
 
-export const SPEAKER_CLIPS: SpeakerClip[] = clipManifest.speakers.map((s) => ({
+type ClipManifestItem = {
+  id: string;
+  file: string;
+  kind?: string;
+  speaker?: string;
+  theme: string;
+  quote: string;
+  audioStartSec?: number;
+};
+
+const toSpeakerClip = (s: ClipManifestItem): SpeakerClip => ({
   id: s.id,
   file: s.file,
   kind: (s.kind as MediaKind) ?? "video",
@@ -20,68 +30,22 @@ export const SPEAKER_CLIPS: SpeakerClip[] = clipManifest.speakers.map((s) => ({
   theme: s.theme,
   quote: s.quote,
   audioStartSec: s.audioStartSec ?? 0,
-}));
+});
 
-/** Evidence / people clips for marquee + response grid — keep distinct from featured talking heads */
-export const EVIDENCE_CLIPS: SpeakerClip[] = [
-  {
-    id: "m01",
-    file: "video/01-people-are-coming-here-to-make-connections-35s.mp4",
-    kind: "video",
-    speaker: "Customer 1",
-    theme: "Connections",
-    quote: "People are coming here to make connections",
-    audioStartSec: 0,
-  },
-  {
-    id: "m02",
-    file: "video/02-host-a-networking-hour-or-30-minutes-proba-34s.mp4",
-    kind: "video",
-    speaker: "Customer 2",
-    theme: "Networking",
-    quote: "Host a networking hour",
-    audioStartSec: 0,
-  },
-  {
-    id: "m03",
-    file: "video/03-finding-the-right-customers-and-advocates--30s.mp4",
-    kind: "video",
-    speaker: "Customer 3",
-    theme: "Advocates",
-    quote: "Finding the right customers and advocates",
-    audioStartSec: 0,
-  },
-  {
-    id: "m04",
-    file: "video/04-vendors-and-vendors-only-can-kind-of-colla-20s.mp4",
-    kind: "video",
-    speaker: "Customer 4",
-    theme: "Collaboration",
-    quote: "Vendors can collaborate and stay connected",
-    audioStartSec: 0,
-  },
-  {
-    id: "m05",
-    file: "video/05-in-the-marketing-materials-having-somethin-12s.mp4",
-    kind: "video",
-    speaker: "Customer 5",
-    theme: "Sharing",
-    quote: "Something for all of us to share",
-    audioStartSec: 0,
-  },
-  {
-    id: "m06",
-    file: "video/06-i-help-startups-and-lean-teams-better-unde-7s.mp4",
-    kind: "video",
-    speaker: "Customer 6",
-    theme: "Understanding",
-    quote: "Help startups better understand their customers",
-    audioStartSec: 0,
-  },
-];
+export const SPEAKER_CLIPS: SpeakerClip[] =
+  clipManifest.speakers.map(toSpeakerClip);
 
-/** Bottom film-reel — evidence clips only (no v1/v2/v3 repeats) */
-export const MARQUEE_CLIPS: SpeakerClip[] = EVIDENCE_CLIPS;
+/**
+ * Evidence / people clips for the response grid.
+ * Keep this to evidence IDs so product scenes do not duplicate the featured heads.
+ */
+export const EVIDENCE_CLIPS: SpeakerClip[] = clipManifest.marqueeClips
+  .map(toSpeakerClip)
+  .filter((clip) => /^m\d+/.test(clip.id));
+
+/** Bottom film-reel - ordered in 01-script/clip-manifest.json for easy edits. */
+export const MARQUEE_CLIPS: SpeakerClip[] =
+  clipManifest.marqueeClips.map(toSpeakerClip);
 
 /** 30s VSL @ 30fps */
 export const CLIP_DURATION_SECONDS = 30;
