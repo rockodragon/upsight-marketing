@@ -12,6 +12,21 @@ We build these videos with Remotion (a tool that makes videos using code, instea
 
 ---
 
+## Build order & voice — decided 2026-07-23
+
+**What to build, in order:**
+
+1. **Animated Hero VSL — Nessa's brief** (52s, plus 15s and 30s cutdowns). This is the "what is UpSight" piece, and it **replaces Asset A (Hero) and Asset B (How it works)** below — Nessa's animated version merges and upgrades both into one. Build this first: it is a complete, ready brief that reuses clips we already have, needs no filming, and fills the homepage's empty "Demo video coming soon" slot. Two small tweaks before building: let the **"tells you what to ask next"** scene be the emotional peak (it is the one differentiated beat), and use **"Speak to an Advisor"** as the closing call to action (to match the founder-led site). Brief: https://docs.google.com/document/d/1fds57cDg8ILpV9UwZzahAREMahHzinO8EvaMX8vgOOc/edit
+2. **Survey VSL — "The Survey That Talks Back" (Asset G), in Rick's founder voice.** Our sharpest, most-differentiated converter, and the engine for the LinkedIn public-survey motion. Build second: it lands harder once the Hero has set the context, and it needs real Personalized-Ask + AI-interviewer footage captured first. Script: `survey-vsl-script.md`.
+3. **The persona cuts** (C consultants, D event organizers, E founders/PMF) and the recurring **dogfood / LinkedIn clip (F)** — recut from the Hero's and Survey VSL's real footage.
+
+**Voice, by job (the rule):**
+
+- **Brand / explainer (the Hero) → animated, no founder on camera.** A broad "what we do" is more polished and reusable as animation; a face earns nothing there and costs Rick a shoot day.
+- **Differentiated / sales pieces (Survey VSL, dogfood clips) → Rick's founder voice.** These convert on trust — the founder making a claim and backing it. That is where the face and voice are worth the time.
+
+---
+
 ## 1. The "so-what" ladder
 
 so-what = the one benefit the viewer actually cares about, not a feature name.
