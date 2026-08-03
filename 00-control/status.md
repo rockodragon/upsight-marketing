@@ -5,6 +5,18 @@
 
 ---
 
+## 2026-08-03 — LiveKit voice agent → phone (research, nothing built)
+
+**Shipped**
+- `docs/architecture/livekit-phone-flip.md` — what it takes to put the interview agent on the PSTN: SIP trunk/dispatch-rule mechanics, inbound vs outbound flows, carrier comparison (LiveKit Phone Numbers / Telnyx / Twilio), 8 kHz audio + turn-taking deltas, TCPA / AI-disclosure / all-party recording exposure, phased plan.
+
+**Decided**
+- Recommend inbound-first (LiveKit-issued number, individual dispatch, explicit agent dispatch, PIN from recruit email). Outbound gated behind provable consent capture in the recruit flow — FCC treats AI voice as "artificial voice," $500–1,500/call, uncapped.
+
+**Surfaced**
+- Doc's canonical home is `Insights/docs/architecture/`, not this vault — move on next Insights pass.
+- Two open questions logged (8 kHz STT accuracy; is phone a completion fix or a demo asset).
+
 ## 2026-07-19 — CI-v2 portrait hero (4:5)
 
 **Shipped**

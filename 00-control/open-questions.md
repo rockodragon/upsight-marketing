@@ -7,6 +7,8 @@
 
 | Date opened | Q | Type | Owner | Status |
 |---|---|---|---|---|
+| 2026-08-03 | Phone interviews: is 8 kHz PSTN audio accurate enough on our interview vocabulary for phone transcripts to count as first-class evidence? | [tactical] | Rick | open → testable in a day with recorded phone audio; gates the outbound bet. See `docs/architecture/livekit-phone-flip.md` |
+| 2026-08-03 | Is phone a completion-rate fix or a demo asset? Decide which we're funding before spending 2 weeks on outbound. | [bet] | Rick | open |
 | 2026-07-17 | Does Remotion's $100 Animated Captions component's text-fitting/animation polish beat our in-house build enough to justify buying it? | [tactical] | Rick | open → needs a real captioned video to compare against; see `decisions.md` 2026-07-17 |
 | 2026-06-09 | Dynamic Groups: how should the app express segment exclusivity (precedence vs explicit exclude) + which criteria types (attributes / survey / engagement / AI-theme)? | [bet] | Rick | open → spec seeded 2026-06-09; needs a separate app-repo thread |
 | 2026-06-09 | Is event-organizer a real ICP, or off the founder-led-seller thesis? Run Nessa's research-led probe as the test. | [bet] | Rick | open → plan `40-gtm/channels/outreach/nessa-event-organizer-leadgen-2026-06-09.md` |
