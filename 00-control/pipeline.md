@@ -37,6 +37,20 @@
 - Julie Schecher
 - **Next action:** demo so she can explore. watch her consulting process. 
 - **Blocker:** a good demo video and onboarding
+### EasyHair — lost customer recovery
+- **Stage:** new
+- **Last touch:** _(fill in)_
+- **Next action:** _(fill in)_
+- **Why us:** win-back / churn analysis — surface why customers actually left and who's next at risk, with receipts
+- **UpSight opp:** _(not yet created)_
+
+### Cloudbeds — lost customer recovery
+- **Stage:** new
+- **Last touch:** _(fill in)_
+- **Next action:** _(fill in)_
+- **Why us:** win-back / churn analysis — surface why customers actually left and who's next at risk, with receipts
+- **UpSight opp:** _(not yet created)_
+
 ## Backburner Todos
 ### Patricia Sinay — nonprofit AI
 - **Stage:** discovery
@@ -45,10 +59,10 @@
 - **Why us:** UpSight as member intelligence + research tool for nonprofits
 - **UpSight opp:** `a280dbd0-d554-4218-a311-42add449a1aa`
 
-### Filmmaker-  Paul Girrett (MB friend)
+### Filmmaker — Paul Girrett (friend, not a primary lead)
 - **Stage:** new
 - **Last touch:** 2026-04-25
-- **Next action:** reach out and pitch automatic highlight clip creation (ask for 15 min)
+- **Next action:** low-priority — casual pitch if it comes up naturally, don't spend real time chasing
 - **Why us:** compress long calls into shareable highlight clips + evidence
 - **UpSight opp:** _(not yet created)_
 
