@@ -55,7 +55,25 @@ export const OUTBOUND_BRIEF_OUTPUT_SCHEMA = {
 export const OUTBOUND_BRIEF_SYSTEM_PROMPT = `You are generating concise outbound research for a sales call.
 Ground every claim in current public information.
 Tie company signals back to the specific prospect's role.
-No em dashes.`;
+No em dashes.
+Stop researching as soon as you have 2 to 4 solid dated triggers. Do not keep searching for more.
+Cite only the sources you actually used for the triggers and talking points, at most 5.`;
+
+/**
+ * Deep search variants, cheapest first. Billing is compute-driven, so lighter costs less.
+ *
+ * Default is `deep`, not `deep-lite`, despite the cost. Measured 2026-08-05 on matched runs:
+ * `deep` returned three triggers all dated the current month, sourced to news outlets.
+ * `deep-lite` returned triggers dated January 2025 and June 2022, sourced to evergreen podcasts
+ * and blog posts. It does not do live news retrieval, which is the entire job here. A brief whose
+ * newest trigger is four years old fails the playbook rule that every email carry a real, timely,
+ * sourced hook, so the cheaper variant buys nothing usable.
+ *
+ * Use `deep-lite` only when you want background on a person rather than a reason to reach out now.
+ */
+export const SEARCH_TYPES = ["deep-lite", "deep", "deep-reasoning"] as const;
+export type SearchType = (typeof SEARCH_TYPES)[number];
+export const DEFAULT_SEARCH_TYPE: SearchType = "deep";
 
 /** Runtime validation of what Exa actually returns for `output.content`. */
 export const OutboundBriefSchema = z.object({

@@ -10,3 +10,6 @@
 # Dependencies / build artifacts
 node_modules/
 **/node_modules/
+
+# outbound-research: generated briefs and export bundles
+40-gtm/outbound/tools/outbound-research/briefs.zip

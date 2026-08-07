@@ -11,6 +11,11 @@ export type Prospect = {
   lastName: string;
   role: string;
   company: string;
+  /**
+   * The full source row, keyed by normalised header. Kept so qualification rules can read
+   * columns the brief itself does not need, such as "# Employees" or "Email Status".
+   */
+  raw?: Record<string, string>;
 };
 
 /** Parse RFC-4180-ish CSV: quoted fields, escaped `""`, and newlines inside quotes. */
@@ -86,7 +91,7 @@ export function parseCsv(input: string): string[][] {
   return rows;
 }
 
-const HEADER_ALIASES: Record<keyof Prospect | "fullName", string[]> = {
+const HEADER_ALIASES: Record<"firstName" | "lastName" | "fullName" | "role" | "company", string[]> = {
   firstName: ["first name", "firstname", "first"],
   lastName: ["last name", "lastname", "last", "surname"],
   fullName: ["full name", "fullname", "name", "person", "contact", "contact name"],
@@ -197,12 +202,18 @@ export function parseProspectsCsv(csv: string): ParseProspectsResult {
       continue;
     }
 
+    const raw: Record<string, string> = {};
+    headers.forEach((header, index) => {
+      raw[normalizeHeader(header)] = (row[index] ?? "").trim();
+    });
+
     prospects.push({
       firstName,
       lastName,
       // The brief reads badly without a role, but the role is not worth dropping a row over.
       role: role || "unknown role",
       company,
+      raw,
     });
   }
 

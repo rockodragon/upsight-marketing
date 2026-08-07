@@ -36,6 +36,49 @@ Put your key in `.env` as `EXA_API_KEY=...`. Get one at https://dashboard.exa.ai
 
 ---
 
+## Two other commands
+
+### `--qualify` — free list filtering
+
+Apollo's filters leak. A 1,000-person dental group tagged `medical practice` comes back inside a
+health-and-wellness search, and Apollo marks it Qualified. Every junk row that reaches the brief
+stage costs a real API call.
+
+```bash
+npm run brief -- --input prospects.csv --qualify --dry-run
+```
+
+Reads Apollo's own columns and drops rows on evidence already in the CSV: headcount outside
+30-300, blocklisted industry, two or more anti-ICP keywords, role inboxes, unverified email.
+Free, deterministic, and it reports what it dropped and why.
+
+A missing column never causes a drop. Absence of data is not evidence of a bad fit.
+
+The single-keyword tolerance is deliberate: brands list hundreds of keywords, so one stray
+"dental" on a toothpaste brand should not disqualify it. Two or more is a pattern.
+
+Defaults live in `SEGMENT_G_DEFAULTS` in `src/qualify.ts` and encode the anti-ICP list from
+[segment-g-health-beauty-wellness.md](../../segment-g-health-beauty-wellness.md).
+
+### `npm run lint` — email standards
+
+"Write a less cringy email" is not enforceable. A rule that fails a draft containing
+"I hope this finds you well" is.
+
+```bash
+npm run lint -- drafts/amber-cram.md --brief briefs/amber-cram-knew-health.md
+```
+
+Checks banned phrases across six categories (filler, flattery, presumption, hype, jargon,
+model-slop), em dashes, length, link count, question count, us-versus-them ratio, subject
+length, and fake `Re:` threading.
+
+Pass `--brief` and it also enforces the playbook's core rule: **the draft must reuse a concrete
+detail from the research**. A generic note that merely sounds personalised fails `no-hook`. This
+is the check that matters most, because it is the one a human eye misses.
+
+Exit code is 1 when anything blocking is found, so it can gate a send script.
+
 ## Usage
 
 Always dry-run first. It makes no API calls and spends nothing:
@@ -65,6 +108,8 @@ npm run brief -- --input prospects.csv
 | `--out <dir>` | `./briefs` | Where briefs are written |
 | `--limit <n>` | all | Only process the first n prospects |
 | `--concurrency <n>` | `3` | Parallel requests |
+| `--type <variant>` | `deep` | `deep-lite` / `deep` / `deep-reasoning`. See the note in `src/schema.ts`: `deep-lite` returns background rather than current news, so its triggers are often years stale. |
+| `--qualify` | off | Drop rows failing the segment G fit rules first. Free. |
 | `--force` | off | Regenerate briefs that already exist. **Costs money again.** |
 | `--dry-run` | off | Print what would be requested. No API calls, no spend. |
 
@@ -92,8 +137,20 @@ kept (it degrades the brief but is not worth dropping a row over).
 
 ## Cost control
 
-Deep search is roughly **$0.012–0.015 per brief** at list prices, so a 100-prospect batch is about
-$1.20–1.50. Verify against your first invoice rather than trusting that number.
+**Measured: ~$0.24 per brief** (2026-08-05, one sample brief that returned 12 sources).
+
+Do not trust Exa's published Deep Search rate of $12/1k requests for this. That rate is a floor for a
+plain deep search. A brief runs a structured research loop that crawls and reasons over a dozen-plus
+sources, and it bills on compute, so the real cost lands roughly 20x the headline number. Cost also
+scales with how much public material exists about a prospect: a well-covered company generates more
+sources and costs more than an obscure one.
+
+At $0.24, a 100-prospect batch is about **$24**, not the $1.20 the list price implies.
+
+**The rule that follows: only brief prospects you are actually going to email.** Run these after list
+QA, never across a raw Websets export. At the playbook's 20-emails-a-day cadence with 4-6 touches per
+contact, that is roughly 100-150 new prospects a month, or $25-35. Fine. Briefing a whole unqualified
+1,000-row export would be $240 for research on people you will never contact.
 
 Three things keep the bill down:
 
@@ -119,13 +176,13 @@ Sources section. Same for an empty trigger list, which prints *"Do not send with
 ## Development
 
 ```bash
-npm test        # vitest, 50 tests, no network
+npm test        # vitest, 96 tests, no network
 npm run typecheck
 ```
 
 Tests cover CSV parsing, name/company derivation, schema validation, grounding normalisation,
-retry classification, concurrency, and markdown rendering. The Exa client is stubbed, so the suite
-never makes a network call and never costs money.
+retry classification, concurrency, markdown rendering, list qualification, and every lint rule.
+The Exa client is stubbed, so the suite never makes a network call and never costs money.
 
 ### Notes for future edits
 

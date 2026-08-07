@@ -6,7 +6,8 @@
   "scripts": {
     "brief": "tsx src/cli.ts",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "tsx src/lint-cli.ts"
   },
   "dependencies": {
     "exa-js": "^1.9.0",

@@ -2,12 +2,14 @@ import Exa from "exa-js";
 
 import type { Prospect } from "./prospects";
 import {
+  DEFAULT_SEARCH_TYPE,
   OUTBOUND_BRIEF_OUTPUT_SCHEMA,
   OUTBOUND_BRIEF_SYSTEM_PROMPT,
   OutboundBriefSchema,
   normalizeGrounding,
   type GroundingSource,
   type OutboundBrief,
+  type SearchType,
 } from "./schema";
 
 export type BriefResult = {
@@ -22,7 +24,7 @@ export type BriefResult = {
  * directly.
  */
 type DeepSearchOptions = {
-  type: "deep";
+  type: SearchType;
   systemPrompt: string;
   outputSchema: unknown;
 };
@@ -77,9 +79,10 @@ function isRetryableTransportError(error: unknown): boolean {
 export async function generateBrief(
   client: DeepSearchClient,
   prospect: Prospect,
+  searchType: SearchType = DEFAULT_SEARCH_TYPE,
 ): Promise<BriefResult> {
   const result = await client.search(buildQuery(prospect), {
-    type: "deep",
+    type: searchType,
     systemPrompt: OUTBOUND_BRIEF_SYSTEM_PROMPT,
     outputSchema: OUTBOUND_BRIEF_OUTPUT_SCHEMA,
   });
@@ -120,6 +123,7 @@ export type RetryOptions = {
   attempts?: number;
   baseDelayMs?: number;
   sleep?: (ms: number) => Promise<void>;
+  searchType?: SearchType;
 };
 
 export async function generateBriefWithRetry(
@@ -135,7 +139,7 @@ export async function generateBriefWithRetry(
 
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
     try {
-      return await generateBrief(client, prospect);
+      return await generateBrief(client, prospect, options.searchType ?? DEFAULT_SEARCH_TYPE);
     } catch (error) {
       lastError = error;
       const retryable =

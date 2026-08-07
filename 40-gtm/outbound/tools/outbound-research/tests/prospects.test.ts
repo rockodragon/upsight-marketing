@@ -65,6 +65,14 @@ describe("companyFromWebsite", () => {
 });
 
 describe("parseProspectsCsv", () => {
+  it("keeps the full source row so qualification rules can read extra columns", () => {
+    const csv = ["Full name,Company,# Employees", "Jane Rivera,Osea,150"].join("\n");
+    expect(parseProspectsCsv(csv).prospects[0].raw).toMatchObject({
+      "# employees": "150",
+      company: "Osea",
+    });
+  });
+
   it("reads a Websets-shaped export with full name and company website", () => {
     const csv = [
       "Full name,Job title,Work email,LinkedIn URL,Company website",
@@ -74,9 +82,13 @@ describe("parseProspectsCsv", () => {
     const { prospects, skipped } = parseProspectsCsv(csv);
 
     expect(skipped).toEqual([]);
-    expect(prospects).toEqual([
-      { firstName: "Jane", lastName: "Rivera", role: "VP Marketing", company: "Oseamalibu" },
-    ]);
+    expect(prospects).toHaveLength(1);
+    expect(prospects[0]).toMatchObject({
+      firstName: "Jane",
+      lastName: "Rivera",
+      role: "VP Marketing",
+      company: "Oseamalibu",
+    });
   });
 
   it("prefers an explicit company column over the website", () => {
@@ -85,7 +97,7 @@ describe("parseProspectsCsv", () => {
       "Sam,Cho,Head of Brand,Ritual,https://ritual.com",
     ].join("\n");
 
-    expect(parseProspectsCsv(csv).prospects[0]).toEqual({
+    expect(parseProspectsCsv(csv).prospects[0]).toMatchObject({
       firstName: "Sam",
       lastName: "Cho",
       role: "Head of Brand",

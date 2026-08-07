@@ -7,7 +7,11 @@ import {
   generateBriefWithRetry,
   mapWithConcurrency,
 } from "../src/exa";
-import { OUTBOUND_BRIEF_OUTPUT_SCHEMA, OUTBOUND_BRIEF_SYSTEM_PROMPT } from "../src/schema";
+import {
+  DEFAULT_SEARCH_TYPE,
+  OUTBOUND_BRIEF_OUTPUT_SCHEMA,
+  OUTBOUND_BRIEF_SYSTEM_PROMPT,
+} from "../src/schema";
 import type { Prospect } from "../src/prospects";
 
 const PROSPECT: Prospect = {
@@ -51,10 +55,23 @@ describe("generateBrief", () => {
     await generateBrief(client, PROSPECT);
 
     expect(spy).toHaveBeenCalledWith(buildQuery(PROSPECT), {
-      type: "deep",
+      type: DEFAULT_SEARCH_TYPE,
       systemPrompt: OUTBOUND_BRIEF_SYSTEM_PROMPT,
       outputSchema: OUTBOUND_BRIEF_OUTPUT_SCHEMA,
     });
+  });
+
+  it("defaults to deep, since deep-lite does not do live news retrieval", () => {
+    expect(DEFAULT_SEARCH_TYPE).toBe("deep");
+  });
+
+  it("honours an explicit search type", async () => {
+    const spy = vi.fn();
+    const client = stubClient({ output: { content: VALID_CONTENT, grounding: [] } }, spy);
+
+    await generateBrief(client, PROSPECT, "deep-reasoning");
+
+    expect(spy.mock.calls[0][1]).toMatchObject({ type: "deep-reasoning" });
   });
 
   it("returns the parsed brief and normalised grounding", async () => {

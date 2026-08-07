@@ -9,6 +9,8 @@ import {
   mapWithConcurrency,
 } from "./exa";
 import { parseProspectsCsv, prospectSlug, type Prospect } from "./prospects";
+import { DEFAULT_SEARCH_TYPE, SEARCH_TYPES, type SearchType } from "./schema";
+import { qualifyProspects, SEGMENT_G_DEFAULTS } from "./qualify";
 import { renderBriefMarkdown, renderRunSummary } from "./render";
 
 /** The template's own sample list, kept so `--sample` can smoke-test the wiring cheaply. */
@@ -27,6 +29,8 @@ type Options = {
   force: boolean;
   dryRun: boolean;
   sample: boolean;
+  searchType: SearchType;
+  qualify: boolean;
 };
 
 const USAGE = `
@@ -42,6 +46,11 @@ Options:
   --out <dir>          Output directory for briefs. Default: ./briefs
   --limit <n>          Only process the first n prospects. Use this before a full run.
   --concurrency <n>    Parallel requests. Default: 3
+  --type <variant>     deep-lite | deep | deep-reasoning. Default: deep.
+                       deep-lite is cheaper but returns background, not current news, so
+                       its triggers are often years stale. Use it only for bio research.
+  --qualify            Drop rows that fail the segment G fit rules before spending anything.
+                       Free, deterministic, reads Apollo's own columns. Recommended.
   --force              Regenerate briefs that already exist. Costs money again.
   --dry-run            Print what would be requested. Makes no API calls, spends nothing.
   --help               Show this message.
@@ -57,6 +66,8 @@ function parseArgs(argv: string[]): Options | null {
     force: false,
     dryRun: false,
     sample: false,
+    searchType: DEFAULT_SEARCH_TYPE,
+    qualify: false,
   };
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -94,6 +105,17 @@ function parseArgs(argv: string[]): Options | null {
         options.concurrency = value;
         break;
       }
+      case "--type": {
+        const value = next();
+        if (!(SEARCH_TYPES as readonly string[]).includes(value)) {
+          throw new Error(`--type must be one of: ${SEARCH_TYPES.join(", ")}`);
+        }
+        options.searchType = value as SearchType;
+        break;
+      }
+      case "--qualify":
+        options.qualify = true;
+        break;
       case "--force":
         options.force = true;
         break;
@@ -158,6 +180,20 @@ async function main(): Promise<number> {
   }
 
   let { prospects } = loaded;
+
+  if (options.qualify) {
+    const { kept, dropped } = qualifyProspects(prospects, SEGMENT_G_DEFAULTS);
+    for (const verdict of dropped) {
+      console.warn(
+        `  dropped ${verdict.prospect.firstName} ${verdict.prospect.lastName} (${verdict.prospect.company}): ${verdict.reasons.join("; ")}`,
+      );
+    }
+    console.log(
+      `\nQualified ${kept.length} of ${prospects.length}. Saved roughly $${(dropped.length * 0.24).toFixed(2)} in briefs not run.\n`,
+    );
+    prospects = kept;
+  }
+
   if (options.limit != null) prospects = prospects.slice(0, options.limit);
 
   if (prospects.length === 0) {
@@ -172,7 +208,9 @@ async function main(): Promise<number> {
   }));
 
   if (options.dryRun) {
-    console.log(`Dry run — ${targets.length} prospect(s), no API calls, no spend.\n`);
+    console.log(
+      `Dry run — ${targets.length} prospect(s) via ${options.searchType}, no API calls, no spend.\n`,
+    );
     for (const { prospect, path } of targets) {
       const exists = existsSync(path) && !options.force;
       console.log(`${exists ? "skip (exists)" : "would request"}: ${buildQuery(prospect)}`);
@@ -208,7 +246,9 @@ async function main(): Promise<number> {
     }
 
     try {
-      const { brief, grounding } = await generateBriefWithRetry(client, prospect);
+      const { brief, grounding } = await generateBriefWithRetry(client, prospect, {
+        searchType: options.searchType,
+      });
       writeFileSync(path, renderBriefMarkdown(prospect, brief, grounding, { generatedOn }), "utf8");
       generated += 1;
       const sources = grounding.length === 0 ? "no sources" : `${grounding.length} sources`;
