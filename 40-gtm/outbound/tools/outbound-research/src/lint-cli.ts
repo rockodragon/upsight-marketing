@@ -66,7 +66,12 @@ function main(): number {
   for (const file of files) {
     const path = resolve(file);
     if (!existsSync(path)) {
-      console.error(`No such file: ${path}`);
+      console.error(
+        `No such file: ${path}\n` +
+          "  Drafts are files you write. Put one in drafts/ and pass its path, for example:\n" +
+          "    npm run lint -- drafts/lindsey-locke-kreatures-of-habit.md \\\n" +
+          "      --brief briefs/lindsey-locke-kreatures-of-habit.md",
+      );
       blocking += 1;
       continue;
     }
