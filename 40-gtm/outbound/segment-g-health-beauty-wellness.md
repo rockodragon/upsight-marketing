@@ -15,7 +15,8 @@ templates, same list-hygiene rules — this doc only defines **who** and **how t
 > - **Sharpest wedge:** supplements/nutraceuticals can't make a claim they can't substantiate. "Receipts for
 >   every insight, auditable to the source" is a *compliance asset* for them, not just a nice-to-have.
 > - **Cost split:** Apollo builds the bulk list (email is ~free there). Exa finds the brands Apollo's
->   industry taxonomy misses, and does phone only where you'll actually dial. Never reveal mobiles in Apollo.
+>   industry taxonomy misses.
+> - **Do not buy phone numbers from either, yet.** See §4 — Exa's phone data failed a hands-on check.
 
 ---
 
@@ -86,7 +87,10 @@ target Director/VP, not the founder.
 
 **Cost principle: Apollo email/export credits are effectively unlimited on paid plans; mobile credits are
 rationed at 75–100/month. Build the whole list here, export emails freely, and reveal zero mobile numbers.**
-Phone comes from Exa (§4) at $0.07 instead of Apollo's effective ~$0.79.
+
+On phone: this doc previously routed phone enrichment to Exa at $0.07 against Apollo's effective ~$0.79.
+**That recommendation is withdrawn** — see the accuracy note in §4. Until one source is verified, buy phone
+from neither. The playbook's motion is email-first anyway, so this blocks nothing.
 
 ### Filters
 
@@ -158,9 +162,23 @@ Measured on a real run: **$1.88 for 10 records with email + phone = $0.188/recor
    cost is bounded and predictable instead of scaling with how much the agent decides to think.
 2. **Pass the domain in.** If the agent has to search to work out which company someone's at, you pay for
    that search. Resolve company → domain first, then enrich.
-3. **Two passes, not one.** Pass 1 = email only ($0.02). Pass 2 = phone ($0.07) on the ~20% you'll
-   actually dial. Enriching phone on the whole list is the single biggest source of waste.
+3. **Email only. Do not buy phone.** Pass 1 = email ($0.02). There is no phone pass until the accuracy
+   question below is settled.
 4. **Batch.** More records per agent run amortizes the fixed reasoning overhead.
+
+### ⚠️ Phone accuracy — unresolved, 2026-08-05
+
+Hands-on check by the growth intern: **Exa phone numbers were mostly wrong.** Anecdotal, not counted, but
+consistent enough to act on.
+
+A wrong number is worse than no number: it burns a dial and risks calling an uninvolved stranger. The
+$0.07-vs-$0.79 argument only holds if the data is right, so price is not the deciding factor here.
+
+**Until this is quantified, buy phone from neither source.** To settle it, take 10 records, pull phone from
+Exa, and check each against LinkedIn or the company's own site. Under ~70% correct, phone enrichment is
+off the table until a better source is found (Cognism and Lusha are the usual answers, both pricier).
+
+This matters little in practice: the playbook's motion is email-first, one-to-one, 20 a day.
 
 ### Websets query (list building)
 

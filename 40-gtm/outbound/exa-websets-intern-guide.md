@@ -77,8 +77,9 @@ Company website
 Work email
 ```
 
-**Do not add a phone column** unless Rick asks. Phone costs the same as email but we rarely call, so it
-doubles the cost of the list for something we usually don't use.
+**Never add a phone column.** Two reasons. It costs the same as email for something we rarely use, and
+more importantly, when we checked the phone numbers Exa returned, **most of them were wrong**. A wrong
+number is worse than none — someone wastes a call, possibly on a stranger. Email only until that changes.
 
 ---
 
