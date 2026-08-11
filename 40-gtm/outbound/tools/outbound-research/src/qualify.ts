@@ -28,7 +28,14 @@ export type QualifyOptions = {
  * The blocklists encode that doc's anti-ICP list: providers, manufacturers, and resellers.
  */
 export const SEGMENT_G_DEFAULTS: QualifyOptions = {
-  minEmployees: 30,
+  /**
+   * Deliberately far below segment G's stated 20-300 band. Measured against a real 57-row Apollo
+   * export, a floor of 30 dropped Melt Cosmetics (14), The Good Patch (12), Henry Rose (9), and
+   * Kreatures of Habit (10) — all squarely on-ICP. DTC brands run lean on contractors and agencies,
+   * and Apollo undercounts them badly. The ceiling catches conglomerates reliably; the floor mostly
+   * catches good brands, so it is set low enough to only exclude the genuinely pre-revenue.
+   */
+  minEmployees: 5,
   maxEmployees: 300,
   industryBlocklist: [
     "medical practice",
@@ -37,7 +44,8 @@ export const SEGMENT_G_DEFAULTS: QualifyOptions = {
     "mental health care",
     "plastics",
     "packaging & containers",
-    "retail",
+    // "retail" is deliberately absent: Apollo files many real DTC brands under it, and it dropped
+    // Naked & Thriving, an on-ICP skincare brand, in testing. "wholesale" does not have this problem.
     "wholesale",
     "marketing & advertising",
     "management consulting",

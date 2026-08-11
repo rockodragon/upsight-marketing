@@ -64,12 +64,28 @@ describe("qualifyProspect", () => {
     expect(reasons).toContain("1000 employees, above 300");
   });
 
-  it("drops a company below the headcount floor", () => {
+  it("keeps a lean DTC brand, since Apollo undercounts contractor-heavy teams", () => {
     const reasons = qualifyProspect(
       prospectFrom({ "# employees": "12", "email status": "Verified" }),
       SEGMENT_G_DEFAULTS,
     );
-    expect(reasons).toContain("12 employees, below 30");
+    expect(reasons).toEqual([]);
+  });
+
+  it("still drops a genuinely pre-revenue one-person shop", () => {
+    const reasons = qualifyProspect(
+      prospectFrom({ "# employees": "1", "email status": "Verified" }),
+      SEGMENT_G_DEFAULTS,
+    );
+    expect(reasons).toContain("1 employees, below 5");
+  });
+
+  it("keeps a brand Apollo filed under retail, a common mis-tag", () => {
+    const reasons = qualifyProspect(
+      prospectFrom({ industry: "retail", "# employees": "40", "email status": "Verified" }),
+      SEGMENT_G_DEFAULTS,
+    );
+    expect(reasons).toEqual([]);
   });
 
   it("drops a blocklisted industry", () => {
