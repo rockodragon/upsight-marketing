@@ -7,6 +7,8 @@
 
 | Date opened | Q | Type | Owner | Status |
 |---|---|---|---|---|
+| 2026-08-14 | Is testimonial collection (voice+video "vouch" style) a standalone micro-offer, or just a loud use case inside the member-org lane? | [tactical] | Rick | parked → cheap test = testimonial cuts in Lane B first; see `40-gtm/experiments/_index.md` PARKED |
+| 2026-08-14 | Which ICP wins on *paying customers*: consultants (quoted) or member orgs (founding code + referrals)? | [bet] | Rick | **running** → exp `2026-08-icp-head-to-head`; resolves the 6/1 ICP question with data by 9/8 |
 | 2026-07-17 | Does Remotion's $100 Animated Captions component's text-fitting/animation polish beat our in-house build enough to justify buying it? | [tactical] | Rick | open → needs a real captioned video to compare against; see `decisions.md` 2026-07-17 |
 | 2026-06-09 | Dynamic Groups: how should the app express segment exclusivity (precedence vs explicit exclude) + which criteria types (attributes / survey / engagement / AI-theme)? | [bet] | Rick | open → spec seeded 2026-06-09; needs a separate app-repo thread |
 | 2026-06-09 | Is event-organizer a real ICP, or off the founder-led-seller thesis? Run Nessa's research-led probe as the test. | [bet] | Rick | open → plan `40-gtm/channels/outreach/nessa-event-organizer-leadgen-2026-06-09.md` |

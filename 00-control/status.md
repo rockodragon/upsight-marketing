@@ -5,6 +5,14 @@
 
 ---
 
+## 2026-08-14 — Experiments queue revised to match reality
+
+**Shipped**
+- `40-gtm/experiments/_index.md` rewritten as a queue: WIP limit 3, mandatory decision dates, PARKED lot, KILLED log. Four new experiment files: ICP head-to-head (consultants vs member orgs, decides 9/8), founding-nonprofit pricing ($20→$39 step-up), personalized-followup-vs-blast (decides 8/31), public survey engine (planned, start by 8/22).
+
+**Decided**
+- Medspa/DTC outbound killed and logged. Day.ai head-to-head, event organizers, testimonials micro-offer, EOS wedge → parked with explicit unpark conditions. No new lanes until a running experiment resolves.
+
 ## 2026-08-14 — GTM role comp program v4
 
 **Shipped**
