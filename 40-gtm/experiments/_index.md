@@ -21,7 +21,7 @@
 | Experiment | Hypothesis (1 line) | Metric | Decision date |
 |---|---|---|---|
 | [`2026-08-icp-head-to-head-consultants-vs-member-orgs`](2026-08-icp-head-to-head-consultants-vs-member-orgs.md) | Member orgs convert to paying faster than consultants because pull (referrals, usage) already exists there | paying customers per lane | **2026-09-08** |
-| [`2026-08-founding-nonprofit-pricing`](2026-08-founding-nonprofit-pricing.md) | $20×3mo → $39 step-up converts broke-but-engaged orgs AND proves $39 as real WTP | redemptions; step-up retention | 8/31 + 12/01 |
+| [`2026-08-founding-nonprofit-pricing`](2026-08-founding-nonprofit-pricing.md) | Capped perpetual founding rate ($20/mo, $9 off Pro forever) converts the referral wave; retention + referrals beat the $9/mo forgone | redemptions by 8/31; 90-day retention | 8/31 + 11/01 |
 | [`2026-08-personalized-followup-vs-blast`](2026-08-personalized-followup-vs-blast.md) | Personalized follow-ups to warm seeds beat blast reply rate ≥10× and yield ≥3 meetings | replies/10 sends; qualified meetings held | **2026-08-31** |
 
 ## NEXT — planned (starts when a slot frees, or by its own start date)

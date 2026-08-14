@@ -5,6 +5,18 @@
 
 ---
 
+## 2026-08-14 — Founding-nonprofit rate: $9 perpetual off Pro ($20/mo forever), capped at 5, expires 8/31
+**Why:** Chosen over the 3-month step-up bridge. Grandfathered founding rate for the TAS referral
+wave (early believers keep their price); the redemption cap + expiry keep it a founding rate rather
+than the de-facto price. Accepted trade-off: no step-up WTP signal — $29 as real willingness-to-pay
+must now be proven on the first post-founding member org. Exp: `40-gtm/experiments/2026-08-founding-nonprofit-pricing.md`.
+
+## 2026-08-14 — Nessa: internship ends 8/31 (no renewal/conversion); August reset to $600 + v4 incentives
+**Why:** Performance didn't respond to direct feedback (one-touch outreach declared dead; batch
+blasts passed off as personalized). Reset agreed with her: $600 base for August with per-meeting
+and close incentives stacking on top per the role program (`10-ops/gtm-role-comp-program-v4.xlsx`);
+role-based program supersedes person-specific comp from here. Ledger closes 90 days after end date.
+
 ## 2026-07-19 - Homepage V4 uses a disciplined proof-and-conversion sequence
 **Why:** V3 established the right category and differentiator but still read more like a product
 essay than a lead-generation page. V4 applies Fletch PMM discipline and the persuasion order of the
