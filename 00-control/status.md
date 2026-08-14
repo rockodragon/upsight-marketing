@@ -5,6 +5,18 @@
 
 ---
 
+## 2026-08-14 — GTM role comp program v4
+
+**Shipped**
+- `10-ops/gtm-role-comp-program-v4.xlsx` — role-based comp program (supersedes person-specific v3): Outbound SDR ($650 base / 10 hr/wk floor, $50 per qualified meeting held, 2× first-month close bounty, 10% Y1 day-90 retention true-up, max two payouts per deal, no trailing) + Content & Community (per-piece rate card $35–150, optional $200 cadence retainer, quality gate). Fairness check built in: ≥$15/hr equivalent at floor/target/stretch. ICP guardrail: only approved lanes (consultants, member orgs) pay.
+
+**Decided**
+- Comp is role-based and person-agnostic; qualified-meeting criteria (net-new, held, 20+ min, founder visibility, approved lane) are the unit of variable pay — not emails sent.
+
+**Surfaced**
+- Intern reports billing page can't manage billing / switch plan → checkout NOT fully fixed; product-repo audit blocked pending `add_repo` approval for `rockodragon/Insights`.
+- ICP head-to-head proposed: consultants (quoted) vs member orgs (founding-code referral engine) — first to 3 paying by 9/8 wins; would close the 6/1 open question.
+
 ## 2026-07-19 — CI-v2 portrait hero (4:5)
 
 **Shipped**
