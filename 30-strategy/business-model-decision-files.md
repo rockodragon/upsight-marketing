@@ -71,6 +71,31 @@ Public Decision File (free)
 Free research is marketing for paid research. Paid research is the wedge for
 software. The public files are never expected to make money directly.
 
+## How the vendor finds us — three layers, three different plays
+
+Don't collapse these. They are separately staffed relationships doing separate jobs,
+and treating a PR agency like press wastes the most commercial one.
+
+| Layer | Who (2026-08) | The ask | What it produces |
+|---|---|---|---|
+| **Syndication** | Alan Shimel — Techstrong / Security Boulevard | *"Can the files run on your properties?"* | Distribution, fast. Compresses the discovery timeline from 6–12 months to weeks. |
+| **Earned editorial** | Dark Reading — Kelly Jackson Higgins | *"Would you cover a category report?"* | Credibility events. Their "20 Leaders Who Defined the CISO Era" retrospective shows the format is already compatible with what they publish. |
+| **Agency channel** | Merritt Group · Michelle Schafer · Jon Kreuzer | *"Which of your clients needs to know why they lose?"* | **Paying engagements.** This is the layer that produces revenue. |
+
+**The agency layer is the one that's easy to undervalue.** A security PR agency
+carries 20–40 vendor clients. Every one has the "we don't actually know why we lose"
+problem, and the agency is structurally motivated to bring clients something new —
+it's how a retainer gets defended. That makes them a referral source for engagements,
+not a route to coverage, and it's a far better lead channel than cold email.
+
+**Terms:** 10–15% of first-year engagement value on anything they source — the same
+structure as the contributor board. Same reason, too: it's the term that changes
+behavior rather than generating goodwill.
+
+**Sequencing:** syndication and editorial first, because they make the agency
+conversation easy. *"We publish here and here"* is what turns a referral ask into an
+obvious yes.
+
 ## The firewall — non-negotiable
 
 The moment vendors pay, published research must stay clean or independence dies —

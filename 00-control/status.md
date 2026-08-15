@@ -5,6 +5,32 @@
 
 ---
 
+## 2026-08-15 (night, final +1) — PR/media assets mapped into three channel layers
+
+**Shipped**
+- Records in UpSight Core: Michelle Schafer, Jon Kreuzer, Kelly Jackson Higgins (Dark
+  Reading), and a Merritt Group placeholder pending the named contact.
+- `30-strategy/business-model-decision-files.md` — new section "How the vendor finds us",
+  separating the three layers and their terms.
+
+**Surfaced**
+- **Merritt Group is a channel to buyers, not a media relationship** — the most useful
+  reframe in this batch. A security PR agency carries 20–40 vendor clients, every one with
+  the "we don't know why we lose" problem, and the agency is structurally motivated to bring
+  clients something new to defend the retainer. That makes them a referral source for paid
+  engagements, better than cold email. Terms: 10–15% first-year rev share, same as the board.
+- **Three layers, three different asks, don't collapse them:** syndication (Shimel /
+  Security Boulevard — distribution), earned editorial (Dark Reading / Kelly Jackson Higgins
+  — credibility), agency channel (Merritt, Schafer, Kreuzer — revenue).
+- **Sequencing:** syndication and editorial first, because they make the agency conversation
+  easy. "We publish here and here" turns a referral ask into an obvious yes.
+- **Dark Reading's "20 Leaders Who Defined the CISO Era" is a ready-made Tier-2 sourcing
+  list** — 20 named CISO-era leaders who have already agreed to be public about their
+  careers, which is half the recruiting battle. Article is egress-blocked from this
+  environment; Rick to paste the names.
+- Confirm before outreach: Michelle Schafer's spelling (Rick wrote "Shafer"), Jon Kreuzer's
+  firm and role, and that linkedin.com/in/kellyj2 is Kelly Jackson Higgins (inferred).
+
 ## 2026-08-15 (night, final) — Board list confirmed; four role-specific asks drafted
 
 **Shipped**
