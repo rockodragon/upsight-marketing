@@ -7,7 +7,8 @@
 
 | Date opened | Q | Type | Owner | Status |
 |---|---|---|---|---|
-| 2026-08-15 | Does the public-survey motion produce booked calls, or only reach? Run #1 is the test. | [tactical] | Rick | open → campaign `40-gtm/campaigns/2026-08-model-switch-public-survey.md` (proposed); target ≥5 respondent→call |
+| 2026-08-15 | Is "can I interview you for a piece I'm publishing" a higher-converting cold ask than a demo request for ICP consultants/operators? | [tactical] | Rick | open → tested by run #1's Tier-2 recruiting; 25–30 asks → target ≥10 yeses |
+| 2026-08-15 | Does the public-survey motion produce booked calls, or only reach? Run #1 is the test. | [tactical] | Rick | open → campaign `40-gtm/campaigns/2026-08-ai-stack-decision-survey.md` (proposed); target ≥4 interview→second meeting |
 | 2026-07-17 | Does Remotion's $100 Animated Captions component's text-fitting/animation polish beat our in-house build enough to justify buying it? | [tactical] | Rick | open → needs a real captioned video to compare against; see `decisions.md` 2026-07-17 |
 | 2026-06-09 | Dynamic Groups: how should the app express segment exclusivity (precedence vs explicit exclude) + which criteria types (attributes / survey / engagement / AI-theme)? | [bet] | Rick | open → spec seeded 2026-06-09; needs a separate app-repo thread |
 | 2026-06-09 | Is event-organizer a real ICP, or off the founder-led-seller thesis? Run Nessa's research-led probe as the test. | [bet] | Rick | open → plan `40-gtm/channels/outreach/nessa-event-organizer-leadgen-2026-06-09.md` |

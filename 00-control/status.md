@@ -5,6 +5,32 @@
 
 ---
 
+## 2026-08-15 (later) — Public survey engine run #1 reframed: operators, not engineers
+
+**Decided**
+- **Reframed the campaign off model-switching and onto the AI-stack decision small-company
+  operators are making.** Same motion, different room: owners, COOs, and fractional
+  operators — segment A rank 1, the locked ICP — instead of engineers. Files renamed to
+  `40-gtm/campaigns/2026-08-ai-stack-decision-{survey,script}.md`.
+- **The subject is the criteria, never the verdict.** We don't ask which tool is best; we
+  ask what they checked, what they skipped, and what they'd check first next time. Tool
+  names surface in the answers anyway, so we can report the landscape without having
+  framed a contest. Published deliverable is the criteria set.
+- **Tier 2 is the campaign; Tier 1 is the by-product.** 10–12 interviews (up from 6–10),
+  15–25 public responses (down from 25–40). This audience doesn't dogpile a post.
+
+**Surfaced**
+- **The interviews are the sales motion, not content.** A 15-min interview with a
+  fractional COO about how they choose tools *is* a discovery call — and
+  *"can I interview you for a piece I'm publishing"* is a far better cold ask than
+  *"want a demo."* The Apollo consultant list and the interview recruiting list are the
+  same list. New primary metric: interviews → second meeting booked (≥4).
+- Reach drops versus the engineer version. Priced in — 12 conversations with buyers beats
+  300 impressions from people who can't buy.
+- No ICP guardrail needed anymore; v1 required one because it was off-lane, this isn't.
+- Three lines of inquiry the script is built to surface: herd behavior as an unadmitted
+  criterion, lock-in/real cost a year in, and the criteria people earned the hard way.
+
 ## 2026-08-15 — Public survey engine, run #1: campaign brief + script
 
 **Shipped**
