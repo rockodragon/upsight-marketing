@@ -5,6 +5,38 @@
 
 ---
 
+## 2026-08-15 (night, final +2) — Read the Dark Reading DR20 piece; first Decision File identified
+
+**Correction to my earlier claim**
+- I called DR's "20 Leaders Who Built the CISO Era" a ready-made Tier-2 sourcing list before I
+  could read it. **It isn't.** It's an industry retrospective — researchers, hackers, criminals,
+  policymakers. Five subjects are deceased (Katz, Kaminsky, Mitnick, Barnaby Jack, Schmidt);
+  several more are convicted or exiled. Almost none are enterprise buyers.
+
+**Surfaced**
+- **The real asset is the quoted commentators, not the profiled subjects.** Dark Reading called
+  ~20 people for quotes — Tyler Shields (CMO, Allstacks), Marshall Heilman (CEO, DTEX), Gary
+  Orenstein (CCO, Bitwarden), Morey Haber (BeyondTrust), John Gallagher (Viakoo), Tom Kellerman
+  (TrendAI), Casey Ellis + Trey Ford (Bugcrowd), Chris Wysopal (Veracode), Jon Oberheide (Duo),
+  George Gerchow (Bedrock Data), Daniel Cuthbert (Santander), Melinda Marks (Omdia), Chris Gibson
+  (FIRST), Jake Williams, Melina Scotto. Two properties: **they demonstrably say yes to
+  journalists** (the recruiting problem, pre-solved), and **roughly half are vendor-side execs**,
+  i.e. buyers.
+- **Chenxi Wang (Rain Capital) is the strongest contributor-board candidate seen so far** —
+  Forrester analyst, operator, founder, now investor. Methodology peer *and* someone who sees
+  dozens of vendors a year; collapses the Pingree and Fitzgerald roles into one person.
+- **Melinda Marks is at Omdia, Dark Reading's sister analyst brand** (Informa TechTarget) — a
+  structural bridge into the Kelly Jackson Higgins conversation. Also raises the same
+  partner-or-competitor call as Stiennon/IT-Harvest.
+- **Decision File #1 identified** (UpSight task `bcae83b0`): not a Joe Sullivan profile — instead,
+  15 CISOs on what the Sullivan verdict changed in how they actually decide. Personal liability
+  is the live anxiety in that market, the outcome is already on the record (convicted, upheld),
+  and it changes what buyers demand from vendors, which is why a vendor would pay for it.
+  Gerchow's published quote is the Decision Files thesis said by someone else, and he knows
+  Sullivan personally — natural first interview.
+- **Timing hook:** the DR20 anniversary series is rolling out, which makes the Higgins editorial
+  pitch concrete instead of speculative.
+
 ## 2026-08-15 (night, final +1) — PR/media assets mapped into three channel layers
 
 **Shipped**
