@@ -5,6 +5,30 @@
 
 ---
 
+## 2026-08-15 (wrap) — Single entry point written; three warm names mapped to three unlocks
+
+**Shipped**
+- `30-strategy/decision-files-gameplan.md` — **the front door.** Thesis in a paragraph, the
+  five things it rests on, the critical path, this week's five moves, a map of which doc holds
+  what, the open decisions, kill criteria, and what 90 days of "working" looks like.
+
+**Surfaced**
+- **Gap Rick caught:** the plan existed across five documents with no entry point. A plan you
+  can't hold in your head doesn't get executed — the index is not bureaucracy here, it's the
+  thing that makes the rest usable.
+- **Three warm names map cleanly onto the three critical-path unlocks, with no overlap:**
+  Chenxi Wang → the masthead's first name (unblocks board → site → all outreach);
+  Melinda Marks → method read + Kelly Jackson Higgins intro; Trey Ford → early interview for
+  File #1. Chenxi moves to #1 on the entire board list — she's the name that makes asks 2–10
+  easy, and there's no substitute for her on the list.
+- **Do not ask Melinda for a masthead seat.** Omdia is an analyst firm; naming her on a
+  competing publication creates an employer conflict and hands her an easy decline. Ask for the
+  small clean thing, and say explicitly that you're *not* asking her to attach her name —
+  removing the objection before she raises it is what makes a warm ask land.
+- Trey Ford record created (CISO Americas, Bugcrowd). Sitting CISO *inside a vendor*, so he
+  sees both buyer behavior and industry framing. Offer him the role-only anonymity tier
+  unprompted given the subject matter.
+
 ## 2026-08-15 (night, final +2) — Read the Dark Reading DR20 piece; first Decision File identified
 
 **Correction to my earlier claim**
