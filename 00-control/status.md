@@ -5,6 +5,35 @@
 
 ---
 
+## 2026-08-15 — Public survey engine, run #1: campaign brief + script
+
+**Shipped**
+- `40-gtm/campaigns/2026-08-model-switch-public-survey.md` — brief for running Rick's
+  real model-switching decision as a public survey (Workstream 3, run #1). Two tiers
+  (public ask + 6–10 named practitioner interviews), 10-day box, kill criteria, ICP
+  guardrail. **Status: proposed, awaiting Rick's go.**
+- `40-gtm/campaigns/2026-08-model-switch-survey-script.md` — the Tier-1 public ask
+  and the Tier-2 15-min interview script, with insight targets and interviewer notes.
+
+**Decided (design calls inside the brief, not vault-level decisions)**
+- **Don't name Claude or OpenAI in the question.** Asking "what actually decided it"
+  instead of "which one" trades a tribal poll for decision reasoning, shifts the
+  respondent set toward people who make and defend build decisions, and produces a
+  durable framework instead of a stat that decays in three weeks. The vendor names
+  surface in the answers regardless.
+- Rick's own leaning stays unstated until publication — otherwise the responses are
+  agreement and argument, not data.
+
+**Surfaced**
+- The campaign consumes one week of the only public-survey slot on an off-ICP topic.
+  Capped three ways: one week only, every respondent tagged by how they work (that
+  tag is a free read on the 2026-06-01 agent-builder ICP question), and every
+  consultant-adjacent respondent routed into outbound template #3.
+- Real upside independent of reach: this is the shoot that unblocks video assets
+  **F** (dogfood clip) and **G** (Survey VSL), both currently stuck on capture debt.
+- New open question logged: does the public-survey motion actually produce booked
+  calls, or only reach?
+
 ## 2026-07-19 — CI-v2 portrait hero (4:5)
 
 **Shipped**
