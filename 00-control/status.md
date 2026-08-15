@@ -5,6 +5,38 @@
 
 ---
 
+## 2026-08-15 (night, latest) — Contributor board list exists; tiered by role
+
+**Shipped**
+- Person records created in UpSight (UpSight Core) for the confidently-spelled names:
+  Larry Pingree, Richard Stiennon, Greg Fitzgerald, Alan Shimel, Mike Fabrico — each tagged
+  with a proposed tier and the reason.
+
+**Surfaced**
+- **The security network is warm today, not 2007-warm.** Rick named 9+ people unprompted.
+  That resolves the practical half of the vertical question in favor of proceeding — though
+  a list of names is not six yeses; the real test is three asks sent this week.
+- **The list sorts into four roles, not one**, and they aren't interchangeable:
+  *analysts* (Pingree, Stiennon) = methodology credibility · *practitioner CISOs*
+  (Hayslip?, Laz?, Sima?) = the sourcing engine · *vendor-side execs* (Fitzgerald, Fabrico)
+  = disclosed sourcing only · *media* (Shimel) = distribution/syndication.
+- **The board list and the customer list overlap.** Greg Fitzgerald has been CMO at multiple
+  security vendors — he is the person who writes the $15–50K engagement check. Asking him as
+  a buyer is the fastest available test of the revenue model, and it costs one conversation.
+- **Alan Shimel is a different asset entirely.** Techstrong / Security Boulevard is a
+  publishing platform, so the ask is syndication, not sourcing — the one path that could
+  make discovery work in months instead of the 6–12 assumed for organic.
+- **Richard Stiennon runs a competing independent analyst practice (IT-Harvest).** Highest
+  credibility on the list if it works; also the clearest overlap. Decide deliberately whether
+  he's a contributor, a partner, or neither.
+- **Live tension to resolve knowingly:** the conflicts policy bars current vendor employees
+  from the Contributing Analyst tier, which moves two of the named six to Sourcing
+  Contributor. Recommended (independence is the product, and it's cheapest to protect on day
+  one) — but it thins the Contributing tier, and Rick has nineteen years of instinct on where
+  this line actually sits. If it loosens, loosen it deliberately and write down why.
+- Three names still to confirm (dictation): Gary Hayslip?, Demetrios "Laz" Lazarikos?,
+  Caleb Sima? Two unparsed: "Roth, Los" and "Macy Dennis".
+
 ## 2026-08-15 (night, later) — Contributor board charter
 
 **Shipped**
