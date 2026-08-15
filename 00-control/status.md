@@ -5,6 +5,34 @@
 
 ---
 
+## 2026-08-15 (night, final) — Board list confirmed; four role-specific asks drafted
+
+**Shipped**
+- Person records for all nine prospects now in UpSight Core: Larry Pingree, Richard Stiennon,
+  Greg Fitzgerald, Alan Shimel, Mike Fabrico, Gary Hayslip, Demetrios "Laz" Lazarikos
+  (Blue Lava), Caleb Sima, Macy Dennis.
+- `30-strategy/decision-files-advisory-board.md` — replaced the single generic invitation with
+  **four role-specific asks**, because the list contains four different kinds of person and one
+  email to all nine would waste the warmest network Rick has.
+
+**Surfaced**
+- **Register is the craft point.** These go to people Rick knows. A polished recruiting email
+  to an old colleague reads worse than a two-line note — it signals he's become someone who
+  sends campaigns. Short, plain, sent one at a time, never merged.
+- **Greg Fitzgerald gets a buyer email, not a board invitation.** He's a security-vendor CMO —
+  the person who writes the engagement check. One email tests the entire revenue model. Listen
+  for the price reaction and which budget line it comes from, not the compliment. The board ask
+  can follow later; leading with it throws away the buyer signal.
+- **Alan Shimel gets a syndication ask.** Security Boulevard is distribution, not sourcing.
+  This is the highest-leverage email on the list — syndication could compress the discovery
+  timeline from 6–12 months to weeks.
+- **Stiennon: name the IT-Harvest overlap up front.** He runs an adjacent independent practice;
+  raising it directly earns more respect than letting him raise it.
+- **Laz may fall to Sourcing Contributor** — Blue Lava is a security vendor, so the conflicts
+  policy bites. His CISO-peer network is exactly the sourcing asset the board exists for, so
+  decide this one explicitly rather than by rule.
+- Macy Dennis logged with tier TBD pending Rick's note on background/current role.
+
 ## 2026-08-15 (night, latest) — Contributor board list exists; tiered by role
 
 **Shipped**

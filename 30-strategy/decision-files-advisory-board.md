@@ -79,21 +79,102 @@ a CISO's scrutiny"* — not *"do I agree with the take."* Say this explicitly in
 invitation; experienced people appreciate a clear line and will decline gracefully
 if they wanted a different one.
 
-## The recruiting ask
+## The recruiting asks — four roles, four different emails
 
-> [Name] — I'm reviving something close to what we did at NSS, aimed at how buyers
-> actually decide instead of how products test.
+**Register matters more than content here.** These go to people Rick knows. A polished
+recruiting email to an old colleague reads worse than a two-line note — it signals
+you've turned into someone who sends campaigns. Keep them short, plain, and specific.
+Send them yourself, one at a time. Never a merge.
+
+### A. Practitioner CISO → Contributing Analyst
+*Gary Hayslip · Laz · Caleb Sima*
+
+> Subject: reviving something like NSS, but for decisions
 >
-> The Decision Files publishes one real decision at a time: the situation, what was
-> at stake, how the person decided, and how it actually turned out. Independent, and
-> the buyers stay anonymous when they need to.
+> [Name] —
 >
-> I want six people whose names mean something to be Contributing Analysts. The
-> commitment is genuinely small — two intros a quarter and one 20-minute interview —
-> and I'd rather have your judgment on the work than your logo on the page.
-> [Compensation] and a byline on anything you contribute to.
+> I'm building a small research thing called The Decision Files. Same idea as NSS,
+> pointed at a different target: instead of testing products, we publish how people
+> actually made a hard call — the situation, what was at stake, how they decided,
+> and how it turned out. Anonymous where it needs to be.
 >
-> Worth 20 minutes to talk about it?
+> I want a handful of people whose judgment I'd actually defer to as Contributing
+> Analysts. The real commitment is small: a couple of intros a quarter and one
+> 20-minute interview. [Compensation] and a byline on anything you touch.
+>
+> I'd rather have your read on the work than your logo on the page. Worth 20 minutes?
+
+*The ask is their judgment. That's what this crowd responds to and it's true.*
+
+### B. Analyst → Contributing Analyst (methodology)
+*Larry Pingree · Richard Stiennon*
+
+> Subject: methodology gut-check on something I'm starting
+>
+> [Name] —
+>
+> I'm starting an independent research practice on how buyers actually decide — one
+> real decision at a time, primary interviews, published in the open. The Decision
+> Files.
+>
+> You've built the thing I'm trying to build. I'd like you on the masthead as a
+> Contributing Analyst, and more than that I'd like you telling me where the method
+> is thin before anyone else does.
+>
+> Small commitment, [compensation], byline. Worth 20 minutes?
+
+*For Stiennon specifically: name the overlap with IT-Harvest up front rather than
+letting him raise it. "You may see this as adjacent to what you do — I'd rather talk
+about that directly than dance around it" is the version that earns respect.*
+
+### C. Vendor-side exec → **buyer conversation, not a board ask**
+*Greg Fitzgerald · (Mike Fabrico, depending on current role)*
+
+**Do not lead with the board.** He's the customer. This one email is the cheapest
+test of the whole revenue model.
+
+> Subject: the thing you could never get a straight answer on
+>
+> Greg —
+>
+> Question from your CMO seat: when you lost a deal, did you ever actually find out
+> why? Not what the rep wrote down — the real reason.
+>
+> I'm standing up an independent research practice for exactly that. I interview the
+> buyers, including the ones who picked the competitor, and they tell me things they'd
+> never tell the vendor who lost. Then you get the pattern.
+>
+> Two things I'd want from you: whether you'd have paid for that, and what it would
+> have needed to look like to be worth it.
+>
+> 20 minutes?
+
+*Listen for the price reaction, not the compliment. If he says "we'd have bought
+that," ask what budget line it comes from — that's the answer that matters. The board
+invitation can come later if it still fits; leading with it wastes the buyer signal.*
+
+### D. Media → syndication partner
+*Alan Shimel*
+
+**Not a sourcing ask.** The ask is distribution, and it's a different conversation.
+
+> Subject: original research, and where it should run
+>
+> Alan —
+>
+> I'm publishing a research series on how security buyers actually decide — primary
+> interviews with named CISOs, one decision at a time, with the outcome included.
+> Independent, and I'm putting a real masthead behind it.
+>
+> It's the kind of original reporting your properties do well and most vendors can't
+> produce. Is there a version where these run on Security Boulevard, or where we do
+> something together around a category report?
+>
+> Worth a call?
+
+*This is the highest-leverage email on the list. Syndication could compress the
+discovery timeline from 6–12 months to weeks — the one thing that makes the organic
+play work faster than I'd otherwise plan for.*
 
 ## Sequencing
 
