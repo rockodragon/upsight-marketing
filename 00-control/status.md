@@ -5,6 +5,39 @@
 
 ---
 
+## 2026-08-15 (later still) — Public survey engine: strategy + Q4 calendar
+
+**Shipped**
+- `30-strategy/public-survey-engine-strategy.md` — the strategic sketch: the qualifier
+  mechanic, the ICP escalation, a ranked six-topic slate, the monthly cycle / quarterly
+  report calendar, outreach + paid coupling, and the execution-risk section.
+- Q4 motion captured in UpSight as a goal with 8 dependency-chained sub-tasks
+  (project: UpSight Core, task `565b9d6d`).
+
+**Decided (proposed — needs Rick's sign-off)**
+- **The question is the qualifier.** Topic selection *is* the targeting. Test for every
+  topic: could a broke wannabe founder answer this credibly? If yes, kill it. Moves us
+  upmarket for free, with no screening step.
+- **Convene, don't survey.** The convener of a conversation is the obvious person to
+  hire for the job — this is the "get hired" mechanism, and the only one that compounds.
+- **One theme a quarter, three cycles, one report — not one topic a week.** Weekly is
+  the reason the motion wouldn't get executed. Q4 theme: "How operators actually decide."
+- **Never advertise the survey; advertise the report.** Paid starts at Cycle 2, not
+  Cycle 1 — no spend before there's a proven asset.
+
+**Surfaced**
+- **The ICP escalation needs a real `decisions.md` entry, not a drift.** Proposed:
+  PE/VC operating partners + portfolio ops (new lane), owners of professional-services
+  firms 20–200, COO/GM/Chief of Staff at 50–500. Not abandoning consultants — moving up
+  within them. The 30-day plan locked ICP, so this is a deliberate change and should be
+  logged as one.
+- Best single topic in the slate is **"what does your board ask that you can never answer
+  with data?"** — it collects UpSight-shaped pain from people who have a board, rather
+  than describing it. Sales-ready leads by construction.
+- **Execution, not strategy, is the risk** (Rick's own read, and it's correct). Rick's
+  only irreducible job is ~2.5 hrs of interviews a month. The week that slips is week 4
+  — synthesis and publishing. Kill rule: two consecutive cycles that fail to publish.
+
 ## 2026-08-15 (later) — Public survey engine run #1 reframed: operators, not engineers
 
 **Decided**
