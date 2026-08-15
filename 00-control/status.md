@@ -5,6 +5,53 @@
 
 ---
 
+## 2026-08-15 (wrap +1) — Corrected the license-validation claim; Stiennon reframe; two new names
+
+**Corrected**
+- **The $25K engagement does NOT validate UpSight demand.** Rick caught this and he's right.
+  Buying a report is the opposite motivation from buying a tool — a CMO paying for research is
+  buying an answer and *not having to do the work*; the tool says *do the work yourself*.
+  Usually different people, too. And the interviewees are mostly **vendor-sourced** (they hand
+  over the lost-deal list), so what we sell isn't access, it's a neutral third party doing the
+  asking — real, but a weaker moat than earlier drafts implied. My "every engagement ends in a
+  license conversation" guardrail was wishful. **The engagement validates the problem, not the
+  tool.**
+- **The replacement is a real test, runnable on engagement #1:** price Tier A (report, $25K)
+  against Tier B (report + you keep the workspace and can add your own, $35K). If nobody takes
+  B, UpSight is internal production leverage and this is a research firm. Legitimate outcome —
+  but know it in month three, not month thirty. Unprompted signal to watch for: does anyone ask
+  *"could we keep doing this ourselves?"*
+
+**Surfaced — the Stiennon question**
+- **Could he add the demand side? Yes, more easily than we could add supply.** Audience,
+  credential, vendor relationships, and interviews aren't capital-intensive.
+- **What protects us is that it's orthogonal to his strategy, not adjacent.** His moat is
+  comprehensive coverage (4,250 vendors, systematic, agent-queryable); demand research is
+  qualitative and one-at-a-time, and 15 deep interviews is the opposite of "comprehensive."
+  The risk isn't that he chooses to compete — it's that a customer asks and he says yes. So the
+  play is speed: get there before he considers building, and make partnering easier than building.
+- **Our moat isn't the interviews, it's the software that makes them cheap.** That's the piece
+  he'd have to buy or build.
+- **Third vertical surfaced: UpSight sold to research firms as production tooling.** IT-Harvest
+  is a research business with a production problem; so are hundreds of boutique analyst shops
+  and advisory firms. Rick understands that workflow better than any other founder. Tension to
+  decide deliberately: selling to IT-Harvest is good business *and* hands a potential competitor
+  demand-side capability. Picks-and-shovels vs. exclusivity-in-security pull opposite ways.
+- **New Decision File candidate that may beat Sullivan for #1** (task `e68849a0`): *"Why did you
+  cancel Gartner?"* Gartner lost 2,662 clients over 17 straight quarters, starting before
+  ChatGPT. Hard budget filter (only subscribers can answer), directly on-thesis (how buyers get
+  information and pick vendors = the demand data vendors pay for), and **the closest thing yet
+  to the forced-participation lever** — publish how buyers discover vendors and every vendor
+  needs to know if they appeared. Stiennon would amplify it; it proves his thesis. Sullivan gets
+  attention, this gets buyers.
+
+**Shipped**
+- Person records: Darin Anderson (CEO, Nxt Robotics — fits the security lane, usable as buyer
+  *and* Decision File subject, SD local) and Adam Watson (SD oncology biotech CEO — **flagged
+  off-thesis** for a security publication; he only fits if The Decision Files is "how leaders
+  decide" rather than "how security buyers decide", which makes him a useful test of the
+  vertical question rather than just a name).
+
 ## 2026-08-15 (wrap) — Single entry point written; three warm names mapped to three unlocks
 
 **Shipped**

@@ -163,14 +163,78 @@ shop?** Everything above rests on that.
 - **If they don't:** publish one genuinely good public file first and let it generate
   the inbound. That's slower, and it's the honest path.
 
+## Correction: the $25K check does NOT validate the software
+
+Earlier drafts of this doc treated the engagement as a wedge that naturally converts
+to a license. That was too clean, and Rick caught it. Two problems:
+
+**1. Buying a report is the opposite motivation from buying a tool.** A CMO paying
+$25K is buying an *answer* and *not having to do the work*. UpSight's proposition is
+*do the work yourself, continuously*. Different value propositions, and usually
+different people — the CMO signs the research check; a product-marketing manager
+would own the tool. Assuming the first buyer becomes the second is the classic
+services-to-product trap.
+
+**2. The interviewees are mostly vendor-sourced.** For win/loss work, the vendor
+hands over the lost-deal list. So what we sell isn't *access* — they already have the
+contacts — it's **a neutral third party doing the asking.** That's real (it's Clozd's
+entire business) but it's a weaker moat than "we can reach people you can't."
+Independently sourced interviews, via the contributor board, are the actual
+differentiator, and they're the slower, harder path.
+
+**Therefore: the engagement validates the problem, not the tool.**
+
+### The test that does validate it — run it on engagement #1
+
+Price two tiers side by side and see which sells:
+
+| Tier | What they get | Price |
+|---|---|---|
+| **A** | We run the research; you get the report. | $25K |
+| **B** | We run it; **you keep the workspace** — all evidence, and you can add your own. | $35K |
+
+**If nobody takes B, the tool is not the business.** UpSight is internal production
+leverage and this is a research firm. That's a legitimate outcome — but it should be
+known by month three, not month thirty.
+
+Also watch for the unprompted signal: does anyone ask *"could we keep doing this
+ourselves?"* If it has to be sold, it isn't there.
+
 ## The services trap — flagged, not solved
 
 Line A is consulting. It's lumpy, it's Rick's hours, and it competes directly with
 the time needed to build UpSight. The upside is real money from real budgets,
-arriving far sooner than software revenue, dragging the product in behind it.
+arriving far sooner than software revenue.
 
 The failure mode is waking up in eighteen months running a one-man research shop
-with a neglected side product. The guardrail: **every engagement must end with an
-UpSight license conversation.** If engagements aren't converting to licenses,
-that's the signal the business became a consultancy — catch it at engagement three,
-not thirty.
+with a neglected side product. The honest guardrail is the A/B test above, run
+early and repeatedly — not an assumption that engagements convert.
+
+## A third vertical, surfaced by the Stiennon exchange: research firms themselves
+
+**Could Stiennon add the demand side? Yes — more easily than we could add supply.**
+He has the audience to recruit from, the credential to get answers, and the vendor
+relationships that pay. Interviews aren't capital-intensive.
+
+What protects us is that it's **orthogonal to his strategy, not adjacent to it.** His
+moat is comprehensive coverage — 4,250 vendors, systematic, low marginal cost,
+agent-queryable. Buyer-decision research is qualitative, one-at-a-time, high marginal
+cost, and fifteen deep interviews is the opposite of "comprehensive." Adding it
+dilutes his position rather than extending it. The risk isn't that he decides to
+compete; it's that a customer asks and he says yes.
+
+So the play is speed and structure: **get there before he considers building, and make
+partnering easier than building.**
+
+**And note where our moat actually is.** It isn't the interviews — it's the software
+that makes running them cheap. That's the piece he'd have to buy or build.
+
+Which opens a third option: **UpSight sold to research firms as production tooling.**
+IT-Harvest is a research business with a production problem. So are hundreds of
+boutique analyst shops, research consultancies, and advisory firms — a real segment,
+with budget, whose workflow Rick understands better than any other founder could.
+
+**The tension to decide deliberately:** selling UpSight to IT-Harvest is good business
+*and* hands a potential competitor the capability to add demand-side coverage. Picks-
+and-shovels-for-research-firms and exclusivity-in-security pull in opposite
+directions. Pick one on purpose.
