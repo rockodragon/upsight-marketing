@@ -5,6 +5,35 @@
 
 ---
 
+## 2026-08-15 (night, later) — Contributor board charter
+
+**Shipped**
+- `30-strategy/decision-files-advisory-board.md` — the charter: three commitment tiers,
+  compensation options, the conflicts policy, editorial control, the recruiting ask, and
+  sequencing. UpSight task `3c357a79`, wired to block the site/masthead task.
+
+**Surfaced**
+- **The board answers the moat question I logged earlier.** Access isn't scarce — anyone can
+  cold-email twenty CISOs. **Candor is.** A board of recognized ex-CISOs who vouch and source
+  is what converts access into candor, and it rests on twenty years of relationships a
+  well-funded competitor can't buy.
+- It also fixes three other things: throughput (contributors conduct interviews, so 10/month
+  becomes 30 without hiring), the "will a vendor pay a one-person shop" objection (a masthead
+  means it isn't one, which raises the price ceiling), and the site's missing masthead.
+- **It's the precursor to the forced-participation lever.** A category report backed by six
+  known CISOs is one a vendor can't afford to be absent from — the closest analog to the NSS
+  dynamic, and it only exists with the board.
+- **Design calls that decide operating vs. decorative:** call them Contributing Analysts, not
+  advisors; make the ask small and specific (2 intros + 1 interview per quarter, not "join my
+  board"); pay them, including 10–15% rev share on sourced engagements, which is the term that
+  turns the board into a channel; conflicts policy ships *with* the masthead, never after; and
+  editorial control stays with Rick — they source and review, he owns the conclusion, or the
+  files get consensus-smoothed.
+- Couldn't read getupsight.com/about or thedecisionfiles.com — both blocked by this
+  environment's egress proxy. The Decision Files bio needs a different job than the UpSight
+  one anyway: UpSight's sells a founder to a software buyer; the Files' has to sell
+  methodology heritage to a CISO deciding whether to answer an email.
+
 ## 2026-08-15 (night) — Business model written up: the NSS Labs motion, applied to buyer decisions
 
 **Shipped**
