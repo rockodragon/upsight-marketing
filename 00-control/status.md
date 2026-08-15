@@ -5,6 +5,35 @@
 
 ---
 
+## 2026-08-15 (night) — Business model written up: the NSS Labs motion, applied to buyer decisions
+
+**Shipped**
+- `30-strategy/business-model-decision-files.md` — who pays vs. who participates, the three
+  revenue lines in the order money arrives, pricing tiers, the money flow, the independence
+  firewall, what's the same and different vs. NSS Labs, and the untested assumption.
+
+**Surfaced**
+- **Rick ran this exact model at NSS Labs** — independent testing, buyers as source, vendors
+  as buyer, reputation built in public and monetized in private. This is a replay of a motion
+  he took to a market-leading position, not a new theory.
+- **What the vendor buys is candor they cannot obtain internally at any price** — buyers won't
+  be honest with the vendor who lost the deal. Independence is the product, same as NSS.
+- **The firewall is non-negotiable:** paid engagements are private deliverables; The Decision
+  Files publishes only unpaid research. Stated publicly in the methodology note.
+- **Three honest differences from NSS.** (1) The moat is weaker at the start — a test lab was
+  capital-intensive; interviewing 20 CISOs isn't. (2) But UpSight is a moat NSS never had — it
+  makes the research runnable by one person at team scale. (3) The category isn't empty (Clozd,
+  Primary Intelligence, DoubleCheck) — the differentiator is that **none of them publish.**
+- **The design question that decides franchise vs. practice:** NSS's monopoly came from forced
+  participation — absence from a public test was itself damaging. There's no equivalent here
+  yet. Closest analog is a recurring category-wide "how buyers chose this year" report where an
+  unmentioned vendor is conspicuous. Engineering that is the central problem.
+- **Services trap flagged:** engagements are Rick's hours and compete with building UpSight.
+  Guardrail — every engagement ends with a license conversation; if they aren't converting,
+  catch it at engagement three, not thirty.
+- **Untested assumption:** will a security vendor write a $25K check to a one-person shop?
+  Cheap test — name two CMOs/CROs who'd take the call today.
+
 ## 2026-08-15 (late) — Decision File format spec, after reviewing the live sample
 
 **Shipped**
