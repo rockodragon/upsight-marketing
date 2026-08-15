@@ -7,6 +7,7 @@
 
 | Date opened | Q | Type | Owner | Status |
 |---|---|---|---|---|
+| 2026-08-15 | Which room does The Decision Files build authority in — cybersecurity (warm network, CISOs as source, security vendors as buyer) or operators/professional services? Can't do both. | [bet] | Rick | open → cheap test is one pilot security file before committing a quarter |
 | 2026-08-15 | Is "can I interview you for a piece I'm publishing" a higher-converting cold ask than a demo request for ICP consultants/operators? | [tactical] | Rick | open → tested by run #1's Tier-2 recruiting; 25–30 asks → target ≥10 yeses |
 | 2026-08-15 | Does the public-survey motion produce booked calls, or only reach? Run #1 is the test. | [tactical] | Rick | open → campaign `40-gtm/campaigns/2026-08-ai-stack-decision-survey.md` (proposed); target ≥4 interview→second meeting |
 | 2026-07-17 | Does Remotion's $100 Animated Captions component's text-fitting/animation polish beat our in-house build enough to justify buying it? | [tactical] | Rick | open → needs a real captioned video to compare against; see `decisions.md` 2026-07-17 |

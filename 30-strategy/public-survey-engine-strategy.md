@@ -1,146 +1,168 @@
-# Public Survey Engine — strategy sketch + calendar
+# The Decision Files as front door — GTM strategy
 
-**Date:** 2026-08-15 · **Status:** proposed, needs a `decisions.md` entry on the ICP move
-**Goal:** get UpSight in front of people who have money and follow through — and get Rick *hired* to run the decision, not just sold as a tool.
+**Date:** 2026-08-15 · **Status:** decided (see `00-control/decisions.md`), vertical still open
+**Decision:** The Decision Files is the front door for all cold outreach. Research recruiting *is* the sales motion. UpSight is what people discover once they're already talking to us.
 
 ---
 
-## The core mechanic: the question is the qualifier
+## The motion in one line
 
-Topic selection *is* the targeting. It's the whole upmarket move and it costs nothing.
+We don't ask strangers for a meeting. We ask experts for their expertise, publish
+what they tell us, and let them watch UpSight turn their own conversation into the
+report. The ask is flattering, the output is real, and the demo happens to them
+rather than at them.
 
-A question anyone can answer recruits anyone. A question only someone with budget
-authority can answer recruits only them. So there's one test for every topic:
+## Why this works — three mechanics
 
-> **Could a broke wannabe founder answer this credibly?**
+**1. The question is the qualifier.** Topic selection *is* the targeting, and it's
+free. One test for every topic:
+
+> **Could someone with no budget and no follow-through answer this credibly?**
 > If yes, kill the topic.
 
-| Fails the test | Passes the test |
-|---|---|
-| "What AI tool did you pick?" | "How did you get the spend approved — what did the person holding the money need to see?" |
-| "How do you do customer research?" | "What's the last initiative you killed, and how did you know it was time?" |
-| "What's your tech stack?" | "What does your board ask that you can never answer with data?" |
+"What tool did you pick?" — anyone can answer. "What does your board ask that you
+can never answer with data?" — only someone with a board. We never screen for
+money. The question screens.
 
-The right-hand column can only be answered by someone with a board, a P&L, or a
-budget to defend. **We never have to screen. The question screens.**
+**2. Convening beats selling, and it compounds.** The convener of a conversation is
+the obvious person to hire for the job. Every published file makes the next
+interview request easier to say yes to — the only asset here that gets *cheaper*
+over time instead of more expensive.
 
-## Three moves that follow from it
+**3. The interview is the discovery call.** A 15-minute conversation about how
+someone made a hard decision surfaces their stack, their constraints, their board
+pressure, and their frustrations — everything a discovery call is for — while being
+genuinely valuable to them. In the old motion, interviews produced content. Here
+they produce qualified conversations, and content is the by-product.
 
-**1. Raise the dollar value of the decision.** "Which tool" is a $200/mo question, so
-it attracts people who think in $200/mo. If UpSight is a *decision engine*, the
-demo has to be a decision with real money on it: headcount vs. tooling, build vs.
-buy, which service line to kill, which clients to fire. Same motion, bigger stakes
-— and anyone who owns that decision has budget by definition.
+## The two tiers — one operation, not two initiatives
 
-**2. Convene, don't survey.** *"Take my survey"* is a vendor. *"I'm convening 20 COOs
-on X and publishing what they say"* is a peer. Money people answer conveners — and
-more importantly, **the convener of a conversation is the obvious person to hire for
-the job.** That's the "get hired" mechanism, and it's the only one here that
-compounds.
-
-**3. One theme a quarter, not one topic a week.** Weekly random topics produce noise
-and burnout. One theme, three cycles, one report at the end. The report does four
-jobs at once: lead magnet, paid-ad creative, sales collateral, and the credential
-that makes Rick *the person who knows how operators decide.*
-
-## Where the money is — the ICP escalation
-
-Not abandoning consultants. Moving up within them, plus one genuinely new lane.
-**This is an ICP change and needs a `decisions.md` entry, not a quiet drift.**
-
-| Rank | Who | Why they're worth more per conversation |
+| | **Public survey** (breadth) | **Decision File** (depth) |
 |---|---|---|
-| 1 | **PE / VC operating partners, portfolio ops** | Repeated high-dollar decisions across many companies. Professionally obligated to be evidence-driven. Buy once, deploy across a portfolio. |
-| 2 | **Owners of professional-services firms, 20–200 people** (agencies, consultancies, MSPs) | Real P&L. Already do research for clients — so they resell, not just consume. This is "fractional consultant" with a practice behind it. |
-| 3 | **COO / GM / Chief of Staff at 50–500** | Real budget, single decision owner, no research function to compete with. |
+| Input | 20–40 short answers | One person, one decision |
+| Output | Aggregate piece — "what 30 operators check" | The case study: situation → approach → what was at stake → how they decided → **how it actually went** |
+| Job | Reach, and scouting | Authority, and the sales conversation |
 
-The current campaign (`40-gtm/campaigns/2026-08-ai-stack-decision-survey.md`) is the
-entry point — run it, then escalate the topic set upward from there.
+**The survey is the scout.** An interesting 90-second answer becomes: *"that's a
+Decision File — can I go deeper?"* One recruiting list, one publishing rhythm, two
+formats.
 
-## The topic slate — ranked
+The "how it actually went" section is the differentiator. Almost all decision
+content stops at the decision. Outcomes are what make a file worth citing.
 
-Every one passes the qualifier test.
+## The conversion moment — designed, not hoped for
 
-1. **The board question.** *"What does your board or investor ask that you can never
-   answer with data?"* — **Strongest in the set.** Every answer is a qualified pain
-   statement from someone with a board. It doesn't describe UpSight-shaped pain, it
-   *collects* it. Sales-ready leads by construction.
-2. **The kill decision.** *"What's the last tool, vendor, or initiative you killed —
-   how did you know?"* — Requires a portfolio and a P&L. Killing is more honest than
-   buying, and almost nobody publishes it.
-3. **The approval.** *"How did you get it approved — what did the person holding the
-   money actually need to see?"* — Maps exactly onto what UpSight produces: evidence
-   for a decision someone has to defend.
-4. **Headcount vs. software.** *"Last time you had budget for one hire and spent it
-   on tooling instead — what made the call?"* — A $100K+ decision. Filters hard.
-5. **The reversal.** *"What decision did you reverse in the last 18 months, and what
-   changed your mind?"* — Rare content; takes seniority to admit. Great quotes.
-6. **Firing a client / killing a service line.** For the firm-owner segment
-   specifically. Painful, universal, never discussed publicly.
+**Do not email someone their finished file.** Walk them through UpSight generating
+it, live, from their own conversation. That is the demo, it is about them, and it
+beats any deck. If this handoff isn't built into the process we've started a
+magazine.
 
-**Q4 theme: "How operators actually decide."** Run #1, #2, #3 in that order.
+Sequence: interview → report generated in UpSight → **live walkthrough with the
+subject** → their review/approval → publish. The walkthrough is a scheduled step,
+not an optional courtesy.
 
----
+## What the front-door decision actually changes
+
+1. **Nessa stops sending product email.** Her job becomes research recruiting —
+   asking people for their expertise. This converts better *and* it's a job a junior
+   person can be excellent at in week one, which selling is not.
+2. **UpSight-branded cold outbound goes quiet.** Product email is for people already
+   in a conversation, not for opening one.
+3. **The site becomes load-bearing** — see prerequisites below.
+4. **Audio is a by-product.** Record the interview; publish the written file. Release
+   audio only when the conversation was genuinely good. A podcast carries its own
+   production burden and its own audience problem, and it doubles the week that
+   already slips.
+
+## Prerequisite: the site has to hold weight first
+
+Every person we email will look at thedecisionfiles.com before replying. Today it's
+one sample and no masthead. **Nothing goes out until this is fixed** — a weak front
+door makes a strong ask fail, and you only get one first email per person.
+
+- **Founder bio, prominent.** Built an empirical test-based research firm in 2007
+  doing product-effectiveness testing for the Fortune 500; nearly acquired by
+  Gartner. That paragraph is the entire credibility argument — do not bury it.
+- **A masthead.** Two or three named contributors or advisors turns one person into
+  an institution. Worth real effort to land.
+- **A methodology note.** How subjects are selected, how interviews are run, what's
+  quoted and how it's approved. This is genre convention for empirical research —
+  and it's the natural place to state plainly that The Decision Files is published
+  by UpSight. Disclosure as method, not confession.
+- **Three files, not one.** One sample reads like an experiment; three reads like a
+  publication.
+- **Newsletter capture** on every file.
+
+**Not a conflict of interest:** we publish *how people decide*, not *which product
+wins*. The analyst-world conflict is evaluating products you take money from, and
+we don't do that. The one shape to avoid is ever publishing a file on how a company
+chose a customer-intelligence platform.
+
+## The topic slate — ranked, all pass the qualifier test
+
+1. **The board question** — *"What does your board or investor ask that you can never
+   answer with data?"* Strongest in the set: every answer is a qualified pain
+   statement from someone who has a board. Collects UpSight-shaped pain rather than
+   describing it.
+2. **The kill decision** — *"What's the last tool, vendor, or initiative you killed —
+   how did you know it was time?"* Needs a portfolio and a P&L. Killing is more
+   honest than buying, and nobody publishes it.
+3. **The approval** — *"How did you get it approved — what did the person holding the
+   money need to see?"* Maps directly onto what UpSight produces.
+4. **Headcount vs. software** — a $100K+ decision; filters hard.
+5. **The reversal** — *"What decision did you reverse, and what changed your mind?"*
+   Rare; takes seniority to admit; great quotes.
+6. **Firing a client / killing a service line** — for firm owners specifically.
+
+## The open fork: which room
+
+**Undecided, and bigger than anything else here.** Two candidate verticals:
+
+- **Cybersecurity.** Rick has warm PR/media relationships and a credential that gives
+  him standing with any CISO. Distribution is the hardest part of a research
+  publication and it's the part he already owns. Two-sided economics: CISOs are the
+  data source and audience, **security vendors are the buyer** — and a vendor
+  wanting to understand how its buyers decide is exactly UpSight's pitch. This is
+  the model Rick already ran once.
+- **Operators / professional services** — the current lane; consultants, firm owners,
+  COO/GM at 50–500.
+
+**You cannot build authority in two rooms with one founder and one intern.** Two
+questions decide it: (1) is the security network warm *today* — can he name six
+people who'd say yes to an email this week? (2) does he want to sell to security
+vendors, because that's where the money is in that model.
+
+Until it's settled: **run one pilot Decision File in security** before committing a
+quarter to it. That's the cheap test.
 
 ## The calendar — monthly cycle, quarterly report
 
-One thing in flight at a time. This is sized to what a founder plus one intern can
-actually sustain, which is the point.
+One thing in flight at a time. Sized to a founder plus one intern.
 
-| Week | `[R]` Rick — ~4 hrs/wk | `[I]` Intern — production |
+| Week | `[R]` Rick — ~4 hrs | `[I]` Intern — recruiting + production |
 |---|---|---|
-| **1** | Post the public ask. Send 30 interview requests. | Build the list. Set up the survey + tracker in UpSight. |
-| **2** | 5 interviews (≈75 min total). | Chase yeses into booked slots. Thank-you DMs. |
-| **3** | 5 interviews. Sit with the synthesis. | Pull themes + clips. Cut the dogfood video. |
-| **4** | Write and publish. Send to interviewees first. | Route respondents into outbound template #3. Quote cards. |
+| 1 | Post the public ask. | **Research recruiting**: 30 asks out. Build the list. |
+| 2 | 5 interviews (~75 min). | Chase yeses into booked slots. |
+| 3 | 5 interviews. Sit with the synthesis. | Themes + clips. Schedule the walkthroughs. |
+| 4 | Publish. **Live walkthroughs with subjects.** | Route to follow-up. Quote cards. |
 
-**Quarterly:** the three cycles roll into one report. That report is the asset that
-gets Rick hired.
+**Quarterly:** three cycles roll into one report. That report is the thing that gets
+Rick hired.
 
-### Q4 2026
+**Paid:** never advertise the survey — advertise the published file. $500–1,000/mo on
+LinkedIn to exact titles, starting at Cycle 2, not Cycle 1. No spend before there's
+a proven asset.
 
-| Cycle | Month | Topic | Output |
-|---|---|---|---|
-| 0 | **Aug** | AI stack decision (in flight) | Criteria set + F/G video footage |
-| 1 | **Sep** | The board question | Published piece + the pain inventory |
-| 2 | **Oct** | The kill decision | Published piece |
-| 3 | **Nov** | The approval | Published piece |
-| — | **Dec** | — | **The report** + paid push + Q1 pipeline |
+## The honest risk: execution
 
-### Coupling to outreach
+1. **Rick's only irreducible job is the interviews** — ~2.5 hrs/month. Everything else
+   is delegable. If that can't hold, nothing else matters.
+2. **The failure mode is publishing, not interviewing.** Interviews are fun and feel
+   productive. Week 4 is the week to defend.
+3. **Do not justify this on SEO or AI-model citation.** Those take 6–18 months.
+   Justify it on the conversations, which start in week one. Discovery is a free
+   option on top — real, worth having, never the reason.
+4. **Three topics a quarter, not twelve.** If a cycle slips, drop it — don't compress
+   it. A half-published cycle poisons the next recruiting ask.
 
-- **The interview request is the cold first touch.** Better ask than a demo request;
-  the Apollo list and the recruiting list are one list.
-- **Respondents → template #3** (survey-respondent), the strongest template we have.
-- **The report → re-engagement** for everyone who ignored the first ask. *"You didn't
-  answer, but 40 of your peers did — here's what they said."*
-- **Non-answers still count.** A "no thanks, but here's my quick take" is evidence.
-  Log it.
-
-### Paid — one rule
-
-**Never advertise the survey. Advertise the report.** Paid on a survey invite
-converts terribly; paid on a gated report with named practitioners is a lead magnet.
-
-- $500–1,000/mo, LinkedIn, targeted at the exact titles in the ICP table.
-- Retarget everyone who touched a published piece.
-- Start paid at **Cycle 2**, not Cycle 1 — spending before there's a proven asset is
-  the classic way to burn the budget learning what the creative should have been.
-
----
-
-## The honest risk: execution, not strategy
-
-Rick's own stated worry, and it's the right one. Three things are load-bearing:
-
-1. **Rick's only irreducible job is the interviews** — ~2.5 hours a month. Everything
-   else is delegable. If that can't hold, nothing else matters.
-2. **The failure mode is not interviewing, it's publishing.** Interviews are fun and
-   feel productive; synthesis and writing are the part that slips. Week 4 is the
-   week to defend.
-3. **Three topics a quarter, not twelve.** If a cycle slips, drop the cycle — don't
-   compress it. A late piece is worth less than a skipped one, and a half-published
-   cycle poisons the next interview request.
-
-**Kill the whole motion if:** two consecutive cycles fail to publish. That's the
-signal that the calendar is fiction, and it's better to know in November than March.
+**Kill the motion if:** two consecutive cycles fail to publish.

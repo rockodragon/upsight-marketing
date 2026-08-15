@@ -5,6 +5,43 @@
 
 ---
 
+## 2026-08-15 (evening) — Decision Files becomes the front door
+
+**Decided**
+- **The Decision Files is the front door for all cold outreach. Research recruiting is the
+  sales motion.** Logged in `decisions.md`. UpSight-branded cold email stops; product email
+  is for people already in a conversation.
+- **The written file is the deliverable; audio is a by-product.** Record every interview,
+  publish the file, release audio only when the conversation was genuinely good. A podcast
+  carries its own production and audience-building burden and doubles week 4.
+- **The conversion moment is a live walkthrough**, scheduled as a step: interview → report
+  generated in UpSight → walk the subject through it on a call → their approval → publish.
+  Never email someone their finished file.
+
+**Shipped**
+- `30-strategy/public-survey-engine-strategy.md` — rewritten around the front-door model:
+  the two-tier survey/file operation, the conversion moment, site prerequisites, the open
+  vertical fork.
+- `40-gtm/channels/outreach/decision-files-recruiting-kit.md` — four recruiting emails
+  (cold, warm, snowball, report re-engagement), the intern's weekly job, a reply-handling
+  table, the handoff to Rick, and per-cycle targets.
+
+**Surfaced**
+- **Corrected two earlier calls of mine.** (1) I advised under-claiming the analyst-firm
+  label on the assumption Rick had no standing — false; he has more than the label implies,
+  so the fix is putting the pedigree on the page, not hedging the claim. (2) I raised a
+  conflict-of-interest concern using the wrong standard — the analyst-world conflict is
+  evaluating products you take money from, and we publish how people decide, not which
+  product wins. What survives is disclosure as genre convention in the methodology note.
+- **The site is now a blocker on all outreach.** Every recruit will check it before
+  replying; it currently has one sample and no masthead. Nothing goes out until it carries
+  the founder bio, a masthead, a methodology note, and three files.
+- **Still open, and bigger than anything settled today: which room.** Cybersecurity (warm
+  media relationships, real credential, CISOs as source and security vendors as buyer —
+  the two-sided model Rick already ran once) vs. the current operator/professional-services
+  lane. Can't build authority in two rooms with one founder and one intern. Cheap test: one
+  pilot Decision File in security before committing a quarter.
+
 ## 2026-08-15 (later still) — Public survey engine: strategy + Q4 calendar
 
 **Shipped**
