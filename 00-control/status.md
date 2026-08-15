@@ -5,6 +5,46 @@
 
 ---
 
+## 2026-08-15 (research) — Cyber research/media landscape; Futurum owns Techstrong
+
+**Shipped**
+- `20-research/market-intel/cyber-research-media-landscape.md` — who owns which ground, the
+  Futurum finding, the archive analysis, reprint economics, and the white space.
+- Craig Merchant added (Security Architect — Splunk/Tines/Oracle, Rick's friend). Candidate list
+  now lives inside the File #1 task (`bcae83b0`) rather than as separate todos, per Rick.
+- Tasks: Futurum/Shimel three-ask sequence (`b5d3763c`, P1), reprint rate card + independence
+  rules (`73202000`).
+
+**Surfaced**
+- **Futurum Group acquired Techstrong Group in April 2024.** Alan Shimel is an executive inside
+  an analyst firm — Futurum = analyst research + Techstrong media + **Signal65 (product testing
+  lab)** + Tech Field Day. **That is the NSS-plus-media model already assembled at scale**, and
+  the closest existing thing to what The Decision Files would become. The collab is a business
+  conversation, not a favor between friends. Risk: pitching methodology to a firm structurally
+  able to run it. Lead with tooling and distribution, not method.
+- **Rick's archive skepticism is right, and the reason decides the pitch.** Techstrong
+  programming is vendor-exec heavy = supply-side. You can't extract "how buyers decided" from
+  vendors explaining why their product is good. But hundreds of vendors describing their own
+  category across 5+ years IS a **category-evolution dataset** nobody has run — which makes the
+  archive a spectacular UpSight demo and a product *for Futurum*, not a research shortcut for us.
+- **Reprint rights: $25K–$75K per report per year** (Gartner/Forrester tier, negotiated). Rick's
+  instinct was right and I under-ranked it — it's annual and licensable to *multiple* vendors off
+  one piece of research, where an engagement is one-to-one and eats his hours. Moves from "later,
+  if ever" to a primary line. Three independence rules attached: publish first / published rate
+  card open to anyone mentioned / no sponsor touches subjects, questions, or findings.
+- **The white space, stated plainly: published, qualitative, demand-side decision research.**
+  Analyst firms do demand-side but *quantitative* (surveys, n=400, percentages). Win/loss firms
+  do qualitative demand-side but *private*, so it builds no public authority. IT-Harvest, Signal65
+  and the quadrant business are *supply-side*. **Nobody publishes rigorous qualitative research on
+  how buyers actually decide.** Pitch line: *"Everyone counts buyers. Nobody asks them properly,
+  in public."*
+- **Subject-selection rule now recorded:** the CISO signs, the ARCHITECT ran the evaluation.
+  1 CISO for altitude + 2–3 architects/deputies for mechanism, per file. Buyers only — vendor-side
+  people are customers, not subjects. Craig Merchant is the pressure-test dry run before any real
+  subject.
+- Gartner decline confirmed against Stiennon's numbers: 14,149 (Q4'21) → 11,487 (Q1'26).
+- New name for the map: Scott Crawford, InfoSec research director, S&P Global / 451.
+
 ## 2026-08-15 (wrap +1) — Corrected the license-validation claim; Stiennon reframe; two new names
 
 **Corrected**
