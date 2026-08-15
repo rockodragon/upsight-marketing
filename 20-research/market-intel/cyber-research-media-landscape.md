@@ -52,20 +52,43 @@ industry-expert and vendor-executive interviews — supply-side content. Vendors
 own products is close to worthless for demand-side buyer research. You cannot extract "how
 buyers decided" from a corpus of vendors explaining why their product is good.
 
-**But there's a real second-order asset in it**, and it isn't the one we'd want:
+**There is a second-order asset in it, but it's smaller than a first pass suggests.**
 
-> An archive of hundreds of vendors describing their own category, positioning, and claims
-> across five-plus years is a **category-evolution dataset**. "Here is how 200 vendors described
-> this category in 2021 versus 2026" is genuinely interesting, and nobody has run it.
+An archive of hundreds of vendors describing their own category across five-plus years is a
+**category-evolution dataset** — "here is how 200 vendors described this category in 2021 versus
+2026." Interesting, and nobody has run it.
 
-That's supply-side — IT-Harvest's ground, not ours. Which makes it:
-- **A spectacular UpSight demo** on data the owner cares about, at a scale that proves the tool.
-- **A product for Futurum**, not a research input for us.
-- **Not** a shortcut to demand-side data.
+**Correction (Rick's push-back, and he's right): historical drift is not monetizable.** Nobody
+pays for history. A vendor can't act on "you renamed yourself twice since 2021." Futurum's own
+analysts could write that retrospective from memory. And a media business monetizes attention —
+sponsorship, events, lead gen — so a retrospective is one good article, not a product line.
 
-**So the archive play is a software/partnership pitch, not a research shortcut.** Position it
-that way and it's strong. Position it as "your archive will fuel my research" and it will
-disappoint both of us.
+**So the archive is demo material, not a product.** Good demo material: it's his data, at a scale
+that proves the tool, surfacing something he didn't notice while living through it. That's all,
+and that's enough for what it's for.
+
+### What Futurum would actually pay for — and it isn't the archive
+
+An analyst firm's binding constraint is the one Stiennon named: too many vendors, not enough
+analyst hours. Futurum's analysts take **hundreds of vendor briefings a year**, recorded, which
+then evaporate into one person's memory and some notes.
+
+**Turning every incoming briefing into structured, searchable, comparable data is how an analyst
+firm scales coverage without hiring analysts.** That's an existing labor cost and the bottleneck
+on their core research product — a real budget line, not a content idea.
+
+**The sequence:**
+1. The archive analysis is the **proof** — *"here's what this did to five years of your own tapes
+   in an afternoon."*
+2. The **pitch** is the next twelve months — *"now every briefing your analysts take is queryable
+   and comparable instead of dying in a notebook."*
+
+Past drift earns the meeting. Forward briefing throughput is what gets bought.
+
+**Two caveats.** It's an enterprise software sale to a company capable of building it themselves —
+not fast money. And it pulls the Futurum relationship firmly into the *"UpSight as tooling for
+research firms"* lane rather than the security research business. Worth noticing how often this
+thread pulls that direction.
 
 **What to verify before pitching:** the guest mix (what % vendor exec vs. practitioner), whether
 transcripts exist in usable form, who owns them post-acquisition, and total volume.

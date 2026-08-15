@@ -5,6 +5,36 @@
 
 ---
 
+## 2026-08-15 (correction) — Archive drift isn't monetizable; the pitch is forward briefings
+
+**Corrected**
+- I called the Techstrong archive "a product for Futurum." **Wrong — Rick pushed back and he's
+  right.** Historical category drift isn't monetizable: nobody pays for history, a vendor can't
+  act on "you renamed yourself twice since 2021," Futurum's own analysts could write that
+  retrospective from memory, and a media business monetizes attention — so a retrospective is one
+  good article, not a product line.
+- **The archive is demo material, not a product.** That's its whole job, and it's enough for that
+  job — his data, at a scale that proves the tool, surfacing something he missed while living
+  through it.
+
+**Surfaced — what Futurum would actually pay for**
+- **The forward-facing briefing pipeline.** An analyst firm's binding constraint is the one
+  Stiennon named: too many vendors, not enough analyst hours. Futurum's analysts take hundreds of
+  recorded vendor briefings a year that evaporate into one person's memory and some notes.
+  Turning every incoming briefing into structured, searchable, comparable data is how a research
+  firm scales coverage without hiring analysts — an existing labor cost, and the bottleneck on
+  their core product. That's a budget line; a retrospective isn't.
+- **Sequence:** archive analysis is the *proof* ("here's what this did to five years of your own
+  tapes in an afternoon"); the *pitch* is the next twelve months of briefings. Past drift earns
+  the meeting, forward throughput gets bought.
+- **Two caveats:** enterprise software sale to a company that could build it itself, so not fast
+  money — and it pulls the Futurum relationship into the "UpSight as tooling for research firms"
+  lane rather than the security research business. **Noting how persistently this thread keeps
+  pulling that direction** (IT-Harvest, now Futurum). That may be a signal about which of the
+  three verticals is actually the business.
+- Question to ask Alan that sizes the real pitch: how many vendor briefings does the analyst side
+  take annually?
+
 ## 2026-08-15 (research) — Cyber research/media landscape; Futurum owns Techstrong
 
 **Shipped**
