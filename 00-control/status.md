@@ -5,6 +5,35 @@
 
 ---
 
+## 2026-08-15 (late) — Decision File format spec, after reviewing the live sample
+
+**Shipped**
+- `40-gtm/channels/content-seo/decision-file-spec.md` — the format bar, the ten-section
+  structure, the anonymity policy, sourcing rules, and publishing mechanics.
+
+**Surfaced**
+- **The live sample is an essay about a decision class, not a Decision File.** No person,
+  no date, no stake, no quotes, no outcome — its Outcome field literally reads "this is a
+  decision rule." It's a synthesis of Rob Markey's HBR piece with a case-study wrapper.
+  Three consequences: the discovery play dies (a synthesis competes with its own source
+  and loses), the artifact contradicts the product claim (nothing to generate from,
+  because there was no conversation), and it under-delivers on what the recruiting email
+  promises.
+- **The structure is right; the input is wrong.** Keep the 30-Second Brief, Unknowns,
+  Decision Principle, and especially Analyst Counterpoint — steel-manning the subject is
+  the most distinctive thing in the format and nobody else does it. Fill the same skeleton
+  with one real person's real decision.
+- **Quotes are the single change that fixes it.** Zero in the sample. A file without a
+  quote is an essay with headings; a quote is the receipt, which is UpSight's own product
+  metaphor — primary research and product proof in the same stroke. Minimum three.
+- **Anonymity policy has to exist before recruiting starts**, or the best subjects decline.
+  Three tiers: named / role+shape / labeled composite, with quote approval in writing.
+- **Publishing mechanics block the discovery play.** Files currently live as anchors on one
+  page (`#b2b-sales`), which can't be indexed or cited individually, on a `pages.dev`
+  preview domain. One URL per file, on the real domain, with Article structured data.
+- Existing sample is worth keeping — retitled and relabeled as commentary, not as a File.
+  The series can't open with it.
+
 ## 2026-08-15 (evening) — Decision Files becomes the front door
 
 **Decided**
