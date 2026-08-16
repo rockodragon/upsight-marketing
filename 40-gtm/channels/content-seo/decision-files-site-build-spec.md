@@ -242,6 +242,74 @@ Timeline is **vertical, top-down** — it holds fifteen rows as easily as five a
 **Not a mind map.** Mind maps show relationships without direction or time. A decision has
 both — it happened in an order, and one thing caused the outcome.
 
+## 5a. How lenses emit widgets — no fine-tuning required
+
+**This is a schema and prompt problem, not a model problem.** Fine-tuning would be actively
+harmful early on: the widget contracts will change weekly, and tuning bakes them in.
+
+### The three changes
+
+**1. Output contract: sections → blocks.**
+Lenses today return named text sections, which is why the output renders as accordions. Change
+the return type to an ordered array of blocks:
+
+```
+type Block =
+  | { kind: "prose";  heading?: string; body: string }
+  | { kind: "widget"; widget: WidgetName; props: WidgetProps; evidence: EvidenceRef[] }
+```
+
+Same call, same model, different shape. The renderer walks the array and hands `widget` blocks
+to the gen-ui registry.
+
+**2. Selection rule + a hard gate in the prompt.**
+The lens gets the decision-type → pattern table and the required-fields list per widget. Then:
+
+> Emit a widget **only if every required field is present in the transcript.** If any is
+> missing, emit a prose block instead and say what was missing. Never infer a cell to complete
+> a grid.
+
+**3. Registry mapping.** `WidgetName` → component. This is the only real engineering.
+
+### The actual hard part: extraction fidelity
+
+Generating well-formed widget JSON is easy. Making sure every cell traces to something the
+person actually said is the work — the failure mode is a model filling gaps plausibly, which in
+a research publication is fatal.
+
+**Every cell carries an evidence reference.** Not a footnote — a field:
+
+```
+cell: { state: "paid", note: "Tier above our budget", evidenceId: "ev_8f21" }
+```
+
+Rules:
+- A cell without an `evidenceId` **does not render**. It degrades to "not established in the
+  interview."
+- The widget's `source` prop is required — a figure with no stated source must not render.
+- Numbers get validated, not trusted: totals must reconcile against line items, and a mismatch
+  flags for human review rather than publishing.
+
+### Why this is the unlock
+
+**Clicking a cell opens the quote behind it.**
+
+A feature matrix where you click *"only if we pay more"* and hear the buyer say *"that's the
+tier above what we could afford"* is something no analyst firm ships. It's the receipts model
+applied to a diagram — and it makes the figure self-defending, which is exactly what an
+independent research publication needs.
+
+It also solves the demo problem in one move: the live walkthrough with an interview subject
+becomes *"here's your decision as a diagram — click any cell and it's your own words."*
+
+### Build order
+
+1. Block-array output contract + renderer (unblocks everything)
+2. `StatedVsActual` and `FeatureMatrix` first — highest use, simplest data
+3. Evidence IDs on cells + click-to-quote
+4. The remaining six widgets
+5. Number validation on `CostByProblem` and `CostCrossover`
+
 ## 5b. Conversation lens — prompt guidance
 
 For the UpSight lens that generates a draft file from an interview transcript. It must pick the
