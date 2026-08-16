@@ -15,6 +15,32 @@
 | No forced-participation dynamic (the NSS lever) | A category report backed by six known CISOs is one a vendor can't afford to be absent from. |
 | Site has no masthead (outreach blocker) | Solved the week the first three say yes. |
 
+## Who belongs on the masthead — revised 2026-08-15
+
+**The masthead's job is to make buyers answer the email.** Only working practitioners do
+that. A CISO answers because another practitioner vouched, not because an investor is listed.
+
+| Persona | Role | Masthead? |
+|---|---|---|
+| **Working CISOs / architects** | Source interviews, vouch, sanity-check findings | **Yes — this is the masthead** |
+| **Ex-analyst (one, max)** | Methodology credibility | Maybe. Pingree *or* Stiennon, not both |
+| **Vendor execs** | They pay for the research | No — customers |
+| **Media** | Distribution | No — partner |
+| **VCs / investors** | Signal only | **No** |
+
+**Order of asks:** Craig Merchant → Gary Hayslip → Trey Ford → Laz.
+
+**Chenxi Wang removed from the masthead.** She was picked on prestige, not usefulness — an
+investor, not a practitioner, and unlikely to do real work without deal flow attached. Her
+real use is engagement referrals once a file is published; she sees dozens of vendors a year.
+That's a transaction she'd value. Masthead work isn't.
+
+**Craig Merchant is the first ask.** Working architect who runs real evaluations — the person
+the files are about. Send him
+[`decision-files-onepager.md`](../40-gtm/channels/outreach/decision-files-onepager.md) and ask
+him where it's naive. Don't send a half-built website; a spec plus "poke holes in this"
+flatters a practitioner, an unfinished landing page doesn't.
+
 ## Call them contributors, not advisors
 
 "Advisory board" is the word for people who lend a logo and never answer email. The

@@ -5,6 +5,27 @@
 
 ---
 
+## 2026-08-15 (masthead reset) — Practitioners, not prestige
+
+**Decided**
+- **Chenxi Wang off the masthead.** Rick's call and he's right — I picked her on prestige.
+  She's an investor, not a practitioner, and won't do real work without deal flow attached.
+  Her real use is engagement referrals after a file publishes.
+- **Masthead = working practitioners only.** A CISO answers because another practitioner
+  vouched, not because a VC is listed. Vendors are customers; media are partners; VCs are
+  neither.
+- **Order of asks: Craig Merchant → Gary Hayslip → Trey Ford → Laz.**
+
+**Shipped**
+- `40-gtm/channels/outreach/decision-files-onepager.md` — the handoff doc. What it is, why it
+  doesn't exist yet, the format, the rules, and a closing ask: "where is this naive?"
+- Board doc: new persona table + the reversal, records updated.
+
+**Surfaced**
+- **Don't wait on the website for Craig.** He's the pressure test, not a prospect. A spec plus
+  "poke holes in this" flatters a practitioner; a half-built landing page doesn't. The site is
+  for cold outreach only.
+
 ## 2026-08-15 (lane call) — Security active, operators deferred
 
 **Decided**
