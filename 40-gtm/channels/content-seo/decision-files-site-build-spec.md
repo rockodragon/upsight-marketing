@@ -116,6 +116,7 @@ https://claude.ai/code/artifact/47003a7e-6993-4d77-97ac-df83943952ad
 | 4 | **Feature matrix, with the truth on it** | Crowded categories where everyone looks the same on paper. The familiar grid, with the row that actually decided it highlighted. |
 | 5 | **What the money actually buys** | Any decision where the cheapest option didn't win. Cost split by the problem each pound solves — not TCO. |
 | 6 | **What we cut, what we kept** | Consolidating tools, merging two companies' stacks |
+| 7 | **Cost crossover** | Build vs. buy, in-house vs. outsourced |
 | 8 | **What we skipped** | Emergencies — breach, outage, deadline, vendor goes away |
 
 ### The language rule — this is the one that matters most

@@ -5,6 +5,36 @@
 
 ---
 
+## 2026-08-15 (visuals v4 — money + finer grain + gen-ui)
+
+**Shipped**
+- Eight patterns now: added **"What the money actually buys"** — cost split by the problem each
+  line solves, not TCO. In the worked example the buyer paid $75K over the cheapest option;
+  $40K of that was one line (a named engineer on call) they'd pay again, and $35K was a
+  migration overrun nobody priced.
+- **Feature matrix moved off binary** to four states — yes (1) / partly (½) / only if we pay
+  more (½) / no (0) — plus a **score row with a bar per vendor**, so "who has more" doesn't
+  require counting cells. **Positives drawn at 22px, negatives at 11px**, per Rick: the eye
+  should count the yeses.
+- Build spec §5: the four-state scale, and **gen-ui widget contracts for all eight patterns** —
+  widget names, core props, and the requirement that they're registered app widgets with typed
+  schemas rather than one-off page markup. The website renders the same components.
+
+**Decided**
+- **Two shared props on every widget.** `source` is *required* — whose data, how obtained,
+  illustrative or not — and **a widget with no source must not render**. `finding` carries the
+  one-sentence point and feeds the aria-label.
+- **One state vocabulary across all eight** (`pass` / `out` / `key` / `win`, plus `partial` and
+  `paid` in the matrix) so the legend means the same thing everywhere.
+
+**Surfaced**
+- The near-tie in matrix scores is itself the finding — four vendors landing within 1.5 points
+  is the usual result, and it's why feature grids rarely decide anything. Worth stating on the
+  figure rather than hiding.
+- Two new interview questions feed these: *"Was any of it a partial yes — worked, but with a
+  limit? Or only if you paid more?"* and *"You paid more than the cheapest option. What did that
+  extra money actually buy?"* The second is the sharpest money question in the guide.
+
 ## 2026-08-15 (visuals v3 — plain English)
 
 **Fixed (Rick's callouts, all fair)**
