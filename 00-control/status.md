@@ -5,6 +5,35 @@
 
 ---
 
+## 2026-08-15 (file 1 guide + recruiting filter)
+
+**Shipped**
+- `40-gtm/campaigns/file1-ai-tooling-interview-guide.md` — the AI-tooling interview guide.
+  12 questions, 15 min hard stop, with the recruiting filter and LinkedIn search string.
+- Craig's one-pager updated to carry the visual system and link the worked examples; the ask now
+  includes *"does the diagram show you something, or is it decoration?"*
+- Chad Lohri, Keith Chester, Adam Smith added as file-1 candidates (all need role/team-size
+  confirmation; Adam Smith needs a LinkedIn URL — common name).
+
+**Decided — the recruiting filter**
+- **The qualifier is team size, not title: they manage enough engineers that "everyone picks
+  their own" stopped working — roughly 10+.** Below that there's no standardisation problem and
+  therefore no decision to study. Company 50–500: big enough to need a standard, small enough
+  that one identifiable person made the call.
+- **The signal that beats any title filter:** someone who has already *posted* about rolling out
+  Copilot, Cursor, Claude Code or an internal AI platform. They've shown they'll discuss it
+  publicly, which is most of the recruiting problem already solved.
+- **Exclude:** solo devs and consultants (no standardisation problem), AI influencers (opinions,
+  not decisions), and anyone at a model or tool vendor — they're the *buyer* for this research,
+  not a subject.
+
+**Surfaced**
+- Can't scan LinkedIn from this environment. The filter and search string are in the guide;
+  Rick runs the scan.
+- Best expected finding from this file: the honest answer to "how did each of those get in?"
+  is often *"nobody decided, it just happened"* — which is itself the story, and shouldn't be
+  tidied into a process during the interview.
+
 ## 2026-08-15 (use cases, revised)
 
 **Decided**
