@@ -2,6 +2,10 @@
 
 **Date:** 2026-08-15 · Each one names the widget it exercises, so the app build has a real target.
 
+**Sequencing, decided:** AI tools first because the topic is hot and the subjects are easy to
+reach. The cybersecurity network comes second — those friends will be critical, and they should
+meet a publication that already has files on it, not a prototype.
+
 ---
 
 ## 1. Which AI models and harnesses to standardise on — **running now**
@@ -26,16 +30,35 @@ with real budget** who are desperate to know how this call gets made.
 first file — the topic is hotter and the vendor buyers are richer. Worth deciding on purpose
 rather than by momentum.
 
-## 2. What the Sullivan verdict changed
+## 2. How we're letting AI into the company
 
-**The decision:** how CISOs decide under personal liability — who gets looped in, what gets
-written down, where the line sits between protecting the company and protecting yourself.
+**The decision:** every org is deciding right now what AI is allowed to touch — which tools,
+which data, what goes through a proxy, what gets blocked, what people are doing anyway. There
+is no playbook and everyone is improvising.
 
-**Who to interview:** 1 CISO for altitude + 2–3 architects/deputies per file. Offer the
-role-only anonymity tier unprompted.
+*(Replaces an earlier candidate on the Sullivan verdict. That was a legal story — it doesn't
+change what a buyer does on Monday, and vendor relevance was one step removed.)*
 
-**Widgets:** `StatedVsActual` on informal criteria · `WhatWeSkipped` for anyone who has made a
-disclosure call under time pressure.
+**Who to interview:** CISOs and security architects who have written or blocked an AI policy in
+the last 12 months. Same rule: 1 CISO for altitude, 2–3 architects for the mechanism.
+
+**The questions that matter:**
+- What did you allow first, and why that?
+- What did you block, and did people route around it?
+- What did you check before you let it near customer data?
+- Who had to sign off — legal, privacy, the board?
+- What are you doing now that you'd have called reckless a year ago?
+
+**Widgets:** `StatedVsActual` (the policy vs. what people actually do — the gap *is* the story)
+· `FeatureMatrix` on controls, where "partly" and "only if we pay more" will dominate ·
+`WhatWeSkipped` for anyone who moved fast under pressure from the top.
+
+**Why it beats the alternative:** it's a live decision with budget attached, every CISO owes
+their board an answer, and the buyers — AI security, DLP, data governance vendors — have real
+money and no idea how this call gets made.
+
+**It also pairs with file 1.** Same AI adoption wave: one from the builder's side, one from the
+security side. Two files, two audiences, one story — which is the quarterly report.
 
 ## 3. Why did you cancel Gartner
 

@@ -5,6 +5,24 @@
 
 ---
 
+## 2026-08-15 (use cases, revised)
+
+**Decided**
+- **Sullivan verdict file cut.** Rick: it's a legal story that doesn't change what a buyer does
+  on Monday, and the vendor relevance was one step removed. Correct.
+- **Replaced with "How we're letting AI into the company"** — what AI is allowed to touch, what
+  got blocked, what people route around anyway. Live decision, budget attached, every CISO owes
+  their board an answer, and the buyers (AI security, DLP, data governance) have money and no
+  idea how the call gets made.
+- **Sequencing rationale recorded:** AI tools first because the topic is hot and subjects are
+  easy to reach; the cybersecurity network second, because those friends will be critical and
+  should meet a publication with files already on it rather than a prototype.
+
+**Surfaced**
+- **Files 1 and 2 now pair.** Same AI adoption wave — the builder's side and the security side.
+  Two files, two audiences, one story, which is the quarterly report. The earlier set was three
+  unrelated topics; this one compounds.
+
 ## 2026-08-15 (use cases locked)
 
 **Decided**
