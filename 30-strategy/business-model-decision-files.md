@@ -1,0 +1,240 @@
+# Business model — The Decision Files + UpSight
+
+**Date:** 2026-08-15 · **Status:** model note. The security-vertical commitment is still open (`00-control/open-questions.md`).
+**Shape:** the NSS Labs model, applied to buyer decisions instead of product tests, with software as the leverage that replaces the lab.
+
+---
+
+## In one line
+
+Independent research that buyers will be candid with, sold to the vendors who
+can't get that candor themselves — and the software that made the research cheap
+enough for one person to run.
+
+## Who pays, who participates
+
+| | Role | Money |
+|---|---|---|
+| **CISOs / buyers** | Participants and audience. They give interviews because being asked is flattering and they get the findings first. | **None, ever.** |
+| **Security vendors** | The customer. $10–100M revenue, product marketing or CRO owns the problem. | **All of it.** |
+
+Confusing these is the fastest way to wreck the model. The moment a participant
+feels sold to, the candor stops, and candor is the entire inventory.
+
+## What the vendor is actually buying
+
+A vendor loses a deal. They ask the rep why. The rep says "price." It's almost never
+price, and the rep can't find out — **buyers will not be candid with the vendor who
+just lost.** Nobody tells a salesperson *"your product was fine, my board didn't
+believe your company would exist in three years."*
+
+So their win/loss data is filled in by the people with the most reason to shade it,
+their CRO can't explain the conversion rate, and no amount of internal effort fixes
+it, because the problem isn't effort. It's who's asking.
+
+**The vendor is buying access to candor they cannot obtain at any price internally.**
+Independence is the product. That is the same asset NSS sold — a vendor could not
+test itself and be believed.
+
+## Revenue lines, in the order the money actually arrives
+
+**A. Private research engagements — the money now.**
+*"Interview 20 buyers in your category, including the ones who chose your competitor,
+and tell us what actually happened."*
+
+| Tier | Scope | Range |
+|---|---|---|
+| Pilot | 10–15 interviews, one segment, 4–6 weeks | $15–25K |
+| Standard | 20–25 interviews, category-wide incl. competitive losses | $35–50K |
+| Retainer | Quarterly refresh, same category | $60–100K/yr |
+
+**B. UpSight licenses — the business.**
+During delivery the vendor watches UpSight do the work: interviews in, themes and
+receipts out. Then they want it for their own win/loss, churn, and onboarding
+research. The engagement is the wedge; the license is the recurring revenue.
+
+**C. Syndicated / sponsored research — later, if ever.**
+Multi-vendor reports, sponsorship, licensing for vendor marketing. Needs audience
+first. Don't plan around it in year one.
+
+## The money flow
+
+```
+Public Decision File (free)
+   → a vendor CMO reads it and thinks "he got a CISO to say that out loud?"
+      → private engagement ($15–50K)
+         → they watch UpSight produce the analysis
+            → UpSight license (recurring)
+               → the engagement's findings seed the next public file (anonymized, with consent)
+```
+
+Free research is marketing for paid research. Paid research is the wedge for
+software. The public files are never expected to make money directly.
+
+## How the vendor finds us — three layers, three different plays
+
+Don't collapse these. They are separately staffed relationships doing separate jobs,
+and treating a PR agency like press wastes the most commercial one.
+
+| Layer | Who (2026-08) | The ask | What it produces |
+|---|---|---|---|
+| **Syndication** | Alan Shimel — Techstrong / Security Boulevard | *"Can the files run on your properties?"* | Distribution, fast. Compresses the discovery timeline from 6–12 months to weeks. |
+| **Earned editorial** | Dark Reading — Kelly Jackson Higgins | *"Would you cover a category report?"* | Credibility events. Their "20 Leaders Who Defined the CISO Era" retrospective shows the format is already compatible with what they publish. |
+| **Agency channel** | Merritt Group · Michelle Schafer · Jon Kreuzer | *"Which of your clients needs to know why they lose?"* | **Paying engagements.** This is the layer that produces revenue. |
+
+**The agency layer is the one that's easy to undervalue.** A security PR agency
+carries 20–40 vendor clients. Every one has the "we don't actually know why we lose"
+problem, and the agency is structurally motivated to bring clients something new —
+it's how a retainer gets defended. That makes them a referral source for engagements,
+not a route to coverage, and it's a far better lead channel than cold email.
+
+**Terms:** 10–15% of first-year engagement value on anything they source — the same
+structure as the contributor board. Same reason, too: it's the term that changes
+behavior rather than generating goodwill.
+
+**Sequencing:** syndication and editorial first, because they make the agency
+conversation easy. *"We publish here and here"* is what turns a referral ask into an
+obvious yes.
+
+## The firewall — non-negotiable
+
+The moment vendors pay, published research must stay clean or independence dies —
+and independence is the whole product.
+
+- **Paid engagements are private deliverables. The Decision Files publishes only
+  unpaid research.**
+- No vendor sees a public file before publication. Ever.
+- No vendor is named favourably in a public file while paying for an engagement.
+- Findings from a paid engagement can seed a public file only anonymized, with the
+  *participants'* consent — not the sponsor's.
+- State all of this in the methodology note, publicly.
+
+This is the line NSS had to walk, and it's the one that decides whether this is a
+research practice or a vendor's content shop.
+
+---
+
+## What's the same as NSS, and what isn't
+
+**The same, and it's the important part:** independence as the product. Buyers as
+the source, vendors as the buyer. Reputation built in public, monetized in private.
+Rick has run this exact motion to a market-leading position once.
+
+**Different, and worth going in with open eyes:**
+
+1. **The moat is weaker at the start.** A test lab was capital-intensive and hard to
+   replicate. Interviewing 20 CISOs is not — anyone with a phone can attempt it.
+   What's scarce here is *access and candor*, which rests on reputation, and
+   reputation is contestable by anyone with a good brand.
+2. **But there's a moat NSS didn't have: the software.** UpSight makes this
+   runnable at a scale that used to require a team. That's the reason one founder
+   can do in 2026 what needed a lab in 2007 — and it's a compounding asset the
+   research practice alone wouldn't have.
+3. **The category isn't empty.** Win/loss research already exists — Clozd, Primary
+   Intelligence, DoubleCheck. **The differentiator is that none of them publish.**
+   They're private vendors-for-hire; The Decision Files earns its access in public.
+   That's the wedge, and it should be said out loud in every pitch.
+4. **Different door inside the vendor.** NSS sold to product/engineering and to
+   marketing for report licensing. This sells to product marketing, CMO, or CRO —
+   whoever owns win/loss. Warm intros should target that seat.
+
+## The design question that decides whether this is a franchise or a practice
+
+NSS's monopoly came from a **forced-participation dynamic**: being absent from a
+public test was itself a damaging signal, so vendors had to engage.
+
+**There is no equivalent here yet, and building one is the central design problem.**
+
+The closest available analog: a recurring, category-wide *"how buyers chose in
+[category] this year"* report, where a vendor no buyer mentions is conspicuous by
+absence. If that can be engineered — enough buyers, published consistently, in a
+category people watch — this becomes a franchise. If it can't, it's a very good
+one-person consulting practice with a software attachment.
+
+Both are viable. They're different companies. Decide on purpose.
+
+## The untested assumption
+
+**Will a security vendor write a $25K check for buyer research from a one-person
+shop?** Everything above rests on that.
+
+- **Cheap test:** name two CMOs or CROs who'd take the call today. If they exist,
+  the model is real and the first engagement is a phone call away.
+- **If they don't:** publish one genuinely good public file first and let it generate
+  the inbound. That's slower, and it's the honest path.
+
+## Correction: the $25K check does NOT validate the software
+
+Earlier drafts of this doc treated the engagement as a wedge that naturally converts
+to a license. That was too clean, and Rick caught it. Two problems:
+
+**1. Buying a report is the opposite motivation from buying a tool.** A CMO paying
+$25K is buying an *answer* and *not having to do the work*. UpSight's proposition is
+*do the work yourself, continuously*. Different value propositions, and usually
+different people — the CMO signs the research check; a product-marketing manager
+would own the tool. Assuming the first buyer becomes the second is the classic
+services-to-product trap.
+
+**2. The interviewees are mostly vendor-sourced.** For win/loss work, the vendor
+hands over the lost-deal list. So what we sell isn't *access* — they already have the
+contacts — it's **a neutral third party doing the asking.** That's real (it's Clozd's
+entire business) but it's a weaker moat than "we can reach people you can't."
+Independently sourced interviews, via the contributor board, are the actual
+differentiator, and they're the slower, harder path.
+
+**Therefore: the engagement validates the problem, not the tool.**
+
+### The test that does validate it — run it on engagement #1
+
+Price two tiers side by side and see which sells:
+
+| Tier | What they get | Price |
+|---|---|---|
+| **A** | We run the research; you get the report. | $25K |
+| **B** | We run it; **you keep the workspace** — all evidence, and you can add your own. | $35K |
+
+**If nobody takes B, the tool is not the business.** UpSight is internal production
+leverage and this is a research firm. That's a legitimate outcome — but it should be
+known by month three, not month thirty.
+
+Also watch for the unprompted signal: does anyone ask *"could we keep doing this
+ourselves?"* If it has to be sold, it isn't there.
+
+## The services trap — flagged, not solved
+
+Line A is consulting. It's lumpy, it's Rick's hours, and it competes directly with
+the time needed to build UpSight. The upside is real money from real budgets,
+arriving far sooner than software revenue.
+
+The failure mode is waking up in eighteen months running a one-man research shop
+with a neglected side product. The honest guardrail is the A/B test above, run
+early and repeatedly — not an assumption that engagements convert.
+
+## A third vertical, surfaced by the Stiennon exchange: research firms themselves
+
+**Could Stiennon add the demand side? Yes — more easily than we could add supply.**
+He has the audience to recruit from, the credential to get answers, and the vendor
+relationships that pay. Interviews aren't capital-intensive.
+
+What protects us is that it's **orthogonal to his strategy, not adjacent to it.** His
+moat is comprehensive coverage — 4,250 vendors, systematic, low marginal cost,
+agent-queryable. Buyer-decision research is qualitative, one-at-a-time, high marginal
+cost, and fifteen deep interviews is the opposite of "comprehensive." Adding it
+dilutes his position rather than extending it. The risk isn't that he decides to
+compete; it's that a customer asks and he says yes.
+
+So the play is speed and structure: **get there before he considers building, and make
+partnering easier than building.**
+
+**And note where our moat actually is.** It isn't the interviews — it's the software
+that makes running them cheap. That's the piece he'd have to buy or build.
+
+Which opens a third option: **UpSight sold to research firms as production tooling.**
+IT-Harvest is a research business with a production problem. So are hundreds of
+boutique analyst shops, research consultancies, and advisory firms — a real segment,
+with budget, whose workflow Rick understands better than any other founder could.
+
+**The tension to decide deliberately:** selling UpSight to IT-Harvest is good business
+*and* hands a potential competitor the capability to add demand-side coverage. Picks-
+and-shovels-for-research-firms and exclusivity-in-security pull in opposite
+directions. Pick one on purpose.

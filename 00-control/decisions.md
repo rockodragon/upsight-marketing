@@ -5,6 +5,37 @@
 
 ---
 
+## 2026-08-15 - Security is the active lane; operators deferred, not killed
+**Why:** Rick's credential, network, and warm press all transfer to security and none of them
+transfer to operators — the unfair advantage is entirely on one side. Security also has a paying
+buyer on the other side of the research (vendors, $15-50K engagements plus $25-75K/yr reprints),
+where the operator lane's buyer is the operator themselves at software prices. Operators remain
+the intended broader segment later, and running an occasional operator file is fine; this is a
+sequencing call, not an abandonment. All operator-lane tasks are prefixed `[DEFERRED — operator
+lane]` at P3 in UpSight so the lane stays visible. Four mechanics survive the change and still
+govern security work: the qualifier test, week 4 being the week that slips, paid advertising the
+published piece rather than the survey, and the quarterly-report mechanic. Two deferred topics
+(the board question, the approval) retarget to CISOs better than they worked for operators.
+See `30-strategy/decision-files-gameplan.md`.
+
+## 2026-08-15 - The Decision Files is the front door; research recruiting is the sales motion
+**Why:** Cold product email asks a stranger for a meeting from a position of needing
+something. A research interview asks an expert for their expertise — a better ask, from a
+better position, that produces the same conversation. The interview *is* the discovery
+call: it surfaces stack, constraints, board pressure, and frustration while being genuinely
+valuable to the person giving it. Rick's standing is real, not aspirational — he built an
+empirical test-based research firm in 2007 doing product-effectiveness testing for the
+Fortune 500, nearly acquired by Gartner — so the publication is a description, not a claim.
+Consequences: UpSight-branded cold outbound stops; the intern's job changes from selling to
+research recruiting (a job a junior person can be excellent at immediately, which selling is
+not); the written file is the deliverable and audio is a by-product; and the conversion
+moment is a **live walkthrough of UpSight generating the subject's own report**, scheduled
+as a step rather than hoped for. thedecisionfiles.com is now load-bearing and blocks all
+outreach until it carries a founder bio, a masthead, a methodology note, and three files.
+Not a conflict of interest: we publish how people decide, not which product wins.
+See `30-strategy/public-survey-engine-strategy.md` and
+`40-gtm/channels/outreach/decision-files-recruiting-kit.md`.
+
 ## 2026-07-19 - Homepage V4 uses a disciplined proof-and-conversion sequence
 **Why:** V3 established the right category and differentiator but still read more like a product
 essay than a lead-generation page. V4 applies Fletch PMM discipline and the persuasion order of the

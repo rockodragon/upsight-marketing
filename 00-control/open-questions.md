@@ -7,6 +7,11 @@
 
 | Date opened | Q | Type | Owner | Status |
 |---|---|---|---|---|
+| 2026-08-15 | What's the forced-participation dynamic for The Decision Files? NSS's monopoly came from absence-from-a-test being damaging; without an equivalent this is a consulting practice, not a franchise. | [bet] | Rick | open → candidate is a recurring category-wide "how buyers chose" report |
+| 2026-08-15 | Will a security vendor pay $15–50K for buyer research from a one-person shop? Whole model rests on it. | [tactical] | Rick | open → cheap test: name two CMOs/CROs who'd take the call today |
+| 2026-08-15 | Which room does The Decision Files build authority in — cybersecurity (warm network, CISOs as source, security vendors as buyer) or operators/professional services? Can't do both. | [bet] | Rick | open → cheap test is one pilot security file before committing a quarter |
+| 2026-08-15 | Is "can I interview you for a piece I'm publishing" a higher-converting cold ask than a demo request for ICP consultants/operators? | [tactical] | Rick | open → tested by run #1's Tier-2 recruiting; 25–30 asks → target ≥10 yeses |
+| 2026-08-15 | Does the public-survey motion produce booked calls, or only reach? Run #1 is the test. | [tactical] | Rick | open → campaign `40-gtm/campaigns/2026-08-ai-stack-decision-survey.md` (proposed); target ≥4 interview→second meeting |
 | 2026-07-17 | Does Remotion's $100 Animated Captions component's text-fitting/animation polish beat our in-house build enough to justify buying it? | [tactical] | Rick | open → needs a real captioned video to compare against; see `decisions.md` 2026-07-17 |
 | 2026-06-09 | Dynamic Groups: how should the app express segment exclusivity (precedence vs explicit exclude) + which criteria types (attributes / survey / engagement / AI-theme)? | [bet] | Rick | open → spec seeded 2026-06-09; needs a separate app-repo thread |
 | 2026-06-09 | Is event-organizer a real ICP, or off the founder-led-seller thesis? Run Nessa's research-led probe as the test. | [bet] | Rick | open → plan `40-gtm/channels/outreach/nessa-event-organizer-leadgen-2026-06-09.md` |
