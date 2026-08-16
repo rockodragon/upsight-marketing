@@ -5,6 +5,26 @@
 
 ---
 
+## 2026-08-15 (visuals + build spec)
+
+**Shipped**
+- Visual system artifact — three diagram formats with worked illustrative examples:
+  https://claude.ai/code/artifact/47003a7e-6993-4d77-97ac-df83943952ad
+- `40-gtm/channels/content-seo/decision-files-site-build-spec.md` — handoff spec for a coding
+  agent revising thedecisionfiles.com and the report template.
+
+**Decided**
+- **Every file gets one diagram, from three formats only:** decision timeline (where time went
+  vs. where the call was made), elimination map (where each option died), and **stated vs.
+  actual** (scorecard weight vs. what decided it) — the default, because that gap is usually
+  the finding.
+- **No mind maps.** They show relationships without direction or time; a decision has both.
+  Rick's suggestion, dropped on that reasoning and he agreed.
+
+**Surfaced**
+- Craig gets the one-pager, not the site — he's the pressure test, and a curmudgeon architect
+  is better flattered by "poke holes in this spec" than by an unfinished landing page.
+
 ## 2026-08-15 (masthead reset) — Practitioners, not prestige
 
 **Decided**
