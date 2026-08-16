@@ -48,7 +48,32 @@ are approved, the anonymity tiers, and this, stated plainly:
 > The Decision Files is published by UpSight. No sponsor or vendor sees a file before
 > publication, and none has input on subject selection, questions, or findings.
 
-**Newsletter capture** on the index and at the foot of every file. One field, no modal.
+### Email capture — earned, not interruptive
+
+**No popups. No timed modals. No exit-intent. No scroll-triggered anything.** The audience is
+skeptical practitioners; an interstitial on a research site reads as marketing and costs more
+trust than the address is worth.
+
+**The ask fires only when someone tries to do something they can't yet do.** That way the
+person asking has already told you they want it.
+
+| Content | Access |
+|---|---|
+| Individual Decision Files — brief, diagram, full narrative | **Free. No wall, ever.** These build the audience and get cited. |
+| Quarterly reports (three files synthesised) | **Gated.** Click "Read the report" → inline email form appears in place. |
+| Archive older than the current quarter | **Gated**, same trigger. |
+
+**How the gate behaves:**
+- Inline on the page, in the flow — never an overlay.
+- States plainly what they get and what happens next: *"The Q4 report — 30 interviews, one PDF.
+  We email a new file when it publishes, about twice a month. Nothing else."*
+- One field. Address only.
+- After submit, deliver immediately on the same page. No confirmation-email round trip before
+  they see the thing they asked for.
+- Remember them. A returning reader never sees the gate twice.
+
+A quiet one-line subscribe at the foot of a file is fine — *"Get the next file by email"* — as
+long as nothing fires on its own.
 
 ## 3. Content changes to the existing sample
 
@@ -78,35 +103,67 @@ attribution is the thing that makes a practitioner stop trusting the page.
 
 ## 5. Visual system — every file gets one diagram
 
-Reference implementation, six patterns with worked examples:
+Reference implementation, seven patterns with worked examples:
 https://claude.ai/code/artifact/47003a7e-6993-4d77-97ac-df83943952ad
 
-### The six patterns
+### The seven patterns
 
 | # | Pattern | Use when |
 |---|---|---|
 | 1 | **Decision timeline** (vertical) | The calendar tells the story — long evaluation, short decision |
-| 2 | **Elimination map** | There was a shortlist and candidates died at identifiable points |
-| 3 | **Stated vs. actual** | **The default.** Any decision with a formal scorecard |
-| 4 | **Consolidation map** | Many tools → fewer. Platform consolidation, post-merger standardisation |
-| 5 | **Cost crossover** | Build vs. buy, in-house vs. outsourced — a modelled crossover point |
-| 6 | **What got skipped** | Forced or emergency decisions — breach, outage, deadline, vendor failure |
+| 2 | **Who dropped out, and why** | There was a shortlist |
+| 3 | **What we said mattered vs. what actually mattered** | **The default.** Any decision with a scorecard |
+| 4 | **Feature matrix, with the truth on it** | Crowded categories where everyone looks the same on paper. The familiar grid, with the row that actually decided it highlighted. |
+| 5 | **What we cut, what we kept** | Consolidating tools, merging two companies' stacks |
+| 6 | **Cost crossover** | Build vs. buy, in-house vs. outsourced |
+| 7 | **What we skipped** | Emergencies — breach, outage, deadline, vendor goes away |
+
+### The language rule — this is the one that matters most
+
+**Write what the buyer would say out loud.** Every label, every cell, every caption.
+
+| Never write | Write |
+|---|---|
+| "Eliminated on cost criteria" | "Too expensive" |
+| "Failed adoption threshold" | "Nobody used it" |
+| "Separated nobody" | "All four had it" |
+| "Cut at gate 2" | "Cut — our analysts stopped using it" |
+| "Did not differentiate the remaining vendors" | "The other three cost about the same" |
+| "Support model" | "Who we call at 3am" |
+
+**If a label needs a glossary, it's the wrong label.** Analyst jargon is the fastest way to
+lose a practitioner — they read it as someone who has never done the job.
+
+### Icons and colour — four states, always the same meaning
+
+Colour alone never carries meaning. Every state has an icon *and* a colour, and they mean the
+same thing on every diagram in every file.
+
+| Icon | Colour | Meaning |
+|---|---|---|
+| Tick | Neutral grey | Everyone passed — it decided nothing |
+| Minus | Red | Knocked someone out |
+| Star | Amber | **This decided it** |
+| Tick | Blue | Chosen |
+
+Inline SVG glyphs, not emoji, not icon fonts. A legend appears once at the top of a file, not
+repeated per diagram.
 
 ### Canonical decision types → pattern
 
-| Decision type | Pattern | Why |
+| Decision | Pattern | Why |
 |---|---|---|
-| Replace an incumbent | Elimination map | The story is who died and why |
-| Renew vs. leave | Stated vs. actual | Switching cost usually beats the scorecard |
-| Competitive bake-off | Elimination + stated vs. actual | The pair is the full picture |
-| Consolidate onto a platform | Consolidation map | The survivors carry the finding |
-| Post-merger standardisation | Consolidation map | Two of everything, pick one |
-| Build vs. buy | Cost crossover | Rests on a crossover point |
-| In-house vs. outsource | Cost crossover | Same shape, staffing not engineering |
-| New requirement (remote, hybrid, AI) | Decision timeline | When the requirement appeared vs. when anyone acted |
-| Emergency / forced move | What got skipped | Time pressure makes omissions the story |
-| Retiring or killing something | Decision timeline | The trigger to stop is the rare part |
-| Expanding an existing vendor | Stated vs. actual | Usually decided on inertia nobody scored |
+| Replacing a vendor | Who dropped out, and why | The story is who got thrown out |
+| Renew or leave | Said vs. actual | The cost of moving usually beats the scorecard |
+| Head-to-head bake-off | Feature matrix + said vs. actual | Everyone ticks the same boxes; one row decides |
+| Consolidating tools | What we cut, what we kept | The survivors carry the finding |
+| Merging two companies' stacks | What we cut, what we kept | Two of everything, pick one |
+| Build or buy | Cost crossover | It rests on a break-even year |
+| In-house or outsource | Cost crossover | Same shape, staffing instead of engineering |
+| New need — remote work, hybrid, AI | Timeline | When the need appeared vs. when anyone moved |
+| Emergency replacement | What we skipped | No time means the omissions are the story |
+| Switching something off | Timeline | What finally triggered the decision to stop |
+| Expanding an existing vendor | Said vs. actual | Usually decided on habit nobody scored |
 
 Timeline is **vertical, top-down** — it holds fifteen rows as easily as five and fits a page.
 

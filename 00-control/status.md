@@ -5,6 +5,34 @@
 
 ---
 
+## 2026-08-15 (visuals v3 — plain English)
+
+**Fixed (Rick's callouts, all fair)**
+- **Killed the analyst jargon.** "Separated nobody", "cut at gate 2", "did not separate the
+  remaining three" — that was AI slop, not how a buyer talks. Now: "All four had it", "Cut — our
+  analysts stopped using it", "The other three cost about the same". **New standing rule in the
+  spec: write what the buyer would say out loud. If a label needs a glossary, it's the wrong
+  label.**
+- **Icons added, with a legend, and the colour logic made explicit** — it was arbitrary before.
+  Four states, same meaning on every diagram: grey tick = everyone passed, decided nothing ·
+  red minus = knocked someone out · amber star = this decided it · blue tick = chosen. Colour
+  never carries meaning alone.
+- Seventh pattern added at Rick's suggestion: **feature matrix with the truth on it** — the
+  familiar vendor grid, with the one row that actually decided it highlighted. Every vendor
+  publishes a matrix; none of them say which row mattered.
+
+**Decided — email capture**
+- **No popups, no timed modals, no exit-intent.** On a research site an interstitial reads as
+  marketing and costs more trust than the address is worth.
+- **The ask fires only when someone tries to do something they can't yet do.** Individual files
+  are free forever — they build audience and get cited. Quarterly reports and the older archive
+  are gated; clicking through raises an inline form in place, never an overlay. Deliver
+  immediately on the same page, remember the reader, never ask twice.
+
+**Note**
+- No frontend-designer agent exists in this environment. The build spec is written to serve as
+  the designer brief.
+
 ## 2026-08-15 (visuals v2)
 
 **Shipped**
