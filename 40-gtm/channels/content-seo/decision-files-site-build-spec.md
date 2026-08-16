@@ -103,10 +103,10 @@ attribution is the thing that makes a practitioner stop trusting the page.
 
 ## 5. Visual system — every file gets one diagram
 
-Reference implementation, seven patterns with worked examples:
+Reference implementation, eight patterns with worked examples:
 https://claude.ai/code/artifact/47003a7e-6993-4d77-97ac-df83943952ad
 
-### The seven patterns
+### The eight patterns
 
 | # | Pattern | Use when |
 |---|---|---|
@@ -114,9 +114,9 @@ https://claude.ai/code/artifact/47003a7e-6993-4d77-97ac-df83943952ad
 | 2 | **Who dropped out, and why** | There was a shortlist |
 | 3 | **What we said mattered vs. what actually mattered** | **The default.** Any decision with a scorecard |
 | 4 | **Feature matrix, with the truth on it** | Crowded categories where everyone looks the same on paper. The familiar grid, with the row that actually decided it highlighted. |
-| 5 | **What we cut, what we kept** | Consolidating tools, merging two companies' stacks |
-| 6 | **Cost crossover** | Build vs. buy, in-house vs. outsourced |
-| 7 | **What we skipped** | Emergencies — breach, outage, deadline, vendor goes away |
+| 5 | **What the money actually buys** | Any decision where the cheapest option didn't win. Cost split by the problem each pound solves — not TCO. |
+| 6 | **What we cut, what we kept** | Consolidating tools, merging two companies' stacks |
+| 8 | **What we skipped** | Emergencies — breach, outage, deadline, vendor goes away |
 
 ### The language rule — this is the one that matters most
 
@@ -148,6 +148,63 @@ same thing on every diagram in every file.
 
 Inline SVG glyphs, not emoji, not icon fonts. A legend appears once at the top of a file, not
 repeated per diagram.
+
+### The feature matrix uses four states, not two
+
+Binary yes/no is too coarse — most "yes" answers in a real evaluation are "yes, with a caveat."
+
+| Mark | Meaning | Score |
+|---|---|---|
+| Large tick (blue) | Yes | 1 |
+| Half-filled circle | Partly — note the limit in the tooltip | ½ |
+| Circle with $ | Only if we pay more — tier upgrade or add-on | ½ |
+| Small minus (red) | No | 0 |
+| Star (amber) | Yes, **and this is what decided it** | 1 |
+
+**Positives are drawn larger than negatives** — 22px ticks against 11px minuses. The eye should
+count the yeses when scanning a column, and a wall of small red dashes should read as absence
+rather than shout.
+
+**Every matrix carries a score row**: sum per vendor plus a proportional bar, so "who has more"
+is answered without counting cells. Expect the scores to land within a point or two of each
+other — that near-tie is usually the finding, because it's why feature grids rarely decide
+anything.
+
+### Gen UI widgets — required
+
+**Every pattern ships as a registered gen-ui widget in the UpSight app, not as one-off markup
+on the website.** The website renders the same widgets. One implementation, two surfaces.
+
+Requirements for each:
+- Registered in the app's gen-ui registry under the widget name below.
+- A typed props schema, so the conversation lens can emit a widget by returning structured data
+  rather than HTML.
+- Renders from data only — no free text baked into the component.
+- Degrades to an accessible table when data is incomplete.
+- Light and dark via tokens. Contrast per CLAUDE.md house rules.
+- `role="img"` plus an `aria-label` generated from the finding.
+
+| Widget name | Pattern | Core props |
+|---|---|---|
+| `DecisionTimeline` | 01 | `events[]` {month, title, detail, kind: trigger \| span \| pivot \| step \| outcome}, `source` |
+| `DropoutList` | 02 | `candidates[]` {name, verdict, plainReason, detail, state}, `source` |
+| `StatedVsActual` | 03 | `criteria[]` {label, weight \| "not on the list", outcome, state}, `source` |
+| `FeatureMatrix` | 04 | `vendors[]`, `rows[]` {label, cells[] {state: full \| partial \| paid \| none \| key, note}}, `showScores`, `source` |
+| `CostByProblem` | 05 | `vendors[]`, `lines[]` {problem, amounts[], note, highlight}, `total[]`, `source` |
+| `CutAndKept` | 06 | `groups[]` {label, count, state, reason}, `source` |
+| `CostCrossover` | 07 | `series[]` {label, points[], kind: plan \| actual \| alternative}, `crossover` {x, claim, caveat}, `source` |
+| `WhatWeSkipped` | 08 | `steps[]` {step, whatHappened, state, consequence}, `source` |
+
+**Shared props on all eight:**
+- `source` — **required.** {whose, howObtained, illustrative: bool}. Renders on the figure.
+  A widget with no source must not render.
+- `finding` — the one-sentence point. Renders as the caption below the figure and feeds the
+  `aria-label`.
+- `theme` — inherited; never hard-coded.
+
+**Shared state vocabulary** across every widget, so the icon legend means the same thing
+everywhere: `pass` (everyone had it, decided nothing) · `out` (knocked someone out) ·
+`key` (this decided it) · `win` (chosen) · plus `partial` and `paid` in `FeatureMatrix`.
 
 ### Canonical decision types → pattern
 
@@ -203,6 +260,8 @@ If it isn't there, say so and fall back — do not invent it.
 | Stated vs. actual | An explicit list of criteria (formal or informal) **and** what actually decided it |
 | Consolidation map | A before count and an after count, plus what survived and why |
 | Cost crossover | Two cost paths over time and a stated crossover assumption |
+| Feature matrix | Named capabilities and a per-vendor verdict on each, plus which row decided it |
+| What the money actually buys | Prices per option **and** the buyer's own allocation of cost to problems |
 | What got skipped | A normal process the subject can describe, and named steps that were cut |
 
 **Step 3 — extract, don't infer.** Every cell in a diagram traces to something the subject
@@ -217,7 +276,9 @@ write "not established in the interview" — never fill a gap with a plausible n
 - *"What ended up mattering that wasn't on the list at all?"* → the finding
 - *"Walk me through who was on the shortlist and where each one dropped out."* → pattern 2
 - *"Roughly when did each stage happen?"* → pattern 1
-- *"What was in your normal process that you didn't get to do this time?"* → pattern 6
+- *"What was in your normal process that you didn't get to do this time?"* → pattern 8
+- *"Where any of them a partial yes — worked, but with a limit? Or only if you paid more?"* → the four-state matrix
+- *"You paid more than the cheapest option. What did that extra money actually buy you?"* → pattern 5, and it's the sharpest money question in the guide
 
 **The prompt's closing instruction:** *state the finding the diagram is meant to carry in one
 sentence before drawing it. If you cannot state it, the diagram has nothing to show — return no
