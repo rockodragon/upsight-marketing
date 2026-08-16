@@ -5,6 +5,27 @@
 
 ---
 
+## 2026-08-15 (contrast measured, not eyeballed)
+
+**Shipped**
+- Computed WCAG ratios across every token pair in both themes rather than trusting my eye.
+  **All text passes** — lowest is 5.70:1 (flat on ground, light theme), most are 7–18:1.
+- **Two real failures found, both structural rules:** table/section borders at 1.56:1 (light) and
+  1.69:1 (dark) against a 3:1 requirement. Darkened `--rule` to `#8C949E` / `#66717D`, keeping the
+  faint row separators as `--rule-2`. Verified.
+- Rendered at 375px and 1200px in both themes via Playwright: **no horizontal overflow anywhere.**
+- Build spec §8 added: six automated checks to run in CI — contrast, overflow, token leakage
+  (colours declared only inside a media/`[data-theme]` block), widget contract (`source`,
+  `finding`, `evidenceId`), JSON-LD validity, link integrity. With the 2026-08-15 baseline.
+
+**Surfaced**
+- No browser session here — the container is fresh and isolated, so there's no LinkedIn cookie
+  and no way to scan Rick's network. Separately, LinkedIn blocks automation and scraping risks
+  the account, so this shouldn't be automated even with access. The filter and search string in
+  the file-1 guide are the deliverable; Rick runs the scan.
+- **Contrast is now a measured gate, not a style opinion.** Two failures by eye on this project
+  is the argument for putting it in CI.
+
 ## 2026-08-15 (file 1 guide + recruiting filter)
 
 **Shipped**

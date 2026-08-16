@@ -381,3 +381,22 @@ Utilitarian and dense. The credibility comes from restraint.
 
 **Blocks all cold outreach.** Every recruit checks the site before replying, and a first email
 to a given person is unrepeatable.
+
+## 8. Automated checks — run these in CI, don't eyeball them
+
+Contrast has been got wrong twice by eye on this project. Measure it.
+
+1. **Contrast:** compute WCAG ratios for every token pair in both themes. Text ≥ 4.5:1,
+   structural rules and large text ≥ 3:1. Fail the build, don't warn.
+2. **Horizontal overflow:** render each page at 375px and 1200px in both themes; assert
+   `documentElement.scrollWidth <= window.innerWidth`.
+3. **Token leakage:** grep the stylesheet for any colour declared *only* inside a
+   `@media (prefers-color-scheme)` or `[data-theme]` block. That's the classic unreadable-page bug.
+4. **Widget contract:** every rendered widget has a `source` and a `finding`; every cell has an
+   `evidenceId`. Missing → don't render, and log it.
+5. **Structured data:** validate the `Article` JSON-LD on every file page.
+6. **Link integrity:** no file links to a `pages.dev` URL or an `#anchor` that no longer exists.
+
+Baseline as of 2026-08-15: all text tokens pass in both themes (lowest is 5.7:1); structural
+rules were failing at 1.56:1 and were darkened to clear 3:1; no horizontal overflow at 375px or
+1200px in either theme.
