@@ -78,26 +78,93 @@ attribution is the thing that makes a practitioner stop trusting the page.
 
 ## 5. Visual system — every file gets one diagram
 
-Reference implementation with worked examples:
+Reference implementation, six patterns with worked examples:
 https://claude.ai/code/artifact/47003a7e-6993-4d77-97ac-df83943952ad
 
-Three formats. Pick the one that fits the decision; don't invent a fourth.
+### The six patterns
 
-- **Decision timeline** — where time was spent vs. where the call was made. Use when the gap between those is the story.
-- **Elimination map** — the shortlist and where each option died. Use when disqualifiers carry the finding.
-- **Stated vs. actual** — scorecard weight against what actually decided it. **The default.** Use unless another fits better.
+| # | Pattern | Use when |
+|---|---|---|
+| 1 | **Decision timeline** (vertical) | The calendar tells the story — long evaluation, short decision |
+| 2 | **Elimination map** | There was a shortlist and candidates died at identifiable points |
+| 3 | **Stated vs. actual** | **The default.** Any decision with a formal scorecard |
+| 4 | **Consolidation map** | Many tools → fewer. Platform consolidation, post-merger standardisation |
+| 5 | **Cost crossover** | Build vs. buy, in-house vs. outsourced — a modelled crossover point |
+| 6 | **What got skipped** | Forced or emergency decisions — breach, outage, deadline, vendor failure |
 
-Build rules:
+### Canonical decision types → pattern
+
+| Decision type | Pattern | Why |
+|---|---|---|
+| Replace an incumbent | Elimination map | The story is who died and why |
+| Renew vs. leave | Stated vs. actual | Switching cost usually beats the scorecard |
+| Competitive bake-off | Elimination + stated vs. actual | The pair is the full picture |
+| Consolidate onto a platform | Consolidation map | The survivors carry the finding |
+| Post-merger standardisation | Consolidation map | Two of everything, pick one |
+| Build vs. buy | Cost crossover | Rests on a crossover point |
+| In-house vs. outsource | Cost crossover | Same shape, staffing not engineering |
+| New requirement (remote, hybrid, AI) | Decision timeline | When the requirement appeared vs. when anyone acted |
+| Emergency / forced move | What got skipped | Time pressure makes omissions the story |
+| Retiring or killing something | Decision timeline | The trigger to stop is the rare part |
+| Expanding an existing vendor | Stated vs. actual | Usually decided on inertia nobody scored |
+
+Timeline is **vertical, top-down** — it holds fifteen rows as easily as five and fits a page.
+
+### Build rules
+
 - Inline SVG or HTML/CSS. No chart libraries, no external requests.
-- Must work in light and dark. Define colors as tokens on `:root`; redefine under both
-  `@media (prefers-color-scheme: dark)` (guarded `:root:not([data-theme="light"])`) and
-  `:root[data-theme="dark"]`.
-- Wrap in `overflow-x: auto`. Never let the page body scroll sideways.
-- Real `role="img"` and `aria-label` describing the finding, not the shape.
-- Any illustrative or composite data must be labelled as such, on the diagram.
+- **Contrast is non-negotiable.** WCAG AA (4.5:1) for all text including captions, axis labels
+  and SVG fills. No pale greys on light grounds, no dim greys on dark. See CLAUDE.md house rules.
+- **Every figure states its source**, on the figure: whose data, where it came from, and whether
+  it's real or illustrative.
+- **No undefined symbols.** A dash or blank cell is a defect — write "not scored". Vague phrases
+  like "never came up again" are defects — write "scored once, never discussed after round one".
+- Light and dark. Tokens on `:root`; redefined under `@media (prefers-color-scheme: dark)`
+  guarded as `:root:not([data-theme="light"])`, and again under `:root[data-theme="dark"]`.
+- Wrap in `overflow-x: auto`. The page body never scrolls sideways.
+- `role="img"` and an `aria-label` describing the **finding**, not the shape.
 
 **Not a mind map.** Mind maps show relationships without direction or time. A decision has
 both — it happened in an order, and one thing caused the outcome.
+
+## 5b. Conversation lens — prompt guidance
+
+For the UpSight lens that generates a draft file from an interview transcript. It must pick the
+pattern, then extract only the fields that pattern needs.
+
+**Step 1 — classify the decision.** From the transcript, identify which canonical type it is
+(table above). If two apply, prefer the one matching what the subject spent the most time
+describing. If none apply, default to *stated vs. actual*.
+
+**Step 2 — check the pattern is supported by the transcript.** Each needs specific evidence.
+If it isn't there, say so and fall back — do not invent it.
+
+| Pattern | Requires from the transcript |
+|---|---|
+| Decision timeline | At least 3 dated or sequenced events, and an identifiable tipping point |
+| Elimination map | ≥2 named or describable candidates and a stated reason each was cut |
+| Stated vs. actual | An explicit list of criteria (formal or informal) **and** what actually decided it |
+| Consolidation map | A before count and an after count, plus what survived and why |
+| Cost crossover | Two cost paths over time and a stated crossover assumption |
+| What got skipped | A normal process the subject can describe, and named steps that were cut |
+
+**Step 3 — extract, don't infer.** Every cell in a diagram traces to something the subject
+actually said. Where a value is reconstructed rather than quoted, mark it. Where it's unknown,
+write "not established in the interview" — never fill a gap with a plausible number.
+
+**Step 4 — write the source line.** Whose data, how it was obtained, real or illustrative.
+
+**Questions to add to the interview guide so the lens has what it needs:**
+- *"Did you have a scorecard or a written list of criteria? Who built it, and when — before or after you started talking to vendors?"* → feeds pattern 3
+- *"Which of those criteria actually separated the finalists?"* → the right-hand column
+- *"What ended up mattering that wasn't on the list at all?"* → the finding
+- *"Walk me through who was on the shortlist and where each one dropped out."* → pattern 2
+- *"Roughly when did each stage happen?"* → pattern 1
+- *"What was in your normal process that you didn't get to do this time?"* → pattern 6
+
+**The prompt's closing instruction:** *state the finding the diagram is meant to carry in one
+sentence before drawing it. If you cannot state it, the diagram has nothing to show — return no
+diagram rather than a decorative one.*
 
 ## 6. Design direction
 

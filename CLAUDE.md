@@ -60,6 +60,16 @@ Folders are numbered so they read top-to-bottom as a flow: **how we run → what
 
 ## House rules
 
+- **No low-contrast text. Ever.** Body text, captions, table headers, axis labels, SVG fills —
+  all of it must be readable. Do not use pale greys on light grounds or dim greys on dark ones.
+  Minimum: body and caption text at WCAG AA (4.5:1); large text and non-essential rules at 3:1.
+  "Muted secondary text" is not a style, it is a bug. This applies to every artifact, deck,
+  diagram, and web page produced from this repo.
+- **Every chart and diagram states its source.** Whose data is this, where did it come from, and
+  is it real or illustrative — on the figure itself, not just in surrounding prose. Undefined
+  symbols ("—", blank cells) and vague labels ("never came up again") are defects: say what the
+  cell means in plain words.
+
 - **Append-only:** `status.md`, `decisions.md`, `open-questions.md`, `dogfooding-log.md`. Newest at top.
 - **No new top-level folders** without an entry in `decisions.md` explaining why.
 - **Numbered prefixes encode the flow** (00→99). Don't renumber without a decision entry.

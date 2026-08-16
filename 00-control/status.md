@@ -5,6 +5,33 @@
 
 ---
 
+## 2026-08-15 (visuals v2)
+
+**Shipped**
+- Visual system v2 — six patterns, worked examples, mapped to canonical decision types:
+  https://claude.ai/code/artifact/47003a7e-6993-4d77-97ac-df83943952ad
+- Build spec §5 rewritten with the pattern library, and new §5b: conversation-lens prompt
+  guidance — classify the decision, check the transcript supports the pattern, extract rather
+  than infer, plus six interview questions that feed the diagrams.
+- **CLAUDE.md house rules: no low-contrast text, and every figure states its source.**
+
+**Fixed (Rick's callouts)**
+- **Low-contrast text — second offence.** Now a standing rule in CLAUDE.md, not a one-off fix.
+- Timeline is now **vertical top-down** — holds 15 rows as easily as 5 and fits a page.
+- "Stated vs. actual" was obtuse because of my sloppiness, all three fair hits: it never said
+  *whose* scorecard (theirs, built before vendor calls — now stated on the figure), "—" was
+  undefined (now "not scored"), and "never came up again" was vague (now "all four cleared it,
+  never discussed after the first round"). Rebuilt on a full realistic SIEM-replacement example.
+  It holds up better with real content — 65% of the weight separated nobody.
+
+**Surfaced**
+- Three new patterns beyond the original three: **consolidation map** (platform consolidation,
+  post-merger standardisation), **cost crossover** (build vs. buy, in-house vs. outsource), and
+  **what got skipped** (emergency/forced decisions — under time pressure the omissions are the
+  story).
+- Eleven canonical decision types now mapped to patterns, so pattern choice is a lookup rather
+  than a judgment call each time.
+
 ## 2026-08-15 (visuals + build spec)
 
 **Shipped**
