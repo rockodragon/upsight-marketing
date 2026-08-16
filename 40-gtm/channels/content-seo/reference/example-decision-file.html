@@ -1,0 +1,271 @@
+<title>Which AI Tools We Standardised On</title>
+<style>
+  :root{
+    --ground:#FAFAFB; --panel:#FFFFFF; --ink:#0E1116; --ink-2:#333B45; --ink-3:#4C5762;
+    --rule:#8C949E; --rule-2:#DDE3E9;
+    --accent:#12557F; --accent-soft:#DDEAF3;
+    --tip:#7A5200; --tip-soft:#F7EBCE;
+    --dead:#8A3232; --dead-soft:#F6E3E3;
+    --flat:#5A6570; --flat-soft:#EAEDF0;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --serif:ui-serif,Georgia,"Iowan Old Style","Times New Roman",serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#11151A; --panel:#191E25; --ink:#F3F6F9; --ink-2:#C8D2DC; --ink-3:#AAB6C1;
+      --rule:#66717D; --rule-2:#2C333C;
+      --accent:#7FBCE4; --accent-soft:#1A2E3C;
+      --tip:#F0C264; --tip-soft:#332913;
+      --dead:#E89898; --dead-soft:#3A2222;
+      --flat:#9AA5B1; --flat-soft:#252B33;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#11151A; --panel:#191E25; --ink:#F3F6F9; --ink-2:#C8D2DC; --ink-3:#AAB6C1;
+    --rule:#66717D; --rule-2:#2C333C;
+    --accent:#7FBCE4; --accent-soft:#1A2E3C;
+    --tip:#F0C264; --tip-soft:#332913;
+    --dead:#E89898; --dead-soft:#3A2222;
+    --flat:#9AA5B1; --flat-soft:#252B33;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--ground); color:var(--ink); font-family:var(--sans); font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px; margin:0 auto; padding:44px 24px 96px}
+  .masthead{display:flex; justify-content:space-between; align-items:baseline; gap:16px; border-bottom:2px solid var(--rule); padding-bottom:14px; margin-bottom:40px; flex-wrap:wrap}
+  .brand{font-family:var(--mono); font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink)}
+  .meta{font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; color:var(--ink-3)}
+  h1{margin:0 0 14px; font-family:var(--serif); font-size:clamp(30px,5vw,42px); line-height:1.14; letter-spacing:-.015em; text-wrap:balance; font-weight:600}
+  .standfirst{margin:0 0 8px; font-size:19px; color:var(--ink-2); max-width:60ch}
+  .byline{font-family:var(--mono); font-size:12px; color:var(--ink-3); letter-spacing:.05em; margin:22px 0 36px}
+
+  /* 30-second brief */
+  .brief{border:2px solid var(--rule); border-radius:6px; padding:22px 22px 18px; margin:0 0 40px; background:var(--panel)}
+  .brief h2{margin:0 0 16px; font-family:var(--mono); font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3); font-weight:400}
+  .brief dl{margin:0; display:grid; grid-template-columns:150px 1fr; gap:11px 18px}
+  .brief dt{font-family:var(--mono); font-size:11px; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-3); padding-top:3px}
+  .brief dd{margin:0; color:var(--ink); font-size:16px}
+  .brief dd b{font-weight:660}
+
+  h2.sec{margin:44px 0 14px; font-size:22px; letter-spacing:-.01em; font-weight:660; font-family:var(--sans)}
+  p{margin:0 0 18px; max-width:62ch}
+  blockquote{margin:26px 0; padding:0 0 0 18px; border-left:3px solid var(--accent); font-family:var(--serif); font-size:21px; line-height:1.45; color:var(--ink)}
+  blockquote cite{display:block; margin-top:10px; font-family:var(--mono); font-size:11.5px; font-style:normal; letter-spacing:.05em; color:var(--ink-3)}
+  .principle{background:var(--accent-soft); border-radius:6px; padding:22px 24px; margin:32px 0}
+  .principle .lab{font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:8px}
+  .principle p{margin:0; font-family:var(--serif); font-size:22px; line-height:1.38; color:var(--ink); max-width:none}
+
+  /* widget frame */
+  figure{margin:34px 0; background:var(--panel); border:1px solid var(--rule); border-radius:6px; padding:22px 20px 18px; overflow-x:auto}
+  figure .wname{font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin:0 0 4px}
+  figure .wtitle{font-size:16px; font-weight:660; color:var(--ink); margin:0 0 4px}
+  figure .wsrc{font-size:13px; color:var(--ink-2); margin:0 0 16px; max-width:70ch}
+  figcaption{margin-top:14px; padding-top:12px; border-top:1px solid var(--rule-2); font-size:14.5px; color:var(--ink)}
+  figcaption b{font-weight:660}
+
+  table{border-collapse:collapse; width:100%; font-size:14.5px; min-width:560px}
+  th{font-family:var(--mono); font-size:10.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-2); text-align:left; font-weight:400; padding:0 12px 9px 0; border-bottom:2px solid var(--rule)}
+  td{padding:12px 12px 12px 0; border-bottom:1px solid var(--rule-2); vertical-align:middle; color:var(--ink-2)}
+  td.k{color:var(--ink); font-weight:580}
+  td.w{font-variant-numeric:tabular-nums; color:var(--ink); white-space:nowrap}
+  td.i{width:32px; padding-right:8px}
+  .ic{width:24px; height:24px; border-radius:50%; display:grid; place-items:center}
+  .ic svg{width:14px; height:14px}
+  .ic.pass{background:var(--flat-soft)} .ic.pass svg{stroke:var(--flat); fill:none; stroke-width:3.2; stroke-linecap:round; stroke-linejoin:round}
+  .ic.out{background:var(--dead-soft)} .ic.out svg{stroke:var(--dead); fill:none; stroke-width:3.6; stroke-linecap:round; width:11px}
+  .ic.dec{background:var(--tip-soft)} .ic.dec svg{fill:var(--tip); stroke:none}
+  .ic.win{background:var(--accent-soft)} .ic.win svg{stroke:var(--accent); fill:none; stroke-width:3.2; stroke-linecap:round; stroke-linejoin:round}
+  .ev{font-family:var(--mono); font-size:10.5px; color:var(--accent); text-decoration:none; border-bottom:1px dotted var(--accent); white-space:nowrap; margin-left:6px}
+  .ev:hover{background:var(--accent-soft)}
+
+  .unknowns{border:1px dashed var(--rule); border-radius:6px; padding:18px 20px; margin:30px 0; background:transparent}
+  .unknowns h3{margin:0 0 8px; font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); font-weight:400}
+  .unknowns p{margin:0; font-size:15px; color:var(--ink-2)}
+  .counter{border-top:2px solid var(--rule); margin-top:44px; padding-top:24px}
+  .method{margin-top:40px; padding-top:18px; border-top:1px solid var(--rule-2); font-size:13.5px; color:var(--ink-2)}
+  .method b{color:var(--ink)}
+  .illus{font-family:var(--mono); font-size:10.5px; color:var(--ink-3); letter-spacing:.05em}
+  .gate{margin-top:44px; border:1px solid var(--rule); border-radius:6px; padding:20px 22px; background:var(--panel)}
+  .gate p{margin:0 0 12px; font-size:15px; color:var(--ink-2); max-width:none}
+  .gate form{display:flex; gap:8px; flex-wrap:wrap}
+  .gate input{flex:1; min-width:200px; padding:10px 12px; font-size:15px; font-family:var(--sans); border:1px solid var(--rule); border-radius:4px; background:var(--ground); color:var(--ink)}
+  .gate button{padding:10px 18px; font-size:15px; font-weight:600; font-family:var(--sans); border:none; border-radius:4px; background:var(--accent); color:var(--panel); cursor:pointer}
+</style>
+
+<div class="wrap">
+
+<div class="masthead">
+  <span class="brand">The Decision Files</span>
+  <span class="meta">File 001 · 14 Aug 2026 · 8 min read</span>
+</div>
+
+<h1>How a 60-engineer team picked one AI coding tool — and what the pilot didn't tell them</h1>
+<p class="standfirst">They ran a structured six-week evaluation across four tools. The thing that decided it never appeared on the scorecard, and the thing they scored highest turned out not to matter at all.</p>
+<p class="byline">Interview conducted 6 Aug 2026 · Subject: VP Engineering, 60 engineers, Series B fintech · <span class="illus">Illustrative example — not a real interview</span></p>
+
+<div class="brief">
+  <h2>The 30-second version</h2>
+  <dl>
+    <dt>Who</dt><dd>VP Engineering at a 60-person Series B fintech</dd>
+    <dt>The decision</dt><dd>Which AI coding tool to standardise on, after 18 months of everyone using whatever they liked</dd>
+    <dt>What was at stake</dt><dd><b>$180K/year</b> in licences, plus the credibility of saying no to four teams</dd>
+    <dt>What they chose</dt><dd>One tool company-wide, with a documented exception process</dd>
+    <dt>What happened</dt><dd>Adoption held at <b>78% after five months</b>. Two teams still run something else, officially.</dd>
+    <dt>The lesson</dt><dd>Benchmarks separated nobody. Whether it worked on their oldest codebase separated everybody.</dd>
+  </dl>
+</div>
+
+<h2 class="sec">The situation</h2>
+
+<blockquote>
+  We weren't trying to save money. We were trying to stop having the same argument in every architecture review.
+  <cite>VP Engineering</cite>
+</blockquote>
+
+<p>By early 2026 the team was running four AI coding tools at once. Nobody had chosen them — they'd arrived one team at a time, mostly on individual credit cards, and finance had started asking questions about the aggregate.</p>
+
+<p>The trigger wasn't cost. It was a security review that surfaced three tools with different data-handling terms, one of which nobody could produce a signed agreement for.</p>
+
+<figure>
+  <p class="wname">DecisionTimeline</p>
+  <p class="wtitle">Six weeks of evaluation, one afternoon of decision</p>
+  <p class="wsrc">Built from the team's own Jira epic and calendar. <span class="illus">Illustrative.</span></p>
+  <svg viewBox="0 0 660 340" width="660" height="340" role="img" aria-label="Six weeks of structured evaluation, then the decision turns in week seven on a legacy codebase test that was never part of the plan.">
+    <line x1="104" y1="22" x2="104" y2="316" stroke="var(--rule)" stroke-width="2"/>
+    <g>
+      <circle cx="104" cy="34" r="6" fill="var(--accent)"/>
+      <text x="88" y="39" style="font-family:var(--mono);font-size:11px;fill:var(--ink-3)" text-anchor="end">WEEK 0</text>
+      <text x="130" y="31" style="font-size:14.5px;font-weight:660;fill:var(--ink)">Security review flags three tools</text>
+      <text x="130" y="51" style="font-size:13px;fill:var(--ink-2)">One had no signed agreement at all</text>
+    </g>
+    <rect x="98" y="70" width="12" height="106" fill="var(--accent-soft)"/>
+    <g>
+      <text x="88" y="96" style="font-family:var(--mono);font-size:11px;fill:var(--ink-3)" text-anchor="end">WEEKS 1–6</text>
+      <text x="130" y="90" style="font-size:14.5px;font-weight:660;fill:var(--ink)">Structured pilot, four tools</text>
+      <text x="130" y="110" style="font-size:13px;fill:var(--ink-2)">12 engineers, 2 teams, weighted scorecard agreed up front</text>
+      <text x="130" y="130" style="font-size:13px;fill:var(--ink-2)">Benchmarks run, costs modelled, demos with every vendor</text>
+    </g>
+    <g>
+      <circle cx="104" cy="208" r="9" fill="var(--tip)"/>
+      <rect x="130" y="188" width="500" height="70" rx="4" fill="var(--tip-soft)"/>
+      <text x="88" y="213" style="font-family:var(--mono);font-size:11px;fill:var(--tip)" text-anchor="end">WEEK 7</text>
+      <text x="146" y="210" style="font-size:14.5px;font-weight:660;fill:var(--tip)">Someone tried it on the 2014 payments service</text>
+      <text x="146" y="232" style="font-size:13.5px;fill:var(--ink)">Two of the four fell over. That ended the discussion.</text>
+      <text x="146" y="250" style="font-size:13px;fill:var(--ink-2)">Not in the pilot plan. One engineer did it on a Friday.</text>
+    </g>
+    <g>
+      <circle cx="104" cy="296" r="6" fill="var(--accent)"/>
+      <text x="88" y="301" style="font-family:var(--mono);font-size:11px;fill:var(--ink-3)" text-anchor="end">WEEK 9</text>
+      <text x="130" y="293" style="font-size:14.5px;font-weight:660;fill:var(--ink)">Rolled out company-wide</text>
+      <text x="130" y="313" style="font-size:13px;fill:var(--ink-2)">78% still on it five months later</text>
+    </g>
+  </svg>
+  <figcaption><b>The point:</b> six weeks of structured evaluation, and the call turned on a test one engineer ran on a Friday because he was curious.</figcaption>
+</figure>
+
+<h2 class="sec">How they decided</h2>
+
+<p>The scorecard was written before any vendor call — five criteria, weighted, agreed by the VP Engineering, two staff engineers and the security lead. It is a better process than most teams run. It still didn't predict the outcome.</p>
+
+<figure>
+  <p class="wname">StatedVsActual</p>
+  <p class="wtitle">Their scorecard, and what each line actually did</p>
+  <p class="wsrc"><b>Where the list came from:</b> written and weighted by the engineering team before any vendor call — not supplied by a vendor. <b>Right column</b> from the interview. Every cell links to the moment in the transcript. <span class="illus">Illustrative.</span></p>
+  <table>
+    <thead><tr><th style="width:32px"></th><th>What we said we'd judge on</th><th>Weight</th><th>What actually happened</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="i"><span class="ic pass"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+        <td class="k">Benchmark scores</td><td class="w">30%</td>
+        <td>All four were close enough that nobody could tell them apart in daily use <a class="ev" href="#" title="Opens the quote">ev_1042</a></td>
+      </tr>
+      <tr>
+        <td class="i"><span class="ic pass"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+        <td class="k">Works with our editors</td><td class="w">20%</td>
+        <td>All four did. Stopped being discussed after week two. <a class="ev" href="#">ev_1058</a></td>
+      </tr>
+      <tr>
+        <td class="i"><span class="ic out"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span></td>
+        <td class="k">Cost per seat</td><td class="w">25%</td>
+        <td>Knocked out one. The other three were within 15% of each other. <a class="ev" href="#">ev_1071</a></td>
+      </tr>
+      <tr>
+        <td class="i"><span class="ic out"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span></td>
+        <td class="k">Data handling terms</td><td class="w">15%</td>
+        <td>Knocked out the tool with no signed agreement. That was the whole point of starting. <a class="ev" href="#">ev_1090</a></td>
+      </tr>
+      <tr>
+        <td class="i"><span class="ic pass"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+        <td class="k">Vendor stability</td><td class="w">10%</td>
+        <td>Everyone worried about it. Nobody could measure it. Never decided anything. <a class="ev" href="#">ev_1103</a></td>
+      </tr>
+      <tr>
+        <td class="i"><span class="ic dec"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"/></svg></span></td>
+        <td class="k">Handles our oldest code</td><td class="w">not on the list</td>
+        <td><b style="color:var(--ink)">This decided it.</b> Two of four choked on the 2014 payments service. <a class="ev" href="#">ev_1117</a></td>
+      </tr>
+      <tr>
+        <td class="i"><span class="ic out"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span></td>
+        <td class="k">Whether people kept using it</td><td class="w">not on the list</td>
+        <td>Two teams quietly reverted within a month. We found out from the billing. <a class="ev" href="#">ev_1131</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <figcaption><b>The point:</b> 60% of the scorecard weight separated nobody. The two things that actually decided the outcome — and later undermined it — weren't on the sheet.</figcaption>
+</figure>
+
+<h2 class="sec">What they'd do differently</h2>
+
+<blockquote>
+  I'd give one engineer a day and our three ugliest repos before I'd run another six-week pilot. We'd have got to the same answer in week one.
+  <cite>VP Engineering</cite>
+</blockquote>
+
+<p>The pilot ran on active, well-maintained services — which is where engineers naturally reach for a new tool, and exactly where every option performs well. The differentiating test was the one nobody scheduled.</p>
+
+<figure>
+  <p class="wname">CostByProblem</p>
+  <p class="wtitle">What the extra money actually bought</p>
+  <p class="wsrc">Annual cost at 60 seats, from the team's own procurement sheet, split by problem during the interview. <span class="illus">Illustrative.</span></p>
+  <table>
+    <thead><tr><th>What we're paying for</th><th style="text-align:right">Cheapest option</th><th style="text-align:right">What we chose</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Seats, 60 engineers</td><td class="w" style="text-align:right">$108,000</td><td class="w" style="text-align:right">$126,000</td></tr>
+      <tr><td class="k">Working on legacy code</td><td class="w" style="text-align:right">didn't</td><td class="w" style="text-align:right">included</td></tr>
+      <tr><td class="k">Self-hosted data handling</td><td class="w" style="text-align:right">+$0</td><td class="w" style="text-align:right">+$42,000</td></tr>
+      <tr><td class="k">Admin and usage reporting</td><td class="w" style="text-align:right">+$0</td><td class="w" style="text-align:right">+$12,000</td></tr>
+      <tr style="border-top:2px solid var(--rule)"><td class="k" style="padding-top:14px">Total per year</td><td class="w" style="text-align:right;padding-top:14px"><b>$108,000</b></td><td class="w" style="text-align:right;padding-top:14px"><b>$180,000</b></td></tr>
+    </tbody>
+  </table>
+  <figcaption><b>The point:</b> they paid $72,000 more. $42,000 of it was the data-handling requirement that started the whole review — so in effect the security team's finding set the budget, not the engineering evaluation.</figcaption>
+</figure>
+
+<div class="unknowns">
+  <h3>What this one case can't tell you</h3>
+  <p>One company, one codebase, one team's tolerance for being told what to use. We don't know whether the legacy-code test generalises, whether 78% adoption is good or bad against peers, or what the two holdout teams would say — we didn't interview them.</p>
+</div>
+
+<div class="principle">
+  <span class="lab">Decision principle</span>
+  <p>Pilot on your worst code, not your best. Every tool works on the code you'd be happy to show someone.</p>
+</div>
+
+<div class="counter">
+  <h2 class="sec" style="margin-top:0">Analyst counterpoint</h2>
+  <p>The obvious reading — that the scorecard was a waste — is too neat. The scorecard eliminated two of four options on cost and data terms, which is most of the work. What it failed at was separating the finalists, and that's a narrower and more common failure: weighted criteria are good at exclusion and bad at selection.</p>
+  <p>The stronger criticism is of the pilot design, not the scorecard. Six weeks on healthy services tested the wrong thing for six weeks. That was a planning miss, and it's the part most teams would repeat.</p>
+</div>
+
+<div class="method">
+  <b>Method.</b> One 15-minute interview conducted 6 Aug 2026, by voice, through UpSight. The subject reviewed and approved every quote before publication and chose role-only attribution. Figures were reconstructed from documents the subject shared during the call; each cell links to the moment in the transcript it came from. No vendor was contacted, saw this file before publication, or had any input on subject selection, questions, or findings. The Decision Files is published by UpSight. <span class="illus">This example uses illustrative data — it is not a real interview.</span>
+</div>
+
+<div class="gate">
+  <p><b>The Q4 report</b> — 30 of these interviews, one document, published December. We'll email you when a new file goes up, roughly twice a month. Nothing else.</p>
+  <form onsubmit="return false">
+    <input type="email" placeholder="you@company.com" aria-label="Email address">
+    <button type="submit">Send me the report</button>
+  </form>
+</div>
+
+</div>

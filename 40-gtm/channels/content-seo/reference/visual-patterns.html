@@ -1,0 +1,480 @@
+<title>Decision File Visual Patterns</title>
+<style>
+  :root{
+    --ground:#FAFAFB; --panel:#FFFFFF; --ink:#0E1116; --ink-2:#333B45; --ink-3:#4C5762;
+    --rule:#8C949E; --rule-2:#DDE3E9;
+    --accent:#12557F; --accent-soft:#DDEAF3;
+    --tip:#7A5200; --tip-soft:#F7EBCE;
+    --dead:#8A3232; --dead-soft:#F6E3E3;
+    --flat:#5A6570; --flat-soft:#EAEDF0;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#11151A; --panel:#191E25; --ink:#F3F6F9; --ink-2:#C8D2DC; --ink-3:#AAB6C1;
+      --rule:#66717D; --rule-2:#2C333C;
+      --accent:#7FBCE4; --accent-soft:#1A2E3C;
+      --tip:#F0C264; --tip-soft:#332913;
+      --dead:#E89898; --dead-soft:#3A2222;
+      --flat:#9AA5B1; --flat-soft:#252B33;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#11151A; --panel:#191E25; --ink:#F3F6F9; --ink-2:#C8D2DC; --ink-3:#AAB6C1;
+    --rule:#66717D; --rule-2:#2C333C;
+    --accent:#7FBCE4; --accent-soft:#1A2E3C;
+    --tip:#F0C264; --tip-soft:#332913;
+    --dead:#E89898; --dead-soft:#3A2222;
+    --flat:#9AA5B1; --flat-soft:#252B33;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--ground); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px; margin:0 auto; padding:56px 24px 96px; display:flex; flex-direction:column; gap:52px}
+  header{display:flex; flex-direction:column; gap:14px; border-bottom:2px solid var(--rule); padding-bottom:26px}
+  .eyebrow{font-family:var(--mono); font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3)}
+  h1{margin:0; font-size:clamp(28px,4.2vw,40px); line-height:1.12; letter-spacing:-.02em; text-wrap:balance; font-weight:660}
+  .lede{margin:0; max-width:64ch; color:var(--ink-2); font-size:17px}
+  section{display:flex; flex-direction:column; gap:16px}
+  h2{margin:0; font-size:21px; letter-spacing:-.01em; font-weight:660; display:flex; align-items:baseline; gap:10px}
+  h2 .n{font-family:var(--mono); font-size:12px; color:var(--accent); letter-spacing:.08em}
+  .use{font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); margin:0}
+  .note{margin:0; max-width:68ch; color:var(--ink-2); font-size:15px}
+  .panel{background:var(--panel); border:1px solid var(--rule); border-radius:6px; padding:24px 22px; overflow-x:auto}
+  .cap{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3); margin:0 0 6px}
+  .src{font-size:13.5px; color:var(--ink-2); margin:0 0 18px; max-width:74ch}
+  .verdict{border-left:3px solid var(--accent); padding:4px 0 4px 14px; color:var(--ink); font-size:15px; max-width:70ch}
+  .verdict b{font-weight:660}
+  svg{display:block}
+  .sw{font-family:var(--mono); font-size:11.5px; fill:var(--ink-3); letter-spacing:.05em}
+  .lbl{font-family:var(--sans); font-size:13.5px; fill:var(--ink)}
+  .lbl-2{font-family:var(--sans); font-size:13px; fill:var(--ink-2)}
+  .big{font-family:var(--sans); font-size:14.5px; fill:var(--ink); font-weight:660}
+
+  /* legend */
+  .legend{display:flex; flex-wrap:wrap; gap:10px; background:var(--panel); border:1px solid var(--rule); border-radius:6px; padding:16px 18px}
+  .leg{display:flex; align-items:center; gap:9px; font-size:13.5px; color:var(--ink); padding-right:18px}
+  .ic{width:22px; height:22px; border-radius:50%; display:grid; place-items:center; flex:none}
+  .ic svg{width:13px; height:13px}
+  .ic.pass{background:var(--flat-soft)} .ic.pass svg{stroke:var(--flat)}
+  .ic.out{background:var(--dead-soft)} .ic.out svg{stroke:var(--dead)}
+  .ic.dec{background:var(--tip-soft)} .ic.dec svg{fill:var(--tip); stroke:none}
+  .ic.win{background:var(--accent-soft)} .ic.win svg{stroke:var(--accent)}
+
+  table{border-collapse:collapse; width:100%; font-size:14.5px; min-width:640px}
+  th{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-2); text-align:left; font-weight:400; padding:0 14px 10px 0; border-bottom:2px solid var(--rule)}
+  td{padding:13px 14px 13px 0; border-bottom:1px solid var(--rule-2); vertical-align:middle; color:var(--ink-2)}
+  td.k{color:var(--ink); font-weight:580}
+  td.w{font-variant-numeric:tabular-nums; color:var(--ink); white-space:nowrap}
+  td.i{width:34px; padding-right:10px}
+  .rowline{display:flex; align-items:center; gap:10px}
+  .said{color:var(--ink); font-weight:560}
+
+  .matrix{min-width:700px}
+  .matrix th.v{text-align:center; color:var(--ink)}
+  .matrix td.c{text-align:center; width:13%}
+  .matrix tr.hot td{background:var(--tip-soft)}
+  .matrix tr.hot td.k{color:var(--ink)}
+  /* four-state cell marks — positives are deliberately larger than negatives */
+  .m{display:inline-grid; place-items:center}
+  .m-full{width:26px; height:26px} .m-full svg{width:22px; height:22px; stroke:var(--accent); fill:none; stroke-width:3.2; stroke-linecap:round; stroke-linejoin:round}
+  .m-part{width:26px; height:26px} .m-part svg{width:19px; height:19px}
+  .m-paid{width:26px; height:26px} .m-paid svg{width:20px; height:20px}
+  .m-none{width:26px; height:26px} .m-none svg{width:11px; height:11px; stroke:var(--dead); stroke-width:3.6; stroke-linecap:round; fill:none}
+  .m-key{width:26px; height:26px} .m-key svg{width:22px; height:22px; fill:var(--tip)}
+  .scorerow td{border-top:2px solid var(--rule); border-bottom:none; padding-top:14px}
+  .score{display:flex; flex-direction:column; align-items:center; gap:5px}
+  .score b{font-size:16px; color:var(--ink); font-variant-numeric:tabular-nums}
+  .bar{width:56px; height:6px; border-radius:3px; background:var(--rule-2); overflow:hidden}
+  .bar i{display:block; height:100%; background:var(--accent)}
+  .money td{font-variant-numeric:tabular-nums}
+  .money td.n{text-align:right; width:15%; color:var(--ink); white-space:nowrap}
+  .money tr.total td{border-top:2px solid var(--rule); font-weight:660; color:var(--ink); padding-top:14px}
+  .money tr.hot td{background:var(--tip-soft)}
+  .delta{color:var(--tip); font-weight:660}
+  footer{border-top:2px solid var(--rule); padding-top:24px; color:var(--ink-2); font-size:14px; max-width:70ch}
+  .illus{font-family:var(--mono); font-size:11px; color:var(--ink-3); letter-spacing:.05em}
+</style>
+
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">The Decision Files · visual system v4</div>
+  <h1>Decision file visual patterns</h1>
+  <p class="lede">One diagram per file. It should be readable in ten seconds, in plain language, before anyone reads the write-up. Eight patterns, matched to the kinds of decisions people actually make. Examples use illustrative data.</p>
+</header>
+
+<div class="legend" role="img" aria-label="Legend: grey tick means everyone passed and it decided nothing; red minus means it knocked someone out; amber star means it decided the outcome; blue tick means chosen.">
+  <div class="leg"><span class="ic pass"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span> Everyone passed — decided nothing</div>
+  <div class="leg"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span> Knocked someone out</div>
+  <div class="leg"><span class="ic dec"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"/></svg></span> This decided it</div>
+  <div class="leg"><span class="ic win"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span> Chosen</div>
+</div>
+
+<section>
+  <h2><span class="n">01</span> Decision timeline</h2>
+  <p class="use">Use for: decisions where the calendar tells the story</p>
+  <p class="note">Vertical, so it holds fifteen rows as easily as five. Shows where the months went, and where the call actually got made.</p>
+
+  <div class="panel">
+    <p class="cap">Replacing a SIEM · 14 months</p>
+    <p class="src">Built from the buyer's own calendar and purchase records. <span class="illus">Illustrative.</span></p>
+    <svg viewBox="0 0 700 420" width="700" height="420" role="img" aria-label="Nine months of evaluation, then one meeting in month ten decides it on a question nobody had written down.">
+      <line x1="118" y1="26" x2="118" y2="392" stroke="var(--rule)" stroke-width="2"/>
+      <g>
+        <circle cx="118" cy="40" r="6" fill="var(--accent)"/>
+        <text x="98" y="45" class="sw" text-anchor="end">MONTH 0</text>
+        <text x="146" y="37" class="big">Renewal quote arrives — 28% higher</text>
+        <text x="146" y="57" class="lbl-2">That's what started the search</text>
+      </g>
+      <rect x="112" y="76" width="12" height="118" fill="var(--accent-soft)"/>
+      <g>
+        <text x="98" y="104" class="sw" text-anchor="end">MONTHS 1–9</text>
+        <text x="146" y="98" class="big">Nine months looking at four vendors</text>
+        <text x="146" y="118" class="lbl-2">Two head-to-head trials. Around 60 hours of the team's time.</text>
+        <text x="146" y="138" class="lbl-2">Scorecard written, weights agreed, demos run.</text>
+      </g>
+      <g>
+        <circle cx="118" cy="228" r="9" fill="var(--tip)"/>
+        <rect x="146" y="206" width="510" height="78" rx="4" fill="var(--tip-soft)"/>
+        <text x="98" y="233" class="sw" text-anchor="end" style="fill:var(--tip)">MONTH 10</text>
+        <text x="162" y="230" class="big" style="fill:var(--tip)">One meeting, one question, decision made</text>
+        <text x="162" y="252" class="lbl">“Who picks up the phone at 3am when this breaks?”</text>
+        <text x="162" y="272" class="lbl-2">Asked by the deputy CISO. It wasn't on the scorecard.</text>
+      </g>
+      <rect x="112" y="300" width="12" height="48" fill="var(--rule-2)"/>
+      <g>
+        <text x="98" y="324" class="sw" text-anchor="end">MONTHS 11–13</text>
+        <text x="146" y="320" class="lbl">Paperwork and security review</text>
+        <text x="146" y="340" class="lbl-2">Nothing further was evaluated</text>
+      </g>
+      <g>
+        <circle cx="118" cy="378" r="6" fill="var(--accent)"/>
+        <text x="98" y="383" class="sw" text-anchor="end">MONTH 14</text>
+        <text x="146" y="375" class="big">Live — four months later than planned</text>
+        <text x="146" y="395" class="lbl-2">Moving the old detection rules took longer than anyone expected</text>
+      </g>
+    </svg>
+  </div>
+  <p class="verdict"><b>The point:</b> nine months of formal evaluation, and the winner was picked on a question nobody had written down.</p>
+</section>
+
+<section>
+  <h2><span class="n">02</span> Who dropped out, and why</h2>
+  <p class="use">Use for: any shortlist</p>
+  <p class="note">People rationalise what they bought. They remember exactly why they threw something out.</p>
+
+  <div class="panel">
+    <p class="cap">Same decision · four vendors</p>
+    <p class="src">Reasons are the buyer's own words from the interview. <span class="illus">Illustrative.</span></p>
+    <table>
+      <tbody>
+        <tr>
+          <td class="i"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span></td>
+          <td class="k" style="width:22%">Incumbent</td>
+          <td class="said" style="width:26%">Too expensive</td>
+          <td>Price went up 28% at our data volume, and the pricing model changed halfway through the renewal</td>
+        </tr>
+        <tr>
+          <td class="i"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span></td>
+          <td class="k">Vendor B</td>
+          <td class="said">Nobody used it</td>
+          <td>Our analysts stopped opening it two weeks into the trial</td>
+        </tr>
+        <tr>
+          <td class="i"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span></td>
+          <td class="k">Vendor C</td>
+          <td class="said">No real support</td>
+          <td>You only get a named engineer on the tier above what we could afford</td>
+        </tr>
+        <tr>
+          <td class="i"><span class="ic win"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          <td class="k">Vendor D</td>
+          <td class="said">Chosen</td>
+          <td>Weakest feature list of the three finalists. Best answer on who we call at 3am.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="verdict"><b>The point:</b> two of the four were thrown out for reasons nobody had scored — a price change and whether the team would actually use it.</p>
+</section>
+
+<section>
+  <h2><span class="n">03</span> What we said mattered vs. what actually mattered</h2>
+  <p class="use">Use for: the default — any decision with a scorecard</p>
+  <p class="note">Their scorecard on the left, what really happened on the right. The gap between the two is the whole story.</p>
+
+  <div class="panel">
+    <p class="cap">Their scorecard, and what each line actually did</p>
+    <p class="src"><b>Where the list came from:</b> the security team wrote and weighted it themselves, before they spoke to any vendor. Not a vendor's list. <b>Right-hand column:</b> what actually happened with each item, in their words. <span class="illus">Illustrative.</span></p>
+    <table>
+      <thead>
+        <tr><th style="width:34px"></th><th>What we said we'd judge on</th><th>Weight</th><th>What actually happened</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="i"><span class="ic pass"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          <td class="k">Threat detection coverage</td><td class="w">30%</td>
+          <td>All four had it. Never came up again after the first demo.</td>
+        </tr>
+        <tr>
+          <td class="i"><span class="ic pass"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          <td class="k">Works with our existing tools</td><td class="w">20%</td>
+          <td>All four had the twelve connections we needed.</td>
+        </tr>
+        <tr>
+          <td class="i"><span class="ic pass"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          <td class="k">Fast enough at our data volume</td><td class="w">15%</td>
+          <td>We tested it twice. All four were fast enough.</td>
+        </tr>
+        <tr>
+          <td class="i"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span></td>
+          <td class="k">Price</td><td class="w">25%</td>
+          <td>Threw out the incumbent. The other three cost about the same.</td>
+        </tr>
+        <tr>
+          <td class="i"><span class="ic dec"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"/></svg></span></td>
+          <td class="k">Support when something breaks</td><td class="w">10%</td>
+          <td><b style="color:var(--ink)">This is what we actually bought on.</b> We gave it the lowest weight on the sheet.</td>
+        </tr>
+        <tr>
+          <td class="i"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span></td>
+          <td class="k">Would the team actually use it</td><td class="w">not on the list</td>
+          <td>Threw out Vendor B. It never occurred to us to score this.</td>
+        </tr>
+        <tr>
+          <td class="i"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span></td>
+          <td class="k">Moving our old rules across</td><td class="w">not on the list</td>
+          <td>Cost us four extra months. We came close to reversing the whole thing.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="verdict"><b>The point:</b> 65% of the scorecard came down to things every vendor could do. They bought on a line worth 10%, and the two things that hurt most weren't on the sheet at all.</p>
+</section>
+
+<section>
+  <h2><span class="n">04</span> Feature matrix — with the truth on it</h2>
+  <p class="use">Use for: crowded categories where everyone looks the same on paper</p>
+  <p class="note">The familiar grid, with three changes. Four levels instead of yes/no, because most "yes" answers are really "yes, with a caveat." A score per vendor so you can see who has more without counting. And the row that actually decided it, highlighted.</p>
+
+  <div class="panel">
+    <p class="cap">What each vendor could do · scored during trials</p>
+    <p class="src"><b>Scoring:</b> full = 1 point, partial = ½, costs extra = ½, none = 0. Recorded by the buyer's team during hands-on trials, not from vendor datasheets. The highlighted row is the one they said made the call. <span class="illus">Illustrative.</span></p>
+    <div class="legend" style="margin:0 0 18px; padding:12px 14px">
+      <div class="leg"><span class="m m-full"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span> Yes — 1 pt</div>
+      <div class="leg"><span class="m m-part"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="var(--flat)" stroke-width="2.4"/><path d="M12 3a9 9 0 0 1 0 18z" fill="var(--flat)"/></svg></span> Partly — ½ pt</div>
+      <div class="leg"><span class="m m-paid"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="var(--tip)" stroke-width="2.2"/><text x="12" y="17" text-anchor="middle" font-size="13" font-weight="700" fill="var(--tip)" font-family="-apple-system,sans-serif">$</text></svg></span> Only if we pay more — ½ pt</div>
+      <div class="leg"><span class="m m-none"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span> No — 0</div>
+      <div class="leg"><span class="m m-key"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"/></svg></span> This decided it</div>
+    </div>
+    <table class="matrix">
+      <thead>
+        <tr><th style="width:32%">Can it do this?</th><th class="v">Incumbent</th><th class="v">Vendor B</th><th class="v">Vendor C</th><th class="v">Vendor D</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="k">Catches the threats we care about</td>
+          <td class="c"><span class="m m-full" title="Yes"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          <td class="c"><span class="m m-full" title="Yes"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          <td class="c"><span class="m m-full" title="Yes"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          <td class="c"><span class="m m-full" title="Yes"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+        </tr>
+        <tr>
+          <td class="k">Plugs into what we already run</td>
+          <td class="c"><span class="m m-full" title="Yes"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          <td class="c"><span class="m m-part" title="Partly — 9 of our 12 connections"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="var(--flat)" stroke-width="2.4"/><path d="M12 3a9 9 0 0 1 0 18z" fill="var(--flat)"/></svg></span></td>
+          <td class="c"><span class="m m-full" title="Yes"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          <td class="c"><span class="m m-full" title="Yes"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+        </tr>
+        <tr>
+          <td class="k">Fast enough at our data volume</td>
+          <td class="c"><span class="m m-full" title="Yes"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          <td class="c"><span class="m m-full" title="Yes"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          <td class="c"><span class="m m-part" title="Partly — slowed on 90-day searches"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="var(--flat)" stroke-width="2.4"/><path d="M12 3a9 9 0 0 1 0 18z" fill="var(--flat)"/></svg></span></td>
+          <td class="c"><span class="m m-full" title="Yes"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+        </tr>
+        <tr>
+          <td class="k">Affordable at our volume</td>
+          <td class="c"><span class="m m-none" title="No"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span></td>
+          <td class="c"><span class="m m-full" title="Yes"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          <td class="c"><span class="m m-full" title="Yes"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          <td class="c"><span class="m m-full" title="Yes"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+        </tr>
+        <tr>
+          <td class="k">Automates our response playbooks</td>
+          <td class="c"><span class="m m-part" title="Partly"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="var(--flat)" stroke-width="2.4"/><path d="M12 3a9 9 0 0 1 0 18z" fill="var(--flat)"/></svg></span></td>
+          <td class="c"><span class="m m-paid" title="Only on the tier above"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="var(--tip)" stroke-width="2.2"/><text x="12" y="17" text-anchor="middle" font-size="13" font-weight="700" fill="var(--tip)" font-family="-apple-system,sans-serif">$</text></svg></span></td>
+          <td class="c"><span class="m m-full" title="Yes"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          <td class="c"><span class="m m-paid" title="Only on the tier above"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="var(--tip)" stroke-width="2.2"/><text x="12" y="17" text-anchor="middle" font-size="13" font-weight="700" fill="var(--tip)" font-family="-apple-system,sans-serif">$</text></svg></span></td>
+        </tr>
+        <tr class="hot">
+          <td class="k">A named engineer we can call at 3am</td>
+          <td class="c"><span class="m m-full" title="Yes"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          <td class="c"><span class="m m-none" title="No"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span></td>
+          <td class="c"><span class="m m-paid" title="Only on the tier above our budget"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="var(--tip)" stroke-width="2.2"/><text x="12" y="17" text-anchor="middle" font-size="13" font-weight="700" fill="var(--tip)" font-family="-apple-system,sans-serif">$</text></svg></span></td>
+          <td class="c"><span class="m m-key" title="Yes — and this is what decided it"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"/></svg></span></td>
+        </tr>
+        <tr class="scorerow">
+          <td class="k">Score</td>
+          <td class="c"><div class="score"><b>4.5</b><span class="bar"><i style="width:75%"></i></span></div></td>
+          <td class="c"><div class="score"><b>4.0</b><span class="bar"><i style="width:67%"></i></span></div></td>
+          <td class="c"><div class="score"><b>5.0</b><span class="bar"><i style="width:83%"></i></span></div></td>
+          <td class="c"><div class="score"><b>5.5</b><span class="bar"><i style="width:92%"></i></span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="verdict"><b>The point:</b> the scores are within a point and a half of each other — which is the usual result, and why feature grids rarely decide anything. One row did.</p>
+</section>
+
+<section>
+  <h2><span class="n">05</span> What the money actually buys</h2>
+  <p class="use">Use for: any decision where the cheapest option didn't win</p>
+  <p class="note">Not total cost of ownership. Cost lined up against the problem each pound solves — so you can see what the extra spend is actually for, and whether it was worth it.</p>
+
+  <div class="panel">
+    <p class="cap">Three-year cost, split by the problem it solves</p>
+    <p class="src">Quoted prices from the buyer's own procurement file, allocated to problems by the buyer during the interview. <span class="illus">Illustrative.</span></p>
+    <table class="money">
+      <thead>
+        <tr><th style="width:38%">What we're paying to solve</th><th class="n">Vendor B</th><th class="n">Vendor C</th><th class="n">Vendor D <span style="color:var(--accent)">(chosen)</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="k">The platform itself</td><td class="n">$420,000</td><td class="n">$455,000</td><td class="n">$440,000</td></tr>
+        <tr><td class="k">Storing 90 days of data</td><td class="n">$180,000</td><td class="n">$140,000</td><td class="n">$165,000</td></tr>
+        <tr><td class="k">Automating our playbooks</td><td class="n">+$60,000<br><span style="font-size:12.5px">tier upgrade</span></td><td class="n">included</td><td class="n">+$55,000<br><span style="font-size:12.5px">tier upgrade</span></td></tr>
+        <tr class="hot"><td class="k">Someone to call at 3am</td><td class="n">not offered</td><td class="n">+$95,000<br><span style="font-size:12.5px">above our budget</span></td><td class="n"><span class="delta">+$40,000</span></td></tr>
+        <tr><td class="k">Moving our old rules across</td><td class="n">$75,000</td><td class="n">$75,000</td><td class="n">$110,000<br><span style="font-size:12.5px">ran 4 months long</span></td></tr>
+        <tr class="total"><td>Three-year total</td><td class="n">$735,000</td><td class="n">$765,000</td><td class="n">$810,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="verdict"><b>The point:</b> they paid $75,000 more than the cheapest option. $40,000 of that was one line — a named engineer on call — and they'd pay it again. The other $35,000 was the migration overrun nobody priced.</p>
+</section>
+
+<section>
+  <h2><span class="n">06</span> What we cut, what we kept</h2>
+  <p class="use">Use for: consolidating tools · merging two companies' stacks</p>
+  <p class="note">The survivors are the interesting part. They show which tools are genuinely load-bearing versus which just have a defender.</p>
+
+  <div class="panel">
+    <p class="cap">Nine tools down to four · 11 months</p>
+    <p class="src">From the buyer's own tool inventory, before and after. <span class="illus">Illustrative.</span></p>
+    <table>
+      <tbody>
+        <tr>
+          <td class="i"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span></td>
+          <td class="k" style="width:24%">Switched off — 4 tools</td>
+          <td>Did the same job as something else, barely used, and all renewed in the same quarter</td>
+        </tr>
+        <tr>
+          <td class="i"><span class="ic win"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          <td class="k">Folded into the platform — 3 tools</td>
+          <td>Same job, done by the new system. Budget freed up.</td>
+        </tr>
+        <tr>
+          <td class="i"><span class="ic dec"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"/></svg></span></td>
+          <td class="k">Survived anyway — 2 tools</td>
+          <td>One because a regulator names it. One because a single engineer's workflow depends on it and nobody wanted that argument.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="verdict"><b>The point:</b> consolidation always stops in the same place. What survives isn't the best tool — it's the one with a regulator or a defender behind it.</p>
+</section>
+
+<section>
+  <h2><span class="n">07</span> Cost crossover</h2>
+  <p class="use">Use for: build vs. buy · in-house vs. outsourced</p>
+  <p class="note">Where the two cost lines cross, and whether anyone got there. Most of these decisions rest on a crossover the company never reaches.</p>
+
+  <div class="panel">
+    <p class="cap">Building our own team vs. paying a provider · 5 years</p>
+    <p class="src">The buyer's own model as shown to their board, with what actually happened laid over it. <span class="illus">Illustrative.</span></p>
+    <svg viewBox="0 0 700 300" width="700" height="300" role="img" aria-label="The plan showed building in-house getting cheaper than outsourcing by year four, but actual in-house costs ran far above the plan because three of seven roles were never filled.">
+      <line x1="70" y1="250" x2="660" y2="250" stroke="var(--rule)" stroke-width="2"/>
+      <line x1="70" y1="30" x2="70" y2="250" stroke="var(--rule)" stroke-width="2"/>
+      <g class="sw">
+        <text x="70" y="272" text-anchor="middle">YEAR 1</text><text x="188" y="272" text-anchor="middle">2</text>
+        <text x="306" y="272" text-anchor="middle">3</text><text x="424" y="272" text-anchor="middle">4</text>
+        <text x="542" y="272" text-anchor="middle">5</text>
+        <text x="58" y="250" text-anchor="end">$0</text><text x="58" y="40" text-anchor="end">$5M</text>
+      </g>
+      <polyline points="70,120 188,128 306,136 424,144 542,152" fill="none" stroke="var(--accent)" stroke-width="2.5"/>
+      <text x="556" y="150" class="lbl" style="fill:var(--accent)">Pay a provider</text>
+      <polyline points="70,60 188,96 306,124 424,146 542,168" fill="none" stroke="var(--ink-2)" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <text x="556" y="172" class="lbl-2">Build our own (the plan)</text>
+      <polyline points="70,58 188,80 306,92" fill="none" stroke="var(--dead)" stroke-width="3"/>
+      <text x="316" y="86" class="lbl" style="fill:var(--dead)">Build our own (what happened)</text>
+      <circle cx="424" cy="145" r="7" fill="var(--tip)"/>
+      <text x="424" y="196" class="big" text-anchor="middle" style="fill:var(--tip)">The plan said we'd break even in year 4</text>
+      <text x="424" y="216" class="lbl-2" text-anchor="middle">It assumed we'd be fully staffed by year 2. We never filled 3 of 7 roles.</text>
+    </svg>
+  </div>
+  <p class="verdict"><b>The point:</b> the decision rested on breaking even in year four, which depended on a hiring plan that never happened.</p>
+</section>
+
+<section>
+  <h2><span class="n">08</span> What we skipped</h2>
+  <p class="use">Use for: emergencies — breach, outage, deadline, vendor goes away</p>
+  <p class="note">When there's no time, what they cut is more revealing than what they did.</p>
+
+  <div class="panel">
+    <p class="cap">Replacing endpoint security in 6 weeks after our vendor was acquired</p>
+    <p class="src">Their normal buying process, against what six weeks allowed. <span class="illus">Illustrative.</span></p>
+    <table>
+      <tbody>
+        <tr>
+          <td class="i"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span></td>
+          <td class="k" style="width:22%">Formal tender</td><td class="said" style="width:20%">Skipped</td>
+          <td>Went straight to two vendors already approved by procurement</td>
+        </tr>
+        <tr>
+          <td class="i"><span class="ic dec"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"/></svg></span></td>
+          <td class="k">Trial</td><td class="said">Cut to 2 weeks</td>
+          <td>Normally eight weeks across four business units. We ran one unit for two weeks.</td>
+        </tr>
+        <tr>
+          <td class="i"><span class="ic win"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          <td class="k">Security review</td><td class="said">Kept in full</td>
+          <td>The one thing nobody was willing to shorten</td>
+        </tr>
+        <tr>
+          <td class="i"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span></td>
+          <td class="k">Calling their customers</td><td class="said">Skipped</td>
+          <td>This is the one that cost us. Two of three would have warned us about the conflict we hit in month two.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="verdict"><b>The point:</b> the shortcut that hurt wasn't the shortened trial. It was the three phone calls nobody had time to make.</p>
+</section>
+
+<section>
+  <h2><span class="n">—</span> Which pattern for which decision</h2>
+  <div class="panel">
+    <table>
+      <tbody>
+        <tr><td class="k" style="width:34%">Replacing a vendor</td><td class="said" style="width:30%">Who dropped out, and why</td><td>The story is who got thrown out</td></tr>
+        <tr><td class="k">Renew or leave</td><td class="said">Said vs. actual</td><td>The cost of moving usually beats the scorecard</td></tr>
+        <tr><td class="k">Head-to-head bake-off</td><td class="said">Feature matrix + said vs. actual</td><td>Everyone ticks the same boxes; one row decides</td></tr>
+        <tr><td class="k">Consolidating tools</td><td class="said">What we cut, what we kept</td><td>The survivors carry the finding</td></tr>
+        <tr><td class="k">Merging two companies' stacks</td><td class="said">What we cut, what we kept</td><td>Two of everything, pick one</td></tr>
+        <tr><td class="k">The cheapest option didn't win</td><td class="said">What the money actually buys</td><td>Shows what the extra spend bought</td></tr>
+        <tr><td class="k">Build or buy</td><td class="said">Cost crossover</td><td>It rests on a break-even year</td></tr>
+        <tr><td class="k">In-house or outsource</td><td class="said">Cost crossover</td><td>Same shape, staffing instead of engineering</td></tr>
+        <tr><td class="k">New need — remote work, hybrid, AI</td><td class="said">Timeline</td><td>When the need appeared vs. when anyone moved</td></tr>
+        <tr><td class="k">Emergency replacement</td><td class="said">What we skipped</td><td>No time means the omissions are the story</td></tr>
+        <tr><td class="k">Switching something off</td><td class="said">Timeline</td><td>What finally triggered the decision to stop</td></tr>
+        <tr><td class="k">Expanding an existing vendor</td><td class="said">Said vs. actual</td><td>Usually decided on habit nobody scored</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <b>Language rule for every diagram:</b> write what the buyer would say out loud. "Too expensive," not "eliminated on cost criteria." "Nobody used it," not "failed adoption threshold." If a label needs a glossary, it's the wrong label.
+</footer>
+
+</div>

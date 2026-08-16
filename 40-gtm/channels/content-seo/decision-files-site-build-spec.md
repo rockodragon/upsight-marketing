@@ -2,7 +2,13 @@
 
 **For:** a coding agent revising the site and the report template.
 **Current state:** one sample at `decision-files.pages.dev/#b2b-sales`. Section anchors on a single page, no masthead, no bio, no methodology note.
-**Reference:** visual system → https://claude.ai/code/artifact/47003a7e-6993-4d77-97ac-df83943952ad
+**Reference implementations — in this repo, open in a browser:**
+- `reference/visual-patterns.html` — the eight diagram patterns ([hosted](https://claude.ai/code/artifact/47003a7e-6993-4d77-97ac-df83943952ad))
+- `reference/example-decision-file.html` — a complete file page with widgets in place ([hosted](https://claude.ai/code/artifact/38bfda21-f49a-4852-a43d-3fcf27818862))
+
+> ⚠️ **The example file's content is fabricated** — invented to show layout. It is not research
+> and must never publish as a Decision File. If it appears on the site at all it goes at
+> `/preview/template`, noindex, with the fabrication stated in the first line, not the byline.
 
 ---
 

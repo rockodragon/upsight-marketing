@@ -5,6 +5,26 @@
 
 ---
 
+## 2026-08-16 — Handoff for a local session
+
+**Shipped**
+- `HANDOFF.md` at repo root — read-order, what's done, what's blocked and why, do-next in order,
+  and the two things not to lose.
+- Both reference implementations committed into the repo so they survive the container:
+  `40-gtm/channels/content-seo/reference/{visual-patterns,example-decision-file}.html`.
+- Build spec now points at the in-repo files rather than only the hosted artifacts.
+
+**Surfaced**
+- **The example Decision File is entirely fabricated** — company, dollar figures, adoption rate,
+  the lot. Written to demonstrate layout. Flagged in HANDOFF.md, in the build spec, and on the
+  page itself: **it must never publish as a Decision File.** A research publication caught with
+  invented research doesn't recover, and a label doesn't survive a screenshot. If it goes online
+  at all: `/preview/template`, noindex, fabrication stated in the first line.
+- **Two repos unreachable from cloud, for different reasons.** `epic-hq/UpSight` — a session
+  can't hold repos from two GitHub owners. `rockodragon/decision-files` — the credential had no
+  access at all, likely a missing GitHub App grant. Both should resolve locally.
+- Rick reports the widgets are already built into the real app and generating.
+
 ## 2026-08-15 (contrast measured, not eyeballed)
 
 **Shipped**
