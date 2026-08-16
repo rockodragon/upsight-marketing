@@ -69,11 +69,32 @@ Drafts for all of these: `decision-files-advisory-board.md`.
 
 Tasks + people: UpSight Core, goal `565b9d6d`.
 
-## Still undecided — and one of them is big
+## Lane: security active, operators deferred (2026-08-15)
 
-1. **Which room: cybersecurity or operators/professional services.** Can't do both with
-   one founder and one intern. Cheap test: one pilot file in security. *This is the
-   one to settle.*
+**Security is the active lane. Operators are deferred, not killed** — they remain the
+intended broader segment later, and running the occasional operator file won't hurt.
+
+All operator-lane tasks in UpSight are prefixed `[DEFERRED — operator lane]` and set to
+P3 so the lane stays visible and revivable rather than buried.
+
+**Four things from that work are lane-independent and still govern the security lane:**
+
+- **The qualifier test** — *could someone with no budget answer this credibly?* If yes,
+  kill the topic.
+- **Week 4 is the week that slips.** Publishing, not interviewing, is the failure mode.
+- **Paid advertises the published piece, never the survey**, and never before there's a
+  proven asset.
+- **The quarterly report mechanic** — three cycles rolling into one report is what turns
+  published files into a credential.
+
+**Two deferred topics retarget to security better than they worked for operators:**
+*"What does your board ask that you can never answer with data?"* and *"How did you get it
+approved?"* — CISOs currently have harder board conversations than operators do. Revive
+them as CISO topics rather than as operator campaigns.
+
+## Still undecided
+
+1. ~~Which room~~ — **settled: security first, operators later.**
 2. **Will a vendor pay $15–50K?** Tested by ask #3 above.
 3. **The forced-participation lever.** NSS had one (absence from a test was damaging).
    Without an equivalent this is a strong consulting practice, not a franchise.

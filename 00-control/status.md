@@ -5,6 +5,32 @@
 
 ---
 
+## 2026-08-15 (lane call) — Security active, operators deferred
+
+**Decided**
+- **Security is the active lane; operators deferred, not killed.** Logged in `decisions.md`.
+  Rick's read: operators are the broader segment he wants eventually, and running a few won't
+  hurt — so this is sequencing, not abandonment.
+
+**Shipped**
+- Eight operator-lane tasks retitled `[DEFERRED — operator lane]` and dropped to P3, each with a
+  reason recording what survives the lane change. Nothing archived — the lane stays visible and
+  revivable.
+- `decision-files-gameplan.md` updated: the "which room" question is closed, and the
+  lane-independent mechanics are called out so they don't get deferred along with the topics.
+
+**Surfaced**
+- **Four mechanics are lane-independent** and still govern security work: the qualifier test
+  ("could someone with no budget answer this credibly?"), week 4 being the week that slips,
+  paid advertising the published piece rather than the survey, and the quarterly-report mechanic.
+- **Two deferred topics retarget to security better than they worked for operators** — "what does
+  your board ask that you can never answer with data?" and "how did you get it approved?" CISOs
+  currently have harder board conversations than operators do. Revive as CISO topics, not as
+  operator campaigns.
+- Also corrected this session: the Techstrong archive is a free sample to open a software sale,
+  not an asset — the business is selling UpSight to process Futurum's *incoming* vendor briefings.
+  I spent more of Rick's attention on that tactic than it warranted.
+
 ## 2026-08-15 (correction) — Archive drift isn't monetizable; the pitch is forward briefings
 
 **Corrected**
