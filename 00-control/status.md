@@ -5,6 +5,26 @@
 
 ---
 
+## 2026-08-15 (use cases locked)
+
+**Decided**
+- Three use cases locked in `40-gtm/campaigns/decision-files-use-cases.md`, each naming the
+  widgets it exercises so the app build has a real target:
+  1. **Which AI models/harnesses to standardise on** — running now. COOs/CTOs, stated vs. actual.
+  2. **What the Sullivan verdict changed** — CISOs deciding under personal liability.
+  3. **Why did you cancel Gartner** — hard budget filter, forced-participation lever.
+- Together they exercise five of the eight widgets on real transcripts: `StatedVsActual`,
+  `FeatureMatrix`, `CostByProblem`, `DropoutList`, `WhatWeSkipped`. Build those five first.
+
+**Surfaced**
+- **Use case 1 is the operator/general lane, not security.** Flagged rather than silently
+  accepted — but it may still be the right first file: the topic is hotter, and the buyers
+  (model and tool vendors) have more money than security vendors. Decide on purpose.
+- **Blocked from implementing in the product repo from this session.** `epic-hq/UpSight` is a
+  different owner than `rockodragon`, and cross-owner adds aren't supported. Needs a new session
+  with `epic-hq/UpSight` as the source; the build spec is readable from the public marketing
+  repo at `40-gtm/channels/content-seo/decision-files-site-build-spec.md`.
+
 ## 2026-08-15 (visuals v4 — money + finer grain + gen-ui)
 
 **Shipped**
