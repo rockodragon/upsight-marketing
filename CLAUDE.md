@@ -43,6 +43,8 @@ Folders are numbered so they read top-to-bottom as a flow: **how we run → what
 
 ## Before starting work
 
+0. **Working on The Decision Files?** Read `HANDOFF.md` at the repo root first — current state,
+   what's blocked, what to do next. It supersedes anything older on that topic.
 1. Read `00-control/priorities.md` — direction this week.
 2. Read `10-ops/agents.md` — your role.
 3. Read `00-control/decisions.md` + `00-control/open-questions.md` — settled vs. open.
