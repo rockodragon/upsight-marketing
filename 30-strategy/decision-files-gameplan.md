@@ -116,3 +116,13 @@ them as CISO topics rather than as operator campaigns.
 Three published files · a masthead with three names · one paid engagement or a
 concrete price conversation · one syndication or editorial placement · and every
 engagement ending in an UpSight license conversation.
+
+## Update 2026-08-18
+
+- **Decided against Chenxi Wang as the first masthead ask.** Not pursuing her as the opening
+  contributor-board yes.
+- **Leaning toward practitioners over big-name analysts for the first files.** File #1 (the
+  AI-tooling guide) now targets CTOs, VPs of Engineering, and platform practitioners rather
+  than analyst-tier names.
+- **The Alan Shimel syndication ask is deferred** — likely too early to make it before there's
+  a published file to point to.
