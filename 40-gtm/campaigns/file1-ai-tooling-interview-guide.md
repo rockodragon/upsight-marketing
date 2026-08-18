@@ -116,17 +116,23 @@ founders · SD Tech Scene meetups. Bay Area: warm intros only — cold outreach 
 *Feeds the cost diagram. The second half is the sharp part — it forces them to name what the premium is actually for.*
 *Follow-ups: "Per seat, per token, or a flat deal?" · "Anything that came in above what you budgeted?"*
 
+### Q10
+> What did the choice cost against the next-best option — and what did that premium actually buy you back?
+
+*Feeds the break-even diagram. The sharp part is the payback — it forces a number, not a feeling, for when the premium started earning itself back.*
+*Follow-ups: "When did it pay for itself — or hasn't it?" · "What number would have made you switch the other way?"*
+
 ---
 
 ## Section 5 — What happened
 
-### Q10
+### Q11
 > Since you decided — what got better, and what broke?
 
 *The outcome. Without this it isn't a Decision File.*
 *Follow-ups: "Did anyone route around the decision?" · "Has usage held up or drifted?"*
 
-### Q11
+### Q12
 > Knowing what you know now, what would you check first next time?
 
 *The most quotable question in the set. Sit in the silence — the first answer is the polite one.*
@@ -135,7 +141,7 @@ founders · SD Tech Scene meetups. Bay Area: warm intros only — cold outreach 
 
 ## Section 6 — Sources
 
-### Q12
+### Q13
 > Whose judgment do you actually trust on this? Not the loudest — who you'd call.
 
 *Maps where this audience gets information, and produces the next round of recruits.*
@@ -155,8 +161,8 @@ build — want to see what it did with yours?"*
 
 ## Interviewer notes
 
-**If you're at minute ten**, drop Q2 and Q9 and go straight to Q7, Q11, Q12. Ending on time is
-what earns the second conversation.
+**If you're at minute ten**, drop Q2, Q9, and Q10 and go straight to Q7, Q12, Q13. Ending on time
+is what earns the second conversation.
 
 **Listen for:**
 - **"Nobody really decided."** Common and valuable. Don't let them tidy it into a process.
