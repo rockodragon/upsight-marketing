@@ -5,6 +5,28 @@
 
 ---
 
+## 2026-08-18 - New top-level `site/` folder holds the thedecisionfiles.com static site
+**Why:** No site scaffolding existed anywhere in the repo (checked for `site/`, `web/`,
+`docs/`, and any HTML/astro/next config before adding this). `40-gtm/channels/content-seo/
+decision-files-site-build-spec.md` doesn't prescribe a stack, so per its own fallback this is
+plain static HTML/CSS — no framework, no build step, so it can be pushed straight to
+Cloudflare Pages (or similar) pointed at `site/` as the doc root. Deliberately its own
+top-level folder rather than nested under `40-gtm/` because it's shipped code/output (the
+actual site source), not a planning doc — same reasoning `40-gtm/assets/` uses for binary
+collateral, but this needs its own root since it's a whole static site tree (`index.html`,
+`styles.css`, `files/<slug>/index.html`), not a handful of files. Contains the flagship
+sample Decision File (`site/files/deciding-on-a-siem-replacement/`, explicitly labeled
+sample/illustrative, `noindex`) recreated from the live `/s/bf3VlTLtHBKp` report per the
+build spec's ten-block file template and the reference visual system it points to. Palette
+is deliberately NOT `30-strategy/brand-style-guide.md`'s UpSight brand tokens (amber/blue) —
+the build spec calls for a distinct, non-startup, editorial-publication look ("Independence
+is the product"), so `site/styles.css` extends the build spec's own reference token set
+instead, reusing the `--rule` fix `00-control/status.md` (2026-08-15) already measured
+(`#C9D0D8`/`#3A444F` → 1.56:1/1.69:1, failing the spec's 3:1 structural-rule minimum) —
+light nudged one step darker (`#8C949E` → `#8A929C`) because it only cleared `--panel`
+(3.07:1), not `--ground` (2.94:1), and this token sits on both; dark reused as-is (`#66717D`,
+≥3:1 against both). Re-verified against both surfaces in both themes before use.
+
 ## 2026-08-15 - Security is the active lane; operators deferred, not killed
 **Why:** Rick's credential, network, and warm press all transfer to security and none of them
 transfer to operators — the unfair advantage is entirely on one side. Security also has a paying

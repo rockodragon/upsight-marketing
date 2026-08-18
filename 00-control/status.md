@@ -5,6 +5,44 @@
 
 ---
 
+## 2026-08-18 (flagship sample file built, site scaffolded)
+
+**Shipped**
+- `site/` — first site code in the repo (checked for `site/`/`web/`/`docs/`/any HTML or
+  framework scaffolding first; nothing existed). Plain static HTML/CSS, no build step, per
+  the build spec's own fallback. `site/styles.css` implements the spec's reference token
+  system and widget visual language (§5 of the build spec).
+- `site/files/deciding-on-a-siem-replacement/index.html` — the flagship sample Decision
+  File, recreated from the live `/s/bf3VlTLtHBKp` report. Pulled the actual loader JSON out
+  of the page (`window.__reactRouterContext.state.loaderData`) rather than scraping visible
+  text, so every widget, number, and buyer quote is exact, including the ones only reachable
+  behind "see the quote" — all six widgets (StatedVsActual, FeatureMatrix, DecisionTimeline,
+  DropoutList, CostByProblem, WhatWeSkipped) carry their full evidence quote list in a
+  `<details>` disclosure. Labeled SAMPLE/DEMONSTRATION prominently (banner + methodology
+  footer) since the subject and vendors are illustrative; `noindex` so it isn't crawled as
+  real research; skipped fabricating `Article` JSON-LD with a fake byline for the same reason.
+- `site/index.html` — minimal file-list index per the build spec's `/` page shape.
+- Newsletter embed (exact snippet, `data-upsight-slug="2k1-r8i"`) on both pages, in a
+  hardcoded-dark section (the embed's `#ffffff` accent needs a dark ground regardless of
+  site theme).
+- Reused the `--rule` contrast fix from 2026-08-15 below rather than re-deriving it, then
+  caught that `#8C949E` only cleared `--panel` (3.07:1) and not `--ground` (2.94:1) — this
+  token sits on both (e.g. `.brief`/`.receipts-callout` borders on the page background).
+  Nudged to `#8A929C`; dark `#66717D` reused as-is. Full token-pair audit (light + dark,
+  text + structural) re-run and passing; see `00-control/decisions.md` 2026-08-18 entry.
+- Verified in-browser: both themes, 375px/1000px/desktop widths, no horizontal overflow,
+  content matches the live report exactly (`get_page_text` diffed against the loader JSON).
+
+**Surfaced**
+- The Browser-pane preview tool's `scroll`/`scrollTo` action reliably blanked the screenshot
+  on this environment — reproduced identically on a trivial synthetic page with zero custom
+  CSS/JS, so it's a tool/environment artifact, not a defect in the page. Worked around by
+  resizing the viewport tall enough to avoid scrolling.
+- `/about` and `/method` are linked from the nav and footer on both pages but don't exist yet
+  — out of scope for this pass (only the flagship file + newsletter embed + gameplan
+  addendum were asked for). Real files 2 and 3, `/about`, `/method`, RSS, and CI-automated
+  contrast/overflow checks (build spec §8) are still open.
+
 ## 2026-08-15 (contrast measured, not eyeballed)
 
 **Shipped**

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deciding on a SIEM replacement. — Sample Decision File | The Decision Files</title>
+<meta name="description" content="A sample Decision File: how a payments-company CISO's nine-month SIEM evaluation actually got decided. Demonstrates the format — illustrative, not a real interview.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://thedecisionfiles.com/files/deciding-on-a-siem-replacement/">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deciding on a SIEM replacement. (Sample Decision File)">
+<meta property="og:description" content="A sample Decision File: how a payments-company CISO's nine-month SIEM evaluation actually got decided. Illustrative, not a real interview.">
+<meta property="og:url" content="https://thedecisionfiles.com/files/deciding-on-a-siem-replacement/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap-wide">
+    <a class="wordmark" href="/">The Decision Files</a>
+    <div class="site-nav-links">
+      <a href="/about">About</a>
+      <a href="/method">Method</a>
+    </div>
+  </div>
+</nav>
+
+<div class="sample-banner">
+  <div class="wrap">
+    <span class="tag">Sample file — not real research</span>
+    <p>
+      This file demonstrates the Decision File format. <strong>"Dana Whitfield," the payments
+      company, and the vendors named below (LogHarbor, Sentrix, Corvid, NightOwl) are
+      illustrative</strong> — built from a seed interview transcript to show what UpSight
+      generates, not a real subject. The three real files that open the series are in
+      production. See <a href="/method">how a real Decision File gets made →</a>
+    </p>
+  </div>
+</div>
+
+<article class="wrap">
+
+  <div class="file-header">
+    <p class="eyebrow">Decision File · Sample / Demonstration</p>
+    <h1>Deciding on a SIEM replacement.</h1>
+    <div class="byline">
+      <span>A CISO at a payments company</span>
+      <span class="sep">·</span>
+      <span>Interview analyzed 17 Aug 2026</span>
+      <span class="sep">·</span>
+      <span>Illustrative subject</span>
+    </div>
+  </div>
+
+  <div class="brief">
+    <p class="brief-title">30-second brief</p>
+    <dl>
+      <dt>Who</dt>
+      <dd>A CISO at a payments company</dd>
+
+      <dt>The decision</dt>
+      <dd>Deciding on a SIEM replacement.</dd>
+
+      <dt>What was at stake</dt>
+      <dd>Budget constraints made defending a 28% increase to the CFO untenable.</dd>
+
+      <dt>What they chose</dt>
+      <dd>Dana chose NightOwl mainly for its 3am support despite lacking features.</dd>
+
+      <dt>What happened</dt>
+      <dd>Migration cost $110k and took six months instead of two due to unforeseen complications.</dd>
+
+      <dt>Core lesson</dt>
+      <dd class="lesson">Ensure all critical factors are properly weighted to avoid them becoming de facto decision points later.</dd>
+    </dl>
+  </div>
+
+  <div class="receipts-callout">
+    <span>Six diagrams below. In the live version, every underlined claim opens the buyer's own words.</span>
+    <a href="https://upsight-staging.fly.dev/s/bf3VlTLtHBKp" target="_blank" rel="noopener">See the receipts, interactively ↗</a>
+  </div>
+
+  <!-- ============ ICON LEGEND ============ -->
+  <div class="legend" role="img" aria-label="Legend: grey tick means everyone passed and it decided nothing; red minus means it knocked someone out; amber star means it decided the outcome; blue tick means chosen.">
+    <div class="leg"><span class="ic pass"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span> Everyone passed — decided nothing</div>
+    <div class="leg"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span> Knocked someone out</div>
+    <div class="leg"><span class="ic dec"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"/></svg></span> This decided it</div>
+    <div class="leg"><span class="ic win"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span> Chosen</div>
+  </div>
+
+  <!-- ============ WIDGET 1 — STATED VS ACTUAL ============ -->
+  <section class="diagram" aria-label="What we said vs. what happened">
+    <div class="diagram-head">
+      <h2><span class="n">01</span> What we said vs. what happened</h2>
+      <p class="finding">They weighted support at 10%, but the 3am named engineer decided the winner; higher&#8209;weighted items either passed for everyone or just knocked one vendor out.</p>
+    </div>
+    <div class="panel">
+      <table role="img" aria-label="They weighted support at 10 percent, but the 3am named engineer decided the winner; higher-weighted items either passed for everyone or just knocked one vendor out.">
+        <thead>
+          <tr><th style="width:34px"></th><th>What we said we'd judge on</th><th>Weight</th><th>What actually happened</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="i"><span class="ic pass"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+            <td class="k">Threat detection coverage</td><td class="w">30%</td>
+            <td>All four could detect everything we cared about — it didn't separate anyone.</td>
+          </tr>
+          <tr>
+            <td class="i"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span></td>
+            <td class="k">Integrations with our existing stack</td><td class="w">20%</td>
+            <td>Sentrix had 9 of 12; the card switch was &ldquo;on the roadmap.&rdquo; The others had all 12 day one.</td>
+          </tr>
+          <tr>
+            <td class="i"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span></td>
+            <td class="k">Query performance at our volume</td><td class="w">15%</td>
+            <td>Corvid slowed badly on 90&#8209;day lookback searches; the others handled our volume fine.</td>
+          </tr>
+          <tr>
+            <td class="i"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span></td>
+            <td class="k">Price</td><td class="w">25%</td>
+            <td>Price knocked out exactly one vendor — the incumbent. The other three landed within about $30k of each other over three years.</td>
+          </tr>
+          <tr>
+            <td class="i"><span class="ic dec"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"/></svg></span></td>
+            <td class="k">Support</td><td class="w">10%</td>
+            <td>We bought the 3am phone call — a named engineer in contract. That decided it.</td>
+          </tr>
+          <tr>
+            <td class="i"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span></td>
+            <td class="k">Will the analysts actually use it daily</td><td class="w">not on the list</td>
+            <td>Our SOC stopped opening Sentrix two weeks into the trial — the UI didn't fit queue&#8209;clearing work.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="source-line"><b>Source:</b> Dana Whitfield (CISO) and team — interview transcript (their scorecard was described in detail).</p>
+    </div>
+    <details class="quotes">
+      <summary>Read what Dana said (7 quotes)</summary>
+      <blockquote>&ldquo;We did it properly, or so we thought. April, we wrote a scorecard before we talked to a single vendor.&rdquo;</blockquote>
+      <blockquote>&ldquo;All four could detect everything we cared about.&rdquo;</blockquote>
+      <blockquote>&ldquo;We needed twelve connections&hellip; LogHarbor, Corvid and NightOwl had all twelve&hellip; Sentrix had nine of twelve. The card switch connector was &lsquo;on the roadmap.&rsquo;&rdquo;</blockquote>
+      <blockquote>&ldquo;Corvid slowed badly on 90-day lookback searches&hellip; LogHarbor, Sentrix, NightOwl all handled our volume without complaint.&rdquo;</blockquote>
+      <blockquote>&ldquo;Price knocked out exactly one vendor — LogHarbor. The other three landed within about 30 thousand of each other on a three-year view.&rdquo;</blockquote>
+      <blockquote>&ldquo;The honest truth is we bought the 3am phone call.&rdquo;</blockquote>
+      <blockquote>&ldquo;Sentrix, the analyst darling, our SOC guys just stopped opening it two weeks into the trial.&rdquo;</blockquote>
+      <p class="receipt-link"><a href="https://upsight-staging.fly.dev/s/bf3VlTLtHBKp" target="_blank" rel="noopener">Hear these in the interactive report ↗</a></p>
+    </details>
+  </section>
+
+  <!-- ============ WIDGET 2 — FEATURE MATRIX ============ -->
+  <section class="diagram" aria-label="Feature comparison">
+    <div class="diagram-head">
+      <h2><span class="n">02</span> Feature comparison</h2>
+      <p class="finding">Only NightOwl offered a named 3am engineer at the budgeted tier; that single line decided it.</p>
+    </div>
+    <div class="panel">
+      <div class="legend" style="margin:0 0 18px; padding:12px 14px">
+        <div class="leg"><span class="m m-full"><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span> Yes</div>
+        <div class="leg"><span class="m m-part"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="var(--flat)" stroke-width="2.4"/><path d="M12 3a9 9 0 0 1 0 18z" fill="var(--flat)"/></svg></span> Partly</div>
+        <div class="leg"><span class="m m-paid"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="var(--tip)" stroke-width="2.2"/><text x="12" y="17" text-anchor="middle" font-size="13" font-weight="700" fill="var(--tip)" font-family="-apple-system,sans-serif">$</text></svg></span> Only if we pay more</div>
+        <div class="leg"><span class="m m-none"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span> No</div>
+        <div class="leg"><span class="m m-key"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"/></svg></span> Yes — and this is what decided it</div>
+      </div>
+      <table class="matrix" role="img" aria-label="Only NightOwl offered a named 3am engineer at the budgeted tier; that single line decided it.">
+        <thead>
+          <tr><th style="width:32%">Can it do this?</th><th class="v">LogHarbor (incumbent)</th><th class="v">Sentrix</th><th class="v">Corvid</th><th class="v">NightOwl</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hot">
+            <td class="k">A named engineer we can call at 3am</td>
+            <td class="c"><span class="m m-full" title="Had it and had been good at that historically."><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+            <td class="c"><span class="m m-none" title="Community Slack and 8 business-hour ticket SLA."><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span></td>
+            <td class="c"><span class="m m-paid" title="Only on Enterprise Plus, +$95k/yr above budget."><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="var(--tip)" stroke-width="2.2"/><text x="12" y="17" text-anchor="middle" font-size="13" font-weight="700" fill="var(--tip)" font-family="-apple-system,sans-serif">$</text></svg></span></td>
+            <td class="c"><span class="m m-key" title="Included — named TAM and on-call engineer in contract."><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"/></svg></span></td>
+          </tr>
+          <tr>
+            <td class="k">Has all 12 integrations we need (incl. card switch)</td>
+            <td class="c"><span class="m m-full" title="All 12 on day one."><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+            <td class="c"><span class="m m-part" title="9 of 12; card switch was &quot;on the roadmap.&quot;"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="var(--flat)" stroke-width="2.4"/><path d="M12 3a9 9 0 0 1 0 18z" fill="var(--flat)"/></svg></span></td>
+            <td class="c"><span class="m m-full" title="All 12 on day one."><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+            <td class="c"><span class="m m-full" title="All 12 on day one."><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          </tr>
+          <tr>
+            <td class="k">90&#8209;day lookback query performance during incidents</td>
+            <td class="c"><span class="m m-full" title="Handled our volume without complaint."><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+            <td class="c"><span class="m m-full" title="Handled our volume without complaint."><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+            <td class="c"><span class="m m-none" title="Slowed badly on 90-day lookbacks."><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span></td>
+            <td class="c"><span class="m m-full" title="Handled our volume without complaint."><svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="source-line"><b>Source:</b> Dana Whitfield (CISO) and team — interview transcript.</p>
+    </div>
+    <details class="quotes">
+      <summary>Read what Dana said (3 quotes)</summary>
+      <blockquote>&ldquo;When this breaks at 3am during an incident, who picks up the phone?&rdquo;</blockquote>
+      <blockquote>&ldquo;LogHarbor, Corvid and NightOwl had all twelve, day one. Sentrix had nine of twelve.&rdquo;</blockquote>
+      <blockquote>&ldquo;Corvid slowed badly on 90-day lookback searches.&rdquo;</blockquote>
+      <p class="receipt-link"><a href="https://upsight-staging.fly.dev/s/bf3VlTLtHBKp" target="_blank" rel="noopener">Hear these in the interactive report ↗</a></p>
+    </details>
+  </section>
+
+  <!-- ============ WIDGET 3 — DECISION TIMELINE ============ -->
+  <section class="diagram" aria-label="Decision timeline">
+    <div class="diagram-head">
+      <h2><span class="n">03</span> Decision timeline</h2>
+      <p class="finding">Nine months of trials and comparisons ended with one question — &ldquo;who picks up at 3am?&rdquo; — and then migration ran four months long.</p>
+    </div>
+    <div class="panel">
+      <div class="vtimeline" role="img" aria-label="Nine months of trials and comparisons ended with one question — who picks up at 3am — and then migration ran four months long.">
+
+        <div class="vt-item">
+          <div class="vt-rail"><span class="vt-dot vt-dot-accent"></span></div>
+          <div class="vt-content">
+            <p class="vt-eyebrow">MARCH <span class="vt-kind">· what started it</span></p>
+            <p class="vt-title">Renewal quote jumps 28%</p>
+            <p class="vt-detail">Pricing model changed; at our volume it was untenable, so we went to market.</p>
+          </div>
+        </div>
+
+        <div class="vt-item">
+          <div class="vt-rail"><span class="vt-dot vt-dot-flat"></span></div>
+          <div class="vt-content">
+            <p class="vt-eyebrow">MAY&ndash;DECEMBER <span class="vt-dur">9 months</span></p>
+            <p class="vt-title">Head&#8209;to&#8209;head evaluation and trials</p>
+            <p class="vt-detail">Two full head&#8209;to&#8209;head trials; ~60 hours of team time.</p>
+          </div>
+        </div>
+
+        <div class="vt-item">
+          <div class="vt-rail"><span class="vt-dot vt-dot-flat"></span></div>
+          <div class="vt-content">
+            <p class="vt-eyebrow">MID&#8209;EVALUATION <span class="vt-dur">6 weeks</span></p>
+            <p class="vt-title">Seriously considered building it</p>
+            <p class="vt-detail">Modeled an open&#8209;source stack but killed it due to staffing reality.</p>
+          </div>
+        </div>
+
+        <div class="vt-item vt-item-pivot">
+          <div class="vt-rail"><span class="vt-dot vt-dot-tip"></span></div>
+          <div class="vt-content vt-content-hot">
+            <p class="vt-eyebrow" style="color:var(--tip)">JANUARY <span class="vt-kind">· the tipping point</span> <span class="vt-dur">one meeting</span></p>
+            <p class="vt-title" style="color:var(--tip)">The 3am question decides it</p>
+            <p class="vt-detail">One meeting — only NightOwl had a named 3am engineer at our tier.</p>
+          </div>
+        </div>
+
+        <div class="vt-item">
+          <div class="vt-rail"><span class="vt-dot vt-dot-flat"></span></div>
+          <div class="vt-content">
+            <p class="vt-eyebrow">POST&#8209;DECISION <span class="vt-dur">6 months (4 months late)</span></p>
+            <p class="vt-title">Migration ran long</p>
+            <p class="vt-detail">Took six months instead of two; four months late.</p>
+          </div>
+        </div>
+
+        <div class="vt-item">
+          <div class="vt-rail"><span class="vt-dot vt-dot-accent"></span></div>
+          <div class="vt-content">
+            <p class="vt-eyebrow">MAY <span class="vt-kind">· how it ended</span></p>
+            <p class="vt-title">Go&#8209;live on NightOwl</p>
+            <p class="vt-detail">Live in May instead of January.</p>
+          </div>
+        </div>
+
+      </div>
+      <p class="source-line"><b>Source:</b> Dana Whitfield (CISO) and team — interview transcript.</p>
+    </div>
+    <details class="quotes">
+      <summary>Read what Dana said (5 quotes)</summary>
+      <blockquote>&ldquo;The renewal quote&hellip; was 28 percent higher than the year before.&rdquo;</blockquote>
+      <blockquote>&ldquo;Nine months. Two full head-to-head trials&hellip;&rdquo;</blockquote>
+      <blockquote>&ldquo;We did, seriously, for about six weeks in the middle of the evaluation.&rdquo;</blockquote>
+      <blockquote>&ldquo;When this breaks at 3am during an incident, who picks up the phone?&rdquo;</blockquote>
+      <blockquote>&ldquo;It cost about 110, and it took six months — we went live in May instead of January.&rdquo;</blockquote>
+      <p class="receipt-link"><a href="https://upsight-staging.fly.dev/s/bf3VlTLtHBKp" target="_blank" rel="noopener">Hear these in the interactive report ↗</a></p>
+    </details>
+  </section>
+
+  <!-- ============ WIDGET 4 — DROPOUT LIST ============ -->
+  <section class="diagram" aria-label="Who dropped out, and why">
+    <div class="diagram-head">
+      <h2><span class="n">04</span> Who dropped out, and why</h2>
+      <p class="finding">The incumbent fell on price; Sentrix fell on real&#8209;world use; Corvid fell on support at budget; NightOwl won for the 3am named engineer.</p>
+    </div>
+    <div class="panel">
+      <table role="img" aria-label="The incumbent fell on price; Sentrix fell on real-world use; Corvid fell on support at budget; NightOwl won for the 3am named engineer.">
+        <tbody>
+          <tr>
+            <td class="i"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span></td>
+            <td class="k" style="width:20%">LogHarbor (incumbent)</td>
+            <td class="said" style="width:22%">Too expensive</td>
+            <td>28% renewal hike and pricing model change made it untenable; price knocked out exactly one vendor — the incumbent.</td>
+          </tr>
+          <tr>
+            <td class="i"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span></td>
+            <td class="k">Sentrix</td>
+            <td class="said">Nobody used it</td>
+            <td>Analysts stopped opening it two weeks into the trial; UI fit threat hunting, not queue clearing.<br><span style="font-size:13px">Also missing the card switch connector and no named 3am engineer.</span></td>
+          </tr>
+          <tr>
+            <td class="i"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span></td>
+            <td class="k">Corvid</td>
+            <td class="said">Above budget for support</td>
+            <td>A named 3am engineer required Enterprise Plus (+$95k/yr); also slowed on 90&#8209;day lookbacks.</td>
+          </tr>
+          <tr>
+            <td class="i"><span class="ic win"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+            <td class="k">NightOwl</td>
+            <td class="said">Chosen</td>
+            <td>Included a named on&#8209;call engineer at our tier — we bought the 3am phone call.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="source-line"><b>Source:</b> Dana Whitfield (CISO) and team — interview transcript.</p>
+    </div>
+    <details class="quotes">
+      <summary>Read what Dana said (4 quotes)</summary>
+      <blockquote>&ldquo;Price knocked out exactly one vendor — LogHarbor.&rdquo;</blockquote>
+      <blockquote>&ldquo;Our SOC guys just stopped opening it two weeks into the trial.&rdquo;</blockquote>
+      <blockquote>&ldquo;Corvid — yes, but only on the Enterprise Plus tier, which was 95 thousand a year above what we'd budgeted.&rdquo;</blockquote>
+      <blockquote>&ldquo;The honest truth is we bought the 3am phone call.&rdquo;</blockquote>
+      <p class="receipt-link"><a href="https://upsight-staging.fly.dev/s/bf3VlTLtHBKp" target="_blank" rel="noopener">Hear these in the interactive report ↗</a></p>
+    </details>
+  </section>
+
+  <!-- ============ WIDGET 5 — COST BY PROBLEM ============ -->
+  <section class="diagram" aria-label="What the money actually buys">
+    <div class="diagram-head">
+      <h2><span class="n">05</span> What the money actually buys</h2>
+      <p class="finding">Versus the cheapest finalist, they paid about $75k more over three years — ~$40k effectively for the 3am phone call and ~$35k from a migration overrun.</p>
+    </div>
+    <div class="panel">
+      <table class="money" role="img" aria-label="Versus the cheapest finalist, they paid about 75 thousand dollars more over three years — about 40 thousand for the 3am phone call and about 35 thousand from a migration overrun.">
+        <thead>
+          <tr><th style="width:38%">What we're paying to solve</th><th class="n">Sentrix</th><th class="n">Corvid</th><th class="n">NightOwl <span style="color:var(--accent)">(chosen)</span></th></tr>
+        </thead>
+        <tbody>
+          <tr class="hot">
+            <td class="k">A named engineer we can call at 3am<br><span style="font-size:12.5px;color:var(--tip)">This line decided it.</span></td>
+            <td class="n">not offered</td>
+            <td class="n">+$95,000/yr</td>
+            <td class="n"><span class="delta">included</span></td>
+          </tr>
+          <tr>
+            <td class="k">Migration overrun<br><span style="font-size:12.5px">Ran 4 months long</span></td>
+            <td class="n">n/a</td>
+            <td class="n">n/a</td>
+            <td class="n">+$35,000 (over plan)</td>
+          </tr>
+          <tr class="total"><td>Three-year total</td><td class="n">$735,000</td><td class="n">$765,000</td><td class="n">$810,000</td></tr>
+        </tbody>
+      </table>
+      <p class="source-line"><b>Source:</b> Dana Whitfield (CISO) and team — interview transcript.</p>
+    </div>
+    <details class="quotes">
+      <summary>Read what Dana said (3 quotes)</summary>
+      <blockquote>&ldquo;Versus the cheapest finalist we paid about 75 thousand more over three years. 40 of that was the 3am phone call&hellip; The other 35 was the migration overrun&hellip;&rdquo;</blockquote>
+      <blockquote>&ldquo;Sentrix came to roughly 735 total over three years, Corvid 765, NightOwl 810.&rdquo;</blockquote>
+      <blockquote>&ldquo;Corvid — yes, but only on the Enterprise Plus tier, which was 95 thousand a year above what we'd budgeted. NightOwl — yes, included.&rdquo;</blockquote>
+      <p class="receipt-link"><a href="https://upsight-staging.fly.dev/s/bf3VlTLtHBKp" target="_blank" rel="noopener">Hear these in the interactive report ↗</a></p>
+    </details>
+  </section>
+
+  <!-- ============ WIDGET 6 — WHAT WE SKIPPED ============ -->
+  <section class="diagram" aria-label="What we skipped">
+    <div class="diagram-head">
+      <h2><span class="n">06</span> What we skipped</h2>
+      <p class="finding">Skipping reference calls is what bit them — a few calls would have surfaced the 4&#8209;month migration overrun risk.</p>
+    </div>
+    <div class="panel">
+      <table role="img" aria-label="Skipping reference calls is what bit them — a few calls would have surfaced the four-month migration overrun risk.">
+        <tbody>
+          <tr>
+            <td class="i"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span></td>
+            <td class="k" style="width:24%">Formal RFP</td><td class="said" style="width:20%">Skipped</td>
+            <td>Cost nothing — we went straight to vendors on procurement's approved list.</td>
+          </tr>
+          <tr>
+            <td class="i"><span class="ic out"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></span></td>
+            <td class="k">Second trial round across all business units</td><td class="said">Cut to 2 weeks in one unit</td>
+            <td>No specific damage called out; renewal deadline was breathing on us.</td>
+          </tr>
+          <tr>
+            <td class="i"><span class="ic win"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6"/></svg></span></td>
+            <td class="k">Security review</td><td class="said">Kept in full</td>
+            <td>Avoided issues there — nobody was willing to shorten it, and I'm glad.</td>
+          </tr>
+          <tr>
+            <td class="i"><span class="ic dec"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"/></svg></span></td>
+            <td class="k">Reference calls</td><td class="said">Skipped</td>
+            <td>Three phone calls would have saved a four&#8209;month migration overrun surprise.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="source-line"><b>Source:</b> Dana Whitfield (CISO) and team — interview transcript.</p>
+    </div>
+    <details class="quotes">
+      <summary>Read what Dana said (2 quotes)</summary>
+      <blockquote>&ldquo;Our normal process has a formal RFP — we skipped it&hellip; The one that actually cost us: reference calls.&rdquo;</blockquote>
+      <blockquote>&ldquo;It cost about 110, and it took six months — we went live in May instead of January.&rdquo;</blockquote>
+      <p class="receipt-link"><a href="https://upsight-staging.fly.dev/s/bf3VlTLtHBKp" target="_blank" rel="noopener">Hear these in the interactive report ↗</a></p>
+    </details>
+  </section>
+
+  <!-- ============ NARRATIVE ============ -->
+  <section class="narrative">
+    <h2>How they decided</h2>
+    <p>Ran a nine-month evaluation including trials and created a scorecard.</p>
+    <p><span class="field-label">Consulted</span>SOC leads · Security team</p>
+    <p><span class="field-label">Skipped</span>Skipped reference calls and a full RFP process.</p>
+  </section>
+
+  <section class="narrative">
+    <h2>What they'd do differently</h2>
+    <p>Score migration effort as a criterion and conduct reference calls before deciding.</p>
+  </section>
+
+  <section class="narrative">
+    <h2>Unknowns — what one case can't tell you</h2>
+    <p>This case does not indicate whether NightOwl will continue to meet needs long-term.</p>
+  </section>
+
+  <div class="pull-quote">
+    <p>&ldquo;Ensure all critical factors are properly weighted to avoid them becoming de facto decision points later.&rdquo;</p>
+    <cite>— Dana Whitfield, CISO (illustrative subject)</cite>
+  </div>
+
+  <div class="methodology">
+    <p><span class="field-label">Methodology</span> Underlined claims in the interactive version open the interview moment behind them — a video receipt, timestamped to the words above. <a href="https://upsight-staging.fly.dev/s/bf3VlTLtHBKp" target="_blank" rel="noopener">Try it in the interactive report ↗</a></p>
+    <p><span class="field-label">Sample disclosure</span> This page is generated by UpSight to demonstrate what a Decision File looks like end-to-end — brief, six diagrams, evidence, narrative — built from a seed interview transcript. "Dana Whitfield," the payments company, and the SIEM vendors named (LogHarbor, Sentrix, Corvid, NightOwl) are illustrative, not a real person or real companies. It is not one of the three real files that open the published series. Real Decision Files use named or anonymized real subjects, quotes approved by the subject before publication, and a real outcome — see the <a href="/method">methodology note</a> for the policy that governs the actual series, and <a href="/about">the founder credential</a> behind it.</p>
+    <p><span class="field-label">Processed</span> Interview analyzed 17 August 2026 · Share token <code>bf3VlTLtHBKp</code></p>
+  </div>
+
+</article>
+
+<div class="newsletter-section">
+  <div class="newsletter-inner">
+    <p class="eyebrow">Stay in the loop</p>
+    <h2>Get the next file by email</h2>
+    <p>A new Decision File, about twice a month. Nothing else.</p>
+
+    <!-- UpSight Embed -->
+    <div id="upsight-form"
+         data-upsight-slug="2k1-r8i"
+         data-upsight-layout="compact"
+         data-upsight-theme="transparent"
+         data-upsight-accent="#ffffff"
+         data-upsight-radius="12"
+         data-upsight-branding="true"
+         data-upsight-button-text="Subscribe"
+         data-upsight-placeholder="Enter your email"
+         data-upsight-success="Subscribed!"></div>
+    <script src="https://getupsight.com/embed.js" async></script>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap-wide" style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; width:100%">
+    <span>The Decision Files is published by UpSight. No sponsor sees a file before publication.</span>
+    <span><a href="/">Home</a> · <a href="/method">Method</a> · <a href="/about">About</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
