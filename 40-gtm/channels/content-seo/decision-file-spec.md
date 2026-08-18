@@ -135,3 +135,19 @@ evidence, and the series can't open with it.
 
 **The first three real files are the site blocker.** One reads like an experiment;
 three read like a publication.
+
+---
+
+## Titles (locked 2026-08-18)
+
+**Formula: `[Category]: [the phenomenon the file documents]` — analyst register.**
+
+- The title carries the analytical finding. The card's hook line carries the
+  narrative color. Bait never goes in the title.
+- Register test: would this title sit naturally in a Gartner/Forrester report
+  list? Does it name a phenomenon a practitioner could cite in a meeting?
+- Worked example, from the sample file:
+  - ✓ "SIEM Replacement: When Selection Criteria Fail to Differentiate"
+  - ✗ "Deciding on a SIEM Replacement" — category label, no finding
+  - ✗ "We Bought the 3am Phone Call" — hook with no context; hooks live in the
+    card line, not the title
