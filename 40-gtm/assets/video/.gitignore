@@ -2,3 +2,8 @@
 **/05-remotion/node_modules/
 **/05-remotion/out/
 **/05-remotion/dist/
+
+# Shared TTS / API keys (use .env.example as template)
+.env
+.env.*
+!.env.example

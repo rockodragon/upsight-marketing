@@ -1,0 +1,31 @@
+{
+  "name": "upsight-survey-vsl-remotion",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts SurveyVsl --output=out/SurveyVSL.mp4",
+    "render:landscape": "remotion render src/index.ts SurveyVsl --output=out/SurveyVSL.mp4",
+    "still": "remotion still src/index.ts SurveyVsl --output=out/preview-frame.png --frame=1110 --scale=0.4",
+    "upgrade": "remotion upgrade",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/captions": "4.0.484",
+    "@remotion/cli": "4.0.484",
+    "@remotion/google-fonts": "4.0.484",
+    "@remotion/layout-utils": "4.0.484",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "4.0.484",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config": "4.0.484",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  }
+}

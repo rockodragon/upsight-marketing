@@ -17,8 +17,14 @@ Folders are **numbered in production order** — work top to bottom.
 │   ├── 04-assets/               ← STEP 4: cleaned files for Remotion
 │   └── 05-remotion/             ← STEP 5: build + render
 │
+├── outreach-asks/               ← VSL — The Thing You Already Know (3:14)
+├── oside-app/                   ← MOVED → ~/code/oside-marketing
+├── impossible-to-miss/          ← brand thesis film (Chiat Day–level)
+├── account-signal/              ← consulting Account Signal opener (CS/churn)
+├── survey-vsl/                  ← earlier CSAT survey cut (narrower framing)
+├── never-start-at-zero/         ← VSL — compounding profiles (~0:51 mute cut)
 ├── upsight-homepage-hero/       ← live project
-├── upsight-smart-surveys/       ← live project
+├── upsight-smart-surveys/       ← live project (short hero)
 ├── upsight-ssd-demo/            ← live project
 ├── remotionVideos-UpSight/      ← legacy ad factory (deprecated)
 └── _shared/                     ← optional cross-video brand tokens
@@ -87,8 +93,12 @@ for setup and the `npm run caption-video` CLI.
 
 | Slug | Purpose | Script | Output |
 |------|---------|--------|--------|
+| `outreach-asks` | VSL — The Thing You Already Know (3:14 + :30 + :15) | `01-script/hero.script.json` | `05-remotion/out/TheThingYouAlreadyKnow.mp4` |
+| `impossible-to-miss` | Brand thesis film — already telling you → impossible to miss | `01-script/hero.script.json` | `05-remotion/out/ImpossibleToMiss.mp4` |
 | `upsight-homepage-hero` | Leadership meeting prep homepage hero | `01-script/hero.script.json` | `05-remotion/out/hero.mp4` |
-| `upsight-smart-surveys` | AI survey — voice, text, chat | `01-script/hero.script.json` | `05-remotion/out/hero.mp4` |
+| `upsight-smart-surveys` | AI survey — voice, text, chat (short hero) | `01-script/hero.script.json` | `05-remotion/out/hero.mp4` |
+| `upsight-survey-vsl` | Survey VSL — The Survey That Talks Back (~2:37) | `01-script/hero.script.json` | `05-remotion/out/SurveyVSL.mp4` |
+| `never-start-at-zero` | VSL — compounding profiles, never start at zero (~0:51 mute cut) | `01-script/hero.script.json` | `05-remotion/out/NeverStartAtZero.mp4` |
 | `upsight-ssd-demo` | SSD board/founder demo (2:30) | `01-script/hero.script.json` | `05-remotion/out/ssd-demo.mp4` |
 
 ## Production workflow (typical)

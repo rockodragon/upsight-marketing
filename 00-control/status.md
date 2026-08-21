@@ -5,6 +5,156 @@
 
 ---
 
+## 2026-08-18 — Never Start at Zero VSL v1
+
+**Shipped**
+- New video project `40-gtm/assets/video/never-start-at-zero/` — compounding-profiles VSL (~0:51 mute-first cut, 1920×1080, marketing dark). Full spoken script still ~2:15 in `01-script/`.
+- Spine: lonely spreadsheet → relationship/stages → living profile bloom → never start at zero → demo beats (stage, follow-up, book, voice) → one-question ask → pitch from quotes → Send your first ask.
+- Composition `NeverStartAtZero`. Illustrative Remotion, burned captions, no VO. Contrast is old form→spreadsheet behavior; no competitor named.
+
+**Surfaced**
+- Proof beat uses composite quotes, not live survey verbatims. 30–45s paid cut and VO still open (`CAPTURE-NEEDED.md`).
+
+---
+
+## 2026-08-13 — Oside marketing split out of this vault
+
+**Shipped**
+- Oside video + design-system handoff moved to `/Users/rickmoy/code/oside-marketing` (own git repo).
+- Pointer left at `40-gtm/assets/video/oside-app/MOVED.md`. This vault is UpSight-only again.
+
+---
+
+## 2026-08-13 — Outreach-asks VSL scaffolded
+
+**Shipped**
+- New project `40-gtm/assets/video/outreach-asks/` — "The Thing You Already Know" (3:14 master + :30 paid + :15 social).
+- Spine: cold open (no logo) → non-accumulation → quote-card turn → Dana loop (interview, thickening profile, skipped question, pattern, segment, outreach, waiting-on) → three outcomes → Upload a conversation.
+- Compositions `TheThingYouAlreadyKnow` / `PaidCut30` / `SocialCut15` · 1920×1080 · illustrative named cast.
+
+**Surfaced**
+- VO, real customer voices, and live project counts still needed (`CAPTURE-NEEDED.md`). 9:16 recut of the :15 and the 5:00 sales-call pause-after-Beat-3 version are follow-ups, not in this Remotion project.
+
+---
+
+## 2026-08-12 — Oside App reel tightened
+
+**Shipped**
+- Hero cut down to ~34s: dropped Hidden in Plain Sight, tables, classic cars, murals/skate, brewery.
+- Flow: home opener → key → deals → shows → perks → surf2 (trim from 4s, 3s hold) → raffle → “Every day a new deal” → “Bring your friends” → membership CTA.
+- Opener caption: “Oceanside is special. It's our home.”
+
+**Surfaced**
+- Guahan Grill chalkboard parked with removed s02 vignette — reuse when a chalkboard beat returns.
+
+---
+
+## 2026-08-07 — Oside App launch reel scaffolded
+
+**Shipped**
+- New project `40-gtm/assets/video/oside-app/` — "Key to the City" consumer membership launch.
+- Wired real Oside design system: tokens from `oside/handoff/tokens/`, logos from Design System v2 zip, mockup plates from `oside/handoff/mockup-images/`.
+- Compositions `OsideApp60` / `OsideApp30` / `OsideApp15` (1080×1920) — gold `#D4AF37` / teal `#40E0D0`, Anton·Oswald·Manrope, 67433 lockup.
+- Video 2 (Founder Direct / business) parked in `01-script/notes.md` — ship consumer first.
+
+**Surfaced**
+- Live shoot + VO + music still needed; several mockup plates are stand-ins (Yelp photos mockup-only until cleared). CTA URL / store badges TBD.
+
+---
+
+## 2026-07-27 — Account Signal consulting opener (new project)
+
+**Shipped**
+- New project `40-gtm/assets/video/account-signal/` — consulting cut, not survey VSL.
+- Beats: opener (scores vs why) → usual approaches → lens (surveys/calls/email → reason·receipt·move) → one screen → land three → ask (2 suspicious accounts).
+- CI-v2 paper · LinkedIn 1920×1080 · ~92s · `05-remotion/out/AccountSignal.mp4`.
+
+**Decided**
+- Survey is an input, not the category. Account Signal is the wedge for Colin/Richard rooms.
+
+---
+
+## 2026-07-23 — Account Signal VSL: CI-v2 paper + LinkedIn 16:9 only
+
+**Shipped**
+- Switched from dark marketing to CI-v2 paper (`#eeeef2` / ink) matching talking-heads-marquee.
+- Dropped portrait/square compositions — master is LinkedIn landscape 1920×1080 only.
+- Bumped readable type scale + safe area (120×90); content max-width 1520 so cards don’t kiss edges.
+
+---
+
+## 2026-07-23 — Account Signal VSL: score placeholders + NBA + 2-account CTA
+
+**Shipped**
+- Named the wedge Account Signal (Colin CS room). Spine: #1 `CsatScoreView` placeholder, #2 follow-up, #3 evidence, next best action, #4 pattern ×13 — all illustrative/theoretical.
+- Script: mechanism adds “tells you the move”; CTA = two accounts / 30 min (not ten); contrast = warning + the move.
+- Captures #3/#4 OK as theory; #1/#2 still need ScreenStudio when demo-clean.
+
+**Surfaced**
+- Richard (sales) cut = same spine, flexed labels (“Verbal yes”) — not built yet.
+
+---
+
+## 2026-07-23 — Survey VSL v4: dark CSAT→receipt spine (~80s)
+
+**Shipped**
+- Walked back testimonial beat. One job only: when CSAT says fine, know who's leaving — prove with words.
+- Dark 16:9 master (`SurveyVsl`, ~80s): hook → problem → spine (CSAT→follow-up→evidence→13 accounts) → have/need contrast → mechanism → CTA.
+- Stand-ins labeled Illustrative; `CAPTURE-NEEDED.md` lists ScreenStudio path. No testimonials.
+- Captions burned in; VO off until paid ElevenLabs / per-scene MP3s exist for new scene IDs.
+
+**Stuck**
+- Real score→follow-up→evidence product capture still required before Colin if we claim in-product proof.
+
+---
+
+## 2026-07-23 — Survey VSL v3: CSAT→churn + receipt mocks + VO
+
+**Shipped**
+- Rewrote hook: CSAT Fine 7/10 → CONTRACT CUT; climax = evidence receipt (no testimonials).
+- Mock product UI in Remotion (`MockProduct.tsx`): CSAT card, follow-up panel, receipt, theme cluster.
+- Captions on; placeholder VO (`04-assets/audio/vo/`) via macOS say — ElevenLabs free API blocks library voices.
+- Render: `05-remotion/out/SurveyVSL-portrait.mp4` (~39s).
+
+**Stuck**
+- ElevenLabs paid plan (or custom clone voice) needed for API VO quality.
+
+---
+
+## 2026-07-23 — Survey VSL scaffolded ("The Survey That Talks Back")
+
+**Shipped**
+- New project `40-gtm/assets/video/upsight-survey-vsl/` from template: script (source + timed JSON), Remotion compositions `SurveyVsl` / `SurveyVslSquare` / `SurveyVslPortrait`, burned-in captions on social cuts.
+- Wired shared clips (AI interviewer, video response, Haley/Rylie, form, analytics) + brand stills as Personalized Ask placeholders.
+- Preview stills in `05-remotion/out/preview-*.png`; full 16:9 render kicked off → `out/SurveyVSL.mp4`.
+
+**Stuck**
+- No ElevenLabs key in env — VO not generated; scene durations are VO-estimated.
+- Real Personalized Ask / interviewer / evidence ScreenStudio captures still outstanding (see `01-script/assets-needed.md`).
+
+**Surfaced**
+- Confirm advisor CTA URL (`getupsight.com/advisor`) before shipping LinkedIn cut.
+
+---
+
+## 2026-07-21 — Talking Heads Marquee: paper bg + plural labels
+
+**Shipped**
+- Restyled `_shared/talking-heads-marquee` to CI-v2 homepage paper (`#eeeef2`) / ink so it blends into the light site.
+- Marquee tile labels: **Zoom meetings**, **Support calls** (plural); source chip “Meetings” → “Zoom meetings”.
+- Re-rendered `05-remotion/out/talking-heads-marquee.mp4` (~6.3 MB).
+
+## 2026-07-21 — Talking Heads Marquee + shared video library
+
+**Shipped**
+- Built `_shared/talking-heads-marquee/` as a reusable 10s Remotion asset: `clip-manifest.json`, Remotion project, render → `05-remotion/out/talking-heads-marquee.mp4` (11.3 MB).
+- Featured tiles: v1/v2/v3 + Haley + Rylie + survey-qa; marquee band: customer-event clips 01–06.
+- Relinked `_shared/videos/` into `upsight-conversational-intelligence/04-assets/video/` via relative symlinks (kept local audio: cgent-more / deja-energy / nova-meet).
+- Recovered missing `01-people-are-coming-here…` into `_shared/videos/` from `upsight-ci-v2` copy.
+
+**Surfaced**
+- Remotion's public-dir copy does not reliably follow nested symlinks — talking-heads uses hardlinks into `04-assets/video/` for that reason. CI still uses symlinks (fine for studio; may need hardlinks if a CI render 404s).
+
 ## 2026-07-19 — CI-v2 portrait hero (4:5)
 
 **Shipped**

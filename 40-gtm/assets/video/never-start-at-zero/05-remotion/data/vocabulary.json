@@ -1,0 +1,12 @@
+{
+  "replacements": [
+    {
+      "variants": ["up sight", "upsite", "up site", "ap sight"],
+      "display": "UpSight"
+    },
+    {
+      "variants": ["rem ocean", "remotion dev", "re motion"],
+      "display": "Remotion"
+    }
+  ]
+}

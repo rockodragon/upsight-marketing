@@ -1,0 +1,144 @@
+{
+  "id": "upsight-survey-vsl",
+  "title": "Account Signal VSL — CSAT fine, still know who's leaving",
+  "description": "One wedge (Account Signal) for CS/churn. When CSAT says fine, know who's leaving — prove with words + next best action. No testimonials.",
+  "sourceScript": "source-survey-vsl-script.md",
+  "wedge": "account-signal",
+  "room": "cs-churn",
+  "cta": {
+    "label": "Speak to an Advisor",
+    "url": "https://getupsight.com/advisor"
+  },
+  "format": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationSeconds": 85
+  },
+  "formats": {
+    "landscape": { "width": 1920, "height": 1080 }
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "name": "Hook",
+      "durationSeconds": 8,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "This is the last thing they told us before they left.",
+          "onScreen": "Fine. 7/10.",
+          "caption": "Fine. 7/10. — last thing before they left."
+        },
+        {
+          "at": 4,
+          "voiceover": "Three weeks later, gone. So why couldn't we see it?",
+          "onScreen": "Gone · +21 days",
+          "caption": "Three weeks later — gone. Why couldn't we see it?"
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "name": "Problem",
+      "durationSeconds": 12,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "A score tells you someone's unhappy. Never why. And usually too late.",
+          "onScreen": "A score never tells you why.",
+          "caption": "A score tells you someone's unhappy. Never why. Usually too late."
+        }
+      ]
+    },
+    {
+      "id": "spine",
+      "name": "The One Screen",
+      "durationSeconds": 30,
+      "illustrative": true,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "Fine. Seven out of ten. Looks acceptable.",
+          "onScreen": "Fine. 7/10.",
+          "caption": "Fine. 7/10. Looks acceptable."
+        },
+        {
+          "at": 5,
+          "voiceover": "UpSight asks what fine actually means.",
+          "onScreen": "AI follow-up",
+          "caption": "What does “fine” actually mean?"
+        },
+        {
+          "at": 10,
+          "voiceover": "The receipt lands — exact quote, who said it, when, tagged renewal risk.",
+          "onScreen": "Evidence receipt",
+          "caption": "Quote · who · when · CFO froze spend."
+        },
+        {
+          "at": 17,
+          "voiceover": "It doesn't just flag the risk. It tells you the move.",
+          "onScreen": "Next best action",
+          "caption": "Loop in the exec sponsor before renewal."
+        },
+        {
+          "at": 23,
+          "voiceover": "That pattern hits thirteen other accounts. A driver, not an anecdote.",
+          "onScreen": "→ 13 accounts",
+          "caption": "One line → matched across 13 accounts."
+        }
+      ]
+    },
+    {
+      "id": "contrast",
+      "name": "Have vs Need",
+      "durationSeconds": 15,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "What you have: a score dashboard, a spreadsheet of answers, guessing after the fact.",
+          "onScreen": "What you have",
+          "caption": "Score dashboard. Spreadsheet. Guessing after the fact."
+        },
+        {
+          "at": 7,
+          "voiceover": "What you needed: the meaning, what matters tagged and attributable, a warning and the move while you can still act.",
+          "onScreen": "What you needed",
+          "caption": "Meaning. Tagged evidence. Warning + the move."
+        }
+      ]
+    },
+    {
+      "id": "mechanism",
+      "name": "Mechanism",
+      "durationSeconds": 7,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "A form stops at seven. UpSight asks the next question, keeps the receipt, and tells you the move.",
+          "onScreen": "Ask · receipt · the move",
+          "caption": "Asks the next question, keeps the receipt, tells you the move."
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "name": "CTA",
+      "durationSeconds": 13,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "Pick two accounts you have some suspicions about. Thirty minutes.",
+          "onScreen": "2 accounts · 30 min",
+          "caption": "Pick 2 accounts you have suspicions about. 30 min."
+        },
+        {
+          "at": 6,
+          "voiceover": "I'll show you what the form missed — and the next move. Before they hand you a seven on the way out.",
+          "onScreen": "Speak to an Advisor",
+          "caption": "What the form missed + the next move. Before the next 7."
+        }
+      ]
+    }
+  ]
+}

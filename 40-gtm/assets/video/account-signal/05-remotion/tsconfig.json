@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": { "@/*": ["src/*"] }
+  },
+  "include": [
+    "src/index.ts",
+    "src/Root.tsx",
+    "src/lib/brand.ts",
+    "src/lib/fonts.ts",
+    "src/lib/script.ts",
+    "src/components/MarketingBackground.tsx",
+    "src/components/Visuals.tsx",
+    "src/compositions/AccountSignal.tsx",
+    "../01-script/**/*.json"
+  ],
+  "exclude": ["node_modules"]
+}

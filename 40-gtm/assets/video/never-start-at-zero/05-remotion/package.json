@@ -1,0 +1,32 @@
+{
+  "name": "never-start-at-zero-remotion",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts NeverStartAtZero --output=out/NeverStartAtZero.mp4",
+    "still": "remotion still src/index.ts NeverStartAtZero --output=out/preview.png --frame=570 --scale=0.4",
+    "upgrade": "remotion upgrade",
+    "caption-video": "tsx scripts/caption-video.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/captions": "4.0.484",
+    "@remotion/cli": "4.0.484",
+    "@remotion/google-fonts": "4.0.484",
+    "@remotion/layout-utils": "4.0.484",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "4.0.484",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config": "4.0.484",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  }
+}

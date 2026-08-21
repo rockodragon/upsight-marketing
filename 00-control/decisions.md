@@ -5,6 +5,9 @@
 
 ---
 
+## 2026-07-27 — Account Signal is the wedge; survey is an input
+**Why:** Colin/Richard conversations hire for the why behind at-risk or lost accounts (receipt + next move + pattern), not a better survey product. Surveys, calls, and email are sources for the lens. Keep any Survey VSL as a separate, narrower asset.
+
 ## 2026-07-19 - Homepage V4 uses a disciplined proof-and-conversion sequence
 **Why:** V3 established the right category and differentiator but still read more like a product
 essay than a lead-generation page. V4 applies Fletch PMM discipline and the persuasion order of the
