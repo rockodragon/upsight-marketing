@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Your team already records every call and learns almost nothing from it. UpSight re-reads the recordings you already have through named lenses and hands back findings with the receipt attached — the exact moment someone said it, one click away."
+    />
+    <title>UpSight | Your last 100 calls already answered this</title>
+    <link rel="icon" href="../../brand/upsight-logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css?v=1" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="UpSight home">
+        <img src="../../brand/upsight-logo.png" alt="" width="32" height="32" />
+        <span>UpSight</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="https://getupsight.com/customer-discovery">For product teams</a>
+        <a href="../../pages/ai-interviewer-2026-07/">AI Interviewer</a>
+        <a href="https://getupsight.com/customer-discovery-for-consultants">Consultants</a>
+        <a href="https://getupsight.com/pricing">Pricing</a>
+        <a href="https://getupsight.com/blog">Blog</a>
+        <a href="https://getupsight.com/docs">Docs</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="sign-in" href="https://getupsight.com/login">Sign in</a>
+        <a
+          class="button button-primary button-small"
+          href="https://getupsight.com/sign-up?intent=analyze-3-conversations"
+          data-placement="nav"
+          >Analyze 3 old calls</a
+        >
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ============================================================
+           1 — HERO. Claim.
+           ============================================================ -->
+      <section class="hero" id="top">
+        <div class="lamp lamp-hero" aria-hidden="true"></div>
+
+        <div class="hero-copy">
+          <h1>Your last 100 calls already <em class="lit">answered</em> this.</h1>
+          <p class="hero-summary">
+            The roadmap fight. The pricing question. Whether customers actually want the thing. The
+            answer is sitting in a call you recorded months ago &mdash; UpSight finds it and hands it
+            back with the receipt attached: the exact moment someone said it, one click away.
+          </p>
+
+          <div class="actions">
+            <a
+              class="button button-primary"
+              href="https://getupsight.com/sign-up?intent=analyze-3-conversations"
+              data-placement="hero"
+              >Analyze 3 old calls &mdash; free</a
+            >
+            <a class="button button-ghost" href="https://cal.com/rickmoy" data-placement="hero"
+              >Bring your calls to a working session</a
+            >
+          </div>
+
+          <p class="hero-note">
+            No new research project. No blank survey. Start with three recordings you already have.
+          </p>
+        </div>
+
+        <!-- ------------------------------------------------------------------
+             ANIMATED DIAGRAM SLOT — "The Traceback"
+
+             PLACEHOLDER ONLY. Do not build the animation here.
+             Spec + acceptance criteria: ../traceback-diagram-handoff.md
+             Remotion composition, ~14s seamless loop, 16:9.
+
+             To ship, replace the .slot-frame contents with:
+
+               <video
+                 class="traceback"
+                 autoplay muted loop playsinline
+                 preload="metadata"
+                 poster="./traceback-still.png"
+                 aria-label="A recorded call passing under named lenses, then a
+                             single claim tracing backwards to the timestamp where
+                             it was said"
+               >
+                 <source src="./traceback.webm" type="video/webm" />
+                 <source src="./traceback.mp4" type="video/mp4" />
+               </video>
+
+             traceback-still.png is the LAST frame of beat 3 (traceback line
+             already drawn), used both as the poster and as the
+             prefers-reduced-motion render. See handoff section 2.
+             ------------------------------------------------------------------ -->
+        <figure class="diagram-slot">
+          <div class="slot-frame">
+            <p class="slot-title">The Traceback</p>
+            <p class="slot-meta">Hero animation &middot; 16:9 &middot; ~14s seamless loop</p>
+            <p class="slot-body">
+              One recorded call passes under named lenses, then a single claim traces backwards to
+              the moment it was said.
+            </p>
+            <p class="slot-ref">
+              <span class="mono">../traceback-diagram-handoff.md</span>
+            </p>
+          </div>
+          <figcaption>Placeholder. Motion asset pending &mdash; this page ships one, not two.</figcaption>
+        </figure>
+      </section>
+
+      <!-- ============================================================
+           2 — THE GRAVEYARD. Agitation.
+           ============================================================ -->
+      <section class="band graveyard" id="graveyard">
+        <div class="wrap">
+          <h2>You&rsquo;re paying good money to fill a graveyard.</h2>
+          <p class="lead">
+            Zoom records it. Gong scores it. Granola summarizes it, and the summary lands in a Slack
+            channel nobody reopens. Recording was never the hard part &mdash; every team does that
+            now. Getting anything back out is. Two hundred calls in, the archive is a transcript
+            graveyard, and the question your team is arguing about today was answered out loud in one
+            of them.
+          </p>
+        </div>
+
+        <div class="wall" role="img" aria-label="A wall of recorded call durations fading into the dark, with a single one lit — the call that holds the answer.">
+          <div class="wall-grid">
+            <span class="tomb">01:46:30</span>
+            <span class="tomb">01:06:22</span>
+            <span class="tomb">01:10:37</span>
+            <span class="tomb">00:36:58</span>
+            <span class="tomb">00:49:26</span>
+            <span class="tomb">00:39:27</span>
+            <span class="tomb">01:31:08</span>
+            <span class="tomb">00:45:37</span>
+            <span class="tomb">00:51:12</span>
+            <span class="tomb">00:13:07</span>
+            <span class="tomb">01:00:38</span>
+            <span class="tomb">01:15:08</span>
+            <span class="tomb">01:47:29</span>
+            <span class="tomb">01:43:50</span>
+            <span class="tomb">01:36:57</span>
+            <span class="tomb">00:41:46</span>
+            <span class="tomb">01:34:12</span>
+            <span class="tomb">00:18:45</span>
+            <span class="tomb">00:53:15</span>
+            <span class="tomb">01:43:05</span>
+            <span class="tomb">01:25:21</span>
+            <span class="tomb">00:43:33</span>
+            <span class="tomb">00:49:37</span>
+            <span class="tomb">00:48:08</span>
+            <span class="tomb">00:20:46</span>
+            <span class="tomb">00:52:54</span>
+            <span class="tomb">01:11:45</span>
+            <span class="tomb">01:12:44</span>
+            <span class="tomb">00:41:51</span>
+            <span class="tomb">00:09:04</span>
+            <span class="tomb">00:53:51</span>
+            <span class="tomb">00:17:55</span>
+            <span class="tomb">00:35:48</span>
+            <span class="tomb">01:33:36</span>
+            <span class="tomb">01:42:06</span>
+            <span class="tomb">01:10:49</span>
+            <span class="tomb">00:18:59</span>
+            <span class="tomb">01:08:29</span>
+            <span class="tomb">00:14:17</span>
+            <span class="tomb">01:23:12</span>
+            <span class="tomb">01:07:57</span>
+            <span class="tomb">01:50:30</span>
+            <span class="tomb">01:32:57</span>
+            <span class="tomb">00:29:36</span>
+            <span class="tomb">00:43:37</span>
+            <span class="tomb is-found">00:33:56</span>
+            <span class="tomb">01:50:20</span>
+            <span class="tomb">00:46:15</span>
+            <span class="tomb">00:47:53</span>
+            <span class="tomb">01:40:40</span>
+            <span class="tomb">01:13:15</span>
+            <span class="tomb">00:20:21</span>
+            <span class="tomb">01:13:41</span>
+            <span class="tomb">01:41:46</span>
+            <span class="tomb">00:59:13</span>
+            <span class="tomb">00:42:11</span>
+            <span class="tomb">01:01:17</span>
+            <span class="tomb">00:30:11</span>
+            <span class="tomb">01:17:42</span>
+            <span class="tomb">00:30:54</span>
+            <span class="tomb">01:31:51</span>
+            <span class="tomb">01:27:39</span>
+            <span class="tomb">00:41:08</span>
+            <span class="tomb">00:42:23</span>
+            <span class="tomb">00:50:49</span>
+            <span class="tomb">00:48:59</span>
+            <span class="tomb">00:34:10</span>
+            <span class="tomb">00:51:59</span>
+            <span class="tomb">01:38:31</span>
+            <span class="tomb">01:42:39</span>
+            <span class="tomb">00:11:41</span>
+            <span class="tomb">00:40:48</span>
+            <span class="tomb">00:28:29</span>
+            <span class="tomb">00:30:54</span>
+            <span class="tomb">00:43:17</span>
+            <span class="tomb">01:02:52</span>
+            <span class="tomb">00:42:44</span>
+            <span class="tomb">01:09:34</span>
+            <span class="tomb">01:38:47</span>
+            <span class="tomb">00:47:36</span>
+            <span class="tomb">01:18:21</span>
+            <span class="tomb">01:44:29</span>
+            <span class="tomb">00:14:43</span>
+            <span class="tomb">00:26:25</span>
+            <span class="tomb">01:02:35</span>
+            <span class="tomb">01:44:51</span>
+            <span class="tomb">01:38:10</span>
+            <span class="tomb">01:16:52</span>
+            <span class="tomb">00:22:00</span>
+            <span class="tomb">00:14:53</span>
+            <span class="tomb">00:57:47</span>
+            <span class="tomb">00:35:09</span>
+            <span class="tomb">00:32:32</span>
+            <span class="tomb">01:51:38</span>
+            <span class="tomb">00:45:34</span>
+            <span class="tomb">00:33:52</span>
+            <span class="tomb">01:02:30</span>
+            <span class="tomb">01:25:48</span>
+            <span class="tomb">00:22:45</span>
+            <span class="tomb">00:28:20</span>
+            <span class="tomb">00:32:09</span>
+            <span class="tomb">01:21:14</span>
+            <span class="tomb">00:46:02</span>
+            <span class="tomb">00:11:06</span>
+            <span class="tomb">01:27:58</span>
+            <span class="tomb">01:35:36</span>
+            <span class="tomb">00:49:41</span>
+            <span class="tomb">00:46:04</span>
+            <span class="tomb">00:38:37</span>
+            <span class="tomb">00:30:00</span>
+            <span class="tomb">00:27:46</span>
+            <span class="tomb">00:48:30</span>
+            <span class="tomb">00:49:16</span>
+            <span class="tomb">01:19:24</span>
+            <span class="tomb">00:27:23</span>
+            <span class="tomb">00:11:38</span>
+            <span class="tomb">01:22:09</span>
+            <span class="tomb">00:30:03</span>
+            <span class="tomb">01:13:17</span>
+            <span class="tomb">00:50:52</span>
+            <span class="tomb">01:01:35</span>
+            <span class="tomb">01:47:32</span>
+            <span class="tomb">00:11:05</span>
+            <span class="tomb">01:19:26</span>
+            <span class="tomb">01:22:48</span>
+            <span class="tomb">01:12:17</span>
+            <span class="tomb">01:23:18</span>
+            <span class="tomb">00:35:21</span>
+            <span class="tomb">01:42:09</span>
+            <span class="tomb">01:05:36</span>
+            <span class="tomb">00:31:28</span>
+            <span class="tomb">00:38:55</span>
+            <span class="tomb">00:24:22</span>
+            <span class="tomb">01:42:27</span>
+            <span class="tomb">00:16:58</span>
+            <span class="tomb">00:50:44</span>
+            <span class="tomb">01:22:47</span>
+            <span class="tomb">00:28:51</span>
+            <span class="tomb">00:36:00</span>
+            <span class="tomb">00:19:29</span>
+            <span class="tomb">00:53:21</span>
+            <span class="tomb">01:04:52</span>
+            <span class="tomb">01:06:59</span>
+            <span class="tomb">00:24:27</span>
+            <span class="tomb">00:12:53</span>
+            <span class="tomb">00:31:25</span>
+            <span class="tomb">00:47:13</span>
+            <span class="tomb">00:50:48</span>
+            <span class="tomb">00:23:49</span>
+            <span class="tomb">01:15:13</span>
+            <span class="tomb">01:22:21</span>
+            <span class="tomb">00:53:05</span>
+            <span class="tomb">01:00:26</span>
+            <span class="tomb">01:32:59</span>
+            <span class="tomb">01:25:46</span>
+            <span class="tomb">00:44:38</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           3 — THE LENSES. Mechanism.
+           ============================================================ -->
+      <section class="lenses" id="lenses">
+        <div class="wrap">
+          <h2>One summary is not what a call is worth.</h2>
+          <p class="lead">
+            A note-taker reads a call once and files one summary. UpSight reads the same recording
+            the way a team of analysts would: a BANT read for sales, a discovery read for product, a
+            jobs-to-be-done read for marketing, a decision read for the room where it gets argued.
+            Lenses are named analyses &mdash; each one re-reads the conversation you already have and
+            returns structured findings, every claim cited to the moment it was said. Same call, five
+            different answers. That&rsquo;s why the archive is worth digging up.
+          </p>
+        </div>
+
+        <div class="rail">
+          <p class="rail-source"><span class="mono">One call</span></p>
+          <ol class="rail-list">
+            <li>
+              <span class="mono lens-name">BANT</span>
+              <span class="lens-read">Budget, authority, need, timing &mdash; read for sales</span>
+            </li>
+            <li>
+              <span class="mono lens-name">Discovery</span>
+              <span class="lens-read">Problems, workarounds, and what breaks &mdash; read for product</span>
+            </li>
+            <li>
+              <span class="mono lens-name">JTBD</span>
+              <span class="lens-read">The job they hired you for &mdash; read for marketing</span>
+            </li>
+            <li>
+              <span class="mono lens-name">Decision</span>
+              <span class="lens-read">What was at stake and what tipped it &mdash; read for the room</span>
+            </li>
+            <li class="rail-more">
+              <span class="mono lens-name">&plus; more</span>
+              <span class="lens-read">Seventeen lens templates ship today. Four of them are named here.</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           4 — THE REFUSAL. Objection.
+           ============================================================ -->
+      <section class="band refusal" id="refusal">
+        <div class="wrap">
+          <h2>It will not make things up.</h2>
+          <p class="lead">
+            Most AI tools fill silence with confidence. UpSight is built to refuse. If the evidence
+            isn&rsquo;t in the call, it says so. A guess never outranks a known fact. A citation only
+            exists if it opens to the line that earned it &mdash; and when the model can&rsquo;t
+            honestly score its own confidence, we show you nothing rather than a number.
+          </p>
+        </div>
+
+        <figure class="principle">
+          <blockquote>
+            <p>An honest uncited claim beats a citation that opens nothing.</p>
+          </blockquote>
+          <figcaption>
+            Engineering principle &mdash; shipped in the product, not written for this page.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- ============================================================
+           5 — THE EXHIBIT. Proof.
+           ============================================================ -->
+      <section class="exhibit" id="exhibit">
+        <div class="lamp lamp-exhibit" aria-hidden="true"></div>
+
+        <div class="wrap">
+          <h2>Click a conclusion. Land on the transcript.</h2>
+          <p class="lead">
+            This is a real decision file, built from real recorded conversations and published at
+            thedecisionfiles.com. Every claim opens to the line where someone said it. Go ahead
+            &mdash; try to catch it asserting something it can&rsquo;t show you.
+          </p>
+        </div>
+
+        <!-- The frame is the seam between two brands. The document inside arrives
+             in Decision Files' own grammar; nothing in it is restyled by UpSight. -->
+        <figure class="exhibit-frame">
+          <div class="exhibit-strip">
+            <span class="mono">Exhibit &mdash; thedecisionfiles.com/case/deciding-on-a-siem-replacement</span>
+            <a
+              class="cite-chip"
+              href="https://thedecisionfiles.com/case/deciding-on-a-siem-replacement"
+              target="_blank"
+              rel="noopener"
+              >Open the full file<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg
+              ></a>
+          </div>
+
+          <!-- ------------------------------------------------------------------
+               TODO — BLOCKED, one-line fix. The live embed is written and ready:
+
+                 <iframe
+                   src="https://thedecisionfiles.com/case/deciding-on-a-siem-replacement"
+                   title="Decision File 014 — Security Logging Replacement, published at thedecisionfiles.com"
+                   loading="lazy"
+                   referrerpolicy="no-referrer-when-downgrade"
+                 ></iframe>
+
+               The Decision Files case page itself frames fine from our origin —
+               no X-Frame-Options, no frame-ancestors on that route. What is
+               blocked is the *interactive report nested inside it*
+               (https://upsight-staging.fly.dev/s/bf3VlTLtHBKp), which sends:
+
+                 Content-Security-Policy: frame-ancestors 'self'
+                   https://thedecisionfiles.com https://www.thedecisionfiles.com
+                   https://*.decision-files.pages.dev
+
+               frame-ancestors is evaluated against the whole ancestor chain, so
+               nesting it under getupsight.com blocks it. That report is the only
+               part that actually does "click a conclusion, land on the
+               transcript" — the surrounding case page is static. Shipping the
+               embed today would put a dead panel under a heading that promises
+               the opposite, which is the same defect as the fabricated UI this
+               page was built to remove.
+
+               UNBLOCK: add https://getupsight.com (and the staging origin used
+               for preview) to that report host's frame-ancestors directive, then
+               replace this .pending-note block with the iframe above. Nothing
+               else changes — the frame is already sized for it.
+               ------------------------------------------------------------------ -->
+          <div class="exhibit-stage is-pending">
+            <div class="pending-note">
+              <p class="pending-title">Decision File 014 &mdash; Security Logging Replacement</p>
+              <p class="pending-meta">Live embed pending</p>
+              <p class="pending-body">
+                The published file mounts in this frame, in its own Decision Files grammar. Until the
+                embed is unblocked it is one click away, on the record, at the source.
+              </p>
+            </div>
+          </div>
+
+          <figcaption>
+            A real decision file, published at thedecisionfiles.com. Analyzed with UpSight.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- ============================================================
+           6 — HOW IT WORKS. Path.
+           ============================================================ -->
+      <section class="band steps" id="how-it-works">
+        <div class="wrap">
+          <h2>Three steps. Zero new meetings.</h2>
+        </div>
+
+        <ol class="step-list">
+          <li>
+            <span class="mono step-num">01</span>
+            <div class="step-copy">
+              <h3>Point it at the pile.</h3>
+              <p>Bring the recordings, transcripts, and notes you already have.</p>
+            </div>
+          </li>
+          <li>
+            <span class="mono step-num">02</span>
+            <div class="step-copy">
+              <h3>Pick the lenses.</h3>
+              <p>Sales, discovery, jobs-to-be-done, decision &mdash; each one reads every call.</p>
+            </div>
+          </li>
+          <li>
+            <span class="mono step-num">03</span>
+            <div class="step-copy">
+              <h3>Open the receipts.</h3>
+              <p>Every finding cites its moment. Decide, and show the room why.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============================================================
+           7 — FOUNDER. Conviction.
+           ============================================================ -->
+      <section class="founder" id="founder">
+        <figure class="founder-quote">
+          <blockquote>
+            <p>
+              Good evidence gets argued away, dropped between meetings, or swallowed by the next busy
+              task.
+            </p>
+          </blockquote>
+        </figure>
+
+        <div class="founder-note">
+          <p>
+            I built UpSight because customer truth was still getting lost after teams did the hard
+            part &mdash; talking to customers, collecting the feedback, bringing the voice into the
+            room.
+          </p>
+          <p>
+            UpSight keeps the voice, the source, and the next move together, so a team can act before
+            the signal disappears.
+          </p>
+          <p class="signature">Rick Moy<span>Founder, UpSight</span></p>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           8 — CLOSE.
+           ============================================================ -->
+      <section class="band final-cta" id="start">
+        <div class="lamp lamp-final" aria-hidden="true"></div>
+        <div class="wrap">
+          <h2>Start with the three calls your team argues about most.</h2>
+          <p class="lead">
+            Upload them. If UpSight can&rsquo;t show you something you missed &mdash; with the receipt
+            &mdash; it cost you ten minutes and nothing else.
+          </p>
+          <div class="actions">
+            <a
+              class="button button-primary"
+              href="https://getupsight.com/sign-up?intent=analyze-3-conversations"
+              data-placement="final"
+              >Analyze 3 old calls &mdash; free</a
+            >
+            <a class="button button-ghost" href="https://cal.com/rickmoy" data-placement="final"
+              >Bring your calls to a working session</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand footer-brand" href="#top" aria-label="UpSight home">
+        <img src="../../brand/upsight-logo.png" alt="" width="28" height="28" />
+        <span>UpSight</span>
+      </a>
+      <p>Every claim opens to the moment it was said.</p>
+      <nav aria-label="Footer">
+        <a href="https://getupsight.com/customer-discovery">Product teams</a>
+        <a href="https://getupsight.com/customer-discovery-for-consultants">Consultants</a>
+        <a href="https://getupsight.com/pricing">Pricing</a>
+        <a href="https://getupsight.com/blog">Blog</a>
+        <a href="https://getupsight.com/docs">Docs</a>
+        <a href="https://getupsight.com/privacy">Privacy</a>
+        <a href="https://getupsight.com/sign-up?intent=analyze-3-conversations">Start</a>
+        <a href="mailto:support@getupsight.com">Contact</a>
+      </nav>
+    </footer>
+  </body>
+</html>

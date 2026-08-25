@@ -1,0 +1,1192 @@
+/* ==========================================================================
+   UpSight homepage — "the call graveyard" (2026-08)
+
+   Every colour, face, easing curve and radius below comes from
+   30-strategy/brand-style-guide.md. Nothing here is invented except the
+   layout-scale tokens (--page-pad, --section-pad, --rule, ...), which are
+   spacing derivations, and --exhibit-ground, which is a *quoted* colour
+   belonging to thedecisionfiles.com, not to UpSight. See README.md.
+
+   Layout concept: evidence under the desk lamp. A dark archive out of which
+   lit artifacts surface. Structure is carried by hairline rules and
+   alignment, never by card grids.
+   ========================================================================== */
+
+:root {
+  /* ---- canonical brand tokens (brand-style-guide.md) ---- */
+  --brand-blue-light: #0284c7;
+  --brand-blue-dark: #38bdf8;
+  --brand-amber: #f59e0b;
+  --brand-amber-glow: rgba(245, 158, 11, 0.3);
+  --brand-sky: #38bdf8;
+  --mkt-bg: #050508;
+  --mkt-bg-alt: #0a0a10;
+  --mkt-text: #eeeef2;
+  --mkt-text-dim: rgba(238, 238, 242, 0.7);
+  --mkt-text-dim-alt: rgba(238, 238, 242, 0.6);
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --ease-confident-glide: cubic-bezier(0.16, 1, 0.3, 1);
+  --radius: 0.625rem;
+
+  /* ---- derived: sharper editorial edge, sanctioned by the guide ---- */
+  --radius-edge: 4px;
+
+  /* ---- derived: hairline rule system (structure without cards) ---- */
+  --rule: rgba(238, 238, 242, 0.12);
+  --rule-strong: rgba(238, 238, 242, 0.2);
+  --rule-faint: rgba(238, 238, 242, 0.07);
+  --surface-lift: rgba(238, 238, 242, 0.03);
+
+  /* ---- derived: layout scale ---- */
+  --page-pad: clamp(1.25rem, 4vw, 4.25rem);
+  --section-pad: clamp(4.5rem, 8vw, 8rem);
+  --content-max: 88rem;
+
+  /* ---- quoted, not ours: Decision Files' own ground colour. Used only as
+         the backing plate of the framed exhibit so the document does not
+         flash white before it loads. ---- */
+  --exhibit-ground: #161826;
+
+  color-scheme: dark;
+}
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-color: rgba(238, 238, 242, 0.22) var(--mkt-bg);
+  scrollbar-width: thin;
+}
+
+body {
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: var(--mkt-bg);
+  color: var(--mkt-text);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+button,
+a {
+  font-family: var(--font-sans);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
+}
+
+img,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+blockquote,
+ol,
+ul {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* --------------------------------------------------------------------------
+   Browser surfaces — the parts we did not draw still carry the design
+   -------------------------------------------------------------------------- */
+
+::selection {
+  background: var(--brand-amber);
+  color: var(--mkt-bg);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--mkt-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(238, 238, 242, 0.18);
+  border: 3px solid var(--mkt-bg);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(238, 238, 242, 0.32);
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-amber);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Utilities
+   -------------------------------------------------------------------------- */
+
+.wrap {
+  position: relative;
+  z-index: 1;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding-inline: var(--page-pad);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+}
+
+.icon {
+  width: 0.85rem;
+  height: 0.85rem;
+  flex: none;
+}
+
+/* Sections carry the alternating band and a hairline seam between them. */
+main > section {
+  position: relative;
+}
+
+main > section + section {
+  border-top: 1px solid var(--rule-faint);
+}
+
+.band {
+  background: var(--mkt-bg-alt);
+}
+
+.graveyard,
+.lenses,
+.refusal,
+.exhibit,
+.steps,
+.final-cta {
+  padding-block: var(--section-pad);
+}
+
+/* The desk lamp. Warm pool of light where the argument is being made. */
+.lamp {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+}
+
+.lamp-hero {
+  background:
+    radial-gradient(46rem 28rem at 10% -8%, rgba(245, 158, 11, 0.1), transparent 68%),
+    radial-gradient(56rem 32rem at 82% 10%, rgba(56, 189, 248, 0.06), transparent 70%);
+}
+
+.lamp-exhibit {
+  background: radial-gradient(52rem 26rem at 50% 8%, rgba(245, 158, 11, 0.07), transparent 70%);
+}
+
+.lamp-final {
+  background: radial-gradient(50rem 26rem at 18% 100%, rgba(245, 158, 11, 0.11), transparent 70%);
+}
+
+/* --------------------------------------------------------------------------
+   Type scale
+   -------------------------------------------------------------------------- */
+
+h1 {
+  font-size: clamp(2.6rem, 5.4vw, 4.75rem);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  font-size: clamp(1.95rem, 3.9vw, 3.35rem);
+  font-weight: 800;
+  line-height: 1.03;
+  letter-spacing: -0.032em;
+  max-width: 19ch;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 1.9vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.018em;
+}
+
+.lead {
+  margin-top: clamp(1.35rem, 2.2vw, 1.9rem);
+  max-width: 68ch;
+  font-size: clamp(1.05rem, 1.25vw, 1.2rem);
+  font-weight: 300;
+  line-height: 1.68;
+  color: var(--mkt-text-dim);
+}
+
+/* --------------------------------------------------------------------------
+   Skip link
+   -------------------------------------------------------------------------- */
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.7rem 0.95rem;
+  border-radius: var(--radius-edge);
+  background: var(--brand-amber);
+  color: var(--mkt-bg);
+  font-size: 0.82rem;
+  font-weight: 800;
+  transform: translateY(-200%);
+  transition: transform 220ms var(--ease-confident-glide);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
+
+.site-header {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  min-height: 4.75rem;
+  padding-inline: var(--page-pad);
+  border-bottom: 1px solid var(--rule);
+  background: rgba(5, 5, 8, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: max-content;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.brand img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.1rem, 2.4vw, 2.35rem);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--mkt-text-dim);
+}
+
+.site-nav a,
+.sign-in,
+footer nav a {
+  transition: color 200ms var(--ease-confident-glide);
+}
+
+.site-nav a:hover,
+.sign-in:hover,
+footer nav a:hover {
+  color: var(--mkt-text);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.1rem;
+}
+
+.sign-in {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--mkt-text-dim);
+}
+
+/* --------------------------------------------------------------------------
+   Buttons — amber means act. Nothing else on this page is amber.
+   -------------------------------------------------------------------------- */
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: clamp(1.85rem, 3vw, 2.6rem);
+}
+
+.button {
+  display: inline-flex;
+  min-height: 3.35rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-edge);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: -0.008em;
+  transition:
+    transform 320ms var(--ease-confident-glide),
+    box-shadow 320ms var(--ease-confident-glide),
+    background-color 320ms var(--ease-confident-glide),
+    border-color 320ms var(--ease-confident-glide),
+    color 320ms var(--ease-confident-glide);
+}
+
+.button-small {
+  min-height: 2.65rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
+}
+
+.button-primary {
+  background: var(--brand-amber);
+  color: var(--mkt-bg);
+  box-shadow: 0 10px 26px -16px var(--brand-amber-glow);
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 34px -12px var(--brand-amber-glow),
+    0 0 0 1px rgba(245, 158, 11, 0.55);
+}
+
+.button-ghost {
+  border-color: var(--rule-strong);
+  background: transparent;
+  color: var(--mkt-text);
+}
+
+.button-ghost:hover {
+  transform: translateY(-2px);
+  border-color: rgba(238, 238, 242, 0.42);
+  background: var(--surface-lift);
+}
+
+/* --------------------------------------------------------------------------
+   1 — Hero
+   -------------------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  align-items: center;
+  gap: clamp(2.75rem, 4.5vw, 5rem);
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: clamp(4rem, 7vw, 7rem) var(--page-pad) clamp(4.75rem, 8vw, 8rem);
+}
+
+.hero-copy,
+.diagram-slot {
+  position: relative;
+  z-index: 1;
+}
+
+.lit {
+  color: var(--brand-amber);
+  font-style: normal;
+}
+
+.hero-summary {
+  margin-top: clamp(1.4rem, 2.2vw, 1.95rem);
+  max-width: 52ch;
+  font-size: clamp(1.05rem, 1.25vw, 1.2rem);
+  font-weight: 300;
+  line-height: 1.66;
+  color: var(--mkt-text-dim);
+}
+
+.hero-note {
+  margin-top: 1.4rem;
+  max-width: 46ch;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--mkt-text-dim-alt);
+}
+
+/* ---- the animated diagram slot (placeholder) ---- */
+
+.diagram-slot {
+  margin: 0;
+}
+
+.slot-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.6rem;
+  aspect-ratio: 16 / 9;
+  padding: clamp(1.35rem, 3vw, 2.75rem);
+  border: 1px dashed rgba(238, 238, 242, 0.24);
+  border-radius: var(--radius-edge);
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(238, 238, 242, 0.022) 0 10px,
+      transparent 10px 20px
+    ),
+    var(--mkt-bg-alt);
+}
+
+.slot-title {
+  font-size: clamp(1.15rem, 1.7vw, 1.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.slot-meta,
+.slot-ref {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mkt-text-dim-alt);
+}
+
+.slot-body {
+  max-width: 42ch;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--mkt-text-dim);
+}
+
+.slot-ref {
+  margin-top: 0.35rem;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.diagram-slot figcaption {
+  margin-top: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: var(--mkt-text-dim-alt);
+}
+
+/* Forward-compatible: when traceback.mp4 / .webm land, the video replaces the
+   .slot-frame and the reduced-motion still takes over below. */
+.traceback,
+.traceback-still {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-edge);
+  object-fit: cover;
+}
+
+.traceback-still {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   2 — The graveyard
+   -------------------------------------------------------------------------- */
+
+.wall {
+  position: relative;
+  z-index: 1;
+  max-width: var(--content-max);
+  margin: clamp(3rem, 5vw, 4.5rem) auto 0;
+  padding-inline: var(--page-pad);
+}
+
+.wall-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5.1rem, 1fr));
+  gap: 0.6rem 1.15rem;
+  max-height: clamp(14rem, 26vw, 21rem);
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    #000 0%,
+    #000 26%,
+    rgba(0, 0, 0, 0.34) 70%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    180deg,
+    #000 0%,
+    #000 26%,
+    rgba(0, 0, 0, 0.34) 70%,
+    transparent 100%
+  );
+}
+
+.tomb {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.76rem;
+  font-weight: 400;
+  letter-spacing: 0.015em;
+  color: rgba(238, 238, 242, 0.5);
+  white-space: nowrap;
+}
+
+/* The one that holds the answer. Sky is this page's citation colour.
+   Placed explicitly rather than left to auto-flow, so it lands in the lit part
+   of the wall at every column count instead of falling below the fade on
+   narrow screens. */
+.tomb.is-found {
+  grid-row: 4;
+  grid-column: 2;
+  color: var(--brand-sky);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.6);
+  text-shadow: 0 0 16px rgba(56, 189, 248, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   3 — The lenses. One source, several reads: drawn in rules, not cards.
+   -------------------------------------------------------------------------- */
+
+.rail {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 11rem) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: start;
+  max-width: var(--content-max);
+  margin: clamp(3rem, 5vw, 4.5rem) auto 0;
+  padding-inline: var(--page-pad);
+}
+
+/* Centred against the full stack of reads: one source, several answers. */
+.rail-source {
+  align-self: center;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+.rail-source .mono {
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mkt-text);
+}
+
+.rail-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid var(--rule);
+}
+
+.rail-list li {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 9rem) minmax(0, 1fr);
+  gap: clamp(0.9rem, 2vw, 2rem);
+  align-items: baseline;
+  padding: clamp(1rem, 1.8vw, 1.45rem) 0 clamp(1rem, 1.8vw, 1.45rem)
+    clamp(1.5rem, 3vw, 2.75rem);
+  border-bottom: 1px solid var(--rule);
+}
+
+.rail-list li:first-child {
+  border-top: 1px solid var(--rule);
+}
+
+/* the tick that connects each read back to the single source */
+.rail-list li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: clamp(0.8rem, 1.6vw, 1.5rem);
+  height: 1px;
+  background: var(--rule-strong);
+}
+
+.lens-name {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mkt-text);
+}
+
+.lens-read {
+  font-size: clamp(0.98rem, 1.1vw, 1.08rem);
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--mkt-text-dim);
+}
+
+.rail-more .lens-name,
+.rail-more .lens-read {
+  color: var(--mkt-text-dim-alt);
+}
+
+/* --------------------------------------------------------------------------
+   4 — The refusal
+   -------------------------------------------------------------------------- */
+
+.principle {
+  position: relative;
+  z-index: 1;
+  max-width: var(--content-max);
+  margin: clamp(2.75rem, 4.5vw, 4rem) auto 0;
+  padding-inline: var(--page-pad);
+}
+
+.principle blockquote {
+  max-width: 46ch;
+  padding-left: clamp(1.25rem, 2.5vw, 2.25rem);
+  border-left: 1px solid var(--brand-sky);
+}
+
+.principle blockquote p {
+  font-family: var(--font-mono);
+  font-size: clamp(1.1rem, 2.3vw, 1.95rem);
+  font-weight: 400;
+  line-height: 1.38;
+  letter-spacing: -0.015em;
+  color: var(--mkt-text);
+  text-wrap: balance;
+}
+
+.principle figcaption {
+  margin-top: 1.15rem;
+  padding-left: clamp(1.25rem, 2.5vw, 2.25rem);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mkt-text-dim-alt);
+}
+
+/* --------------------------------------------------------------------------
+   5 — The exhibit. The frame is the seam between two brands: a document from
+   thedecisionfiles.com laid on UpSight's desk, in its own grammar, unrestyled.
+   -------------------------------------------------------------------------- */
+
+.exhibit-frame {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  max-width: 74rem;
+  margin: clamp(2.5rem, 4vw, 4rem) auto 0;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-edge);
+  background: var(--mkt-bg-alt);
+  box-shadow:
+    0 34px 72px -30px rgba(0, 0, 0, 0.95),
+    0 10px 30px -22px rgba(245, 158, 11, 0.28);
+}
+
+.exhibit-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem clamp(0.85rem, 1.6vw, 1.25rem);
+  border-bottom: 1px solid var(--rule);
+  background: var(--surface-lift);
+}
+
+.exhibit-strip .mono {
+  overflow: hidden;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: var(--mkt-text-dim-alt);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cite-chip {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.32rem 0.6rem;
+  border: 1px solid rgba(56, 189, 248, 0.32);
+  border-radius: var(--radius-edge);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--brand-sky);
+  transition:
+    box-shadow 320ms var(--ease-confident-glide),
+    border-color 320ms var(--ease-confident-glide),
+    background-color 320ms var(--ease-confident-glide);
+}
+
+.cite-chip:hover {
+  border-color: rgba(56, 189, 248, 0.65);
+  background: rgba(56, 189, 248, 0.09);
+  box-shadow: 0 8px 24px -12px rgba(56, 189, 248, 0.75);
+}
+
+.exhibit-stage {
+  position: relative;
+  height: clamp(26rem, 64vh, 42rem);
+  background: var(--exhibit-ground);
+}
+
+.exhibit-stage iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Reserved, not faked. The stage keeps the exhibit's exact footprint and says
+   plainly that the document is not mounted yet. Same placeholder grammar as the
+   hero's animation slot, so the page has one language for "pending", not two. */
+.exhibit-stage.is-pending {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(238, 238, 242, 0.02) 0 10px,
+      transparent 10px 20px
+    ),
+    var(--exhibit-ground);
+}
+
+.pending-note {
+  max-width: 46ch;
+  text-align: center;
+}
+
+.pending-title {
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--mkt-text);
+}
+
+.pending-meta {
+  margin-top: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mkt-text-dim-alt);
+}
+
+.pending-body {
+  margin-top: 1.1rem;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--mkt-text-dim);
+}
+
+.exhibit-frame figcaption {
+  padding: 0.9rem clamp(0.85rem, 1.6vw, 1.25rem);
+  border-top: 1px solid var(--rule);
+  background: var(--surface-lift);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--mkt-text-dim-alt);
+}
+
+/* --------------------------------------------------------------------------
+   6 — How it works. Three rows, not three cards.
+   -------------------------------------------------------------------------- */
+
+.step-list {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  max-width: var(--content-max);
+  margin: clamp(2.5rem, 4vw, 3.75rem) auto 0;
+  padding: 0 var(--page-pad);
+}
+
+.step-list li {
+  display: grid;
+  grid-template-columns: minmax(0, 6.5rem) minmax(0, 1fr);
+  gap: clamp(1.25rem, 3vw, 3rem);
+  align-items: start;
+  padding-block: clamp(1.6rem, 3vw, 2.5rem);
+  border-top: 1px solid var(--rule);
+}
+
+.step-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.step-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: rgba(238, 238, 242, 0.45);
+}
+
+.step-copy p {
+  margin-top: 0.6rem;
+  max-width: 60ch;
+  font-size: clamp(1rem, 1.15vw, 1.1rem);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--mkt-text-dim);
+}
+
+/* --------------------------------------------------------------------------
+   7 — Founder
+   -------------------------------------------------------------------------- */
+
+.founder {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+  align-items: start;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--section-pad) var(--page-pad);
+}
+
+.founder-quote blockquote p {
+  font-size: clamp(1.7rem, 3.4vw, 2.85rem);
+  font-weight: 300;
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+  color: var(--mkt-text);
+}
+
+.founder-note {
+  padding-top: 0.5rem;
+}
+
+.founder-note p {
+  max-width: 56ch;
+  font-size: 1.02rem;
+  font-weight: 300;
+  line-height: 1.68;
+  color: var(--mkt-text-dim);
+}
+
+.founder-note p + p {
+  margin-top: 1.1rem;
+}
+
+.signature {
+  margin-top: 2rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid var(--rule);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--mkt-text);
+}
+
+.signature span {
+  display: block;
+  margin-top: 0.2rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--mkt-text-dim-alt);
+}
+
+/* --------------------------------------------------------------------------
+   8 — Close
+   -------------------------------------------------------------------------- */
+
+.final-cta h2 {
+  max-width: 22ch;
+  font-size: clamp(2.1rem, 4.4vw, 3.75rem);
+}
+
+.final-cta .lead {
+  max-width: 60ch;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+footer {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem clamp(1.5rem, 3vw, 3rem);
+  padding-block: clamp(2.75rem, 4vw, 3.75rem);
+  padding-inline: max(var(--page-pad), (100% - var(--content-max)) / 2);
+  border-top: 1px solid var(--rule);
+  background: var(--mkt-bg);
+}
+
+.footer-brand {
+  font-size: 0.98rem;
+}
+
+.footer-brand img {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+footer > p {
+  font-size: 0.85rem;
+  color: var(--mkt-text-dim-alt);
+}
+
+footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: 1 / -1;
+  gap: 0.65rem clamp(1rem, 2vw, 1.85rem);
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--rule-faint);
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--mkt-text-dim-alt);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 72rem) {
+  .site-header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .site-nav {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    max-width: 58rem;
+    gap: clamp(2.5rem, 6vw, 3.5rem);
+  }
+
+  .hero-copy {
+    max-width: 60rem;
+  }
+
+  .rail {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .rail-source {
+    padding-block: 0 0.75rem;
+  }
+
+  .rail-list {
+    margin-top: 0;
+    border-left: 0;
+  }
+
+  .rail-list li {
+    padding-left: 0;
+  }
+
+  .rail-list li::before {
+    display: none;
+  }
+
+  .rail-list li:first-child {
+    border-top: 0;
+  }
+
+  .founder {
+    grid-template-columns: 1fr;
+    gap: clamp(2rem, 5vw, 3rem);
+  }
+
+  .exhibit-stage {
+    height: clamp(24rem, 70vh, 34rem);
+  }
+}
+
+@media (max-width: 48rem) {
+  :root {
+    --page-pad: 1.15rem;
+    --section-pad: 4.25rem;
+  }
+
+  .site-header {
+    min-height: 4.25rem;
+  }
+
+  .sign-in {
+    display: none;
+  }
+
+  .button {
+    width: 100%;
+    min-height: 3.15rem;
+  }
+
+  .button-small {
+    width: auto;
+    min-height: 2.5rem;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.75rem;
+  }
+
+  .actions {
+    gap: 0.7rem;
+  }
+
+  h2 {
+    max-width: none;
+  }
+
+  .rail-list li {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .step-list li {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+
+  .step-num {
+    font-size: 1.15rem;
+    letter-spacing: 0.1em;
+  }
+
+  .wall-grid {
+    grid-template-columns: repeat(auto-fill, minmax(4.5rem, 1fr));
+    gap: 0.5rem 0.85rem;
+    max-height: 13rem;
+  }
+
+  .tomb {
+    font-size: 0.68rem;
+  }
+
+  .exhibit-strip {
+    flex-wrap: wrap;
+  }
+
+  .exhibit-stage {
+    height: 30rem;
+  }
+
+  /* Keep the animation slot at its true 16:9 footprint on small screens —
+     the shape is part of the handoff, so the note shrinks, not the frame. */
+  .slot-frame {
+    gap: 0.35rem;
+    padding: 1rem;
+    overflow: hidden;
+  }
+
+  .slot-title {
+    font-size: 1rem;
+  }
+
+  .slot-meta,
+  .slot-ref {
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+  }
+
+  .slot-body {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .principle blockquote {
+    max-width: none;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Reduced motion
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .button:hover {
+    transform: none;
+  }
+
+  /* The hero animation, once it lands, is replaced by the completed traceback
+     frame — the LAST frame of beat 3, not a blank first frame. */
+  video.traceback {
+    display: none;
+  }
+
+  .traceback-still {
+    display: block;
+  }
+}
