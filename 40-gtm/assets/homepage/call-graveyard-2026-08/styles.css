@@ -418,7 +418,12 @@ footer nav a:hover {
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  /* Single column while the hero animation is unbuilt. Restoring the slot
+     means restoring this to:
+       grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+     The copy blocks carry their own max-width (46-52ch), so a full-bleed
+     grid column does not stretch the measure. */
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
   gap: clamp(2.75rem, 4.5vw, 5rem);
   max-width: var(--content-max);
@@ -764,6 +769,9 @@ footer nav a:hover {
   white-space: nowrap;
 }
 
+/* Currently unused: the exhibit strip's chip was removed so the section has a
+   single link target. Kept because it is the page's citation affordance and
+   comes back with the live embed. Delete if the embed lands without one. */
 .cite-chip {
   display: inline-flex;
   flex: none;
@@ -792,8 +800,22 @@ footer nav a:hover {
 
 .exhibit-stage {
   position: relative;
-  height: clamp(26rem, 64vh, 42rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2.25rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
   background: var(--exhibit-ground);
+}
+
+/* Height is reserved ONLY when there is an embed to fill it. Holding 42rem of
+   empty ground open for an asset that isn't there is what makes a page read as
+   unfinished — the reader sees the gap, not the reason for it. When the embed
+   is unblocked, add `is-embed` to the stage and the frame is back to its
+   original footprint. */
+.exhibit-stage.is-embed {
+  display: block;
+  height: clamp(26rem, 64vh, 42rem);
+  padding: 0;
 }
 
 .exhibit-stage iframe {
@@ -805,48 +827,73 @@ footer nav a:hover {
 /* Reserved, not faked. The stage keeps the exhibit's exact footprint and says
    plainly that the document is not mounted yet. Same placeholder grammar as the
    hero's animation slot, so the page has one language for "pending", not two. */
-.exhibit-stage.is-pending {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: clamp(1.5rem, 4vw, 3rem);
-  background:
-    repeating-linear-gradient(
-      135deg,
-      rgba(238, 238, 242, 0.02) 0 10px,
-      transparent 10px 20px
-    ),
-    var(--exhibit-ground);
-}
-
-.pending-note {
+/* The exhibit card. Sky is the page's citation colour and this IS a citation
+   affordance — it opens the source document — so it takes sky rather than the
+   amber used for conversion. It says nothing about an embed: the file is real
+   and one click away, which is the whole claim of the section. */
+.exhibit-open {
+  display: block;
   max-width: 46ch;
-  text-align: center;
+  padding: clamp(1.6rem, 2.8vw, 2.35rem);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-edge);
+  background: var(--surface-lift);
+  text-decoration: none;
+  color: inherit;
+  transition:
+    border-color 320ms var(--ease-confident-glide),
+    background-color 320ms var(--ease-confident-glide),
+    box-shadow 320ms var(--ease-confident-glide);
 }
 
-.pending-title {
-  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--mkt-text);
+.exhibit-open:hover,
+.exhibit-open:focus-visible {
+  border-color: rgba(56, 189, 248, 0.5);
+  background: rgba(56, 189, 248, 0.05);
+  box-shadow: 0 18px 44px -28px rgba(56, 189, 248, 0.8);
 }
 
-.pending-meta {
-  margin-top: 0.5rem;
+.exhibit-file {
+  display: block;
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 400;
+  font-size: 0.68rem;
+  font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--mkt-text-dim-alt);
 }
 
-.pending-body {
-  margin-top: 1.1rem;
+.exhibit-name {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: clamp(1.15rem, 1.7vw, 1.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--mkt-text);
+  text-wrap: balance;
+}
+
+.exhibit-body {
+  display: block;
+  margin-top: 0.95rem;
   font-size: 0.95rem;
   font-weight: 300;
   line-height: 1.65;
   color: var(--mkt-text-dim);
+}
+
+.exhibit-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--brand-sky);
 }
 
 .exhibit-frame figcaption {
@@ -1068,7 +1115,7 @@ footer nav {
     gap: clamp(2rem, 5vw, 3rem);
   }
 
-  .exhibit-stage {
+  .exhibit-stage.is-embed {
     height: clamp(24rem, 70vh, 34rem);
   }
 }
@@ -1136,7 +1183,7 @@ footer nav {
     flex-wrap: wrap;
   }
 
-  .exhibit-stage {
+  .exhibit-stage.is-embed {
     height: 30rem;
   }
 

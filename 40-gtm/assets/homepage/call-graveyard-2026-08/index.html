@@ -107,6 +107,19 @@
              already drawn), used both as the poster and as the
              prefers-reduced-motion render. See handoff section 2.
              ------------------------------------------------------------------ -->
+        <!-- ------------------------------------------------------------------
+             HERO ANIMATION SLOT — REMOVED FOR SHIP, NOT ABANDONED.
+
+             The page ships type-led rather than showing a box that announces
+             its own emptiness. A placeholder frame tells every visitor that
+             something is missing; a confident single-column hero tells them
+             nothing is. The wall in section 2 is the page's first image and it
+             arrives one scroll later, so the page is not short of visual.
+
+             To restore: un-comment the figure below, and change .hero back to
+               grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+             Spec + acceptance criteria: ../traceback-diagram-handoff.md
+
         <figure class="diagram-slot">
           <div class="slot-frame">
             <p class="slot-title">The Traceback</p>
@@ -121,6 +134,7 @@
           </div>
           <figcaption>Placeholder. Motion asset pending &mdash; this page ships one, not two.</figcaption>
         </figure>
+             ------------------------------------------------------------------ -->
       </section>
 
       <!-- ============================================================
@@ -382,15 +396,10 @@
         <!-- The frame is the seam between two brands. The document inside arrives
              in Decision Files' own grammar; nothing in it is restyled by UpSight. -->
         <figure class="exhibit-frame">
+          <!-- Provenance only. The card below is itself the link, so a chip here would be
+     a second control pointing at the same URL 200px away. One target. -->
           <div class="exhibit-strip">
             <span class="mono">Exhibit &mdash; thedecisionfiles.com/case/deciding-on-a-siem-replacement</span>
-            <a
-              class="cite-chip"
-              href="https://thedecisionfiles.com/case/deciding-on-a-siem-replacement"
-              target="_blank"
-              rel="noopener"
-              >Open the full file<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg
-              ></a>
           </div>
 
           <!-- ------------------------------------------------------------------
@@ -425,15 +434,24 @@
                replace this .pending-note block with the iframe above. Nothing
                else changes — the frame is already sized for it.
                ------------------------------------------------------------------ -->
-          <div class="exhibit-stage is-pending">
-            <div class="pending-note">
-              <p class="pending-title">Decision File 014 &mdash; Security Logging Replacement</p>
-              <p class="pending-meta">Live embed pending</p>
-              <p class="pending-body">
-                The published file mounts in this frame, in its own Decision Files grammar. Until the
-                embed is unblocked it is one click away, on the record, at the source.
-              </p>
-            </div>
+          <div class="exhibit-stage">
+            <a
+              class="exhibit-open"
+              href="https://thedecisionfiles.com/case/deciding-on-a-siem-replacement"
+              target="_blank"
+              rel="noopener"
+              data-placement="exhibit"
+            >
+              <span class="exhibit-file">Decision File 014</span>
+              <span class="exhibit-name">Security Logging Replacement</span>
+              <span class="exhibit-body">
+                Recorded conversations, one decision, and every claim opening to the line where
+                someone actually said it.
+              </span>
+              <span class="exhibit-cta"
+                >Read it at thedecisionfiles.com<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg
+                ></span>
+            </a>
           </div>
 
           <figcaption>
