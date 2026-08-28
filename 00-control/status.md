@@ -5,6 +5,22 @@
 
 ---
 
+## 2026-08-28 — SSD × Innovate78 ecosystem-mapping proposal drafted
+
+**Shipped**
+- `40-gtm/channels/outreach/ssd-innovate78/` — two docs for the Startup San Diego / Innovate78
+  $150K ecosystem-mapping grant: `deal-structure-notes.md` (internal: three structuring options,
+  recommendation, budget math, risks) and `proposal-draft-2026-08.md` (sendable client draft).
+- Recommended structure: fixed-fee milestone subcontract (~$100–104K of the $150K, SSD retains
+  prime margin), platform as a separate line that outlives the grant, consent/data-governance
+  audit as deliverable #1 — built directly around Erika's email-permission objection.
+
+**Surfaced**
+- The SSD deal is carried in `traction.md` at $29/mo; this reframes it as a ~$100K+ services
+  engagement. UpSight opp `a7665c2f` needs updating.
+- Unknowns that gate sending: actual grant terms/period, whether the grant agreement permits
+  sole-source subcontracting, insurance/subaward paperwork. Logged in open-questions.
+
 ## 2026-08-16 — Handoff for a local session
 
 **Shipped**

@@ -7,6 +7,7 @@
 
 | Date opened | Q | Type | Owner | Status |
 |---|---|---|---|---|
+| 2026-08-28 | SSD/Innovate78 grant: does SSD's grant agreement allow a sole-source subcontract (~$100K to UpSight), or do public funds require competitive bids / funder approval? Also: $150K total or annual, and what deliverables did SSD already promise? | [tactical] | Rick | open → ask Lisa before sending `40-gtm/channels/outreach/ssd-innovate78/proposal-draft-2026-08.md` |
 | 2026-08-15 | What's the forced-participation dynamic for The Decision Files? NSS's monopoly came from absence-from-a-test being damaging; without an equivalent this is a consulting practice, not a franchise. | [bet] | Rick | open → candidate is a recurring category-wide "how buyers chose" report |
 | 2026-08-15 | Will a security vendor pay $15–50K for buyer research from a one-person shop? Whole model rests on it. | [tactical] | Rick | open → cheap test: name two CMOs/CROs who'd take the call today |
 | 2026-08-15 | Which room does The Decision Files build authority in — cybersecurity (warm network, CISOs as source, security vendors as buyer) or operators/professional services? Can't do both. | [bet] | Rick | open → cheap test is one pilot security file before committing a quarter |
