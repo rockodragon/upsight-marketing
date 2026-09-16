@@ -5,6 +5,29 @@
 
 ---
 
+## 2026-09-16 — AI search playbook from HubSpot's Project Lighthouse
+
+**Shipped**
+- `40-gtm/channels/content-seo/guides/ai-search-playbook.md` — new operating layer for AEO:
+  the crawls → citations → visibility model, all 8 HubSpot experiments with results and our
+  read-across, five rules, a leverage-ranked backlog, and a 3-number monthly measurement set.
+- `seo-aeo-guide.md` gains a "Gate 0" section — the three infrastructure checks that precede any
+  writing craft — and is now scoped explicitly as the writing-craft doc.
+- `40-gtm/experiments/2026-09-ai-search-crawlability.md` + index row — baseline first, then
+  server-render, measure crawls at 30 days and citations at 60.
+
+**Decided**
+- No llms.txt. Infrastructure before copy. Server-rendered HTML is a pre-launch gate on the
+  Decision Files site.
+
+**Surfaced**
+- We have no AI-search baseline of any kind — we don't know whether engines cite us, or whether
+  they state our pricing correctly. Step 0 of the experiment is two hours and settles it.
+- Two tactics deliberately declined: llms.txt (never fetched) and AI share buttons (HubSpot
+  shelved them — citations up, visibility flat).
+
+---
+
 ## 2026-08-16 — Handoff for a local session
 
 **Shipped**

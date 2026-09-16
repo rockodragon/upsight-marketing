@@ -7,6 +7,9 @@
 
 | Date opened | Q | Type | Owner | Status |
 |---|---|---|---|---|
+| 2026-09-16 | Are AI engines currently citing UpSight at all, and are they stating our pricing/positioning correctly? No baseline exists. | [tactical] | Rick | open → exp `2026-09-ai-search-crawlability` step 0 |
+| 2026-09-16 | Does a published Decision File reliably manufacture 5+ third-party mentions, or does distribution die with the interview subject's one share? | [tactical] | Rick | open → measure on file 1 |
+| 2026-09-16 | Which single community is worth real weekly presence for the security lane — r/cybersecurity, r/sysadmin, or a closed CISO Slack? Can't do three. | [bet] | Rick | open → HubSpot's Reddit play produced 7× mentions and doubled citations |
 | 2026-08-15 | What's the forced-participation dynamic for The Decision Files? NSS's monopoly came from absence-from-a-test being damaging; without an equivalent this is a consulting practice, not a franchise. | [bet] | Rick | open → candidate is a recurring category-wide "how buyers chose" report |
 | 2026-08-15 | Will a security vendor pay $15–50K for buyer research from a one-person shop? Whole model rests on it. | [tactical] | Rick | open → cheap test: name two CMOs/CROs who'd take the call today |
 | 2026-08-15 | Which room does The Decision Files build authority in — cybersecurity (warm network, CISOs as source, security vendors as buyer) or operators/professional services? Can't do both. | [bet] | Rick | open → cheap test is one pilot security file before committing a quarter |

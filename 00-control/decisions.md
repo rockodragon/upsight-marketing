@@ -5,6 +5,15 @@
 
 ---
 
+## 2026-09-16 - No llms.txt; AI-search work starts at crawl infrastructure, not copy
+**Why:** HubSpot's server logs showed llms.txt is essentially never fetched (~97% of files get
+zero requests) while pre-rendering alone drove ~1,600% more AI bot crawls and ~40% more citations
+(source: Growth Unhinged, "Inside HubSpot's AI search experiments"). We treat AI search as three
+separate stages — crawls → citations → visibility — and fix them in that order. Practical
+consequence: server-rendered HTML is a **pre-launch gate** on the Decision Files site, and a
+crawlable plain-HTML pricing page precedes any further blog volume. Playbook:
+`40-gtm/channels/content-seo/guides/ai-search-playbook.md`.
+
 ## 2026-08-15 - Security is the active lane; operators deferred, not killed
 **Why:** Rick's credential, network, and warm press all transfer to security and none of them
 transfer to operators — the unfair advantage is entirely on one side. Security also has a paying

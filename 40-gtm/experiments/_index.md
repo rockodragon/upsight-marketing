@@ -6,6 +6,7 @@
 
 | Status | Experiment | Hypothesis (1 line) | Metric | Started | Result |
 |---|---|---|---|---|---|
+| planned | [`2026-09-ai-search-crawlability`](2026-09-ai-search-crawlability.md) | Server-rendered, fast pages raise AI bot crawls and citations — the crawl stage is where we fail, not the writing | AI bot fetches/wk; citation rate on 20 fixed prompts | — | — |
 | planned | [`2026-06-day-ai-head-to-head`](2026-06-day-ai-head-to-head.md) | Founder-sellers who run surveys will pick UpSight over Day.ai (multi-source + receipts + price) | demos→pilots committed; WTP | — | — |
 
 **Status key:** `planned` · `running` · `shipped` (won) · `killed` (lost/inconclusive)

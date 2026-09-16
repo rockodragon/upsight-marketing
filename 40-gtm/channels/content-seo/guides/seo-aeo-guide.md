@@ -1,6 +1,31 @@
 # SEO + AI Engine Optimization (AEO) Guide for UpSight Blog Content
 
 > Reference guide for optimizing blog posts for both traditional search (Google) and AI search engines (ChatGPT, Perplexity, Claude, Google AI Overviews).
+>
+> **Scope:** this doc is the *writing craft* layer — schema, headings, FAQ formatting, quotable
+> phrasing. The *operating* layer — crawl infrastructure, mention supply, community, and
+> measurement — lives in [`ai-search-playbook.md`](ai-search-playbook.md). Read that one first
+> when standing up a new property; a perfectly formatted page that a bot can't render scores zero.
+
+---
+
+## Gate 0 — before any of this matters
+
+Three checks, in order. If a page fails one, nothing further down this document helps it.
+
+1. **Is it in the raw HTML?** `curl -s <url> | grep "<a distinctive sentence>"`. If the content
+   only appears after JavaScript runs, AI crawlers largely don't see it. Server-render or
+   pre-render it.
+2. **Is it fast to a bot?** Pre-rendered/static beats server-computed beats client-rendered.
+   HubSpot measured ~1,600% more AI bot crawls and ~40% more citations from pre-rendering alone
+   (source: Growth Unhinged, *Inside HubSpot's AI search experiments*, 2026 — their data, their
+   scale).
+3. **Is anything actually fetching it?** Grep server logs for `GPTBot`, `ClaudeBot`,
+   `PerplexityBot`, `OAI-SearchBot`. No fetches means the problem is infrastructure, not copy.
+
+**Do not build an llms.txt file.** It is the most widely recommended AEO tactic and HubSpot's
+server logs showed it is essentially never requested (~97% of llms.txt files get zero requests).
+Same source as above.
 
 ---
 
