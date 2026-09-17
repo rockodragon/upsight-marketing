@@ -5,6 +5,42 @@
 
 ---
 
+## 2026-09-17 — Government/civic email program (proposed, not decided)
+
+**Shipped**
+- `40-gtm/channels/lifecycle/gov-civic-email-program.md` — full email program for public-agency
+  buyers: audience tiers, content engine, four email tracks with copy, list-building, .gov
+  deliverability rules, fiscal-year calendar, metrics + kill criteria, 12-week plan.
+
+**Decided — nothing.** The doc is a proposal. The go/no-go is Rick's and is stated in
+`open-questions.md`.
+
+**Surfaced**
+- **The June "civic is a poor first GTM" verdict applies to a sales motion, not an audience
+  motion.** Procurement gates meetings and contracts; it does not gate reading an email. The
+  proposal is an audience/publication play at ≤1 day/week, with the paid readout as the only
+  conversion event chased in year one.
+- **The 2026-08-15 publication-first decision transfers to gov *better* than to security**, for
+  one structural reason: the raw material is free. Comment dockets, engagement reports and staff
+  emails are public record, so we can produce real analysis of a real agency's real data with no
+  customer, no permission, and no waiting. The teardown and the product demo are the same artifact.
+- **The warmest door available to us is Track 2** — emailing an agency the analysis of their own
+  public comment record *before* it publishes, offering corrections. Inbound-shaped conversation
+  with the exact buyer, manufactured from free data.
+- **The engagement consultancies are the under-rated buyer** (the firms buying Darzin / Jambo /
+  Consultation Manager). Budget authority, ~2-week cycle, and 5–15 agency clients each. They are
+  plausibly the "distribution partner" the June assessment said this segment required.
+- **SAM.gov registration is free, slow, and currently blocking.** Without a UEI we are not
+  purchasable by a federal buyer at any price. Start now so next September's fiscal-year-end
+  money is reachable.
+- **Price below the purchase-card line or not at all.** Federal micro-purchase threshold is
+  $15,000 (simplified acquisition $350,000) as of 2025-10-01 — a readout at $7.5–12K is buyable
+  without competition by the person who has the problem. Local thresholds vary by state/charter
+  and still need verifying per target agency.
+- Open risk flagged in the doc: analysing an agency's docket unannounced could create a
+  relationship problem. Track 2's pre-publication correction offer is the mitigation — validate
+  it on teardown #1 before repeating it.
+
 ## 2026-08-16 — Handoff for a local session
 
 **Shipped**

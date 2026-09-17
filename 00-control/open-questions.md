@@ -7,6 +7,11 @@
 
 | Date opened | Q | Type | Owner | Status |
 |---|---|---|---|---|
+| 2026-09-17 | Do we open a government/civic lane at all this quarter? Our own June assessment rated it "poor first GTM" for a *sales* motion; the proposal is an *audience* motion at ≤1 day/week. Go/no-go is a sequencing call against the security lane. | [bet] | Rick | open → proposal `40-gtm/channels/lifecycle/gov-civic-email-program.md` §0 |
+| 2026-09-17 | Does the research-ask mechanic transfer from security practitioners to public employees, who may need clearance to speak on the record? | [tactical] | Rick | open → cheap test: 25 Track 1 sends, count replies; ≥8% = transfers, <4% = kill |
+| 2026-09-17 | In gov/civic, is the buyer the agency or the engagement consultancy serving agencies? The firm has budget authority and a ~2-week cycle; the agency has the budget line. | [tactical] | Rick | open → test both in parallel, they cost the same |
+| 2026-09-17 | Does a $7.5–12K comment-period readout sit above impulse and below RFP, or in the dead zone — too much to put on a card, too little to scope? | [tactical] | Rick | open → federal micro-purchase threshold is $15K; local thresholds need per-agency verification |
+| 2026-09-17 | Is a gov/civic publication a *Decision Files vertical* or a separate publication ("The Public Record")? Cheaper to resolve before the first publish than after. | [bet] | Rick | open → blocks naming, domain purchase, and list positioning |
 | 2026-08-15 | What's the forced-participation dynamic for The Decision Files? NSS's monopoly came from absence-from-a-test being damaging; without an equivalent this is a consulting practice, not a franchise. | [bet] | Rick | open → candidate is a recurring category-wide "how buyers chose" report |
 | 2026-08-15 | Will a security vendor pay $15–50K for buyer research from a one-person shop? Whole model rests on it. | [tactical] | Rick | open → cheap test: name two CMOs/CROs who'd take the call today |
 | 2026-08-15 | Which room does The Decision Files build authority in — cybersecurity (warm network, CISOs as source, security vendors as buyer) or operators/professional services? Can't do both. | [bet] | Rick | open → cheap test is one pilot security file before committing a quarter |
