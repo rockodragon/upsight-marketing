@@ -8,38 +8,37 @@
 ## 2026-09-17 — Government/civic email program (proposed, not decided)
 
 **Shipped**
-- `40-gtm/channels/lifecycle/gov-civic-email-program.md` — full email program for public-agency
-  buyers: audience tiers, content engine, four email tracks with copy, list-building, .gov
-  deliverability rules, fiscal-year calendar, metrics + kill criteria, 12-week plan.
+- `40-gtm/channels/lifecycle/gov-civic-email-program.md` — email program for public agency
+  buyers: who to target, what to publish, four email tracks with copy, list building, .gov
+  deliverability rules, a calendar on their fiscal year, metrics, kill criteria, 12 week plan.
 
-**Decided — nothing.** The doc is a proposal. The go/no-go is Rick's and is stated in
-`open-questions.md`.
+**Decided — nothing.** It's a proposal. The go/no-go is Rick's and sits in `open-questions.md`.
 
 **Surfaced**
-- **The June "civic is a poor first GTM" verdict applies to a sales motion, not an audience
-  motion.** Procurement gates meetings and contracts; it does not gate reading an email. The
-  proposal is an audience/publication play at ≤1 day/week, with the paid readout as the only
-  conversion event chased in year one.
-- **The 2026-08-15 publication-first decision transfers to gov *better* than to security**, for
-  one structural reason: the raw material is free. Comment dockets, engagement reports and staff
-  emails are public record, so we can produce real analysis of a real agency's real data with no
-  customer, no permission, and no waiting. The teardown and the product demo are the same artifact.
-- **The warmest door available to us is Track 2** — emailing an agency the analysis of their own
-  public comment record *before* it publishes, offering corrections. Inbound-shaped conversation
-  with the exact buyer, manufactured from free data.
-- **The engagement consultancies are the under-rated buyer** (the firms buying Darzin / Jambo /
-  Consultation Manager). Budget authority, ~2-week cycle, and 5–15 agency clients each. They are
-  plausibly the "distribution partner" the June assessment said this segment required.
-- **SAM.gov registration is free, slow, and currently blocking.** Without a UEI we are not
-  purchasable by a federal buyer at any price. Start now so next September's fiscal-year-end
-  money is reachable.
-- **Price below the purchase-card line or not at all.** Federal micro-purchase threshold is
-  $15,000 (simplified acquisition $350,000) as of 2025-10-01 — a readout at $7.5–12K is buyable
-  without competition by the person who has the problem. Local thresholds vary by state/charter
-  and still need verifying per target agency.
-- Open risk flagged in the doc: analysing an agency's docket unannounced could create a
-  relationship problem. Track 2's pre-publication correction offer is the mitigation — validate
-  it on teardown #1 before repeating it.
+- The June "civic is a poor first GTM" call was about selling to them, not about building an
+  audience among them. Procurement blocks meetings and contracts. It doesn't block someone
+  reading an email. The proposal is a publication at one day a week, with a small paid readout
+  as the only thing we try to close in year one.
+- The 2026-08-15 publication-first decision works better in government than in security, for one
+  reason: the raw material is free. Comment dockets, engagement reports and staff email are
+  public record, so we can analyze a real agency's real data with no customer and no permission.
+  The teardown doubles as the product demo.
+- The warmest introduction available to us is track 2: email an agency the analysis of their own
+  public comment record before it publishes and offer to fix anything we got wrong. That's a
+  warm conversation with the right person, built from free data.
+- The engagement consultancies are the overlooked buyer — the firms buying Darzin, Jambo and
+  Consultation Manager. They can sign, they decide in about two weeks, and each has 5 to 15
+  agency clients. Possibly the distribution partner June said this market needed.
+- SAM.gov registration is free, slow, and currently blocking. Without a UEI no federal buyer can
+  buy from us at any price, and fiscal-year-end money is out of reach. Start it now so next
+  September is available.
+- Price under the purchase card line or don't bother. Federal micro-purchase threshold is $15,000
+  (simplified acquisition $350,000) as of 2025-10-01, so a $7.5K to $12K readout can be bought
+  without competition by the person who has the problem. Local limits vary by state and charter
+  and still need checking per agency.
+- Open risk: analyzing an agency's docket without telling them first could cause a problem we
+  haven't thought of. Track 2's offer to fix errors is the mitigation. Check how it lands on the
+  first one before doing it twice.
 
 ## 2026-08-16 — Handoff for a local session
 

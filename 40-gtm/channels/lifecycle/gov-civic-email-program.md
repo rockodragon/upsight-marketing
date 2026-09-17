@@ -1,462 +1,490 @@
 ---
-title: Government & Civic Email Program — strategy, content engine, and operating plan
+title: Government & Civic Email Program
 date: 2026-09-17
-status: proposed (not yet a decision — see §0)
+status: proposed — not decided yet, see section 0
 owner: rick
 tags: [email, lifecycle, gov, civic, public-sector, outbound, publication]
-supersedes: nothing
-governed-by: 00-control/decisions.md 2026-08-15 (publication-first, research-recruiting as the sales motion)
-tension-with: 20-research/market-intel/deliberative-intelligence-market.md (civic rated "poor first GTM")
+governed-by: 00-control/decisions.md 2026-08-15 (publication first, research recruiting as the sales motion)
+tension-with: 20-research/market-intel/deliberative-intelligence-market.md (civic rated a poor first GTM)
 ---
 
 # Government & Civic Email Program
 
-> **Audience:** public agency staff who are *required* to collect public input and *accountable*
-> for what they do with it. **Not** elected officials, **not** IT, **not** procurement.
->
-> **The one-sentence strategy:** don't build a government email *sales* motion — build a
-> government email *audience* around a publication that analyses public comment records
-> (all of which are free, public data), and let a small number of under-threshold paid
-> readouts fall out of it.
+Who this is for: the staff at public agencies who have to collect public input and then
+answer for what they did with it. Not elected officials, not IT, not procurement.
+
+The plan in one line: don't try to sell government agencies over email. Build an audience
+of them around a publication that analyzes public comment records, and sell a few small
+paid readouts to the people who reply.
 
 ---
 
-## 0. The honest read — two things this has to reconcile with
+## 0. Two things this has to square with
 
-**(a) Our own market assessment rated this segment a bad first wedge.**
-`20-research/market-intel/deliberative-intelligence-market.md` (2026-06-02) scores
-*Civic engagement / deliberative democracy* as **"Real but slow · 6–24 months · Strategically
-aligned, poor first GTM"** and recommends it as a **later** vertical, "unless there is a strong
-distribution partner or anchor customer."
+### Our own research said civic is a bad first market
 
-That verdict stands **for a sales motion**. It does not apply to an **audience motion**.
-The distinction is the whole plan:
+`20-research/market-intel/deliberative-intelligence-market.md` from June scores civic
+engagement as "real but slow," 6 to 24 month cycles, "strategically aligned, poor first
+GTM." It says treat it as a later vertical unless we have a strong distribution partner or
+an anchor customer.
 
-| | Sales motion (what June rejected) | Audience motion (what this doc proposes) |
+That's right about selling to them. It says nothing about building an audience among them,
+and the two have very different economics:
+
+| | Selling (what June ruled out) | Building an audience (this plan) |
 |---|---|---|
-| Unit of work | Meetings booked | Named practitioners on a list |
-| Cost of a miss | A wasted quarter | A wasted afternoon |
-| Gated by procurement | Yes — 6–24 months | No — reading an email needs no PO |
-| Compounds if slow | No | Yes — the list and the archive keep their value |
-| Conversion event | Demo → RFP → contract | Paid readout under the P-card threshold (§6) |
+| What you count | Meetings booked | Named people on a list |
+| Cost of being wrong | A quarter | An afternoon |
+| Blocked by procurement | Yes, 6 to 24 months | No. Reading an email needs no PO |
+| Value if it's slow | Goes to zero | Keeps accruing |
+| What you're closing | Demo, RFP, contract | A paid readout under the card limit (section 6) |
 
-The June verdict's own escape hatch was *"a strong distribution partner or anchor customer."*
-An audience is how you manufacture one. **Run this at ≤1 day/week. It is a second lane, not a
-replacement for the security lane.**
+June's own caveat was "unless there's a distribution partner or an anchor customer."
+Building an audience is how you get one.
 
-**(b) We decided to stop UpSight-branded cold product email.**
-`decisions.md` 2026-08-15: *"Cold product email asks a stranger for a meeting from a position of
-needing something. A research interview asks an expert for their expertise — a better ask, from a
-better position, that produces the same conversation."*
+Cap this at one day a week. It's a second lane. Security stays the main one.
 
-**That decision is not an obstacle here — it is the reason this works.** The research-ask
-mechanic is *stronger* in government than in the private sector, for four structural reasons:
+### We decided to stop cold product email
 
-1. **The raw material is free and public.** Comment dockets, engagement reports, meeting minutes,
-   staff reports — all public record. We can produce real analysis of a real agency's real data
-   without asking anyone's permission or waiting for a customer.
-2. **Peer proof is the currency.** The question that moves a public agency is not "what does the
-   vendor claim" — it is **"which agency like mine has done this, and what happened."** That is a
-   publication output, not a sales output.
-3. **Being cited is a career good.** Public engagement is a credentialed profession
-   (IAP2's CP3 / MCP3 designations) [S]. "Can I interview you for a piece I'm publishing" lands
-   differently on someone whose professional standing is built on practice recognition.
-4. **Everything you send is a public record.** Vendor email to a public employee about public
-   business is generally subject to disclosure [S]. That kills manipulative outbound outright —
-   and hands the advantage to whoever is willing to send plain, useful, on-the-record email.
-   Which is us.
+From `decisions.md`, 2026-08-15: cold product email asks a stranger for a meeting from a
+position of needing something, while a research interview asks an expert for their
+expertise and produces the same conversation.
 
-**So: same machine as The Decision Files, pointed at a segment where the source data is free.**
+That decision helps here rather than getting in the way, and the research-ask actually
+works better in government than in private companies:
 
----
+The source material is free. Comment dockets, engagement reports, meeting minutes and staff
+reports are all public record. We can analyze a real agency's real data without asking
+anyone or waiting for a customer.
 
-## 1. The mechanism — what government email actually is
+Peer proof is what moves them. Nobody in government cares what a vendor claims. They care
+which agency like theirs has done this and what happened. That's a publication output, not
+a sales output.
 
-Most B2B email strategy assumes: send → interest → meeting → deal. In government that chain
-breaks at the second link, because the person who is interested usually cannot buy, and the
-person who can buy is not interested. So stop optimising for the chain.
+Being cited helps their career. Public engagement is a credentialed profession, with IAP2's
+CP3 and MCP3 designations [S]. "Can I interview you for something I'm publishing" lands
+differently on someone whose standing comes from being recognized for their practice.
 
-**What email actually does in this segment, in order of value:**
+Everything you send them is a public record. Vendor email to a public employee about public
+business is generally disclosable [S]. That rules out the usual outbound tricks, which
+suits us, because plain useful email is what we'd send anyway.
 
-1. **It gets forwarded.** Public agency staff forward useful things to peers *constantly* —
-   across departments, across agencies, and through association listservs. A single good artifact
-   reaches 5–20 people for one send [E]. Design every email to be forwardable: no "hi {{first}}"
-   personalisation that looks stupid when forwarded, no gated links, no "exclusive for you."
-2. **It builds the list that survives the procurement cycle.** A 24-month buying cycle is only
-   fatal if you have to pay for attention for 24 months. If they're on a list they asked to be
-   on, the cycle costs you one email a month.
-3. **It puts you in the room before the RFP is written.** Agency RFP requirements are usually
-   drafted by the same staff who read your newsletter, often by borrowing language from whatever
-   they last read on the topic. This is the highest-leverage thing on this page and nobody
-   optimises for it.
-4. **It produces interviews, which produce the publication, which produces the list.** Closed loop.
-
-**It does not book demos.** Stop measuring it that way. Kill criteria are in §9.
+So: same machine as The Decision Files, pointed at a market where the raw data is free.
 
 ---
 
-## 2. Who exactly — the target, three tiers
+## 1. What email actually does here
 
-The audience is **the person who has to write the summary that goes to council.** Not the
+Normal B2B email assumes send, interest, meeting, deal. That breaks at step three in
+government, because the person with the problem usually can't buy and the person who can
+buy doesn't have the problem. So don't optimize for it.
+
+Here's what email does instead, roughly in order of value.
+
+**It gets forwarded.** Agency staff forward useful things constantly, across departments and
+through association listservs. One good artifact probably reaches five to twenty people per
+send [E]. So write every email to survive being forwarded: no "hi {{first}}" that looks
+stupid on a forward, no gated links, nothing that says "just for you."
+
+**It builds a list that outlasts the buying cycle.** A 24 month cycle only hurts if you're
+paying for attention the whole time. If they subscribed, it costs you one email a month.
+
+**It puts you in the room before the RFP is written.** Agency RFP requirements usually get
+drafted by the same staff who read your newsletter, often by borrowing language from
+whatever they read last on the subject. This is the most valuable thing on this page and
+almost nobody aims at it.
+
+**It produces interviews, which make the publication, which grows the list.**
+
+It won't book demos. Don't measure it that way. Kill criteria are in section 9.
+
+---
+
+## 2. Who to target
+
+The person you want is whoever has to write the summary that goes to council. Not the
 director who signs it, not the clerk who posts it.
 
-### Tier 1 — the practitioner (the list you actually build)
+### Tier 1, the list you actually build
 
-| Title | Agency type | Why they open |
+| Title | Agency type | Why they open it |
 |---|---|---|
-| Public Engagement / Public Involvement Manager | City, county, transit, MPO | It is literally their job title; starved for method and peer benchmarks |
-| Communications / Public Information Officer | City, county, special district | Owns the comment period in small agencies |
-| Long-range / Comprehensive Planner | City/county planning | General plan & comp plan updates generate the biggest comment volumes |
-| Environmental / NEPA coordinator | Transit, DOT, utility, federal field office | Comment response is a legal deliverable, not a nice-to-have |
-| Research / Evaluation analyst | Larger cities, state agencies, health depts | Already does synthesis by hand |
-| Engagement consultant | Private firms serving agencies | **Under-rated: they buy faster, have no procurement, and bring 5–15 agencies each** |
+| Public Engagement / Public Involvement Manager | City, county, transit, MPO | It's their job title, and they have almost no peer benchmarks |
+| Communications / Public Information Officer | City, county, special district | In small agencies they own the comment period |
+| Long-range or Comprehensive Planner | City and county planning | General plan updates draw the biggest comment volumes |
+| Environmental / NEPA coordinator | Transit, DOT, utility, federal field office | Comment response is a legal deliverable |
+| Research or Evaluation analyst | Large cities, state agencies, health departments | Already doing this synthesis by hand |
+| Engagement consultant | Private firms working for agencies | Buys fast, no procurement, brings 5 to 15 agencies with them |
 
-> **Do not skip the consultants.** Firms doing public involvement for agencies (the buyers of
-> Darzin / Jambo / Consultation Manager — see `20-research/market-intel/Competitors/consulting-adjacent/`)
-> have the pain, the budget authority, a 2-week buying cycle, and a portfolio of agency clients.
-> They are the "distribution partner" the June assessment said this segment needed.
+Don't skip the consultants. The firms doing public involvement for agencies are the ones
+buying Darzin, Jambo and Consultation Manager (see
+`20-research/market-intel/Competitors/consulting-adjacent/`). They have the same problem,
+they can sign, they decide in about two weeks, and each one has a portfolio of agency
+clients. They may well be the distribution partner June said this market needed.
 
-### Tier 2 — the sponsor (aware, not marketed to)
-City Manager / Assistant City Manager, Planning Director, Chief of Staff, Transit GM.
-They receive forwards. They do not subscribe. Write for Tier 1 in a way Tier 2 respects.
+### Tier 2, aware but not marketed to
 
-### Tier 3 — ignore for now
-Elected officials, CIO/IT, procurement, state CDOs. They enter at contract time, not before.
+City Manager, Assistant City Manager, Planning Director, Chief of Staff, Transit GM. They
+get the forwards. They don't subscribe. Write for Tier 1 in a way Tier 2 won't wince at.
 
-### Agency types, ranked by comment volume ÷ procurement friction
+### Tier 3, skip for now
 
-1. **Mid-size cities (100K–750K pop.)** — real comment volume, real staff, small-purchase authority, no giant procurement office. **Start here.**
-2. **Transit agencies & MPOs** — federally driven engagement obligations, recurring long-range plan cycles, professional engagement staff.
-3. **Counties** — health, parks, and planning departments each run their own comment periods.
-4. **Special districts** (water, air, parks) — small, under-served, fast decisions, low budgets.
-5. **State agencies** — bigger money, much slower. Year two.
-6. **Federal** — only via the publication and only for credibility. Not a revenue target this year.
+Elected officials, IT, procurement, state CDOs. They show up at contract time.
 
----
+### Agency types, best first
 
-## 3. The content engine — what is valuable, unique, and immediately actionable
-
-The test for every asset: **could a public engagement manager use this in a meeting next Tuesday,
-and would they be slightly embarrassed that they didn't have it already?**
-
-### 3.1 The flagship: **The Comment Docket Teardown** ⭐
-
-Take a **closed, public comment docket** from a real agency. Run UpSight on it. Publish the
-synthesis with quote-level receipts. One per month.
-
-**The output, fixed format every time:**
-1. **What the record actually contained** — themes, ranked, with the count behind each.
-2. **Where the public agreed and where it split** — the agreement/disagreement map. This is our
-   architectural differentiator and no one else in this market publishes it.
-3. **Which groups drove which signal** — segment × theme matrix.
-4. **What the official summary did and didn't carry through** — stated neutrally, as a method
-   observation, never as a gotcha (see the guardrail below).
-5. **Method appendix** — exactly how it was done, so a reader can replicate it by hand.
-6. **Receipts** — every theme links to the actual comment in the public record.
-
-**Why this is unique:** consultants do this privately for five-figure fees. Vendors publish
-"AI for public comment" thought-leadership with no actual analysis in it. **Nobody publishes the
-finished analysis of a real docket for free, with receipts.** Verify this claim before the first
-publish — if someone is already doing it, we adapt rather than discover it in public.
-
-**Why it's immediately actionable for the reader:** it is simultaneously a peer benchmark
-("this is what 4,000 comments looks like when someone actually reads them"), a method template,
-and a reusable argument for their own budget request.
-
-**Why it's cheap for us:** the input is free public data, it requires zero customer permission,
-and **it is the product demo.** The teardown and the demo are the same artifact.
-
-**Guardrails — non-negotiable:**
-- Frame as *"what the record contained,"* never *"the agency got it wrong."* One public
-  humiliation and this entire segment closes to us permanently — they all talk to each other.
-- **Email the agency the analysis before it publishes, offering corrections.** This is both the
-  ethical move and the single warmest door-opener available to us (see Track 2, §5).
-- Prefer dockets where the agency looks *competent*. The story is the method, not a scandal.
-- State on the artifact itself whether every number is from the public record or computed by us.
-
-### 3.2 The four supporting assets (build once, mail forever)
-
-| # | Asset | The job it does | Why they can't already get it |
-|---|---|---|---|
-| **A** | **Council-Ready Comment Synthesis Memo** — a fill-in template: themes → dissent → evidence IDs → what changed because of it | The artifact they have to produce anyway, and mostly rebuild from scratch each time | Every agency reinvents this; no standard exists |
-| **B** | **The "Did We Actually Listen?" defensibility checklist** | Engagement records get challenged — on appeal, in litigation, at the podium. This is the checklist that survives it | Legal-adjacent, so nobody publishes it for free |
-| **C** | **Engagement Method Cards** — one card per technique: when to use, real cost, who it over-samples | Method selection is the job; the bias column is what makes it honest | Vendor content never admits its own channel's bias |
-| **D** | **Peer Benchmark Bar** — what N comment periods actually looked like: volume, channels, response rates, cost | Answers the only question their director asks: *"what do agencies like us do?"* | Requires assembling public data nobody has bothered to assemble |
-
-**Asset D is the compounding one.** Every teardown adds a row. By month six it is a dataset
-nobody else has, built entirely from public records, and it is the thing that gets cited.
-
-### 3.3 What NOT to publish
-- Anything with "AI-powered" in the headline. This audience's risk posture on AI is *"will this
-  get me in the newspaper."* Lead with **evidence, traceability, and the public record** — the
-  fact that every claim links back to a real comment is the entire pitch.
-- Generic "5 tips for better public engagement." They've read it. IAP2 does it better.
-- Anything that positions them as the problem.
-- Prediction, opinion, or hot takes on policy. We are a method publication, not a politics one.
+1. **Mid-size cities, 100K to 750K population.** Real comment volume, real staff, small
+   purchase authority, no giant procurement office. Start here.
+2. **Transit agencies and MPOs.** Federally driven engagement requirements, recurring plan
+   cycles, actual engagement staff.
+3. **Counties.** Health, parks and planning each run their own comment periods.
+4. **Special districts** (water, air, parks). Small, underserved, quick decisions, thin budgets.
+5. **State agencies.** More money, much slower. Year two.
+6. **Federal.** Only for credibility through the publication. Not a revenue target this year.
 
 ---
 
-## 4. The list — building it legally and nearly free
+## 3. What to publish
 
-**You do not need Apollo for this segment, and Apollo is bad at it.** Public agency staff
-directories are *published by law*. The email format is usually public and uniform.
+The test for anything we write: could a public engagement manager use this in a meeting next
+Tuesday, and would they be a little annoyed they didn't already have it?
 
-**Build order:**
-1. **Conference and association rosters** — IAP2 USA (2,500+ members across 48 states) [S],
-   3CMA, APA, NAGW, state municipal leagues, APTA, AMPO. Speaker lists and session agendas are
-   public and are pre-qualified by topic.
-2. **Comment docket signatories** — people who *submitted comments on behalf of an agency or
-   organisation* are in the public record, with affiliation.
-3. **Agency staff directories** — scrape the department pages of a target list of ~400 agencies.
-4. **Published engagement reports** — the author's name is on the cover. That's your Tier 1 lead.
-5. **LinkedIn, manually**, for title verification only. Do not automate it
-   (`status.md` 2026-08-15 already ruled on this).
+### The main thing: take apart a real comment docket
 
-**Target: 800–1,200 verified Tier-1 contacts by week 12.** [E] That is enough. A list of 40,000
-government addresses is a liability, not an asset.
+Pick a closed public comment docket from a real agency. Run it through UpSight. Publish the
+analysis with the quotes behind it. One a month.
 
-**Compliance guardrails:**
-- CAN-SPAM applies; government recipients are not an exemption. Real physical address, working
-  one-click unsubscribe, honest subject lines, honour opt-outs within 10 days.
-- **US-only for cold.** Canada (CASL) is consent-based with real penalties; UK/EU GDPR
-  makes cold B2G legally messy. Canadian and UK agencies can *subscribe* — they just can't be
-  cold-mailed.
-- **Write every single email as if it will be read aloud at a public meeting.** Because it may be.
-- Never claim an agency is a customer, a reference, or a partner without written permission.
-  In this world that is not marketing licence — it's a procurement integrity problem.
+Same format every time:
+
+1. What the record actually contained. Themes, ranked, with counts.
+2. Where the public agreed and where it split. The agreement and disagreement map. This is
+   the thing our architecture does that others don't, and nobody in this market publishes it.
+3. Which groups drove which theme. The segment by theme matrix.
+4. What the official summary carried through and what it didn't. Written as a method
+   observation, never as a gotcha.
+5. How it was done, in enough detail that someone could repeat it by hand.
+6. Links from every theme back to the actual comment in the public record.
+
+Why nobody else does this: consultants do the same work privately for five figures, and
+vendors publish "AI for public comment" articles that contain no actual analysis. As far as
+I can tell, nobody publishes the finished analysis of a real docket for free with the
+receipts attached. Check that before the first one publishes. If someone is already doing
+it, adapt rather than find out in public.
+
+Why a reader can use it immediately: it's a benchmark (this is what 4,000 comments look like
+when someone actually reads them), a method they can copy, and an argument they can put in
+a budget request.
+
+Why it's cheap for us: the input is free, we don't need anyone's permission, and the
+teardown doubles as the product demo.
+
+Rules for doing it without wrecking the relationship:
+
+- Write about what the record contained, not about what the agency should have done. One
+  public embarrassment and this whole market closes to us. They all talk to each other.
+- Send the agency the analysis before it publishes and offer to fix anything we got wrong.
+  It's the right thing to do and it's also the warmest introduction available to us
+  (track 2, section 5).
+- Prefer dockets where the agency comes off as competent. The story is the method.
+- On the piece itself, say which numbers come from the public record and which we computed.
+
+### Four things to write once and mail forever
+
+| Asset | What it does for them | Why they can't get it now |
+|---|---|---|
+| A council-ready comment synthesis memo template: themes, dissent, evidence IDs, what changed as a result | It's the document they have to produce anyway and mostly rebuild from scratch each time | Every agency reinvents it. There's no standard |
+| A "did we actually listen" defensibility checklist | Engagement records get challenged on appeal, in court, and at the podium | It's legal-adjacent, so nobody gives it away |
+| Engagement method cards: one per technique, when to use it, real cost, who it oversamples | Picking the method is the job, and the oversampling column is what makes it honest | Vendor content never admits what its own channel gets wrong |
+| A peer benchmark table: what N comment periods looked like, volume, channels, response rates, cost | Answers the only question their director asks, which is what agencies like us do | Somebody has to assemble public data nobody has bothered to assemble |
+
+The benchmark table is the one that compounds. Every teardown adds a row. By month six it's
+a dataset nobody else has, built entirely from public records, and it's what gets cited.
+
+### What not to write
+
+Nothing with "AI-powered" in the headline. This audience's concern about AI is whether it
+puts them in the newspaper. Lead with evidence and traceability. The fact that every claim
+links back to a real comment is the pitch.
+
+No "5 tips for better public engagement." They've read it, and IAP2 does it better.
+
+Nothing that makes them the problem.
+
+No opinions about policy. We're a method publication.
 
 ---
 
-## 5. The email program — four tracks
+## 4. Building the list
 
-### Track 1 — The Research Ask *(cold, 3 touches, stop on reply)*
-Mirrors the standing decision: the ask is expertise, not a meeting.
+You don't need Apollo here, and Apollo is bad at this anyway. Agency staff directories are
+published by law and the email format is usually uniform and public.
+
+Where to get names, in order:
+
+1. Association and conference rosters. IAP2 USA has 2,500+ members across 48 states [S].
+   Also 3CMA, APA, NAGW, state municipal leagues, APTA, AMPO. Speaker lists and session
+   agendas are public and pre-sorted by topic.
+2. Comment docket signatories. People who submitted on behalf of an agency or organization
+   are in the public record with their affiliation attached.
+3. Agency staff directories. Scrape department pages for a target list of maybe 400 agencies.
+4. Published engagement reports. The author's name is on the cover, and that's your lead.
+5. LinkedIn by hand, for confirming titles only. Don't automate it. `status.md` 2026-08-15
+   already settled that.
+
+Aim for 800 to 1,200 verified Tier 1 contacts by week 12 [E]. That's plenty. A list of
+40,000 government addresses is a liability.
+
+Legal notes:
+
+CAN-SPAM applies and government recipients aren't an exception. Real postal address, working
+one-click unsubscribe, honest subject lines, opt-outs honored within 10 days.
+
+Cold email to the US only. Canada's CASL is consent-based with real penalties, and GDPR
+makes cold email to UK and EU agencies messy. They can subscribe. Just don't cold email them.
+
+Write every email as if it'll be read out loud at a public meeting, because it might be.
+
+Never call an agency a customer, a reference or a partner without written permission. In
+this world that isn't marketing license, it's a procurement integrity problem.
+
+---
+
+## 5. The four email tracks
+
+### Track 1: the research ask (cold, three emails, stop on reply)
+
+The ask is for their expertise, not a meeting.
 
 > **Subject:** the [CITY] [PLAN NAME] comment record
 >
-> [Name] — I'm analysing how agencies actually process public comment at volume, and publishing
-> the results. Not a survey: a 20-minute conversation about how your team handled the
-> [N]-comment record on [plan], what you'd do differently, and where the synthesis broke down.
+> [Name], I'm looking at how agencies actually process public comment at volume, and I'm
+> publishing what I find. It's a 20 minute conversation about how your team handled the
+> [N]-comment record on [plan], what you'd do differently, and where the synthesis got hard.
 >
-> I'll send you the piece before it publishes, and you're cited or anonymous — your call.
+> I'll send you the piece before it publishes. Cite you or keep you anonymous, your call.
 >
-> Worth 20 minutes in the next two weeks?
+> Any chance you have 20 minutes in the next two weeks?
 
-> **+4 days —** Following up on the [plan] comment period. The specific thing I'm after: how the
-> raw comments became the summary that went to council — who did it, how long it took, and what
-> got lost. That step is undocumented everywhere I've looked.
+> **+4 days.** Following up on the [plan] comment period. The part I'm really after is how
+> the raw comments became the summary that went to council: who did it, how long it took,
+> what got lost. Nobody seems to have written that step down anywhere.
 
-> **+7 days — (breakup)** Last one. If it's not a good time, no problem — I'll send the finished
-> piece anyway, it's free and there's no pitch in it. Reply "send it" if you want it.
+> **+7 days (last one).** If it's not a good time, no problem. I'll send you the finished
+> piece anyway, it's free and there's nothing being sold in it. Reply "send it" if you want it.
 
-### Track 2 — The Teardown Notify *(the warmest door we have)*
-Sent to the agency whose docket we analysed, **before publication**.
+### Track 2: tell the agency before you publish
 
-> **Subject:** analysis of your [plan] comment record — before it publishes
+This goes to the agency whose docket we analyzed, before the piece is public.
+
+> **Subject:** analysis of your [plan] comment record, before it publishes
 >
-> [Name] — I analysed the [N] public comments on [plan] from the public record and I'm
+> [Name], I analyzed the [N] public comments on [plan] from the public record, and I'm
 > publishing the results on [date]. You should see it first: [link].
 >
-> Two things. One: if I've misread anything, tell me and I'll fix it — the corrections are
-> yours to make. Two: the piece is about method, not about your team; the framing throughout is
-> what the record contained, not what anyone should have done.
+> Two things. If I've misread anything, tell me and I'll fix it. And the piece is about
+> method, not about your team, so the framing throughout is what the record contained
+> rather than what anyone should have done.
 >
-> If it's useful I'm glad to walk your team through how the analysis was built. No charge and
-> no pitch.
+> If it's useful I'm happy to walk your team through how the analysis was built. No charge,
+> nothing being sold.
 
-*Every one of these is a genuinely warm inbound-shaped conversation with the exact buyer, created
-from free public data, with no list, no ads, and no cold ask.* **This is the engine.**
+Each of these is a warm conversation with exactly the right person, built from free public
+data, with no list, no ads and no cold ask. This is where the deals come from.
 
-### Track 3 — **"The Public Record"** *(monthly broadcast — the compounding asset)*
-*(working title — naming is Rick's call)*
+### Track 3: a monthly email, working title "The Public Record"
 
-Plain text. Under 400 words. Same four blocks every month, so it becomes legible at a glance:
+Naming is Rick's call.
 
-1. **This month's teardown** — 3 sentences + link.
-2. **One method note** — a single technique, when it works, what it biases toward.
-3. **One benchmark row** — one number from the dataset, sourced.
-4. **One "what got challenged"** — an engagement record that got contested, and why.
+Plain text, under 400 words, same four blocks every month so people can scan it:
 
-No images. No tracking pixel. One link, maybe two. Signed by a person.
-**The subscribe promise is the product:** *"Once a month: one public comment record, actually
-analysed. No vendor pitch."* Then never break it.
+1. This month's teardown, three sentences and a link.
+2. One method note: a single technique, when it works, what it oversamples.
+3. One number from the benchmark table, with its source.
+4. One engagement record that got challenged, and why.
 
-### Track 4 — Association & conference follow-up
-Within 24 hours of any session, panel, or listserv appearance, to people who identified
-themselves. One email, no sequence: the artifact relevant to what was discussed, plus the
-subscribe link. Conferences are where this audience concentrates; treat them as list events, not
-lead events.
+No images, no tracking pixel, one or two links, signed by a person.
 
----
+The subscribe promise: once a month, one public comment record, actually analyzed, no vendor
+pitch. Then never break it.
 
-## 6. The conversion event — and the number that matters
+### Track 4: conference and association follow-up
 
-**Do not chase a demo, an RFP, or a platform sale in year one.**
-
-The conversion event is a **Comment Period Readout**: fixed scope, fixed price, delivered in
-2–3 weeks. They send the comment record; we return themes, the agreement/disagreement map,
-the segment matrix, and a council-ready memo with a receipt behind every claim.
-
-**Price it deliberately under the purchase-card / small-purchase threshold.** For federal buyers
-the micro-purchase threshold is **$15,000** and the simplified acquisition threshold is
-**$350,000** (effective 2025-10-01) [S]. Under the micro-purchase threshold, a cardholder can
-buy without competition. **Local and state thresholds vary by state and charter — verify per
-target agency, and note that agencies spending federal grant money follow the federal rules.**
-
-→ **Price the readout at $7,500–$12,000.** [E] Above that you're in an RFP. Below it you're
-buyable on a credit card by the person who actually has the problem.
-
-**Do this now, it takes weeks and unblocks everything:** register in **SAM.gov** and get a UEI.
-It's free. Without it you are not purchasable by a federal buyer at any price, and end-of-fiscal-
-year money (federal FY closes Sept 30) is unreachable. Do it this quarter so next September is
-available to us.
+Within 24 hours of a session or panel, email the people who introduced themselves. One
+email, no sequence: the artifact that matches what was discussed, plus the subscribe link.
+Conferences are where this audience concentrates, so treat them as list-building, not
+lead-gen.
 
 ---
 
-## 7. Deliverability — the technical gate most senders fail
+## 6. What we're actually selling
 
-Government mail environments are hostile by design (heavy Proofpoint / Microsoft Defender use,
-URL rewriting, attachment stripping). This section is not optional; it is where the program dies
-if it dies.
+Not a demo, not an RFP, not a platform in year one.
+
+Sell a comment period readout. Fixed scope, fixed price, two to three weeks. They send the
+comment record, we send back themes, the agreement and disagreement map, the segment matrix,
+and a council-ready memo with a quote behind every claim.
+
+Price it under the purchase card limit on purpose. The federal micro-purchase threshold is
+$15,000 and the simplified acquisition threshold is $350,000, both effective 2025-10-01 [S].
+Below the micro-purchase threshold a cardholder can just buy it without competition. Local
+and state limits vary by state and charter, so check per agency, and note that agencies
+spending federal grant money follow the federal rules.
+
+So price the readout at $7,500 to $12,000 [E]. Above that you're in an RFP. Below it you're
+buyable by the person who has the problem.
+
+One thing to start now because it takes weeks: register on SAM.gov and get a UEI. It's free.
+Without it no federal buyer can buy from us at any price, and end-of-fiscal-year money
+(federal FY closes September 30) is out of reach. Do it this quarter so next September is
+available.
+
+---
+
+## 7. Getting into a .gov inbox
+
+Government mail systems are hostile on purpose: heavy Proofpoint and Microsoft Defender use,
+URL rewriting, attachments stripped. Skip this section and the program dies here.
 
 | Rule | Why |
 |---|---|
-| **Separate the domains.** Product/transactional on the primary domain; publication + cold on a *different* domain | One spam-trap hit must never touch the app's transactional mail. Non-negotiable. |
-| **SPF + DKIM + DMARC on the sending domain before the first send** | Without alignment you don't reach a filtered .gov inbox at all |
-| **Warm the new domain 4+ weeks** before volume | New domain + government filters = instant quarantine |
-| **≤30–40 cold sends per inbox per day** | Volume is the top spam signal for a young domain |
-| **Plain text or near-plain HTML. No images, no pixel.** | Image-heavy mail reads as bulk; pixels get stripped anyway |
-| **No link shorteners, ever** | bit.ly-class domains are commonly blocked outright at the gateway |
-| **No attachments** | Frequently stripped or quarantined. Link to a page |
-| **Don't trust click data as intent** | Security gateways pre-click every link. Phantom clicks will make your dashboard lie |
-| **Don't trust open rates at all** | Scanners inflate opens; pixels get stripped. Deleting open-tracking costs you nothing real |
-| **Send Tue–Thu, 7:30–9:00 local** | Desk-bound staff on 8–4 schedules; Monday is meetings, Friday is dead |
+| Separate the domains. Product and transactional mail on the main domain, publication and cold on a different one | One spam trap hit must never touch the app's transactional mail |
+| SPF, DKIM and DMARC set up before the first send | Without alignment you won't reach a filtered .gov inbox at all |
+| Warm the new domain for at least four weeks | New domain plus government filters means instant quarantine |
+| 30 to 40 cold sends per inbox per day, max | Volume is the main spam signal for a young domain |
+| Plain text or close to it. No images, no pixel | Image-heavy mail reads as bulk, and pixels get stripped anyway |
+| Never use link shorteners | bit.ly and similar are often blocked at the gateway |
+| No attachments | Frequently stripped or quarantined. Link to a page |
+| Don't read clicks as interest | Security gateways pre-click every link, so your click data will lie to you |
+| Don't trust open rates at all | Scanners inflate them and pixels get stripped. Turning off open tracking costs you nothing real |
+| Send Tuesday to Thursday, 7:30 to 9:00 their time | Desk-bound staff on 8 to 4 schedules. Monday is meetings, Friday is dead |
 
-**The only metrics that mean anything here: replies, subscribes, and forwards.**
+Replies, subscribes and forwards are the only numbers worth watching.
 
-**Tooling:** keep **Brevo** for the monthly broadcast (already our stack —
-`brevo-setup.md`), and run cold from a **separate domain and separate tool** so a cold-send
-reputation problem can never reach the product's mail. Do not run cold sequences through the
-same sending identity as the app.
+Tooling: keep Brevo for the monthly email since it's already our stack
+(`brevo-setup.md`), and run cold from a separate domain on a separate tool, so a cold-send
+reputation problem can't reach the product's mail.
 
 ---
 
-## 8. Calendar — anchor to their fiscal year, not our launches
+## 8. Calendar
 
-Most municipalities run **July 1 – June 30**; the federal government runs **Oct 1 – Sep 30**.
-Verify per target agency — some states and special districts differ.
+Most cities run July 1 to June 30. The federal government runs October 1 to September 30.
+Check per agency, some states and districts differ.
 
-| Window | Their reality | Our move |
+| When | What's happening for them | What we do |
 |---|---|---|
-| **Sep–Oct** *(now)* | Federal FY close; fall conference season | Publish teardown #1. Register SAM.gov. Work conference rosters. |
-| **Nov–Dec** | Quiet; work gets planned | Best interview-booking window of the year. Run Track 1 hard. |
-| **Jan–Mar** | **Budget requests drafted for the July 1 fiscal year** | **The one window that matters.** Publish the benchmark dataset and the memo template — the artifacts a staffer pastes into a budget justification. |
-| **Apr–Jun** | Budgets adopted; spring engagement season | Track 2 at full volume — comment periods are closing, records are fresh |
-| **Jul–Aug** | New money, new fiscal year, slow with vacations | Readout proposals land here. Convert the Jan–Mar budget lines. |
+| September to October (now) | Federal fiscal year closing, fall conference season | Publish teardown 1. Register SAM.gov. Work conference rosters |
+| November to December | Quiet, and next year's work gets planned | Best interview booking window of the year. Run track 1 hard |
+| January to March | Budget requests get written for the July 1 fiscal year | The window that matters. Publish the benchmark table and the memo template, the things a staffer pastes into a budget justification |
+| April to June | Budgets adopted, spring engagement season | Track 2 at full volume. Comment periods are closing and the records are fresh |
+| July to August | New money, new fiscal year, slow because of vacations | Readout proposals land here, converting the January to March budget lines |
 
 ---
 
-## 9. Metrics and kill criteria
+## 9. What to measure, and when to stop
 
-**Leading (weeks 1–12):**
-| Metric | Target by week 12 |
+Through week 12:
+
+| Metric | Target |
 |---|---|
-| Verified Tier-1 contacts | 800–1,200 [E] |
+| Verified Tier 1 contacts | 800 to 1,200 [E] |
 | Teardowns published | 3 |
-| Track 1 reply rate | ≥8% (research asks should beat sales asks materially) |
-| Interviews completed | ≥12 |
-| "The Public Record" subscribers | ≥250 |
-| Track 2 responses from analysed agencies | ≥50% (if this is low, the framing is wrong) |
+| Track 1 reply rate | 8% or better. A research ask should clearly beat a sales ask |
+| Interviews done | 12 or more |
+| Subscribers | 250 or more |
+| Track 2 replies from agencies we analyzed | 50% or better. If it's low, the framing is wrong |
 
-**Lagging (months 4–9):**
+Months 4 to 9:
+
 | Metric | Target |
 |---|---|
 | Paid readouts sold | 2 |
-| Consultant-firm conversations | ≥5 |
-| Inbound (they emailed us first) | ≥10 |
-| Agency named us in an RFP / scope document | ≥1 — *the real signal* |
+| Conversations with consulting firms | 5 or more |
+| Inbound, where they emailed us first | 10 or more |
+| An agency putting us in an RFP or scope document | At least 1. That's the real signal |
 
-**Kill criteria — decide at week 12, no extensions:**
-- Track 1 replies under 4% → the research ask doesn't transfer to gov; stop.
-- Under 100 subscribers after 3 teardowns → the content isn't valuable; stop or reformat.
-- Zero paid readout *conversations* by month 6 → audience exists, willingness to pay doesn't;
-  demote to a background publication at ≤2 hrs/month.
-- **Any month where this exceeds 1 day/week** → it is cannibalising the security lane. Stop.
+Stop if, at week 12:
 
----
-
-## 10. Execution — first 12 weeks
-
-**Weeks 1–2 — infrastructure and the first docket**
-1. Register SAM.gov / get a UEI (free, slow, start immediately).
-2. Buy and configure the publication domain; SPF/DKIM/DMARC; begin warming.
-3. Pick docket #1. Criteria: **closed**, 500–5,000 comments, machine-readable, mid-size agency,
-   a topic with genuine disagreement, and an agency that looks competent.
-4. Build the Tier-1 seed list to 150 from one association roster.
-
-**Weeks 3–4 — publish #1 and open the warm door**
-5. Run the docket through UpSight. **Dogfood it properly** — log every friction point to
-   `10-ops/dogfooding-log.md`. A 3,000-comment public record is the hardest input we've fed it.
-6. Publish teardown #1 with receipts and a stated method.
-7. Send Track 2 to the analysed agency **before** publication.
-8. Ship supporting asset A (the memo template) alongside it — the teardown proves the method,
-   the template makes it theirs.
-
-**Weeks 5–8 — the loop**
-9. Track 1 to 150 contacts, ~30/day. Book interviews.
-10. Docket #2, published week 8. Every interview sharpens the next teardown.
-11. First "Public Record" broadcast at week 6.
-12. List to 500.
-
-**Weeks 9–12 — test willingness to pay**
-13. Docket #3 + supporting assets B and D (the benchmark dataset).
-14. **Offer the paid readout to the three warmest Track 2 conversations.** A price, a scope,
-    a date. This is the test that matters — everything before it is audience-building.
-15. Direct approach to 10 engagement consulting firms — the fast-cycle buyer.
-16. Week 12 review against §9. Continue, demote, or kill.
-
-**Effort budget: one day a week. If it needs two, it's the wrong lane this quarter.**
+- Track 1 replies come in under 4%. The research ask doesn't transfer to government.
+- Fewer than 100 subscribers after three teardowns. The content isn't valuable enough.
+- No paid readout conversations at all by month 6. The audience is real but the willingness
+  to pay isn't. Drop it to a background publication at two hours a month.
+- Any month where this takes more than a day a week. It's eating the security lane.
 
 ---
 
-## 11. Open questions this doesn't answer
+## 10. First 12 weeks
 
-1. Does the research-ask mechanic transfer from security practitioners to public employees, who
-   may need clearance to speak on the record? **Cheap test: 25 Track 1 sends, count replies.**
-2. Is the buyer the agency or the consulting firm serving agencies? The firm has budget authority
-   and a 2-week cycle; the agency has the budget line. **Test both in parallel — they cost the same.**
-3. Does a $7,500–$12,000 readout price above the impulse line but below RFP, or does it land in
-   the dead zone where it's too much to card and too little to scope?
-4. Is "The Public Record" the right name, and does it conflict with the Decision Files brand
-   or extend it? Arguably this *is* a Decision Files vertical rather than a separate publication —
-   resolving that one way or the other is cheaper before the first publish than after.
-5. Does analysing an agency's docket without asking first create a relationship problem we
-   haven't anticipated? **Track 2's pre-publication offer is the mitigation; validate it on #1
-   before doing it twice.**
+**Weeks 1 and 2.** Register SAM.gov and get a UEI, it's free and slow so start now. Buy and
+configure the publication domain, set up SPF, DKIM and DMARC, start warming it. Pick the
+first docket: closed, 500 to 5,000 comments, machine readable, mid-size agency, a topic with
+real disagreement, and an agency that looks competent. Build the Tier 1 list to 150 from one
+association roster.
+
+**Weeks 3 and 4.** Run the docket through UpSight and log every friction point in
+`10-ops/dogfooding-log.md`. A 3,000 comment public record is the hardest input we've given
+it. Publish teardown 1 with the receipts and the method. Send track 2 to that agency before
+it publishes. Ship the memo template alongside it, since the teardown proves the method and
+the template lets them use it.
+
+**Weeks 5 to 8.** Track 1 to 150 contacts at about 30 a day, and book interviews. Docket 2
+published in week 8, with each interview sharpening the next one. First monthly email in
+week 6. List to 500.
+
+**Weeks 9 to 12.** Docket 3, plus the defensibility checklist and the benchmark table. Offer
+the paid readout to the three warmest track 2 conversations, with a price, a scope and a
+date. That's the test that matters. Everything before it is audience building. Go direct to
+10 engagement consulting firms, since they're the fast buyer. Review against section 9 in
+week 12 and decide: continue, demote, or kill.
+
+Budget one day a week. If it needs two, it's the wrong lane this quarter.
+
+---
+
+## 11. What this doesn't answer
+
+Does the research ask work on public employees the way it works on security practitioners?
+They may need clearance to speak on the record. Cheap test: 25 track 1 sends, count replies.
+
+Is the buyer the agency or the consulting firm working for agencies? The firm can sign in
+two weeks, the agency has the budget line. Test both, they cost the same.
+
+Does $7,500 to $12,000 sit above impulse and below RFP, or in the dead zone where it's too
+much to put on a card and too little to scope properly?
+
+Is this a Decision Files vertical or a separate publication? It's arguably the former.
+Either way it's cheaper to settle before the first piece publishes than after.
+
+Does analyzing an agency's docket without asking first cause a problem we haven't thought
+of? Track 2's offer to fix errors is the mitigation. Check how it lands on the first one
+before doing it again.
 
 ---
 
 ## Sources
 
-Numbers marked **[S]** are sourced below; **[E]** are estimates, directional only.
+[S] means sourced below. [E] means an estimate, directional only.
 
-- FAR acquisition-related threshold inflation adjustment (micro-purchase $15,000; simplified
-  acquisition $350,000, effective 2025-10-01):
+- FAR threshold inflation adjustment, micro-purchase $15,000 and simplified acquisition
+  $350,000 effective 2025-10-01:
   https://www.federalregister.gov/documents/2025/08/27/2025-16412/federal-acquisition-regulation-inflation-adjustment-of-acquisition-related-thresholds
 - FAR Subpart 13.2, actions at or below the micro-purchase threshold:
   https://www.acquisition.gov/far/subpart-13.2
-- Local government application of federal thresholds (MRSC):
+- How federal thresholds apply to local government (MRSC):
   https://mrsc.org/stay-informed/mrsc-insight/november-2025/federal-thresholds
-- IAP2 membership scale (2,500+ members, 48 states) and government-agency membership:
-  https://www.iap2.org/page/membership · https://iap2usa.org/government
-- IAP2 professional certification (CP3 / MCP3): https://www.iap2.org/page/professionalcertification
-- Public employee email as a public record (Reporters Committee for Freedom of the Press):
+- IAP2 membership size and government agency membership:
+  https://www.iap2.org/page/membership and https://iap2usa.org/government
+- IAP2 professional certification, CP3 and MCP3:
+  https://www.iap2.org/page/professionalcertification
+- Public employee email as public record (Reporters Committee for Freedom of the Press):
   https://www.rcfp.org/open-government-sections/6-email/
-- Public comment volume and staff analysis burden (The Regulatory Review):
+- Public comment volume and the staff burden of analyzing it (The Regulatory Review):
   https://www.theregreview.org/2021/11/08/management-of-public-comments/
-- Federal comment analysis tooling: https://resources.data.gov/resources/cdoc_comment_analysis/
+- Federal comment analysis tooling:
+  https://resources.data.gov/resources/cdoc_comment_analysis/
 - FTA guidance on receiving and responding to public and agency comments:
   https://www.transit.dot.gov/sites/fta.dot.gov/files/docs/regulations-and-guidance/environmental-programs/55996/11-responding-comments.pdf
 - Internal: `20-research/market-intel/deliberative-intelligence-market.md`,
   `20-research/market-intel/Competitors/consulting-adjacent/`,
-  `00-control/decisions.md` (2026-08-15), `40-gtm/channels/lifecycle/brevo-setup.md`
+  `00-control/decisions.md` (2026-08-15),
+  `40-gtm/channels/lifecycle/brevo-setup.md`
