@@ -128,7 +128,7 @@ You can run an evidence-based discovery process with a recording app, a transcri
 
 General-purpose tools like Notion, Dovetail, or Airtable can help organize the output, but they still leave the extraction work to you.
 
-[UpSight](https://upsight.ai) was purpose-built for this exact workflow. It handles the full pipeline, from recording or importing interviews through AI-powered evidence extraction to theme clustering and deliverable-ready outputs. Every piece of evidence maintains full attribution: who said it, when, and in what context. Patterns are identified across interviews automatically, and every insight links back to the specific quotes that support it. For consultants who bill by the hour, the synthesis time savings alone changes the economics of a discovery engagement.
+[UpSight](https://getupsight.com) was purpose-built for this exact workflow. It handles the full pipeline, from recording or importing interviews through AI-powered evidence extraction to theme clustering and deliverable-ready outputs. Every piece of evidence maintains full attribution: who said it, when, and in what context. Patterns are identified across interviews automatically, and every insight links back to the specific quotes that support it. For consultants who bill by the hour, the synthesis time savings alone changes the economics of a discovery engagement.
 
 Whatever tool you choose, optimize for two things: attribution and speed. If you cannot trace a finding back to a specific person and quote in under thirty seconds, your process has a gap. If synthesis takes more than a day for a ten-interview engagement, you are leaving money on the table.
 
@@ -142,4 +142,4 @@ That single shift, from "here is what I found" to "here is the evidence, see for
 
 Your clients hired you because you are good at talking to their customers. Show them you are just as good at proving what those customers said.
 
-**[Get started with UpSight](https://www.upsight.ai) — turn your next discovery engagement into evidence your client can act on.**
+**[Get started with UpSight](https://www.getupsight.com) — turn your next discovery engagement into evidence your client can act on.**

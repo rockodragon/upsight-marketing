@@ -105,10 +105,10 @@ Being genuinely present in one community beats shallow presence in six.
 
 | # | Move | Effort | Evidence |
 |---|---|---|---|
-| 1 | SSR / pre-render audit of upsight.ai + Decision Files site before launch | ~1 day | HubSpot: +1,600% crawls, +40% citations |
+| 1 | SSR / pre-render audit of getupsight.com + Decision Files site before launch | ~1 day | HubSpot: +1,600% crawls, +40% citations |
 | 2 | Citation + crawl baseline (20 prompts × 5 engines, logged; bot hits from server logs) | ~2 hrs, then 30 min/mo | HubSpot: their entire method rested on proprietary logs |
 | 3 | Crawlable pricing page in plain HTML | ~2 hrs | HubSpot: 5 of 6 products improved LLM pricing accuracy |
-| 4 | 25–50 page glossary of our category vocabulary, HTML-first | ~1 day with AI drafting | HubSpot: +35% / +26% visibility; citation share 1.97% → 3.2% |
+| 4 | **Glossary — drafted 2026-09-17, 37 terms, `../glossary/`.** Needs product verification + SSR publish | drafted; ~half a day to verify and ship | HubSpot: +35% / +26% visibility; citation share 1.97% → 3.2% |
 | 5 | Mention program: 5+ third-party mentions per published Decision File | ongoing, per file | HubSpot: volume + recency beat domain authority |
 | 6 | Community presence in 1–2 places where our ICP argues | ~2 hrs/week | HubSpot: 7× mentions, citations doubled |
 | 7 | Vertical page set (role × research job), server-rendered | ~2 days | HubSpot: 92% citation rate, +49% visibility |
@@ -139,3 +139,12 @@ Recorded for completeness — **none evaluated by us, all enterprise-priced.**
 Botify SpeedWorkers (pre-rendering; a Next.js/Cloudflare static render gets us the same outcome
 at our scale), Xfunnel (AI-visibility measurement; acquired by HubSpot), HubSpot's own AEO product.
 Our version of all three is a `curl` check, a spreadsheet, and a monthly hour.
+
+---
+
+## Assets built against this playbook
+
+| Asset | Where | State |
+|---|---|---|
+| Glossary, 37 terms in 3 clusters | `../glossary/` | Drafted 2026-09-17. Blocked on verifying the "In UpSight" claims and on server-rendered publish. |
+| Crawlability + citation baseline | `40-gtm/experiments/2026-09-ai-search-crawlability.md` | Planned. Step 0 is ~2 hours and unblocks everything else. |

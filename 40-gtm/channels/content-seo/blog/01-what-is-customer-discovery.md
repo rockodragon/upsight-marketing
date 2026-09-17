@@ -8,7 +8,7 @@ week: 1
 author: "Rick Moy"
 date_published: "" # Fill when publishing
 date_modified: ""
-canonical_url: "https://upsight.ai/blog/what-is-customer-discovery"
+canonical_url: "https://getupsight.com/blog/what-is-customer-discovery"
 images:
   hero: "" # TODO: product screenshot or framework diagram
   framework_diagram: "" # TODO: 5-step visual
@@ -163,7 +163,7 @@ There's no single right toolset. What matters is that your system handles three 
 
 **For note-taking and synthesis:** Some teams use Notion, Dovetail, or dedicated research repositories. The challenge with general-purpose tools is that they require heavy manual work to tag, organize, and connect evidence across conversations.
 
-**For turning conversations into customer intelligence:** This is where purpose-built tools earn their keep. [UpSight](https://upsight.ai), for example, takes recorded conversations and uses AI to extract evidence — specific quotes, pain points, and behavioral patterns — and connects them to themes across your entire body of research. Instead of rereading transcripts, you search across every conversation for evidence related to the decision you're making right now.
+**For turning conversations into customer intelligence:** This is where purpose-built tools earn their keep. [UpSight](https://getupsight.com), for example, takes recorded conversations and uses AI to extract evidence — specific quotes, pain points, and behavioral patterns — and connects them to themes across your entire body of research. Instead of rereading transcripts, you search across every conversation for evidence related to the decision you're making right now.
 
 **For lightweight discovery:** Not every team needs specialized tooling. A spreadsheet with columns for "participant," "quote," "theme," and "assumption validated/invalidated" will outperform no system at all. Start there if you need to.
 
@@ -203,7 +203,7 @@ If you're not currently doing structured customer discovery, start small:
 
 That's it. Five conversations with a clear question will teach you more than months of guessing. (And if you're a technical founder tempted to skip this and just [start building](/blog/stop-vibe-coding-your-way-to-nowhere-what-i-wish-id-known-about-product-market-fit), read that first.)
 
-If you want a system that captures the evidence automatically, surfaces the patterns, and makes sure nothing gets lost between the conversation and the decision — give [UpSight's free tier](https://upsight.ai) a try. Upload a conversation, see what it pulls out, and decide if it's useful. No pitch call required.
+If you want a system that captures the evidence automatically, surfaces the patterns, and makes sure nothing gets lost between the conversation and the decision — give [UpSight's free tier](https://getupsight.com) a try. Upload a conversation, see what it pulls out, and decide if it's useful. No pitch call required.
 
 The work of customer discovery is irreplaceable. The work of organizing what you learned shouldn't eat your whole week. Build conviction from evidence, not assumptions — and make sure that evidence is still there when you need it.
 
@@ -245,6 +245,6 @@ No. AI can dramatically reduce the time spent on post-interview work — transcr
 
 ---
 
-*Rick Moy is the founder of [UpSight](https://upsight.ai), where he's building tools that turn customer conversations into evidence teams can search, share, and act on. He's spent years helping founders and product teams make better decisions from direct customer contact.*
+*Rick Moy is the founder of [UpSight](https://getupsight.com), where he's building tools that turn customer conversations into evidence teams can search, share, and act on. He's spent years helping founders and product teams make better decisions from direct customer contact.*
 
 **Next in this series:** [Customer Discovery for Consultants: How to Sell What Clients Actually Need](/blog/customer-discovery-for-consultants)

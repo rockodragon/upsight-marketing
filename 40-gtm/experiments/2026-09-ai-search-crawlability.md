@@ -15,7 +15,7 @@ page was JavaScript-rendered (source: Growth Unhinged, *Inside HubSpot's AI sear
 read 2026-09-16 — their data at their scale, not a forecast for us).
 
 ## Audience / surface
-upsight.ai (marketing pages, pricing, blog) and the Decision Files site before it launches.
+getupsight.com (marketing pages, pricing, blog) and the Decision Files site before it launches.
 
 ## Variants
 - **A (control):** current rendering, measured as-is.

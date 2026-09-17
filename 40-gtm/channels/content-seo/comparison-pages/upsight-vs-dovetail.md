@@ -128,6 +128,6 @@ The question is not "which tool has more features?" It is "which tool fits the w
 
 If you have read this far, you are probably someone who talks to customers and wants to do more with what you learn. UpSight is free to start — upload a conversation and see your first insights in minutes, not days.
 
-**[Get started with UpSight](https://upsight.ai)** — no credit card, no taxonomy setup, no 45-minute onboarding call. Just your conversations, turned into intelligence you can act on.
+**[Get started with UpSight](https://getupsight.com)** — no credit card, no taxonomy setup, no 45-minute onboarding call. Just your conversations, turned into intelligence you can act on.
 
 *Get your customers. Build conviction.*

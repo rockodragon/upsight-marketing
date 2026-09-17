@@ -5,6 +5,36 @@
 
 ---
 
+## 2026-09-17 — Glossary drafted (37 terms); domain corrected repo-wide
+
+**Shipped**
+- `40-gtm/channels/content-seo/glossary/` — 37 bot-first definition pages across three clusters:
+  customer intelligence (12), discovery practice (15), buyer decisions/GTM (10). Every page:
+  question-form H1, one-sentence extractable definition, why-it-matters, concrete example,
+  UpSight connection, 4 related-term links, 3 FAQ pairs. Verified: zero broken internal links,
+  zero orphans.
+- `glossary/_index.md` — publishing requirements (SSR, DefinedTerm + FAQPage JSON-LD), page
+  template, full term table, the 0/30/60-day measurement schedule, and next-candidate terms.
+- Playbook backlog item #4 updated; assets table added.
+
+**Decided**
+- Glossary ships as one batch and then holds still for 60 days, so the crawlability experiment
+  reads a clean signal.
+
+**Stuck**
+- Glossary cannot publish until every "In UpSight" section is checked against shipped product.
+  Written from the messaging house, not the app. Five pages flagged as needing the most care.
+  This is a real risk: these pages are what an AI engine quotes to a prospect.
+- Still blocked on the same precondition as everything else — no SSR verification has been run on
+  getupsight.com.
+
+**Surfaced**
+- `upsight.ai` appeared in 7 files (19 refs) against 119 correct `getupsight.com` refs. All
+  corrected. Worth a check on where else the wrong domain is published — canonical URLs and
+  JSON-LD pointing at a domain we don't own would be actively harmful for AI citation.
+
+---
+
 ## 2026-09-16 — AI search playbook from HubSpot's Project Lighthouse
 
 **Shipped**

@@ -34,7 +34,7 @@ Same source as above.
 JSON-LD (JavaScript Object Notation for Linked Data) is a `<script>` block in your page's `<head>` that tells search engines **what your content is** using Schema.org vocabulary. It doesn't affect what readers see — it's metadata for machines.
 
 ### When to add it
-Add JSON-LD when the blog post is published to the actual website (upsight.ai). It goes in the `<head>` of the HTML page, not in the markdown source file. If your CMS supports structured data fields, use those. Otherwise, inject via a custom code block or template.
+Add JSON-LD when the blog post is published to the actual website (getupsight.com). It goes in the `<head>` of the HTML page, not in the markdown source file. If your CMS supports structured data fields, use those. Otherwise, inject via a custom code block or template.
 
 ### Three schema types for every blog post
 
@@ -50,21 +50,21 @@ Add JSON-LD when the blog post is published to the actual website (upsight.ai). 
   "author": {
     "@type": "Person",
     "name": "Rick Moy",
-    "url": "https://upsight.ai/about"
+    "url": "https://getupsight.com/about"
   },
   "publisher": {
     "@type": "Organization",
     "name": "UpSight",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://upsight.ai/logo.png"
+      "url": "https://getupsight.com/logo.png"
     }
   },
   "datePublished": "2026-04-01",
   "dateModified": "2026-04-01",
   "description": "Meta description here",
-  "image": "https://upsight.ai/blog/og/slug.png",
-  "mainEntityOfPage": "https://upsight.ai/blog/slug"
+  "image": "https://getupsight.com/blog/og/slug.png",
+  "mainEntityOfPage": "https://getupsight.com/blog/slug"
 }
 ```
 
