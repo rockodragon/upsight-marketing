@@ -5,6 +5,27 @@
 
 ---
 
+## 2026-09-23 - Econ-dev offers are priced to clear a signature, and sold as a service not software
+**Why:** Two findings decided this. First, across every major grant program the administrative
+bucket is 10-20% and frequently excludes software by name — CalOSBA TAP caps technology tools at
+$1,000, bars research budgets from buying "research tools, software, or reports", and makes
+indirect unallowable, **but expressly allows staff or contractor time to conduct monitoring and
+evaluation**. Grant money cannot buy a software subscription, so the scope of work, the invoice
+and the language are a service (hours and a rate) with the platform as the means of delivery.
+Second, landing under a signature authority beats a bigger number: Offer A at $9,500 triggers no
+competitive quotes at any verified San Diego County entity, and Offer B at $14,500 sits under the
+federal $15,000 micro-purchase so it can be bought with federal award money outright. Rate is
+$100/hour because that is CalOSBA's own published reimbursement ceiling, so the rate can never be
+the reason a TAP-funded buyer says no. See `30-strategy/econ-dev-pricing-2026-09.md`.
+
+## 2026-09-23 - Offer A is priced below Rick's opportunity cost, deliberately and boundedly
+**Why:** $9,500 against a $7,250 delivery cost is a 24% margin at the published $100/hour rate,
+but below the $1,000/day opportunity-cost valuation used in the corridor pilot. Accepted as a
+first-customer investment to buy reference customers and evidence, not as a standing price. It is
+bounded: the rate card is published, the pilot discount is stated as a discount, and year-2
+escalation is written in. If this drifts into being the normal price, that is the consultancy
+failure mode and it should be reversed with a new entry here.
+
 ## 2026-09-23 - Economic development is a new lane; grant reporting is the wedge, early warning is the retention story
 **Why:** Rick's call. These organizations make expensive public decisions on thin evidence, and
 grant reporting is the one pain that is mandatory, recurring and already funded — so it opens

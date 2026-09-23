@@ -7,6 +7,9 @@
 
 | Date opened | Q | Type | Owner | Status |
 |---|---|---|---|---|
+| 2026-09-23 | How many business conversations can Rick actually complete per working day on a warm list? Modelled at 5. **If it is 3, every margin roughly halves and Offers A and B become loss-making.** | [tactical] | Rick | **the number that decides the pricing model** → the corridor pilot measures it directly |
+| 2026-09-23 | Where are the Startup San Diego / Innovate 78 pricing numbers? Not in this repo — grepped. | [tactical] | Rick | open → Rick has them; they beat researched anchors |
+| 2026-09-23 | Will a grant-funded buyer accept a service-framed SOW (monitoring and evaluation hours) when the thing being delivered is obviously a platform? | [bet] | Rick | open → this is what makes the money spendable; test in the first real quote |
 | 2026-09-23 | What is the Sanford sponsorship actually for? Four readings: ECEDC funds our corridor study / we sponsor their event / they underwrite a software pilot / a third party sponsors and ECEDC lends its name. Letter is drafted on reading #1. | [tactical] | Rick | **blocking** → one-line answer unblocks the letter |
 | 2026-09-23 | Suppression floor for the corridor pilot: n<3 (pilot brief) or n<5 (data rights doc)? The two documents conflict. Changes what can be promised at the door. | [tactical] | Rick | **blocks fieldwork** → proposed split: 5 for sensitive items, 3 for neutral operational facts |
 | 2026-09-23 | Does a correspondent actually exist at these organizations, or would we have to staff it? Compounding intelligence, early warning and the whole lane rest on sustained field presence UpSight cannot supply. Staffing it ourselves turns this into a services business. | [bet] | Rick | open → **the weakest assumption in the lane**; the 3-5 agency interviews in the pilot test it |

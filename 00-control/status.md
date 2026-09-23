@@ -5,6 +5,42 @@
 
 ---
 
+## 2026-09-23 (later) — Econ-dev pricing: three offers, and the finding that grant money cannot buy software
+
+**Shipped**
+- `30-strategy/econ-dev-pricing-2026-09.md` — threshold map verified for five of six San Diego
+  agencies with sources, cost floor for year 1 and year 3, three packaged offers, quoting scripts,
+  and the traps of pricing low with mechanics rather than warnings.
+- Corrected `40-gtm/campaigns/econ-dev-corridor-pilot-2026-09.md` §8.3, which asked $12-18K for a
+  scope costing $24-28K of founder time. It now points at the offer table.
+
+**Decided**
+- Sell as a service, not a software subscription — grant admin budgets exclude software by name.
+- Offers priced to clear a signature: A $9,500, B $14,500, C $48,000/yr.
+- Offer A's sub-opportunity-cost price accepted as a bounded first-customer investment.
+
+**Surfaced**
+- **The structural finding: CalOSBA TAP caps technology tools at $1,000, bars research budgets
+  from buying software or reports, and makes indirect unallowable — but expressly allows staff or
+  contractor time for monitoring and evaluation.** The money exists and cannot buy a SaaS seat.
+  This reorganises the packaging for the whole lane.
+- Cash-at-risk is the strongest anchor, and it is quotable: TAP withholds payment when reports are
+  incomplete and rejects late invoices. Works for TAP, CIP, RII and partly CDBG. Does not work for
+  EDA's five-year tail (grant closed, no payment to withhold) or Main Street (no money).
+- Free action worth taking: County of San Diego small-local-business certification under Board
+  Policy B-53 doubles the County micro-purchase ceiling from $10,000 to $20,000.
+- Honest counterweight: Offer C at $48,000 costs more than a half-time coordinator (~$36,430
+  loaded). Offers A and B win that comparison; C has to win on something else.
+- Oceanside's purchasing thresholds could not be verified (403s) and are marked do-not-state.
+- Nonprofit signature authority is not publicly knowable for any Tier 1 org — it is a first-call
+  question, not research.
+
+**Stuck**
+- Conversations-per-day is modelled at 5 and unmeasured. At 3, Offers A and B lose money.
+- Sponsorship framing still unanswered; still the only thing blocking the Sanford letter.
+
+---
+
 ## 2026-09-23 — Economic development lane opened; six research workstreams landed
 
 **Shipped** (all six dispatched in parallel, committed individually)

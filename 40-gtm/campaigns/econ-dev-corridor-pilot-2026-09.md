@@ -744,8 +744,24 @@ is the entire advantage; do not spend it by presenting.
 
 ### 8.3 What to ask for
 
-**Not a contract. Not an RFP response. A paid 90-day pilot: $12–18K, 60–100 businesses across two
-corridors, with a named deliverable tied to their actual filing date.**
+> **CORRECTED 2026-09-23.** This section originally asked for **$12–18K for 60–100 businesses
+> across two corridors**. That is **below cost** — that scope is roughly 30–35 working days, about
+> $24K–$28K of founder time. Pricing is now owned by
+> `30-strategy/econ-dev-pricing-2026-09.md`; ask for one of its packaged offers instead.
+
+**Not a contract. Not an RFP response. A paid pilot, priced from the offer table in
+`30-strategy/econ-dev-pricing-2026-09.md`, with a named deliverable tied to their actual filing
+date.** The two that fit this conversation:
+
+- **Offer A — the Filing Pilot, $9,500.** One quarter, one reporting obligation, 15 conversations,
+  8 weeks. Clears every verified San Diego County purchasing threshold — no competitive quotes
+  triggered anywhere on the target list. One person can sign it.
+- **Offer B — the Filing Package, $14,500.** One full filing period, 25 conversations, two filings,
+  audit memo. Sits under the federal $15,000 micro-purchase threshold, so it can be bought with
+  federal award money with no competitive quotations at all.
+
+Match the scope to the price. Do not quote a number and then agree to a scope that does not fit it —
+the scope valve is **$275 per additional conversation**.
 
 Deliberately sized to come out of a **program or discretionary budget rather than procurement** —
 the entire point of the lane is to avoid the twelve-month cycle. If the answer is "that has to go
