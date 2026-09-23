@@ -103,16 +103,17 @@ rebuilding before Rick spends another week on it.
    or a favor. Grant-funded orgs can often charge reporting to the grant. If they can't, pricing
    has to change.
 
-### The email — send as-is once the opener is picked
+### The email — ready to send
+
+> **Relationship confirmed by Rick 2026-09-23:** they have met a few times, loosely, around the
+> StartupSD orbit. The opener below is written to match that exactly — enough to not be a cold
+> email, not so warm that it claims a friendship. Do not upgrade it.
 
 > **Subject:** the reporting side of the Empower East County fund
 
 > Matt,
 >
-> [PICK ONE — TRUE VERSION ONLY:
->  (a) if you've actually met: "Good to see you at [specific event]" / "We met through StartupSD —"
->  (b) if you haven't: "We haven't met — Rick Moy, I'm a founder in San Diego, StartupSD orbit."
->  DELETE the other. Do not write a warmer line than is true.]
+> Rick Moy here — we've crossed paths a few times around StartupSD.
 >
 > Congrats on the East County seat, and on the $300K County grant into the Empower East County
 > fund with the EDA match behind it.

@@ -768,3 +768,585 @@ And where a benchmark comparison appears:
 > de-identified; no individual business appears. Real data.
 
 ---
+
+## 8. Contract-end scenarios
+
+Decide these now, in writing, while nobody is angry. Each one has arrived in someone else's
+business already.
+
+### 8.1 The client does not renew
+
+**What happens:**
+- All Layer 4 output licenses under §4.1 continue, perpetually and free. Nothing is clawed back.
+  A non-renewing client can still publish last year's findings in next year's grant report.
+- The client gets the §4.2 export on request within 90 days of termination. One export, free.
+  Additional exports at a documented fee.
+- Evidence view access (§4.3) continues for 12 months, then ends.
+- Agency-supplied data (Hat B, §3.6) is deleted or returned within 30 days, with written
+  certification.
+- **The corpus is unaffected.** Layers 1–3 for that corridor remain in UpSight, under the
+  participants' consents, which ran to UpSight and not to the engagement. Layer 4 history is kept.
+  Layer 5 contribution continues, because `consent_crosscorridor` is not conditioned on the
+  agency's contract.
+
+**JUDGMENT:** That last point is the one to be sure about. Participant consent must be written and
+spoken so that it survives the client contract — the participant is consenting to UpSight keeping
+and using the material, not to a project that ends. The §3.3 script does this ("we hang onto these
+conversations... when we come back next year"). If it did not, every non-renewal would puncture the
+corpus. **Counsel should confirm that consent framed this way is durable.**
+
+**Re-engagement is the payoff.** When the agency comes back in year three, UpSight already has the
+corridor's history and can quote a cheaper, faster, better engagement than any competitor bidding
+from zero. Say this at non-renewal, warmly, without pressure. It is also the honest reason a
+non-renewal is survivable.
+
+### 8.2 An agency demands the corpus
+
+The demand arrives in one of four flavors. Handle them differently.
+
+| Flavor | What they actually want | Response |
+|---|---|---|
+| **Procurement reflex** — "all work product is the property of the City" in the template | Nothing specific. It is boilerplate nobody has thought about. | Redline to the §9.2/§9.3 split and explain in one paragraph. Usually accepted. This is the most common case by far. |
+| **Continuity anxiety** — "what if you disappear" | Assurance, not data. | Escrow (§8.5) plus the §4.2 export right. Almost always resolves it. |
+| **Audit or funder pressure** — "our program officer wants the underlying records" | A specific, bounded thing, usually verification that the numbers are real. | §4.4 methodology support, §9.10 auditor access at UpSight's premises, and an offer to put the program officer on a view-only seat for the review period. |
+| **Genuine ownership demand** — a city attorney who has decided the City must own the dataset | The corpus. | This is the walk-away conversation. §10.A. Make the §5.2 argument, offer the ladder in §10.A, and be prepared to lose the deal. |
+
+**Never do:** hand over a transcript export to make a demand go away. It ends the corpus position
+in that region the moment another client's counsel hears about it, and it converts private
+conversations into agency records, which is the thing we told participants would not happen.
+
+### 8.3 The client is acquired, merged, or dissolved
+
+Public agencies do dissolve and merge — redevelopment agency dissolution in California is the
+obvious precedent, and chambers and EDCs merge regularly.
+
+**The rule: output licenses follow the successor in interest; nothing more does.**
+
+- **Merger or consolidation** (two chambers merge; a city absorbs an EDC's function): the §4.1
+  output license and §4.2 export right transfer to the successor entity, on written notice. Active
+  service does not transfer automatically — UpSight may elect to novate the engagement or to
+  terminate it and let the perpetual output rights stand.
+- **Dissolution with a designated successor agency**: same, to the successor. Where a state statute
+  assigns the dissolved entity's records and obligations to a named successor, the license follows
+  that assignment.
+- **Dissolution with no successor**: licenses lapse. Corpus unaffected. UpSight retains the
+  corridor history and may continue to serve the geography under a new client.
+- **A client tries to assign its rights to a commercial party** (a consultancy, a data broker, a
+  developer): prohibited. Clause 9.11 restricts assignment to a governmental or nonprofit successor
+  in interest performing substantially the same public function.
+- **Geography overlap after a merge**: if the successor's territory is larger, the license does not
+  expand to the new territory. They bought City Heights; merging with another chamber does not give
+  them Barrio Logan. Say this in 9.11 explicitly — it will otherwise be assumed the other way.
+
+### 8.4 A business owner withdraws consent
+
+Split this cleanly into what is possible and what is not, and say both in the script.
+
+| Where the material is | On withdrawal | Timeline |
+|---|---|---|
+| L1 raw capture in UpSight | Deleted, or quarantined and excluded from all processing if a legal hold or a federal retention obligation applies (§6.6 — 3 years from final financial report). If quarantined rather than deleted, the participant is told that, and why. | 30 days |
+| L2 quotes not yet published | Deleted from the corpus and from all pending outputs. | 30 days |
+| L3 profile | Deleted, or reduced to a non-identifying shell if needed to preserve counts already reported (an anonymous "one business withdrew" placeholder, never a re-identifiable stub). | 30 days |
+| L4 derived themes and indicators already computed | **Not recomputed retroactively.** The person's contribution is removed from all future computations. Previously published figures stand, with a footnote if the change is material under §7 thresholds. | Next reporting cycle |
+| L5 benchmark contributions | Removed from future benchmark computations. Already-published benchmark figures stand. | Next reporting cycle |
+| **A named quote already in a published report** | **This is the hard case. We cannot un-publish.** What we do: remove it from every future edition, every reprint, every dashboard and every online version we control; notify the client in writing and ask them to do the same in anything they control; never re-use it. We do not have the power to recall a printed council packet or a PDF someone downloaded, and we say so at the time of the ask rather than discovering it during an angry phone call. | 10 business days for anything UpSight controls; client notified same week |
+
+**JUDGMENT — the sentence that prevents this from becoming a crisis** is already in the §3.3
+script: *"If it's already printed we can't un-print it, but we take it out of everything going
+forward."* Said at consent time, a withdrawal becomes an administrative task. Not said, it becomes
+a betrayal. This is the highest-leverage sentence in the whole consent script.
+
+**Also:** withdrawal must be easy and must not require a reason. An email address and a phone
+number on the correspondent's card. A withdrawal request that requires a form is a withdrawal
+request designed to fail, and it will be quoted back to us.
+
+### 8.5 UpSight dissolves or stops operating
+
+Offer this unprompted; it defuses §8.2's continuity flavor before it forms.
+
+A third-party escrow, or a simpler contractual commitment with a designated trustee, releases to
+each active client **their own corridor's** Layer 2, 3 and 4 material — not the cross-client corpus
+— on a defined trigger: dissolution, assignment for the benefit of creditors, or cessation of
+operations for more than 90 consecutive days. Layer 1 raw capture is **not** released; it is
+destroyed, because releasing recordings into agency custody is the exact outcome participants were
+told would not happen, and a dead company should not be the reason that promise breaks.
+
+**JUDGMENT:** Escrow with a real agent costs real money and is probably not worth it for the first
+handful of deals. Start with the contractual commitment plus a named trustee and a written runbook;
+add a funded escrow when deal size or a specific counterparty justifies it. Do not promise an
+escrow you have not actually set up.
+
+---
+
+## 9. The clauses
+
+Draft contract language for the data rights section. **Plain drafting.** Written to be read by a
+program manager and redlined by a city attorney, not to impress either of them.
+
+**These are drafts for counsel to review, revise and take responsibility for.** Bracketed items are
+deal variables. Section 9.7 and 9.5 are the ones to spend counsel's hour on.
+
+---
+
+**9.1 Definitions**
+
+> **"Participant"** means a business, business owner, operator or employee who provides information
+> to UpSight through an interview, survey, conversation or other method, under the consent described
+> in Section 9.6.
+>
+> **"Source Material"** means recordings, transcripts, field notes, raw survey responses and
+> photographs captured by UpSight from a Participant.
+>
+> **"Evidence"** means a verbatim excerpt of Source Material, linked to its origin.
+>
+> **"Participant Records"** means the persistent profile UpSight maintains for a Participant and
+> their business, including attributes, engagement history and linked Evidence.
+>
+> **"Findings"** means themes, indicators, metrics, analyses, summaries, reports and other
+> derivative works UpSight produces from Source Material, Evidence and Participant Records.
+>
+> **"Client Geography"** means [the corridors, districts or jurisdictional area named in Exhibit A].
+>
+> **"Client Deliverables"** means the Findings, reports and materials UpSight delivers to Client
+> under this Agreement, concerning the Client Geography.
+>
+> **"Client-Supplied Data"** means data Client provides to UpSight, including business registries,
+> permit and license data, prior survey results and contact lists.
+>
+> **"Comparative Dataset"** means UpSight's multi-client, multi-geography aggregated dataset and the
+> benchmarks, indices and comparisons derived from it, in which individual Participants and
+> individual client geographies are not identifiable.
+>
+> **"UpSight Platform and Methods"** means UpSight's software, models, prompts, taxonomies,
+> indicator definitions, question banks, research protocols and all improvements to them.
+
+---
+
+**9.2 Ownership**
+
+> (a) As between the parties, **UpSight owns** the Source Material, the Evidence, the Participant
+> Records, the Comparative Dataset, and the UpSight Platform and Methods. Findings are owned by
+> UpSight and licensed to Client under Section 9.3.
+>
+> (b) As between the parties, **Client owns** the Client-Supplied Data and all materials Client
+> creates using the Client Deliverables.
+>
+> (c) Neither party's ownership affects any right a Participant holds in their own information, or
+> any right a Participant has under Section 9.6.
+>
+> (d) **This Agreement does not create a work made for hire.** The parties acknowledge that Client
+> is purchasing research services and a license to the resulting Findings, and is not commissioning
+> the creation of a dataset owned by Client. Any provision of any Client purchasing document,
+> general terms, or standard conditions that purports to vest ownership of Source Material,
+> Evidence, Participant Records or the Comparative Dataset in Client is superseded by this Section.
+
+---
+
+**9.3 License to Client**
+
+> (a) UpSight grants Client a **perpetual, irrevocable, worldwide, royalty-free, non-exclusive
+> license** to use, reproduce, modify, create derivative works from, distribute, publicly display
+> and publicly perform the Client Deliverables, including all Findings concerning the Client
+> Geography.
+>
+> (b) Without limiting subsection (a), this license expressly permits Client to use the Client
+> Deliverables in: grant applications, progress reports, closeout reports and any other submission
+> to a funder; staff reports, agendas and packets for any legislative or governing body; planning
+> and environmental documents; press releases and media statements; Client's website and social
+> media; and sharing with Client's funders, auditors, consultants, subrecipients and coalition
+> partners.
+>
+> (c) **This license survives expiration or termination of this Agreement for any reason, including
+> termination by either party for cause, and requires no further payment.**
+>
+> (d) UpSight grants Client a perpetual, irrevocable, royalty-free license to use, reproduce and
+> disclose the Participant Records for businesses within the Client Geography, as exported under
+> Section 9.9, subject to the consent state recorded for each Participant.
+>
+> (e) Client may use benchmark comparisons that include the Client Geography, as delivered in Client
+> Deliverables, in any manner permitted by subsection (b), with attribution to UpSight as the source.
+>
+> (f) **Limitation.** Client shall not sell or license the Client Deliverables as a standalone
+> commercial data product, or to a third party whose principal business is the sale of economic,
+> market or economic-development data. Use, publication and free distribution by Client are not
+> restricted by this subsection.
+
+---
+
+**9.4 License to UpSight, and UpSight's retained rights**
+
+> (a) Client grants UpSight a non-exclusive, royalty-free license to use the Client-Supplied Data
+> solely to perform this Agreement. UpSight shall not incorporate Client-Supplied Data into the
+> Comparative Dataset and shall not use it for any other client or purpose.
+>
+> (b) UpSight retains the right to use Source Material, Evidence, Participant Records and Findings
+> to: (i) perform this Agreement; (ii) maintain a longitudinal record of the Client Geography across
+> time, including periods before and after the Term; (iii) improve the UpSight Platform and Methods;
+> and (iv) create and commercially exploit the Comparative Dataset, in each case subject to
+> Participant consent and to subsection (c).
+>
+> (c) **Protection of Client Geography in the Comparative Dataset.** UpSight shall not disclose to
+> any third party, in the Comparative Dataset or otherwise: (i) the identity of any Participant
+> business within the Client Geography; (ii) any verbatim Evidence from the Client Geography that
+> identifies a Participant; or (iii) data concerning the Client Geography at a level of aggregation
+> finer than the suppression standard in Section 9.8. UpSight may disclose that Client is a client
+> of UpSight and may reference the Client Geography by name in describing the scope of the
+> Comparative Dataset, unless Client objects in writing.
+
+---
+
+**9.5 Roles of the parties under privacy law**
+
+> (a) With respect to **Client-Supplied Data**, UpSight acts as a **service provider** to Client
+> within the meaning of California Civil Code § 1798.140, processes that data only to perform this
+> Agreement, will not retain, use or disclose it for any other purpose, will not sell or share it,
+> and will not combine it with personal information received from any other party. UpSight will
+> return or delete it under Section 9.11(c).
+>
+> (b) With respect to **Source Material, Evidence and Participant Records collected by UpSight
+> directly from Participants**, UpSight acts **on its own behalf and as an independent business**,
+> under its own consent relationship with each Participant, and not as a service provider to
+> Client. Client does not direct, and is not responsible for, UpSight's collection or retention of
+> this material.
+>
+> (c) The parties acknowledge that this allocation of roles is material to the Agreement and to
+> UpSight's pricing, and that neither party will construe a general provision of any other document
+> as altering it. UpSight will reflect this allocation in its participant-facing disclosures.
+
+*JUDGMENT: 9.5 is the clause that keeps the Comparative Dataset lawful. It is also the clause most
+likely to be replaced wholesale by an agency's standard data-processing addendum. Watch for that
+substitution specifically; it is usually made without anyone intending the consequence.*
+
+---
+
+**9.6 Participant consent and UpSight's direct relationship with Participants**
+
+> (a) UpSight obtains consent directly from each Participant before collecting Source Material. That
+> consent covers, at minimum: the identity of UpSight and of Client; recording, where recording
+> occurs; delivery of Findings to Client; UpSight's retention of the material; and, where the
+> Participant separately agrees, de-identified use in the Comparative Dataset.
+>
+> (b) **Attribution.** UpSight will not attribute a quotation to a named Participant or named
+> business in any Client Deliverable or publication without that Participant's specific approval of
+> the exact quoted text.
+>
+> (c) **Client shall not contact Participants** for purposes related to this engagement in a manner
+> that represents Client as the collector of the Source Material, or that contradicts the consent
+> UpSight obtained. Client's ordinary constituent communications are unaffected.
+>
+> (d) **Withdrawal.** A Participant may withdraw consent at any time. On withdrawal, UpSight will
+> act as described in Section 9.11(d). Client will cooperate in removing withdrawn material from
+> materials Client controls, going forward. Neither party is obligated to recall material already
+> published or distributed.
+>
+> (e) UpSight will maintain records of consent and will make them available to Client's counsel for
+> inspection on reasonable notice.
+
+---
+
+**9.7 Public records**
+
+> (a) The parties acknowledge that Client is subject to the California Public Records Act,
+> Government Code § 7920.000 et seq. (formerly § 6250 et seq.), and that Client Deliverables in
+> Client's possession are likely to be public records.
+>
+> (b) **Custody.** UpSight retains sole custody and control of Source Material, Evidence and
+> Participant Records. UpSight will not deliver Source Material to Client in any form, and Client has
+> no right to direct the retention, destruction, alteration or transfer of Source Material, Evidence
+> or Participant Records, and no right to compel their production. Client's access to Evidence is
+> limited to the view-only access described in Section 9.9(b).
+>
+> (c) **Notice.** If Client receives a public records request that seeks Source Material, Evidence,
+> Participant Records or the Comparative Dataset, Client will notify UpSight in writing within [three
+> (3) business days] of receipt, and in any event no fewer than [five (5) business days] before any
+> disclosure.
+>
+> (d) **Cooperation.** UpSight will, at no charge to Client, provide information supporting Client's
+> analysis of applicable exemptions, including but not limited to Government Code §§ 7922.000,
+> 7927.605 and 7927.705. UpSight may, at its own expense, seek a protective order or other relief.
+> Client will not oppose UpSight's application solely on the ground that UpSight is not a party to
+> the request.
+>
+> (e) **No obligation to withhold.** Nothing in this Section requires Client to withhold a record
+> Client determines it is legally obligated to disclose, and Client retains sole discretion over its
+> response. Nothing in this Section is intended to limit the public's rights under the Act.
+>
+> (f) **Marking.** UpSight will mark Client Deliverables that it believes contain exempt material,
+> identifying the specific portions and the asserted basis. Marking does not bind Client.
+>
+> (g) **Client staff records.** Client acknowledges that material its personnel extract or copy from
+> UpSight's platform into Client's own systems may become Client's records. Client will inform
+> personnel with access accordingly.
+
+*JUDGMENT: 9.7(e) is deliberately generous and is there to make 9.7(b)–(d) acceptable. An agency
+cannot lawfully hand a vendor a veto over its CPRA response, and asking for one marks you as
+someone who does not understand the buyer. Give up the veto loudly; keep the custody rule and the
+notice window, which are the parts that matter.*
+
+---
+
+**9.8 Aggregation and suppression**
+
+> UpSight will apply the following minimum standard to all Client Deliverables and to the
+> Comparative Dataset: (i) no statistic will be reported for a group of fewer than five (5)
+> responding businesses; (ii) where a value is suppressed, additional values will be suppressed as
+> needed so the suppressed value cannot be derived from reported totals; (iii) no statistic will be
+> reported where one business accounts for more than 50%, or two businesses for more than 75%, of
+> the measure; (iv) suppressed cells will be labeled in plain language stating that fewer than five
+> responses exist, and will not be left blank or marked only with a symbol; and (v) Evidence entering
+> the Comparative Dataset will have direct and indirect identifiers removed. UpSight may apply a
+> stricter standard where necessary to prevent identification.
+
+---
+
+**9.9 Delivery, access and export**
+
+> (a) **Deliverables.** UpSight will deliver the materials in Exhibit A on the schedule in Exhibit A.
+>
+> (b) **Evidence access.** During the Term and for twelve (12) months after, up to [ten (10)] named
+> Client users receive view-only access to Evidence underlying Findings for the Client Geography.
+> Access is logged. Bulk export of Source Material is not available to any user.
+>
+> (c) **Export.** On written request during the Term, and once within ninety (90) days after
+> expiration or termination, UpSight will deliver a machine-readable export (CSV and JSON) of
+> Participant Records for the Client Geography, including the fields listed in Exhibit B and the
+> consent state for each record. Exports during the Term: [two (2)] per year at no charge. Additional
+> exports: [$X] each.
+
+---
+
+**9.10 Audit and federally funded engagements**
+
+> (a) Where an engagement is funded in whole or part by a federal award, the parties will identify
+> the award and the applicable flow-down terms in Exhibit A, and those terms control over this
+> Agreement to the extent of any conflict.
+>
+> (b) UpSight will retain records relating to the engagement for the period required by 2 CFR
+> § 200.334, or [three (3)] years from final delivery, whichever is longer.
+>
+> (c) UpSight grants the federal awarding agency, any pass-through entity, the Comptroller General of
+> the United States, Client's auditors, and their authorized representatives the right of access
+> required by 2 CFR § 200.337 to records pertinent to the award. Access will be provided at UpSight's
+> premises or through UpSight's systems, with copies of specific records provided where the
+> requesting authority requires them.
+>
+> (d) UpSight will provide, at no charge, documentation of methodology, sampling, response rates and
+> the derivation of reported figures, sufficient to support Client's reporting and audit obligations.
+>
+> (e) The parties acknowledge that 2 CFR § 200.315 grants the Federal Government certain rights in
+> data produced under a federal award, and that nothing in this Agreement limits those rights.
+
+---
+
+**9.11 Term, termination, return and survival**
+
+> (a) **Term and termination.** [Standard terms.] Either party may terminate for material breach on
+> [thirty (30)] days' written notice and an opportunity to cure.
+>
+> (b) **On termination.** The licenses in Sections 9.3(a)–(e) survive perpetually. Evidence access
+> under 9.9(b) continues for twelve (12) months. The post-termination export under 9.9(c) is
+> available for ninety (90) days.
+>
+> (c) **Client-Supplied Data.** Within thirty (30) days after termination, UpSight will delete or
+> return all Client-Supplied Data and certify in writing that it has done so, except copies required
+> by law or held in routine backup, which remain subject to Section 9.12.
+>
+> (d) **Participant withdrawal.** On a Participant's withdrawal of consent, UpSight will within
+> thirty (30) days delete or quarantine that Participant's Source Material, Evidence and Participant
+> Record, and will exclude the Participant from all future Findings and from the Comparative Dataset.
+> Findings already delivered or published are not recomputed or recalled. UpSight will notify Client
+> of any withdrawal that materially affects a delivered Finding.
+>
+> (e) **Assignment.** Neither party may assign this Agreement without the other's written consent,
+> except that Client may assign to a governmental or nonprofit successor in interest performing
+> substantially the same public function. On such assignment, the licenses in 9.3 transfer to the
+> successor **with respect to the original Client Geography only**, and do not extend to any
+> additional territory of the successor.
+>
+> (f) **Continuity.** If UpSight dissolves, makes a general assignment for the benefit of creditors,
+> or ceases operations for more than ninety (90) consecutive days, UpSight will cause Evidence,
+> Participant Records and Findings for the Client Geography to be released to Client. Source Material
+> will not be released and will be destroyed.
+>
+> (g) **Survival.** Sections 9.2, 9.3, 9.4(c), 9.5, 9.6(d), 9.7, 9.8, 9.10, 9.11 and 9.12 survive.
+
+---
+
+**9.12 Confidentiality**
+
+> (a) Each party will protect the other's Confidential Information with at least the care it uses for
+> its own, and will use it only to perform this Agreement.
+>
+> (b) **UpSight's Confidential Information** includes the Comparative Dataset, the UpSight Platform
+> and Methods, pricing, and Source Material and Participant Records not delivered to Client.
+>
+> (c) **Client's Confidential Information** includes Client-Supplied Data and non-public information
+> about Client's programs and deliberations.
+>
+> (d) **Exclusions.** Information that is or becomes public through no breach; is independently
+> developed; or is rightfully received from a third party without restriction.
+>
+> (e) **Compelled disclosure.** A party compelled by law, subpoena or a public records request may
+> disclose, after giving the other party the notice in Section 9.7(c) where practicable, and will
+> disclose only what is required.
+>
+> (f) **Participant confidentiality is not waivable by Client.** Client's obligations regarding
+> Participant-identifying material survive indefinitely and are not excused by Client's own
+> confidentiality practices.
+
+---
+
+## 10. Where this is most likely to break
+
+Three points where a real government counterparty refuses. Each has a fallback ladder and a bottom
+rung. **Know the bottom rung before walking into the room.**
+
+### 10.A The work-for-hire / ownership clause
+
+**The refusal:** "All data, materials and work product created under this Agreement shall be the
+property of the City." It is in every standard professional services template, it is not aimed at
+us, and a procurement officer will resist striking it because striking template language requires
+someone senior to approve.
+
+**Why it is fatal as written:** it assigns Layers 1–3 and arguably Layer 5 to a single client. One
+signature and the corpus is gone in that jurisdiction, and the next client's counsel will ask
+whether anyone else has ownership.
+
+**The ladder:**
+1. **Preferred:** replace with 9.2 + 9.3 wholesale. Lead with §4.1's list of what they get. Most
+   procurement officers accept once they see the perpetual, unrestricted output license — their
+   actual worry is "can we still use this next year," and the answer is yes, forever, free.
+2. **Fallback 1:** keep their clause, define "work product" in an exhibit as the Client Deliverables
+   only, and expressly exclude Source Material, Evidence, Participant Records and the Comparative
+   Dataset. Same result, their paper. Often the path of least resistance.
+3. **Fallback 2:** Client owns Findings for the Client Geography outright (not just a license), with
+   UpSight retaining a perpetual license back to use Findings for longitudinal and comparative
+   purposes. Giving away Layer 4 ownership costs little if the license-back is clean.
+4. **Fallback 3:** a wider exclusive: no other client in [the same county / an adjacent corridor] for
+   [24 months]. Trades market exclusivity, which is cheap early, for the corpus, which is not.
+5. **Bottom rung — walk away:** any term that transfers ownership of, or an unrestricted license to,
+   Source Material, Participant Records or the Comparative Dataset. **No deal size justifies it.**
+
+> **Rick's walk-away line, in one sentence:** *"I can give you everything about your city, forever,
+> for free — but I can't give you the recordings or the cross-city dataset, because the first
+> belongs to the people who made them and the second is the company."*
+
+### 10.B "We need the raw transcripts"
+
+**The refusal:** an auditor, a program officer, a grant monitor, or a council member who wants to
+verify. Sometimes a city attorney who wants the record complete. This one is usually sincere and is
+therefore more dangerous than 10.A — refusing a sincere request badly reads as hiding something.
+
+**The ladder:**
+1. **Preferred:** methodology documentation (§4.4) plus view-only evidence access for the specific
+   reviewer for a defined period, plus a written certification from UpSight that reported figures
+   derive from the evidence. Solves the actual need — verification — in most cases.
+2. **Fallback 1:** on-premises or screen-share review. The reviewer sees whatever they need, in
+   UpSight's system, with a log. Nothing enters agency custody.
+3. **Fallback 2:** for a named, bounded subset, deliver **redacted** transcripts — participant and
+   business identifiers removed per §7 R8 — with the participant notified. Bounded, logged,
+   exceptional.
+4. **Fallback 3:** if a specific participant consents in writing to their full transcript going to
+   the agency, deliver that one. Participant's call, not ours and not the agency's.
+5. **Bottom rung — walk away:** routine or bulk delivery of identified Source Material into agency
+   custody. Not because of the corpus — because we told forty people it would not happen.
+
+> **The sentence that usually ends this conversation:** *"You can see anything you want. What I
+> won't do is put it in your file cabinet — because the day it's in your file cabinet it's a public
+> record, and every business owner who told me something candid about their landlord is exposed,
+> with your name on the disclosure. Let me show you everything instead."*
+
+### 10.C Cross-client use — "you may not use our data to benefit other clients"
+
+**The refusal:** sometimes principled ("our residents' information shouldn't be someone else's
+product"), sometimes competitive ("we compete with those cities for the same state grant dollars").
+The competitive version is real and should be taken seriously rather than waved off.
+
+**Why it is fatal as written:** it is Layer 5. A prohibition on cross-client use, however
+reasonably worded, is a prohibition on the business.
+
+**The ladder:**
+1. **Preferred:** 9.4(b)+(c) as drafted — cross-client use is de-identified only, protected by the
+   §9.8 suppression standard and the 9.4(c) guarantee that nothing about the Client Geography
+   appears at finer grain or with a named business. Plus the reciprocity argument: they receive the
+   benchmark, built from everyone who came before.
+2. **Fallback 1:** a **competitor carve-out** — name specific jurisdictions (usually one or two) to
+   whom UpSight will not deliver corridor-level detail about the Client Geography during the Term.
+   Cheap, specific, and it addresses the real fear.
+3. **Fallback 2:** a **review right** — Client sees any published product that names the Client
+   Geography, [ten] business days before release, with a right to object to factual errors (not to
+   findings). Adds process cost; does not touch the position.
+4. **Fallback 3:** **participant-level opt-out honored visibly.** Show them the
+   `consent_crosscorridor` toggle and the count of participants who declined. "Your businesses
+   decide this, not you and not me" is a strong answer to the principled version of the objection.
+5. **Bottom rung — walk away:** any prohibition on retaining or using de-identified derivations
+   across clients. This is the lane.
+
+### 10.D The smaller ones, ranked by how often they will appear
+
+| Objection | Fallback |
+|---|---|
+| **Unlimited indemnity for any public records or privacy claim.** Common in agency templates and existential for a solo company. | Cap at fees paid or [$1M], carve out UpSight's gross negligence and willful misconduct, and decline indemnity for Client's own disclosure decisions under 9.7(e). Insurance requirements will drive this — price them before quoting. |
+| **A blanket data processing addendum** that reimposes the service-provider designation and kills 9.5. | Accept the DPA **for Client-Supplied Data only**, with an express statement that it does not apply to material UpSight collects directly from Participants. This substitution is easy to miss in a late-stage redline; check for it every time. |
+| **"All records relating to this Agreement are subject to disclosure and Contractor waives any claim of confidentiality."** | Narrow to Client Deliverables and contract administration records. Do not waive as to Source Material and Participant Records — that waiver is a promise broken to Participants, not just a commercial loss. |
+| **Termination for convenience with data delivery on demand.** | Fine on termination; not fine on data. Point to 9.11(b): they get the export and the perpetual license, not the corpus. |
+
+---
+
+## 11. Sources
+
+All accessed **2026-09-23**. Statutory text is quoted or paraphrased from the sources shown;
+verify current text before relying on any of it.
+
+| Authority | What it establishes here | Source |
+|---|---|---|
+| Cal. Gov. Code § 7920.530 | Definition of "public records": prepared, owned, used, or retained by an agency | [california.public.law](https://california.public.law/codes/government_code_section_7920.530) |
+| Cal. Gov. Code § 7922.000 (formerly § 6255) | Catch-all public-interest balancing exemption; agency bears the burden | [Justia](https://law.justia.com/codes/california/code-gov/title-1/division-10/part-2/chapter-3/article-1/section-7922-000/) |
+| Cal. Gov. Code § 7927.605 (formerly § 6254.15) | Economic development exemption for corporate financial records and proprietary information furnished for retention/siting/expansion; incentives must still be disclosed | [california.public.law](https://california.public.law/codes/government_code_section_7927.605) |
+| Cal. Gov. Code § 7927.705 (formerly § 6254(k)) | Exemption for records protected by other federal or state law, including Evidence Code privileges | [Justia](https://law.justia.com/codes/california/code-gov/title-1/division-10/part-5/chapter-13/section-7927-705/) |
+| AB 473 (2021), CPRA recodification | CPRA renumbered from §§ 6250–6276.48 to §§ 7920.000–7930.215, operative 2023-01-01; no substantive change; prior case law undisturbed | [Somach Simmons & Dunn](https://somachlaw.com/policy-alert/new-year-new-california-public-records-act-organization-and-codification/) |
+| *Anderson-Barker v. Superior Court* (2019) 31 Cal.App.5th 528 | Contractual right to access a private entity's data is not "possession" or a right to control under the CPRA | [Justia](https://law.justia.com/cases/california/court-of-appeal/2019/b285391.html) · [Burke Williams & Sorensen alert](https://www.bwslaw.com/publications/access-to-private-entity-records-is-not-enough-to-compel-disclosure-obligations-under-the-california-public-records-act/) |
+| *The People's Business: A Guide to the CPRA* (League of California Cities) | Delegated-governmental-function line under which a private entity's records can be reached | [calcities.org (PDF)](https://www.calcities.org/docs/default-source/city-attorneys/the-people's-business.pdf) |
+| Cal. Pen. Code § 632 | All-party consent required to record a confidential communication; penalties | [FindLaw](https://codes.findlaw.com/ca/penal-code/pen-sect-632/) |
+| Cal. Civ. Code § 1798.140 (CCPA) | Service provider definition; contractual bar on combining personal information received from one business with that from another | [FindLaw](https://codes.findlaw.com/ca/civil-code/civ-sect-1798-140/) · [IAPP analysis](https://iapp.org/news/a/analyzing-the-cpras-new-contractual-requirements-for-transfers-of-personal-information) |
+| 2 CFR § 200.315 | Federal royalty-free license in works; federal right to obtain/publish data produced under an award; FOIA route to research data | [Cornell LII](https://www.law.cornell.edu/cfr/text/2/200.315) |
+| 2 CFR § 200.334 | Three-year record retention from final financial report | [Cornell LII](https://www.law.cornell.edu/cfr/text/2/200.334) |
+| 2 CFR § 200.337 | Federal and pass-through rights of access last as long as records are retained | [Cornell LII](https://www.law.cornell.edu/cfr/text/2/200.337) |
+| 45 CFR § 164.514 + HHS de-identification guidance | Safe Harbor structure (identifier removal + actual-knowledge backstop), used here **by analogy only** — HIPAA does not apply | [Cornell LII](https://www.law.cornell.edu/cfr/text/45/164.514) · [HHS](https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html) |
+| FCSM Statistical Policy Working Paper 22 | Threshold rules, cell suppression, complementary suppression — federal statistical practice, not law | [NCES (PDF)](https://nces.ed.gov/FCSM/pdf/SPWP22_rev.pdf) |
+
+---
+
+## 12. What to do next
+
+**Before any econ-dev proposal goes out:**
+
+1. **Counsel review** of §§6, 9.7, 9.5, 9.2–9.4 and §3 recording consent, in that order. Budget for
+   California municipal + privacy counsel; this is not a general-commercial review.
+2. **Build the consent record fields** (§3.4) into the UpSight data model before the first corridor,
+   not after. Retrofitting consent state onto existing profiles is how this goes wrong.
+3. **Build the Hat A / Hat B ingest tag and the L5 pipeline filter** (§3.6). It has to be a
+   mechanism, because a city attorney will ask how it is enforced.
+4. **Implement §7 R1–R6 in the output pipeline**, with R7 as a required human sign-off on the
+   deliverable review checklist.
+5. **Rehearse §5.2 out loud** until it sounds like conviction rather than recital, and rehearse the
+   three walk-away sentences in §10.
+6. **Add the federal-funding question to the qualification checklist** (§6.6).
+
+**To log per CLAUDE.md house rules:**
+
+- `00-control/decisions.md` — one line: *UpSight holds the corpus in the econ-dev lane; clients get
+  perpetual unrestricted rights to their own outputs and a full export of their own businesses, and
+  never own Source Material, Participant Records or the cross-corridor benchmark. Structure:
+  `30-strategy/econ-dev-data-rights-2026-09.md`.*
+- `00-control/open-questions.md` — at least these:
+  - Does the two-hat CCPA characterization (§3.6) hold? **[bet]** — blocks the whole lane if not.
+  - Will a California city attorney accept 9.7(b) custody language, or does the first real redline
+    break it? **[tactical]** — cheapest test is showing §9 to one friendly city attorney before any
+    proposal.
+  - What is the actual refusal rate on `consent_crosscorridor` in a real corridor? **[tactical]** —
+    if it is above ~20%, L5 density assumptions need rework.
+  - Is a funded third-party escrow (§8.5) needed to close the first deal, or does the contractual
+    commitment suffice? **[tactical]**
+- `00-control/status.md` — dated entry: Decided (corpus position), Surfaced (the four questions
+  above).
