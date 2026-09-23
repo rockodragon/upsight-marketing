@@ -424,10 +424,15 @@ rather than a support queue — but that is a reason to pilot, not a reason to s
 **"How would this even get through procurement?"**
 Three known paths, to be confirmed per jurisdiction: (a) keep the pilot under the applicable
 micro-purchase threshold so competitive quotes are not required — for federal award funds
-the federal micro-purchase threshold is $10,000 and the simplified acquisition threshold is
-$250,000 under the OMB Uniform Guidance at 2 CFR 200 **(published figures, and they have
-been revised recently — verify current values and the entity's own lower local threshold
-before quoting them to anyone)**; (b) a cooperative purchasing vehicle; (c) contract with
+the federal micro-purchase threshold is **$15,000** and the simplified acquisition threshold
+is **$350,000**, both raised effective 1 October 2025 by the FAR inflation adjustment
+(FAC 2025-06); these flow through to federal award spending under the OMB Uniform Guidance
+at 2 CFR 200. Sources: [Federal Register, 27 Aug 2025](https://www.federalregister.gov/documents/2025/08/27/2025-16412/federal-acquisition-regulation-inflation-adjustment-of-acquisition-related-thresholds)
+and [GSA SmartPay bulletin](https://smartpay.gsa.gov/guidance-and-audits/smart-bulletins/002/),
+both accessed 2026-09-23. **A non-federal entity may self-certify a higher micro-purchase
+threshold up to $50,000 with documented internal procedures — worth asking about, because it
+changes what can be bought without competition.** Verify the entity's own local threshold,
+which is frequently lower than the federal one and is what actually binds; (b) a cooperative purchasing vehicle; (c) contract with
 the nonprofit EDC, chamber, or Main Street organization rather than the city, where that
 entity exists and is not bound by municipal purchasing rules. Path (c) is frequently the
 fastest and is a reason to target independent EDCs and chambers before city departments.
