@@ -5,6 +5,56 @@
 
 ---
 
+## 2026-09-23 — Economic development lane opened; six research workstreams landed
+
+**Shipped** (all six dispatched in parallel, committed individually)
+- `40-gtm/channels/outreach/econ-dev-san-diego-target-list-2026-09.md` — 62 organizations, ~25
+  contacts verified from primary sources. Tier 1: East County EDC, SD & Imperial SBDC Lead Center,
+  ABASD, South County EDC, City Heights CDC.
+- `20-research/market-intel/california-econ-dev-grants-2026-09.md` — state, federal and regional
+  programs with their reporting obligations, the burden ranking, and the common data spec.
+- `40-gtm/channels/outreach/matt-sanford-outreach-2026-09.md` — three questions, one ask,
+  sponsorship letter. Opener set to the real relationship (met a few times, loosely, via StartupSD).
+- `30-strategy/econ-dev-positioning-2026-09.md` — "File the report. Keep the intelligence."
+  Four-role buyer map. Federal procurement thresholds corrected to the post-Oct-2025 figures.
+- `30-strategy/econ-dev-data-rights-2026-09.md` — five corpus layers, consent script, suppression
+  rules, twelve draft clauses, walk-away lines.
+- `40-gtm/campaigns/econ-dev-corridor-pilot-2026-09.md` — El Cajon Blvd (City Heights), ~$2,135
+  cash, ~25 working days, kill criterion set before the first door.
+
+**Decided**
+- Grant reporting is the wedge; early warning is the retention story; order must not be reversed.
+- UpSight holds the corpus. Clients get generous rights to their own corridor, nobody gets the
+  cross-corridor dataset.
+
+**Surfaced**
+- **East County EDC converged from two independent directions** — named by Rick via Sanford, and
+  ranked Tier 1 on pure reporting-pain analysis by an agent with no knowledge of him. First call
+  and best-fit target are the same conversation.
+- **The wedge is live and funded right now.** County approved $300K into ECEDC's Empower East
+  County fund on 2 Sep 2026 with $400K EDA match eligibility (verified against County News Center).
+- **California Jobs First / RII is the heaviest reporting burden found, and there is no state
+  system of record for it** — 29 funded projects are doing it in spreadsheets. CalOSBA TAP is
+  quarterly on cost-reimbursement where incomplete data stops payment, and requires unique-client
+  deduplication across the grant year, which is literally UpSight's identity-resolution model.
+- Verified: Chula Vista, Oceanside, Escondido and Carlsbad each hold their own CDBG entitlement
+  and carry a CAPER. El Cajon, Vista, National City, San Marcos, Santee, La Mesa, Encinitas unverified.
+- **One clause can end the lane**: a standard "Contractor is a service provider" line bars
+  combining data across clients under CCPA. It arrives late, in boilerplate.
+
+**Stuck**
+- Sponsorship framing unknown — the letter is drafted on an assumption.
+- Suppression floor conflicts between two documents (3 vs 5); blocks fieldwork.
+- Data-rights and positioning docs both need California counsel before anything is signed.
+
+**Dates worth acting on**
+- ECEDC Manufacturing Expo, 29 Sep 2026 (verify attendance before referencing).
+- Caltrans STPG deadline, 9 Oct 2026, ~$34.9M.
+- California Main Street Conference, Carlsbad, 3-5 Nov 2026 — in-region, exactly this buyer.
+- South County EDC Investment Week, 9-13 Nov 2026.
+
+---
+
 ## 2026-09-17 — Glossary drafted (37 terms); domain corrected repo-wide
 
 **Shipped**

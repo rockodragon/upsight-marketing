@@ -7,6 +7,12 @@
 
 | Date opened | Q | Type | Owner | Status |
 |---|---|---|---|---|
+| 2026-09-23 | What is the Sanford sponsorship actually for? Four readings: ECEDC funds our corridor study / we sponsor their event / they underwrite a software pilot / a third party sponsors and ECEDC lends its name. Letter is drafted on reading #1. | [tactical] | Rick | **blocking** → one-line answer unblocks the letter |
+| 2026-09-23 | Suppression floor for the corridor pilot: n<3 (pilot brief) or n<5 (data rights doc)? The two documents conflict. Changes what can be promised at the door. | [tactical] | Rick | **blocks fieldwork** → proposed split: 5 for sensitive items, 3 for neutral operational facts |
+| 2026-09-23 | Does a correspondent actually exist at these organizations, or would we have to staff it? Compounding intelligence, early warning and the whole lane rest on sustained field presence UpSight cannot supply. Staffing it ourselves turns this into a services business. | [bet] | Rick | open → **the weakest assumption in the lane**; the 3-5 agency interviews in the pilot test it |
+| 2026-09-23 | Is grant reporting painful enough to pay for, or merely annoying? Nearest-term kill risk for the lane. | [tactical] | Rick | open → corridor pilot falsifies it fastest |
+| 2026-09-23 | Does "we already have a CRM we hate" (Neoserra, Salesforce NPC, Apricot, Executive Pulse, Synchronist) kill the lane? | [tactical] | Rick | open → test in the agency interviews, not after building |
+| 2026-09-23 | Will a real California city attorney accept the data-custody language, and does the CCPA two-hat split hold? If UpSight is contracted as a plain "service provider" it is barred from combining data across clients, which ends the corpus position. | [bet] | Rick | open → needs counsel; §9.5 of the data-rights doc |
 | 2026-09-16 | Are AI engines currently citing UpSight at all, and are they stating our pricing/positioning correctly? No baseline exists. | [tactical] | Rick | open → exp `2026-09-ai-search-crawlability` step 0 |
 | 2026-09-16 | Does a published Decision File reliably manufacture 5+ third-party mentions, or does distribution die with the interview subject's one share? | [tactical] | Rick | open → measure on file 1 |
 | 2026-09-16 | Which single community is worth real weekly presence for the security lane — r/cybersecurity, r/sysadmin, or a closed CISO Slack? Can't do three. | [bet] | Rick | open → HubSpot's Reddit play produced 7× mentions and doubled citations |

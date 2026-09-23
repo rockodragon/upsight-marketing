@@ -5,6 +5,22 @@
 
 ---
 
+## 2026-09-23 - Economic development is a new lane; grant reporting is the wedge, early warning is the retention story
+**Why:** Rick's call. These organizations make expensive public decisions on thin evidence, and
+grant reporting is the one pain that is mandatory, recurring and already funded — so it opens
+doors that an "early warning" pitch cannot, because early warning sounds speculative to someone
+who has not bought yet and is not attached to a budget line. Early warning is why they renew.
+The order must not be reversed in any pitch. Positioning: `30-strategy/econ-dev-positioning-2026-09.md`.
+
+## 2026-09-23 - UpSight holds the corpus in the econ-dev lane
+**Why:** The accumulated cross-corridor body of business conversations is the entire long-term
+value of the lane — it is what makes intelligence compound instead of resetting each contract.
+Clients get generous rights to their own corridor (full export, perpetual use of findings, even
+after termination); nobody gets the cross-corridor dataset. This is also the only honest way to
+keep a confidentiality promise to a small business owner, because raw material handed to a public
+agency becomes a disclosable public record. Structure and draft clauses:
+`30-strategy/econ-dev-data-rights-2026-09.md` — needs California counsel before signing anything.
+
 ## 2026-09-16 - No llms.txt; AI-search work starts at crawl infrastructure, not copy
 **Why:** HubSpot's server logs showed llms.txt is essentially never fetched (~97% of files get
 zero requests) while pre-rendering alone drove ~1,600% more AI bot crawls and ~40% more citations
