@@ -489,7 +489,7 @@ currently untested.
 
 | # | Assumption | If false | How to test |
 |---|---|---|---|
-| **1** | **Someone is actually in the field with enough regularity to form a corpus** — a correspondent exists at the organization, or can be funded | Everything collapses. Compounding, early warning, and receipts all rest on sustained field presence that software cannot supply | In the first ten conversations, ask: who visits businesses, how often, and is that role funded next year? |
+| **1** | **Someone is actually in the field with enough regularity to form a corpus** — a correspondent exists at the organization, or can be funded, **or we supply it and price it** | Decides the shape and price of the offer, not whether it works. If nobody is in the field there is no incumbent and we sell a result rather than a tool. See revised note below. | In the first ten conversations, ask: who visits businesses, how often, and is that role funded next year? |
 | **2** | Grant and compliance reporting is painful enough to pay to fix — not merely annoying | The wedge fails and there is no other funded door | Ask what they report, to whom, how long assembly takes, and what happened the last time it was late |
 | **3** | There is an existing budget line a subscription can attach to without new appropriation | Sales cycles stretch past our cash runway even where buyers want it | Ask the finance or grants manager directly where such a tool would be charged |
 | **4** | Businesses will speak candidly to a government-adjacent correspondent | The corpus fills with pleasantries and the evidence is worthless | Compare what the same business says to the correspondent versus to an independent interviewer |
@@ -500,18 +500,41 @@ currently untested.
 
 *Source: asserted by Rick Moy, 2026-09-23. No supporting evidence for any row.*
 
-**The weakest assumption is #1**, and it deserves saying plainly: this entire position
-depends on a person walking a corridor regularly and filing what they hear, and UpSight
-cannot create that person. Software does not generate field presence. If an EDO has nobody
-in the field, the corpus never forms, the compounding argument is theoretical, early warning
-never arrives, and we have sold a well-designed empty database.
+**Assumption #1 is the one that decides the shape of the business — but not the one that
+kills it.** (Revised 2026-09-23 by Rick. The earlier draft called it the weakest assumption
+and said that an organization with nobody in the field meant we had sold an empty database.
+That was wrong and is struck.)
 
-The tempting fix is the dangerous one: **supply the correspondent ourselves.** That turns
-this into a services business with software attached, which is the same failure mode flagged
-in `decision-files-gameplan.md` — "engagements stop converting to licenses → it became a
-consultancy." If we ever staff correspondents, it should be a deliberate, priced, bounded
-decision with its own entry in `00-control/decisions.md`, not a drift that happens one
-accommodating pilot at a time.
+If nobody at the organization is out talking to businesses, that is the opportunity, not the
+hole. It means:
+- **There is no incumbent.** Nothing to displace, no feature comparison against Executive
+  Pulse or Synchronist, and "we already have a CRM" stops being an objection — a CRM nobody
+  fills in is not a competitor.
+- **We sell a result, not a tool.** Nobody has to change a workflow or learn anything. The
+  report gets filed. The data exists.
+- **A tool that requires them to hire someone is worth less than a result we deliver.**
+
+So the question is not whether the correspondent exists. It is **what the work is worth when
+it doesn't** — which is a pricing question, and it is open. See the pricing note referenced in
+§11.
+
+**The real risk is drift, not absence.** Supplying the fieldwork ourselves is fine as a
+deliberate, priced, bounded decision with its own entry in `00-control/decisions.md`. It is
+not fine as something that happens one accommodating pilot at a time, because that is the
+failure mode `decision-files-gameplan.md` already names: "engagements stop converting to
+licenses → it became a consultancy."
+
+**What separates this from a consultancy is delivery cost over time.** A consultancy starts
+from zero on every engagement. If the corpus works, year three on a corridor costs less to
+deliver than year one, because the businesses, the history, and the right questions are
+already known. That is the compounding argument applied to our own cost, not just to the
+buyer's value — and it is testable rather than theoretical.
+
+**The test that settles it:** can someone who is not Rick do the fieldwork and produce output
+that holds up? If a part-timer or community member with UpSight in hand can do the visits, it
+scales and Rick is not the bottleneck. If it only works because of Rick's judgment in the
+room, it is a consultancy with good software. Cheap to test inside the corridor pilot — have
+someone else run 5 of the 20 interviews and compare.
 
 ---
 
