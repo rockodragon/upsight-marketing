@@ -325,6 +325,40 @@
 			background: #111;
 		}
 
+		.demo-cta {
+			display: grid;
+			place-items: center;
+			gap: 10px;
+			aspect-ratio: 16 / 10;
+			border-radius: 6px;
+			background: linear-gradient(150deg, #16222e, #0f1720);
+			color: #eaf2f6;
+			text-decoration: none;
+			text-align: center;
+			padding: 20px;
+		}
+
+		.demo-cta svg {
+			width: 56px;
+			height: 56px;
+			color: #7fd4c4;
+		}
+
+		.demo-cta span {
+			font-size: 17px;
+			font-weight: 760;
+		}
+
+		.demo-cta small {
+			color: #b9c7d1;
+			font-size: 13px;
+			font-weight: 650;
+		}
+
+		.demo-cta:hover svg {
+			color: #a8e6d8;
+		}
+
 		.demo-link {
 			display: inline-block;
 			margin-top: 10px;
@@ -420,13 +454,11 @@
 			overflow: hidden;
 		}
 
-		.map iframe {
+		.map-base {
 			position: absolute;
 			inset: 0;
 			width: 100%;
 			height: 100%;
-			border: 0;
-			filter: saturate(0.82) contrast(0.96);
 		}
 
 		.pin {
@@ -679,10 +711,10 @@
 						<span class="phase-label">Phase 2 - proposed</span>
 						<h3>Data program</h3>
 						<ul>
-							<li>Move from a handful of names to <strong>measured coverage</strong> of the corridor — every identified company classified by city, sector and stage, against a stated coverage target and response rate.</li>
-							<li>Identify <strong>startups and established businesses alike</strong>, augmented with contact, source, relationship and engagement data.</li>
-							<li>Run the collection: fielded surveys, interviews and follow-up on non-responders.</li>
-							<li>Publish a live portal with table, map, survey and AI-query interfaces.</li>
+							<li>Identify startups and established businesses by city, sector, stage, and cluster.</li>
+							<li>Augment records with contact, source, relationship, and engagement data.</li>
+							<li>Run the collection — surveys, interviews, and follow-up on non-responders.</li>
+							<li>Publish a live data portal with table, map, survey, and AI-query interfaces.</li>
 						</ul>
 					</div>
 				</div>
@@ -744,16 +776,11 @@ flowchart LR
 					<p class="lede">Innovate78 can filter by city, sector, stage, need, program fit, and relationship strength. Leaders can move from a regional question to the companies behind it while the evidence stays connected.</p>
 				</div>
 				<div class="demo-frame">
-					<iframe
-						src="https://share.zight.com/01a0cbcb-9592-74cc-a835-f828f82b00d1?embed=true&amp;title=true&amp;branding=true"
-						width="360"
-						height="270"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowtransparency="true"
-						allowfullscreen="true"
-						title="UpSight ecosystem intelligence demo"
-					></iframe>
-					<a class="demo-link" href="https://share.zight.com/01a0cbcb-9592-74cc-a835-f828f82b00d1" target="_blank" rel="noreferrer">Open capability preview</a>
+					<a class="demo-cta" href="https://share.zight.com/01a0cbcb-9592-74cc-a835-f828f82b00d1" target="_blank" rel="noreferrer" aria-label="Open the UpSight ecosystem intelligence demo">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden><circle cx="12" cy="12" r="10"/><path d="M10 8.5 16 12l-6 3.5Z" fill="currentColor" stroke="none"/></svg>
+						<span>Watch the capability preview</span>
+						<small>share.zight.com &#8599;</small>
+					</a>
 				</div>
 			</div>
 		</section>
@@ -795,12 +822,16 @@ flowchart LR
 								<span class="pill">Density</span>
 							</div>
 						</div>
-						<div class="map" aria-label="Mock regional map with company pins">
-							<iframe
-								src="https://www.openstreetmap.org/export/embed.html?bbox=-117.43%2C33.04%2C-117.02%2C33.23&amp;layer=mapnik"
-								title="OpenStreetMap view of the North County San Diego Interstate 78 corridor"
-								loading="lazy"
-							></iframe>
+						<div class="map" aria-label="Schematic of the SR-78 corridor with illustrative company pins">
+							<svg class="map-base" viewBox="0 0 400 260" preserveAspectRatio="none" aria-hidden>
+								<rect width="400" height="260" fill="#e7eeec"/>
+								<path d="M0 132 C70 126 130 140 200 134 C270 128 330 140 400 134" stroke="#b9c9c4" stroke-width="12" fill="none"/>
+								<path d="M0 132 C70 126 130 140 200 134 C270 128 330 140 400 134" stroke="#f3f7f6" stroke-width="3" stroke-dasharray="10 9" fill="none"/>
+								<path d="M0 196 C90 190 150 202 230 196 C300 191 350 199 400 196" stroke="#cdd9d5" stroke-width="5" fill="none"/>
+								<path d="M62 0 C58 60 66 120 60 260 M188 0 C193 70 184 150 190 260 M306 0 C300 80 310 160 304 260" stroke="#d6e0dc" stroke-width="4" fill="none"/>
+								<rect x="0" y="222" width="400" height="38" fill="#dbe7f0"/>
+								<text x="12" y="126" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#5d6b74">SR-78 corridor</text>
+							</svg>
 							<span class="pin one" title="Oceanside"></span>
 							<span class="pin two" title="Vista"></span>
 							<span class="pin three" title="San Marcos"></span>
@@ -875,40 +906,9 @@ flowchart LR
 
 		<section class="slide">
 			<div class="slide-inner">
-				<p class="kicker">Division of Labour</p>
-				<h2>What each side actually does</h2>
-				<p class="lede">The single biggest risk in a program like this is an operating model handed to a team that does not have the hours to run it. So this is stated up front rather than discovered in month four.</p>
-				<div class="phase-grid">
-					<div class="phase active">
-						<span class="phase-label">UpSight</span>
-						<h3>Method, execution, and the system</h3>
-						<ul>
-							<li>Designs the data model, the survey and the interview guide.</li>
-							<li><strong>Runs the collection</strong> — outreach, conversations, follow-up on non-responders.</li>
-							<li>Wrangles, dedupes, enriches, and assigns confidence.</li>
-							<li>Configures and hosts the portal; produces the briefing and the filing export.</li>
-						</ul>
-					</div>
-					<div class="phase">
-						<span class="phase-label">Startup San Diego</span>
-						<h3>Relationships and the room</h3>
-						<ul>
-							<li>Owns the client relationship with Innovate78 and the cities.</li>
-							<li>Makes introductions and lends its name to the outreach.</li>
-							<li>Hands over the source lists it already has.</li>
-							<li><strong>One 30-minute call a month.</strong> That is the ongoing commitment.</li>
-						</ul>
-					</div>
-				</div>
-				<p class="footer-note">If Startup San Diego wants to take on more of the execution and pay less, that is a different and cheaper package — say so now and it will be priced that way.</p>
-			</div>
-		</section>
-
-		<section class="slide">
-			<div class="slide-inner">
 				<p class="kicker">Data, Consent and Publication</p>
 				<h2>What can be shared, and what cannot</h2>
-				<p class="lede">Worth settling before launch rather than after. Three rules govern everything in the system.</p>
+				<p class="lede">Three rules govern the system.</p>
 				<div class="cards">
 					<div class="card">
 						<h3>Public facts are publishable</h3>
@@ -932,7 +932,7 @@ flowchart LR
 						</ul>
 					</div>
 				</div>
-				<p class="footer-note">Public agencies are subject to public-records requests. That is why raw interview material stays in the UpSight workspace and partners receive findings and exports — access without custody. It protects the program and it keeps the promise made to the business owner who talked to us.</p>
+				<p class="footer-note">Raw interview material stays in the UpSight workspace; partners receive findings and exports. Worth settling early, and straightforward to navigate.</p>
 			</div>
 		</section>
 
