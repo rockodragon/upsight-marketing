@@ -103,44 +103,36 @@ rebuilding before Rick spends another week on it.
    or a favor. Grant-funded orgs can often charge reporting to the grant. If they can't, pricing
    has to change.
 
-### The email — REVISED 2026-09-25, send this one
+### The email — REVISED 2026-09-25 (v2, Rick's direction), send this one
 
-> **Why revised:** the lane changed from "research, then sponsorship" to selling EDCs a project
-> directly. The earlier draft below framed the note as background research, which is no longer
-> true — so it is replaced with one that says plainly what Rick does. The sponsorship letter
-> (Part 2) is parked; it rested on an unconfirmed reading of what the sponsorship was for.
+> **Rick's direction:** ask for his insight, not his business. No mention of the fund, no offer.
+> An earlier 09-25 draft opened with "I saw you got money, here's a program" — it put him in a
+> corner and is dropped. The sponsorship letter (Part 2) is parked.
 >
 > **He sits on Startup San Diego's board and helped build Innovate78.** Say nothing against SSD
-> or Innovate78. If it comes up: "I pitched a Phase 2 to SSD; it's on their timeline, and I'm
-> working with EDCs directly in the meantime."
+> or Innovate78.
 
-> **Subject:** Reporting on the Empower East County fund
+> **Subject:** Your read on civic applications
 
 > Matt,
 >
 > Rick Moy — we've crossed paths a few times around StartupSD.
 >
-> I saw the County's $300K into the Empower East County fund, with the EDA match behind it. Money
-> like that comes with a reporting clock: what happened to each business you lent to, and how you
-> know.
+> I've been doing some applied work with Startup San Diego, surveying the ecosystem: who's
+> building what, who needs help, and who connects people. It has me thinking about where the same
+> approach could be useful elsewhere in the civic space.
 >
-> That's the work I'm doing now. I talk to the businesses a program has served, fill in the
-> funder's report, and tie every number to the conversation it came from. Starting at the front of
-> a fund means the first report has a baseline instead of a scramble.
->
-> Could I get 20 minutes in the next couple of weeks? Mainly I'd like to hear which of your
-> reports is the hardest to produce — Empower, the SBDC, or something else — and whether this
-> would actually take work off your team.
+> You've seen economic development from the regional side, a city, and now East County, so I'd
+> value your read. Would you have 20 minutes in the next few weeks? I'm mostly curious what EDCs
+> wish they knew about their businesses and don't.
 >
 > Rick Moy
 > UpSight · getupsight.com
 
-Optional P.S., **only after confirming the Expo date and that he is attending:** *"If you're at
-the Manufacturing Expo on the 29th, happy to find you there instead."*
-
-**On the call:** the three questions above, in order, then one offer — Rick takes one program's
-next report (Empower or SBDC) end to end. $9,500 for one filing, $14,500 for two. Quote only
-when asked. See `30-strategy/econ-dev-pricing-2026-09.md` §F.1.
+**On the call:** it is an insight conversation — keep it one. Ask, listen, take notes. The three
+questions above still work as follow-ups if reporting comes up on its own. Offer help only if he
+names a problem you can solve, and then only as "that's something I could take on, if useful."
+Close with: "Who else should I be talking to?"
 
 ### The email — SUPERSEDED 2026-09-25 (kept for the record, do not send)
 
