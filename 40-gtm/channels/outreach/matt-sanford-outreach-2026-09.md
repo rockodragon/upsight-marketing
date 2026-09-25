@@ -1,7 +1,7 @@
 ---
 title: Matt Sanford (East County EDC) — Outreach + Sponsorship Letter
 date: 2026-09-23
-status: draft — Rick to verify the relationship line and set the sponsorship number
+status: revised 2026-09-25 — direct-project email is current; sponsorship letter parked
 owner: rick
 audience: Rick
 lane: economic development (NEW — first artifact in this lane; nothing else in the vault covers it)
@@ -103,7 +103,46 @@ rebuilding before Rick spends another week on it.
    or a favor. Grant-funded orgs can often charge reporting to the grant. If they can't, pricing
    has to change.
 
-### The email — ready to send
+### The email — REVISED 2026-09-25, send this one
+
+> **Why revised:** the lane changed from "research, then sponsorship" to selling EDCs a project
+> directly. The earlier draft below framed the note as background research, which is no longer
+> true — so it is replaced with one that says plainly what Rick does. The sponsorship letter
+> (Part 2) is parked; it rested on an unconfirmed reading of what the sponsorship was for.
+>
+> **He sits on Startup San Diego's board and helped build Innovate78.** Say nothing against SSD
+> or Innovate78. If it comes up: "I pitched a Phase 2 to SSD; it's on their timeline, and I'm
+> working with EDCs directly in the meantime."
+
+> **Subject:** Reporting on the Empower East County fund
+
+> Matt,
+>
+> Rick Moy — we've crossed paths a few times around StartupSD.
+>
+> I saw the County's $300K into the Empower East County fund, with the EDA match behind it. Money
+> like that comes with a reporting clock: what happened to each business you lent to, and how you
+> know.
+>
+> That's the work I'm doing now. I talk to the businesses a program has served, fill in the
+> funder's report, and tie every number to the conversation it came from. Starting at the front of
+> a fund means the first report has a baseline instead of a scramble.
+>
+> Could I get 20 minutes in the next couple of weeks? Mainly I'd like to hear which of your
+> reports is the hardest to produce — Empower, the SBDC, or something else — and whether this
+> would actually take work off your team.
+>
+> Rick Moy
+> UpSight · getupsight.com
+
+Optional P.S., **only after confirming the Expo date and that he is attending:** *"If you're at
+the Manufacturing Expo on the 29th, happy to find you there instead."*
+
+**On the call:** the three questions above, in order, then one offer — Rick takes one program's
+next report (Empower or SBDC) end to end. $9,500 for one filing, $14,500 for two. Quote only
+when asked. See `30-strategy/econ-dev-pricing-2026-09.md` §F.1.
+
+### The email — SUPERSEDED 2026-09-25 (kept for the record, do not send)
 
 > **Relationship confirmed by Rick 2026-09-23:** they have met a few times, loosely, around the
 > StartupSD orbit. The opener below is written to match that exactly — enough to not be a cold
