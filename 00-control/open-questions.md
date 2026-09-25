@@ -7,6 +7,8 @@
 
 | Date opened | Q | Type | Owner | Status |
 |---|---|---|---|---|
+| 2026-09-25 | Is a Search Console domain property verified for getupsight.com with ≥ 28 days of data? Every number in the SEO plan waits on it. | [tactical] | Rick | open → check GSC today; if absent, verify via DNS TXT and submit the sitemap, then Phase 1 starts at day 28 |
+| 2026-09-25 | The Feb 2026 keyword map targets "customer discovery"; the live homepage sells "your last 100 calls / lenses / receipts". Which bottom-of-funnel query family does the call-analysis positioning actually own, and does it deserve its own landing page? | [tactical] | Rick | open → the first GSC export answers half of it; a SERP check on "customer call analysis software" and neighbours answers the rest; refresh `gtm-keyword-analysis.md` after |
 | 2026-08-15 | What's the forced-participation dynamic for The Decision Files? NSS's monopoly came from absence-from-a-test being damaging; without an equivalent this is a consulting practice, not a franchise. | [bet] | Rick | open → candidate is a recurring category-wide "how buyers chose" report |
 | 2026-08-15 | Will a security vendor pay $15–50K for buyer research from a one-person shop? Whole model rests on it. | [tactical] | Rick | open → cheap test: name two CMOs/CROs who'd take the call today |
 | 2026-08-15 | Which room does The Decision Files build authority in — cybersecurity (warm network, CISOs as source, security vendors as buyer) or operators/professional services? Can't do both. | [bet] | Rick | open → cheap test is one pilot security file before committing a quarter |

@@ -6,6 +6,7 @@
 
 | Status | Experiment | Hypothesis (1 line) | Metric | Started | Result |
 |---|---|---|---|---|---|
+| planned | [`2026-09-gsc-bofu-loop`](2026-09-gsc-bofu-loop.md) | Optimizing pages already ranking 4–20 for buying queries yields organic sign-ups faster than new content | organic sign-ups; clicks + position on target queries | not started | open |
 | planned | [`2026-06-day-ai-head-to-head`](2026-06-day-ai-head-to-head.md) | Founder-sellers who run surveys will pick UpSight over Day.ai (multi-source + receipts + price) | demos→pilots committed; WTP | — | — |
 
 **Status key:** `planned` · `running` · `shipped` (won) · `killed` (lost/inconclusive)

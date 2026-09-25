@@ -5,6 +5,39 @@
 
 ---
 
+## 2026-09-25 — SEO plan: the GSC-first bottom-of-funnel loop
+
+**Shipped**
+- `40-gtm/channels/content-seo/seo-plan-2026-09-gsc-bofu-loop.md` — the plan. Rob Hoffman's
+  11-step Search Console → Claude → fix → re-check loop, adapted to UpSight with our own
+  bottom-of-funnel definition, three copy-paste prompts, four phases, and a measurement table.
+- `40-gtm/experiments/2026-09-gsc-bofu-loop.md` + index row — hypothesis, baseline table to fill
+  at Phase 0, win / reorder / kill rule at day 60.
+- Live-site audit of all 12 sitemap URLs plus `/pricing`, `/about`, `/solutions`, two comparison
+  URLs and the RSS feed, dated and sourced inside the plan.
+
+**Stuck**
+- No Search Console access from this session. Phase 0 (verify the property, export 28 days,
+  record the baseline) is Rick's and gates every number in the plan.
+- Site code is in `../Insights/`; the Phase 2 fixes are a local session, not this one.
+- No Beads access from cloud, so the seven issues are listed at the bottom of the plan for the
+  next local session to create, then delete from the doc.
+
+**Decided**
+- The GSC export is the SEO content queue; the Feb 2026 25-post cluster plan is reference, not
+  backlog. Logged in `decisions.md`.
+
+**Surfaced**
+- Sitemap emits `http://` URLs against `https://` canonicals; `/pricing`, `/about`, `/solutions`
+  missing from it; `/sign-up` in it with no title tag.
+- All five blog posts carry the same boilerplate meta description ("Read *title* on the Upsight
+  blog") and none emit `FAQPage` schema despite each having an FAQ section. Landing pages do.
+- Homepage has no canonical, no og:title, no JSON-LD. `/about` has no title tag. RSS returns 500.
+- Blog has been static since 2026-02-26; all five posts share one bulk `dateModified` of 2026-03-29.
+- `/compare/upsight-vs-dovetail` is a 404 while the draft has sat in the vault since February.
+- Positioning drift: homepage sells "your last 100 calls / lenses / receipts", every other page
+  and the keyword map sell "customer discovery". Opened as a question.
+
 ## 2026-08-16 — Handoff for a local session
 
 **Shipped**

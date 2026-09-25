@@ -5,6 +5,19 @@
 
 ---
 
+## 2026-09-25 - SEO runs the Search-Console-first bottom-of-funnel loop before writing net-new content
+**Why:** The cheapest ranking gain is a page Google already ranks 4–20 for a buying query; moving
+it to page 1 is on-page work, not authority-building. Rob Hoffman's 11-step loop (export GSC →
+Claude finds BOFU queries at 4–20 → Claude writes a per-page checklist → implement → re-check
+daily) turns that into a weekly ritual a solo founder can run in two hours. Consequences: the GSC
+export is the content queue; the Feb 2026 25-post cluster plan is reference material, not a
+backlog; new pages are built only for bottom-of-funnel gaps the export can't serve (comparison
+pages first) and enter the loop 28 days after shipping; the on-page defects that cap every URL
+(http sitemap, boilerplate blog metas, missing FAQPage schema, homepage without canonical or
+schema) get fixed in parallel. Reversal trigger is the experiment's kill rule at day 60.
+See `40-gtm/channels/content-seo/seo-plan-2026-09-gsc-bofu-loop.md` and
+`40-gtm/experiments/2026-09-gsc-bofu-loop.md`.
+
 ## 2026-08-15 - Security is the active lane; operators deferred, not killed
 **Why:** Rick's credential, network, and warm press all transfer to security and none of them
 transfer to operators — the unfair advantage is entirely on one side. Security also has a paying
