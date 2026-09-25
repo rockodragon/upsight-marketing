@@ -31,17 +31,28 @@ PostHog, per 28-day window.
 60 days from the first implemented change. If Search Console has less than 28 days of data at
 Phase 0, the first 28 days are baseline only.
 
-## Baseline (fill at Phase 0)
+## Baseline — pulled 2026-09-25
+
+Source: Search Console export shared by Rick on 2026-09-25 (Web search, last 28 days,
+2026-08-26 to 2026-09-22). Real data. Average position is impression-weighted from the Chart tab.
 
 | Field | Value | Date |
 |---|---|---|
-| GSC property verified | not yet checked | |
-| Total clicks, 28 days | not yet pulled | |
-| Total impressions, 28 days | not yet pulled | |
-| Average position, all queries | not yet pulled | |
-| BOFU queries in positions 4–20 with ≥ 10 impressions | not yet pulled | |
-| Branded queries (contain "upsight") | not yet pulled | |
-| Organic sign-ups, prior 28 days | not yet pulled | |
+| GSC property verified | Yes — export exists for getupsight.com | 2026-09-25 |
+| Total clicks, 28 days | 11 | 2026-09-22 |
+| Total impressions, 28 days | 383 | 2026-09-22 |
+| Average position, all queries | 24.8 (impression-weighted) | 2026-09-22 |
+| Queries shown in the export | 12 (188 impressions); the other 195 impressions are anonymized low-volume queries GSC does not list | 2026-09-22 |
+| BOFU queries in positions 4–20 with ≥ 10 impressions | **0** | 2026-09-22 |
+| Non-branded queries in positions 4–20, any volume | **0** | 2026-09-22 |
+| Branded queries (contain "upsight" or the founder's name) | upsight 135 impr / 3 clicks / pos 7.4 · rick moy 2 / 0 / 9.0 · upsights, getsight, upsight vision 1 impr each at pos 49–70 | 2026-09-22 |
+| Only non-branded demand | "create survey project" family: 33 + 7 + 3 + 2 + 1 impressions at positions 65–98, landing on `/docs/create-surveys` (76 impr, pos 87) | 2026-09-22 |
+| Pages already at 3–5 (queries hidden) | `/docs/chatbots-mcp` 3.3 · `/docs/getting-started` 3.9 · `/docs/survey-distribution` 4.8 · `/customer-discovery` 4.9 · `/solutions` 4.9 · `/about` 5.1 · `/customer-discovery-for-consultants` 5.1 — 3 to 44 impressions each, almost certainly branded | 2026-09-22 |
+| Organic sign-ups, prior 28 days | not yet pulled from PostHog | |
+
+**Reads on the decision rule:** the **Reorder** branch fires. There are zero bottom-of-funnel
+queries to optimize, so Phase 3 pages (Dovetail comparison, then a call-analysis page) come
+first and Phase 1 re-runs 28 days after each ships. The loop has nothing to eat yet.
 
 ## Targets chosen (fill at Phase 1)
 
