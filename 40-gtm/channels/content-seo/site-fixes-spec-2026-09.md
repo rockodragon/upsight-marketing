@@ -36,11 +36,11 @@ from the title only; check each against the post body before shipping.**
 
 | Slug | Meta description | Chars |
 |---|---|---|
-| `customer-discovery-questions-not-to-ask` | Ten customer discovery questions that get polite, useless answers, and the question to ask instead of each one. Ask about the past, not the future. | see check below |
-| `how-to-talk-to-customers-guide-to-customer-discovery` | How to talk to customers so the conversation produces evidence: who to interview, what to ask, how to capture what was said, and how to read it for product-market fit. | see check below |
-| `what-is-customer-discovery-a-practical-guide-for-2026` | Customer discovery is turning conversations into evidence you can verify. The five-step process, the six mistakes that waste interviews, and the tools that work in 2026. | see check below |
-| `stop-vibe-coding-your-way-to-nowhere` | Why building on gut feeling kills startups, why technical founders skip customer discovery anyway, and how to get evidence before you write more code. | see check below |
-| `from-assumptions-to-evidence` | The best product teams build on proof, not opinion. How to turn assumptions into testable claims, gather evidence from customer conversations, and decide with receipts. | see check below |
+| `customer-discovery-questions-not-to-ask` | Ten customer discovery questions that get polite, useless answers, and the question to ask instead of each one. Ask about the past, not the future. | 147 |
+| `how-to-talk-to-customers-guide-to-customer-discovery` | How to talk to customers so conversations produce evidence: who to interview, what to ask, how to capture it, and how to read it for product-market fit. | 152 |
+| `what-is-customer-discovery-a-practical-guide-for-2026` | Customer discovery turns conversations into evidence you can verify. The five-step process, six common mistakes, and the tools that work in 2026. | 145 |
+| `stop-vibe-coding-your-way-to-nowhere` | Why building on gut feeling kills startups, why technical founders skip customer discovery anyway, and how to get evidence before you write more code. | 150 |
+| `from-assumptions-to-evidence` | The best product teams build on proof, not opinion. Turn assumptions into testable claims, gather evidence from conversations, and decide with receipts. | 152 |
 
 (Verified body: only `what-is-customer-discovery`. The other four are inferred from title and H1.)
 
@@ -109,7 +109,7 @@ swap for a proper logo file if one exists.
 | Page | Title tag | Meta description |
 |---|---|---|
 | `/about` | About UpSight \| Founder Rick Moy | Rick Moy built UpSight because customer truth kept getting lost after teams did the hard part: talking to customers. Who we are and why receipts matter. |
-| `/sign-up` | Sign Up \| Analyze 3 Calls Free \| UpSight | Create a free UpSight account. Upload three recorded calls, pick a lens, and see what you've been missing, with every finding linked to the moment it was said. |
+| `/sign-up` | Sign Up \| Analyze 3 Calls Free \| UpSight | Create a free UpSight account. Upload three recorded calls, pick a lens, and see what you missed, with every finding linked to the moment it was said. |
 
 `/sign-up` also has no canonical. Add `https://getupsight.com/sign-up`.
 

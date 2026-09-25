@@ -3,7 +3,7 @@ title: "UpSight vs Dovetail: Which Fits a Small Team?"
 title_tag: "UpSight vs Dovetail: Which Fits a Small Team? (2026)"
 slug: /compare/upsight-vs-dovetail
 canonical_url: "https://getupsight.com/compare/upsight-vs-dovetail"
-meta_description: "Dovetail sells Free or Enterprise. UpSight publishes $0, $29 and $39 plans, links every finding to its moment, and runs surveys too. An honest comparison for small teams."
+meta_description: "Dovetail sells Free or Enterprise. UpSight publishes $0, $29 and $39 plans, links every finding to its moment, and runs surveys. Small-team comparison."
 target_keywords: dovetail alternative, upsight vs dovetail, dovetail alternative for small teams, dovetail pricing, dovetail vs
 status: ready-to-build
 written: 2026-02 (draft) · rewritten 2026-09-25

@@ -3,7 +3,7 @@ title: "Customer Call Analysis Software That Reads Every Call Four Ways"
 title_tag: "Customer Call Analysis Software | UpSight"
 slug: /customer-call-analysis
 canonical_url: "https://getupsight.com/customer-call-analysis"
-meta_description: "Upload the sales, discovery and success calls you already have. UpSight reads each one through BANT, discovery, JTBD and decision lenses and pins every finding to the moment it was said."
+meta_description: "Upload the sales, discovery and success calls you already have. UpSight reads each through BANT, discovery, JTBD and decision lenses, with receipts."
 target_keywords: customer call analysis software, AI call analysis tool, analyze sales call recordings, call transcript analysis tool, customer interview analysis software
 status: ready-to-build
 written: 2026-09-25
