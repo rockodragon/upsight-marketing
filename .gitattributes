@@ -22,3 +22,9 @@
 *.jpg filter=lfs diff=lfs merge=lfs -text
 *.webp filter=lfs diff=lfs merge=lfs -text
 *.tiff filter=lfs diff=lfs merge=lfs -text
+
+# Append-only control logs: keep both sides on merge instead of conflicting.
+00-control/status.md          merge=union
+00-control/decisions.md       merge=union
+00-control/open-questions.md  merge=union
+10-ops/dogfooding-log.md      merge=union

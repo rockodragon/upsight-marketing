@@ -1,0 +1,159 @@
+{
+  "id": "impossible-to-miss",
+  "title": "Impossible to Miss — brand film",
+  "description": "Chiat Day–level thesis film: customers are already telling you; UpSight makes those signals impossible to miss. v1: stock/AI plates + Remotion, illustrative UI, AI VO + light AI music.",
+  "wedge": "brand-thesis",
+  "room": "brand",
+  "vo": "ai-tts",
+  "voProviders": ["elevenlabs", "deepgram"],
+  "music": "ai-generated-light",
+  "production": "v1-stock-ai-remotion",
+  "placements": ["homepage", "linkedin", "paid", "board"],
+  "cuts": ["75s-master", "60s", "15-20s-bumper", "mute-safe"],
+  "vignettes": ["survey", "churn", "missed-expansion", "cs-issues"],
+  "cta": {
+    "inMaster": false,
+    "homepage": "See how signal compounds",
+    "linkedin": "See UpSight",
+    "paidEndCard": "See the signal",
+    "board": "30-min signal walkthrough",
+    "url": "https://getupsight.com"
+  },
+  "turn": {
+    "type": "continuous-ramp",
+    "heroPlate": "survey-to-profile-or-churn-to-risk",
+    "chain": ["conversation-lands", "profile-updates", "next-move"]
+  },
+  "format": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationSeconds": 75
+  },
+  "grade": {
+    "act1": "cool-underexposed-low-sat",
+    "turn": "perception-ramp-synced-to-signal-resolve",
+    "act2plus": "clear-legible-signal-accents"
+  },
+  "scenes": [
+    {
+      "id": "witness",
+      "name": "They're telling you",
+      "durationSeconds": 28,
+      "mood": "missed-signal",
+      "picture": "One-campus stock/AI walk through four vignettes in order: (1) survey closed unread, (2) churn call then laptop closes, (3) missed expansion walks away, (4) CS third contact no pattern. Cool grade. Light AI bed under room tone. No type. Silent witness stand-in.",
+      "vignettes": ["survey", "churn", "missed-expansion", "cs-issues"],
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "Your customers are telling you how to win.",
+          "onScreen": null,
+          "caption": "Your customers are telling you how to win."
+        },
+        {
+          "at": 4,
+          "voiceover": "They're telling you which accounts are about to leave, which deals were never going to close, where the next six-figure expansion is hiding, and what your market will believe when they hear it from another customer.",
+          "onScreen": null,
+          "caption": "Which accounts leave. Which deals die. Where expansion hides."
+        },
+        {
+          "at": 18,
+          "voiceover": "But those signals are trapped in calls, surveys, meetings, notes, and people's heads.",
+          "onScreen": null,
+          "caption": "Trapped in calls, surveys, meetings, notes, and heads."
+        },
+        {
+          "at": 24,
+          "voiceover": "So your team keeps learning the truth after it's too late.",
+          "onScreen": null,
+          "caption": "The truth — after it's too late."
+        }
+      ]
+    },
+    {
+      "id": "turn",
+      "name": "Compounding signal",
+      "durationSeconds": 20,
+      "mood": "perception-shift",
+      "picture": "Continuous ramp on one hero plate: sound ducks → lost signal reappears as overlay → conversation→profile→next move chain → grade lifts with meaning. Then short compounding proof. Illustrative UI. Mono labels only.",
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "UpSight turns every customer conversation into compounding signal.",
+          "onScreen": "// compounding signal",
+          "caption": "Every conversation → compounding signal."
+        },
+        {
+          "at": 6,
+          "voiceover": "Every call, survey answer, and interview updates a living customer profile.",
+          "onScreen": "Living profile",
+          "caption": "Every call, survey, interview updates a living profile."
+        },
+        {
+          "at": 12,
+          "voiceover": "UpSight finds the patterns, groups the accounts, scores what's proven, and shows your team what to do next.",
+          "onScreen": "Pattern · Group · Score · Next",
+          "caption": "Patterns. Groups. Scores. What to do next."
+        }
+      ]
+    },
+    {
+      "id": "proof",
+      "name": "Outcomes + receipts",
+      "durationSeconds": 17,
+      "mood": "clear",
+      "picture": "Reverse Act 1 four: survey→profile; churn before cancel; expansion while time; CS pattern+move; illustrative receipts reel card.",
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "Churn risk becomes visible before the cancellation email.",
+          "onScreen": "Before cancel",
+          "caption": "Churn risk — before the cancellation email.",
+          "pictureBeat": "churn-reverse"
+        },
+        {
+          "at": 4,
+          "voiceover": "Expansion opportunities surface while there's still time.",
+          "onScreen": "Still time",
+          "caption": "Expansion — while there's still time.",
+          "pictureBeat": "missed-expansion-reverse"
+        },
+        {
+          "at": 8,
+          "voiceover": "Sales stops chasing deals the signal already disqualified.",
+          "onScreen": "Pattern",
+          "caption": "Stop chasing what the signal already killed.",
+          "pictureBeat": "cs-issues-reverse"
+        },
+        {
+          "at": 12,
+          "voiceover": "And when you need to convince the board, the team, or the market, UpSight turns real customer voices into short video reels. Not anecdotes. Receipts.",
+          "onScreen": "Receipts",
+          "caption": "Real customer voices. Not anecdotes. Receipts.",
+          "pictureBeat": "illustrative-reel"
+        }
+      ]
+    },
+    {
+      "id": "land",
+      "name": "Impossible to miss",
+      "durationSeconds": 10,
+      "mood": "resolve",
+      "picture": "Resolve plate + wordmark. Air after last line. No CTA in master; paid bumper adds end card separately.",
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "Your customers are already telling you where the money is, where the risk is, and what the market needs to hear.",
+          "onScreen": null,
+          "caption": "They're already telling you."
+        },
+        {
+          "at": 5,
+          "voiceover": "UpSight makes those signals impossible to miss.",
+          "onScreen": "UpSight",
+          "caption": "Impossible to miss."
+        }
+      ]
+    }
+  ]
+}

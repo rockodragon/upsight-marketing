@@ -1,0 +1,17 @@
+[
+  { "text": "up", "startMs": 0, "endMs": 200, "timestampMs": null, "confidence": null },
+  { "text": "site", "startMs": 220, "endMs": 500, "timestampMs": null, "confidence": null },
+  { "text": "is", "startMs": 520, "endMs": 650, "timestampMs": null, "confidence": null },
+  { "text": "the", "startMs": 670, "endMs": 780, "timestampMs": null, "confidence": null },
+  { "text": "best", "startMs": 800, "endMs": 1050, "timestampMs": null, "confidence": null },
+  { "text": "way", "startMs": 1070, "endMs": 1250, "timestampMs": null, "confidence": null },
+  { "text": "to", "startMs": 1270, "endMs": 1350, "timestampMs": null, "confidence": null },
+  { "text": "know", "startMs": 1370, "endMs": 1600, "timestampMs": null, "confidence": null },
+  { "text": "your", "startMs": 1620, "endMs": 1800, "timestampMs": null, "confidence": null },
+  { "text": "customer", "startMs": 1820, "endMs": 2200, "timestampMs": null, "confidence": null },
+  { "text": "so", "startMs": 3000, "endMs": 3150, "timestampMs": null, "confidence": null },
+  { "text": "try", "startMs": 3170, "endMs": 3350, "timestampMs": null, "confidence": null },
+  { "text": "rem", "startMs": 3370, "endMs": 3500, "timestampMs": null, "confidence": null },
+  { "text": "ocean", "startMs": 3520, "endMs": 3750, "timestampMs": null, "confidence": null },
+  { "text": "today", "startMs": 3770, "endMs": 4100, "timestampMs": null, "confidence": null }
+]

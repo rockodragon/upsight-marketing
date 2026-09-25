@@ -81,6 +81,8 @@ outreach until it carries a founder bio, a masthead, a methodology note, and thr
 Not a conflict of interest: we publish how people decide, not which product wins.
 See `30-strategy/public-survey-engine-strategy.md` and
 `40-gtm/channels/outreach/decision-files-recruiting-kit.md`.
+## 2026-07-27 — Account Signal is the wedge; survey is an input
+**Why:** Colin/Richard conversations hire for the why behind at-risk or lost accounts (receipt + next move + pattern), not a better survey product. Surveys, calls, and email are sources for the lens. Keep any Survey VSL as a separate, narrower asset.
 
 ## 2026-07-19 - Homepage V4 uses a disciplined proof-and-conversion sequence
 **Why:** V3 established the right category and differentiator but still read more like a product

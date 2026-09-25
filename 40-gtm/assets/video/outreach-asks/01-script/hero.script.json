@@ -1,0 +1,360 @@
+{
+  "id": "outreach-asks",
+  "title": "The Thing You Already Know",
+  "description": "Homepage / paid / first-touch VSL. The prospect recognizes their own situation in 20 seconds, and by the end wants the loop running on their own customers.",
+  "wedge": "outreach-asks",
+  "oneIdea": "You already had the answer. It was in a conversation nobody could search.",
+  "tone": "confident, quiet, a little haunting at the open. No hype, no stock-photo optimism, no AI-powered.",
+  "vo": "ai-tts",
+  "placements": ["homepage-hero", "paid", "first-sales-touch"],
+  "cta": {
+    "label": "Upload a conversation",
+    "supporting": "Bring one conversation. See what it already knows.",
+    "tagline": "UpSight — actionable customer intelligence"
+  },
+  "format": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationSeconds": 194
+  },
+  "cuts": {
+    "master": { "id": "TheThingYouAlreadyKnow", "durationSeconds": 194 },
+    "paid30": { "id": "PaidCut30", "durationSeconds": 30, "spine": ["act-i", "beat-1b", "beat-5", "act-vi"] },
+    "social15": { "id": "SocialCut15", "durationSeconds": 15, "spine": ["act-i-short", "skipped-question"], "narration": false }
+  },
+  "scenes": [
+    {
+      "id": "act-i",
+      "name": "Act I — The Cold Open",
+      "durationSeconds": 28,
+      "mood": "recognition",
+      "backgroundColor": "#050508",
+      "picture": "Black. White text, one line at a time, unhurried. Then a waveform scrubbing past; it stops; a transcript line surfaces. No logo.",
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "",
+          "onScreen": "In March, a customer told you exactly why they'd leave.",
+          "caption": ""
+        },
+        {
+          "at": 8,
+          "voiceover": "",
+          "onScreen": "In August, they left.",
+          "caption": ""
+        },
+        {
+          "at": 14,
+          "voiceover": "They told you. On a call. Somewhere around minute nineteen.",
+          "onScreen": null,
+          "caption": "They told you. On a call. Minute nineteen."
+        },
+        {
+          "at": 20,
+          "voiceover": "Nobody wrote it down. Nobody could have found it if they had.",
+          "onScreen": "Honestly? Onboarding took three weeks and I never got the hours back.",
+          "caption": "Nobody wrote it down. Nobody could have found it."
+        },
+        {
+          "at": 24,
+          "voiceover": "",
+          "onScreen": "You didn't miss the signal. You had it.",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "act-ii",
+      "name": "Act II — The Real Problem",
+      "durationSeconds": 27,
+      "mood": "non-accumulation",
+      "backgroundColor": "#050508",
+      "picture": "Wall of artifacts sliding past: call recordings, Notion doc, survey rows, laptop notes, Slack thread. Collapses into a grey folder, dragged onto a stack of identical folders.",
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "You do talk to customers. That was never the problem.",
+          "onScreen": null,
+          "caption": "You do talk to customers. That was never the problem."
+        },
+        {
+          "at": 7,
+          "voiceover": "The problem is that every conversation starts from zero — and ends in a place nobody will ever look again.",
+          "onScreen": null,
+          "caption": "Every conversation starts from zero."
+        },
+        {
+          "at": 16,
+          "voiceover": "",
+          "onScreen": "Research goes in. Nothing compounds.",
+          "caption": "Research goes in. Nothing compounds."
+        },
+        {
+          "at": 18,
+          "voiceover": "So you learn the same thing four times, from four customers, in four quarters. And you act on none of it, because \"I think I heard that somewhere\" doesn't survive a leadership meeting.",
+          "onScreen": "Research goes in. Nothing compounds.",
+          "caption": "You learn the same thing four times. And act on none of it."
+        }
+      ]
+    },
+    {
+      "id": "act-iii",
+      "name": "Act III — The Turn",
+      "durationSeconds": 10,
+      "mood": "relief",
+      "backgroundColor": "#eeeef2",
+      "picture": "Cut to white. First product frame: a single quote card with a name, a date, and a play button. Multiplies into a constellation. Logo lands as relief.",
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "What if every conversation made the next one sharper?",
+          "onScreen": null,
+          "caption": "What if every conversation made the next one sharper?"
+        },
+        {
+          "at": 5,
+          "voiceover": "Not a summary. Not a vibe. Evidence you can play back.",
+          "onScreen": "UpSight",
+          "caption": "Not a summary. Not a vibe. Evidence you can play back."
+        }
+      ]
+    },
+    {
+      "id": "beat-1",
+      "name": "Beat 1 — The interview",
+      "durationSeconds": 27,
+      "mood": "conversation",
+      "backgroundColor": "#050508",
+      "picture": "Phone on a kitchen counter. Interview in progress, no interviewer. Uppy's next question changes. Split three ways: typed, spoken, video. Citation: Lucas et al., 2014.",
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "You can't interview four hundred customers. So Uppy does.",
+          "onScreen": null,
+          "caption": "You can't interview four hundred customers. So Uppy does."
+        },
+        {
+          "at": 6,
+          "voiceover": "Not a form. An actual conversation — it hears what they said and asks the better next question.",
+          "onScreen": null,
+          "caption": "Not a form. An actual conversation."
+        },
+        {
+          "at": 12,
+          "voiceover": "And they answer however they want. Typed. Spoken. On camera.",
+          "onScreen": null,
+          "caption": "Typed. Spoken. On camera."
+        },
+        {
+          "at": 17,
+          "voiceover": "Which means you don't just get the words. You get the sigh before them.",
+          "onScreen": null,
+          "caption": "You don't just get the words. You get the sigh before them."
+        },
+        {
+          "at": 20,
+          "voiceover": "And here's the strange part. People tell a machine things they won't tell you.",
+          "onScreen": "People disclose more when they believe no human is listening. Lucas et al., 2014",
+          "caption": "People tell a machine things they won't tell you."
+        },
+        {
+          "at": 24,
+          "voiceover": "No performance. No managing your feelings. Just what they actually think.",
+          "onScreen": "People disclose more when they believe no human is listening. Lucas et al., 2014",
+          "caption": "No performance. Just what they actually think."
+        }
+      ]
+    },
+    {
+      "id": "beat-1b",
+      "name": "Beat 1b — The profile thickens",
+      "durationSeconds": 14,
+      "mood": "compounding",
+      "backgroundColor": "#050508",
+      "picture": "Dana's card grows: call, survey, video. Then Uppy skips two questions — already answered, June.",
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "The first conversation tells you a little.",
+          "onScreen": null,
+          "caption": "The first conversation tells you a little."
+        },
+        {
+          "at": 4,
+          "voiceover": "The fifth tells you who she is. What she's trying to do. What almost made her leave. Every single thing with a receipt you can play.",
+          "onScreen": null,
+          "caption": "The fifth tells you who she is. With a receipt you can play."
+        },
+        {
+          "at": 10,
+          "voiceover": "So it never asks her the same question twice. It starts where you left off.",
+          "onScreen": "already answered — June",
+          "caption": "It never asks the same question twice."
+        }
+      ]
+    },
+    {
+      "id": "beat-2",
+      "name": "Beat 2 — The pattern",
+      "durationSeconds": 12,
+      "mood": "undeniable",
+      "backgroundColor": "#050508",
+      "picture": "Nine quotes snap into a cluster: Onboarding takes too long. Count: 14 people. Click opens faces and sentences. One clip plays.",
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "When fourteen customers circle the same thing, you don't get a hunch. You get fourteen names and fourteen clips.",
+          "onScreen": "Onboarding takes too long",
+          "caption": "Fourteen names. Fourteen clips."
+        },
+        {
+          "at": 8,
+          "voiceover": "This is what makes it undeniable in a room.",
+          "onScreen": "Onboarding takes too long",
+          "caption": "This is what makes it undeniable in a room."
+        }
+      ]
+    },
+    {
+      "id": "beat-3",
+      "name": "Beat 3 — Who thinks it",
+      "durationSeconds": 12,
+      "mood": "segment",
+      "backgroundColor": "#050508",
+      "picture": "Theme splits into Founders vs Enterprise buyers. Then a group tile: Churn risk — 9 people. A tenth face slides in.",
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "And it splits by who they are. Because what your founders want and what your enterprise buyers want are not the same product decision.",
+          "onScreen": null,
+          "caption": "What founders want and what enterprise buyers want are not the same decision."
+        },
+        {
+          "at": 7,
+          "voiceover": "Groups keep themselves current. Somebody says the wrong thing on a Tuesday, and they're in the group before you've read the transcript.",
+          "onScreen": "Churn risk — 9 people",
+          "caption": "Somebody says the wrong thing on a Tuesday. They're in the group."
+        }
+      ]
+    },
+    {
+      "id": "beat-4",
+      "name": "Beat 4 — The question",
+      "durationSeconds": 14,
+      "mood": "outreach",
+      "backgroundColor": "#050508",
+      "picture": "From the group, an outreach draft writes itself. Questions appear with because-she-said-this receipts. Two greyed out. Then: would you be open to fifteen minutes?",
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "Then it goes back out. To exactly those nine people.",
+          "onScreen": "You mentioned onboarding took three weeks…",
+          "caption": "Then it goes back out. To exactly those nine people."
+        },
+        {
+          "at": 5,
+          "voiceover": "It asks what you still don't know — built from what they already told you. Nothing generic. Nothing twice.",
+          "onScreen": null,
+          "caption": "Nothing generic. Nothing twice."
+        },
+        {
+          "at": 10,
+          "voiceover": "And because you told it what this conversation is for, it asks for the thing you actually wanted.",
+          "onScreen": "…and would you be open to fifteen minutes?",
+          "caption": "It asks for the thing you actually wanted."
+        }
+      ]
+    },
+    {
+      "id": "beat-5",
+      "name": "Beat 5 — Waiting on",
+      "durationSeconds": 14,
+      "mood": "closed-loop",
+      "backgroundColor": "#050508",
+      "picture": "Waiting on list. Dana said yes Tuesday, books a slot, row turns green and leaves. Quote joins the cluster. Count 14 → 15. Profile gains a line.",
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "Every one of these is a loop somebody opened and nobody closed.",
+          "onScreen": "Waiting on",
+          "caption": "A loop somebody opened and nobody closed."
+        },
+        {
+          "at": 5,
+          "voiceover": "It follows up. It notices when they book. It closes itself.",
+          "onScreen": null,
+          "caption": "It follows up. It notices when they book. It closes itself."
+        },
+        {
+          "at": 9,
+          "voiceover": "And the whole thing gets smarter for the next person.",
+          "onScreen": "14 → 15",
+          "caption": "And the whole thing gets smarter for the next person."
+        }
+      ]
+    },
+    {
+      "id": "act-v",
+      "name": "Act V — The Proof",
+      "durationSeconds": 20,
+      "mood": "outcomes",
+      "backgroundColor": "#050508",
+      "picture": "Clean type, one line at a time, each with a small artifact. Churn → ICP → roadmap.",
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "The churn reason, in their words, before the renewal call.",
+          "onScreen": "Know why they leave — while they're still here.",
+          "caption": "The churn reason, in their words, before the renewal call."
+        },
+        {
+          "at": 7,
+          "voiceover": "Stop guessing who your best customer is. Watch which one keeps telling you the same thing.",
+          "onScreen": "Sell to the segment that actually buys.",
+          "caption": "Stop guessing who your best customer is."
+        },
+        {
+          "at": 14,
+          "voiceover": "With fourteen clips behind it, the roadmap argument is over in ninety seconds.",
+          "onScreen": "Build what they'll pay for.",
+          "caption": "Fourteen clips. The roadmap argument is over."
+        }
+      ]
+    },
+    {
+      "id": "act-vi",
+      "name": "Act VI — Close",
+      "durationSeconds": 16,
+      "mood": "resolve",
+      "backgroundColor": "#050508",
+      "picture": "Back to black. March quote now sits inside a cluster, in a group, with a follow-up already sent and answered. Cursor on Upload a conversation.",
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "You already had the answer.",
+          "onScreen": "Honestly? Onboarding took three weeks and I never got the hours back.",
+          "caption": "You already had the answer."
+        },
+        {
+          "at": 5,
+          "voiceover": "Now you'll be able to find it.",
+          "onScreen": null,
+          "caption": "Now you'll be able to find it."
+        },
+        {
+          "at": 9,
+          "voiceover": "",
+          "onScreen": "UpSight — actionable customer intelligence",
+          "caption": "Bring one conversation. See what it already knows."
+        },
+        {
+          "at": 12,
+          "voiceover": "",
+          "onScreen": "Upload a conversation",
+          "caption": "Upload a conversation"
+        }
+      ]
+    }
+  ]
+}

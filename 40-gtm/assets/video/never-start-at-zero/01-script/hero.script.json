@@ -1,0 +1,167 @@
+{
+  "id": "never-start-at-zero",
+  "title": "Never Start at Zero",
+  "description": "Mute-first visual cut of the compounding-profiles VSL. Timed to punch, not to the 2:15 VO. Full spoken script lives in source-never-start-at-zero.md.",
+  "sourceScript": "source-never-start-at-zero.md",
+  "wedge": "compounding-profiles",
+  "room": "gtm-relationships",
+  "cta": {
+    "label": "Send your first ask",
+    "url": "https://getupsight.com"
+  },
+  "format": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationSeconds": 51
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "name": "Hook",
+      "durationSeconds": 5,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "Here's the dirty secret about every form you've ever sent. The moment someone hits submit… their answer falls into a spreadsheet and dies there.",
+          "onScreen": "Their answer dies there.",
+          "caption": "Submit. Spreadsheet. Dead."
+        },
+        {
+          "at": 2.2,
+          "voiceover": "No name you'll remember. No follow-up. Next time you start over. From zero. Again.",
+          "onScreen": "Start at zero. Again.",
+          "caption": "Next time you start at zero. Again."
+        }
+      ]
+    },
+    {
+      "id": "cost",
+      "name": "The real cost",
+      "durationSeconds": 6,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "That's not a survey problem. That's a relationship problem. They're not rows — they're at different stages.",
+          "onScreen": "Curious · Ready · Nudge",
+          "caption": "Not a survey problem. A relationship problem."
+        }
+      ]
+    },
+    {
+      "id": "shift",
+      "name": "The shift",
+      "durationSeconds": 7,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "What if every answer didn't just get recorded — it got remembered?",
+          "onScreen": "Not recorded. Remembered.",
+          "caption": "Not recorded. Remembered."
+        },
+        {
+          "at": 1.4,
+          "voiceover": "Each reply, conversation, and call builds a profile that gets richer every time you talk.",
+          "onScreen": "A living profile.",
+          "caption": "A profile that gets richer every time."
+        }
+      ]
+    },
+    {
+      "id": "promise",
+      "name": "The promise",
+      "durationSeconds": 4,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "Every interaction compounds. You never start at zero.",
+          "onScreen": "You never start at zero.",
+          "caption": "You never start at zero."
+        }
+      ]
+    },
+    {
+      "id": "demo",
+      "name": "What you can actually do",
+      "durationSeconds": 12,
+      "illustrative": true,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "See who's at what stage — and who's ready to move.",
+          "onScreen": "Who's ready.",
+          "caption": "See who's ready to move."
+        },
+        {
+          "at": 3,
+          "voiceover": "Follow up in one click, in context.",
+          "onScreen": "Follow up in context.",
+          "caption": "Follow up in one click. In context."
+        },
+        {
+          "at": 6,
+          "voiceover": "Turn a warm answer into a booked meeting without breaking the thread.",
+          "onScreen": "Answer → meeting.",
+          "caption": "Book it in the thread."
+        },
+        {
+          "at": 9,
+          "voiceover": "Go deeper over voice or video. A conversation, not a chore.",
+          "onScreen": "Ask in the moment.",
+          "caption": "A conversation. Not a chore."
+        }
+      ]
+    },
+    {
+      "id": "feeling",
+      "name": "The feeling",
+      "durationSeconds": 5,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "One link. Beautiful. One question at a time.",
+          "onScreen": "One question at a time.",
+          "caption": "One link. One question at a time."
+        },
+        {
+          "at": 2.4,
+          "voiceover": "They feel heard, not processed.",
+          "onScreen": "Heard, not processed.",
+          "caption": "Heard. Not processed."
+        }
+      ]
+    },
+    {
+      "id": "proof",
+      "name": "Proof",
+      "durationSeconds": 7,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "I ran one survey. It didn't just give me answers. It gave me a pitch.",
+          "onScreen": "Not answers. A pitch.",
+          "caption": "Not answers. A pitch."
+        },
+        {
+          "at": 3.2,
+          "voiceover": "Their words. Their patterns. Walk in from everything you already know.",
+          "onScreen": "Not a blank page.",
+          "caption": "Walk in from everything you already know."
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "name": "CTA",
+      "durationSeconds": 5,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "Stop collecting responses that die. Start relationships that compound. Send your first ask free.",
+          "onScreen": "Send your first ask",
+          "caption": "Send your first ask. Never start at zero again."
+        }
+      ]
+    }
+  ]
+}

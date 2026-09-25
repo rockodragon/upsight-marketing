@@ -1,0 +1,146 @@
+{
+  "id": "account-signal",
+  "title": "Account Signal — consulting opener",
+  "description": "Elevated pragmatic opener: the why behind at-risk accounts — receipt, next move, pattern. Not a survey product video.",
+  "wedge": "account-signal",
+  "room": "cs-churn",
+  "cta": {
+    "label": "Speak to an Advisor",
+    "url": "https://getupsight.com/advisor"
+  },
+  "format": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationSeconds": 92
+  },
+  "scenes": [
+    {
+      "id": "opener",
+      "name": "Opener",
+      "durationSeconds": 12,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "Most teams don't lack data on at-risk accounts.",
+          "onScreen": "You already have the scores.",
+          "caption": "Most teams don't lack data on at-risk accounts."
+        },
+        {
+          "at": 5,
+          "voiceover": "They lack the why — in the customer's own words — in time to do something.",
+          "onScreen": "You don't have the why.",
+          "caption": "You don’t have the why — in the customer’s words — in time."
+        }
+      ]
+    },
+    {
+      "id": "approaches",
+      "name": "Usual approaches",
+      "durationSeconds": 16,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "So we send another survey. We update the CRM note. We wait for the QBR.",
+          "onScreen": "Another survey. Another CRM note. Another QBR.",
+          "caption": "Another survey. Another CRM note. Another QBR."
+        },
+        {
+          "at": 8,
+          "voiceover": "All tidy. Still too late. The scoreboard said fine. The account was already gone.",
+          "onScreen": "Tidy. Too late.",
+          "caption": "Tidy. Still too late. The scoreboard said fine."
+        }
+      ]
+    },
+    {
+      "id": "lens",
+      "name": "The lens",
+      "durationSeconds": 14,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "We start where the words already are — survey follow-ups, call transcripts, email threads.",
+          "onScreen": "Surveys · Calls · Email",
+          "caption": "Start where the words already are."
+        },
+        {
+          "at": 7,
+          "voiceover": "Then we turn them into a reason you can defend, a receipt you can click, and a next move.",
+          "onScreen": "Reason · Receipt · Next move",
+          "caption": "A reason you can defend. A receipt. A next move."
+        }
+      ]
+    },
+    {
+      "id": "screen",
+      "name": "The one screen",
+      "durationSeconds": 30,
+      "illustrative": true,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "A number that looks fine. Seven out of ten.",
+          "onScreen": "Fine. 7/10.",
+          "caption": "A number that looks fine. 7/10."
+        },
+        {
+          "at": 5,
+          "voiceover": "The follow-up finds what fine actually meant.",
+          "onScreen": "What does fine mean?",
+          "caption": "What does “fine” actually mean?"
+        },
+        {
+          "at": 10,
+          "voiceover": "The receipt — exact quote, who said it, when, tagged.",
+          "onScreen": "Evidence receipt",
+          "caption": "Quote · who · when · CFO froze spend."
+        },
+        {
+          "at": 17,
+          "voiceover": "It doesn't just flag the risk. It tells you the move.",
+          "onScreen": "Next best action",
+          "caption": "Loop in the exec sponsor before renewal."
+        },
+        {
+          "at": 23,
+          "voiceover": "That pattern hits thirteen other accounts. A driver — not an anecdote.",
+          "onScreen": "→ 13 accounts",
+          "caption": "One line → matched across 13 accounts."
+        }
+      ]
+    },
+    {
+      "id": "land",
+      "name": "Land three things",
+      "durationSeconds": 8,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "The receipt. The move. The pattern. That's Account Signal.",
+          "onScreen": "Receipt · Move · Pattern",
+          "caption": "The receipt. The move. The pattern."
+        }
+      ]
+    },
+    {
+      "id": "ask",
+      "name": "The ask",
+      "durationSeconds": 12,
+      "beats": [
+        {
+          "at": 0,
+          "voiceover": "Pick two accounts you have some suspicions about. Thirty minutes.",
+          "onScreen": "2 accounts · 30 min",
+          "caption": "Pick 2 accounts you have suspicions about."
+        },
+        {
+          "at": 6,
+          "voiceover": "We'll show what the scoreboard missed — and what to do next. Before they hand you a seven on the way out.",
+          "onScreen": "Speak to an Advisor",
+          "caption": "What the scoreboard missed — and what to do next."
+        }
+      ]
+    }
+  ]
+}

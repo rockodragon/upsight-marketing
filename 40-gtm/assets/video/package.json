@@ -1,0 +1,9 @@
+{
+  "name": "upsight-video",
+  "private": true,
+  "scripts": {
+    "studio": "npm run studio --prefix never-start-at-zero/05-remotion",
+    "render": "npm run render --prefix never-start-at-zero/05-remotion",
+    "still": "npm run still --prefix never-start-at-zero/05-remotion"
+  }
+}

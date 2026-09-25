@@ -1,0 +1,60 @@
+{
+  "description": "Speaker clips for the talking-heads marquee — reusable 10s asset. Full cast scrolls in the bottom reel; theme/quote callouts rise out of the stream. Paths are relative to 04-assets/.",
+  "featured": [
+    {
+      "id": "v1",
+      "file": "video/v1.mov",
+      "kind": "video",
+      "speaker": "Speaker 1",
+      "theme": "Product requirements",
+      "quote": "A real customer moment, pulled straight from the source",
+      "audioStartSec": 0,
+      "objectPosition": "center 32%"
+    },
+    {
+      "id": "v2",
+      "file": "video/v2.mov",
+      "kind": "video",
+      "speaker": "Speaker 2",
+      "theme": "Willingness to pay",
+      "quote": "UpSight turns open-ended conversations into patterns",
+      "audioStartSec": 0
+    },
+    {
+      "id": "v3",
+      "file": "video/v3.mov",
+      "kind": "video",
+      "speaker": "Speaker 3",
+      "theme": "Customer objections",
+      "quote": "Every takeaway links back to an actual conversation",
+      "audioStartSec": 0
+    },
+    {
+      "id": "haley",
+      "file": "video/testimonial-haley.mp4",
+      "kind": "video",
+      "speaker": "Haley",
+      "theme": "Voice of customer",
+      "quote": "It surfaces what customers actually said — not what we assumed",
+      "audioStartSec": 0
+    },
+    {
+      "id": "rylie",
+      "file": "video/testimonial-rylie.mp4",
+      "kind": "video",
+      "speaker": "Rylie",
+      "theme": "Buying signal",
+      "quote": "You can see the buying intent come through in their own words",
+      "audioStartSec": 0
+    },
+    {
+      "id": "survey",
+      "file": "video/survey-qa-video-response.mp4",
+      "kind": "video",
+      "speaker": "Respondent",
+      "theme": "Survey response",
+      "quote": "Video answers give us context a form never could",
+      "audioStartSec": 0
+    }
+  ]
+}
