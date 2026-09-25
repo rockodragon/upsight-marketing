@@ -6,6 +6,17 @@
 > each fix affects. Estimated total: one working day.
 > **Do not** touch homepage copy or design. Metadata, schema, links and templates only.
 
+> **Implementation status (2026-09-25):** sections 1–7 and 9 are implemented on `epic-hq/UpSight`
+> branch `claude/seo-site-fixes-2026-09`, commit `4e4984c`, not yet merged or deployed. Verified in
+> the cloud session: biome clean on all 22 touched files, 12 new unit tests passing. The full
+> typecheck could not run cleanly there (the install needs Node ≥ 24 and a GitHub tarball the
+> proxy blocks), so run `pnpm run validate` locally before merging. Still open after merge:
+> §2a paste the five meta descriptions into the Payload CMS (the code fallback now derives one
+> from the first paragraph, so nothing is boilerplate meanwhile); §3 `sameAs` carries only the
+> LinkedIn URL already in the codebase and `og:image` reuses the logo PNG because no 1200×630
+> asset exists; §8 first-touch referrer capture is in code, the PostHog insight itself is a
+> dashboard task; §10 run after deploy, then request indexing for the three new URLs in GSC.
+
 ---
 
 ## 1. Sitemap (12 URLs affected)

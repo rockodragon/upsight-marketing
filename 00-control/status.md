@@ -5,6 +5,36 @@
 
 ---
 
+## 2026-09-25 (site) — SEO fixes and three pages built in the product repo
+
+**Shipped** (branch `claude/seo-site-fixes-2026-09` on `epic-hq/UpSight`, commit `4e4984c`; not merged)
+- Sitemap on the canonical https origin, with pricing/about/solutions/docs and the new pages
+  added, login removed, real `lastmod` for posts only.
+- `/blog/rss.xml` is a real feed; the blog loader no longer turns a 404 into a 500.
+- Homepage canonical + Open Graph + Organization/WebSite schema; titles and descriptions on
+  `/about` and `/sign-up`; landing titles under 60 chars; "Upsight" casing fixed in blog titles.
+- Blog template: description falls back to the first real paragraph, FAQ sections emit
+  `FAQPage` schema (new tested helper), author/publisher URLs, persona links under the CTA.
+- Three new pages with FAQ + breadcrumb schema: `/compare/upsight-vs-dovetail`, `/mcp-server`,
+  `/customer-call-analysis`, linked from the homepage, pricing, solutions, customer-discovery
+  and the MCP docs page.
+- First-touch referrer written into the existing UTM cookie on marketing pages, so PostHog's
+  `account_signed_up` carries `utm_medium=organic` for search traffic. Tested.
+
+**Stuck**
+- Could not run the repo's full typecheck: `pnpm install` needs Node ≥ 24 and fetches a GitHub
+  tarball the proxy blocks. Biome and the new unit tests ran clean via the installed packages.
+  Run `pnpm run validate` locally before merging.
+- No PR opened (not asked). Repo flow appears to be feature → `staging` → `main`.
+
+**Surfaced**
+- Two pre-existing biome errors on `main` (suppression comment not reaching a multi-line
+  JSON-LD script) in `customer-discovery.tsx` and `solutions.tsx`; fixed on the branch since
+  both files were already in the diff and the pre-commit hook would have rejected them.
+- The typecheck baseline file records 0 diagnostics as of 2026-08-03; the 119 seen here are
+  all missing `+types` modules and implicit-any cascades from the partial install, none in
+  touched files.
+
 ## 2026-09-25 (later) — GSC baseline read; three pages written; site-fixes spec
 
 **Shipped**

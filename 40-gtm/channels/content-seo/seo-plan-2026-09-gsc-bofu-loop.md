@@ -150,6 +150,8 @@ drops the CSV straight into Claude Code. Not before — see the workflow work fi
 ### Phase 2 — fix the ceiling (weeks 1–3, in the site repo, parallel to Phase 1)
 
 **Handoff-ready spec with exact copy, schema and link targets:** `site-fixes-spec-2026-09.md`.
+**Status 2026-09-25:** implemented on `epic-hq/UpSight` branch `claude/seo-site-fixes-2026-09` (commit
+`4e4984c`), awaiting review, merge and deploy. Phase 3 pages 1–3 are built on the same branch.
 Ship the defects list above, in that order. Concretely:
 
 - Sitemap: `https://` everywhere; add `/pricing`, `/about`, `/solutions`; drop `/login`
