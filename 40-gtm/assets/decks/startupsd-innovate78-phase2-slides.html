@@ -4,10 +4,6 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>StartupSD x Innovate78 - Phase 2 Intelligence Operations</title>
-	<script type="module">
-		import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
-		mermaid.initialize({ startOnLoad: true, theme: "base", securityLevel: "loose" });
-	</script>
 	<style>
 		:root {
 			--ink: #17212b;
@@ -258,17 +254,24 @@
 		}
 
 		.pipeline {
-			margin-top: 26px;
-			overflow: auto;
+			margin: 26px 0 0;
+			overflow-x: auto;
 			border: 1px solid var(--line);
 			border-radius: 8px;
 			background: #fff;
-			padding: 16px;
+			padding: 18px;
 		}
 
-		.mermaid {
-			min-width: 920px;
-			font-size: 14px;
+		.pipeline svg {
+			display: block;
+			width: 100%;
+			min-width: 900px;
+			height: auto;
+		}
+
+		.pipeline figcaption {
+			margin-top: 14px;
+			max-width: 900px;
 		}
 
 		.source-grid {
@@ -742,29 +745,89 @@
 			<div class="slide-inner">
 				<p class="kicker">Intelligence Pipeline</p>
 				<h2>Data to decisions</h2>
-				<div class="pipeline">
-					<pre class="mermaid">
-flowchart LR
-    A[Mailchimp lists] --> C[Data wrangling and normalization]
-    B[StartupSD spreadsheets and CRM exports] --> C
-    D[Innovate78 city partner records] --> C
-    E[College and university pipelines] --> C
-    F[Public web and secondary research] --> C
-    G[Super-connector conversations] --> H[Primary research and evidence capture]
-    I[Surveys, interviews, and intake forms] --> H
-    R[City and founder feedback] --> H
-    C --> J[Gap analysis and enrichment queue]
-    H --> J
-    J --> K[Relationship intelligence database]
-    K --> L[Segmented outreach and surveys]
-    L --> H
-    K --> M[Queryable ecosystem portal]
-    M --> N[Table view]
-    M --> O[Map view]
-    M --> P[AI chat with Claude or OpenAI]
-    P --> Q[Recommendations for city support, founder needs, and partner action]
-					</pre>
-				</div>
+				<figure class="pipeline">
+					<svg viewBox="0 0 1180 470" role="img" aria-label="How source data and field conversations become decisions: five existing sources are normalized, field research adds primary evidence, both feed a gap and enrichment queue into one relationship database, which drives the portal and its table, map and AI query views, and a feedback loop from outreach back into field research." xmlns="http://www.w3.org/2000/svg">
+						<defs>
+							<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+								<path d="M0 0 L10 5 L0 10 z" fill="currentColor" />
+							</marker>
+						</defs>
+						<g font-family="Inter, system-ui, sans-serif" font-size="13" fill="#17212b">
+
+							<text x="20" y="26" font-size="12" font-weight="800" fill="#4a5764" letter-spacing="0.06em">EXISTING SOURCES</text>
+							<g stroke="#8fa3b0" stroke-width="1.2" fill="#ffffff">
+								<rect x="20" y="40" width="196" height="34" rx="5"/>
+								<rect x="20" y="82" width="196" height="34" rx="5"/>
+								<rect x="20" y="124" width="196" height="34" rx="5"/>
+								<rect x="20" y="166" width="196" height="34" rx="5"/>
+								<rect x="20" y="208" width="196" height="34" rx="5"/>
+							</g>
+							<text x="32" y="62">Mailchimp audiences</text>
+							<text x="32" y="104">StartupSD lists and CRM</text>
+							<text x="32" y="146">City partner records</text>
+							<text x="32" y="188">Campus pipelines</text>
+							<text x="32" y="230">Public web research</text>
+
+							<text x="20" y="300" font-size="12" font-weight="800" fill="#4a5764" letter-spacing="0.06em">FIELD RESEARCH</text>
+							<rect x="20" y="314" width="196" height="120" rx="6" fill="#e9f4ef" stroke="#1d7a5f" stroke-width="1.8"/>
+							<text x="32" y="338" font-weight="760" fill="#12503f">Run the collection</text>
+							<text x="32" y="360" font-size="12" fill="#1c3b33">Surveys and interviews</text>
+							<text x="32" y="380" font-size="12" fill="#1c3b33">Super-connector calls</text>
+							<text x="32" y="400" font-size="12" fill="#1c3b33">Follow-up on non-responders</text>
+							<text x="32" y="422" font-size="12" font-weight="700" fill="#12503f">UpSight does this</text>
+
+							<g stroke="#5c6b78" stroke-width="1.4" fill="none" marker-end="url(#ar)" color="#5c6b78">
+								<path d="M216 57 C260 57 262 120 300 128"/>
+								<path d="M216 99 C258 99 262 124 300 134"/>
+								<path d="M216 141 L300 141"/>
+								<path d="M216 183 C258 183 262 158 300 150"/>
+								<path d="M216 225 C258 225 262 162 300 156"/>
+								<path d="M216 374 C258 374 268 330 300 322"/>
+							</g>
+
+							<rect x="300" y="108" width="172" height="66" rx="6" fill="#ffffff" stroke="#8fa3b0" stroke-width="1.4"/>
+							<text x="316" y="134" font-weight="720">Wrangling and</text>
+							<text x="316" y="154" font-weight="720">normalization</text>
+
+							<rect x="300" y="286" width="172" height="66" rx="6" fill="#ffffff" stroke="#8fa3b0" stroke-width="1.4"/>
+							<text x="316" y="312" font-weight="720">Evidence capture</text>
+							<text x="316" y="332" font-size="12" fill="#3f4d59">quote, source, date</text>
+
+							<g stroke="#5c6b78" stroke-width="1.4" fill="none" marker-end="url(#ar)" color="#5c6b78">
+								<path d="M472 141 C510 141 512 190 548 200"/>
+								<path d="M472 319 C510 319 512 246 548 236"/>
+							</g>
+
+							<rect x="548" y="184" width="180" height="68" rx="6" fill="#ffffff" stroke="#8fa3b0" stroke-width="1.4"/>
+							<text x="564" y="210" font-weight="720">Gap analysis and</text>
+							<text x="564" y="230" font-weight="720">enrichment queue</text>
+
+							<path d="M728 218 L800 218" stroke="#5c6b78" stroke-width="1.4" fill="none" marker-end="url(#ar)" color="#5c6b78"/>
+
+							<rect x="800" y="180" width="188" height="76" rx="6" fill="#eef6f4" stroke="#147b8a" stroke-width="2"/>
+							<text x="816" y="208" font-weight="800" fill="#0d5661">Relationship</text>
+							<text x="816" y="228" font-weight="800" fill="#0d5661">intelligence database</text>
+							<text x="816" y="246" font-size="12" fill="#15424a">every record carries its source</text>
+
+							<path d="M894 180 L894 132 L1012 132" stroke="#5c6b78" stroke-width="1.4" fill="none" marker-end="url(#ar)" color="#5c6b78"/>
+							<rect x="1012" y="44" width="148" height="176" rx="6" fill="#ffffff" stroke="#8fa3b0" stroke-width="1.4"/>
+							<text x="1026" y="70" font-weight="800">Portal</text>
+							<text x="1026" y="96" font-size="12.5">Table view</text>
+							<text x="1026" y="118" font-size="12.5">Map view</text>
+							<text x="1026" y="140" font-size="12.5">AI query</text>
+							<text x="1026" y="162" font-size="12.5">Filters and segments</text>
+							<text x="1026" y="192" font-size="12" font-weight="700" fill="#355f9f">Recommendations</text>
+							<text x="1026" y="209" font-size="12" font-weight="700" fill="#355f9f">for city programs</text>
+
+							<path d="M894 256 L894 300 L760 300" stroke="#ba7d18" stroke-width="1.6" fill="none" marker-end="url(#ar)" color="#ba7d18" stroke-dasharray="6 4"/>
+							<rect x="548" y="278" width="212" height="44" rx="6" fill="#fdf5e7" stroke="#ba7d18" stroke-width="1.4"/>
+							<text x="564" y="305" font-size="12.5" font-weight="720" fill="#6d4a08">Segmented outreach and surveys</text>
+							<path d="M548 300 L490 300 L490 374 L216 374" stroke="#ba7d18" stroke-width="1.6" fill="none" marker-end="url(#ar)" color="#ba7d18" stroke-dasharray="6 4"/>
+							<text x="300" y="366" font-size="12" font-weight="700" fill="#6d4a08">the loop: each round sharpens the next question</text>
+						</g>
+					</svg>
+					<figcaption class="caption">Five existing sources are cleaned and merged; field research adds primary evidence with a quote, a source and a date on every claim. Both feed one relationship database, which drives the portal. The dashed gold path is the feedback loop — what the portal reveals decides who gets contacted next. <strong>Source: UpSight process design, 2026-09. Illustrative of the proposed Phase 2 workflow, not a record of work performed.</strong></figcaption>
+				</figure>
 			</div>
 		</section>
 
