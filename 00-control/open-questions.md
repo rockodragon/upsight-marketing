@@ -7,6 +7,8 @@
 
 | Date opened | Q | Type | Owner | Status |
 |---|---|---|---|---|
+| 2026-09-25 | What does the regional collective cost, and what does a member get that a non-member does not? The EDC deck says terms are "set with its founding members" — nothing is modelled. | [bet] | Rick | open → decide before the second EDC signs |
+| 2026-09-25 | The collective is sold as opt-in, but the data-rights doc makes the de-identified cross-corridor benchmark (Layer 5) part of *every* engagement. Is opt-in about sharing named-geography findings with peer members only, with the de-identified benchmark still default? | [tactical] | Rick | open → must be settled before the opt-in clause is written |
 | 2026-09-23 | How many business conversations can Rick actually complete per working day on a warm list? Modelled at 5. **If it is 3, every margin roughly halves and Offers A and B become loss-making.** | [tactical] | Rick | **the number that decides the pricing model** → the corridor pilot measures it directly |
 | 2026-09-23 | Where are the Startup San Diego / Innovate 78 pricing numbers? Not in this repo — grepped. | [tactical] | Rick | open → Rick has them; they beat researched anchors |
 | 2026-09-23 | Will a grant-funded buyer accept a service-framed SOW (monitoring and evaluation hours) when the thing being delivered is obviously a platform? | [bet] | Rick | open → this is what makes the money spendable; test in the first real quote |

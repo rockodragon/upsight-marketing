@@ -5,6 +5,23 @@
 
 ---
 
+## 2026-09-25 — EDC-direct deck: enroll individually, opt in to the regional collective
+
+**Shipped**
+- `40-gtm/assets/decks/edc-direct-slides.html` — 11-slide deck aimed at individual EDCs, city
+  economic development offices and chambers. Order keeps the wedge first: the report problem, who
+  does the work, how it works, a mock filled report with evidence links, the turnkey split, then
+  year two / early warning, then the three offers with prices, then the opt-in collective.
+  Self-contained; readable at phone width.
+- Fixed a phone-width horizontal scroll in both decks (grid track sizing on `.slide`).
+
+**Decided**
+- Pursue EDCs directly rather than waiting on Startup San Diego.
+
+**Surfaced**
+- The collective has no price and no defined member benefit yet; and "opt-in" sits awkwardly with
+  the data-rights doc's default cross-corridor benchmark. Both logged in open-questions.
+
 ## 2026-09-23 (later) — Econ-dev pricing: three offers, and the finding that grant money cannot buy software
 
 **Shipped**

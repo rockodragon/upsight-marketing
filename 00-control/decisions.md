@@ -5,6 +5,13 @@
 
 ---
 
+## 2026-09-25 - Sell to EDCs directly; each enrolls alone and can opt in to a regional collective
+**Why:** Startup San Diego is not in a hurry, and the Innovate78 deal makes UpSight a
+subcontractor waiting on someone else's timeline. Selling direct puts each EDC or city office on
+its own signature-sized project (Offers A/B/C). The collective is an opt-in layer on top — shared
+regional comparison and joint funding bids — so no organization has to wait for another to start.
+Deck: `40-gtm/assets/decks/edc-direct-slides.html`.
+
 ## 2026-09-23 - Econ-dev offers are priced to clear a signature, and sold as a service not software
 **Why:** Two findings decided this. First, across every major grant program the administrative
 bucket is 10-20% and frequently excludes software by name — CalOSBA TAP caps technology tools at
