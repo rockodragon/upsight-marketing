@@ -112,22 +112,27 @@ rebuilding before Rick spends another week on it.
 > **He sits on Startup San Diego's board and helped build Innovate78.** Say nothing against SSD
 > or Innovate78.
 
-> **Subject:** Your read on civic applications
+> **Subject:** Your read on arts, culture and local economies
 
 > Matt,
 >
 > Rick Moy — we've crossed paths a few times around StartupSD.
 >
-> I've been doing some applied work with Startup San Diego, surveying the ecosystem: who's
-> building what, who needs help, and who connects people. It has me thinking about where the same
-> approach could be useful elsewhere in the civic space.
+> I've been doing applied survey work in the creative economy — with The Table's creative
+> exchange, capturing how artists connect back into local businesses and venues — alongside some
+> ecosystem surveying with Startup San Diego. It has me thinking about how arts and culture show up
+> (or don't) in the way we measure local economies, and where the same approach could help in the
+> civic space.
 >
 > You've seen economic development from the regional side, a city, and now East County, so I'd
-> value your read. Would you have 20 minutes in the next few weeks? I'm mostly curious what EDCs
-> wish they knew about their businesses and don't.
+> value your read. Would you have 20 minutes in the next few weeks?
 >
 > Rick Moy
 > UpSight · getupsight.com
+
+**Why this framing (Rick, 2026-09-25):** leading with arts and culture gives the conversation its
+own reason to exist, separate from the Innovate78 / SR-78 work. **Check with Haley before naming
+The Table**; if not cleared, say "with an arts nonprofit's creative exchange" instead.
 
 **On the call:** it is an insight conversation — keep it one. Ask, listen, take notes. The three
 questions above still work as follow-ups if reporting comes up on its own. Offer help only if he
