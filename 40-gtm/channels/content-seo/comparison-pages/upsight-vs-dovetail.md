@@ -1,133 +1,211 @@
 ---
-title: "UpSight vs Dovetail: Why Small Teams Need a Different Approach"
+title: "UpSight vs Dovetail: Which Fits a Small Team?"
+title_tag: "UpSight vs Dovetail: Which Fits a Small Team? (2026)"
 slug: /compare/upsight-vs-dovetail
-meta_description: "Dovetail is built for research teams. UpSight is built for the rest of us. Compare features, pricing, and approach to find the right customer intelligence tool for small teams."
-target_keywords: dovetail alternative, upsight vs dovetail, dovetail alternative for small teams
-status: draft
-week: 3
+canonical_url: "https://getupsight.com/compare/upsight-vs-dovetail"
+meta_description: "Dovetail sells Free or Enterprise. UpSight publishes $0, $29 and $39 plans, links every finding to its moment, and runs surveys too. An honest comparison for small teams."
+target_keywords: dovetail alternative, upsight vs dovetail, dovetail alternative for small teams, dovetail pricing, dovetail vs
+status: ready-to-build
+written: 2026-02 (draft) · rewritten 2026-09-25
+author: "Rick Moy"
+why_this_page: >
+  "Dovetail alternative" is keyword #2 in the Feb 2026 keyword map and the query family
+  Looppanel, Condens and Marvin all rank for. This is the first bottom-of-funnel page the site
+  will have. The Feb draft quoted per-seat Dovetail prices that no longer exist on their site.
+facts_source: >
+  Dovetail facts are from dovetail.com and dovetail.com/pricing as read on 2026-09-25 and are
+  marked "as of" in the copy. UpSight facts are from getupsight.com/pricing and the homepage on
+  the same date. Re-check both before publishing and add a visible "last checked" date on the page.
+internal_links_in:
+  - from: /customer-discovery (the "Built for builders. Not just researchers." comparison block) → anchor "UpSight vs Dovetail"
+  - from: /blog/what-is-customer-discovery-a-practical-guide-for-2026 (the tools section, where Dovetail is named) → anchor "how UpSight compares with Dovetail"
+  - from: /pricing (below the plan cards) → anchor "compared with Dovetail"
+internal_links_out: /pricing, /sign-up, /customer-call-analysis, /mcp-server, /customer-discovery, /customer-discovery-for-consultants
 ---
 
-# UpSight vs Dovetail: Why Small Teams Need a Different Approach
+# UpSight vs Dovetail: which one fits a small team?
 
-You have been looking at Dovetail. We get it — they are the name that comes up first when you search for a research repository, and for good reason. Dovetail has spent years building a powerful platform for organizing qualitative research at scale.
+**Dovetail and UpSight both call themselves customer intelligence platforms. Dovetail is built for
+enterprise research and product organizations and sells two plans, Free and Enterprise. UpSight is
+built for founders, product leads and consultants at teams of one to ten, publishes its prices, and
+links every finding to the second it was said.** This page is an honest comparison so you can pick
+the one that fits how you actually work.
 
-But here is the thing: if you are a solo consultant, an early-stage founder, or a PM who wears the research hat on top of five other hats, Dovetail might be solving a problem you do not actually have.
+*Dovetail details last checked 2026-09-25.*
 
-You do not need a research repository. You need to talk to customers, understand what they are telling you, and make better decisions — fast. That is a fundamentally different job.
-
-This page is an honest comparison to help you figure out which tool fits the way you actually work.
-
----
-
-## The Core Difference: Repository vs. Intelligence
-
-Dovetail is a **research repository**. It is designed to store, organize, and share qualitative data across a team of researchers. The workflow assumes someone is running structured studies, tagging transcripts, building taxonomies, and presenting findings to stakeholders.
-
-UpSight is a **customer intelligence platform**. It is designed to turn conversations into evidence you can trace, patterns you can trust, and decisions you can defend. The workflow assumes you are the one having the conversations *and* making the decisions.
-
-That distinction shapes everything — from how the products handle data, to how they surface insights, to who they are built for.
+[Analyze 3 old calls with UpSight — free](/sign-up) · [UpSight pricing](/pricing)
 
 ---
 
-## Feature Comparison
+## What is the core difference between Dovetail and UpSight?
 
-| Capability | Dovetail | UpSight |
+**Dovetail** organizes customer feedback around projects and channels. Feedback flows in from sales
+calls, support tickets, surveys and research sessions through 38 native integrations plus an API,
+MCP and CLI tools. AI features (AI Projects, AI Channels, AI Dashboards, AI Chat, AI Docs, AI Agents
+and the new Digital Twins) analyze it, and the paid tier is Enterprise with custom pricing,
+redaction and compliance controls. Its named customers include Atlassian, Canva, Zapier, AWS, Okta
+and Qantas.
+
+**UpSight** organizes customer evidence around people and decisions. You upload the calls,
+interviews and surveys you already have. Analytical lenses read each one several ways (sales,
+discovery, jobs-to-be-done, decision), every finding is pinned to the timestamp in the recording,
+and each person keeps a profile that grows with every conversation. Plans are $0, $29 a month, and
+$39 per user a month, published on the site.
+
+**In short:** Dovetail is the enterprise system of record for customer feedback. UpSight is the
+evidence engine for a small team that has to decide something this week.
+
+## How do the features compare?
+
+| Capability | Dovetail (as of 2026-09-25) | UpSight |
 |---|---|---|
-| **Transcript storage & search** | Mature full-text search across a large repository | Full-text search with source-linked playback |
-| **Tagging & taxonomy** | Deep, team-managed tag hierarchies | Automated theme clustering from evidence |
-| **Evidence traceability** | Tags link to highlights | Every insight traces to a specific timestamped moment ("receipts") |
-| **Structured analysis frameworks** | Manual coding and affinity mapping | Conversation lenses — apply analytical frameworks automatically |
-| **AI features** | AI Agents (beta), AI summaries | AI-generated evidence, themes, insights, and personas from day one |
-| **People & contact intelligence** | Basic participant tracking | Full people profiles with ICP scoring, persona assignment, and cross-conversation history |
-| **Surveys** | Not built in (requires integration) | Built-in Ask links — create and send surveys without leaving the platform |
-| **Team collaboration** | Enterprise-grade sharing, permissions, and workspaces | Lightweight collaboration for small teams |
-| **Integrations ecosystem** | Extensive — Slack, Jira, Confluence, Figma, and more | Growing — focused on the tools small teams actually use |
-| **Research ops tooling** | Participant recruitment, scheduling, incentives | Not a focus — assumes you are already talking to people |
-| **Onboarding complexity** | Requires setup: taxonomies, workspaces, team permissions | Upload a conversation, get insights in minutes |
+| **Positioning** | "Customer Intelligence Platform. Build with facts, not vibes." | Customer intelligence with receipts. "Your last 100 calls already answered this." |
+| **Organizing unit** | Projects and channels | People and decisions, with projects as containers |
+| **Bringing data in** | 38 native integrations, API, MCP, CLI; AI Channels (beta) | Upload audio, video or text from any tool; live recording in the desktop app; built-in surveys and smart forms |
+| **Analysis** | AI Projects, AI Chat, AI Dashboards (beta), AI Docs, AI Agents, Digital Twins (new) | Lenses (BANT, discovery, JTBD, decision, SPICED, churn risk, consulting/SOW, custom on Team); themes with evidence counts; personas and ICP scoring |
+| **Provenance** | Highlights and tags on transcripts | Every claim links to the timestamped moment in video, audio or transcript; if the answer isn't in the call, UpSight says so |
+| **Surveys** | Imported as a feedback channel | Created, sent and analyzed in the same workspace, into the same evidence base |
+| **People records** | Participant data within research | A persistent profile per person and organization, enriched by each conversation |
+| **AI assistant access** | MCP listed among integrations | MCP server on every plan: read-only on Free, read and write on Pro and Team. [Details](/mcp-server) |
+| **Free plan** | One channel, one project, chat on that project, basic AI summaries, one dashboard, no agents | One project, five AI analyses a month, unlimited recording and transcription, receipts, cross-interview themes, read-only MCP |
+| **Paid plans** | Enterprise, custom pricing, invoiced net-30 | Pro $29 a month ($23 annual), single user. Team $39 per user a month ($31 annual), two-seat minimum, free viewer seats |
+| **Compliance** | Redaction, compliance controls, dedicated support on Enterprise | SSO and audit log on Team |
+| **Proof points cited** | 2.3x ROI, 30 hours saved per user per week, 66% faster shipping (Forrester, per dovetail.com) | Every claim on the site links to a real Decision File built from recorded calls at thedecisionfiles.com |
+
+## What does Dovetail cost, and what does UpSight cost?
+
+As of 2026-09-25 Dovetail's pricing page lists two plans: **Free**, at $0 with one channel, one
+project, chat on that project, basic AI summaries and one dashboard; and **Enterprise**, with custom
+pricing, everything unlimited, redaction, compliance controls and dedicated support. No plan sits
+between them and no per-seat price is published. Getting a number means a sales conversation.
+
+UpSight publishes three: **Free** at $0 forever, **Pro** at $29 a month for one user with unlimited
+AI analysis and the full MCP server, and **Team** at $39 per user a month with a two-seat minimum,
+where your CEO, sales lead and designers view evidence without paying for a seat. A single Pro user
+pays $348 a year. Current figures are on the [pricing page](/pricing).
+
+If you can fit inside Dovetail's Free plan, it is a genuinely capable product at no cost. The
+question is what happens the month you need a second project, a second channel, or an agent.
+
+## Who should choose Dovetail?
+
+Choose Dovetail if:
+
+- You have a **research or insights team of five or more** that needs shared taxonomies, governance
+  and a single system of record across the company.
+- **Enterprise procurement is normal for you**: SSO, redaction, compliance controls, net-30 invoicing
+  and a dedicated success contact are requirements, not nice-to-haves.
+- **Your feedback already lives in many systems** and the 38 native integrations are the point.
+- You are **standardizing an organization** on one customer-intelligence platform, and the vendor's
+  customer list (Atlassian, Canva, Zapier, AWS, Okta, Qantas) is part of the decision.
+
+Dovetail has earned its position. If that paragraph describes you, it is probably the right choice.
+
+## Who should choose UpSight?
+
+Choose UpSight if:
+
+- You are a **founder, product lead or consultant at a team of one to ten** who talks to customers
+  weekly and is still deciding from memory.
+- You need **the answer with the receipt**: when someone asks "where did that come from?" you want to
+  click and play the moment, not point at a tag.
+- You **already have the recordings**. UpSight's starting point is three old calls, not a new
+  research program.
+- You want **surveys and conversations in one evidence base** so what people say in interviews can be
+  checked against what they report in a form.
+- You want your **AI assistant to query your customer evidence** directly. The MCP server ships on
+  every plan.
+- You want a **published price** you can decide on today without a sales call.
+
+## Looking for a Dovetail alternative?
+
+Most people searching for a Dovetail alternative fall into one of three groups:
+
+1. **Priced out of the paid path.** Dovetail's only paid plan is Enterprise. If you need more than
+   one project or channel and don't have an enterprise budget, UpSight Pro at $29 a month is the
+   direct comparison.
+2. **Don't need a repository.** You aren't running a research program. You have calls and need
+   decisions. UpSight's lenses and receipts are built for that job. See
+   [customer call analysis](/customer-call-analysis).
+3. **Consultants.** You need eight stakeholder interviews to become a defensible recommendation by
+   Friday, with evidence a client can challenge. See
+   [customer discovery for consultants](/customer-discovery-for-consultants).
+
+Other tools people compare with Dovetail include Looppanel, Condens, Notably and Marvin. Each is a
+research repository first. If a repository is what you need, compare those. If a decision is what
+you need, try UpSight on three calls and check the receipts.
+
+## The verdict
+
+These are different tools for different contexts. **Dovetail** is the enterprise customer
+intelligence platform: mature, integrated, governed, priced by conversation. **UpSight** is customer
+intelligence for a small team that has to decide something: lenses, receipts, people profiles,
+surveys, an MCP server, and a price on the website.
+
+The question is not which has more features. It is which one fits the way you actually work, and
+what you can afford to find out.
+
+[Analyze 3 old calls — free](/sign-up) · [Bring your calls to a working session](/sign-up)
 
 ---
 
-## Who Should Use Dovetail
+## Frequently asked questions
 
-Dovetail is genuinely excellent for teams that fit its model. Choose Dovetail if:
+### Is UpSight a Dovetail alternative?
+Yes, for small teams. Both are customer intelligence platforms. Dovetail is built for enterprise
+research and product organizations with a Free plan and custom-priced Enterprise plan. UpSight is
+built for teams of one to ten with published plans at $0, $29 a month and $39 per user a month.
 
-- **You have a dedicated research team** of five or more people who need shared taxonomies and consistent tagging practices.
-- **You run formal research programs** with structured studies, recruitment pipelines, and defined methodologies.
-- **Enterprise governance matters** — you need granular permissions, SSO, audit trails, and compliance features.
-- **You have mature research operations** and the challenge is organizing and socializing findings across a large organization, not generating the insights in the first place.
-- **Your integration ecosystem is critical** — you need tight connections to Confluence, Jira, Figma, and other enterprise tools your team already depends on.
+### How much does Dovetail cost?
+As of 2026-09-25 Dovetail lists a Free plan at $0 (one channel, one project, chat, basic AI
+summaries, one dashboard) and an Enterprise plan with custom pricing. No per-seat price is published.
 
-Dovetail has earned its position as the market leader in research repositories. If the paragraph above describes your situation, it is probably the right choice.
+### How much does UpSight cost?
+Free forever for one project with five AI analyses a month and unlimited transcription. Pro is $29
+a month for a single user. Team is $39 per user a month with a two-seat minimum, and stakeholders
+view free. Annual billing is $23 and $31 respectively.
 
----
+### Does Dovetail have an MCP server?
+Dovetail lists MCP among its integrations alongside its API and CLI tools. UpSight's MCP server is
+included on every plan, read-only on Free and read-write on Pro and Team.
 
-## Who Should Use UpSight
+### Can UpSight run surveys, or only import them?
+UpSight creates, sends and analyzes surveys and smart forms in the same workspace as your calls, so
+survey responses land in the same evidence base and the same person profiles.
 
-UpSight is built for people who do not have the luxury of a dedicated research team. Choose UpSight if:
+### What does "receipts" mean?
+Every finding in UpSight links to the moment it was said in the video, audio or transcript. Click
+it and the recording opens at that second. If the answer isn't in the conversation, UpSight says so
+instead of guessing.
 
-- **You are a solo practitioner** — a consultant, freelance researcher, or one-person insights function — who needs to move from conversation to recommendation without a support team.
-- **You are a founder or early-stage PM** who talks to customers regularly but does not have time to manually code transcripts and build tag hierarchies.
-- **You care about evidence traceability** — you want every recommendation you make to link back to a specific customer moment, not a summary of a summary.
-- **You need to go from raw conversation to actionable insight in hours, not weeks.** You cannot afford a multi-day setup process before you start getting value.
-- **You want surveys and conversations in one place** — you send a quick survey to validate what you heard in an interview, and the evidence from both flows into the same intelligence layer.
-- **You are building conviction about who your customer is** — you need ICP scoring, persona generation, and people intelligence that updates as you learn more.
-
----
-
-## Key Differentiators
-
-### Evidence Traceability ("Receipts")
-
-This is the heart of UpSight. Every insight, every theme, every persona assignment traces back to a specific moment in a specific conversation. When your CEO asks "where did this recommendation come from?" you do not point to a tag cloud — you play the exact moment a customer said it.
-
-Dovetail connects highlights to tags. UpSight connects decisions to proof.
-
-### Conversation Lenses
-
-Instead of requiring you to build a tagging taxonomy before you start analyzing, UpSight applies structured analytical frameworks — conversation lenses — to your data automatically. Customer discovery lens. Sales qualification lens. Product feedback lens. Each one extracts the specific facets that matter for that type of analysis, so you get structured output without the manual setup.
-
-### Built-In Surveys (Ask Links)
-
-Most research tools treat surveys as someone else's problem. UpSight includes Ask links — lightweight surveys you can create and share directly from the platform. The responses feed into the same evidence layer as your conversation data, so you can triangulate what people say in interviews with what they report in surveys.
-
-### People Intelligence
-
-UpSight does not just track participants — it builds intelligence about them. Cross-conversation history, ICP scoring that updates as you learn more, persona assignment grounded in evidence, organization mapping. Your understanding of each person deepens with every interaction.
+### Can I switch from Dovetail to UpSight?
+Export your recordings or transcripts from Dovetail and upload them. UpSight accepts MP3, WAV, M4A,
+MP4, MOV, TXT, PDF and DOCX. Start with the three conversations your team argues about most.
 
 ---
 
-## Pricing Comparison
-
-| | Dovetail | UpSight |
-|---|---|---|
-| **Entry price** | ~$29/user/month (billed annually) | Free tier available |
-| **Mid-tier** | ~$49-79/user/month | Transparent per-seat pricing for small teams |
-| **Enterprise** | Custom pricing | Not the focus — built for small teams |
-| **Per-seat scaling** | Costs increase significantly as team grows | Priced for teams of 1-10 |
-| **Free trial** | 7-day trial | Free to start, upgrade when ready |
-
-Dovetail's pricing reflects its enterprise positioning. At $29/user/month as a starting point, a team of five is paying $1,740/year before reaching the tiers where the most powerful features unlock. That is reasonable for a funded research operations team. It is harder to justify when you are a solo consultant or an early-stage founder watching every dollar.
-
-UpSight is priced for people who need customer intelligence without an enterprise budget.
+*Rick Moy is the founder of UpSight. He built it because customer truth kept getting lost after
+teams had done the hard part of talking to customers.* [About](/about)
 
 ---
 
-## The Verdict
+## Structured data (paste into the page template)
 
-This is not a "one is better than the other" situation. These are different tools built for different contexts.
+`FAQPage` questions must match the H3 text above exactly. Add `BreadcrumbList` per the site's
+existing pattern on `/customer-discovery`.
 
-**Choose Dovetail** if you are building or scaling a research practice inside a mid-size or enterprise organization. You will benefit from its mature taxonomy tools, extensive integrations, and team collaboration features. It is the industry standard for research repositories for a reason.
-
-**Choose UpSight** if you are a small team or solo practitioner who needs to turn customer conversations into evidence-backed decisions without the overhead of enterprise research tooling. You will benefit from its intelligence-first approach, evidence traceability, conversation lenses, and the speed of going from conversation to conviction.
-
-The question is not "which tool has more features?" It is "which tool fits the way I actually work?"
-
----
-
-## Try UpSight Free
-
-If you have read this far, you are probably someone who talks to customers and wants to do more with what you learn. UpSight is free to start — upload a conversation and see your first insights in minutes, not days.
-
-**[Get started with UpSight](https://upsight.ai)** — no credit card, no taxonomy setup, no 45-minute onboarding call. Just your conversations, turned into intelligence you can act on.
-
-*Get your customers. Build conviction.*
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Is UpSight a Dovetail alternative?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, for small teams. Dovetail is built for enterprise research and product organizations with a Free plan and custom-priced Enterprise plan. UpSight is built for teams of one to ten with published plans at $0, $29 a month and $39 per user a month."}},
+    {"@type": "Question", "name": "How much does Dovetail cost?", "acceptedAnswer": {"@type": "Answer", "text": "As of 2026-09-25 Dovetail lists a Free plan at $0 (one channel, one project, chat, basic AI summaries, one dashboard) and an Enterprise plan with custom pricing. No per-seat price is published."}},
+    {"@type": "Question", "name": "How much does UpSight cost?", "acceptedAnswer": {"@type": "Answer", "text": "Free forever for one project with five AI analyses a month. Pro is $29 a month for a single user. Team is $39 per user a month with a two-seat minimum, and stakeholders view free."}},
+    {"@type": "Question", "name": "Does Dovetail have an MCP server?", "acceptedAnswer": {"@type": "Answer", "text": "Dovetail lists MCP among its integrations alongside its API and CLI tools. UpSight's MCP server is included on every plan, read-only on Free and read-write on Pro and Team."}},
+    {"@type": "Question", "name": "Can UpSight run surveys, or only import them?", "acceptedAnswer": {"@type": "Answer", "text": "UpSight creates, sends and analyzes surveys and smart forms in the same workspace as your calls, so responses land in the same evidence base and person profiles."}},
+    {"@type": "Question", "name": "What does \"receipts\" mean?", "acceptedAnswer": {"@type": "Answer", "text": "Every finding links to the moment it was said in the video, audio or transcript. If the answer isn't in the conversation, UpSight says so instead of guessing."}},
+    {"@type": "Question", "name": "Can I switch from Dovetail to UpSight?", "acceptedAnswer": {"@type": "Answer", "text": "Export your recordings or transcripts and upload them. UpSight accepts MP3, WAV, M4A, MP4, MOV, TXT, PDF and DOCX."}}
+  ]
+}
+```

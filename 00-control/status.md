@@ -5,6 +5,37 @@
 
 ---
 
+## 2026-09-25 (later) — GSC baseline read; three pages written; site-fixes spec
+
+**Shipped**
+- Read Rick's Search Console export (28 days to 2026-09-22): 11 clicks, 383 impressions, 12
+  visible queries, **zero non-branded queries in positions 4–20.** Baseline recorded in
+  `40-gtm/experiments/2026-09-gsc-bofu-loop.md`; the experiment's *reorder* rule fires, so new
+  bottom-of-funnel pages come before any optimization loop.
+- Ready-to-build copy, each with title tag, meta, FAQ and JSON-LD:
+  `comparison-pages/upsight-vs-dovetail.md` (rewritten; Feb draft's per-seat Dovetail prices no
+  longer exist, Dovetail now sells Free or Enterprise only), `landing-pages/mcp-server.md`,
+  `landing-pages/customer-call-analysis.md`.
+- `40-gtm/channels/content-seo/site-fixes-spec-2026-09.md` — the Phase 2 handoff for the
+  Insights repo: sitemap, blog template metas + FAQPage schema, homepage head + Organization
+  schema, missing titles, internal-link table, PostHog organic attribution, verification checks.
+- Plan updated: Phase 3 order is now Dovetail comparison → MCP page → call-analysis page.
+
+**Stuck**
+- Attaching `epic-hq/UpSight` to this cloud session was denied by the permission layer, so no
+  site changes shipped from here. Either grant the repo to the session or run the spec locally.
+- Four of five blog meta descriptions were written from titles only; the body-extraction step
+  was blocked. Check them against the posts before shipping.
+
+**Surfaced**
+- `/docs/chatbots-mcp` sits at position 3.3 on hidden queries. The MCP angle is the one place
+  the site already ranks for a buying intent, and it had no landing page.
+- The only non-branded demand the site gets is people trying to *create surveys* (46 impressions
+  at positions 65–98). That is a product feature, not the positioning. Worth knowing, not worth
+  chasing.
+- Dovetail lists MCP among its own integrations. The comparison page says so; do not claim MCP
+  as exclusive.
+
 ## 2026-09-25 — SEO plan: the GSC-first bottom-of-funnel loop
 
 **Shipped**

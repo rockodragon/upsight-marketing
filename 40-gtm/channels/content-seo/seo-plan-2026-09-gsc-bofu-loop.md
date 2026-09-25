@@ -1,6 +1,6 @@
 # SEO plan — the GSC-first bottom-of-funnel loop
 
-> **Status:** proposed 2026-09-25 · **Owner:** Rick · **Channel:** content-seo
+> **Status:** active 2026-09-25 · Phase 0 done (baseline in the experiment file: 11 clicks, 383 impressions, **zero** BOFU queries at 4–20, so Phase 3 leads) · **Owner:** Rick · **Channel:** content-seo
 > **Method source:** Rob Hoffman, X post of 2026-09-24 — https://x.com/robhoffman_/status/2103200798612373982
 > **Companions:** `20-research/market-intel/Keyword-Research/gtm-keyword-analysis.md` (Feb 2026 keyword map) ·
 > `guides/seo-aeo-guide.md` (per-page on-page + schema standard) ·
@@ -149,6 +149,7 @@ drops the CSV straight into Claude Code. Not before — see the workflow work fi
 
 ### Phase 2 — fix the ceiling (weeks 1–3, in the site repo, parallel to Phase 1)
 
+**Handoff-ready spec with exact copy, schema and link targets:** `site-fixes-spec-2026-09.md`.
 Ship the defects list above, in that order. Concretely:
 
 - Sitemap: `https://` everywhere; add `/pricing`, `/about`, `/solutions`; drop `/login`
@@ -175,11 +176,11 @@ Build these, in this order, and feed each into the loop 28 days after it ships:
 
 | Order | Page | Why now | Starting point |
 |---|---|---|---|
-| 1 | `/compare/upsight-vs-dovetail` | Draft is written; "Dovetail alternative" is keyword #2 in the Feb map; competitors (Looppanel, Condens, Marvin) all rank for it | `comparison-pages/upsight-vs-dovetail.md` |
-| 2 | `/alternative-to-dovetail` or fold into #1 with a `/dovetail-alternative` H2 + FAQ | Distinct query family from "vs" | Same draft |
-| 3 | A call-analysis page matching the live homepage — working title *"Customer call analysis software"* | The homepage's actual promise has no landing page and no keyword research. Validate the query family in Phase 0's export before writing | New; positioning in `30-strategy/messaging-house-customer-intelligence.md` |
+| 1 | `/compare/upsight-vs-dovetail` | "Dovetail alternative" is keyword #2 in the Feb map; Looppanel, Condens and Marvin all rank for it; Dovetail's paid path is now Enterprise-only, which sharpens the small-team angle | **Copy ready:** `comparison-pages/upsight-vs-dovetail.md` (rewritten 2026-09-25 with verified pricing) |
+| 2 | `/mcp-server` | GSC (28 days to 2026-09-22) already has `/docs/chatbots-mcp` at position 3.3; "software with an MCP connection" is a buying query with almost no competition in this category. Not at `/mcp`, which is the live endpoint | **Copy ready:** `landing-pages/mcp-server.md` |
+| 3 | `/customer-call-analysis` | The homepage's actual promise ("your last 100 calls already answered this") has no landing page and no keyword research. The site's only non-branded demand today is survey-creation queries, which is not what we sell | **Copy ready:** `landing-pages/customer-call-analysis.md`; validate the query family against the next GSC export |
 | 4 | `/compare/upsight-vs-day-ai` | Already planned in `40-gtm/experiments/2026-06-day-ai-head-to-head.md` | That experiment |
-| 5 | "Best customer research tools 2026" round-up | Commercial intent, we can be honest about where Dovetail wins | Keyword map row 16 |
+| 5 | "Best customer research tools 2026" round-up | Commercial intent; we can be honest about where Dovetail wins | Keyword map row 16 |
 
 Rule for every new page: it targets one query family, carries `FAQPage` schema, links to `/pricing`
 and `/sign-up` with the query as anchor text, and gets one contextual link *from* an existing page
@@ -300,8 +301,12 @@ for whoever opens the next local session; delete this block once they exist.
   homepage canonical + og + Organization/WebSite schema; titles on /about and /sign-up. (Phase 2)
 - `domain:gtm gtm:content p1` — Blog template: hand-written meta descriptions for all five posts
   (pull from vault frontmatter); FAQPage schema from FAQ sections; author Person with URL. (Phase 2)
-- `domain:gtm gtm:content p1` — Ship `/compare/upsight-vs-dovetail` from the vault draft with FAQ,
-  schema, and links from `/customer-discovery` and the "what is customer discovery" post. (Phase 3 #1)
+- `domain:gtm gtm:content p1` — Ship `/compare/upsight-vs-dovetail` from `comparison-pages/upsight-vs-dovetail.md`
+  (copy, FAQ, schema and inbound links are in the file). (Phase 3 #1)
+- `domain:gtm gtm:content p1` — Ship `/mcp-server` from `landing-pages/mcp-server.md`; link from `/pricing`,
+  `/docs/chatbots-mcp` and the homepage. (Phase 3 #2)
+- `domain:gtm gtm:content p1` — Ship `/customer-call-analysis` from `landing-pages/customer-call-analysis.md`;
+  link from the homepage and `/solutions`. (Phase 3 #3)
 - `domain:gtm gtm:content p2` — Landing-page titles to ≤ 60 chars; contextual internal links
   landing ↔ blog; fix `/blog/rss.xml` 500. (Phase 2)
 - `domain:gtm gtm:content p2` — Keyword refresh for the calls/lenses/receipts positioning; decide
