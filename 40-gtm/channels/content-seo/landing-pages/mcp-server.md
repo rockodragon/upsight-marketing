@@ -29,7 +29,7 @@ internal_links_out: /pricing, /sign-up, /docs/chatbots-mcp, /customer-call-analy
 recorded call, interview and survey your team has, with every answer pinned to the moment
 someone said it.** Add one URL, sign in with UpSight, and ask.
 
-[Analyze 3 old calls — free](/sign-up) · [Set-up guide](/docs/chatbots-mcp)
+[Analyze your evidence — free](/sign-up) · [Set-up guide](/docs/chatbots-mcp)
 
 ---
 
@@ -121,7 +121,7 @@ Current details, including annual pricing, are on the [pricing page](/pricing).
 2. **Connect your assistant.** One URL, one OAuth click.
 3. **Ask the question your team is arguing about.** Get the answer with the receipt.
 
-[Analyze 3 old calls — free](/sign-up) · [See pricing](/pricing)
+[Analyze your evidence — free](/sign-up) · [See pricing](/pricing)
 
 ---
 

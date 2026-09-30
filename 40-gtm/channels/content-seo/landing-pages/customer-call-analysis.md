@@ -33,7 +33,7 @@ each one through several analytical lenses at once, then pins every finding to t
 was said.** Sales reads for budget and timing. Product reads for problems and workarounds. Marketing
 reads for the job the customer hired you for. Same call, four answers, each with a receipt.
 
-[Analyze 3 old calls — free](/sign-up) · [See pricing](/pricing)
+[Analyze your evidence — free](/sign-up) · [See pricing](/pricing)
 
 ---
 
@@ -138,7 +138,7 @@ transcripts stored.
 Start with the three calls your team argues about most. If UpSight can't show you something you
 missed, with the receipt, it cost you ten minutes.
 
-[Analyze 3 old calls — free](/sign-up) · [Bring your calls to a working session](/sign-up)
+[Analyze your evidence — free](/sign-up) · [Let's talk](https://cal.com/rickmoy)
 
 ---
 
