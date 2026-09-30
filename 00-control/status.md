@@ -5,6 +5,42 @@
 
 ---
 
+## 2026-09-30 — Borja Obeso's three SEO wins: About, statistics page, footer
+
+**Shipped** (`epic-hq/UpSight`, branch `claude/seo-site-fixes-2026-09`, commit `711983bc`, on current main; no PR yet)
+- `/about` rewritten to open with one sentence naming company, category, job and customer, then four
+  company-named sections. Founder bio and careers carried over word for word. Old label colors
+  measured 2.8:1 and 4.0:1; all text is now at least 4.5:1.
+- `/customer-discovery-statistics`: five figures from four primary sources, each with its quoted
+  sentence, date, sample, period and caveat. All 13 quoted sentences re-read on the live sources.
+- One shared footer with six commercial pages on every marketing page, including the homepage.
+- `llms.txt` and the sitemap list the new pages. A server-render test covers all five pages and the
+  footer; it was mutation-tested and fails on a typo'd link.
+- Merged 617 commits of main into the branch first. One conflict, in the homepage, resolved by
+  keeping main's new copy and this branch's SEO tags, schema and links.
+- Evaluation of the article: `seo-plan-2026-09-gsc-bofu-loop.md`, addendum 2026-09-30. Sources and
+  rejections: `20-research/market-intel/customer-discovery-statistics-sources-2026-09.md`.
+
+**Stuck**
+- No personal LinkedIn URL for Rick in the vault, so the About page links only the company page.
+- Full typecheck still cannot run in the cloud container (needs Node 24 and a blocked tarball). Biome
+  and 35 unit tests ran clean. Run `pnpm run validate` locally before merging.
+
+**Decided**
+- Adopt all three steps; ship the statistics page with sourced third-party figures only and defer
+  original research until there is real data. Logged in `decisions.md`.
+
+**Surfaced**
+- **Cheap subagents found 1 usable statistic out of 11.** A script caught four invented quotes; a
+  person caught a stretched quote, two aggregator blogs and a competitor's marketing claim. Use them
+  to find candidates, never to decide what gets published.
+- **`/win-back` cites "a Journal of Marketing study of 53,000 win-back attempts"** and "the most
+  profitable segment of all". The paper's abstract and a ScienceDaily write-up say neither; they say
+  the data came from one US telecom company, 2006 to 2014. Unverified public claim. Not edited.
+- **Main rewrote the homepage copy again** ("Decision support from customer signals", hero now
+  cycles "customer / stakeholder / community"). The new pages still say "Analyze 3 old calls" while
+  the homepage CTA now says "Analyze your evidence".
+
 ## 2026-09-25 (site) — SEO fixes and three pages built in the product repo
 
 **Shipped** (branch `claude/seo-site-fixes-2026-09` on `epic-hq/UpSight`, commit `4e4984c`; not merged)

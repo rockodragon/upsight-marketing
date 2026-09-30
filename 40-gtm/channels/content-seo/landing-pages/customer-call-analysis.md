@@ -9,7 +9,9 @@ status: ready-to-build
 written: 2026-09-25
 author: "Rick Moy"
 why_this_page: >
-  The live homepage sells "your last 100 calls already answered this" — calls, lenses, receipts.
+  When written (2026-09-25) the live homepage sold "your last 100 calls already answered this".
+  Main has since moved the homepage to "Decision support from customer signals"; the product
+  behavior this page describes has not changed and no other page targets these queries.
   No page on the site targets the query family that promise belongs to. Search Console shows the
   site's only non-branded demand is people trying to create surveys; this page starts building
   demand for what UpSight actually sells. Query volumes are unverified — validate against the
@@ -74,7 +76,7 @@ of the same recording:
 | **JTBD** | The job the customer hired you to do | Marketing |
 | **Decision** | What was at stake and what tipped it | Leadership |
 
-Those four are the ones on the homepage. SPICED, churn-risk and consulting/SOW lenses ship too, and
+Those four are a sample. SPICED, churn-risk and consulting/SOW lenses ship too, and
 Team plans can define custom lens templates for their own workflow.
 
 ### Receipts: every claim links to its moment

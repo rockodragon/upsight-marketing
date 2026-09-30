@@ -5,6 +5,16 @@
 
 ---
 
+## 2026-09-30 - Adopt About rewrite, sourced statistics page and shared footer; original research waits for real data
+**Why:** Three cheap, reversible changes from Borja Obeso's playbook each fixed a measured gap: `/about`
+was the second most-seen page and never said what UpSight is, pages in the marketing layout had no
+footer, and no page on the site cites a source. The playbook's strongest idea, publishing original
+research, is deferred because there is nothing publishable: fabricating or rounding up a finding
+would cost more than the page earns. The statistics page carries only figures read on the
+publisher's own page, with the sentence printed beside each number. Subagents may find candidates
+but never decide what is published. See `seo-plan-2026-09-gsc-bofu-loop.md` addendum and
+`20-research/market-intel/customer-discovery-statistics-sources-2026-09.md`.
+
 ## 2026-09-25 - SEO runs the Search-Console-first bottom-of-funnel loop before writing net-new content
 **Why:** The cheapest ranking gain is a page Google already ranks 4–20 for a buying query; moving
 it to page 1 is on-page work, not authority-building. Rob Hoffman's 11-step loop (export GSC →

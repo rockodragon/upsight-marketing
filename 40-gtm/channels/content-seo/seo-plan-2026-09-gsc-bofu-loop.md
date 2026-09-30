@@ -317,6 +317,32 @@ for whoever opens the next local session; delete this block once they exist.
 
 ---
 
+## Addendum 2026-09-30: Borja Obeso's three SEO wins, evaluated
+
+**Source:** X article "Founders: you need an optimized About Us (and 2 easy SEO wins)" by Borja Obeso,
+2026-09-29. https://x.com/borjafat/status/2104896885173436464. **Read it with its author in mind:** he
+sells an SEO tool, the article ends with a pitch for it, and it offers no data that any step moves
+rankings or AI citations. The steps are sound practice, not proven levers.
+
+| Step | Verdict | Why, for this site |
+|---|---|---|
+| **1. About page** with a one-sentence company description and four company-named sections | **Do. Done.** | `/about` was the second most-seen page in Search Console (44 of 383 impressions, position 5.1) and opened with values copy instead of saying what UpSight is. The Organization and author schema already point at it. Its low-contrast labels (2.8:1 and 4.0:1) also failed the house rule. |
+| **2. Statistics page** with sourced figures and original research | **Do the sourced half. Done. Defer the original half.** | The playbook's value is original findings, and none are ready to publish. The last usage figures in the vault (May 2026) were single-digit weekly users, no current number was pulled, and the Decision Files are a different subject. Five verified primary-source figures shipped. Nothing was invented. See `20-research/market-intel/customer-discovery-statistics-sources-2026-09.md`. |
+| **3. Four to six money pages in a shared footer** | **Do. Done.** | Pages inside the marketing layout had no footer, and the homepage footer linked only Blog, Terms, Privacy, Security and About. Six commercial pages now sit in one footer on every marketing page. |
+| "Automate it with this SEO skill" | Skip | A funnel into the author's product. |
+
+**Shipped** on `epic-hq/UpSight` branch `claude/seo-site-fixes-2026-09`, commit `711983bc`, on top of a merge
+of current main. Also added the new pages to `llms.txt`, and a server-render test that checks one H1,
+valid JSON-LD and live internal links on every page built here.
+
+**Still needs a person**
+- Rick's personal LinkedIn URL for the About page and Person schema. None is in the vault and
+  guessing a common name is how the wrong person gets linked.
+- Add a link to the statistics page from the "what is customer discovery" post, at the sentence
+  about 12 to 20 conversations. That post lives in the CMS, not in code.
+- Decide the first original-research question. Candidates are in `00-control/open-questions.md`.
+- Put a recurring quarterly date on the statistics review (next by 2026-12-31).
+
 ## What this plan does not do
 
 - It does not restart the 25-post cluster calendar. That plan assumed a content team; this one
