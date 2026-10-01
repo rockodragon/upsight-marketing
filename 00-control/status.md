@@ -5,6 +5,27 @@
 
 ---
 
+## 2026-10-01 — Homepage restored on staging, SEO branch merged, pages checked in a browser
+
+**Shipped** (`epic-hq/UpSight`; staging `5547d3e1`, SEO branch `e9c4d83f`; no PR)
+- Staging's homepage was wrong because commit `f0c75695` overwrote it with an older version. Restored from
+  `origin/main` byte for byte; the SEO branch is merged in. Staging's homepage has 0 old-copy phrases.
+- Rendered the homepage and all five new pages in Chromium from the merged code (desktop and 390px
+  phone): no console errors, no sideways scroll, hero decision diagram on every page.
+- Fixed what that view showed: the nav was white over the new dark heroes (now dark, like the homepage);
+  the lens list printed a literal `&plus; more` (also on the live homepage; now `+ more`); two leftover
+  "start with three calls" phrases replaced. A new test fails if any page prints a literal HTML entity.
+- Typecheck, merged vs clean staging: no new errors. 2,225 unit tests pass.
+
+**Stuck**
+- One type error, in `app/mastra/tools/find-warm-path.ts`, is identical on clean staging. Not from this
+  work; could be this container's partial install. The repo baseline expects zero, so check locally.
+
+**Surfaced**
+- Hero headline on the new pages is long (six lines at 1440px) and pushes the buttons to the fold. The
+  gold highlight on "evidence" is not applied to the new titles. Both are cosmetic and not changed.
+- Not yet promoted to main. Run `pnpm run validate` locally before promoting.
+
 ## 2026-10-01 — New pages rebuilt from the homepage in git
 
 **Shipped** (`epic-hq/UpSight`, branch `claude/seo-site-fixes-2026-09`, commit `be693c03`; no PR yet)

@@ -5,6 +5,9 @@
 
 ---
 
+## 2026-10-01 - Staging's homepage was restored from main, byte for byte, and the SEO branch merged into staging
+Staging commit `f0c75695` (recovered from an uncommitted checkout on a stale base) had overwritten the current homepage with the older one and added a test that locked the old copy in. Restored `call-graveyard.tsx` and `.css` from `origin/main`, deleted that test, merged `claude/seo-site-fixes-2026-09`. Staging is `5547d3e1`. Promotion to main is Rick's call.
+
 ## 2026-10-01 - Marketing pages are built from the homepage in git, never retyped; main is the source of truth
 **Why:** The homepage changed three times in ten weeks and every page built around it kept the old voice
 until someone noticed, because the pages' copy was typed from memory or from the live site. Pages now
