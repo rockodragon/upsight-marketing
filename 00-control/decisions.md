@@ -5,6 +5,15 @@
 
 ---
 
+## 2026-10-01 - Marketing pages are built from the homepage in git, never retyped; main is the source of truth
+**Why:** The homepage changed three times in ten weeks and every page built around it kept the old voice
+until someone noticed, because the pages' copy was typed from memory or from the live site. Pages now
+render the homepage's own sections, extracted from `origin/main` by `scripts/sync-home-sections.mjs`, and
+tests fail when the homepage and those sections differ or when retired language comes back.
+Page-specific content (definition, comparison, FAQ, statistics) stays separate. Staging is not the
+source: as of this entry it still holds the previous homepage. See `seo-plan-2026-09-gsc-bofu-loop.md`
+addendum 2026-10-01.
+
 ## 2026-09-30 - Adopt About rewrite, sourced statistics page and shared footer; original research waits for real data
 **Why:** Three cheap, reversible changes from Borja Obeso's playbook each fixed a measured gap: `/about`
 was the second most-seen page and never said what UpSight is, pages in the marketing layout had no

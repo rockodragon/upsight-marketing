@@ -343,29 +343,36 @@ valid JSON-LD and live internal links on every page built here.
 - Decide the first original-research question. Candidates are in `00-control/open-questions.md`.
 - Put a recurring quarterly date on the statistics review (next by 2026-12-31).
 
-## Addendum 2026-10-01: the new pages kept the old voice, and why it happened
+## Addendum 2026-10-01: the new pages must be built from the homepage in git
 
-**What went wrong.** The pages built on 2026-09-25 took their positioning from the homepage as it
-stood that day ("Your last 100 calls already answered this", "Analyze 3 old calls"). By 2026-09-30 main
-had rewritten the homepage ("Make customer decisions with evidence", "Decision support from the
-customer signals you already have", "Analyze your evidence"). The first correction changed only the
-button labels, so the pages still read in the old voice. That is a process failure, not a typo: the
-homepage has now changed three times in about ten weeks and nothing connected the pages to it.
+**What went wrong, in three rounds.** The first pages took their positioning from the homepage as it
+stood on 2026-09-25. The second round changed only the button labels. The third retyped the new
+homepage into constants and rebuilt the sections by hand, which is still invention. The cause is that
+nothing connected the pages to the homepage, and the homepage changed three times in ten weeks.
 
-**The fix, in code.** `app/features/marketing/copy.ts` holds the homepage's subhead, hero paragraph,
-buttons, booking link and organization description. The new pages import it. `copy.sync.test.ts`
-fails, with instructions, when the homepage stops saying those strings. A render test checks each
-page carries the homepage summary. Both were mutation-tested.
+**What staging holds.** `origin/staging` (05e7c042) still has the previous homepage: the call
+graveyard band, "The cure for AI hallucination", the exhibit, "Start with the three calls your team
+argues about most", and no hero decision diagram. `origin/main` (7c753d86) has the current one. Anyone
+previewing through staging sees the old copy. The SEO branch is built on main. Merging it into staging
+needs main's homepage backported first, or the homepage file will conflict.
 
-**The fix, for AEO.** Each page now has a static H1 that keeps its query words (calls, Claude and
-ChatGPT, Dovetail) followed by the homepage's own sentences, so a crawler or an AI assistant reads
-one consistent description of what UpSight is across the site. The Organization schema on the
-homepage and About, the footer tagline and the `llms.txt` summary say the same thing. `llms.txt`
-used to say "helps teams turn customer conversations into product and growth insights".
+**The fix.** `scripts/sync-home-sections.mjs` extracts the homepage's own sections out of git (`git show
+origin/main:...`) into `app/features/marketing/components/HomeSections.tsx`: hero with the decision
+diagram, signal diagram, lenses, source band, three steps, founder note and final call to action. The
+pages render those real sections with the homepage's own stylesheet, and add their query-specific
+content around them. `pnpm run sync:home-sections` re-extracts after a homepage change. A parity test
+renders the homepage and each section and fails if they differ. Page render tests fail if retired
+language returns (hallucination, graveyard, tombstone, "last 100 calls", "three old calls").
 
-**Not changed.** `/pricing` still says "Customer intelligence with receipts" in its meta
-description and `/customer-discovery` and `/customer-discovery-for-consultants` still lead with
-older framing. They are not part of this work and are logged as an open question.
+**AEO measures applied.** A definition sentence in the first paragraphs of each page. Question-phrased
+H2s on the page-specific sections. FAQ markup generated from the same data as the visible FAQ.
+Comparison tables. A key-facts block at the top of `llms.txt` and `llms-full.txt` with prices read from
+the plan config. Product schema on the homepage that restates only what the page says. One consistent
+description of the company across the footer, schema and `llms.txt`.
+
+**Not changed.** `/pricing` still says "Customer intelligence with receipts" in its meta description,
+and `/customer-discovery` and `/customer-discovery-for-consultants` still lead with older framing.
+Those are existing money pages, not part of this work, and are logged as an open question.
 
 ## What this plan does not do
 
