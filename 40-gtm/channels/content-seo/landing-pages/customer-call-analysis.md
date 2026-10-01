@@ -5,7 +5,7 @@ slug: /customer-call-analysis
 canonical_url: "https://getupsight.com/customer-call-analysis"
 meta_description: "Upload the sales, discovery and success calls you already have. UpSight reads each through BANT, discovery, JTBD and decision lenses, with receipts."
 target_keywords: customer call analysis software, AI call analysis tool, analyze sales call recordings, call transcript analysis tool, customer interview analysis software
-status: ready-to-build
+status: superseded-in-code (see banner)
 written: 2026-09-25
 author: "Rick Moy"
 why_this_page: >
@@ -25,6 +25,14 @@ internal_links_in:
   - from: /blog/how-to-talk-to-customers-guide-to-customer-discovery (evidence capture section) → anchor "analyze the calls you already recorded"
 internal_links_out: /pricing, /sign-up, /mcp-server, /customer-discovery, /customer-discovery-for-consultants, /compare/upsight-vs-dovetail
 ---
+
+> **SUPERSEDED 2026-10-01 for hero and lead copy.** This draft was written for the older homepage
+> ("Your last 100 calls already answered this"; buttons "Analyze 3 old calls" and "Bring your calls to
+> a working session"). The page was rebuilt around the current homepage ("Make customer decisions with
+> evidence"; "Decision support from the customer signals you already have"). The code on
+> `epic-hq/UpSight` branch `claude/seo-site-fixes-2026-09` is the source of truth, and the shared
+> wording lives in `app/features/marketing/copy.ts`. FAQ answers, schema and product facts below are
+> still accurate; the positioning language is not. Do not copy from here without checking the code.
 
 # Customer call analysis software that reads every call the way a team of analysts would.
 

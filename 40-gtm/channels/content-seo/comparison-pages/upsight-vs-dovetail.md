@@ -5,7 +5,7 @@ slug: /compare/upsight-vs-dovetail
 canonical_url: "https://getupsight.com/compare/upsight-vs-dovetail"
 meta_description: "Dovetail sells Free or Enterprise. UpSight publishes $0, $29 and $39 plans, links every finding to its moment, and runs surveys. Small-team comparison."
 target_keywords: dovetail alternative, upsight vs dovetail, dovetail alternative for small teams, dovetail pricing, dovetail vs
-status: ready-to-build
+status: superseded-in-code (see banner)
 written: 2026-02 (draft) · rewritten 2026-09-25
 author: "Rick Moy"
 why_this_page: >
@@ -22,6 +22,14 @@ internal_links_in:
   - from: /pricing (below the plan cards) → anchor "compared with Dovetail"
 internal_links_out: /pricing, /sign-up, /customer-call-analysis, /mcp-server, /customer-discovery, /customer-discovery-for-consultants
 ---
+
+> **SUPERSEDED 2026-10-01 for hero and lead copy.** This draft was written for the older homepage
+> ("Your last 100 calls already answered this"; buttons "Analyze 3 old calls" and "Bring your calls to
+> a working session"). The page was rebuilt around the current homepage ("Make customer decisions with
+> evidence"; "Decision support from the customer signals you already have"). The code on
+> `epic-hq/UpSight` branch `claude/seo-site-fixes-2026-09` is the source of truth, and the shared
+> wording lives in `app/features/marketing/copy.ts`. FAQ answers, schema and product facts below are
+> still accurate; the positioning language is not. Do not copy from here without checking the code.
 
 # UpSight vs Dovetail: which one fits a small team?
 

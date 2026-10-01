@@ -5,7 +5,7 @@ slug: /mcp-server
 canonical_url: "https://getupsight.com/mcp-server"
 meta_description: "Connect Claude, ChatGPT or any MCP client to every recorded call, interview and survey. One OAuth click. Read and write, every answer with a receipt."
 target_keywords: customer research MCP server, MCP server for customer interviews, connect Claude to call transcripts, customer intelligence MCP, CRM MCP server
-status: ready-to-build
+status: superseded-in-code (see banner)
 written: 2026-09-25
 author: "Rick Moy"
 why_this_page: >
@@ -22,6 +22,14 @@ internal_links_in:
   - from: / (the "One summary is not what a call is worth" section) → anchor "or ask Claude directly"
 internal_links_out: /pricing, /sign-up, /docs/chatbots-mcp, /customer-call-analysis
 ---
+
+> **SUPERSEDED 2026-10-01 for hero and lead copy.** This draft was written for the older homepage
+> ("Your last 100 calls already answered this"; buttons "Analyze 3 old calls" and "Bring your calls to
+> a working session"). The page was rebuilt around the current homepage ("Make customer decisions with
+> evidence"; "Decision support from the customer signals you already have"). The code on
+> `epic-hq/UpSight` branch `claude/seo-site-fixes-2026-09` is the source of truth, and the shared
+> wording lives in `app/features/marketing/copy.ts`. FAQ answers, schema and product facts below are
+> still accurate; the positioning language is not. Do not copy from here without checking the code.
 
 # Your AI assistant has never heard your customers. Fix that in one click.
 

@@ -6,6 +6,8 @@
 > each fix affects. Estimated total: one working day.
 > **Do not** touch homepage copy or design. Metadata, schema, links and templates only.
 
+> **Update 2026-10-01:** the new pages were rebuilt around the current homepage copy, and the 2026-09-30 About, statistics and footer work is on the same branch. See `seo-plan-2026-09-gsc-bofu-loop.md`, addendum 2026-10-01.
+>
 > **Implementation status (2026-09-25):** sections 1–7 and 9 are implemented on `epic-hq/UpSight`
 > branch `claude/seo-site-fixes-2026-09`, commit `4e4984c`, not yet merged or deployed. Verified in
 > the cloud session: biome clean on all 22 touched files, 12 new unit tests passing. The full
@@ -120,7 +122,7 @@ swap for a proper logo file if one exists.
 | Page | Title tag | Meta description |
 |---|---|---|
 | `/about` | About UpSight \| Founder Rick Moy | Rick Moy built UpSight because customer truth kept getting lost after teams did the hard part: talking to customers. Who we are and why receipts matter. |
-| `/sign-up` | Sign Up \| Analyze 3 Calls Free \| UpSight | Create a free UpSight account. Upload three recorded calls, pick a lens, and see what you missed, with every finding linked to the moment it was said. |
+| `/sign-up` | Sign Up Free \| Analyze Your Evidence \| UpSight | Create a free UpSight account. Start with the customer evidence you already have and see what you missed, with every finding linked to its source. |
 
 `/sign-up` also has no canonical. Add `https://getupsight.com/sign-up`.
 

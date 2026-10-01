@@ -121,7 +121,7 @@ Nothing else in this plan produces a number until this is done.
    queries in positions 4–20 with ≥ 10 impressions. That count is the size of the opportunity
    and decides whether Phase 1 or Phase 3 leads (see the decision rule in the experiment file).
 4. Make sure organic sign-ups are attributable: PostHog (already on the site) needs
-   `utm`/referrer captured on the sign-up event so "organic search → Analyze 3 old calls" is a
+   `utm`/referrer captured on the sign-up event so "organic search → Analyze your evidence" is a
    filter, not a guess.
 
 ### Phase 1 — run the loop (weeks 1–2, then every Monday)
@@ -216,7 +216,7 @@ UpSight is a customer-intelligence tool. It re-reads recorded customer calls,
 interviews and surveys through analytical "lenses" (sales/BANT, discovery,
 jobs-to-be-done, decision) and pins every finding to the moment it was said.
 Buyers are founders, product leads at small B2B teams, and solo/boutique
-consultants who run stakeholder interviews. Free tier: "Analyze 3 old calls".
+consultants who run stakeholder interviews. Free tier: "Analyze your evidence".
 
 Bottom-of-funnel for UpSight means the searcher is choosing or comparing a
 tool, not learning a concept. Treat as BOFU any query containing or implying:
@@ -280,7 +280,7 @@ me the diff before committing.
 
 | Metric | Type | Source | Target by day 60 |
 |---|---|---|---|
-| Organic sign-ups (free tier, "Analyze 3 old calls") | Primary | PostHog sign-up events filtered to organic search referrer | ≥ 3 in a month, attributable |
+| Organic sign-ups (free tier, "Analyze your evidence") | Primary | PostHog sign-up events filtered to organic search referrer | ≥ 3 in a month, attributable |
 | Clicks on the 3–5 target queries | Leading | GSC, 28-day window vs Phase 0 baseline | ≥ +50 % |
 | Average position of the target pages for their query | Leading | GSC per-page filter | Each moves ≥ 3 positions or reaches page 1 |
 | Impressions on non-target queries for the same pages | Guardrail | GSC | No drop > 20 % (over-optimization / cannibalization) |
@@ -342,6 +342,30 @@ valid JSON-LD and live internal links on every page built here.
   about 12 to 20 conversations. That post lives in the CMS, not in code.
 - Decide the first original-research question. Candidates are in `00-control/open-questions.md`.
 - Put a recurring quarterly date on the statistics review (next by 2026-12-31).
+
+## Addendum 2026-10-01: the new pages kept the old voice, and why it happened
+
+**What went wrong.** The pages built on 2026-09-25 took their positioning from the homepage as it
+stood that day ("Your last 100 calls already answered this", "Analyze 3 old calls"). By 2026-09-30 main
+had rewritten the homepage ("Make customer decisions with evidence", "Decision support from the
+customer signals you already have", "Analyze your evidence"). The first correction changed only the
+button labels, so the pages still read in the old voice. That is a process failure, not a typo: the
+homepage has now changed three times in about ten weeks and nothing connected the pages to it.
+
+**The fix, in code.** `app/features/marketing/copy.ts` holds the homepage's subhead, hero paragraph,
+buttons, booking link and organization description. The new pages import it. `copy.sync.test.ts`
+fails, with instructions, when the homepage stops saying those strings. A render test checks each
+page carries the homepage summary. Both were mutation-tested.
+
+**The fix, for AEO.** Each page now has a static H1 that keeps its query words (calls, Claude and
+ChatGPT, Dovetail) followed by the homepage's own sentences, so a crawler or an AI assistant reads
+one consistent description of what UpSight is across the site. The Organization schema on the
+homepage and About, the footer tagline and the `llms.txt` summary say the same thing. `llms.txt`
+used to say "helps teams turn customer conversations into product and growth insights".
+
+**Not changed.** `/pricing` still says "Customer intelligence with receipts" in its meta
+description and `/customer-discovery` and `/customer-discovery-for-consultants` still lead with
+older framing. They are not part of this work and are logged as an open question.
 
 ## What this plan does not do
 
