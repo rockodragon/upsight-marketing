@@ -5,6 +5,11 @@
 
 ---
 
+## 2026-10-02 - The SEO work shipped to production on its own (PR #981), not inside the staging promotion
+#980 (60 commits, 10 unapplied production migrations) is on hold; the SEO branch touches no migrations and was already live
+and verified on staging, so it went to main as a separate 9-commit PR. #980 later merges cleanly (tested): staging already
+holds the same commits.
+
 ## 2026-10-01 - Staging's homepage was restored from main, byte for byte, and the SEO branch merged into staging
 Staging commit `f0c75695` (recovered from an uncommitted checkout on a stale base) had overwritten the current homepage with the older one and added a test that locked the old copy in. Restored `call-graveyard.tsx` and `.css` from `origin/main`, deleted that test, merged `claude/seo-site-fixes-2026-09`. Staging is `5547d3e1`. Promotion to main is Rick's call.
 

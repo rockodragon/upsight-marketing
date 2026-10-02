@@ -5,6 +5,31 @@
 
 ---
 
+## 2026-10-02 — SEO work is live on production (PR #981)
+
+**Shipped** (`epic-hq/UpSight` PR #981, main `f716f828`)
+- Merged as its own PR so it did not wait on the 60-commit staging promotion (#980). Production serves
+  all six pages (home, customer call analysis, MCP server, Dovetail comparison, statistics, About) with
+  the homepage's real sections and hero diagram, no retired copy, one h1, canonical https URLs and JSON-LD.
+- Sitemap lists the four new pages (20 URLs, all https, no /login). `llms.txt` has the key-facts block.
+  `/blog/rss.xml` returns 200; it returned 500 before.
+
+**Stuck**
+- The first validation run on main failed on a flaky calendar test (`MeetingRow.modal.test.tsx`: the test
+  does not wait for the brief to finish loading). Not from this work. Re-run once, passed, deploy followed.
+- #980 is still a draft: 10 production migrations are unapplied. Not applied from the cloud session
+  (no database access).
+
+**Decided**
+- Ship the SEO work separately from #980. Logged in `decisions.md`.
+
+**Surfaced**
+- The About page has no sign-up button besides the nav. Optional follow-up.
+- Resubmit the sitemap in Search Console, then re-export queries around Oct 23 to measure.
+- Local cleanup done on Rick's machine: voice fix kept on `fix/voice-chat-start-errors`; stale branches removed
+  or archived (tag `archive/entity-asserted-edges`). `worktree-agent-ab0c…` still open: a survey-owner email
+  recovery fix not in staging.
+
 ## 2026-10-02 — `pnpm run validate` fails at the lint step on staging, before this work
 
 **Surfaced**
