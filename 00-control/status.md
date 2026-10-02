@@ -5,6 +5,17 @@
 
 ---
 
+## 2026-10-02 — `pnpm run validate` fails at the lint step on staging, before this work
+
+**Surfaced**
+- Rick ran `pnpm run validate` on staging (`8552d241`): Biome reports 23 errors and 1,547 warnings, and
+  the script stops there. Reproduced here: same 23. The same check gave 29 errors on pre-merge staging
+  (`05e7c042`) and 29 on main (`7c753d86`), so the SEO merge added none.
+- The only error in a file this work touched is a format error in `call-graveyard.css`, which main and
+  pre-merge staging already had.
+- Use `pnpm run validate:promote` (typecheck baseline, unit tests, build) as the pre-promotion gate, since
+  `validate` cannot pass until the 23 unrelated lint errors are fixed.
+
 ## 2026-10-01 — Homepage restored on staging, SEO branch merged, pages checked in a browser
 
 **Shipped** (`epic-hq/UpSight`; staging `5547d3e1`, SEO branch `e9c4d83f`; no PR)
