@@ -5,6 +5,22 @@
 
 ---
 
+## 2026-10-08 — Civic agenda re-evaluated from the full PDF; experiment opened
+
+**Surfaced**
+- Who pays today: ODI's Engaged California spent ~$135k on the Ethelo deliberation platform, $106k on Carnegie,
+  and analysed 1,289 comments in-house (BERTopic + Snowflake + Claude 3.5 Sonnet). ~30% of comments ended up
+  unthemed. Carnegie's review asks for "receipts" by name. The state published the full comment CSV.
+- Consultant deliverable (CivicMakers, Santa Cruz County housing element, 167 pages): themes as bullets, 54
+  quotes, no systematic comment-to-decision trace. Same shape as our consultant beachhead's output.
+- SGC has a live RFQ (certified small business) for nine Catalyst Convenings 2027–28 including "synthesis of
+  meeting notes" and "final reporting"; budget not stated.
+- No Berkeley, state or civic contacts in the CRM. Warm path needed.
+
+**Decided**
+- Run it as a four-week experiment on public data with a kill date, consistent with the June market thesis
+  (civic only with a distribution partner). See `40-gtm/experiments/2026-10-civic-receipts-demo.md`.
+
 ## 2026-10-08 — Evaluated Berkeley's Civic Engagement Agenda
 
 **Surfaced**
