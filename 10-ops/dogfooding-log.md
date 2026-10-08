@@ -6,6 +6,16 @@
 
 ---
 
+## 2026-10-08 — CSV survey import rejects anonymous respondents
+
+- Tried to plan an import of a public comment dataset (Engaged California, 1,289 free-text comments, no names or emails).
+- People CSV import skips every row without name/email/person id by design (`import-people-from-table.ts`, anonymous-row guard), and `materializeCsvSurveyImport` requires a `personId` per respondent. Result: zero rows import.
+- Forcing the file through as a transcript makes it one 52k-word "conversation" and loses the one-evidence-row-per-answer property.
+- Workaround with no code: add a `Name` column ("Resident <id>") and rename the comment column to the actual question so the column classifier tags it `survey_response`. Cost: 1,289 placeholder people in the project.
+- Right fix: let CSV survey import mint placeholder respondents (the live survey path already tolerates anonymous responses). Small; unblocks every public-comment dataset. Beads issue to create.
+- Also: survey responses are plan-capped (50 free / 500 Pro / 2,000 Team per month).
+
+
 ## Open
 
 ### 2026-06-04 — Organization delete is unreachable via MCP: guard demands a phrase the tool can't carry
