@@ -5,6 +5,14 @@
 
 ---
 
+## 2026-10-08 — Evaluated Berkeley's Civic Engagement Agenda
+
+**Surfaced**
+- Read the web version of the agenda (the PDF sits behind a Box viewer and was not retrievable). It is a policy
+  blueprint addressed to a governor not yet elected; nothing in it is a purchase. UpSight fits only as the
+  evidence-traceability layer under a few actions, and the realistic users are the Lab, the 17 State of
+  Engagement fellows and engagement consultancies, not state procurement. Logged as an open question.
+
 ## 2026-10-02 — SEO work is live on production (PR #981)
 
 **Shipped** (`epic-hq/UpSight` PR #981, main `f716f828`)
