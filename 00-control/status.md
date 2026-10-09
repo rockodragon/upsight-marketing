@@ -32,8 +32,12 @@
   which touched the same routing file; tsc clean, 209 of 210 unit files pass, the one failure is the pre-existing
   `briefing-tools-parity` 5-second timeout that also fails on untouched staging). Staging deploy runs from that push.
   The spec is now readable on staging at `docs/20-features-prds/features/gen-ui-response-dataset.md`.
-- Rick's rule, 2026-10-09: re-importing the same CSV must never create duplicates. A follow-up fix is in progress on
-  `feat/csv-survey-import-anonymous` (source key per row); it may need a migration.
+- Rick's rule, 2026-10-09: re-importing the same CSV must never create duplicates. Fixed (`bb982d2b`): each no-email
+  row carries an `import_source_key` (file id column, else a content hash), looked up before insert and updated in
+  place; 15 new tests. Merged to staging (`31595509`). Needs migration
+  `20261009120000_research_link_responses_import_source_key.sql` applied to the staging database; the staging deploy
+  gate stays red until it is, then re-run the deploy. Open product call: same row id with changed text overwrites the
+  earlier answers rather than adding a second response.
 - Both branches built, reviewed and pushed the same day (no PRs opened).
   Import: 18 files, 73 new or changed tests, 2,373 surrounding tests pass, tsc clean. Dataset: 10 files,
   313 tests pass, tsc unchanged. Spec branch carries the implementation notes.
