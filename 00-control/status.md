@@ -5,6 +5,26 @@
 
 ---
 
+## 2026-10-09 — Team brief reconciled; delegated-surveys blog drafted; sitemap submitted
+
+**Shipped**
+- `40-gtm/channels/content-seo/blog/03-delegated-surveys-community-research.md`: draft post on delegated surveys for
+  community research (definition up top, question H2s, six steps, FAQ for `FAQPage` schema). Product facts checked
+  against `epic-hq/UpSight` main; the only figures are the state's published Engaged California counts. Off the GSC
+  queue by request; enters the loop 28 days after publishing.
+- Team brief filed at `40-gtm/assets/collateral/government-accountability-demo-brief-2026-10-08.pdf`; experiment file
+  reconciled (40-hour cap, hour-6 gate, three-issue depth, link labels, 30-day metric, import workaround for the gate).
+
+**Surfaced**
+- Sitemap submitted in Search Console today (Phase 0, step 1 of the SEO plan). If the domain property already had
+  28 days of data, the first export runs 2026-10-23 as planned; if the property is new, Phase 1 starts 2026-11-06.
+- The brief's hour-6 gate would fail on the raw CSV (zero rows import). The placeholder-respondent workaround passes it
+  with no code; logged in the experiment file.
+
+**Decided**
+- Run the civic demo under the brief's cap and gate; keep the 2026-11-15 kill date. Canvas map and pivot-table work on
+  survey responses is product work outside the cap. See `decisions.md`.
+
 ## 2026-10-08 — Civic agenda re-evaluated from the full PDF; experiment opened
 
 **Surfaced**

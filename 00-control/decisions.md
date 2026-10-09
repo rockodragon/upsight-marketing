@@ -5,6 +5,9 @@
 
 ---
 
+## 2026-10-09 - Civic demo runs under the team brief's 40-hour cap and hour-6 gate; canvas map/table work stays outside it
+The 8 Oct team brief (`40-gtm/assets/collateral/government-accountability-demo-brief-2026-10-08.pdf`) and the experiment file agree on dataset, deliverable and "no civic product"; the brief adds a 40-hour cap, an hour-6 product-fit gate, three-issue depth with link labels, and a five-conversation 30-day metric. All adopted. The gate is passed with the no-code placeholder-respondent workaround; the import fix and the `response` dataset for the configurable map and pivot table are general product beads, not demo dependencies. See the experiment file's 2026-10-09 section.
+
 ## 2026-10-02 - The SEO work shipped to production on its own (PR #981), not inside the staging promotion
 #980 (60 commits, 10 unapplied production migrations) is on hold; the SEO branch touches no migrations and was already live
 and verified on staging, so it went to main as a separate 9-commit PR. #980 later merges cleanly (tested): staging already

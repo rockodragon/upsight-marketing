@@ -45,3 +45,18 @@ has been used", Carnegie, Nov 2025) and at least one will hand us a real, unpubl
 - State money timeline is real but late: governor sworn in Jan 2027, "first 100 days" ends ~mid-April 2027,
   any Civic Health Institute / Innovation Challenge funding is FY27-28 at the earliest. Nothing here
   depends on it.
+
+## Reconciled with the team brief, 2026-10-09
+Source: `40-gtm/assets/collateral/government-accountability-demo-brief-2026-10-08.pdf` (team decision brief, 8 Oct 2026).
+The brief and this file agree on the dataset, the one-page deliverable and "no civic product". Adopted from the brief:
+- **Cap: 40 team hours over two weeks** (6 source and product-fit checks, 18 import and mapping, 10 human review, 6 publication and walkthrough).
+- **Gate at hour 6:** proceed only if the current product can show the chain credibly. New infrastructure means reduce scope or stop.
+- **Three issues deep, not the whole recovery.** For each: input → policy response → responsible body → commitment → delivery evidence, every step linked. Label each link *official documented*, *analyst-inferred* or *no link found*. Separate announced / funded / underway / completed. Write "not documented in reviewed sources" where the record is thin.
+- **Correction:** the state's 19 items are policy options, not 19 completed actions, and the state already reports follow-through. Our addition is traceability (which comments, which option, what happened) and the ~30% of comments that got no theme. Subject overlap alone does not prove causation.
+- **30-day metric added:** use the page in five targeted conversations (consultants, stakeholder-facing organizations); count requests to map their own data; quote a scoped paid pilot when asked. Kill date and success test above stay.
+
+What the brief did not know (import check of 2026-10-08, `10-ops/dogfooding-log.md`):
+- The product imports **zero rows** of the state CSV as-is: anonymous rows are skipped and the survey materializer needs a person per response.
+- **Gate plan:** pass hour 6 with the no-code workaround (add a `Name` column of "Resident <id>" placeholders; rename the comment column to the question text so it classifies as a survey response). Cost: 1,289 placeholder people in a dedicated project; fits the Team cap of 2,000 survey responses per month.
+- The proper fix (CSV survey import mints placeholder respondents, ~1 day) is general product work for every public-comment dataset. It is a product bead, not a demo prerequisite.
+- The configurable canvas map and pivot table need a `response` dataset builder (~2–3 days). Also general product work; **outside the 40-hour cap**. The demo's view is themes → linked evidence → public share link, which exists today.
