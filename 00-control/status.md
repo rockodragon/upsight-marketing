@@ -24,6 +24,10 @@
 **Decided**
 - Run the civic demo under the brief's cap and gate; keep the 2026-11-15 kill date. Canvas map and pivot-table work on
   survey responses is product work outside the cap. See `decisions.md`.
+- Build both product pieces now, as general product work, not demo work: one-page spec pushed to `epic-hq/UpSight`
+  branch `claude/gen-ui-response-dataset-spec` (`docs/20-features-prds/features/gen-ui-response-dataset.md`, with the
+  two `bd create` commands at the bottom; `bd` is not installed in this container). Implementation started on
+  `feat/csv-survey-import-anonymous` and `feat/response-dataset-canvas`, each from `origin/staging`.
 
 ## 2026-10-08 — Civic agenda re-evaluated from the full PDF; experiment opened
 
