@@ -6,6 +6,18 @@
 
 ---
 
+## 2026-10-09 — Three more CSV import breaks found while fixing anonymous respondents
+
+- `parse-spreadsheet` only classified columns when it saw contact headers, so a survey export without them got no
+  suggested columns at all.
+- The saved spreadsheet table is capped at 1,000 rows and the importer read only that copy: every CSV import over
+  1,000 rows was silently truncated.
+- The chat upload called `response.json()` on the import route's NDJSON stream, which throws after the first line, so
+  every successful import looked failed, was re-run on the fallback endpoint, and the whole CSV was then pasted to the
+  assistant.
+- All three fixed on `feat/csv-survey-import-anonymous` with tests. Still open there: re-importing an anonymous CSV
+  duplicates its responses (no column for a source row id without a migration).
+
 ## 2026-10-08 — CSV survey import rejects anonymous respondents
 
 - Tried to plan an import of a public comment dataset (Engaged California, 1,289 free-text comments, no names or emails).

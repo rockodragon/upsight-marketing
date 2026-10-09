@@ -57,6 +57,6 @@ The brief and this file agree on the dataset, the one-page deliverable and "no c
 
 What the brief did not know (import check of 2026-10-08, `10-ops/dogfooding-log.md`):
 - The product imports **zero rows** of the state CSV as-is: anonymous rows are skipped and the survey materializer needs a person per response.
-- **Gate plan:** pass hour 6 with the no-code workaround (add a `Name` column of "Resident <id>" placeholders; rename the comment column to the question text so it classifies as a survey response). Cost: 1,289 placeholder people in a dedicated project; fits the Team cap of 2,000 survey responses per month.
+- **Gate plan:** pass hour 6 with the no-code workaround (add a `Name` column of "Resident <id>" placeholders; rename the comment column to the question text so it classifies as a survey response). Cost: 1,289 placeholder people in a dedicated project; fits the Pro cap of 2,000 survey responses per month (Team: 5,000). Superseded the same day: the import fix on `feat/csv-survey-import-anonymous` needs no placeholders.
 - The proper fix (CSV survey import mints placeholder respondents, ~1 day) is general product work for every public-comment dataset. It is a product bead, not a demo prerequisite.
 - The configurable canvas map and pivot table need a `response` dataset builder (~2–3 days). Also general product work; **outside the 40-hour cap**. The demo's view is themes → linked evidence → public share link, which exists today.

@@ -28,6 +28,17 @@
   branch `claude/gen-ui-response-dataset-spec` (`docs/20-features-prds/features/gen-ui-response-dataset.md`, with the
   two `bd create` commands at the bottom; `bd` is not installed in this container). Implementation started on
   `feat/csv-survey-import-anonymous` and `feat/response-dataset-canvas`, each from `origin/staging`.
+- Both branches built, reviewed and pushed the same day (no PRs opened; merge to staging is Rick's call).
+  Import: 18 files, 73 new or changed tests, 2,373 surrounding tests pass, tsc clean. Dataset: 10 files,
+  313 tests pass, tsc unchanged. Spec branch carries the implementation notes.
+
+**Surfaced (product)**
+- Three pre-existing import bugs on the same path, now fixed on the import branch: `parse-spreadsheet` suggested no
+  columns without contact headers; every CSV import was silently cut at 1,000 rows; the chat upload read every
+  successful import as a failure and ran it again. Logged in `10-ops/dogfooding-log.md`.
+- Plan caps are Pro 2,000 / Team 5,000 survey responses a month (the 2026-10-08 note said Team 2,000).
+- The import fix is verified against an in-memory database only. The hour-6 gate is the first real run: import the
+  Engaged CSV on staging. The canvas map stays empty for Engaged until places are extracted from comment text.
 
 ## 2026-10-08 — Civic agenda re-evaluated from the full PDF; experiment opened
 
