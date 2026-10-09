@@ -28,7 +28,13 @@
   branch `claude/gen-ui-response-dataset-spec` (`docs/20-features-prds/features/gen-ui-response-dataset.md`, with the
   two `bd create` commands at the bottom; `bd` is not installed in this container). Implementation started on
   `feat/csv-survey-import-anonymous` and `feat/response-dataset-canvas`, each from `origin/staging`.
-- Both branches built, reviewed and pushed the same day (no PRs opened; merge to staging is Rick's call).
+- Both branches, plus the spec branch, merged into `staging` and pushed (`51cf5f17`, after re-merging upstream PR #1004
+  which touched the same routing file; tsc clean, 209 of 210 unit files pass, the one failure is the pre-existing
+  `briefing-tools-parity` 5-second timeout that also fails on untouched staging). Staging deploy runs from that push.
+  The spec is now readable on staging at `docs/20-features-prds/features/gen-ui-response-dataset.md`.
+- Rick's rule, 2026-10-09: re-importing the same CSV must never create duplicates. A follow-up fix is in progress on
+  `feat/csv-survey-import-anonymous` (source key per row); it may need a migration.
+- Both branches built, reviewed and pushed the same day (no PRs opened).
   Import: 18 files, 73 new or changed tests, 2,373 surrounding tests pass, tsc clean. Dataset: 10 files,
   313 tests pass, tsc unchanged. Spec branch carries the implementation notes.
 
