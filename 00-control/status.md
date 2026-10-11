@@ -5,6 +5,18 @@
 
 ---
 
+## 2026-10-11 — State check: staging red at the migrations gate, nothing promoted
+
+**Stuck**
+- Staging deploy for `31595509` failed at "Verify migrations are applied to the staging database"
+  (`20261009120000_research_link_responses_import_source_key.sql`). No push since; `main` is still `9d26efeb`, so none
+  of the 2026-10-09 work (anonymous import, idempotent re-import, response dataset, spec) is in production. Re-run via
+  API is refused (403); Rick applies the migration to staging and re-runs the workflow.
+- The two Beads issues from the spec were not created (not in `.beads/issues.jsonl` on staging or main).
+
+**Surfaced**
+- dstl.ai question logged in `open-questions.md` (redirect vs new page).
+
 ## 2026-10-09 — Team brief reconciled; delegated-surveys blog drafted; sitemap submitted
 
 **Shipped**
