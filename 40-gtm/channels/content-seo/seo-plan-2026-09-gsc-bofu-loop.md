@@ -38,7 +38,7 @@ reference material, not a backlog.
 | 7 | Give the sheet to Claude with the "find BOFU queries in positions 4–20" prompt | Prompt A below, which carries our definition of bottom-of-funnel |
 | 8 | Choose the top keywords you'd want to rank higher for | Pick 3–5 max. One page per keyword. Log them in the experiment file |
 | 9 | Ask Claude for the prioritized checklist per page | Prompt B below, fed the page's current HTML |
-| 10 | Implement as many changes as possible | Site code is in `../Insights/`; on-page standard is `guides/seo-aeo-guide.md` |
+| 10 | Implement as many changes as possible | Site code is in `~/code/UpSight/`; on-page standard is `guides/seo-aeo-guide.md` |
 | 11 | Check GSC daily for that page | Daily for 14 days after a change (GSC lags 2–3 days), then weekly in the Monday review |
 
 Steps 1–6 take an hour the first time and ten minutes after that. Steps 7–9 are twenty minutes
@@ -269,7 +269,7 @@ edit to this one.
 
 ```
 Apply items [1–N] from this checklist to the page component at [path in
-../Insights]. Keep the existing design tokens and layout; change copy,
+~/code/UpSight]. Keep the existing design tokens and layout; change copy,
 metadata, headings, links and schema only. Do not touch the homepage. Show
 me the diff before committing.
 ```

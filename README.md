@@ -1,12 +1,12 @@
 # UpSight GTM vault
 
-The Obsidian vault for UpSight strategy, research, and go-to-market. Code, PRDs, and product specs live in `../Insights/`. Tasks live in Beads. Sales pipeline lives in UpSight (MCP).
+The Obsidian vault for UpSight strategy, research, and go-to-market. Code, PRDs, and product specs live in `~/code/UpSight/` (the `epic-hq/upsight` clone). Tasks live in Beads. Sales pipeline lives in UpSight (MCP).
 
 Read `CLAUDE.md` for the operating protocol. The folder layout below reads top-to-bottom as a flow: **how we run → what we learn → what we decide → what we ship.**
 
 ```
 UpSightApp/
-├── CLAUDE.md                 ← operating protocol (also governs ../Insights repo work)
+├── CLAUDE.md                 ← operating protocol (also governs ~/code/UpSight repo work)
 ├── 00-control/               ← direction: priorities, decisions, open-questions, status, north-star, traction
 ├── 10-ops/                   ← how we run: agents manual, weekly review, dogfooding, handoffs, repo-index
 ├── 20-research/              ← INPUTS

@@ -1,7 +1,7 @@
 # CLAUDE.md — UpSight GTM vault
 
 > Planning, strategy, research, and GTM execution for UpSight.
-> NOT a place for tasks (Beads owns those), sales pipeline (UpSight MCP owns that), or product specs/code (`../Insights/` owns those).
+> NOT a place for tasks (Beads owns those), sales pipeline (UpSight MCP owns that), or product specs/code (`~/code/UpSight/` (the `epic-hq/upsight` clone) owns those).
 
 ---
 
@@ -31,7 +31,7 @@ Folders are numbered so they read top-to-bottom as a flow: **how we run → what
 - **Tasks** → Beads. If you're making a task list in markdown, stop and create Beads issues instead.
 - **Sales pipeline** → UpSight (MCP). Don't track deals here.
 - **Customer evidence** → UpSight (MCP). `voice-of-customer/evidence-log.md` is a curated cache, not source of truth.
-- **Product specs / PRDs / code** → `../Insights/` (`docs/20-features-prds/`, etc.).
+- **Product specs / PRDs / code** → `~/code/UpSight/` (the `epic-hq/upsight` clone) (`docs/20-features-prds/`, etc.).
 
 ## Boundaries that are easy to get wrong
 

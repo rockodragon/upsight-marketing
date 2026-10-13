@@ -25,5 +25,5 @@ projects under `40-gtm/assets/video/` alike.
 
 ## What does NOT live here
 
-Tasks (Beads owns those), sales pipeline (UpSight MCP owns that), product specs/code (`../Insights/`
+Tasks (Beads owns those), sales pipeline (UpSight MCP owns that), product specs/code (`~/code/UpSight/` (the `epic-hq/upsight` clone)
 owns those). See `CLAUDE.md` for the full boundary list.
