@@ -5,6 +5,9 @@
 
 ---
 
+## 2026-10-13 - dstl.ai redirects to getupsight.com; no "distill" page
+Traffic was virtually nil, so a new page would have restated the homepage for nobody. Rick applied the domain redirect. Open question of 2026-10-11 closed.
+
 ## 2026-10-09 - Civic demo runs under the team brief's 40-hour cap and hour-6 gate; canvas map/table work stays outside it
 The 8 Oct team brief (`40-gtm/assets/collateral/government-accountability-demo-brief-2026-10-08.pdf`) and the experiment file agree on dataset, deliverable and "no civic product"; the brief adds a 40-hour cap, an hour-6 product-fit gate, three-issue depth with link labels, and a five-conversation 30-day metric. All adopted. The gate is passed with the no-code placeholder-respondent workaround; the import fix and the `response` dataset for the configurable map and pivot table are general product beads, not demo dependencies. See the experiment file's 2026-10-09 section.
 

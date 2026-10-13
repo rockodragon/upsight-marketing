@@ -5,6 +5,19 @@
 
 ---
 
+## 2026-10-13 — Civic demo status check: gate not run, migration now blocks staging for everything
+
+**Stuck**
+- Staging deploy still fails at the migrations gate; today's run for Rick's marketing refresh (`2d3bad4d`) failed the same
+  way, so the unapplied `20261009120000_research_link_responses_import_source_key.sql` now blocks his work too. Main
+  unchanged (`9d26efeb`); production last deployed 2026-10-08.
+- Civic demo: hour-6 gate not run. Zero rows imported anywhere. Production project "Civic" (UpSightResearch, created
+  2026-10-06, ICP "SD cities, EDCs, chambers") is empty. No civic organizations or contacts in the CRM.
+- Day 5 of the 14 build days; the 18-hour import-and-mapping block has not started.
+
+**Surfaced**
+- dstl.ai had virtually no traffic; Rick applied the domain redirect. Closed (see `decisions.md`).
+
 ## 2026-10-11 — State check: staging red at the migrations gate, nothing promoted
 
 **Stuck**
