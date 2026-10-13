@@ -18,6 +18,17 @@
 **Surfaced**
 - dstl.ai had virtually no traffic; Rick applied the domain redirect. Closed (see `decisions.md`).
 
+**Shipped (later the same day)**
+- Civic demo mapping block: `40-gtm/experiments/2026-10-civic-receipts-demo-mapping.md`. Three issues chained to
+  primary documents with link labels and delivery status. Findings that carry the page: soil testing (74 comments,
+  the state's top-ranked topic) never became one of the 19 options and no agency will certify a lot safe; the alerts
+  text credits a City steering committee, FSRI recommendations and "Congress" with work no document shows; power
+  lines is the chain that holds, with no date, no telecom duty and no per-community miles count. The state also
+  publishes the 1,509 deliberation comments and the per-vote file; 251 people ranked the 19 options, 114 of them
+  outside both fire zones.
+- Migration path for Rick written up (`~/code/UpSight`, dotenvx + `supabase db push --db-url`); vault pointers to
+  the product repo corrected from `../Insights/` to `~/code/UpSight/`.
+
 ## 2026-10-11 — State check: staging red at the migrations gate, nothing promoted
 
 **Stuck**
