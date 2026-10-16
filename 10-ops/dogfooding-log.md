@@ -16,8 +16,15 @@
 - Worse than first logged: the hoisted chat dock replaces the paperclip with the "+" menu (`HoistedActionsMenu`), whose
   "Upload file" navigates to the same `/interviews/upload` page. So no project page offers the in-chat CSV import at
   all. The People import wizard has no survey-answer mapping either.
-- Workaround: the standalone assistant page `/a/<account>/<project>/assistant` still renders the real paperclip and the
-  in-chat survey import.
+- Correction, same day: **People → Import CSV is the working door.** It posts to the same route; the parser logged
+  "Anonymous survey export detected" and the importer created anonymous survey responses with evidence, no code
+  change. Two UI gaps remain: the wizard's result screen shows people/orgs/facets only, not the survey counts it
+  received (`imported.surveyResponses`, `import.survey`), so the import looked like nothing happened; and the
+  Conversations upload page still has no survey option. The `/assistant` route renders the paperclip but no surface
+  links to it.
+- First real run stopped at 50: the gate read the plan as Free because `current_period_end` on the Pro trial row had
+  passed (`livePeriodFilter`), while `status` still said trialing. 47 responses created, 1,242 reported over the limit
+  with the stopping row named. That is the designed behaviour working; the plan row is the problem.
 - Fix: UploadScreen gets an "It's survey responses" button (and a direct route when the classifier already says
   `survey`) that posts to `/api/people/import-csv` the way the chat does. Small; Beads issue to create.
 - Also seen: banner "Your Pro trial has ended" and project switcher badge "Free" while `accounts.billing_subscriptions`
