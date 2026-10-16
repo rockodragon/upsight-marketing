@@ -6,6 +6,15 @@
 
 ---
 
+## 2026-10-16 — Themes page gates on interview count; a 1,289-response survey counts as one interview
+
+- Insights → Themes on the Engaged project: "You have 2 interviews and 0 emerging themes. Add 1 more interview to
+  unlock automatic theme consolidation." The survey's 1,289 responses live under one aggregate conversation, so the
+  page counts it as one interview and tells the user to add more. Copy and gate both assume interviews; they should
+  count evidence or responses.
+- "Re-run synthesis" did enqueue (Trigger.dev run `run_06gk9v8t6rap8fhkdapr5bj901`); the page gives no progress and
+  no link to the run.
+
 ## 2026-10-16 — Conversations → Upload page has no "survey" option for a CSV
 
 - Rick uploaded the Engaged California CSV on staging via Conversations → Upload (`/interviews/upload`). The page
