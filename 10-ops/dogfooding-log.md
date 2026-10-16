@@ -25,6 +25,18 @@
 - UX: the People page offers "Import from spreadsheet" (empty state) and Actions → "Import from CSV"; both open the
   same wizard. Two labels for one door, and the wizard's "Import complete! Your contacts are now in UpSight, 0
   created" reads as failure when the file was a survey. Rick: "too confusing."
+- After the plan fix the re-import finished: 1,289 responses, all anonymous, no duplicates (47 updated, 1,242 created).
+  Three more defects on the survey Results page, all real:
+  1. Header, funnel cards and "N people" say 1,000; the lenses card on the same page says 1,289; the database has 1,289.
+     An un-ranged select hits PostgREST's 1,000-row default. Counts on one page disagree.
+  2. TOPIC and CONVERSATION_GROUP were stored as attribute facets on the evidence, not as survey questions, so the
+     survey shows "1 questions" and the categories are invisible in the UI, Breakdown, the responses table and the
+     canvas pivot (which reads answers by question id). Rick: "the csv had 3 columns and we only kept 1."
+  3. The Results page is built for a live invite funnel (All invited / In progress / Not started, Host links,
+     Distribute, Draft, Build) and shows nothing on Overview without clicking Analyze. For an imported dataset it is
+     chrome with no content. Rick: "tons of data, absolutely no value"; "responses should have a badge #".
+  Fixes started the same hour on `feat/csv-import-unified` (one CSV flow, categories as questions, re-import keeps
+  evidence ids) and `feat/survey-results-imported` (true counts, badge, Overview quick view, imported-survey mode).
 - First real run stopped at 50: the gate read the plan as Free because `current_period_end` on the Pro trial row had
   passed (`livePeriodFilter`), while `status` still said trialing. 47 responses created, 1,242 reported over the limit
   with the stopping row named. That is the designed behaviour working; the plan row is the problem.

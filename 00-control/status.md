@@ -5,6 +5,22 @@
 
 ---
 
+## 2026-10-16 — Hour-6 gate: data passes, UI fails; two fix branches started
+
+**Shipped**
+- Engaged California CSV imported on staging through People → Import CSV: 1,289 anonymous responses, one evidence
+  row each, re-import idempotent (held at 1,289). The import and dedupe code from 2026-10-09 works on a real database.
+
+**Stuck**
+- The product cannot yet show the chain credibly: the two category columns were stored as invisible facets, the
+  survey page caps every count at 1,000, Overview is empty until a button is pressed, and four CSV entry points
+  disagree. Rick: "I'm embarrassed by it." Two branches started (see `10-ops/dogfooding-log.md`); themes wait until
+  the category fix lands and the file is re-imported, because today's re-import rewrites evidence ids.
+
+**Decided**
+- Treat the gate as passed on data and failed on presentation; the fixes are general product work, inside the
+  demo's critical path but not its 40-hour cap.
+
 ## 2026-10-13 — Civic demo status check: gate not run, migration now blocks staging for everything
 
 **Stuck**
