@@ -6,6 +6,20 @@
 
 ---
 
+## 2026-10-16 — Conversations → Upload page has no "survey" option for a CSV
+
+- Rick uploaded the Engaged California CSV on staging via Conversations → Upload (`/interviews/upload`). The page
+  showed "We couldn't tell what ... is — what kind of CSV is this?" with transcript / people / organization only.
+- Cause: that page (`app/features/onboarding/components/UploadScreen.tsx`) renders a fixed three-way picker from a
+  `csvIntentPrompt` flag; the 2026-10-09 `survey` intent was wired into the chat dock upload
+  (`ProjectStatusAgentChat.handleFileUpload`) and into the transcript path's error text, not into this page.
+- Workaround: the paperclip ("Upload file") in the chat dock at the bottom of any project page.
+- Fix: UploadScreen gets an "It's survey responses" button (and a direct route when the classifier already says
+  `survey`) that posts to `/api/people/import-csv` the way the chat does. Small; Beads issue to create.
+- Also seen: banner "Your Pro trial has ended" and project switcher badge "Free" while `accounts.billing_subscriptions`
+  says Pro / trialing. The feature gate entitles `trialing` regardless of `trial_end`; the UI does not. Two plan
+  computations disagree.
+
 ## 2026-10-09 — Three more CSV import breaks found while fixing anonymous respondents
 
 - `parse-spreadsheet` only classified columns when it saw contact headers, so a survey export without them got no
