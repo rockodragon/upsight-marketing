@@ -21,6 +21,15 @@
 - Treat the gate as passed on data and failed on presentation; the fixes are general product work, inside the
   demo's critical path but not its 40-hour cap.
 
+**Shipped (same day, later)**
+- Both fixes merged to staging (`1459bcf1`): one Import CSV flow behind every entry point with one analyzer (three
+  duplicate analyzers and six dead paths deleted), category columns become single-select questions, re-import keeps
+  evidence ids, survey titled from the filename; survey Results page with exact counts past 1,000, a Responses badge,
+  an Overview quick view, and an imported-survey mode. 350 unit files pass, tsc clean. Not yet seen on a running page;
+  Rick re-imports the Engaged file on staging next.
+- Open product call: single-select answers create their own evidence rows (live-survey rule), so the Engaged survey will
+  carry about 2,500 one-word evidence rows that themes and embeddings see. Decide after one themes run.
+
 ## 2026-10-13 — Civic demo status check: gate not run, migration now blocks staging for everything
 
 **Stuck**
