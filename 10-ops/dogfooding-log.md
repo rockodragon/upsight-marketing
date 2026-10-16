@@ -13,7 +13,11 @@
 - Cause: that page (`app/features/onboarding/components/UploadScreen.tsx`) renders a fixed three-way picker from a
   `csvIntentPrompt` flag; the 2026-10-09 `survey` intent was wired into the chat dock upload
   (`ProjectStatusAgentChat.handleFileUpload`) and into the transcript path's error text, not into this page.
-- Workaround: the paperclip ("Upload file") in the chat dock at the bottom of any project page.
+- Worse than first logged: the hoisted chat dock replaces the paperclip with the "+" menu (`HoistedActionsMenu`), whose
+  "Upload file" navigates to the same `/interviews/upload` page. So no project page offers the in-chat CSV import at
+  all. The People import wizard has no survey-answer mapping either.
+- Workaround: the standalone assistant page `/a/<account>/<project>/assistant` still renders the real paperclip and the
+  in-chat survey import.
 - Fix: UploadScreen gets an "It's survey responses" button (and a direct route when the classifier already says
   `survey`) that posts to `/api/people/import-csv` the way the chat does. Small; Beads issue to create.
 - Also seen: banner "Your Pro trial has ended" and project switcher badge "Free" while `accounts.billing_subscriptions`
