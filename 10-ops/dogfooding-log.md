@@ -22,6 +22,9 @@
   received (`imported.surveyResponses`, `import.survey`), so the import looked like nothing happened; and the
   Conversations upload page still has no survey option. The `/assistant` route renders the paperclip but no surface
   links to it.
+- UX: the People page offers "Import from spreadsheet" (empty state) and Actions → "Import from CSV"; both open the
+  same wizard. Two labels for one door, and the wizard's "Import complete! Your contacts are now in UpSight, 0
+  created" reads as failure when the file was a survey. Rick: "too confusing."
 - First real run stopped at 50: the gate read the plan as Free because `current_period_end` on the Pro trial row had
   passed (`livePeriodFilter`), while `status` still said trialing. 47 responses created, 1,242 reported over the limit
   with the stopping row named. That is the designed behaviour working; the plan row is the problem.
