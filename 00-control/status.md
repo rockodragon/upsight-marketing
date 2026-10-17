@@ -5,6 +5,24 @@
 
 ---
 
+## 2026-10-17 — Staging deploy of 4e127ea3 green; stale survey evidence cleanup drafted
+
+**Shipped**
+- "Deploy Staging" run 1504 and "Deploy Staging Trigger.dev" run 41 both passed on 4e127ea3 (14:44 UTC). Theme
+  generation for surveys (`themes.auto-group`) is live on staging.
+- Root cause of the inflated Engaged evidence found in code, not data: `evidence.research_link_response_id` is
+  `ON DELETE SET NULL`, so a deleted response leaves its evidence behind, and the re-import prune only looks at rows
+  tied to a response it touched. Duplicates also survive when the prior-evidence lookup fails open. Diagnostic plus
+  cleanup SQL (orphans, dead question ids, duplicates keeping the oldest row) handed to Rick for staging.
+- A subagent is adding an end-of-import prune (`pruneStaleSurveyEvidence`) on branch
+  `fix/survey-import-prune-stale-evidence` so re-imports remove these rows themselves.
+
+**Surfaced**
+- Decision for Rick: change the FK to `ON DELETE CASCADE` (one migration, applied by hand on each database) or keep
+  the code-side prune only. Code-side prune ships first either way.
+
+---
+
 ## 2026-10-17 — Survey themes and evidence visibility merged to staging (4e127ea3)
 
 **Shipped** (staging; deploy includes a new Trigger.dev task `themes.auto-group`)
