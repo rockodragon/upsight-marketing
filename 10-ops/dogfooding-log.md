@@ -6,6 +6,19 @@
 
 ---
 
+## 2026-10-17 — Renaming a CSV silently creates a second survey
+
+- Engaged project on staging holds two surveys from the same file: "Engaged California LA fires agenda setting"
+  (1,289 responses) and "…-city" (708 responses). The CSV import finds an existing survey by the file's name, so
+  re-uploading the file saved under a new name created a new survey, which the plan cap then cut off at 708. Result:
+  5,951 evidence rows against ~3,900 expected, and themes would have double-counted ~700 comments.
+- Nothing in the UI said a second survey was being created, and nothing offered to add the rows to the existing one.
+- Fix direction: when an import would create a survey while another survey in the project has the same columns or
+  question set, say so and offer to import into it; show a survey chooser instead of matching on file name.
+- Cleanup on staging: delete the "-city" copy (evidence, aggregate conversation, survey) by SQL.
+
+---
+
 ## 2026-10-17 — Evidence page hides anonymous evidence; surveys can never get themes
 
 - Evidence page on the Engaged project showed nothing although ~3,800 survey evidence rows exist. The default "exclude
