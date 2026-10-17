@@ -5,6 +5,18 @@
 
 ---
 
+## 2026-10-17 — CSV survey import 20x fewer sequential database calls (staging bf44a51e)
+
+**Shipped** (staging, deploying)
+- Import writes eight rows at a time, looks up prior responses once per chunk, resolves facet ids once per import, and
+  inserts a response's evidence, respondent links and facets in one call per table. The question-identity task is
+  enqueued in batches of 500 instead of once per response. Sequential round trips for 1,289 anonymous rows drop
+  from about 16,800 to about 810; expect well under two minutes instead of over ten. Plan-limit accounting stays
+  exact and in file order; re-import still creates nothing twice. Live survey saves are unchanged (opt-in bulk mode).
+  81 tests on the touched suites (8 new), research-links 1,992 and mastra tools 815 green, tsc and Biome clean.
+
+---
+
 ## 2026-10-17 — Engaged staging survey rebuilt clean; themes run started
 
 **Shipped**
