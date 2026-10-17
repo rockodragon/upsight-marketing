@@ -9,9 +9,12 @@
 
 **Shipped**
 - Rick merged `epic-hq/UpSight` #1006 (staging → main, 35 commits, 242 files) at 11:53 UTC; main is `c4a2d461`.
-  Validation is running; the production deploy follows it and must pass the migrations gate (migration applied to
-  production by Rick on 2026-10-17 before the PR opened). This is the first production release of the anonymous
-  CSV survey import, the response dataset on the canvas, and the rebuilt survey Results page.
+  Validation passed; the production deploy (12:05 UTC) passed the migrations gate, deployed, and both smoke suites
+  passed. Production now runs the anonymous CSV survey import, the response dataset on the canvas, and the rebuilt
+  survey Results page.
+- Diagram and reasoning on how survey answers and conversation quotes share one evidence table, with the proposed
+  one-edge cut (theme, embedding and search readers skip choice-type answers):
+  https://claude.ai/artifact/1XVFa7pNFhg2RXBTudUvRs. Decision pending Rick's first themes run.
 
 ## 2026-10-17 — Second round of staging fixes merged; promotion PR #1006 opened
 
