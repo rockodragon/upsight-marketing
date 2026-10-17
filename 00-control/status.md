@@ -5,6 +5,19 @@
 
 ---
 
+## 2026-10-17 — Engaged staging survey rebuilt clean; themes run started
+
+**Shipped**
+- The inflated evidence was two surveys from one file, not stale rows: renaming the CSV to "-city" created a second
+  survey, which the plan cap cut at 708. Both deleted by SQL (the cap counts rows that exist this month, so this freed
+  the allowance), the city file re-imported once: 1,289 responses, one survey. Rick clicked Analyze survey; themes
+  expected in 20 to 30 minutes.
+
+**Stuck**
+- Import speed: see dogfooding log. Fix in progress by subagent.
+
+---
+
 ## 2026-10-17 — Re-import prune for stale survey evidence on staging (15d1eda6)
 
 **Shipped** (staging, deploying)

@@ -6,6 +6,18 @@
 
 ---
 
+## 2026-10-17 — A 1,289-row CSV survey import takes over ten minutes
+
+- Re-import of the Engaged file (1,289 anonymous rows, 3 columns) on staging ran well past ten minutes with no
+  estimate shown. The import handles one row at a time and each row is 12 to 15 sequential database round trips
+  (find prior response, write response, facet-kind lookups, existing-evidence lookup, evidence and facet inserts,
+  aggregate link). Fix in progress on branch `perf/csv-survey-import-batching`: bounded concurrency, one prior-response
+  lookup per chunk, facet ids resolved once per import, one insert per table per response.
+- The SQL editor lesson from the same hour: a `begin;` without `commit;` in Supabase Studio silently rolls back, so
+  the "stops before commit so you can check" pattern does not work there. Give one script that commits.
+
+---
+
 ## 2026-10-17 — Renaming a CSV silently creates a second survey
 
 - Engaged project on staging holds two surveys from the same file: "Engaged California LA fires agenda setting"
