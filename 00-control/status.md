@@ -5,6 +5,19 @@
 
 ---
 
+## 2026-10-17 — Re-import prune for stale survey evidence on staging (15d1eda6)
+
+**Shipped** (staging, deploying)
+- Every CSV survey re-import now ends with one sweep of the survey's aggregate conversation
+  (`pruneStaleSurveyEvidence`): deletes answers whose response row is gone, answers anchored to a question the survey
+  no longer has, and duplicate rows for one answer (oldest kept; multi-select exempt). Fails open, never fails the
+  import; the removed count shows in the import result. 10 new unit tests; 1,984 research-links tests, tsc and
+  Biome clean.
+- Staging cleanup of the Engaged survey still needs Rick to run the SQL handed over earlier (the prune only runs on
+  the next re-import). Either path lands the same end state.
+
+---
+
 ## 2026-10-17 — Staging deploy of 4e127ea3 green; stale survey evidence cleanup drafted
 
 **Shipped**
