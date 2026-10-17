@@ -5,6 +5,24 @@
 
 ---
 
+## 2026-10-17 — Survey themes and evidence visibility merged to staging (4e127ea3)
+
+**Shipped** (staging; deploy includes a new Trigger.dev task `themes.auto-group`)
+- Evidence page and map show personless evidence by default ("exclude internal" is now a deny-list; "internal" means
+  person_type internal or an account member, matching the agent tools).
+- Surveys can get themes: "Analyze survey" also runs theme generation over the survey's free-text answers in batches
+  of 200 with an embedding wait; Insights offers "Generate themes" when a project has none; "Re-run synthesis" says it
+  needs existing themes. Theme readers (generation, synthesis, consolidation, enrichment) skip choice-type answers, the
+  cut from the evidence-model page, applied without waiting for a themes run because the newest-200 window on the
+  Engaged survey would be two-thirds category labels. The database-side filter fails open.
+- Insights no longer counts a survey's aggregate conversation as "1 interview".
+
+**Stuck**
+- Staging evidence for the Engaged survey is inflated: 5,951 rows against about 3,900 expected (3,945 single-select
+  vs 2,598; 1,996 long-text vs 1,289; 10 with no anchor from the stray transcript upload). Likely evidence still
+  pointing at question ids from the imports before categories became questions. Cleanup and a re-import guard pending
+  Rick's per-question breakdown.
+
 ## 2026-10-17 — PR #1006 merged to main; production deploy running
 
 **Shipped**
