@@ -5,6 +5,21 @@
 
 ---
 
+## 2026-10-17 — Second round of staging fixes merged; promotion PR #1006 opened
+
+**Shipped** (`epic-hq/UpSight` staging `25494a7d`)
+- Chat triggers: "survey map", "pivot the survey" and kin route to the responses dataset; the survey-page agent can call it.
+- Map: a place bubble click opens that place's responses below the map (the click used to switch to a points mode
+  responses cannot draw, so the map vanished); camera fits the bubbles; "Show responses by place (7)" list.
+- Overview: analysis auto-starts once on first view (10+ responses, member or owner, claimed with a conditional update
+  so a reload never starts it twice); AI write-up replaces the median/shortest/longest block; anonymous respondent
+  sets show a count with a link, named people page at 25; Breakdown's "Add AI insights" runs the same combined run.
+- Six analysis and export paths read every response instead of the first 1,000 (write-up, Deep Dive, lens linking,
+  question stats, full Deep Dive page, public share). Same un-ranged select pattern as the Results page; four more
+  non-analysis reads still carry it (surveys-list avatars, precomputed stats, fetch-surveys counts, host rosters).
+- Rick applied the migration to production; PR #1006 staging → main opened and watched. Spec question left on the PR:
+  choice answers create one-word evidence rows that themes see.
+
 ## 2026-10-16 — Hour-6 gate: data passes, UI fails; two fix branches started
 
 **Shipped**
