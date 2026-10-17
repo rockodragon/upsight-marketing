@@ -6,6 +6,17 @@
 
 ---
 
+## 2026-10-17 — Evidence page hides anonymous evidence; surveys can never get themes
+
+- Evidence page on the Engaged project showed nothing although ~3,800 survey evidence rows exist. The default "exclude
+  internal team" filter builds an allow-list of evidence reachable through `evidence_people` for non-internal people,
+  so evidence with no person (every anonymous answer) is dropped. Should be a deny-list of internal-linked evidence.
+- Zero themes after "Re-run synthesis": themes are only ever created by the conversation pipeline's auto-grouping
+  (`autoGroupThemesAndApply`, newest 200 evidence rows). The CSV survey import, the lens run and "Analyze survey" never
+  call it; "Re-run synthesis" and "Refresh All" only rewrite existing themes. A survey-only project cannot get themes.
+- Both fixes started on `feat/survey-themes-visibility`, including the choice-answer skip for theme readers, since the
+  newest-200 window on this survey would be two-thirds category labels.
+
 ## 2026-10-16 — Themes page gates on interview count; a 1,289-response survey counts as one interview
 
 - Insights → Themes on the Engaged project: "You have 2 interviews and 0 emerging themes. Add 1 more interview to
