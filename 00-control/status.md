@@ -5,6 +5,20 @@
 
 ---
 
+## 2026-11-11 — #1013 merged and deployed; promotion PR #1014 opened
+
+**Shipped**
+- #1013 merged at 18:38 UTC; production deploy run 459 passed the migrations gate, Fly.io and Trigger.dev by 19:23 UTC.
+- `epic-hq/UpSight` #1014 promotes staging `a5745a6c` to main: MCP survey tools and key-scope enforcement (#1011),
+  New Project plan-limit and error-message fixes, the CI pin. 5 commits, 25 files, no migrations. Session watching.
+
+**Stuck**
+- The production "E2E Smoke Tests (Production)" job on the pinned runner had not been scheduled by GitHub 30 minutes
+  after the deploy job finished; nothing in the workflow gates it and GitHub's status page reads operational. The
+  runner fix is therefore still unverified in production. Checking again at 20:14 UTC.
+
+---
+
 ## 2026-11-11 — CI hotfix PR #1013: Playwright jobs pinned to ubuntu-24.04
 
 **Shipped**
