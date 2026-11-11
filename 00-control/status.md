@@ -5,6 +5,20 @@
 
 ---
 
+## 2026-11-11 — Production deploy of 66654e3a blocked at the migrations gate
+
+**Stuck**
+- Deploy run 458 stopped at "Verify migrations are applied to the production database": the four account-deletion
+  migrations are not on production. Rick's own check had passed because it ran from a checkout that did not yet
+  have the four files (main received them only at the merge), so it compared 532 files against 532 rows. Fix: pull
+  main, apply, verify, re-run the failed deploy. The failure auto-opened a `ci-failure` issue to close afterwards.
+
+**Surfaced**
+- The check script passes when the local checkout is behind. It should also warn when the checkout's newest migration
+  is older than the newest one on the branch being deployed, or the deploy runbook should say "pull first".
+
+---
+
 ## 2026-11-11 — PR #1010 merged; survey themes and import fixes heading to production
 
 **Shipped**
