@@ -5,6 +5,19 @@
 
 ---
 
+## 2026-11-11 — Survey themes, import fixes, account deletion and dynamic groups live in production
+
+**Shipped**
+- Rick applied the four migrations from `main` (536 verified) and re-ran deploy 458 at 17:43 UTC: migrations gate,
+  Fly.io deploy and Trigger.dev deploy all passed; production is on 66654e3a. Failure issue #1012 closed.
+
+**Stuck**
+- The post-deploy "E2E Smoke Tests (Production)" job failed before any test ran: GitHub's `ubuntu-latest` image now
+  resolves to Ubuntu 26.04 and Playwright 1.55.1 refuses to install Chromium there. Runner-image change, not our code.
+  Fix in progress: pin the Playwright jobs to `ubuntu-24.04`.
+
+---
+
 ## 2026-11-11 — Production deploy of 66654e3a blocked at the migrations gate
 
 **Stuck**
