@@ -5,6 +5,19 @@
 
 ---
 
+## 2026-11-11 — #1014 merged; GitHub Actions outage stalls the production deploy
+
+**Shipped**
+- Rick merged `epic-hq/UpSight` #1014 (MCP survey tools and key scopes, New Project fixes) at 20:17 UTC.
+
+**Stuck**
+- GitHub Actions is in a major outage (status page 20:55 UTC: Actions "major outage", webhooks degraded). The merge's
+  validation run has shown three jobs "in progress" with no output since 20:17; the earlier deploy run 459 never got
+  its smoke job scheduled. Nothing on our side to fix. Production is on the #1013 build (same app code as #1010);
+  #1014's code ships when GitHub recovers and the pipeline completes, or after a re-run if the stalled runs die.
+
+---
+
 ## 2026-11-11 — #1013 merged and deployed; promotion PR #1014 opened
 
 **Shipped**
