@@ -5,6 +5,16 @@
 
 ---
 
+## 2026-11-11 — CI hotfix PR #1013: Playwright jobs pinned to ubuntu-24.04
+
+**Shipped**
+- The four browser jobs (production smoke, staging smoke, staging e2e smoke and e2e) run on `ubuntu-24.04`; on
+  staging as 8c389b28, and cherry-picked to `main` in `epic-hq/UpSight` #1013 because the production deploy workflow
+  runs from `main`. Merging redeploys production with the same app code; the smoke job should then pass. Session is
+  watching the PR and the staging deploy.
+
+---
+
 ## 2026-11-11 — Survey themes, import fixes, account deletion and dynamic groups live in production
 
 **Shipped**
