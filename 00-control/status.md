@@ -5,6 +5,20 @@
 
 ---
 
+## 2026-11-11 — Promotion PR #1010 opened (staging → main)
+
+**Shipped**
+- `epic-hq/UpSight` #1010 promotes staging `43f905ca` to main: 27 commits, 160 files. Survey themes and evidence
+  visibility, the re-import prune and the faster CSV import (ours, Oct 17), plus Rick's mobile store readiness and
+  self-service account deletion (#1007, Oct 19). Four new migrations from the account-deletion work must be applied to
+  production before merge or the production deploy stops at its migrations gate. Session is watching the PR.
+
+**Surfaced**
+- The survey work cannot be promoted alone through the staging → main flow; it rides with whatever else is on staging.
+  If Rick wants the account-deletion work held back, the alternative is a cherry-pick branch off main.
+
+---
+
 ## 2026-10-17 — CSV survey import 20x fewer sequential database calls (staging bf44a51e)
 
 **Shipped** (staging, deploying)
