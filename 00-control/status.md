@@ -5,6 +5,18 @@
 
 ---
 
+## 2026-11-11 — #1014 live in production; smoke job passes on the pinned runner
+
+**Shipped**
+- GitHub recovered about 21:00 UTC. Validation for the #1014 merge (c99bbb25) finished green, and production deploy
+  run 460 passed every job: agent smoke, migrations gate, Fly.io, Trigger.dev, and "E2E Smoke Tests (Production)" on
+  `ubuntu-24.04` (21:11 to 21:15 UTC). The runner pin from #1013 is verified. Production now carries the MCP survey
+  tools and key-scope enforcement, the New Project fixes, and everything from #1010.
+- Leftover: deploy run 459 (the #1013 build) still shows "in progress" with no smoke job; it is a zombie from the
+  outage and can be cancelled from its page.
+
+---
+
 ## 2026-11-11 — #1014 merged; GitHub Actions outage stalls the production deploy
 
 **Shipped**
