@@ -5,6 +5,14 @@
 
 ---
 
+## 2026-11-11 — PR #1010 merged; survey themes and import fixes heading to production
+
+**Shipped**
+- Rick applied the four account-deletion migrations to production (all 532 migrations verified) and merged
+  `epic-hq/UpSight` #1010 at 08:47 UTC: 32 commits, 219 files. Production deploy running; result to follow.
+
+---
+
 ## 2026-11-11 — Promotion PR #1010 opened (staging → main)
 
 **Shipped**
