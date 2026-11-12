@@ -5,6 +5,22 @@
 
 ---
 
+## 2026-11-12 — Customer import data repaired in production
+
+**Shipped**
+- Rick ran the guarded data fix: both stuck import sessions now read completed (1,343 created / 1 updated / 33
+  skipped, then 0 / 1,344 / 33), and all 1,343 LinkedIn profile links moved from website to `linkedin_url`.
+  Staging deploy of the import fix (4f446bc7) green.
+
+**Stuck**
+- Her own import tag ("LinkedIn Import on 11/10/2026") was never applied; it needs one re-import with "Connected On"
+  skipped, after the fix reaches production.
+- Promotion of staging (stuck-interviews 500, people import fix, APP_ENV cleanup) to main waits on Rick's go.
+- Admin login-activity migration still unapplied; the CLI reported "up to date" from the side folder, cause unknown
+  until Rick runs the schema_migrations check.
+
+---
+
 ## 2026-11-12 — People CSV import fix on staging (4f446bc7)
 
 **Shipped** (staging, deploying)
