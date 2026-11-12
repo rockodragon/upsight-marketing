@@ -5,6 +5,22 @@
 
 ---
 
+## 2026-11-12 — Sitemap 23 → 50 URLs (staging 0528d441)
+
+**Shipped** (staging; reaches production with the next promotion)
+- getupsight.com/sitemap.xml was a hand-kept list that nobody updated when pages shipped. Added the 22 missing docs
+  pages, /event-organizers, /security, /privacy, /terms and /download. A new test walks the marketing and docs route
+  configs and fails when a public page is neither listed nor excluded with a reason, so it cannot drift again.
+
+**Surfaced**
+- Biggest remaining lever: the 37 glossary terms are all `status: draft`, so none are served or listed. Their
+  "In UpSight" claims were checked against the code on 2026-10-07 (14 verified, 22 softened, 1 cut). Publishing
+  them adds 38 URLs. Rick's call.
+- /terms still titles itself "Terms of Service | DeepLight" (14 DeepLight mentions); /case-studies is an indexable
+  "Coming soon" page.
+
+---
+
 ## 2026-11-12 — Customer import data repaired in production
 
 **Shipped**
