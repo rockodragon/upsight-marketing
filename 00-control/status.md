@@ -5,6 +5,26 @@
 
 ---
 
+## 2026-11-12 — Stuck-interviews 500 fixed on staging; customer CSV import root-caused
+
+**Shipped**
+- /admin/stuck-interviews 500 (broken since 2026-09-25, PR #972): the loader fetched its own API at
+  `http://getupsight.com/...` (Fly terminates TLS), `force_https` 301'd it, Node's fetch dropped the cookie on the
+  scheme change, the API redirected to /login and `response.json()` threw on the HTML. Fix (4f4d073e) queries
+  directly and calls the API action in-process; also fixes a field mismatch that would have shown "No Stuck
+  Interviews" forever. tsc clean, 25 admin tests pass. On staging, deploying.
+- Customer CSV case: a LinkedIn connections export, 1,377 rows, imported as people. Both attempts finished the row
+  loop (1,343 people created in under 4 minutes; the retry updated them) but never finalized: the session stayed
+  "in progress" and the browser never got a result, so it looked like a failure. Her people are in the project.
+  Separately, the People page reads people without paging, so it shows only the first 1,000 of 1,343.
+  A subagent is fixing both on `fix/people-import-finalize`.
+
+**Stuck**
+- `fix/admin-usage-login-activity` waits on Rick applying its migration to staging and production (first attempt
+  aborted on a branch checkout; a worktree command was sent).
+
+---
+
 ## 2026-11-12 — Production triage: admin 500, empty login activity, a customer's CSV upload
 
 **Shipped**
