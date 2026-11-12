@@ -5,6 +5,33 @@
 
 ---
 
+## 2026-11-12 — Production triage: admin 500, empty login activity, a customer's CSV upload
+
+**Shipped**
+- Admin "recent login activity" root cause: `get_admin_recent_login_activity` has raised a type error on every call
+  since January (declares `user_email text`, reads `auth.users.email` varchar(255)); the page hid the error. Fix on
+  `epic-hq/UpSight` branch `fix/admin-usage-login-activity` (0b50a028): migration recasting the column, RPC errors
+  logged on /admin/usage, /admin/activity calls the RPC as the signed-in admin instead of the service role. tsc and
+  Biome clean. Needs the migration applied to staging and production before it merges.
+- Customer CSV trouble (support case, details in UpSight): no blocking code defect found. Most likely the free plan's
+  50 survey rows a month (personal accounts never get a trial; question-shaped headers flip a contacts file to
+  "survey"), made worse by the Polar billing outage that broke Upgrade. Checks handed to Rick: PostHog session replay,
+  a saved SQL script for the account, plan, import sessions and monthly usage, and three questions to ask.
+- Correction to earlier notes: the CSV import fixes (#1006) reached production on 2026-10-17; only the batched survey
+  writes shipped 2026-11-11.
+
+**Stuck**
+- /admin/stuck-interviews 500: subagent investigation still running at the end of this session; resumes 2026-11-12
+  01:21 PST.
+
+**Surfaced**
+- CSV path has no PostHog events and failures before the row loop leave no database trace; only Fly's short log
+  buffer sees them. Worth a Beads issue, as are the UI defects found: silent drop of non-CSV files, the terse parse
+  error shown instead of the helpful one, "Import failed (HTTP 200)" when the stream is cut.
+- Admin RPCs are SECURITY DEFINER without SET search_path and live only in migrations, not supabase/schemas.
+
+---
+
 ## 2026-11-11 — #1014 live in production; smoke job passes on the pinned runner
 
 **Shipped**
