@@ -5,6 +5,17 @@
 
 ---
 
+## 2026-11-12 — #1020 live in production
+
+**Shipped**
+- `epic-hq/UpSight` #1020 merged 23:16 UTC; production deploy run on 2ea854e2 green at 23:43 UTC (agent smoke,
+  migrations gate, Fly.io, Trigger.dev, E2E smoke on ubuntu-24.04). Live: /admin/stuck-interviews no longer 500s
+  (anonymous requests now redirect to login), people CSV import always finishes and closes its session, LinkedIn
+  links land in the LinkedIn field, People list past 1,000, billing buttons act on the viewed account.
+- Next for the customer case: one re-import with "Connected On" skipped applies her missing batch tag.
+
+---
+
 ## 2026-11-12 — Sitemap 23 → 50 URLs (staging 0528d441)
 
 **Shipped** (staging; reaches production with the next promotion)
