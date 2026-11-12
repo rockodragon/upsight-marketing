@@ -5,6 +5,27 @@
 
 ---
 
+## 2026-11-12 — People CSV import fix on staging (4f446bc7)
+
+**Shipped** (staging, deploying)
+- Root cause of the customer's "failed" LinkedIn import: after the row loop, each person's "Connected On" value was
+  saved as a tag with one OpenAI embedding call per person, one after another (about 1,743 calls, 6 to 12 silent
+  minutes, unbilled). The browser connection closed, the next progress write threw, and that skipped closing the
+  session. Same code was live on staging. Fix: each distinct value embedded once, 8 at a time, progress every 50
+  people, batched saves; progress writes can no longer throw; enrichment failures become warnings; the session is
+  closed on every path; the route keeps importing after the browser leaves.
+- Also: linkedin.com/in links land in `linkedin_url` instead of website (and the screen's "LinkedIn profile URL"
+  choice now actually maps); the People page lists every person instead of the first 1,000.
+- tsc clean; 447 tests in the touched areas green (subagent ran 2,273 across people, research-links, tools).
+- Data fix SQL for the two stuck sessions and the LinkedIn links handed to Rick; missing "Connected On" tags are
+  better skipped on a re-import (similar dates merge into one tag at 0.75 similarity).
+
+**Surfaced**
+- Row loop is 6 to 8 sequential calls per row (about 2.75 minutes per 1,000 rows); batch it before 3k-row files.
+- No cleanup for import sessions left in progress by a server restart.
+
+---
+
 ## 2026-11-12 — Stuck-interviews 500 fixed on staging; customer CSV import root-caused
 
 **Shipped**
