@@ -5,6 +5,30 @@
 
 ---
 
+## 2026-11-13 — Civic receipts page copy drafted; heroes for the 3 newest blog posts
+
+**Shipped**
+- `40-gtm/experiments/2026-10-civic-receipts-demo-page-copy.md`: full page copy (about 1,340 words), specs for 10
+  figures, and an 89-claim check list. Issue order: power lines, then alerts, then soil. Written for the brief's
+  audience (engagement consultants first). Status draft: not publishable until the [NEED] items are closed and the
+  brief's 10-hour human review is done.
+- `40-gtm/assets/images/blog-heroes/`: 1600×900 line-drawing heroes for customer-discovery-vs-customer-validation,
+  customer-discovery-questions-buying-intent, and how-many-customer-interviews-is-enough, plus `upload-heroes.mjs`
+  (sets heroImage + meta.image; dry run verified against the live CMS).
+
+**Stuck**
+- Heroes not live yet: the CMS needs the `users API-Key` header, which this cloud session can't hold. Rick runs
+  `upload-heroes.mjs --apply` with .env.cms.
+- Civic page: 15 distinct [NEED] items (19 placeholders). Rick's calls: share link, challenge/correction promise,
+  CTA destination, publish date, cut "mapped by city". The rest are document lookups.
+
+**Surfaced**
+- Source files disagree on: whether the hour-6 gate passed; 3 vs 4 unsupported alerts claims; 10 vs 11 topics;
+  soil as "top-ranked topic" (it was a top concern inside another topic). The page follows the mapping's
+  claim-level list. Full list is in the draft's checklist.
+
+---
+
 ## 2026-11-13 — Glossary live in production; sitemap 23 → 91 URLs
 
 **Shipped**
