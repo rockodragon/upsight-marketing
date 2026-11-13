@@ -5,6 +5,21 @@
 
 ---
 
+## 2026-11-13 — Glossary live in production; sitemap 23 → 91 URLs
+
+**Shipped**
+- Rick's promotion #1024 (merged 01:28 UTC) deployed green: validation, migrations gate, Fly.io, Trigger.dev, both
+  smoke suites. Production sitemap now 91 URLs: 38 glossary, 24 docs, 10 blog posts, the rest static pages, all on
+  the https canonical. Term pages serve the one-sentence definition in the raw HTML with DefinedTerm and FAQPage
+  JSON-LD. Admin login-activity fix is live too.
+- **Glossary 60-day freeze starts today (2026-11-13), ends 2027-01-12.** No edits, adds or removals to the 37 terms
+  until then, so the AI-search crawlability read stays clean.
+
+**Next**
+- Rick: resubmit the sitemap in Google Search Console and request indexing for /glossary; check /admin/usage.
+
+---
+
 ## 2026-11-13 — Staging verified for the glossary; definitions fixed to one sentence; login fix merged
 
 **Shipped** (staging dbdfe45e; production on the next promotion)
