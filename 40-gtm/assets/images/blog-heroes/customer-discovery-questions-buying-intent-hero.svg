@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e293b"></stop><stop offset="1" stop-color="#0b1220"></stop>
+    </linearGradient>
+    <radialGradient id="glow" gradientUnits="userSpaceOnUse" cx="800" cy="380" r="600" gradientTransform="translate(800 380) scale(1 0.68) translate(-800 -380)">
+      <stop offset="0" stop-color="#f59e0b" stop-opacity="0.30"></stop>
+      <stop offset="0.45" stop-color="#f59e0b" stop-opacity="0.13"></stop>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"></stop>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"></rect>
+  <rect width="1600" height="900" fill="url(#glow)"></rect>
+  <path d="M 470 190 H 730 Q 790 190 790 250 V 410 Q 790 470 730 470 H 560 L 480 540 L 500 470 H 470
+           Q 410 470 410 410 V 250 Q 410 190 470 190 Z" fill="none" stroke="#cfd3d9" stroke-opacity="0.82" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M 552 280 Q 552 240 600 240 Q 648 240 648 282 Q 648 316 612 330 Q 600 336 600 360 V 372" fill="none" stroke="#cfd3d9" stroke-opacity="0.82" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"></path>
+  <circle cx="600" cy="414" r="5" fill="#cfd3d9" fill-opacity="0.82" stroke="#cfd3d9" stroke-opacity="0.82" stroke-width="10"></circle>
+  <!-- connector -->
+  <path d="M 820 330 C 900 300, 930 380, 990 400" fill="none" stroke="#cfd3d9" stroke-opacity="0.5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 26"></path>
+  <!-- price tag, tilted -->
+  <g transform="rotate(-18 1110 480)">
+    <path d="M 1010 400 H 1230 Q 1260 400 1260 430 V 530 Q 1260 560 1230 560 H 1010 L 950 480 Z" fill="none" stroke="#cfd3d9" stroke-opacity="0.82" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"></path>
+    <circle cx="1012" cy="480" r="16" fill="none" stroke="#cfd3d9" stroke-opacity="0.82" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"></circle>
+    <line x1="1070" y1="450" x2="1210" y2="450" fill="none" stroke="#cfd3d9" stroke-opacity="0.5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></line>
+    <line x1="1070" y1="490" x2="1180" y2="490" fill="none" stroke="#cfd3d9" stroke-opacity="0.5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></line>
+    <line x1="1070" y1="530" x2="1150" y2="530" fill="none" stroke="#cfd3d9" stroke-opacity="0.5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></line>
+  </g>
+  <!-- tag string -->
+  <path d="M 1006 506 C 960 560, 900 600, 930 650 C 950 684, 1000 670, 990 630" fill="none" stroke="#cfd3d9" stroke-opacity="0.5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path></svg>

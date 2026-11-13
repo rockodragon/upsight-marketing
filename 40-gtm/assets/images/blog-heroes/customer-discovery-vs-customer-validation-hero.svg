@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e293b"></stop><stop offset="1" stop-color="#0b1220"></stop>
+    </linearGradient>
+    <radialGradient id="glow" gradientUnits="userSpaceOnUse" cx="800" cy="380" r="600" gradientTransform="translate(800 380) scale(1 0.68) translate(-800 -380)">
+      <stop offset="0" stop-color="#f59e0b" stop-opacity="0.30"></stop>
+      <stop offset="0.45" stop-color="#f59e0b" stop-opacity="0.13"></stop>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"></stop>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"></rect>
+  <rect width="1600" height="900" fill="url(#glow)"></rect>
+  <!-- threshold -->
+  <line x1="800" y1="170" x2="800" y2="640" fill="none" stroke="#cfd3d9" stroke-opacity="0.82" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="26 30"></line>
+  <!-- magnifying glass -->
+  <circle cx="440" cy="300" r="58" fill="none" stroke="#cfd3d9" stroke-opacity="0.82" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"></circle>
+  <line x1="398" y1="342" x2="350" y2="390" fill="none" stroke="#cfd3d9" stroke-opacity="0.82" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"></line>
+  <!-- wandering path from the glass to the threshold -->
+  <path d="M 488 334 C 560 390, 470 470, 520 530 C 570 590, 660 560, 640 500
+           C 620 440, 540 470, 580 540 C 620 610, 720 590, 742 520 C 760 462, 770 430, 800 420" fill="none" stroke="#cfd3d9" stroke-opacity="0.82" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"></path>
+  <!-- loose ideas left behind -->
+  <circle cx="610" cy="300" r="9" fill="none" stroke="#cfd3d9" stroke-opacity="0.5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></circle>
+  <circle cx="690" cy="380" r="9" fill="none" stroke="#cfd3d9" stroke-opacity="0.5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></circle>
+  <circle cx="470" cy="610" r="9" fill="none" stroke="#cfd3d9" stroke-opacity="0.5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></circle>
+  <circle cx="700" cy="250" r="9" fill="none" stroke="#cfd3d9" stroke-opacity="0.5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></circle>
+  <!-- straight line into the target -->
+  <line x1="800" y1="420" x2="1118" y2="420" fill="none" stroke="#cfd3d9" stroke-opacity="0.82" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"></line>
+  <circle cx="1130" cy="420" r="128" fill="none" stroke="#cfd3d9" stroke-opacity="0.82" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"></circle>
+  <circle cx="1130" cy="420" r="80" fill="none" stroke="#cfd3d9" stroke-opacity="0.82" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"></circle>
+  <circle cx="1130" cy="420" r="30" fill="none" stroke="#cfd3d9" stroke-opacity="0.82" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"></circle>
+  <!-- arrow fletching at the tail -->
+  <path d="M 880 420 l -34 -30 M 880 420 l -34 30 M 920 420 l -34 -30 M 920 420 l -34 30" fill="none" stroke="#cfd3d9" stroke-opacity="0.5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
