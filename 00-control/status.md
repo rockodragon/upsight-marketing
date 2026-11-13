@@ -5,6 +5,19 @@
 
 ---
 
+## 2026-11-13 — Glossary published (staging 3cf9386d); sitemap 50 → 88 URLs
+
+**Shipped** (staging; production with the next promotion)
+- All 37 glossary terms flipped from draft to published in one batch, dated 2026-11-13, per the glossary's own
+  publishing rules. The sitemap lists each term with a lastmod. Verification of server-rendered definitions and
+  structured data on staging is scheduled.
+
+**Decided**
+- Glossary set is frozen for 60 days from its production publish date (no edits, adds or removals) so the
+  AI-search crawlability read stays clean.
+
+---
+
 ## 2026-11-12 — #1020 live in production
 
 **Shipped**

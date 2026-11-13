@@ -5,6 +5,11 @@
 
 ---
 
+## 2026-11-13 - Publish all 37 glossary terms in one batch, then freeze the set for 60 days
+Rick approved. The sitemap had 50 URLs and the glossary was the largest finished, fact-checked asset sitting unpublished (claims verified against the code 2026-10-07). One batch plus a 60-day freeze keeps the AI-search crawlability signal readable.
+
+---
+
 ## 2026-10-13 - dstl.ai redirects to getupsight.com; no "distill" page
 Traffic was virtually nil, so a new page would have restated the homepage for nobody. Rick applied the domain redirect. Open question of 2026-10-11 closed.
 
