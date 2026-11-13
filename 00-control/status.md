@@ -5,6 +5,19 @@
 
 ---
 
+## 2026-11-13 — Staging verified for the glossary; definitions fixed to one sentence; login fix merged
+
+**Shipped** (staging dbdfe45e; production on the next promotion)
+- Verified on staging: term pages serve the definition in the raw HTML with DefinedTerm + FAQPage JSON-LD; the
+  index links all 37 terms; the staging sitemap has 91 URLs (38 glossary, 24 docs, 10 blog), all on the https
+  canonical. Production should land near 88 (it has 7 blog posts).
+- All 37 bold definitions were two sentences, against the glossary's own one-sentence rule. The first sentence
+  stays bold, the second moved word for word into the next paragraph; a test now enforces the rule.
+- Admin login-activity fix merged to staging; its migration is confirmed applied and recorded on staging and
+  production.
+
+---
+
 ## 2026-11-13 — Glossary published (staging 3cf9386d); sitemap 50 → 88 URLs
 
 **Shipped** (staging; production with the next promotion)
