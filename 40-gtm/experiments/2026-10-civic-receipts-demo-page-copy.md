@@ -33,7 +33,7 @@ In 2025, California asked the public what LA fire recovery should focus on. 1,28
 
 ## What you're looking at
 
-The state's Engaged California process turned those comments into 19 policy options, asked people to rate them, and published an action plan saying "how we're responding." The state already reports its own follow-through. This page adds the trace: which comments, which option, which agency, which document. A November 2025 Carnegie Endowment review of Engaged California said "participants need to see how their input has been used." [NEED: link to the Carnegie review]
+The state's Engaged California process turned those comments into 19 policy options, asked people to rate them, and published an action plan saying "how we're responding." The state already reports its own follow-through. This page adds the trace: which comments, which option, which agency, which document. A [November 2025 commentary](https://carnegieendowment.org/posts/2025/11/engaged-california-la-wildfires-lessons) by a Carnegie Endowment scholar said "participants need to see how their input has been used." Carnegie was itself [a partner in the state's process](https://innovation.ca.gov/blog/posts/fire-survivors-shaping-la-fire-rebuilding-action-plan-engaged-california/).
 
 Each issue runs through five steps, from what people asked for to what was delivered. Each link between steps carries a label:
 
@@ -49,7 +49,7 @@ Delivery is marked announced, funded, underway or completed, as of 13 October 20
 
 We downloaded the state's data files on 13 October 2026 and recounted every figure. [Figure 2]
 
-- **1,289 comments** went into 11 topics and 38 groups. 381 of them, 29.6%, landed in "Other" or in no group, and never became a theme.
+- **1,289 comments** went into the state's 10 topics and 36 named groups. 381 of them, 29.6%, landed in a topic's "Other" group or were "general comments" outside any topic, and never became a theme.
 - **19 options** were written by "a group of policy, disaster relief, and community leaders" using "their expertise and generative AI." No document we found says what was left out, or why.
 - **251 voters** cast 3,977 votes: 65 from the Palisades fire zone, 72 from the Eaton fire zone, 114 from neither. [Figure 3]
 - **The action plan** has five focus areas and no date.
@@ -62,7 +62,7 @@ We traced each issue through primary documents, re-opening 24 key ones by hand. 
 
 **Asked for.** 88 comments in the "Underground power lines" group. Its option, "Bury power lines and equipment safety measures," ranked first of the 19.
 
-**Policy response.** The Governor's Executive Order N-24-25 (March 2025) suspended environmental and coastal permitting for rebuilding power and telecom lines, including undergrounding "if such changes are determined appropriate by the utility." It orders no undergrounding and sets no miles, deadline or money. A 90-day utility report ordered by the Los Angeles Mayor was not found.
+**Policy response.** The Governor's Executive Order N-24-25 (March 2025) suspended environmental and coastal permitting for rebuilding power and telecom lines, including undergrounding "if such changes are determined appropriate by the utility or provider." It orders no undergrounding and sets no miles, deadline or money. A 90-day utility report ordered by the Los Angeles Mayor was not found.
 
 **Responsible.** Southern California Edison (SCE) for Altadena and the Malibu area. The Los Angeles Department of Water and Power (LADWP) for Pacific Palisades. The California Public Utilities Commission (CPUC) for costs. Neither executive order binds the telecom companies. No state agency is charged with delivery.
 
@@ -70,14 +70,14 @@ We traced each issue through primary documents, re-opening 24 key ones by hand. 
 
 **Delivery.** Underway in the Malibu area and Altadena, with some Malibu-area circuits completed in 2025. LADWP had trenched 1.65 of 6.5 miles of Palisades backbone conduit by December 2025; residential lines had not started. SCE does not publish miles by community, and its own sources disagree on Altadena. [Figure 4] [Figure 5]
 
-**Sources.** [NEED: full URLs; the mapping file records host and document id only]
-- Executive Order N-24-25, 27 Mar 2025 (gov.ca.gov)
-- Mayor's Emergency Executive Order No. 5, 21 Mar 2025 (mayor.lacity.gov)
-- SCE rebuild plan and letter to the Governor, 11 Apr 2025
-- LA County Blueprint for Rebuilding, Jul 2025 (file.lacounty.gov)
-- County Board motion on telecom undergrounding, 18 Nov 2025 (file.lacounty.gov)
-- SCE undergrounding table, 18 Sep 2026, and Altadena fact sheets, Jul 2026 (sce.com)
-- LADWP statement on the Palisades, 15 Dec 2025
+**Sources.** Every link opened 14 November 2026.
+- [Executive Order N-24-25](https://www.gov.ca.gov/wp-content/uploads/2025/03/N-24-25-Undergrounding-EO-bl_Final-GGN-Signed-.pdf), 27 Mar 2025 (gov.ca.gov)
+- [Mayor's Emergency Executive Order No. 5](https://mayor.lacity.gov/news/mayor-bass-issues-emergency-executive-order-help-palisades-residents-expedite-rebuilding-more), 21 Mar 2025 (full text on the Mayor's release)
+- SCE [rebuild plan](https://download.edison.com/406/files/20253/ReconstructionRebuildPlan.pdf) and [letter to the Governor](https://download.edison.com/406/files/20253/GOResponse041125.pdf), 11 Apr 2025
+- [LA County Blueprint for Rebuilding](https://file.lacounty.gov/SDSInter/lac/1189434_202508BlueprintForRebuildingvSF2.pdf), Jul 2025
+- [County Board motion on telecom undergrounding](https://file.lacounty.gov/SDSInter/bos/supdocs/209802.pdf), 18 Nov 2025
+- [SCE undergrounding table](https://www.sce.com/outages-safety/wildfire-safety/targeted-undergrounding), read 18 Sep 2026 (the live page is now dated 21 Oct 2026), and Altadena fact sheets, Jul 2026, such as [Gorge/Rosebud](https://www.sce.com/sites/default/files/AboutUs/TransmissionProject/Gorge/2026_REVGorge_Rosebud_ProjectFactSheet.pdf) and [Tola](https://www.sce.com/sites/default/files/AboutUs/TransmissionProject/Tola/2026_REVTolaP1P2_ProjectFactSheet.pdf)
+- [LADWP statement on the Palisades](https://pacpalicc.org/wp-content/uploads/2025/12/Alphabets-PR-Statement-12.15.2025.Rev1_.pdf), 15 Dec 2025 (LADWP's meeting recap, posted by the Pacific Palisades Community Council; no copy found on an LADWP site)
 
 ## 2. Emergency alerts: county work documented, four credits without a document
 
@@ -95,35 +95,35 @@ We traced each issue through primary documents, re-opening 24 key ones by hand. 
 
 **Still open.** Nothing we found addresses one system that reaches everyone. The only alert that needs no sign-up, the federal wireless alert, carries English and Spanish only and no map, and the county's 88 cities run different systems.
 
-**Sources.** [NEED: full URLs; the mapping file records host and document id only]
-- County Board motion ordering the review, 28 Jan 2025 (file.lacounty.gov)
-- McChrystal Group after-action review, 25 Sep 2025 (lacounty.gov/aar)
-- Implementation motion, 30 Sep 2025 (file.lacounty.gov)
-- County progress memos, 15 Dec 2025 and 3 Aug 2026 (file.lacounty.gov)
-- County recommended budget, 14 Apr 2026 (file.lacounty.gov)
-- Fire Safety Research Institute Phase Two report, 2 Oct 2026 (fsri.org)
-- "Sounding the Alarm," Rep. Garcia, 12 May 2025 (robertgarcia.house.gov)
+**Sources.** Every link opened 14 November 2026.
+- [County Board motion ordering the review](https://file.lacounty.gov/SDSInter/bos/supdocs/199710.pdf), 28 Jan 2025
+- [McChrystal Group after-action review](https://file.lacounty.gov/SDSInter/bos/supdocs/207915.pdf), 25 Sep 2025 (county hub: [lacounty.gov/aar](https://lacounty.gov/aar/))
+- [Implementation motion](https://file.lacounty.gov/SDSInter/bos/supdocs/207966.pdf), 30 Sep 2025
+- County progress memos, [15 Dec 2025](https://file.lacounty.gov/SDSInter/bos/bc/1197877_BM_ImplementingAfterActionReportRecommendationsfortheJanuary2025EatonandPalisadesFires_121525.pdf) and [3 Aug 2026](https://file.lacounty.gov/SDSInter/bos/bc/1214307_AARBoardMemoSecondReportBack_finalsigned_.pdf)
+- [County recommended budget](https://file.lacounty.gov/SDSInter/bos/supdocs/215176.pdf), 14 Apr 2026
+- [Fire Safety Research Institute Phase Two report](https://fsri.org/resource/southern-california-fires-incident-analysis-report), 2 Oct 2026 ([release](https://fsri.org/research-update/southern-california-fires-incident-analysis-report-released))
+- ["Sounding the Alarm,"](https://robertgarcia.house.gov/sites/evo-subsites/robertgarcia.house.gov/files/evo-media-document/false-alerts-final-report-5.10.pdf) Rep. Garcia, 12 May 2025
 
 ## 3. Soil testing: raised by residents, never an option
 
 **Asked for.** 74 comments: 43 in the soil-testing group and 31 more under debris removal. The state's own findings page named soil testing a top concern. None of the 19 options mentions soil, testing, contamination or water quality.
 
-**Policy response.** None in the state's process, and no document says why. Outside it, FEMA told the state in February 2025 that it "will not reimburse the costs for soil testing." The county ran free lead testing and approved a $1 million remediation program. A 2026 state law orders lead and asbestos regulations by 2028 if a companion bill takes effect; its summary does not mention soil.
+**Policy response.** None in the state's process, and no document says why. Outside it, FEMA told the state in February 2025 that it "will not reimburse the costs for soil testing unless testing shows that positive results are clearly attributed to the fires." The county ran free lead testing and approved a $1 million remediation program. A 2026 state law orders lead and asbestos regulations by 2028 if a companion bill takes effect; its summary does not mention soil.
 
 **Responsible.** Contested. FEMA pointed to the state. A county supervisor called state reimbursement of the county "never a feasible option." We found no agency that takes responsibility for declaring a cleared lot safe.
 
 **Commitment.** From the state's process: none. The EPA promised lead-sampling results by spring 2026 and delivered them in May. Two county report-backs were not found.
 
-**Delivery.** Debris and six inches of soil were removed without confirmation sampling. County sampling found lead averaging above California's screening level in 10 of 23 grids of standing Eaton homes; the EPA found 95 of 100 randomly sampled Eaton parcels below the federal level at the surface. All testing so far covers lead only. Remediation is funded, not started. [Figure 8] [Figure 9]
+**Delivery.** Debris and six inches of soil were removed without confirmation sampling. County sampling found lead averaging above California's screening level in 10 of 23 grids of standing Eaton homes; the EPA found 95 of 100 randomly sampled Eaton parcels below the federal level at the surface. The county's 2025 sample tested metals and other fire chemicals; the EPA sample and the free programs test lead only. Remediation is funded, not started. [Figure 8] [Figure 9]
 
-**Sources.** [NEED: full URLs; the mapping file records host and document id only]
-- Engaged California findings page, action plan and data files (engaged.ca.gov)
-- FEMA Region 9 letter, 19 Feb 2025 (copy at engineering.purdue.edu) [NEED: a second copy, from another host or from Cal OES]
-- EPA releases, 13 Jan and 19 May 2026 (epa.gov)
-- County Board motions, 15 Apr and 4 Nov 2025 (file.lacounty.gov)
-- County Public Health final findings, 12 Sep 2025 (publichealth.lacounty.gov)
-- Supervisor Barger statement, 16 Jan 2026 (kathrynbarger.lacounty.gov)
-- AB 1642, chaptered 15 Sep 2026 (digitaldemocracy.calmatters.org)
+**Sources.** Every link opened 14 November 2026.
+- Engaged California [findings page](https://engaged.ca.gov/lafires-recovery/agenda-setting-findings/), [action plan](https://engaged.ca.gov/lafires-recovery/action-plan/) and data files ([comments](https://engaged.ca.gov/public/data/wildfire_agenda_setting_comments.csv), [deliberation comments](https://engaged.ca.gov/public/data/lafires_deliberation_all_comments.csv), [votes](https://engaged.ca.gov/public/data/lafires_voting_data_v3.json))
+- FEMA Region 9 letter, 19 Feb 2025 ([copy at engineering.purdue.edu](https://engineering.purdue.edu/PlumbingSafety/resources/Wildfire-Soils-Cleanup-Theory-2025-FEMA-to-CalOES.pdf)) [NEED: a second copy. On 14 Nov 2026 none was found on fema.gov, caloes.ca.gov, gov.ca.gov or lacounty.gov; request it from Cal OES]
+- EPA releases, [12 Jan](https://www.epa.gov/newsreleases/epa-announces-soil-sampling-initiative-help-la-residents-further-validate-fire-cleanup) and [18 May 2026](https://www.epa.gov/newsreleases/epas-eaton-fire-soil-sampling-confirms-federal-cleanup-protocols-effectively)
+- County Board motions, [15 Apr](https://file.lacounty.gov/SDSInter/bos/supdocs/202168.pdf) and [4 Nov 2025](https://file.lacounty.gov/SDSInter/bos/supdocs/209300.pdf)
+- [County Public Health final findings](https://publichealth.lacounty.gov/phcommon/public/media/mediapubhpdetail.cfm?prid=5138), 12 Sep 2025
+- [Supervisor Barger statement](https://kathrynbarger.lacounty.gov/supervisor-barger-issues-statement-on-soil-and-lead-testing-efforts-following-eaton-fire/), 16 Jan 2026
+- AB 1642, signed 15 Sep 2026 ([Governor's release](https://www.gov.ca.gov/2026/09/15/governor-newsom-signs-wildfire-recovery-package-to-strengthen-protections-and-focus-on-rebuilding-for-survivors/))
 
 ## What the gaps show
 
@@ -140,7 +140,7 @@ We traced each issue through primary documents, re-opening 24 key ones by hand. 
 - Three issues, not the whole recovery.
 - Comment counts are the state's own groups. Figure 3 shows two vote measures: ours, and the state's "average support."
 - The action plan is undated and may change [NEED: publish-day re-check date].
-- The comments are public and anonymous [NEED: confirm the ca.gov conditions of use allow this derivative].
+- The comments are public and anonymous. The state's [conditions of use](https://engaged.ca.gov/conditions-of-use/) say information on its site is "in the public domain" unless otherwise indicated.
 - UpSight is independent. This page is not affiliated with or endorsed by the State of California, Engaged California, any agency named here, or any campaign.
 
 ## Trace your own input
@@ -157,7 +157,12 @@ Run public or stakeholder input for a city, a county, a foundation or a client? 
 - Styling from `30-strategy/brand-style-guide.md`: Inter for text, JetBrains Mono for column labels, brand tokens only. Caption and source text at body contrast (`--mkt-text`, or `--mkt-text-dim` at 0.7 on `--mkt-bg`); never the 0.6 variant on the alt background without checking 4.5:1. Table headers at full text color.
 - Status and labels are printed as words in every cell. Color may reinforce a word; it never replaces one.
 - No dashes or blank cells. Every cell says in words what it means.
-- Status words: **announced** = stated publicly, no approved money or started work found; **funded** = money approved, work not shown as started; **underway** = work started, not finished; **completed** = reported finished. Any other word in a status cell is explained in that row's evidence cell. [NEED: Rick to confirm these definitions; the brief lists the four words but does not define them]
+- Status words, each a **proposed definition** for Rick to approve (the brief lists the four words but defines none).
+  - **announced** (proposed definition): an official document says it will happen, and we found no approved money and no sign that work has started.
+  - **funded** (proposed definition): money for it has been approved, in a budget, rate decision or grant; if work has also started, the cell says "funded, underway".
+  - **underway** (proposed definition): a primary document shows the work has started and does not report it finished.
+  - **completed** (proposed definition): a primary document reports it finished; the word says nothing about whether it was enough.
+  - Two words in one cell mean both are documented. Any other word in a status cell is explained in that row's evidence cell. [NEED: Rick to approve the four proposed definitions, N12]
 - Print the caption exactly as written, on the figure, directly under it.
 
 ### Figure 1. The three issues at a glance
@@ -179,29 +184,30 @@ Type: five-step horizontal flow (stacks vertically on phones). Each step: label,
 | Step | What happened | Numbers |
 |---|---|---|
 | 1. Comments, March to 16 May 2025 | The public wrote in | 1,289 comments, about 52,000 words |
-| 2. State grouping | The state sorted comments into 11 topics and 38 groups | 381 comments (29.6%) did not become a theme: 276 in a group called "Other", 105 in no group |
+| 2. State grouping | Commenters wrote under one of 10 topics or none; the state's AI then sorted each topic's comments into groups | 36 named groups, plus an "Other" group in every topic. 381 comments (29.6%) did not become a theme: 276 in a topic's "Other" group, 105 "general comments" outside any topic |
 | 3. Policy options | Leaders "used their expertise and generative AI" to write options | 19 options. What was left out, and why: not documented in reviewed sources |
 | 4. Rating | Votes on a 7-point scale, plus comments | 251 voters cast 3,977 votes and left 1,509 comments and replies. Voters: 65 Palisades zone, 72 Eaton zone, 114 outside both. The state says "more than 3,000 community members were invited" |
 | 5. Action plan | "How we're responding" text | 5 focus areas. The plan carries no date |
 
 Caption: "Source: Engaged California pages and data files (wildfire_agenda_setting_comments.csv, lafires_deliberation_all_comments.csv, lafires_voting_data_v3.json), engaged.ca.gov, downloaded 13 Oct 2026. Counts recomputed by UpSight from the files. Real data, not illustrative."
 
-### Figure 3. How voters rated six of the 19 options
+### Figure 3. How voters rated seven of the 19 options
 
 Type: table (a dot plot of the four zone columns is optional; if drawn, label every dot with its value and n).
 
 | Option (state's title) | Votes | Supportive, all voters | Palisades zone | Eaton zone | Outside both zones | State's reported average support |
 |---|---|---|---|---|---|---|
 | Bury power lines and equipment safety measures | 210 | 95% | 98% (n=60) | 91% (n=57) | 95% (n=93) | 92% |
-| Improve water systems for firefighting | 209 | 90% | 88% (n=60) | 90% (n=58) | 92% (n=91) | 87% [NEED: confirm this is the action plan's "water for firefighting"] |
+| Improve water systems for firefighting | 209 | 90% | 88% (n=60) | 90% (n=58) | 92% (n=91) | 87% |
 | Strengthen emergency communication networks | 209 | 88% | 88% (n=60) | 83% (n=58) | 90% (n=91) | 86% |
-| Help people find financial support programs | 211 | 86% | 87% (n=60) | 87% (n=60) | 86% (n=91) | 82% [NEED: confirm this is the action plan's "financial-support directory"] |
-| Emergency communication hubs in communities | 215 | 70% | 55% (n=60) | 72% (n=60) | 79% (n=95) | Not one of the action plan's five focus areas; no state figure in our files |
-| Increased housing density and expedited permits | 214 | 39% | 24% (n=58) | 37% (n=62) | 49% (n=94) | [NEED: confirm whether this is the action plan's "permitting teams" (82%). If it is, the two figures conflict and need an explanation; if not, write "Not one of the action plan's five focus areas; no state figure in our files"] |
+| Help people find financial support programs | 211 | 86% | 87% (n=60) | 87% (n=60) | 86% (n=91) | 82% |
+| Dedicate teams to support permitting | 212 | 83% | 85% (n=59) | 87% (n=60) | 78% (n=93) | 82% |
+| Emergency communication hubs in communities | 215 | 70% | 55% (n=60) | 72% (n=60) | 79% (n=95) | 74%. Not one of the action plan's five focus areas |
+| Increased housing density and expedited permits | 214 | 39% | 24% (n=58) | 37% (n=62) | 49% (n=94) | 44%. Not one of the action plan's five focus areas; a separate option from "Dedicate teams to support permitting" |
 
-Caption: "Source: Engaged California voting file lafires_voting_data_v3.json (engaged.ca.gov), downloaded 13 Oct 2026; percentages recomputed by UpSight. Real data, not illustrative. Six of the 19 options shown. 'Supportive' = votes of 5, 6 or 7 on the state's 7-point scale, divided by all non-blank votes on that option. n = voters in that zone who voted on that option. 'State's reported average support' is the figure on the state's action plan page, which uses a different formula."
+Caption: "Source: Engaged California voting file lafires_voting_data_v3.json (engaged.ca.gov), downloaded 13 Oct 2026 (permitting-teams row: same file, downloaded 14 Nov 2026); percentages recomputed by UpSight. Real data, not illustrative. Seven of the 19 options shown: the action plan's five focus areas and two others. 'Supportive' = votes of 5, 6 or 7 on the state's 7-point scale, divided by all non-blank votes on that option. n = voters in that zone who voted on that option. 'State's reported average support' is the figure the state shows on its action plan page and stores in the same file. The state does not define it in words; UpSight found it equals each option's average vote rescaled so 'Strongly opposed' is 0% and 'Strongly supportive' is 100%, which matches the state's figure for all 19 options."
 
-Note for the builder: the action plan's fifth focus area ("permitting teams", 82%) has no recomputed row in the mapping file. [NEED: add its row, or state on the figure that it is not shown.] [NEED: the state's definition of "average support", to print in the caption after "uses a different formula"]
+Note for the builder: the permitting-teams row ("Dedicate teams to support permitting", the action plan's fifth focus area) was recomputed from `lafires_voting_data_v3.json` on 14 Nov 2026 by the same method; that method reproduces the mapping file's other six rows exactly. The action plan lists its five focus areas under the same titles as the options, so the water and financial-support rows are confirmed matches. The average-support formula is UpSight's reconstruction (analyst-inferred), not a state definition; the caption says so.
 
 ### Figure 4. Underground power lines: what has been delivered
 
@@ -281,16 +287,16 @@ Type: table.
 
 | Item | Status | Evidence, with date |
 |---|---|---|
-| Debris and six-inch soil removal, with no sampling to confirm | completed | 5,643 Eaton parcels excavated; the state calls it the "fastest post-disaster debris removal in California history" [NEED: which state document says this] |
-| County and Roux representative sampling | completed | More than 800 properties, 18 Feb to 26 Mar 2025; preliminary results 10 Apr 2025, final 12 Sep 2025. Eaton: lead averaged above California's 80 mg/kg screening level in 10 of 23 grids of standing homes. Palisades: two isolated readings above the level. Cleared parcels "can still have areas" above the level |
-| EPA lead sampling, 100 random Eaton parcels | completed | 4,200 borings. 95 of 100 parcels below the federal 200 mg/kg level at the surface; 98 of 100 at six inches (19 May 2026). Lead only, burned footprints only, federal not state level, Eaton only |
+| Debris and six-inch soil removal, with no sampling to confirm | completed | 5,643 Eaton parcels excavated; the state calls it the "fastest post-disaster debris removal in California history" ([Engaged California action plan](https://engaged.ca.gov/lafires-recovery/action-plan/), "Did you know?" box) |
+| County and Roux representative sampling | completed | More than 800 properties, 18 Feb to 26 Mar 2025; preliminary results 10 Apr 2025, final 12 Sep 2025. Tested for metals, PAHs (chemicals from burning) and dioxins. Eaton: lead averaged above California's 80 mg/kg screening level in 10 of 23 grids of standing homes. Palisades: no large-scale impacts, including for lead; two isolated areas exceeded levels for other chemicals. Cleared parcels "can still have areas" above residential screening levels |
+| EPA lead sampling, 100 random Eaton parcels | completed | 4,200 borings. 95 of 100 parcels below the federal 200 mg/kg level at the surface; 98 of 100 at six inches (18 May 2026). Lead only, burned footprints only, federal not state level, Eaton only |
 | Free county lead testing for residents | underway; moved to USC | Launched May 2025; more than 1,600 samples by 4 Nov 2025; moved to USC's CLEAN program 15 Aug 2026 (USC reports 5,000 to 6,000 samples, funded by FireAid and LA Care) |
 | Remediation program | funded, not started | $1 million from the county plus $2 million in state money through the California Community Foundation; launch planned for fall 2026 |
 | State regulations (AB 1642) | enacted; regulations not yet written | Signed 15 Sep 2026; regulations due 31 Dec 2028, only if a companion bill takes effect |
 | Further state funding for testing | not found | No state funding for testing beyond the items above found as of 13 Oct 2026 |
-| Drinking water | completed | All nine affected water systems cleared by 9 May 2025 (State Water Board). Palisades declared safe 7 Mar 2025 after 469 samples. Malibu boil-water notice lifted 8 Aug 2025 |
+| Drinking water | completed | All nine fire-affected water systems cleared by 9 May 2025 (State Water Board). Palisades declared safe 7 Mar 2025 after 469 samples. A later Malibu boil-water notice (6 to 8 Aug 2025) came from a Caltrans bridge project, not the fires |
 
-Caption: "Source: County Public Health final findings (12 Sep 2025) and Roux report, EPA releases (13 Jan and 19 May 2026), County Board motions (15 Apr and 4 Nov 2025), LA County Development Authority letter (21 Jul 2026), USC CLEAN program page (4 Aug 2026), AB 1642 (chaptered 15 Sep 2026), State Water Board release (9 May 2025), LADWP (7 Mar 2025), LA County Malibu notice (8 Aug 2025). mg/kg = milligrams of lead per kilogram of soil. Status as of 13 Oct 2026. Real data from primary documents, compiled by UpSight."
+Caption: "Source: County Public Health final findings (12 Sep 2025) and Roux report, Engaged California action plan (read 14 Nov 2026), EPA releases (12 Jan and 18 May 2026), County Board motions (15 Apr and 4 Nov 2025), LA County Development Authority letter (21 Jul 2026), USC CLEAN program page (4 Aug 2026), AB 1642 (chaptered 15 Sep 2026), State Water Board release (9 May 2025), LADWP (7 Mar 2025), LA County Malibu notices (6 and 8 Aug 2025). mg/kg = milligrams of lead per kilogram of soil. Status as of 13 Oct 2026. Real data from primary documents, compiled by UpSight."
 
 ### Figure 9. Soil testing: the state's findings text against the record
 
@@ -300,12 +306,12 @@ Type: table.
 |---|---|---|
 | "Residents want soil testing" | Official documented | The state's own comment file |
 | "The federal government has declined comprehensive soil testing" | Official documented | FEMA letter, 19 Feb 2025. Partly overtaken by the EPA's 100-parcel sample, which is lead only and Eaton only |
-| "The state... [is] proactively testing soil" | No link found | State soil guidance (Aug 2025) and a remediation appropriation exist; no state-run sampling found [NEED: source document for the Aug 2025 state guidance] |
+| "The state... [is] proactively testing soil" | No link found | State soil guidance (Aug 2025) and a remediation appropriation exist; no state-run sampling found [NEED: primary link for DTSC, "Residential Soil Evaluation: Guidance for the 2025 Los Angeles Wildfires", Aug 2025. Its home is dtsc.ca.gov/emergency-wildfire-guidance/, which refused automated requests on 14 Nov 2026; open it in a browser. Do not cite the only copy that loaded, on uphelp.org, a non-government site] |
 | "...community, and universities are proactively testing" | Official documented | County and USC testing programs |
 | "Confusion about who is responsible persists" | Analyst-inferred | Documents show each level of government deferring to another; none says "confusion" or assigns responsibility |
 | A state commitment that answers this finding | No link found | No commitment found in reviewed sources as of 13 Oct 2026 |
 
-Caption: "Source: Engaged California findings page (engaged.ca.gov/lafires-recovery/agenda-setting-data-insights/, read 13 Oct 2026) checked against the primary documents listed under issue 3. Labels: official documented = a primary document says it; analyst-inferred = plausible from documents, not stated; no link found = no document found after searching. Real data, compiled by UpSight."
+Caption: "Source: Engaged California findings page (engaged.ca.gov/lafires-recovery/agenda-setting-findings/, read 14 Nov 2026) checked against the primary documents listed under issue 3. Labels: official documented = a primary document says it; analyst-inferred = plausible from documents, not stated; no link found = no document found after searching. Real data, compiled by UpSight."
 
 ### Figure 10. Promised reports we could not find
 
@@ -329,23 +335,25 @@ Every factual statement on the page, in the text and in the figures, with the va
 
 ### Open placeholders (fill or cut every one)
 
-| # | Placeholder | Where on the page |
-|---|---|---|
-| N1 | Link to the Carnegie review. A candidate URL sits in `20-research/market-intel/civic-engagement-agenda-evaluation-2026-10.md` (carnegieendowment.org/posts/2025/11/engaged-california-la-wildfires-lessons). That file is outside the brief's list; confirm it is the review and that it holds the quote | Intro |
-| N2 | UpSight theme result: number of themes, and how many of the 381 unthemed comments now sit in a theme. Status 2026-10-17 records "Rick clicked Analyze survey; themes expected in 20 to 30 minutes" and no result after that | How this was built; Gaps 1 |
-| N3 | City mapping. The coordinator's brief says "mapped by city"; the vault does not show it. The Engaged file has 3 columns and no place column (dogfooding log 2026-10-17). Status 2026-10-09 says the canvas map "stays empty for Engaged until places are extracted from comment text". The mapping counts only 3 to 5 comments per group that name a place | How this was built |
-| N4 | UpSight public share link to the comments. The brief requires that viewers can inspect the evidence. The vault places the clean Engaged survey on staging (status 2026-10-17); nothing shows it on production | How this was built |
-| N5 | Full URLs for every source. The mapping gives host and file id only (for example `bos/supdocs/199710.pdf`), and no host at all for the SCE rebuild plan and letter or the LADWP statement | Three Sources blocks; figure captions |
-| N6 | Challenge channel (email or form), and Rick's agreement to "correct the page and note the change" | After Gaps |
-| N7 | The state's definition of "average support" | Figure 3 caption |
-| N8 | Publish-day re-check date (mapping review step 5) | Method |
-| N9 | A second copy of the FEMA letter, from another host or from Cal OES (mapping review step 1) | Issue 3 Sources |
-| N10 | ca.gov conditions of use for a derivative (experiment file, "Why this dataset") | Method |
-| N11 | CTA destination | CTA |
-| N12 | Rick confirms the status-word definitions. The brief lists the four words and defines none; the mapping says "per the brief's definitions" | Figure conventions |
-| N13 | Figure 3: confirm the name match for water (87%) and financial support (82%); confirm whether "Increased housing density and expedited permits" (39% supportive) is the action plan's "permitting teams" (82%); add or exclude the permitting-teams row | Figure 3 |
-| N14 | The state document behind "fastest post-disaster debris removal in California history" | Figure 8 |
-| N15 | The source document for the Aug 2025 DTSC and CalRecycle soil guidance; the mapping's issue 3 source list has only the Rev. 11/2024 debris guide | Figure 9 |
+Research pass on N1, N5, N7, N9, N10, N12 to N15 done 2026-11-14 (web search and fetch, primary documents only). N2, N3, N4, N6, N8 and N11 are the founder's own decisions and were not researched.
+
+| # | Placeholder | Where on the page | Status, checked 2026-11-14 |
+|---|---|---|---|
+| N1 | Link to the Carnegie review. A candidate URL sits in `20-research/market-intel/civic-engagement-agenda-evaluation-2026-10.md` (carnegieendowment.org/posts/2025/11/engaged-california-la-wildfires-lessons). That file is outside the brief's list; confirm it is the review and that it holds the quote | Intro | **Resolved.** https://carnegieendowment.org/posts/2025/11/engaged-california-la-wildfires-lessons loads. "The Promise and Potential of Engaged California," Micah Weinberg, nonresident scholar, Carnegie California, 24 Nov 2025; Carnegie labels it commentary and says it takes no institutional positions. Exact words: "Participants need to see how their input has been used; otherwise, trust and future participation will erode." It also asks for "receipts". **Changed on the page:** "review" became "commentary by a Carnegie Endowment scholar", and the page now says Carnegie was a partner in the process: ODI's post of 21 Jul 2025 says ODI worked "in partnership with the Carnegie Endowment for International Peace in this effort" (https://innovation.ca.gov/blog/posts/fire-survivors-shaping-la-fire-rebuilding-action-plan-engaged-california/), and the action plan lists Carnegie under "Our partners and advisors". Rick to confirm the wording |
+| N2 | UpSight theme result: number of themes, and how many of the 381 unthemed comments now sit in a theme. Status 2026-10-17 records "Rick clicked Analyze survey; themes expected in 20 to 30 minutes" and no result after that | How this was built; Gaps 1 | Open: founder's decision |
+| N3 | City mapping. The coordinator's brief says "mapped by city"; the vault does not show it. The Engaged file has 3 columns and no place column (dogfooding log 2026-10-17). Status 2026-10-09 says the canvas map "stays empty for Engaged until places are extracted from comment text". The mapping counts only 3 to 5 comments per group that name a place | How this was built | Open: founder's decision |
+| N4 | UpSight public share link to the comments. The brief requires that viewers can inspect the evidence. The vault places the clean Engaged survey on staging (status 2026-10-17); nothing shows it on production | How this was built | Open: founder's decision |
+| N5 | Full URLs for every source. The mapping gives host and file id only (for example `bos/supdocs/199710.pdf`), and no host at all for the SCE rebuild plan and letter or the LADWP statement | Three Sources blocks; figure captions | **Resolved for the three Sources blocks**, except the second FEMA copy (N9). Every URL there loaded on 14 Nov 2026 and was checked against the document's title and date. Notes: the LADWP statement exists only as LADWP's recap posted on pacpalicc.org; AB 1642 is linked through the Governor's release because leginfo.legislature.ca.gov refused automated requests; the SCE table page now reads "Updated as of 10/21/2026". **Caption-only sources also checked and loading:** CPUC rate-case fact sheet, 18 Sep 2025 (https://www.cpuc.ca.gov/-/media/cpuc-website/divisions/energy-division/documents/general-rate-cases/sce/fact-sheet-sce-grc-091825.pdf); SCE petition to amend its wildfire plan, 9 Apr 2026, SCE's copy (https://www.sce.com/sites/default/files/AEM/Wildfire%20Mitigation%20Plan/2026-2028/SCE%202026-2028%20WMP%20Petition%20to%20Amend%20%28April%209%2C%202026%29.pdf); SCE data response ES-DR-EUP-26-02, 29 Jun 2026 (https://www.sce.com/sites/default/files/AEM/Wildfire%20Mitigation%20Plan/2026-2028/ES-DR-EUP-26-02.pdf); supplemental budget fact sheet, 29 Sep 2026 (https://file.lacounty.gov/SDSInter/lac/1218280_2026-27SupplementalBudgetFactSheet.pdf); Citygate report, 18 May 2026 (https://file.lacounty.gov/SDSInter/lac/1208708_InvestigationReportoftheEatonFireEvacuationAlerts_05-18-26_.pdf); Attorney General notice, 12 Feb 2026 (https://oag.ca.gov/node/618579); LACDA letter, 21 Jul 2026 (https://file.lacounty.gov/SDSInter/bos/supdocs/218794.pdf); State Water Board release, 9 May 2025 (https://www.waterboards.ca.gov/press_room/press_releases/2025/pr20250509-la-wildfire-recovery.html; the .pdf address does not load); Malibu notices (https://lacounty.gov/2025/08/06/la-county-waterworks-issues-boil-water-notice-for-portions-of-malibu-due-to-water-supply-disruption/ and https://lacounty.gov/2025/08/08/boil-water-notice-lifted-for-la-county-waterworks-customers-in-malibu/); Roux's post, 6 Nov 2025 (https://www.rouxinc.com/final-report-eaton-and-palisades-fires/). **Still without a URL:** SEC 8-K exhibit (30 Jul 2026), AECOM plan for the City (Feb 2026), County letter to Rep. Garcia and FCC letter (1 Apr 2025), USC CLEAN page, LADWP 7 Mar 2025 notice, the Roux report PDF itself |
+| N6 | Challenge channel (email or form), and Rick's agreement to "correct the page and note the change" | After Gaps | Open: founder's decision |
+| N7 | The state's definition of "average support" | Figure 3 caption | **Resolved as far as the record allows.** No state page defines it in words (checked the action plan, findings pages and ODI posts of 21 Jul and 21 Nov 2025). The action plan's chart prints the fourth field of each option in https://engaged.ca.gov/public/data/lafires_voting_data_v3.json as "% average support". UpSight recomputed that field for all 19 options: it equals (average vote − 1) ÷ 6 on the 1-to-7 scale, to within 0.0001. The caption gives this as UpSight's finding, not the state's definition (analyst-inferred) |
+| N8 | Publish-day re-check date (mapping review step 5) | Method | Open: founder's decision |
+| N9 | A second copy of the FEMA letter, from another host or from Cal OES (mapping review step 1) | Issue 3 Sources | **Open.** Searched fema.gov, caloes.ca.gov, gov.ca.gov and lacounty.gov, and the exact sentence, on 14 Nov 2026: no government-hosted copy found. Only the Purdue copy loads (signed by Curtis Brown, FEMA, to Nancy Ward, Cal OES, 19 Feb 2025). Next step: ask Cal OES. The Purdue copy shows the page had cut a condition from the quote; fixed (see row 63) |
+| N10 | ca.gov conditions of use for a derivative (experiment file, "Why this dataset") | Method | **Resolved.** https://engaged.ca.gov/conditions-of-use/ (ODI, updated 1 May 2026): "In general, information presented on this website, unless otherwise indicated, is in the public domain. You may distribute or copy it as permitted by law." The statewide policy (https://www.ca.gov/legal/conditions-of-use/) says the same. Neither requires attribution; the page attributes anyway. One caution for Rick: both say permission is needed for information "not owned or created by" the state. The comments were written by residents, and the conditions also give ODI "the unlimited right to use" what is submitted. No data page marks the comment files as restricted. A lawyer's read is optional, not blocking |
+| N11 | CTA destination | CTA | Open: founder's decision |
+| N12 | Rick confirms the status-word definitions. The brief lists the four words and defines none; the mapping says "per the brief's definitions" | Figure conventions | **Drafted, awaiting Rick.** Four proposed definitions are in the figure conventions, written to fit every status cell on the page, including the paired ones ("funded, underway", "underway, partly completed") |
+| N13 | Figure 3: confirm the name match for water (87%) and financial support (82%); confirm whether "Increased housing density and expedited permits" (39% supportive) is the action plan's "permitting teams" (82%); add or exclude the permitting-teams row | Figure 3 | **Resolved.** The action plan (https://engaged.ca.gov/lafires-recovery/action-plan/) names its five focus areas with the option titles themselves: "Improve water systems for firefighting" 87% and "Help people find financial support programs" 82% match. The permitting focus area is the separate option "Dedicate teams to support permitting" (82%, 73 comments), not "Increased housing density and expedited permits", which the state's file scores 44%, the lowest of the 19. So there is no conflict. Permitting row added: 212 votes, 83% supportive; Palisades 85% (n=59), Eaton 87% (n=60), outside both 78% (n=93). Also found: the state's file holds a figure for every option, so "no state figure in our files" was wrong for the hubs row; it is 74% |
+| N14 | The state document behind "fastest post-disaster debris removal in California history" | Figure 8 | **Resolved.** The Engaged California action plan itself, "Did you know?" box under permitting: "Federal, state, and local teams cleared debris from the 2025 fires in only six months. This was the fastest post-disaster debris removal in California history." (https://engaged.ca.gov/lafires-recovery/action-plan/) |
+| N15 | The source document for the Aug 2025 DTSC and CalRecycle soil guidance; the mapping's issue 3 source list has only the Rev. 11/2024 debris guide | Figure 9 | **Partly resolved; placeholder kept.** The document is DTSC, "Residential Soil Evaluation: Guidance for the 2025 Los Angeles Wildfires", with a cover letter on CalEPA letterhead, Aug 2025 (PDF dated 22 Aug 2025). Its home is https://dtsc.ca.gov/emergency-wildfire-guidance/, but dtsc.ca.gov returned 403 to every automated request, so no DTSC link could be confirmed. The only copy that loaded is on uphelp.org (not a government site; not used). Open it in a browser. **New issue to check there:** that copy's key points say "Property owners are responsible for coordinating sampling and cleanup." If DTSC's copy says the same, Figure 9 row 5 ("none... assigns responsibility") and "Responsible. Contested." need rewording |
 
 ### Header, intro and "How this was built"
 
@@ -354,16 +362,16 @@ Every factual statement on the page, in the text and in the figures, with the va
 | 1 | 2025; 1,289 comments on LA fire recovery; collected March to May 2025 (Figure 2: to 16 May) | Mapping, "The state's process" | OK |
 | 2 | The state turned them into 19 options, asked people to rate them, published an action plan with "how we're responding" text | Mapping, "The state's process" | OK |
 | 3 | The state already reports its own follow-through | Brief p.2, ref [3]; experiment file, 2026-10-09 reconciliation | OK |
-| 4 | Carnegie Endowment review, Nov 2025: "participants need to see how their input has been used" | Experiment file, Hypothesis | QUOTE, NEED N1. The experiment file paraphrases sources; check the exact words |
+| 4 | Carnegie Endowment commentary, Nov 2025: "participants need to see how their input has been used"; Carnegie was a partner in the process | Carnegie page; ODI post, 21 Jul 2025; action plan partner list (N1) | OK, checked 2026-11-14. The words match; the original opens with a capital P. The page now says "commentary", not "review" |
 | 5 | Three labels and their definitions; four status words | Brief p.2; mapping header | OK |
 | 6 | Records as of 13 Oct 2026 | Mapping header | OK; move to the publish-day date if re-checked |
 | 7 | A shared subject does not prove cause | Brief p.2 | OK |
 | 8 | State data files downloaded 13 Oct 2026; every figure recounted | Mapping, process source line | OK |
-| 9 | 11 topics and 38 groups | Mapping | FLAG: issue 3 says the findings page ranks "first of ten topics". Confirm what the eleventh topic is before both numbers appear |
-| 10 | 381 comments, 29.6%, in "Other" or no group (Figure 2: 276 + 105) | Mapping | OK; 381 / 1,289 = 29.6%. FLAG: the 31 soil comments in "Debris removal > Other" may be inside the 276 "Other" count. Do not add them to the 381 anywhere |
-| 11 | Options written by "a group of policy, disaster relief, and community leaders" using "their expertise and generative AI" | Mapping | QUOTE (the page splits one sentence into two fragments) |
+| 9 | The state's 10 topics and 36 named groups (was "11 topics and 38 groups") | Findings page and comment file, checked 2026-11-14 | RESOLVED. The state "asked participants to rate the importance of 10 disaster-related topics", and its data dictionary says "There were 10 topics", plus comments "not in response to a specific topic" labelled "general comment". In the file, "General comment" holds exactly the 105 comments with no group. The file's 38 distinct group values are 36 named groups, "Other" and blank, so "38 groups" had counted "Other" and "no group" as groups. Fixed in the text and Figure 2. Note: the state's findings page shows some group names that differ from the file (for example "Satisfied with debris removal"); the page uses the file's names |
+| 10 | 381 comments, 29.6%, in "Other" or no group (Figure 2: 276 + 105) | Mapping; comment file, checked 2026-11-14 | OK; 381 / 1,289 = 29.6%. Confirmed: the 31 "Debris removal and environmental recovery > Other" comments are inside the 276. Do not add them to the 381 anywhere |
+| 11 | Options written by "a group of policy, disaster relief, and community leaders" using "their expertise and generative AI" | Mapping; action plan, checked 2026-11-14 | OK. The action plan reads: "A group of policy, disaster relief, and community leaders used their expertise and generative AI to turn the 1,289 comments... into 19 actionable policy options" |
 | 12 | No document says what was left out, or why | Mapping | OK (absence) |
-| 13 | 251 voters, 3,977 votes; 65 Palisades, 72 Eaton, 114 neither. Figure 2 adds 1,509 comments and replies and "more than 3,000 community members were invited" | Mapping | OK; QUOTE for the invitation line |
+| 13 | 251 voters, 3,977 votes; 65 Palisades, 72 Eaton, 114 neither. Figure 2 adds 1,509 comments and replies and "more than 3,000 community members were invited" | Mapping; voting and deliberation files, action plan, checked 2026-11-14 | Voter and vote counts reproduced from the file. Invitation line matches the action plan. NEW FLAG: the action plan says "1,504 Comments and replies"; the deliberation file has 1,509 rows, 7 of them exact duplicates (same id, same text), so 1,502 unique. Figure 2's 1,509 counts the duplicates. Rick to choose 1,502 with a note, or quote the state's 1,504 |
 | 14 | Action plan: five focus areas, no date | Mapping | OK; re-read on publish day |
 | 15 | Comments imported into UpSight as an anonymous survey, one response per comment | Status 2026-10-16, 2026-10-17; dogfooding log 2026-10-16 | FLAG: done on staging; see N4 |
 | 16 | 24 key documents re-opened by hand | Mapping header; experiment file | FLAG: this was the research pass, not the brief's 10-hour human review. Nothing in the vault says the human review is done |
@@ -373,23 +381,23 @@ Every factual statement on the page, in the text and in the figures, with the va
 
 | # | Claim | Rests on | Flag |
 |---|---|---|---|
-| 18 | 88 comments in the "Underground power lines" group | Mapping, issue 1 | OK. The mapping also calls it "the largest single group"; the page drops that, because "Emergency communication" has 112 and the vault does not say whether that is a topic or a group |
-| 19 | The option "ranked first of the 19" | Mapping, "Why these three issues" ("top-ranked option") | FLAG: confirm the measure. The vote table shows it highest of the six on both measures; the other 13 options are not in the vault. Voters rated each option on a 7-point scale; nobody ranked them |
-| 20 | EO N-24-25 (Mar 2025) suspended environmental and coastal permitting for rebuilding power and telecom lines; quote "if such changes are determined appropriate by the utility" | Mapping (CEQA and Coastal Act) | QUOTE. GK: "environmental" stands for CEQA |
+| 18 | 88 comments in the "Underground power lines" group | Mapping, issue 1; comment file, checked 2026-11-14 | OK. "Emergency communication" (112) is a topic in the state's file, not a group; "Underground power lines" (88) is the largest named group. The page can restore "the largest single group" if wanted |
+| 19 | The option "ranked first of the 19" | Voting file, checked 2026-11-14 | OK on the number: it is highest of all 19 on both measures (95% supportive; the state's 92%), and the state's chart places it 19th of 19, "most community support". FLAG on the word only: voters rated each option; the state's own page says "ranked" |
+| 20 | EO N-24-25 (Mar 2025) suspended environmental and coastal permitting for rebuilding power and telecom lines; quote "if such changes are determined appropriate by the utility or provider" | gov.ca.gov PDF, checked 2026-11-14 | QUOTE FIXED: the order says "by the utility or provider"; the page had dropped "or provider". GK: "environmental" stands for CEQA |
 | 21 | The order mandates no undergrounding and sets no miles, deadline or money | Mapping | OK |
 | 22 | A 90-day utility report ordered by the Mayor was not found | Mapping (EEO No. 5, due 19 Jun 2025) | OK (absence) |
 | 23 | SCE for Altadena and Malibu area; LADWP for Palisades; CPUC for costs; neither executive order binds telecoms; no state agency charged | Mapping, responsible body | OK. GK: the expansions of LADWP and CPUC |
-| 24 | SCE: preliminary 153 circuit miles "over a number of years" | Mapping | QUOTE. FLAG: 40 + "more than 90" + 23 already passes 153 before the 19 under evaluation. Confirm how SCE gets to 153 |
+| 24 | SCE: preliminary 153 circuit miles "over a number of years" | SCE plan and letter, 11 Apr 2025, checked 2026-11-14 | RESOLVED. The letter: about 130 circuit miles in high fire-risk areas (about 40 in Altadena and "more than 90" in the Malibu area) plus about 23 in Altadena outside them = about 153. The 19 under evaluation are not in the 153. Every part is approximate in SCE's text. Quote checked: "implemented over a number of years" |
 | 25 | LADWP "committed to undergrounding" in the Palisades where feasible | Mapping (15 Dec 2025) | QUOTE. FLAG: cited via pacpalicc.org, not an LADWP host |
 | 26 | The county's "more than 150 miles" is SCE's number | Mapping (Blueprint, footnote 20) | QUOTE |
 | 27 | No state or county document sets a binding date, mileage or budget | Mapping, commitment and gaps | OK (absence) |
 | 28 | County Board: telecoms "have refused"; no complaint to the CPUC found | Mapping (Horvath motion; PDF 18 Nov 2025, Board action 19 Nov 2025) | QUOTE. The source list uses the PDF date |
 | 29 | Underway in Malibu area and Altadena; some Malibu-area circuits completed in 2025 | Mapping, delivery | OK |
 | 30 | LADWP: 1.65 of 6.5 miles by Dec 2025; residential lines not started | Mapping | OK |
-| 31 | SCE publishes no miles by community; its sources disagree on Altadena | Mapping; review step 2 | FLAG: reconcile the 18 Sep 2026 table with the Jul 2026 fact sheets before publishing |
-| 32 | Figure 4: Altadena "63 of about 85 miles" | Mapping | FLAG: "about 85" has no stated source |
+| 31 | SCE publishes no miles by community; its sources disagree on Altadena | Mapping; review step 2; sce.com, checked 2026-11-14 | FLAG, still open, and wider than the mapping says. SCE posts a separate fact sheet for each Altadena project. On 14 Nov 2026 they ranged from "continue through July 2026" (Gorge/Rosebud, updated 7 Jul 2026) to construction from the second quarter of 2027 and completion by the fourth quarter of 2027 (Gorge/Rosebud H, updated 1 Sep 2026). The table page now reads "Updated as of 10/21/2026" and lists Nicholas for 2027, not 2026 to 2027. Re-read all of them on publish day |
+| 32 | Figure 4: Altadena "63 of about 85 miles" | SCE letter, 11 Apr 2025, checked 2026-11-14 | RESOLVED. The letter: about 40 miles in high fire-risk areas plus "the remaining ~45 miles" outside them = about 85; 40 + 23 = 63 planned underground |
 | 33 | Figure 4: "About 90 miles..." (SCE chief executive, 30 Jul 2026) | Mapping (SEC 8-K exhibit) | QUOTE |
-| 34 | Figure 4: "CEMA", glossed as a disaster cost account | Mapping | GK; confirm the account's name |
+| 34 | Figure 4: "CEMA", glossed as a disaster cost account | SCE data response ES-DR-EUP-26-02, 29 Jun 2026, checked 2026-11-14 | OK. SCE names it the "Catastrophic Event Memorandum Account (CEMA)"; the gloss fits. Quote checked: "Roughly 30 miles are expected to be recovered through CEMA" |
 | 35 | Figure 4: "32 substructures" rendered as "32 underground vaults and structures" | Mapping | FLAG: confirm the term |
 | 36 | Figure 4: $664M, six duct-bank projects, "pending funding" (AECOM, Feb 2026) | Mapping | QUOTE |
 | 37 | Figure 4: CPUC adopted the rate-case budget, 18 Sep 2025 | Mapping | OK. FLAG: the mapping's "Neither document names Altadena or Malibu" does not say which two documents. The $941M / 177 miles (CPUC) and 212 of 685 miles (SCE) readings are left off; add both or neither |
@@ -403,9 +411,9 @@ Every factual statement on the page, in the text and in the figures, with the va
 | 40 | Residents asked for one alert system that reaches everyone, and post-event information in one place | Mapping, issue 2 input | FLAG: this is the analyst's summary of the comments. Check it against ids 1204, 1573, 729, 1269 (review step 6) |
 | 41 | 88% of votes on "Strengthen emergency communication networks" supportive (Figure 1: of 209; state 86%) | Mapping, vote table | OK |
 | 42 | Jan 2025: County Board ordered an independent review of evacuations and alerts | Mapping (motion 28 Jan 2025) | OK |
-| 43 | McChrystal review (public 25 Sep 2025): "outdated policies, inconsistent practices, and communications vulnerabilities"; no "clearly recognized, centralized source" | Mapping | QUOTE |
+| 43 | McChrystal review (public 25 Sep 2025): "outdated policies, inconsistent practices, and communications vulnerabilities"; no "clearly recognized, centralized source" | Full review, supdocs/207915.pdf, checked 2026-11-14 | OK. Both phrases are in the review |
 | 44 | Board adopted an implementation motion 5–0 | Mapping (30 Sep 2025) | OK |
-| 45 | Fire Safety Research Institute report for the Governor (Oct 2026): "overly complex"; no agency had adopted it by 13 Oct | Mapping | QUOTE. FLAG: the mapping's "What the page can say" calls it "a federal research institute"; its own body text says UL, at the Governor's request. The page follows the body text. The report was 11 days old at reading; re-check |
+| 45 | Fire Safety Research Institute report for the Governor (Oct 2026): "overly complex"; no agency had adopted it by 13 Oct | Mapping; FSRI release, checked 2026-11-14 | The release confirms 2 Oct 2026, "conducted at the request of the Office of the Governor", 175 findings and 266 recommendations. QUOTE "overly complex" not checked (the report itself was not opened). The mapping's "federal research institute" is wrong: FSRI is part of UL Research Institutes. The report was 11 days old at reading; re-check adoption on publish day |
 | 46 | Responsible: County Board; county Office of Emergency Management, Fire Department, Sheriff; vendor Genasys | Mapping | OK |
 | 47 | 90-day review reports met | Mapping (28 Apr, 28 Jul 2025) | OK |
 | 48 | Implementation reports: one about 16 days late, one not found | Mapping (15 Dec 2025; 30 Jan 2026) | OK |
@@ -428,26 +436,26 @@ Every factual statement on the page, in the text and in the figures, with the va
 | 60 | The state's findings page named soil testing a top concern | Mapping, "Why these three issues"; link label 1 ("Residents want soil testing") | OK. FLAG: status.md 2026-10-13 calls soil testing "the state's top-ranked topic"; the mapping says the top-ranked topic was "Environmental recovery and clean up" (87% "very important" or "essential"). Not the same thing; the page avoids the status wording |
 | 61 | None of the 19 options mentions soil, testing, contamination or water quality | Mapping | OK (absence) |
 | 62 | No document says why it was dropped | Mapping | OK (absence) |
-| 63 | FEMA, Feb 2025: "will not reimburse the costs for soil testing" | Mapping (Region 9 letter, 19 Feb 2025) | QUOTE. FLAG: hosted by Purdue, not fema.gov (N9); the state's request letter was not found |
+| 63 | FEMA, Feb 2025: "will not reimburse the costs for soil testing unless testing shows that positive results are clearly attributed to the fires" | Region 9 letter, 19 Feb 2025 (Purdue copy), checked 2026-11-14 | QUOTE FIXED: the page had cut the sentence before "unless", which turned a conditional refusal into a flat one. Still hosted by Purdue only (N9); the state's request letter was not found |
 | 64 | The county ran free lead testing | Mapping, delivery (launched May 2025) | OK |
 | 65 | The county approved a $1 million remediation program | Mapping (Altadena Soil Remediation Program, 21 Jul 2026) | OK |
-| 66 | A 2026 state law orders lead and asbestos regulations by 2028 if a companion bill takes effect; its summary does not mention soil | Mapping (AB 1642; "its digest does not mention soil") | OK |
+| 66 | A 2026 state law orders lead and asbestos regulations by 2028 if a companion bill takes effect; its summary does not mention soil | Mapping; Governor's release, 15 Sep 2026, checked 2026-11-14 | PARTLY CHECKED. The Governor's release confirms the signing and describes AB 1642 (Harabedian) with AB 1795 as standards for "lead and asbestos contamination from wildfire smoke" in homes; it does not mention soil. The 31 Dec 2028 date, the companion-bill condition and the digest wording were not re-checked, because leginfo.legislature.ca.gov refused automated requests. Check the bill page in a browser |
 | 67 | Responsible: contested; FEMA pointed to the state | Mapping | OK |
-| 68 | A county supervisor: state reimbursement of the county was "never a feasible option" | Mapping (Barger, 16 Jan 2026) | QUOTE |
+| 68 | A county supervisor: state reimbursement of the county was "never a feasible option" | Barger statement, 16 Jan 2026, checked 2026-11-14 | OK. Full sentence: "The notion that the State could simply reimburse Los Angeles County for conducting soil testing and remediation in the Eaton fire area was never a feasible option." |
 | 69 | No agency takes responsibility for declaring a cleared lot safe | Mapping, responsible body and gaps | OK (absence, phrased as "we found no") |
 | 70 | Commitment from the state's process: none | Mapping | OK |
-| 71 | EPA promised lead-sampling results by spring 2026, delivered in May | Mapping ("by the end of spring 2026"; 19 May 2026) | OK |
+| 71 | EPA promised lead-sampling results by spring 2026, delivered in May | EPA releases, checked 2026-11-14 | OK; "by the end of spring 2026" is in the January release. DATES FIXED: the EPA pages date the releases 12 Jan 2026 and 18 May 2026, not 13 Jan and 19 May; Sources, Figure 8 and its caption now use the EPA dates |
 | 72 | Two county report-backs not found | Mapping (30-day after 15 Apr 2025; 60-day after 4 Nov 2025) | OK (absence) |
 | 73 | Debris and six inches of soil removed without confirmation sampling | Mapping, delivery | OK |
-| 74 | County sampling: lead averaging above California's screening level in 10 of 23 grids of standing Eaton homes (Figure 8: 80 mg/kg) | Mapping | OK |
+| 74 | County sampling: lead averaging above California's screening level in 10 of 23 grids of standing Eaton homes (Figure 8: 80 mg/kg) | Public Health final findings, 12 Sep 2025, checked 2026-11-14 | OK |
 | 75 | EPA: 95 of 100 randomly sampled Eaton parcels below the federal level at the surface (Figure 8: 200 mg/kg; 98 of 100 at six inches) | Mapping | OK |
-| 76 | All testing so far covers lead only | Mapping, gaps ("All programs are lead-only") | FLAG: the mapping does not describe the county and Roux sampling as lead-only. Confirm |
+| 76 | The county's 2025 sample tested metals and other fire chemicals; the EPA sample and the free programs test lead only (was "All testing so far covers lead only") | Public Health final findings, 12 Sep 2025; Roux post, 6 Nov 2025; checked 2026-11-14 | WRONG, FIXED. Roux tested for "heavy metals, polyaromatic hydrocarbons (PAHs), and dioxins/furans" (Public Health); Roux says 35 contaminants. Also fixed in Figure 8: the two Palisades exceedances were cadmium and thallium in one area and arsenic and PAHs in another, not lead, and the county found no large-scale impacts there "including for lead" |
 | 77 | Remediation funded, not started | Mapping (launch "this fall" 2026) | OK; re-check on publish day |
 | 78 | Figure 8: remediation money is $1M county plus $2M state via the California Community Foundation | Mapping | FLAG: the mapping says the state's $2M budget line was "not located". Its gap line "Funding is $3M against asks..." could mean this $1M + $2M or the separate "up to $3M" lead-paint settlement fund (15 Apr 2025 motion, purpose not stated). The page leaves the lead-paint fund out until its purpose is confirmed |
-| 79 | Figure 8: county sampling "final 12 Sep 2025" | Mapping, delivery | FLAG: the source list dates the Roux final report 6 Nov 2025. Confirm which is the final |
-| 80 | Figure 8: all nine affected water systems cleared by 9 May 2025 | Mapping, delivery | FLAG: the same row says the Malibu boil-water notice was lifted on 8 Aug 2025, after "all nine" were cleared. Confirm whether Malibu is outside the nine |
+| 79 | Figure 8: county sampling "final 12 Sep 2025" | Public Health final findings; Roux post; checked 2026-11-14 | RESOLVED. The county released the final findings on 12 Sep 2025 and said "The full report is available on our website." 6 Nov 2025 is the date of Roux's own web post announcing the report, not a later finding. Keep 12 Sep 2025. The report PDF itself was not found on the county site, so its cover date is unconfirmed |
+| 80 | Figure 8: all nine fire-affected water systems cleared by 9 May 2025 | State Water Board release, 9 May 2025; LA County notices, 6 and 8 Aug 2025; checked 2026-11-14 | RESOLVED, no conflict. The Water Board: "the final system of the nine impacted public water systems has been cleared" (Las Flores Water Co., Altadena). The Malibu notice was a separate event, issued 6 Aug 2025 "following a low-pressure event caused by a Caltrans bridge replacement project" and lifted 8 Aug 2025. Figure 8 now says so |
 | 81 | Figure 8: county testing moved to USC on 15 Aug 2026 | Mapping (USC CLEAN page dated 4 Aug 2026) | FLAG (minor): the source predates the transfer date |
-| 82 | Figure 9: six label rows | Mapping, link labels for issue 3 | OK; see N15 for row 3 |
+| 82 | Figure 9: six label rows | Mapping, link labels for issue 3; findings page, checked 2026-11-14 | OK; see N15 for row 3 and for a possible change to row 5. CAPTION FIXED: it cited /agenda-setting-data-insights/, the data-visualization page; the quoted soil text is on /agenda-setting-findings/. The quoted text matches that page |
 
 ### Gaps, method, call to action
 
