@@ -7,7 +7,7 @@
  * and skips a post that already points at that image.
  *
  * Usage (from anywhere, Node 18+):
- *   source /path/to/.env.cms                                   # sets PAYLOAD_CMS_API_KEY
+ *   set -a; source /path/to/.env.cms; set +a                   # exports PAYLOAD_CMS_API_KEY
  *   node 40-gtm/assets/images/blog-heroes/upload-heroes.mjs     # dry run: shows the plan
  *   node 40-gtm/assets/images/blog-heroes/upload-heroes.mjs --apply
  */
@@ -39,7 +39,7 @@ const HEROES = [
 
 const key = process.env.PAYLOAD_CMS_API_KEY;
 if (APPLY && !key) {
-	console.error("Missing PAYLOAD_CMS_API_KEY. Run: source /path/to/.env.cms");
+	console.error("Missing PAYLOAD_CMS_API_KEY. Run: set -a; source /path/to/.env.cms; set +a");
 	process.exit(1);
 }
 const auth = key ? { Authorization: `users API-Key ${key}` } : {};
